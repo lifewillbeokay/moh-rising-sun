@@ -5,6 +5,10 @@
 class FlexProp;
 class FlexPropDatabase {
 public:
+    static void LoadClasses(void *, int);
+    static void UnloadClasses();
+    static void LoadProperties(void *, void *, int);
+    static void UnloadProperties();
     static void Rewind();
     static int GetNumProperties();
     static void GetPropertyByIndex(int, FlexProp &);

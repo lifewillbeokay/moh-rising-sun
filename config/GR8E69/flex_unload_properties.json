@@ -1,0 +1,52 @@
+{
+  "id": "flex_unload_properties",
+  "source": "src/flexprop/UnloadProperties.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/stlport-runtime",
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "src/flexprop"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801260c4",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "UnloadProperties__16FlexPropDatabase",
+      "address": "0x801260c4",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_properties": "0x8032cda0",
+    "__builtin_delete": "0x801a8990",
+    "g_properties_map": "0x8032cd90",
+    "_M_erase__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormat": "0x8028833c",
+    "g_properties_iterator": "0x8032cdb0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "flexprop.cpp",
+  "original_file_index": 1232,
+  "local_externals": [
+    "g_properties",
+    "g_properties_map",
+    "g_properties_iterator"
+  ]
+}

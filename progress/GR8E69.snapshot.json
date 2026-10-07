@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 623732,
+    "matching_code_bytes": 627128,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.02905259643536,
+    "percent": 25.165326929991267,
     "categories": {
-      "reconstructed_game": 231516,
+      "reconstructed_game": 234912,
       "restored_library": 392216
     },
-    "matching_functions": 2334
+    "matching_functions": 2338
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -348,10 +348,14 @@
     "config/GR8E69/flex_int.json": "6788c48d071316d36fdbae64d4d4fcb27b559f5c038124c3d69f8a5a9618b51d",
     "config/GR8E69/flex_is_a.json": "3808075faee722316d5dbbd200fba49c7219ab10a62a6441302d9ad4be2b22e4",
     "config/GR8E69/flex_list.json": "59bed9fd28c1ce7ca6426f54f6432160ba2d74b78453805331070e0056afa5d5",
+    "config/GR8E69/flex_load_classes.json": "9f9d01c2ecb8b26fd9b5459fa336545f3cc060be8fb51e3c86492fa409ab8ed8",
+    "config/GR8E69/flex_load_properties.json": "5040edf80766813c39e06a2abeb9310874626cdc3b16e415b7cdfc33d7602633",
     "config/GR8E69/flex_names.json": "d0a5ff7596098511301c219a4cd37fa7de61b3df4df704b6281f9b998f4d32ae",
     "config/GR8E69/flex_position.json": "620ec83a1845db8a9454ac25005ce6915b4c061940d5615502fb4026d694dcf1",
     "config/GR8E69/flex_string.json": "1b82bcadbc9299822baae616ae404f7eb92ff7ee025859ea5bf3cec1173d957c",
     "config/GR8E69/flex_types.json": "84074616b310ca1acac1ccc683a7d9b4b1f61a752b4dda1aaa68203a94bc6b9b",
+    "config/GR8E69/flex_unload_classes.json": "5b6124bc25e808df1509b87ba93787468e30515bfd2b9128ce50bbf22adcb4a0",
+    "config/GR8E69/flex_unload_properties.json": "6cd81f0594f54bf896f8a1a3faa50aefe6b88ce648559da7b2191558e27feb86",
     "config/GR8E69/flex_valid.json": "f36e2f140a940621dfe8d59efcd46dbc4e928ab73b129c434cb5e9dcc40f5916",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
     "config/GR8E69/instanced_anim_light.json": "73759e82b3bf6870d54d6fbf2ef1b64ec4c688cb847000881824fb8fb3d00093",
@@ -576,7 +580,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "9ca970de03f55319871c00de44dac758fb285df478ddcbca48e23e761a7866ba",
+    "config/GR8E69/project.json": "d9b38f3fc545829f138112783f55482bdf4696c8bb309c400e952ff44657abf4",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1072,8 +1076,8 @@
     "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
     "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
-    "include/game/FlexProp.h": "807c25fb67a35d5d67dcc94bfd4d496a9344d2a3b1109f01b875ef869bc69b29",
-    "include/game/FlexPropDatabase.h": "aa9d98d981537a5604dd75b9e1ddd5bad592d33798d4ffbb4acbc8188127ff85",
+    "include/game/FlexProp.h": "d7acf26c7290756b6d01a2e59ff49c8928d58d954f45f4ab7f87f44b65fa7ed7",
+    "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/Light.h": "2ed36fd70b129fe2e1ce7cec7fffb8b7cc61794dfef4987e90ca65ad7df2fe6c",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
@@ -1600,8 +1604,13 @@
     "src/flexprop/FlexString.cpp": "474558073e3b8c38e64344be913c21f1c1202efd05bc08fcfd55e3a7b071faac",
     "src/flexprop/FlexTypes.cpp": "6cdf22ea674b9f0fb4d5677275f478b41358014dc35a70c85a00447c99dedca0",
     "src/flexprop/FlexValid.cpp": "ea8311618d76e512206cc64acb8f3e815f8b0ec2fffd32ed8c0019dce3acd93e",
+    "src/flexprop/LoadClasses.cpp": "cf14826cdaa0345534a2516252d973675908e6ffe0d8fb85f40cb72f2efb7b41",
+    "src/flexprop/LoadProperties.cpp": "64792f1dec7dc7c229523c6dff45732f6c57cccde8b3df8e00937870db92445f",
     "src/flexprop/StringTableCreate.cpp": "2443e8b528fd8e727950c395a98ea69ddda22eeb2babb17f135b4502828d28e8",
     "src/flexprop/StringTableInit.cpp": "726cbb514ef16260fa7b44bbc336a95224f62c609e21e2ddd8f057ca4fa50d78",
+    "src/flexprop/UnloadClasses.cpp": "468403d8bfc798d7b75502036f746df1899a44070b0852a5fb50b70267dfd478",
+    "src/flexprop/UnloadProperties.cpp": "7546bb039937779365ae93f9ae2f85382be45012af5f946ae74235f4aa6d8946",
+    "src/flexprop/database_internal.h": "ac7ab80c8f21dcda7bda4ed5ea88929358f9e58c47f693b6b44a2a84015e6489",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
@@ -20632,6 +20641,78 @@
       "discarded_functions": [],
       "object_sha256": "8e791989af30c3967fba5817f276e9316a1d1d732961591b5ee6d836ae25a3bb",
       "linked_sha256": "824829c7b94d9575c029a7fda7569992b1e05b28b7dee72734c320c4d28d6083"
+    },
+    {
+      "id": "flex_load_classes",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1396,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "3e3813c313b57270ed6528c8fcaa541c840253464c429475797011d4cbc7944d",
+      "linked_sha256": "c5109a378eeb2e3b88a5c34fbbc53a366d5e54b9cea72a29e7d206296a054b16"
+    },
+    {
+      "id": "flex_unload_classes",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e8f4fc9317faa6f934dfa9a3218d412eee8578217072dd5e997be2a505cefdfc",
+      "linked_sha256": "5d0a7caf4b58817364b400accc23e73fafdb9a2bd8988c5321b2e1b0bc3a1dce"
+    },
+    {
+      "id": "flex_load_properties",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1712,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "75c2c029145604a447c2fd0eb8446d33210c36d208b76520ff8e138027d1c703",
+      "linked_sha256": "a0d559a04bdc4a731cf0cb76500c9a462c41fbe2cf3997b6cc2fe3096b213edc"
+    },
+    {
+      "id": "flex_unload_properties",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "110d06e64f3bb88ce1a6151b6461d6fdd782312c01f0bde5ee038a3d834f05a5",
+      "linked_sha256": "63bd520dbb559eba3a688e18e90facca74634187061505e917478bd5412ec1d5"
     }
   ],
   "code_map": {
@@ -48808,34 +48889,6 @@
         "file_record": 203,
         "file_name": "flexprop.cpp",
         "ranges": [
-          {
-            "address": "0x80125438",
-            "size": 1396,
-            "kind": "function",
-            "name": "LoadClasses__16FlexPropDatabasePvi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801259ac",
-            "size": 104,
-            "kind": "function",
-            "name": "UnloadClasses__16FlexPropDatabase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80125a14",
-            "size": 1712,
-            "kind": "function",
-            "name": "LoadProperties__16FlexPropDatabasePvT1i",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801260c4",
-            "size": 184,
-            "kind": "function",
-            "name": "UnloadProperties__16FlexPropDatabase",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x801266e8",
             "size": 240,

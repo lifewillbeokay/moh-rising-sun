@@ -4,7 +4,7 @@
 
 ## Accepted lookup path
 
-`src/flexprop/` reconstructs field search and its comparator, name-to-key wrappers, typed scalar/list access, position access and class ancestry queries. `src/string_crc.cpp` reconstructs their string hash dependency. The original lookup fragments comprise 25 functions and 1,552 executable bytes; the string-table and database extension below adds six functions and 400 bytes. Individual ranges and generated string/constant storage are recorded in their manifests.
+`src/flexprop/` reconstructs field search and its comparator, name-to-key wrappers, typed scalar/list access, position access and class ancestry queries. `src/string_crc.cpp` reconstructs their string hash dependency. The original lookup fragments comprise 25 functions and 1,552 executable bytes; the string-table/database helpers add six functions and 400 bytes, and the database loading/cleanup extension adds four functions and 3,396 bytes. Individual ranges and generated string/constant storage are recorded in their manifests.
 
 `FlexProp` holds a format pointer at offset zero. The format’s pointer at `+4` leads to a class-description record containing its name at `+0`, parent at `+8`, field count at `+12`, and a variable tail of twelve-byte field records at `+16`. Each field contains a signed CRC key, a type word and a byte offset. The original `bsearch` stride, comparator and field accesses independently establish those three words. The zero-length array in the scoped header represents the variable tail; it is not a complete class allocation.
 
@@ -16,7 +16,7 @@
 
 Name-taking wrappers hash the exact input and call their integer-key overloads. Both string-getter overloads are accepted; the integer-key implementation uses the recovered string-table virtual interface described below. `GetFieldType` returns zero for an absent field. `GetClassName` reads the first class name; `IsA` compares names with `strcmp` while following parents. Case folding is not added.
 
-Position accesses confirm floats at format offsets `0x30`, `0x34` and `0x38`, with `SetPositionZ` writing the last. Independent inspection of the original matrix getter supports the twelve-float transform prefix beginning at `0x0c`; that matrix getter is not reconstructed here. The position helper writes only the first three floats of the independently recovered 16-byte CVector3 representation; its fourth word is preserved. Unknown words, complete allocation sizes, original field spelling and historical return-type spelling remain unproven.
+Position accesses confirm floats at format offsets `0x30`, `0x34` and `0x38`, with `SetPositionZ` writing the last. Independent inspection of the original matrix getter supports the twelve-float transform prefix beginning at `0x0c`; that matrix getter is not reconstructed here. The position helper writes only the first three floats of the independently recovered 16-byte CVector3 representation; its fourth word is preserved. The database loaders below establish the remaining leading name/size fields. Complete allocation sizes, original field spelling and historical return-type spelling remain unproven.
 
 ## CRC details useful for future name recovery
 
@@ -81,6 +81,99 @@ original storage, resolved within the `flexprop.cpp` file record.
 
 The matrix getter and string lookup were also investigated but remain unaccepted;
 their partial source comparisons do not increase progress.
+
+## Database loading and cleanup
+
+The next pass through the [EA reference leads](research/ea-shared-code.md) adds
+four larger methods, independently reconstructed from GR8E69. The existing
+attributed STLport implementation supplies their string, map and vector behavior;
+no implementation from Rogue Agent or European Assault is substituted.
+
+| Function | GR8E69 address | Code bytes |
+| --- | --- | ---: |
+| `FlexPropDatabase::LoadClasses(void *, int)` | `0x80125438` | 1,396 |
+| `FlexPropDatabase::UnloadClasses()` | `0x801259ac` | 104 |
+| `FlexPropDatabase::LoadProperties(void *, void *, int)` | `0x80125a14` | 1,712 |
+| `FlexPropDatabase::UnloadProperties()` | `0x801260c4` | 184 |
+
+All four complete compiler objects contain only code: **3,396 executable bytes**,
+with no new data or BSS ownership. Inlined STL operations are part of these game
+functions, counted once in the reconstructed-game category. Calls to separately
+emitted library instances retain those instances' existing ownership.
+
+Together with the earlier query helpers, these cover all seven named
+`FlexPropDatabase` methods in the target symbol inventory. The direct-call map
+connects the loaders to `PatchUpAllPropertyData` (`0x80120c00`) and the cleanup
+methods to `FreePropertyMemory` (`0x80121f30`). The query methods feed trigger
+initialization and leaf-trigger checks; static calls do not prove runtime reachability.
+
+The original setup caller first creates the string table, then passes header
+fields `+0x40`/`+0x44` as the class buffer/count. It next passes the header base
+itself and fields `+0x48`/`+0x4c` to `LoadProperties`. This independently identifies
+the relocation base at that call site and the setup order. Those callers remain
+original context with no new source credit.
+
+### Record and container evidence
+
+The `ChangeEndian<FlexPropClassFormat *>` calls and STL map symbols recover the
+class name `FlexPropClassFormat`. It replaces the descriptive class-view name;
+`FlexPropClassView` remains an alias for earlier source. The loader and existing
+field/class-name/ancestry queries independently establish this variable prefix:
+
+| Class-record offset | Reconstructed field | Evidence |
+| --- | --- | --- |
+| `0x00` | `char *name` | Pointer endian conversion, string-index lookup and map key |
+| `0x04` | `int recordSize` | Signed-int conversion followed by byte-wise advance to the next record |
+| `0x08` | `FlexPropClassFormat *parent` | Pointer conversion, name resolution and parent traversal |
+| `0x0c` | `int count` | Signed-int conversion and signed field-loop bounds |
+| `0x10` | `FlexPropField fields[]` | Twelve-byte stride; key/type/offset words at 0/4/8 |
+
+The property prefix similarly has `char *name` at zero, the class pointer at
+`+4`, a signed record size at `+8`, twelve transform floats at `+0x0c`, and
+four-byte payload words starting at `+0x3c`. Existing `GetDataPtr` independently
+uses `+0x3c + field.offset`. Field names remain descriptive; these declarations
+are variable-length conversion views, not complete allocations or portable parsers.
+
+The private `g_classes` map at `0x8032cd80` and `g_properties_map` at
+`0x8032cd90` each occupy sixteen original bytes. Their string keys and pointer
+value types come from the original emitted tree-instance names and are supported
+by lookup, insertion and cleanup. Both maps, the vector and its iterator remain
+original storage, bound to the original `flexprop.cpp` file record. No container
+implementation or fabricated layout is added to replace STLport.
+
+### Preserved behavior
+
+`LoadClasses` converts each record's name, size, count and parent in that order.
+Within each field it converts type, offset and key, then resolves the class name
+through the string table. It retains the original preliminary map lookup even
+though that result is overwritten, and stores the record under its name. After
+all records are registered, a separate traversal resolves nonzero parent indexes
+through string names and the class map. This permits forward parent references.
+The intermediate name pointer is stored in the parent field before replacement
+with the class-record pointer, as in the original.
+
+`LoadProperties` converts its leading fields, the twelve floats and every payload
+word up to the record's converted size. It resolves the name and class, retains
+the preliminary property-map lookup, assigns the map entry and appends the record
+to the vector. It then visits that class and every ancestor. For each descriptor
+whose type is exactly 6, it adds the supplied base address to the four-byte payload
+word at the descriptor's offset. No other type is rebased here. The integer
+representation and pointer conversions model the original 32-bit target; they
+do not establish a portable serialization contract or ownership of the base buffer.
+The routine advances by each record's size and finally calls `Rewind`.
+
+Neither loader clears existing containers first. Duplicate names overwrite map
+values, while the property vector still receives each processed record. Missing
+class/parent names are not checked before dereferencing the map result. Record
+sizes, alignment, counts and parent cycles are not validated by these methods;
+the reconstruction does not add those checks or change the conversion order.
+
+`UnloadClasses` clears the class map. `UnloadProperties` clears and destroys the
+pointer vector, reconstructs it in the same storage to release its capacity,
+clears the property map, then sets the iterator to the empty vector's end.
+Container storage and string keys are released, but the pointed-to records are
+not deleted by these cleanup methods. The original level-buffer lifetime remains
+outside this reconstruction.
 
 ## Verification
 

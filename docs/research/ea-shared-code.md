@@ -47,12 +47,19 @@ historical field declarations. NFS Underground separately exposes the same
 
 ## Resulting work
 
-This pass reconstructs ten Rising Sun functions / 600 code bytes in eight complete
+The first pass reconstructed ten Rising Sun functions / 600 code bytes in eight complete
 fragments: [front-end hashing](../FEHash.md), the two [clamp instances](../MathFun.md),
 and [FlexProp string access, string-table creation/initialization and database
 queries](../FlexProp.md). Source was recovered from our pinned executable, using
 existing attributed STLport headers for the database's vector methods. The other
 games' addresses and layouts are not used as Rising Sun definitions.
+
+A follow-up reconstructs the two FlexProp database loaders and their two cleanup
+methods: a further **3,396 code bytes**, with complete generated objects and no
+new data ownership. Their record conversions, class-parent resolution and property
+pointer relocation are documented in [FlexProp](../FlexProp.md#database-loading-and-cleanup).
+The different related-game loader sizes did not prevent useful target selection;
+all accepted bodies are verified against Rising Sun independently.
 
 Useful remaining candidates are the FlexProp matrix getter, string lookup,
 quaternion conversion/multiplication/rotation, and the two remaining MathFun

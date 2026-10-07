@@ -830,7 +830,11 @@
     "fe_hash_upper.json",
     "fe_upper_case.json",
     "mathfun_clamp_float.json",
-    "mathfun_clamp_int.json"
+    "mathfun_clamp_int.json",
+    "flex_load_classes.json",
+    "flex_unload_classes.json",
+    "flex_load_properties.json",
+    "flex_unload_properties.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
