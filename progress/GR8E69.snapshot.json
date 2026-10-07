@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 623132,
+    "matching_code_bytes": 623732,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.00497585905799,
+    "percent": 25.02905259643536,
     "categories": {
-      "reconstructed_game": 230916,
+      "reconstructed_game": 231516,
       "restored_library": 392216
     },
-    "matching_functions": 2324
+    "matching_functions": 2334
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -337,8 +337,11 @@
     "config/GR8E69/endian_scalar.json": "b06b899196751f86468ed6219d7354e925563bb4d924c4bde79681dbca388e37",
     "config/GR8E69/endian_short.json": "46ae80cd39c500fc5811695c39a6554a21972ed5948c58969a359a404c747428",
     "config/GR8E69/ethsec.json": "5305737979b5e234b337720f07434e602f0d0ab8df682c5287ba2349d6438f69",
+    "config/GR8E69/fe_hash_upper.json": "c9e6dff86f6763a1c5f4962057e5c6f58bd9587b9ea3b31fb71bf0e49f6bb451",
+    "config/GR8E69/fe_upper_case.json": "db8afcb483244836c37cf2af7fedcc32bef682ca25f38e27ced5d4cf99978174",
     "config/GR8E69/flex_bool.json": "e4b08a7acb491ffeb9919c749c2264a405093a44c83c65ec145e746cabe143f2",
     "config/GR8E69/flex_data.json": "0ba46b6e0b3c72424ca594a68c4dba4dc4ca0a458c33be7dbe949faad124347c",
+    "config/GR8E69/flex_database.json": "f7db66f3f873deaf65824d1e6de5247e606cf6fe57433655afb6250e875284f1",
     "config/GR8E69/flex_enum.json": "33e13f305a8d0e06519250ed1bfb1d0e05328c0cceab5c05919f215342e2fa5c",
     "config/GR8E69/flex_field.json": "007e03367374382076beee086fbaa9573ca37fa326efec0901292453197bca93",
     "config/GR8E69/flex_float.json": "e0c869becfc2d8ebec9890292391939c589dad7d70cef94e77a1d604cdefce4f",
@@ -347,6 +350,7 @@
     "config/GR8E69/flex_list.json": "59bed9fd28c1ce7ca6426f54f6432160ba2d74b78453805331070e0056afa5d5",
     "config/GR8E69/flex_names.json": "d0a5ff7596098511301c219a4cd37fa7de61b3df4df704b6281f9b998f4d32ae",
     "config/GR8E69/flex_position.json": "620ec83a1845db8a9454ac25005ce6915b4c061940d5615502fb4026d694dcf1",
+    "config/GR8E69/flex_string.json": "1b82bcadbc9299822baae616ae404f7eb92ff7ee025859ea5bf3cec1173d957c",
     "config/GR8E69/flex_types.json": "84074616b310ca1acac1ccc683a7d9b4b1f61a752b4dda1aaa68203a94bc6b9b",
     "config/GR8E69/flex_valid.json": "f36e2f140a940621dfe8d59efcd46dbc4e928ab73b129c434cb5e9dcc40f5916",
     "config/GR8E69/fstload.json": "d49e84fe0d1e9af1dd569811065db3c015f596b540ac5988c5078fa2f9c5dd5e",
@@ -395,6 +399,8 @@
     "config/GR8E69/lzio.json": "fd6b343d8b40cee7692844cb7688dcbe058747c304066035668babf64217001b",
     "config/GR8E69/math_sin_cos.json": "3268cfc42083eeb856569d7530894bee5cdc21bf20d0fe4debfcb905be7d0b5e",
     "config/GR8E69/mathfun_atan.json": "86374a6e14c9c018914f9c34007c104a8f0962ff7c06552e5fd31bc9f82a30a0",
+    "config/GR8E69/mathfun_clamp_float.json": "96742ee7bed32278ac77d57d750d811d9eeed2193bb79d12f5d2f3b3304e74cc",
+    "config/GR8E69/mathfun_clamp_int.json": "cacdbfa0874011bcca612c996e257e0556b69b8da2b770dbd7adeb01cd43ab0d",
     "config/GR8E69/mathfun_pan_tilt.json": "f63bc40b50ab95e223cf04d7bb9cc77ce66c9407dae26f1448a178753f455a79",
     "config/GR8E69/mathfun_percent.json": "13d34f9eab513248323832a1e250b33c0be4e5289f905c8e08611131fb91ed4a",
     "config/GR8E69/mathfun_random_real_signed.json": "458808b23c1ccc8bfcc5b738a031cbf943a0453e4e9baee4c9fd0ab328397d0b",
@@ -570,7 +576,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "c9559d0eb0ba9d4797e83bf89b54e2192c480fab19056bca645a3c3255caa374",
+    "config/GR8E69/project.json": "9ca970de03f55319871c00de44dac758fb285df478ddcbca48e23e761a7866ba",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -822,6 +828,8 @@
     "config/GR8E69/stlport-source.json": "f42abd45c1df07a25146e85d7b2658eab8a7c4ba59aed80ef52841a43dd25b61",
     "config/GR8E69/string_80277f18.json": "6c896b1c695b7757d69c67a9f33e2e3a8b96c54e0f06fe27d7431149bc399505",
     "config/GR8E69/string_crc.json": "d56c053467a7985f3635bbf7e9a4ae344af88e23d604153f71d4c6848c7b0d92",
+    "config/GR8E69/string_table_create.json": "f909d5f84888ed793f069d620ce2e269b4a7790ee57264c82e6aa49e06b9db48",
+    "config/GR8E69/string_table_init.json": "ff3b4b52d9b1c1a40f9e18e637276126dacc3691b4bbdfa395f2e3a86396a0d9",
     "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
     "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
     "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
@@ -1063,10 +1071,13 @@
     "include/game/EAGLPropertyParser.h": "71dc0d4dda9bf9df333fbd5172293805881c33b453b5de6f4e89e8f9b623c5b6",
     "include/game/EAGLTransform.h": "c8b8d8e4397d16d893d6b080bfa5a7a1a9e4fd35bd0d98096d75f3d00e64d433",
     "include/game/Endian.h": "6f3a06aca2ed749c09949cedff932c6e9a8db1272b5393bdc9a46185a384387b",
+    "include/game/FEHash.h": "5d2777480e94ab65796f9850193722c7585a884299d6b68b610c5b3ce6a08757",
     "include/game/FlexProp.h": "807c25fb67a35d5d67dcc94bfd4d496a9344d2a3b1109f01b875ef869bc69b29",
+    "include/game/FlexPropDatabase.h": "aa9d98d981537a5604dd75b9e1ddd5bad592d33798d4ffbb4acbc8188127ff85",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/Light.h": "2ed36fd70b129fe2e1ce7cec7fffb8b7cc61794dfef4987e90ca65ad7df2fe6c",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
+    "include/game/MathFun.h": "c5b2b1a4c5a9fb0fd42d6e2175caede46bc0d849512f200d6d987fee3c3ed793",
     "include/game/Objectives.h": "02d448413ce41bb563313b153f3203339391dfd24c634615ad2d091d2ae9ced8",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/ParticleClock.h": "28f3badf71350136523be63cd81fe70e6af6977dca794be22c84784ee720cf68",
@@ -1078,6 +1089,7 @@
     "include/game/ScriptTimers.h": "58499aef9e474fcee6e5ee4c7fc1bd63a02f8dd17e678e3e936dae2acc2a4c25",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
+    "include/game/StringTable.h": "4249ba9fcf836cdacb806c1fd8e1a93697756e7896c7eb90f222935c6edc2bb4",
     "include/game/TARExtension.h": "cf1f48aa0be63a29babdba7f53c58439facb94141d7e04d0d32fcc878bad2cb3",
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
@@ -1576,6 +1588,7 @@
     "src/endian/short.cpp": "27ea58209e70d97588b380691fc1e414b1deb8259ec7b245c46d6af57df08fb9",
     "src/flexprop/FlexBool.cpp": "6babfd7c08477b15b2c42789d36dc38e62854c608a9506406b67baeb70463aef",
     "src/flexprop/FlexData.cpp": "08a09e331252f5bc0ac53e50e369b6418db8281bbbe2971e43584a1545f924d1",
+    "src/flexprop/FlexDatabase.cpp": "bedc8bc444ca6902be509c8644bf68bb6d047a244fe8f18c177ee52acf853e98",
     "src/flexprop/FlexEnum.cpp": "f827207fe659b1bee64ab28d285b1319b945005d9918d66aa83c8118f08a8cdb",
     "src/flexprop/FlexField.cpp": "26d8f0190d7cff1dfc18d5ea04ae4b290490d4c5e136010fc21d54a3d01ad2cb",
     "src/flexprop/FlexFloat.cpp": "709bb6a41873b0e59e52fca16e624558763e6bd0146796d3f90ee088f510a9fd",
@@ -1584,8 +1597,13 @@
     "src/flexprop/FlexList.cpp": "3b9df06caa1e1d49693c9fee64f253e3aa6691022edf1883185e2274e2f6fcdf",
     "src/flexprop/FlexNames.cpp": "9da817b2ad6bfddf4596215f5e0095b0915059ad0216f8df10e7de9a1c1cd5f9",
     "src/flexprop/FlexPosition.cpp": "2fcd280359c4f65ec31d660ffa0d0b7402a81c5595d934cf64cd5344f80f6973",
+    "src/flexprop/FlexString.cpp": "474558073e3b8c38e64344be913c21f1c1202efd05bc08fcfd55e3a7b071faac",
     "src/flexprop/FlexTypes.cpp": "6cdf22ea674b9f0fb4d5677275f478b41358014dc35a70c85a00447c99dedca0",
     "src/flexprop/FlexValid.cpp": "ea8311618d76e512206cc64acb8f3e815f8b0ec2fffd32ed8c0019dce3acd93e",
+    "src/flexprop/StringTableCreate.cpp": "2443e8b528fd8e727950c395a98ea69ddda22eeb2babb17f135b4502828d28e8",
+    "src/flexprop/StringTableInit.cpp": "726cbb514ef16260fa7b44bbc336a95224f62c609e21e2ddd8f057ca4fa50d78",
+    "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
+    "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
     "src/geometry/line2_closest_point.cpp": "5ca1d7b30bed3ac121a7c1ba9c1abc01010a4c06944db1c0685cab6d284be571",
     "src/geometry/line3_degenerate.cpp": "7957f9e369e0020c35f35633131f44521812552d810eab563d323b31fc1620fe",
@@ -1657,6 +1675,8 @@
     "src/lua/lzio.c": "015c1f2b6f46a536f3b911e4ae1156e1f0fa21367a63d053675fed1551a8bf16",
     "src/lua/lzio.h": "be259449bd1fb99b1cb9b5dbfcc5a0f6afbf27e22836e76429f4aa8cd4c29e07",
     "src/mathfun/atan.cpp": "e9ba474962d6d2e2056268f2f28b0d7d5faf29f00f415da909358d0f55f2eda7",
+    "src/mathfun/clamp_float.cpp": "bb7cb352ea59e9c4763fd60a65b90e42510f7d3096562822810f30653367ae42",
+    "src/mathfun/clamp_int.cpp": "956cd912357193234e41b57e8889f0e058ce422deaccb3bfff44da68619590ab",
     "src/mathfun/pan_tilt.cpp": "85961d1a544a6afa4cdb6a2fb4b79e5d8e270e720c84ae6fe386a6475bebdc81",
     "src/mathfun/percent.cpp": "1ee32550aa173b54008f04c226385670e0b6d33acce4c3aed449b2735453f1ed",
     "src/mathfun/random_real_signed.cpp": "5545d971a3a1986883626025dc5aced8a40792e98ba9fcf594b5964b201efeaf",
@@ -20466,6 +20486,152 @@
       "discarded_functions": [],
       "object_sha256": "e9c150e027e06663c6b6211c170493d9e4d8dfd9e74584689e659c9cf29b7fec",
       "linked_sha256": "2cb1e7f7fc27ee6bcf36559bb96283c062fc5dedd71c8d9c43cdb9628582e16f"
+    },
+    {
+      "id": "flex_string",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5f59b4b9b10f42fa756ad8916ecc5874146eb60ea5af04abe04e9ba3319cafa6",
+      "linked_sha256": "83109cf467fd82ae6f78a7b4faddce7a50e24b1d26236260dfefc7238ee99e9d"
+    },
+    {
+      "id": "string_table_create",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 68,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b524f58f1f42e5ab8b2472760cc48d865bc82e31e7ad225d34f214b7ab66c38a",
+      "linked_sha256": "bc18b3dd268e9bb009f73008a9eb6db2ba26c1b3a411d7cf6d7a64f6bfed6a62"
+    },
+    {
+      "id": "string_table_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 140,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "683376d37bfb36a488e797741dbccc4127de49d901db3c6f0c9cadc05fdf5733",
+      "linked_sha256": "7bb32e0314c28315b97a958a79fdc3097e194eaaa764d5036767cf33f2368a63"
+    },
+    {
+      "id": "flex_database",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cf82b58bb5e1defa38ed8b92c26802268d518dcabdc434005bd349021c079e54",
+      "linked_sha256": "0b0062aef26caf349be26f8205742054c81e7b4d4ec7f9e6a6c878b9e8ec53d1"
+    },
+    {
+      "id": "fe_hash_upper",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fsigned-char"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "666ab0918d25dd5dccda44cbba3be03a036c13b3966e3f32224b9707aaf2a086",
+      "linked_sha256": "620c879760a62f883abef6a34c9a53d8a9c4b1f80d3c8a7be712d254e9dc3f99"
+    },
+    {
+      "id": "fe_upper_case",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 24,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fsigned-char"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b48de106a82cfe999a383188c6b6c3e40205d78b3ef837c7a996d61ba41e5b7c",
+      "linked_sha256": "074c6370602a82044f9b4804a902d67cd0671a799caa94931bff5a23c510f9fc"
+    },
+    {
+      "id": "mathfun_clamp_float",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "540072efae8f61f508f36b6c6f73d731e062226ea6147f33ce2a78558dfb4eb9",
+      "linked_sha256": "212a47cfe0080c4eca4aaf8380faecaa8742b2cbe1a0bd5109e0784bc70e9bee"
+    },
+    {
+      "id": "mathfun_clamp_int",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8e791989af30c3967fba5817f276e9316a1d1d732961591b5ee6d836ae25a3bb",
+      "linked_sha256": "824829c7b94d9575c029a7fda7569992b1e05b28b7dee72734c320c4d28d6083"
     }
   ],
   "code_map": {
@@ -21345,15 +21511,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 800495f0",
+        "name": "Unknown file/.text @ 80049608",
         "ranges": [
-          {
-            "address": "0x800495f0",
-            "size": 24,
-            "kind": "function",
-            "name": "FEUpperCase__Fc",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80049608",
             "size": 100,
@@ -21423,14 +21582,12 @@
             "kind": "function",
             "name": "FindNode__C6FEListPCc",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x800499a4",
-            "size": 100,
-            "kind": "function",
-            "name": "FEHashUpper__FPCc",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80049a08",
+        "ranges": [
           {
             "address": "0x80049a08",
             "size": 176,
@@ -48680,52 +48837,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8012617c",
-            "size": 20,
-            "kind": "function",
-            "name": "Rewind__16FlexPropDatabase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126190",
-            "size": 28,
-            "kind": "function",
-            "name": "GetNumProperties__16FlexPropDatabase",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801261ac",
-            "size": 24,
-            "kind": "function",
-            "name": "GetPropertyByIndex__16FlexPropDatabaseiR8FlexProp",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801265b4",
-            "size": 120,
-            "kind": "function",
-            "name": "GetString__C8FlexPropi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801266e8",
             "size": 240,
             "kind": "function",
             "name": "GetMatrix__C8FlexPropR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801268ec",
-            "size": 68,
-            "kind": "function",
-            "name": "Create__11StringTablePc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80126930",
-            "size": 140,
-            "kind": "function",
-            "name": "__15StringTableImplPc",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -77512,18 +77627,6 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8027aa30",
-        "ranges": [
-          {
-            "address": "0x8027aa30",
-            "size": 40,
-            "kind": "function",
-            "name": "MathFunClamp__H1Zf_X01X01X01_X01",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
         "name": "Unknown file/.text @ 8027afe4",
         "ranges": [
           {
@@ -78392,14 +78495,12 @@
             "kind": "function",
             "name": "GetProximityData__10BSGO_Dummy",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80283878",
-            "size": 36,
-            "kind": "function",
-            "name": "MathFunClamp__H1Zi_X01X01X01_X01",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8028389c",
+        "ranges": [
           {
             "address": "0x8028389c",
             "size": 44,

@@ -1,0 +1,39 @@
+{
+  "id": "fe_hash_upper",
+  "source": "src/frontend/hash.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fsigned-char"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800499a4",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "FEHashUpper__FPCc",
+      "address": "0x800499a4",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEUpperCase__Fc": "0x800495f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

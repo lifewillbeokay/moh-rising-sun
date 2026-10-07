@@ -34,6 +34,12 @@ code matches demonstrate reuse from another EA reconstruction without assuming
 its newer headers describe Rising Sun unchanged.
 Runtime remains untested.
 
+The [related EA GameCube comparison](research/ea-shared-code.md) records pinned
+Rogue Agent, European Assault and NFS Underground symbol references. It led to
+matching [front-end hashing](FEHash.md), clamp templates and a further
+[FlexProp/string-table/database batch](FlexProp.md), independently reconstructed
+from Rising Sun. Equal symbol names/sizes remain leads, not byte-match evidence.
+
 ## Ranked research queue
 
 This is a qualitative work order, not a prediction of hours or a promise of matches.

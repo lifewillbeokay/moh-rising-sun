@@ -1,0 +1,59 @@
+{
+  "id": "flex_database",
+  "source": "src/flexprop/FlexDatabase.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/stlport-runtime",
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012617c",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "Rewind__16FlexPropDatabase",
+      "address": "0x8012617c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetNumProperties__16FlexPropDatabase",
+      "address": "0x80126190",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetPropertyByIndex__16FlexPropDatabaseiR8FlexProp",
+      "address": "0x801261ac",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_properties": "0x8032cda0",
+    "g_properties_iterator": "0x8032cdb0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "flexprop.cpp",
+  "original_file_index": 1232,
+  "local_externals": [
+    "g_properties",
+    "g_properties_iterator"
+  ]
+}
