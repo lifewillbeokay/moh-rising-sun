@@ -1,0 +1,75 @@
+{
+  "id": "ai_spline_manager",
+  "source": "src/ai/spline_manager.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e078c",
+      "size": 660
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2f28",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "__20CAISplinePathManagerUi",
+      "address": "0x800e078c",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "_._20CAISplinePathManager",
+      "address": "0x800e0820",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "AllocateGenerateBuffers__20CAISplinePathManager",
+      "address": "0x800e08ac",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "FreeGenerateBuffers__20CAISplinePathManager",
+      "address": "0x800e0924",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GenerateSplinePath__20CAISplinePathManagerUiUiUiPC8PropVec3",
+      "address": "0x800e0980",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__13CAISplinePath": "0x800df764",
+    "_._13CAISplinePath": "0x800df768",
+    "__builtin_vec_delete": "0x801a89b0",
+    "__builtin_delete": "0x801a8990",
+    "DWI_free": "0x801a8894",
+    "GenerateTestSplinePath__13CAISplinePathRC20CAISplinePathManagerUiPC8PropVec3b": "0x800df7f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}

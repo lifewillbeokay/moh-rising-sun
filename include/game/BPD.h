@@ -4,11 +4,13 @@
 // Scoped GameCube storage views for conversion and pointer setup. Verified array
 // strides are documented in docs/BPD.md; other prefixes are not allocation types.
 // Opaque prefixes and gaps must not be assigned an inferred historical type.
-struct BPDPolyPath;
 struct BPDPathFindingNode;
 struct BPDPathFindingArea;
 struct BPDPathFindingBSP;
-struct PropVec3;
+// Path conversion and the original spline generator both use 12-byte points.
+struct PropVec3 { float x, y, z; };
+// The signed fields and pointer conversion establish this 12-byte path record.
+struct BPDPolyPath { int id, pointCount; PropVec3 *points; };
 struct PropPlane4 { float x, y, z, d; };
 struct BPDLight {
     int type;

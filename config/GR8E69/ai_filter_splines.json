@@ -1,0 +1,73 @@
+{
+  "id": "ai_filter_splines",
+  "source": "src/ai/filter_splines.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d854c",
+      "size": 468
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a227c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi",
+      "address": "0x800d854c",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "ResetSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi",
+      "address": "0x800d865c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownSplinePathManager__15CAIFilterGlobal",
+      "address": "0x800d8680",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetSplinePath__C15CAIFilterGlobalUib",
+      "address": "0x800d86c4",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__20CAISplinePathManagerUi": "0x800e078c",
+    "AllocateGenerateBuffers__20CAISplinePathManager": "0x800e08ac",
+    "ChangeEndian__FRi": "0x8005861c",
+    "ChangeEndian__H1ZP8PropVec3_RX01_v": "0x8028389c",
+    "ChangeEndian__FRf": "0x800585fc",
+    "GenerateSplinePath__20CAISplinePathManagerUiUiUiPC8PropVec3": "0x800e0980",
+    "FreeGenerateBuffers__20CAISplinePathManager": "0x800e0924",
+    "Reset__15CAreaSearchNode": "0x800e1334",
+    "ResetGlobalList__9CAIObject": "0x800d9e54",
+    "_._20CAISplinePathManager": "0x800e0820"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

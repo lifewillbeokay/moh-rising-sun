@@ -840,7 +840,11 @@
     "bpd_free_properties.json",
     "light_register.json",
     "bpd_offset_pointer_table.json",
-    "bpd_offset_property_pointers.json"
+    "bpd_offset_property_pointers.json",
+    "bpd_load_properties.json",
+    "bpd_load_bsp.json",
+    "ai_filter_splines.json",
+    "ai_spline_manager.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
