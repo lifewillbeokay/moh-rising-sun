@@ -1,7 +1,7 @@
 # Camera projection and transforms
 
-Fifteen `CCamera` functions compile to **1,024 matching executable bytes** in
-four fragments, with one four-byte read-only constant. They use ProDG 3.8.1
+Nineteen `CCamera` functions compile to **1,344 matching executable bytes** in
+five fragments, with twenty generated read-only bytes. They use ProDG 3.8.1
 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`; this working profile
 does not identify the original compiler release.
 
@@ -15,6 +15,7 @@ GameCube verification used Codex. No source was imported from the PS2 remake.
 | Manifest | Original text range (end exclusive) | Functions | Code bytes |
 | --- | --- | ---: | ---: |
 | `camera_get_transform` | `0x8012bdc4`–`0x8012bdf0` | 1 | 44 |
+| `camera_axes` | `0x8012bdf0`–`0x8012bf40` | 4 | 320 |
 | `camera_transforms` | `0x8012bf40`–`0x8012c188` | 8 | 584 |
 | `camera_projection` | `0x8012c4a0`–`0x8012c5b0` | 5 | 272 |
 | `camera_update_projection` | `0x8012c910`–`0x8012c98c` | 1 | 124 |
@@ -22,7 +23,8 @@ GameCube verification used Codex. No source was imported from the PS2 remake.
 The functions are `GetTMLocalToWorld`, `PreTransform`, `Reset`, `Transform`,
 `SetTMLocalToWorld`, `SetPosition`, `SetBasis`, `Move`, `Rotate`,
 `Orthonormalize`, `SetPerspective`, `SetOrthographic`, `GetHFOV`, `GetVFOV`
-and `UpdateCameraToClip`. Each manifest records individual original symbol
+and `UpdateCameraToClip`, plus the four vector getters `GetPosition`,
+`GetRightward`, `GetForward` and `GetUpward`. Each manifest records individual original symbol
 names, addresses and sizes. The adjacent `camera.cpp` and `draw_context.cpp`
 compiler markers bound these global functions at `0x8012ba60`–`0x8012d26c`,
 supporting the code map's inferred file ownership. These are reconstruction
@@ -63,8 +65,10 @@ binary context. `#pragma interface` avoids emitting a replacement camera table.
 
 Method names, parameter types and constness come from original symbols. FOV
 getters return through the floating-point result register; mutation methods
-retain the existing void interface. These wrappers pass vectors only by reference; they
-construct no vectors. The vector type is described in [Matrix.md](Matrix.md#cvector3-layout).
+retain the existing void interface. The transform wrappers pass vectors by reference. The four vector getters
+construct row copies and use the recovered vector assignment that returns a
+value; they preserve the destination fourth word. Each getter has its own
+generated 1.0 constant, together occupying `0x802a768c`–`0x802a769c`. The vector type is described in [Matrix.md](Matrix.md#cvector3-layout).
 
 ## Preserved behavior
 
@@ -91,8 +95,8 @@ original symbol identifies 64 bytes at `0x802fbf00`; it remains external BSS
 with no reconstructed-data credit. A new local temporary would change this
 shared-storage behavior and is not substituted.
 
-The matrix operations already have accepted source except for `Rotate` and
-`Orthonormalize`, which remain external original bodies. Their camera wrappers
+The matrix operations already have accepted source except for `Rotate`, which remains an external original body.
+`Orthonormalize` now has separately verified matrix source. Their camera wrappers
 earn credit only for their own verified bytes. The matrix header now declares
 the original `Rotate(const CVector3 &, float)` method and shared temporary;
 neither declaration earns source credit.
@@ -105,13 +109,14 @@ No generated functions are stripped, no instruction patches or assembly bodies
 are used, and original context earns no new credit. The separate original-object
 baseline also matches; runtime and emulator behavior remain untested.
 
-All 55 local tests pass. The existing 753 accepted unit records, including their
-compiled object and linked hashes, are unchanged after the shared-header additions.
+All 55 local tests pass. The earlier camera batch preserved all 753 then-existing unit records. The
+latest geometry batch additionally checks preservation of all 803 prior records
+when extending the camera and matrix declarations.
 The complete 2,860,576-byte image retains SHA-1
 `6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d`. The public snapshot was refreshed after
 local verification; CI validates that snapshot rather than rebuilding the game.
 
-The remaining camera update, vector getters and pitch/roll/yaw routines are
+The remaining camera update and pitch/roll/yaw routines are
 useful follow-ups. Their local vectors can now use the
 [`CVector3` declaration](Matrix.md#cvector3-layout); each body still needs its own
 comparison. Frustum members and

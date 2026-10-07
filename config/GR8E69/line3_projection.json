@@ -1,0 +1,43 @@
+{
+  "id": "line3_projection",
+  "source": "src/geometry/line3_projection.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007c510",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b098",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetProjection__C6CLine3RC8CVector3R8CVector3Rf",
+      "address": "0x8007c510",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsDegenerate__C6CLine3": "0x8007cbf8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

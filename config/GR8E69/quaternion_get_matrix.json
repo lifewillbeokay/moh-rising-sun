@@ -1,0 +1,41 @@
+{
+  "id": "quaternion_get_matrix",
+  "source": "src/quaternion/get_matrix.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007cd64",
+      "size": 200
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b11c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetMatrix__C11CQuaternionR7CMatrix",
+      "address": "0x8007cd64",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

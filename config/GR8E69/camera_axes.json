@@ -1,0 +1,59 @@
+{
+  "id": "camera_axes",
+  "source": "src/camera/axes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012bdf0",
+      "size": 320
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a768c",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetPosition__C7CCameraR8CVector3",
+      "address": "0x8012bdf0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C7CCameraR8CVector3",
+      "address": "0x8012be40",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C7CCameraR8CVector3",
+      "address": "0x8012be90",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C7CCameraR8CVector3",
+      "address": "0x8012bee0",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

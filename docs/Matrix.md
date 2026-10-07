@@ -1,7 +1,7 @@
 # CMatrix reconstruction evidence
 
-Twenty game-specific functions now compile to **3,556 matching code bytes**,
-with **64 generated read-only data bytes**, in nine accepted fragments. They use
+Twenty-three game-specific functions now compile to **4,876 matching code bytes**,
+with **100 generated read-only data bytes**, in twelve accepted fragments. They use
 ProDG 3.8.1 with `-O2 -G0`; the general inverse additionally requires
 `-ffast-math`. This does not identify the original compiler release. Reconstruction
 and verification used AI assistance; these functions were reconstructed from the
@@ -52,6 +52,9 @@ row reads (`GetRight`, `GetFront`, `GetUp`, `GetPos`) that return a row as a
 | `matrix_8007afe0` | `0x8007afe0` | 1 | 212 | 12 bytes at `0x8029afb4` |
 | `matrix_8007b0b4` | `0x8007b0b4` | 1 | 176 | 8 bytes at `0x8029afc0` |
 | `matrix_8007b290` | `0x8007b290` | 1 | 788 | 12 bytes at `0x8029afd0` |
+| `matrix_fast_inverse` | `0x8007b164` | 1 | 300 | 8 bytes at `0x8029afc8` |
+| `matrix_orthonormalize` | `0x8007b5a4` | 1 | 784 | 8 bytes at `0x8029afdc` |
+| `matrix_to_euler` | `0x8007b8b4` | 1 | 236 | 20 bytes at `0x8029afe4` |
 
 The core fragment contains `InitClass`, assignment and both `BuildScale`
 overloads. Translation contains `BuildTrans`, the four named setters,
@@ -89,8 +92,9 @@ unchanged. Its generated constants are the floats 1 and 0. Each axis rotation
 multiplies its input by the observed float **2670176.75** (`0x4a22f983`), converts
 the result to an integer and calls original `MathSinCos`. The three copies of
 that constant are verified at the addresses referenced by the original
-instructions. The original spelling of the scale expression and the full
-`MathSinCos` contract remain unproven.
+instructions. The original spelling of the scale expression remains unproven. The matching
+`MathSinCos` body is now documented in [Geometry.md](Geometry.md); it converts
+that integer angle back to float radians and calls sine and cosine.
 
 `Multiply` preserves explicit output order and floating-point expression order.
 It writes directly to the destination as the original does; no temporary matrix
@@ -129,6 +133,43 @@ These four routines add 1,436 game-code bytes and 44 read-only data bytes. They
 lie within the original `matrix.cpp` marker interval, but their separate source
 files are project build fragments. They reuse the existing matrix storage and
 opaque-vector prefix view; no additional complete game type was invented.
+
+## Fast inverse, orthonormalization and Euler angles
+
+Three more functions use the existing 64-byte matrix and 16-byte vector views.
+They use the ordinary ProDG 3.8.1 `-O2 -G0` profile, without fast-math. Their
+small inline arithmetic helpers have descriptive names; no original helper
+names or inline/source boundaries are claimed.
+
+`FastInverse` copies the input's three basis vectors and position, transposes the
+basis into the output, and computes the negative dot products of the saved
+position with those saved basis vectors. It sets the first three homogeneous
+entries to zero and the last to one. It assumes the inverse can be obtained this
+way; it does not test orthogonality or add a singularity fallback. Transposition
+reads directly from the input while writing the destination, as the original
+does. The saved vectors do not make every operation safe for in-place aliasing.
+
+`Orthonormalize` copies the three original basis vectors and applies successive
+projection subtraction: normalize right; remove right's component from front
+and normalize it; remove right and normalized front's components from the
+original up vector and normalize that result. Each normalization skips scaling
+when the computed length equals zero. It writes only the nine basis components,
+preserving position and all four homogeneous words. It does not synthesize a
+replacement axis for degenerate inputs. The original temporary vectors, dot
+product grouping and order of floating operations are preserved.
+
+`ToEulerXYZ` retains its unusual entry selection: it branches on `row[0].z`,
+then, in the nonsingular branch, computes the first angle as
+`asinf(-row[1].z)`, the second as `atan2f(-row[0].z, row[2].z)`, and the third as
+`atan2f(row[0].y, row[0].x)`. The two boundary branches use opposite half-pi
+constants, signed `atan2f(row[1].x, row[1].y)` and zero for the third angle.
+The source preserves these formulas and comparisons, rather than assuming a
+standard Euler convention or clamping the asin argument.
+
+The [quaternion and line helpers](Geometry.md) now reuse these vector/matrix
+representations. The independently matched `MathSinCos` implementation also
+resolves the earlier angular-scale observation: its integer input is multiplied
+by the float representation of `2*pi / 2^24` before calling sine and cosine.
 
 ## CVector3 layout
 
@@ -189,18 +230,18 @@ functions: future transform-related functions can now use an independently check
 matrix representation.
 
 The [particle fragments](ParticleRecipes.md) now use this declaration for their
-two matrix-copy getters and an `Orthonormalize` wrapper. Only the wrapper is
-reconstructed; `CMatrix::Orthonormalize` is declared as an original external
-dependency and receives no new matrix-source credit.
+two matrix-copy getters and an `Orthonormalize` wrapper. The matrix body is now reconstructed as well; the wrapper and matrix body
+retain separate, nonoverlapping source credit.
 
 The [camera fragments](Camera.md) reuse the same representation and declare the
 original shared `CMatrix::s_TempMat` (64 bytes at `0x802fbf00`) for pre- and
 post-transform operations. The header also exposes `Rotate(const CVector3 &,
 float)` as an external original method. Neither that method nor the temporary's
-storage earns new matrix-source credit. The camera wrappers pass vectors only by reference.
+storage earns new matrix-source credit. The camera transform wrappers pass vectors by reference; the new vector getters
+construct and assign the recovered row copies.
 
-With `CVector3` declared, useful next work is to extend `Rotate`, `FastInverse`,
-`Orthonormalize` and the remaining matrix functions that take or build vectors. A research `TibToMOHFL`
+Useful next work includes `Rotate` and the remaining matrix functions that take
+or build vectors. A research `TibToMOHFL`
 implementation has the expected 88-byte size but still differs in instruction
 scheduling/register allocation; it earns no credit. Extend the vector
 declaration only where emitted code requires it, and record the evidence.

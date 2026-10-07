@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 618368,
+    "matching_code_bytes": 623132,
     "total_executable_code_bytes": 2492032,
-    "percent": 24.813806564281677,
+    "percent": 25.00497585905799,
     "categories": {
-      "reconstructed_game": 226152,
+      "reconstructed_game": 230916,
       "restored_library": 392216
     },
-    "matching_functions": 2297
+    "matching_functions": 2324
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -122,6 +122,7 @@
     "config/GR8E69/bpd_light_volume.json": "e3931cdecf07dcd381e5058696fdf773127383abb36af8f4f317095e70d4849c",
     "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
     "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
+    "config/GR8E69/camera_axes.json": "28db4af00ca57a333100571e7bdfb74c71c39d8c090ffdd46b5b38e2fb2e4ea2",
     "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
     "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
     "config/GR8E69/camera_shake_evaluate.json": "6ddf6bb7a0dd3e9238029692d7e5fb10ab4ae446160eca63ce763f53719520c7",
@@ -375,6 +376,11 @@
     "config/GR8E69/light_transforms.json": "89e40f5f3228cb0dd14ccb3f586ad84e9bdd87a7b23f105a9af98c74c173dd41",
     "config/GR8E69/light_volume_manager.json": "a1020b4f836e05cc516687609a15be559ca43ece249e7a1abfa2ed9adb4a1b8b",
     "config/GR8E69/light_volume_transition.json": "6dd24de125e3978833dba0ac54a2f0af965db4cac5faeaf057d813f5150e5cc3",
+    "config/GR8E69/line2_closest_point.json": "7a2a98a7c78c631e969b011d220afd1424fe1821e61f0f7155cfc0b0739698e7",
+    "config/GR8E69/line3_degenerate.json": "734287694f2531b7bfd1327c5a94f2efd36428640ac74b07926bb8712f2940bd",
+    "config/GR8E69/line3_length_squared.json": "f01db7bb74004b2d6dd3b79a6f3abd6cf9340458c8d4664b95d7e403412806b6",
+    "config/GR8E69/line3_projection.json": "6b4ab838c56ec3aa8957049c727fe93522a0360e4561fbeefcf716671e2b0332",
+    "config/GR8E69/line3_set.json": "c86111b3624518375ae9ff8d067c7209c29107740828f58c39dae0d42b95c021",
     "config/GR8E69/llex.json": "8b9e0adf7b6cee93eaaa63cc0f928163181057456f431d385df183319c4d0ece",
     "config/GR8E69/lmathlib.json": "51899835a51deba0c1c67ba0b6990e4c8bb952b15cbd8cdbd18a6c39a41fe246",
     "config/GR8E69/lmem.json": "50eb92b479e35bed12877647ea9ecc4bc675e7d8ee089d21104de03838f5ec3e",
@@ -387,14 +393,23 @@
     "config/GR8E69/lundump.json": "3944456260818dbb0ea3036a0665bc3e61c645d13f3697d1717867f3a9cc4fa2",
     "config/GR8E69/lvm.json": "2a9cc1435ec6bac77253f0b89a8fc9980fdef901fc701b3cda691817cc4e93e8",
     "config/GR8E69/lzio.json": "fd6b343d8b40cee7692844cb7688dcbe058747c304066035668babf64217001b",
+    "config/GR8E69/math_sin_cos.json": "3268cfc42083eeb856569d7530894bee5cdc21bf20d0fe4debfcb905be7d0b5e",
+    "config/GR8E69/mathfun_atan.json": "86374a6e14c9c018914f9c34007c104a8f0962ff7c06552e5fd31bc9f82a30a0",
+    "config/GR8E69/mathfun_pan_tilt.json": "f63bc40b50ab95e223cf04d7bb9cc77ce66c9407dae26f1448a178753f455a79",
+    "config/GR8E69/mathfun_percent.json": "13d34f9eab513248323832a1e250b33c0be4e5289f905c8e08611131fb91ed4a",
+    "config/GR8E69/mathfun_random_real_signed.json": "458808b23c1ccc8bfcc5b738a031cbf943a0453e4e9baee4c9fd0ab328397d0b",
+    "config/GR8E69/mathfun_rotations.json": "ce36522481cd1fa1fc1740f0f169c5b291c66e88d8c21d948d28c4d0df3dadae",
     "config/GR8E69/matrix_8007ab7c.json": "246d398813ffb020f39c8880158bfdbb319479d33a30b9479b149ad7a3650467",
     "config/GR8E69/matrix_8007afe0.json": "c814345937ce52ad2afa2b72c784a94ad32d3ef05591da8ec55c970ec852479e",
     "config/GR8E69/matrix_8007b0b4.json": "1eb6aed978c8c8b083b2bab813ca04d10d546db8f4f3f87807b672b01202a616",
     "config/GR8E69/matrix_8007b290.json": "2a9687877daa2f67e8028d53395d6842c8ac5c7ae956c49559fee9f5cb5d9d22",
     "config/GR8E69/matrix_core.json": "f072a560d12dce247a1728095680aca97767286d6e588bb82cd178ff330f6d3d",
+    "config/GR8E69/matrix_fast_inverse.json": "db443c0b2885d1a7f65faf400857a4cd1a8fc3771d96445c76af79a64b1ff234",
     "config/GR8E69/matrix_getslot.json": "d07d5d0d67c6a1b90a32de95b38943229a69a8ef541cb215876a812287f63851",
     "config/GR8E69/matrix_multiply.json": "64d9a2f6ff2c6b85fe51ce1d07d79c21d706733dbd641bf74cad4cf295e1075e",
+    "config/GR8E69/matrix_orthonormalize.json": "7f7c9c47d45fa44a477d3b8aac1618300ac1c518d239abacddf09605bb808f2f",
     "config/GR8E69/matrix_rotations.json": "d9316a52cb8420ec64a5caec9440f9717316a194bcecb7988afc6ef310f6676d",
+    "config/GR8E69/matrix_to_euler.json": "0e46e88b7d2f32f74912be15740abd056c3b2d3c6b6d351ba2038794abdf16aa",
     "config/GR8E69/matrix_translation.json": "622a8647279665d8f4caeb887a2966a8719838335416b658bdcb872ddba78fd5",
     "config/GR8E69/md5.json": "c8e6e2f4eb9c41f917626bf7924787fa4654c663dd466d4377f67313eee22506",
     "config/GR8E69/mesh_particle_placement.json": "09675fa3d42007e283a71f282f3d3f2f890f1c087cb10c2c20f3a3231e955dc0",
@@ -555,11 +570,15 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "e6eac4f1ff4734874c44fbcb4b4b855c35c19ab40edc29080c01a42752710b93",
+    "config/GR8E69/project.json": "c9559d0eb0ba9d4797e83bf89b54e2192c480fab19056bca645a3c3255caa374",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
     "config/GR8E69/projectile_set_damage.json": "0e47f354edcbd0b55242d939011e514111aa1f9b87d67194f2a9326b50dccd92",
+    "config/GR8E69/quaternion_from_euler.json": "c14a8e54acd40bafb64c605330a4512bf75fe0128faa82534f684094359457c1",
+    "config/GR8E69/quaternion_get_matrix.json": "c63fc72dbed2a9d3c604effaada46ecb10afde2020eaadd56e4e7f8ccf114e82",
+    "config/GR8E69/quaternion_normalize.json": "d78a8760467d1cff8299eecd55985b34b9908086e277c7814083cb4c65a64fc4",
+    "config/GR8E69/quaternion_slerp.json": "1a0f13b162d329331ef995f603d989e695af05bdda0fce3a52b322131c771a16",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
     "config/GR8E69/scene_node_destructor.json": "2421437a4581f16904fb69d4f06b23754bc5d337e70bdec86806d8f9f3f370a5",
@@ -989,9 +1008,12 @@
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/BPD.h": "0b35cb4e9be9dbf3be60fb20019f0500b0667671505801d6afd698573bf0f111",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
-    "include/game/CMatrix.h": "59b6809fe696700ad004ac77d35676495ff649fb2d9bebfa4f9300ee9197014c",
+    "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
+    "include/game/CLine3.h": "671ce5d07b583fd857df0b2ce304517d72a20d34e27967fa945b8a42de815760",
+    "include/game/CMatrix.h": "0a1cd7c02e0d72a241d00c861f92cf720b93960f3e96da8dea1f370ee8be27f9",
+    "include/game/CQuaternion.h": "ac6e158f9aec2448a2f5bbbc84f1e7f4337ff3fc49491b37d809374c550d8457",
     "include/game/CVector3.h": "6620724fd56e37259e31d274061127a79d1184446804c122f2d0a0542921cc52",
-    "include/game/Camera.h": "226257f70f2360cef00394559a793815cdb4c93e419f6c4a21acfb08ae7379cb",
+    "include/game/Camera.h": "ff4b101cfeccb35cc3a4fc20297d6bb9f7bcb8cbde81b76d117a99dada52e2ce",
     "include/game/CameraShake.h": "e046350a12377965ac2392f2cf1031cb95372524cd098c2a2ad4c77a490b6051",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
@@ -1220,6 +1242,7 @@
     "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
     "src/bullets/ThrownCollisionLight.cpp": "773de461b874b6bb1b3a066e0ac5a8124c5df3a0ac5595a58ebb984375882d56",
     "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
+    "src/camera/axes.cpp": "5f01c8b680d40e8507f99181b64e824f3fd5f74911193154807716a91603286a",
     "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
     "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
     "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
@@ -1564,6 +1587,12 @@
     "src/flexprop/FlexTypes.cpp": "6cdf22ea674b9f0fb4d5677275f478b41358014dc35a70c85a00447c99dedca0",
     "src/flexprop/FlexValid.cpp": "ea8311618d76e512206cc64acb8f3e815f8b0ec2fffd32ed8c0019dce3acd93e",
     "src/game/string_80277f18.cpp": "b6c79191f3a19d54855216cdbc6cf512f4fa474cc60d95837b45a4acec64016c",
+    "src/geometry/line2_closest_point.cpp": "5ca1d7b30bed3ac121a7c1ba9c1abc01010a4c06944db1c0685cab6d284be571",
+    "src/geometry/line3_degenerate.cpp": "7957f9e369e0020c35f35633131f44521812552d810eab563d323b31fc1620fe",
+    "src/geometry/line3_length_squared.cpp": "a477222059eb7d4ad38790f8ddabe0ce9df540a0a206602f263472b33ad4e0e9",
+    "src/geometry/line3_projection.cpp": "bc1a1d004a3336b14509c042a9fbf18dd384dd9735400bf9c03cdf5089ea7d55",
+    "src/geometry/line3_set.cpp": "88fc60109effdd125e1740584a08b53f695786886279e2d26f6ad5cf3156e6f7",
+    "src/geometry/math_sin_cos.cpp": "d06cdbb52f13d056e0d9fe63e1adedd616cb39ebba4ab27f9a5c2bd7131116e3",
     "src/libgcc/COPYING": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
     "src/libgcc/NOTICE": "716534e14c0b03a99df81151630430eb7611a3be6c7aef72d163d7755b25e328",
     "src/libgcc/defaults.h": "80a6d3ddc1d981789b99116a3316f807cb2e098bc0a8a4dc28cdc077148dd460",
@@ -1627,14 +1656,22 @@
     "src/lua/lvm.h": "6aaeffc3d2e5e52ee2146a95278ec5a15cad147bde4f486291f648fac5896e21",
     "src/lua/lzio.c": "015c1f2b6f46a536f3b911e4ae1156e1f0fa21367a63d053675fed1551a8bf16",
     "src/lua/lzio.h": "be259449bd1fb99b1cb9b5dbfcc5a0f6afbf27e22836e76429f4aa8cd4c29e07",
+    "src/mathfun/atan.cpp": "e9ba474962d6d2e2056268f2f28b0d7d5faf29f00f415da909358d0f55f2eda7",
+    "src/mathfun/pan_tilt.cpp": "85961d1a544a6afa4cdb6a2fb4b79e5d8e270e720c84ae6fe386a6475bebdc81",
+    "src/mathfun/percent.cpp": "1ee32550aa173b54008f04c226385670e0b6d33acce4c3aed449b2735453f1ed",
+    "src/mathfun/random_real_signed.cpp": "5545d971a3a1986883626025dc5aced8a40792e98ba9fcf594b5964b201efeaf",
+    "src/mathfun/rotations.cpp": "13dbc4371a4b0a44379202cdbfc0e23fd4ad2a5f2c25fc14ab63624f067a30f4",
     "src/matrix/core.cpp": "db206300806ab7891b16ab595cf6d41f4d94b51b0fdfa9f9f0255061e7f7a1d8",
+    "src/matrix/fast_inverse.cpp": "a62468ee2d7ae6a18e0717b2d5c7dd1a207237d1cf71ad6b83081ca5aba86de7",
     "src/matrix/getslot.cpp": "e69b27cf7cd77fb0933f4359ea9dd13846a58553543bb56e551ed76780155d01",
     "src/matrix/matrix_8007ab7c.cpp": "7a5b75da75c78d2b105b0b1762f4c5d8f72c0e327a0964af44330a79528e4033",
     "src/matrix/matrix_8007afe0.cpp": "3796abf65d6a895d4cc24f005ff934f778fe9dbc197a3ee14f86680834532925",
     "src/matrix/matrix_8007b0b4.cpp": "13a204e4da59d8affaa8f289a242a9f1cefebf2494b8e84be0cb81aecd3b83ff",
     "src/matrix/matrix_8007b290.cpp": "2f3b8b847f90e294688dfefe2ebea0802d37fb3c1eb819ec141597a8227ac00c",
     "src/matrix/multiply.cpp": "83d29636e8cacd79a0c4666bec21713fbb8f8dfbc81fee54cf24b819806a3db3",
+    "src/matrix/orthonormalize.cpp": "91420e320d34b674c17c85560131a5b52f2e1d3f478e13d7ce307c6023d59b8d",
     "src/matrix/rotations.cpp": "dd3271983b5ae5487680c727a03888eb321b4fa1fa595c45c4300f89c018686d",
+    "src/matrix/to_euler.cpp": "0fd24d8d4935927d133eb3aa2616f3514f1b7e55740b61d98778e18f668c0645",
     "src/matrix/translation.cpp": "6da9546bc9ea8c3135552f2a4e8ebdec0d66c977aece73c5335857ceb64728ed",
     "src/matrix/vector.cpp": "3b10137c31cbb0c367c98b151c79e6f730d8308a23f48e4e17fb7f802c995a5a",
     "src/matrix/vector_dot.cpp": "cb4baa174ae4153fdd4a7f95d54642772e3dc8003ea1cd570932f3d8dad5029a",
@@ -1821,6 +1858,10 @@
     "src/player/CameraShakeEvaluate.cpp": "e95f72c0c199549a3107c5461b9e59473f3adbd524bd4921581d1603595eff1e",
     "src/player/CameraShakeInit.cpp": "c9ad4b5454c6f8413d1736380841195c7059fe9a6704e86141493afc382b2fe9",
     "src/player/PlayerCameraShake.cpp": "1e90a17ff0d32649637c1c582ae97fff2153c64a64ce706c2f3d674703fdd5ca",
+    "src/quaternion/from_euler.cpp": "7dc5de161262d1e299a43e1f7e3489f1e55b8b19a6d64ea1304335fadccc4158",
+    "src/quaternion/get_matrix.cpp": "833c4f1e128f98fd799af7974b65805cd409a2be36d0537e5915f5e23a9b65c2",
+    "src/quaternion/normalize.cpp": "6a6d8d3dc0aec56da5bc7e6deea018e478cff41b6aa3ce416ae918e002dcd69b",
+    "src/quaternion/slerp.cpp": "5d23dc039a6a7d8246e63aee872ffea35f85911f9e34b3017c97d647bc091bfd",
     "src/scene/MovingNodeLightDefaults.cpp": "d865f9d5d5a5a9193a6b79954821ae5c73dd4161daef037e9d5fe56d20ddb9fd",
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
@@ -20083,6 +20124,348 @@
       "discarded_functions": [],
       "object_sha256": "bd402256a38349d4c595007a50e26de610492e4eb712294684bc1149b651b00b",
       "linked_sha256": "c32b8da0aae47c2c00baa7a2e850fa19cb9f136115a73985cc536f61be296499"
+    },
+    {
+      "id": "matrix_fast_inverse",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 300,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6356b7bbf01c4f56d5792c203b86d4d325ef60c7182f1b4f8bc29d7fcbd87491",
+      "linked_sha256": "4c97f0343845e05fea9022f6229b9aae28b715217dcf9c184f9079be40541524"
+    },
+    {
+      "id": "matrix_orthonormalize",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 784,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "340f98a6640a204aec42e4786c1ed6e05c63989acf7b403f4aa2ceb92be27c2e",
+      "linked_sha256": "c5e601a97849720319b52200c5f12b04e01b19c5a9a7c87131ac8d7f8a624bd6"
+    },
+    {
+      "id": "matrix_to_euler",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cd66be8d3c4422952849c7f9e3d915f9097b82cfbe0523fac38567bae5682d2f",
+      "linked_sha256": "f45a3281a776a27d9f5edf5466e5f85a5bee2b7381bc7232de8c22d2cfaf8ffe"
+    },
+    {
+      "id": "mathfun_atan",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 164,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "20fc29538062f24272d4af2fee31436f9aa60d0ea4473eb7ffef08b6ccd432b4",
+      "linked_sha256": "644f4c064d5081cfed00ebede2bc492ecd3cf155501f2a8a986e952b29d129a7"
+    },
+    {
+      "id": "mathfun_rotations",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 224,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7340cda0aeec5a2cf4088e1a642752f6bb9f08779c089f179fddb18846f1f605",
+      "linked_sha256": "a10f41a4da3cbad6a7f78f89f79a3fedace154fc77caab66b85b0147a2a7ed6a"
+    },
+    {
+      "id": "mathfun_pan_tilt",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 340,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "131758080be6da2ee218d27058e4fab715affd00b3aa5b084c2d12e92320709c",
+      "linked_sha256": "6ae7a318270076b01695cc0060fbb466a5857fe637d0c436fce61dc8ee31aefd"
+    },
+    {
+      "id": "mathfun_random_real_signed",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 172,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a8f2f202804e0f4988ce6d615d6adaed90c00ded56714e70f8949d9705964167",
+      "linked_sha256": "dff73ff5dcb08b27885d5575b07cb8482c4f3b1da98b3285af60be0fe5abea80"
+    },
+    {
+      "id": "mathfun_percent",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 104,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "63207326d96044d978ba92c590054fac7939aedec9a25e661c0d77c123067f5e",
+      "linked_sha256": "44cb7b4b15e07a7329b13b936bd89bd656d7b5bcb8ae30f429227baae70b720a"
+    },
+    {
+      "id": "quaternion_normalize",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0ccdc9364e0ece07e22c786c0237af3eb22a5e2215f7236753164a1b56964fce",
+      "linked_sha256": "cd3b404f783cd3e31f9412edb5a77e1da96c700376e7185d69f90c405af9b689"
+    },
+    {
+      "id": "quaternion_get_matrix",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 200,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5dbff5a8f603a1b7d15e435f34db42bd200976e894059df0faffb4b7b9e207f3",
+      "linked_sha256": "54765867e9670f42221db06d3ebb2d23aaae2c4a2b55c44a2e48f7c16fb483eb"
+    },
+    {
+      "id": "quaternion_from_euler",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 244,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f71ada751e69080f547e40a3e9de875b1bfacea9ecb7e75e5cec9f9048bf1ef4",
+      "linked_sha256": "9d7419260696a69edf56c02893537da4fa87e17537f5d275125f9b7e09b47875"
+    },
+    {
+      "id": "quaternion_slerp",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 372,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6f91293338ba8de0d673180495e8d2dfc9eb6693ecea755ee9613ac643f909d3",
+      "linked_sha256": "d8f4c46469652c9d4aa17e2eeaa4d81ccf8bf13cba0bb4e28dac12fd6ec145a7"
+    },
+    {
+      "id": "line3_length_squared",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b395b3323437cc2e072ae9dfc5a579ccc6d04e02a739be558b1b2b39b2ec808d",
+      "linked_sha256": "514de15e6124c49940879f53cd284571f40c2a2ac1d59c0bce54bf83a0ddfd17"
+    },
+    {
+      "id": "line3_degenerate",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8fced10863f55a6aaa41abbd7a88480af3357dca518d7a221f3b5f5c51b43617",
+      "linked_sha256": "bf1e06e98bc8de1a6edce338963ac43fa4f9ddd1383242680dee624e4e2e4e74"
+    },
+    {
+      "id": "line3_set",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2d17ada481aca61e3eabd22453dbe650b8cb8b33d65a1619712bf5050a7095bd",
+      "linked_sha256": "f207cb78cd0fef290852a68f8a562d39b994c40cfbd0413e30c556dc5a620879"
+    },
+    {
+      "id": "line3_projection",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 344,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d903185c65c8534065d165d685d6b347a9af53f005adf0773e8b5887968413c3",
+      "linked_sha256": "f834f7e0c424d0193cf6c4409703c8b7bb32174dd9254af18920b009fb7b39b7"
+    },
+    {
+      "id": "line2_closest_point",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 360,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "eb5a36d6af9837577856bf792a52f1a062689888f8544a159d1ba7e35818181f",
+      "linked_sha256": "02d7171fb0b9e85245d3eb0b52e5dedca27f2cc09ede38260c08d0c3adeb9828"
+    },
+    {
+      "id": "math_sin_cos",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ac1868a1ed62ac14ad14db923fb0a924c77054d636a7c01a9fe28e9ce380cc1b",
+      "linked_sha256": "a0fb36dd1ceae8a4945dd3730cc705ec3790aedf8f927d8f632412a8951ef83f"
+    },
+    {
+      "id": "camera_axes",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 320,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e9c150e027e06663c6b6211c170493d9e4d8dfd9e74584689e659c9cf29b7fec",
+      "linked_sha256": "2cb1e7f7fc27ee6bcf36559bb96283c062fc5dedd71c8d9c43cdb9628582e16f"
     }
   ],
   "code_map": {
@@ -26757,34 +27140,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 8007b164",
+        "name": "Unknown file/.text @ 8007b9a0",
         "ranges": [
-          {
-            "address": "0x8007b164",
-            "size": 300,
-            "kind": "function",
-            "name": "FastInverse__7CMatrixRC7CMatrix",
-            "evidence": "unknown-file"
-          }
-        ]
-      },
-      {
-        "name": "Unknown file/.text @ 8007b5a4",
-        "ranges": [
-          {
-            "address": "0x8007b5a4",
-            "size": 784,
-            "kind": "function",
-            "name": "Orthonormalize__7CMatrix",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007b8b4",
-            "size": 236,
-            "kind": "function",
-            "name": "ToEulerXYZ__C7CMatrixRfN21",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x8007b9a0",
             "size": 88,
@@ -26838,67 +27195,31 @@
             "kind": "function",
             "name": "Intersect__C6CLine2RC6CLine2fP8CVector2",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007c358",
-            "size": 360,
-            "kind": "function",
-            "name": "GetClosestPointSquared__C6CLine2RC8CVector2P8CVector2",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8007c4c0",
+        "ranges": [
           {
             "address": "0x8007c4c0",
             "size": 80,
             "kind": "function",
             "name": "IsDegenerate__C6CLine2",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007c510",
-            "size": 344,
-            "kind": "function",
-            "name": "GetProjection__C6CLine3RC8CVector3R8CVector3Rf",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8007c668",
+        "ranges": [
           {
             "address": "0x8007c668",
             "size": 1424,
             "kind": "function",
             "name": "GetSquaredDistanceBetweenSegments__C6CLine3RC6CLine3RfT2Pf",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8007cbf8",
-            "size": 80,
-            "kind": "function",
-            "name": "IsDegenerate__C6CLine3",
-            "evidence": "unknown-file"
           }
-        ]
-      },
-      {
-        "name": "Unmatched files/trig.cpp [inferred file group]",
-        "file_record": 92,
-        "file_name": "trig.cpp",
-        "ranges": [
-          {
-            "address": "0x8007cc48",
-            "size": 4,
-            "kind": "function",
-            "name": "MathLLAngleInit__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8007cc4c",
-            "size": 124,
-            "kind": "function",
-            "name": "MathSinCos__FiPfT1",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x8007cc48",
-          "0x8007ccc8"
         ]
       },
       {
@@ -26907,45 +27228,10 @@
         "file_name": "quaternion.cpp",
         "ranges": [
           {
-            "address": "0x8007ccc8",
-            "size": 20,
-            "kind": "function",
-            "name": "Set__11CQuaternionffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8007ccdc",
-            "size": 136,
-            "kind": "function",
-            "name": "Normalize__11CQuaternion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8007cd64",
-            "size": 200,
-            "kind": "function",
-            "name": "GetMatrix__C11CQuaternionR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8007ce2c",
             "size": 460,
             "kind": "function",
             "name": "SetFromMatrix__11CQuaternionRC7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8007cff8",
-            "size": 244,
-            "kind": "function",
-            "name": "SetFromEuler__11CQuaternionfff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8007d0ec",
-            "size": 372,
-            "kind": "function",
-            "name": "Slerp__11CQuaternionT0T0f",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -49123,34 +49409,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8012bdf0",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C7CCameraR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012be40",
-            "size": 80,
-            "kind": "function",
-            "name": "GetRightward__C7CCameraR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012be90",
-            "size": 80,
-            "kind": "function",
-            "name": "GetForward__C7CCameraR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012bee0",
-            "size": 80,
-            "kind": "function",
-            "name": "GetUpward__C7CCameraR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8012bf30",
             "size": 8,
             "kind": "function",
@@ -49931,27 +50189,6 @@
         "file_name": "MathFun.cpp",
         "ranges": [
           {
-            "address": "0x80133590",
-            "size": 164,
-            "kind": "function",
-            "name": "MathFunAtan2F__Fff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133634",
-            "size": 112,
-            "kind": "function",
-            "name": "MathFunRotateAboutY__FPfT0f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801336a4",
-            "size": 112,
-            "kind": "function",
-            "name": "MathFunRotateAboutZ__FPfT0f",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80133714",
             "size": 156,
             "kind": "function",
@@ -49959,45 +50196,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801337b0",
-            "size": 136,
-            "kind": "function",
-            "name": "MathFunGetPanAngleDiffNoRoll__FP8CVector3N20",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133838",
-            "size": 204,
-            "kind": "function",
-            "name": "MathFunGetTiltAngleDiffNoRoll__FP8CVector3N30",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80133a54",
             "size": 108,
             "kind": "function",
             "name": "MathFunRandomReal__Fff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133ac0",
-            "size": 172,
-            "kind": "function",
-            "name": "MathFunRandomRealSigned__Fff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133b6c",
-            "size": 68,
-            "kind": "function",
-            "name": "MathFunGetRandomPercent__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80133bb0",
-            "size": 36,
-            "kind": "function",
-            "name": "MathFunTestPercent__Fxx",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -77573,14 +77775,12 @@
             "kind": "function",
             "name": "_._10CCDBVolBox",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x8027c878",
-            "size": 60,
-            "kind": "function",
-            "name": "GetLengthSquared__C6CLine3",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 8027c8b4",
+        "ranges": [
           {
             "address": "0x8027c8b4",
             "size": 52,
@@ -77994,13 +78194,6 @@
             "size": 128,
             "kind": "function",
             "name": "__11CSplinePath",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80281690",
-            "size": 176,
-            "kind": "function",
-            "name": "Set__6CLine3RC8CVector3T1",
             "evidence": "unknown-file"
           }
         ]

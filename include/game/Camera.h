@@ -23,6 +23,10 @@ public:
     int worldToClipValid;
     int field_160; // Both projection setters write 1; broader meaning unproven.
     void GetTMLocalToWorld(CMatrix &) const;
+    void GetPosition(CVector3 &) const;
+    void GetRightward(CVector3 &) const;
+    void GetForward(CVector3 &) const;
+    void GetUpward(CVector3 &) const;
     void PreTransform(const CMatrix &);
     void Reset();
     void Transform(const CMatrix &);

@@ -1,0 +1,36 @@
+{
+  "id": "line3_length_squared",
+  "source": "src/geometry/line3_length_squared.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8027c878",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLengthSquared__C6CLine3",
+      "address": "0x8027c878",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

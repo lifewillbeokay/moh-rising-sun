@@ -1,0 +1,44 @@
+{
+  "id": "mathfun_random_real_signed",
+  "source": "src/mathfun/random_real_signed.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80133ac0",
+      "size": 172
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7ce8",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "MathFunRandomRealSigned__Fff",
+      "address": "0x80133ac0",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "rand": "0x80265c98",
+    "MathFunRandomSign__Fv": "0x80133978"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
