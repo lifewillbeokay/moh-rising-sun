@@ -11,19 +11,22 @@ struct FlexPropField {
     int offset;
 };
 // The class header is followed by count twelve-byte field records.
-struct FlexPropClassView {
-    const char *name;
-    unsigned int unknown_4;
-    FlexPropClassView *parent;
-    unsigned int count;
+class FlexPropClassFormat {
+  public:
+    char *name;
+    int recordSize;
+    FlexPropClassFormat *parent;
+    int count;
     FlexPropField fields[0];
 };
+typedef FlexPropClassFormat FlexPropClassView; // Earlier descriptive view name.
 class FlexPropFormat {
   public:
-    unsigned int unknown_0;
-    FlexPropClassView *description;
-    unsigned int unknown_8;
+    char *name;
+    FlexPropClassFormat *description;
+    int recordSize;
     float transform[12];
+    int fields[0]; // Variable property payload, converted as four-byte words.
     FlexPropField *GetField(int);
 };
 struct FlexPropList;

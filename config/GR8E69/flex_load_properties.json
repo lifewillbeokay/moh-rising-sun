@@ -1,0 +1,63 @@
+{
+  "id": "flex_load_properties",
+  "source": "src/flexprop/LoadProperties.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/stlport-runtime",
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "src/flexprop"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80125a14",
+      "size": 1712
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadProperties__16FlexPropDatabasePvT1i",
+      "address": "0x80125a14",
+      "size": 1712,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pStringTable": "0x802c4ae0",
+    "g_classes": "0x8032cd80",
+    "g_properties_map": "0x8032cd90",
+    "g_properties": "0x8032cda0",
+    "ChangeEndian__H1ZPc_RX01_v": "0x802865b4",
+    "ChangeEndian__H1ZP19FlexPropClassFormat_RX01_v": "0x80287180",
+    "ChangeEndian__FRi": "0x8005861c",
+    "ChangeEndian__FRf": "0x800585fc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "memcmp": "0x80266558",
+    "__builtin_delete": "0x801a8990",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcRCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1Zc": "0x8027e344",
+    "insert_unique__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormatRCQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZP14FlexPropFormat": "0x80287de4",
+    "__builtin_new": "0x801a8910",
+    "memmove": "0x8026668c",
+    "Rewind__16FlexPropDatabase": "0x8012617c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "flexprop.cpp",
+  "original_file_index": 1232,
+  "local_externals": [
+    "g_classes",
+    "g_properties_map",
+    "g_properties"
+  ]
+}
