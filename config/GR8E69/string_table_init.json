@@ -1,0 +1,40 @@
+{
+  "id": "string_table_init",
+  "source": "src/flexprop/StringTableInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80126930",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15StringTableImplPc",
+      "address": "0x80126930",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.15StringTableImpl": "0x802e8258",
+    "ChangeEndian__FRi": "0x8005861c",
+    "ChangeEndian__H1ZPc_RX01_v": "0x802865b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

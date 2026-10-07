@@ -26,9 +26,12 @@ not necessarily the easiest source match.
 | Target | Address | Code bytes | Unfinished callers | Work to unlock |
 | --- | --- | ---: | ---: | --- |
 | `DWI_alloc` | `0x801a8670` | 212 | 139 | Follow the small-allocation path and main heap call; establish flag and failure behavior. Allocation operators now provide a verified caller. |
-| `FEHashUpper` | `0x800499a4` | 100 | 116 | Establish exact character conversion, signedness and hash recurrence; find callers' string ownership without replacing the algorithm with a generic hash. |
 | `DWI_free` | `0x801a8894` | 64 | 75 | Recover `freeSmall`'s result contract and the fallback to `MEM_free`. |
-| `GetStringCRC` | `0x801acb98` | 80 | 60 | Identify the CRC table/algorithm and signedness before selecting a public implementation. |
+
+`FEHashUpper` and `FEUpperCase` are now reconstructed; see [hash evidence](FEHash.md).
+The earlier 116-caller count for the hash measures its reach, not newly accepted
+caller code. `GetStringCRC` was already reconstructed with [FlexProp](FlexProp.md);
+its earlier 60-caller count likewise does not represent future source credit.
 
 The CMatrix work packet now has 23 accepted functions and a shared
 64-byte matrix representation, including initialization, assignment and

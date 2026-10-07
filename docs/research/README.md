@@ -23,6 +23,12 @@ the research.
 | [Pathfinder music rules](ps2/pathfinder-music.md) | Music events, `.MPF` rules and script-to-music calls | [PR #10](https://github.com/lifewillbeokay/moh-rising-sun/pull/10) |
 | [Update ticks and runtime rules](ps2/runtime-rules.md) | Motion timing, animated lights, particles, camera FOV and scene behavior | [PR #11](https://github.com/lifewillbeokay/moh-rising-sun/pull/11) |
 
+## Related EA GameCube references
+
+The [shared-code comparison](ea-shared-code.md) records pinned Rogue Agent,
+European Assault and NFS Underground symbol inventories, their limits, and the
+Rising Sun reconstructions they helped prioritize.
+
 ## Applying the notes
 
 The script dispatch table and named built-in functions provide concrete places to

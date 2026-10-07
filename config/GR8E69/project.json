@@ -822,7 +822,15 @@
     "line3_projection.json",
     "line2_closest_point.json",
     "math_sin_cos.json",
-    "camera_axes.json"
+    "camera_axes.json",
+    "flex_string.json",
+    "string_table_create.json",
+    "string_table_init.json",
+    "flex_database.json",
+    "fe_hash_upper.json",
+    "fe_upper_case.json",
+    "mathfun_clamp_float.json",
+    "mathfun_clamp_int.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

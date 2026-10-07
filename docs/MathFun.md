@@ -57,6 +57,25 @@ by a separate call to `MathFunRandomSign`. `MathFunGetRandomPercent` multiplies
 not call the random generator. Original typedefs and intended input ranges remain
 unknown.
 
+## Shared clamp template instances
+
+Two additional template instances outside the original `MathFun.cpp` interval
+now match: `MathFunClamp<float>` at `0x8027aa30` (40 bytes) and
+`MathFunClamp<int>` at `0x80283878` (36 bytes). Their original symbols encode
+by-value arguments and return type. The [EA reference comparison](research/ea-shared-code.md)
+found the same instance names and sizes in both related games; the bodies were
+reconstructed independently from GR8E69.
+
+`include/game/MathFun.h` supplies one shared template for both explicit
+instantiations. Values below the lower bound return that bound immediately.
+Otherwise the upper comparison returns the input when it is less than or equal
+to the upper bound, and returns the upper bound for greater or unordered inputs.
+This preserves the original floating-point comparisons, including NaNs and the
+branch behavior when the bounds are reversed. No generic `std::clamp` substitute
+or per-type specialization is used. Both complete objects contain only code and
+use the standard ProDG 3.8.1 game profile. These 76 bytes are separate from the
+1,340 accepted bytes in the original MathFun interval above.
+
 ## Compiler profile and uncertainty
 
 The working profile is the archive's **ProDG 3.8.1**, `ngccc -O2 -G0`. Its diagnostics identify GNU C++ 2.95.2 SN BUILD v1.55 and NGCCC v1.2.1.112. Flags apply to the entire reconstructed fragment; there are no per-function options, instruction patches or handwritten assembly implementations.

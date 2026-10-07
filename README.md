@@ -110,7 +110,8 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md) |
 | `src/objectives/` | Reconstructed [objective initialization, status and visibility helpers](docs/Objectives.md) |
 | `src/observers/` | Reconstructed observers, weak pointers and destruction queue; [evidence](docs/Observers.md) |
-| `src/MathFun.cpp`, `src/mathfun/` | Reconstructed [angles, rotations, pan/tilt and random helpers](docs/MathFun.md) from the original MathFun unit |
+| `src/frontend/` | Reconstructed [uppercase conversion and front-end string hash](docs/FEHash.md), guided by the [EA reference comparison](docs/research/ea-shared-code.md) |
+| `src/MathFun.cpp`, `src/mathfun/` | Reconstructed [angles, rotations, pan/tilt, random helpers and clamp templates](docs/MathFun.md) |
 | `src/lua/` | Restored Lua 4.0.1 source units, headers and copyright notice |
 | `src/dolphin/`, `include/dolphin-sdk/` | Accepted SDK source units, reference headers and attribution |
 | `src/newlib/`, `include/newlib/` | Accepted Newlib units, supporting headers and attribution |
