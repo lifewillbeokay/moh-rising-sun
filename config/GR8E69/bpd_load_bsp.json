@@ -1,0 +1,44 @@
+{
+  "id": "bpd_load_bsp",
+  "source": "src/bpd/load_bsp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "src/bpd"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121dac",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadPropBSPTree__FPcb",
+      "address": "0x80121dac",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "g_pPBSPHeader": "0x802c47c0",
+    "g_pPBSPHead": "0x802c47c4",
+    "PatchUpPropBSPTreeNode__FPcP12_PropBSPNode": "0x80121e00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

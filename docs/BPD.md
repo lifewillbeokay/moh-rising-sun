@@ -64,8 +64,9 @@ both light volumes and light records. Each retains an opaque final four bytes at
 three position floats at `+4`, direction floats at `+0x10`, color floats at `+0x1c`
 and intensity at `+0x28`. The [lighting consumers](LightVolumes.md) corroborate the
 stride, direction, color and intensity. Field names are descriptive; a conversion
-call alone does not prove a field's meaning. Path-finding types stay opaque, and
-other prefix views do not establish complete allocations or array strides.
+call alone does not prove a field's meaning. The later [path-loading reconstruction](Paths.md) establishes `BPDPolyPath` and
+`PropVec3`; the other navigation types stay opaque. Other prefix views do not
+establish complete allocations or array strides.
 
 `EndianSwapList` converts the leading unsigned-long count, then entries 1 through
 that count inclusive. It re-reads the converted count at each loop test and retains
@@ -100,7 +101,7 @@ component accesses support the shared `PropPlane4` record view.
 
 `PatchUpAllPropertyData` connects the conversion helpers to the completed
 [FlexProp database loaders](FlexProp.md#database-loading-and-cleanup). Its caller,
-`LoadPropertyBPD` (`0x80120af0`, still original code), converts the header and adds
+`LoadPropertyBPD` (`0x80120af0`, [now reconstructed](Paths.md)), converts the header and adds
 the header base to the path, legacy-record and light-volume pointers before
 calling setup. Setup must not relocate those pointers a second time.
 
@@ -159,9 +160,9 @@ Other offset-helper instantiations remain uncredited.
 `FreePropertyMemory` shuts down the original AI spline-path manager, deletes and
 clears the string-table object, unloads classes, then unloads properties. It
 closes and clears the PBSP buffer before the BPD buffer, testing each for null.
-The AI interface is method-only; its singleton, both file buffers and all global
-storage remain original. `TLT_CloseFile` and the spline shutdown implementation
-are still external.
+The AI interface now has a scoped spline-manager pointer view; its singleton,
+both file buffers and all global storage remain original. `TLT_CloseFile` stays
+external; [spline shutdown and its manager](Paths.md) are now reconstructed.
 
 ## Verification and next work
 
@@ -179,7 +180,8 @@ emulator behavior remain untested, and the GameCube `.bpd` file bytes have not
 been examined. These verified conversions and pointer operations do not by
 themselves establish a complete portable file parser or level loader.
 
-`LoadPropertyBPD`, the spline-path manager, navigation import and PBSP tree
-relocation remain useful next callers/helpers. [LightVolumes.md](LightVolumes.md)
+`LoadPropertyBPD`, `LoadPropBSPTree` and the spline-path manager are now
+[reconstructed](Paths.md). Navigation import and the recursive PBSP fixups remain
+useful next targets. [LightVolumes.md](LightVolumes.md)
 covers the lighting consumers and the remaining playback/blending work. The
 original compiler release remains unconfirmed.

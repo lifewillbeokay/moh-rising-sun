@@ -1,0 +1,57 @@
+{
+  "id": "bpd_load_properties",
+  "source": "src/bpd/load_properties.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "src/bpd"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80120af0",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadPropertyBPD__FPcb",
+      "address": "0x80120af0",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBPDHeader": "0x802c47bc",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "EndianSwap__FR9BPDHeader": "0x80123538",
+    "g_pNumTriggers": "0x80326d64",
+    "PatchUpAllPropertyData__FP9BPDHeader": "0x80120c00",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "CreateSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi": "0x800d854c",
+    "ImportAreaPathNodeNetwork__13AIPathFindingP9BPDHeader": "0x800e7320",
+    "g_pRawPropertyData": "0x802c47b8",
+    "g_pLightVolumes": "0x802c47c8",
+    "ResetSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi": "0x800d865c",
+    "InitAllTriggers__Fv": "0x80121430",
+    "ClearMGTriggerObjects__Fv": "0x80122244",
+    "FindAllMGPointsInBPDFile__Fv": "0x80121fac",
+    "CacheBuddyLeadTriggers__18CBuddyLeadBehavior": "0x800e47a8",
+    "DeregisterMMGTriggers__26CMountedMachineGunBehavior": "0x800e4110",
+    "RegisterMMGTriggers__26CMountedMachineGunBehavior": "0x800e3f88"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

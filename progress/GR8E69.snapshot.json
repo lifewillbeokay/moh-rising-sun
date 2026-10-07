@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 628968,
+    "matching_code_bytes": 630452,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.239162257948532,
+    "percent": 25.298712055061895,
     "categories": {
-      "reconstructed_game": 236752,
+      "reconstructed_game": 238236,
       "restored_library": 392216
     },
-    "matching_functions": 2352
+    "matching_functions": 2363
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -109,6 +109,8 @@
     "config/GR8E69/TCPUser.json": "aa0a4446ec56243061f0ffc64225cf58dd06106ce25d02dbb4a60f850990a132",
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
+    "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
+    "config/GR8E69/ai_spline_manager.json": "780f6dda5fc1ee9242d84e8600cd16da58146f39e0843711b9bed008bc3a3b90",
     "config/GR8E69/ai_src.json": "136c56ec3f12ec8b879525cc1d5766e8b42c5f266a23e090ce86f5fae181bf66",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
@@ -121,6 +123,8 @@
     "config/GR8E69/bpd_endian.json": "3aadb304ad55ca0cf66faa09c34e66abb388542cbec23719edc23a4a11d1bf4d",
     "config/GR8E69/bpd_free_properties.json": "17e2cd4532e14143ded1a6ba46fcf5321fdd74f2705320ca5178cf75b171c6a9",
     "config/GR8E69/bpd_light_volume.json": "e3931cdecf07dcd381e5058696fdf773127383abb36af8f4f317095e70d4849c",
+    "config/GR8E69/bpd_load_bsp.json": "5764145e10355e7bb11e0facd3c69fd5bad4af349032e92915229ea141625ad1",
+    "config/GR8E69/bpd_load_properties.json": "1471bfba6d0cc96041845e927934d6eadbdbad926f485e9b3b2d996cd13405c6",
     "config/GR8E69/bpd_offset_pointer_table.json": "4f87cae5d8cd43211a2589a7d2f5a3f4e326330df18bb0cfc4ec882db6256f3c",
     "config/GR8E69/bpd_offset_property_pointers.json": "d43a808de5b69f5e4c03bf30a14f56a5008dd6c072e56b1a1a33af0f2cc9497d",
     "config/GR8E69/bpd_patch_all.json": "bb9fd8b48ef07a6163f1e3ec90c286cdbcd4264f5e7bf40b4f2cead76fd8e2d7",
@@ -586,7 +590,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "8eb850425919bcae6682edc89f433dbda9c4390157c4aaf55ad30f502146dbdf",
+    "config/GR8E69/project.json": "ea3c953f8f1a7853e4f95857f9138405f74310ac41c8cb0b305d8321f7bb38ba",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1024,8 +1028,9 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/AIFilterGlobal.h": "e8750f5ccaae47d4ec91c0866b7fd70f81cce76a894c4445153d4a24b772f37e",
-    "include/game/BPD.h": "7b70c40ba25476a6dfef991b1e8dc9a0b6ce44ef58e8185849ae2408b0b265f2",
+    "include/game/AIFilterGlobal.h": "564bf36777efb99d73e5ec51981e1efd74ca2c2b7be8f45ada05eb2b1863649a",
+    "include/game/AISplinePath.h": "4504ff5376ddf953734b91762e8232466cfd8f61641a89e3e05f504c25fd8ad8",
+    "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "671ce5d07b583fd857df0b2ce304517d72a20d34e27967fa945b8a42de815760",
@@ -1094,7 +1099,7 @@
     "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "28f3badf71350136523be63cd81fe70e6af6977dca794be22c84784ee720cf68",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
-    "include/game/PropertyData.h": "6e4ff4e84eaee8d44483d32b5f4b8981c8fc0f533aa1b2966a8de58bbbb33c85",
+    "include/game/PropertyData.h": "952ae5ac78dc17e43053a7b905a8e58499a1faa3c7d0721269329f639095b22a",
     "include/game/SceneNode.h": "7230717c2c9ba0d0449b4fc6caeb407a932569ae7fabccd2a9b38b571fc22768",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
@@ -1255,9 +1260,14 @@
     "include/target/stdlib.h": "74302825988fd3229c983eb14e318b3ac7b461b757bba166c734743e0a073de0",
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
+    "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
+    "src/ai/spline_manager.cpp": "952363022642f1a99488cf85917051f5e16223b7ee9e20c4d0ba93a9da2aca5e",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
+    "src/bpd/load_bsp.cpp": "4809d680c3c3e1d721ab6487b6d889a56ca0d6106b030b24033d383033ace191",
+    "src/bpd/load_properties.cpp": "8d92e35ddc629f49265b54ee0d7c81ef58dc49390e13a387df51d28f5539e3d6",
+    "src/bpd/loaders_internal.h": "3efac5736f5b44d5a06e746ae3a85574a97799188451393e4ec4a6dfefbcd62e",
     "src/bpd/offset_pointer_table.cpp": "d9e5f1038f2923fa5af968234ca1f0f7700f3d2c60fd3b1ffaa7b72b43c4be86",
     "src/bpd/offset_property_pointers.cpp": "0d79ba65148b6ec629d4603df8851155dca9f17be28ec96ab4d6b3ed6a87dc5a",
     "src/bpd/offset_ptr_impl.h": "db4acef03417529731388feaf56f8930c81c8934eaed672d7c9f08cbc2bc7586",
@@ -20837,6 +20847,78 @@
       "discarded_functions": [],
       "object_sha256": "475fcc769e6551346965cf264c421c3f1b822739163c31f939aa0648083e15cb",
       "linked_sha256": "2610a4bac1202863a2ba25b09fe1302f736b6f3fec7764ced87c8902553ac72f"
+    },
+    {
+      "id": "bpd_load_properties",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 272,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "eb310ee06e0ab14137917c9a995a8136a136c74acdadd290d17808f7aa934b80",
+      "linked_sha256": "5b09ed08c3860f7c6472851b6cff2a0a33a8f1f8a10de195820b345d3431393d"
+    },
+    {
+      "id": "bpd_load_bsp",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 84,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8c78f35426ff0d24e93db8837a650df3265fced110ffeff1632973d6732d8b2b",
+      "linked_sha256": "a9d0b137dd05084dfd44fac92d3810deb501a4980e6f631f07670f1f4075f176"
+    },
+    {
+      "id": "ai_filter_splines",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 468,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "37fa948496c10cf60aae3dbb4d31fdde0b7741b00d92e64afe4b63ec28b968d8",
+      "linked_sha256": "18e1b6b5f3ffed5df72bfcca9135d582cc53c7582d0f184776d5d9f0570610f1"
+    },
+    {
+      "id": "ai_spline_manager",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 660,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1448edfd6fccd52671f7d5216f2c69ac9e2986bfab5b7debd93a76e0321fcae6",
+      "linked_sha256": "247ab44fd322ea41dcf183ce5a8a9eba8a88f1edfad4e3741ab60f93bd470666"
     }
   ],
   "code_map": {
@@ -38102,34 +38184,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800d854c",
-            "size": 272,
-            "kind": "function",
-            "name": "CreateSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d865c",
-            "size": 36,
-            "kind": "function",
-            "name": "ResetSplinePathManager__15CAIFilterGlobalPvP11BPDPolyPathi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d8680",
-            "size": 68,
-            "kind": "function",
-            "name": "ShutdownSplinePathManager__15CAIFilterGlobal",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800d86c4",
-            "size": 92,
-            "kind": "function",
-            "name": "GetSplinePath__C15CAIFilterGlobalUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800d8720",
             "size": 4,
             "kind": "function",
@@ -39724,41 +39778,6 @@
             "size": 44,
             "kind": "function",
             "name": "GetCurrentDerivative__22CAISplinePathTraversalP8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e078c",
-            "size": 148,
-            "kind": "function",
-            "name": "__20CAISplinePathManagerUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0820",
-            "size": 140,
-            "kind": "function",
-            "name": "_._20CAISplinePathManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e08ac",
-            "size": 120,
-            "kind": "function",
-            "name": "AllocateGenerateBuffers__20CAISplinePathManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0924",
-            "size": 92,
-            "kind": "function",
-            "name": "FreeGenerateBuffers__20CAISplinePathManager",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0980",
-            "size": 160,
-            "kind": "function",
-            "name": "GenerateSplinePath__20CAISplinePathManagerUiUiUiPC8PropVec3",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -48579,13 +48598,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80120af0",
-            "size": 272,
-            "kind": "function",
-            "name": "LoadPropertyBPD__FPcb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80121210",
             "size": 120,
             "kind": "function",
@@ -48646,13 +48658,6 @@
             "size": 392,
             "kind": "function",
             "name": "FindPlayerStartTriggerAndCreatePlayer__FiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121dac",
-            "size": 84,
-            "kind": "function",
-            "name": "LoadPropBSPTree__FPcb",
             "evidence": "adjacent-compiler-markers"
           },
           {

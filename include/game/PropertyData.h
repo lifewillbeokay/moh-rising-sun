@@ -19,4 +19,6 @@ void PatchUpEnemy(MOH_enemy_Struct *);
 void PatchUpAnimLight(MOH_animatedLight_Struct *, int);
 int PatchUpAllPropertyData(BPDHeader *);
 void FreePropertyMemory();
+void LoadPropertyBPD(char *, bool);
+void LoadPropBSPTree(char *, bool);
 #endif
