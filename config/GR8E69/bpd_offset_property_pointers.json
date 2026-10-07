@@ -1,0 +1,61 @@
+{
+  "id": "bpd_offset_property_pointers",
+  "source": "src/bpd/offset_property_pointers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "src/bpd"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80286a4c",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "offsetPtr__H1Zv_RPX01i_v",
+      "address": "0x80286a4c",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "offsetPtr__H1ZUl_RPX01i_v",
+      "address": "0x80286a64",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "offsetPtr__H1Zf_RPX01i_v",
+      "address": "0x80286a7c",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "offsetPtr__H1Z10PropPlane4_RPX01i_v",
+      "address": "0x80286a94",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "offsetPtr__H1Z8BPDLight_RPX01i_v",
+      "address": "0x80286aac",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

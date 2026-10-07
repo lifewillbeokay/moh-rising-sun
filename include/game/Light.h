@@ -40,6 +40,7 @@ class CLight : public IMovingSceneNode {
     CLight();
     virtual ~CLight();
     static BPDLightVolume *GetDefaultLightVolume();
+    static void Register(void *, int);
     void MarkForDestruction(int);
     void Destroy();
     void AttemptUpdate(float);
@@ -98,11 +99,14 @@ struct AnimLightPool {
     int count;
 };
 
-// Scoped view: the pools at +0x44 (instanced lights) and +0x58 (property lights).
-// Earlier storage and the manager's base classes are not declared.
+// Scoped view: registered patterns at +0x38/+0x3c, and pools at +0x44
+// (instanced lights) and +0x58 (property lights). Base classes remain unknown.
 class CAnimLightManager {
   public:
-    unsigned char unknown_0[0x44];
+    unsigned char unknown_0[0x38];
+    void *patterns;
+    int patternCount;
+    unsigned char unknown_40[4];
     AnimLightPool instancedLights;
     AnimLightPool propertyLights;
     void Destroy(CInstancedAnimLight *);

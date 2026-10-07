@@ -1,0 +1,67 @@
+{
+  "id": "bpd_patch_records",
+  "source": "src/bpd/patch_records.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012106c",
+      "size": 420
+    }
+  ],
+  "functions": [
+    {
+      "name": "PatchUpCore__FP15MOH_core_Struct",
+      "address": "0x8012106c",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "PatchUpMechanic__FP19MOH_mechanic_Struct",
+      "address": "0x80121190",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "PatchUpMechEnvMod__FP25MOH_mechanicEnvMod_Struct",
+      "address": "0x80121194",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "PatchUpEnemy__FP16MOH_enemy_Struct",
+      "address": "0x80121198",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "PatchUpAnimLight__FP24MOH_animatedLight_Structi",
+      "address": "0x8012119c",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EndianSwapList__FPUl": "0x8012396c",
+    "offsetPtr__H1ZUl_RPX01i_v": "0x80286a64",
+    "offsetPtr__H1Zf_RPX01i_v": "0x80286a7c",
+    "ChangeEndian__FRf": "0x800585fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}
