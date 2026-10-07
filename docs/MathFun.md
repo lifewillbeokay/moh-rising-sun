@@ -1,10 +1,10 @@
-# MathFun.cpp: first reconstructed fragment
+# MathFun reconstruction evidence
 
-Six functions, **336 code bytes**, are compiled from `src/MathFun.cpp`. These are a partial reconstruction of one original file, not six complete source units. The project also restores 18 [Lua units](Lua.md); the remaining bytes stay original context. AI assistance was used for analysis, reconstruction and verification tooling.
+Fourteen functions, **1,340 matching code bytes**, are reconstructed in six build fragments from the original 1,604-byte `MathFun.cpp` interval. The newer fragments are under `src/mathfun/`; the initial six-function fragment remains in `src/MathFun.cpp`. These are partial reconstructions of one original file, not recovered translation-unit boundaries. Analysis, reconstruction and verification used AI assistance.
 
 ## Evidence and boundaries
 
-The pinned `MOH3RDVD.ELF` symbol table contains a `MathFun.cpp` file entry and an associated local `gcc2_compiled.` marker at `0x80133590`. The next file is `collision.cpp`, whose marker is at `0x80133bd4`. Named MathFun functions occupy this 1,604-byte interval. The accepted fragment is the contiguous interval `[0x80133904, 0x80133a54)`; ten other functions in the original interval remain unreconstructed. No class layouts or vector types are needed for this fragment.
+The pinned `MOH3RDVD.ELF` symbol table contains a `MathFun.cpp` file entry and an associated local `gcc2_compiled.` marker at `0x80133590`. The next file is `collision.cpp`, whose marker is at `0x80133bd4`. Named MathFun functions occupy this 1,604-byte interval. The initial fragment is the contiguous interval `[0x80133904, 0x80133a54)`. Five additional fragments now cover eight more functions; only `MathFunNormalizeAngleNegativePiToPi` (156 bytes) and `MathFunRandomReal` (108 bytes) remain original context. The pan/tilt fragment uses the independently recovered [CVector3 layout](Matrix.md#cvector3-layout).
 
 | Original symbol | Address | Bytes |
 | --- | --- | ---: |
@@ -16,6 +16,46 @@ The pinned `MOH3RDVD.ELF` symbol table contains a `MathFun.cpp` file entry and a
 | `MathFunRandomI64__Fxx` | `0x801339dc` | 120 |
 
 The ELF names and sizes are checked on every build against `config/GR8E69/MathFun.json`. Calls resolve to original `srand` at `0x80265c8c` and `rand` at `0x80265c98`. The original four-byte `g_bMathFunRandomSeeded` object is at `0x802c4d40`; it remains in the retained original data. The source declares it externally and writes the observed four-byte value 1.
+
+## Additional accepted fragments
+
+| Manifest | Functions | Text range (end exclusive) | Code bytes | Generated data |
+| --- | --- | --- | ---: | --- |
+| `mathfun_atan` | `MathFunAtan2F` | `0x80133590`–`0x80133634` | 164 | 20 bytes at `0x802a7c70` |
+| `mathfun_rotations` | `MathFunRotateAboutY`, `MathFunRotateAboutZ` | `0x80133634`–`0x80133714` | 224 | None |
+| `mathfun_pan_tilt` | `MathFunGetPanAngleDiffNoRoll`, `MathFunGetTiltAngleDiffNoRoll` | `0x801337b0`–`0x80133904` | 340 | None |
+| `mathfun_random_real_signed` | `MathFunRandomRealSigned` | `0x80133ac0`–`0x80133b6c` | 172 | 16 bytes at `0x802a7ce8` |
+| `mathfun_percent` | `MathFunGetRandomPercent`, `MathFunTestPercent` | `0x80133b6c`–`0x80133bd4` | 104 | None |
+
+The new fragments use ProDG 3.8.1 with `-O2 -G0 -fno-exceptions
+-fno-implicit-templates`. No generated functions or data are discarded. Their
+complete constant pools, including native alignment padding in the random-real
+fragment, are compared. Constants and padding earn no code credit.
+
+`MathFunAtan2F` implements the original game-specific angle convention through
+`atanf`; it is not replaced by the library's `atan2f`. Its pi and half-pi constants
+are `0x40490fdc` and `0x3fc90fdc`, each one representable float above the nearest
+float to the corresponding mathematical value. The source preserves all branch
+comparisons, including their unordered floating-point behavior and the positive
+half-pi result when both inputs are zero. The rotation helpers cache both input
+components before writing either output and call sine before cosine.
+
+Both angle-difference helpers **modify their second vector in place**, subtracting
+the first vector's three components. Tilt also rotates the fourth vector about Z,
+then rotates the relative second vector about Z before comparing tilt angles.
+They preserve the fourth vector word. The local `by` reference describes the
+same component address retained across the original calls; it introduces no
+extra state. The original angle-normalization routine remains an external call
+and earns no new credit here. Parameter names are descriptive, not recovered.
+
+`MathFunRandomRealSigned` returns the supplied value immediately when the bounds
+compare equal, without consuming random values. Otherwise it scales one `rand`
+result by the observed single-precision `2^-31` factor and multiplies the result
+by a separate call to `MathFunRandomSign`. `MathFunGetRandomPercent` multiplies
+`rand()` by 100 in signed 64-bit arithmetic and shifts right by 31.
+`MathFunTestPercent` is simply the observed signed 64-bit less-than test; it does
+not call the random generator. Original typedefs and intended input ranges remain
+unknown.
 
 ## Compiler profile and uncertainty
 
@@ -32,7 +72,7 @@ The compiler archive and wibo runtime are pinned in `tools/compilers.json`. [wib
 - `MathFunCloseToZero` preserves the two floating comparisons and negation. The source does not replace them with an absolute-value approximation or add special handling for NaNs, signed zero or negative tolerances.
 - `MathFunRandomSign` uses bit 1 of `rand()`, then subtracts 1. `MathFunRandomSignOrZero` uses a signed 64-bit product by 3 and a right shift by 31. Neither has been replaced by a modulo operation or a different generator.
 - `MathFunRandomI64` computes the inclusive range before calling `rand`, multiplies in 64 bits, shifts arithmetically by 31, and adds the lower bound. Signed overflow and negative right-shift behavior are not generalized into a portable API contract; this work verifies the target compiler's exact emitted instructions. Original typedef names and intended input limits remain unknown.
-- No generated data sections are present in this fragment. The build rejects additional allocated output instead of discarding it. Source coverage includes the complete generated text section, all six function bodies and their resolved references.
+- No generated data sections are present in the initial six-function fragment. The build rejects additional allocated output instead of discarding it. Source coverage includes the complete generated text section, all six function bodies and their resolved references.
 
 ## Complete-image build
 

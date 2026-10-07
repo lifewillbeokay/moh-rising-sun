@@ -23,7 +23,9 @@ public:
     void Perspective(float x, float y, float near, float far);
     void Orthographic(float x, float y, float near, float far);
     void Inverse(const CMatrix& in);
-    void Orthonormalize(); // Original context; the particle wrapper is reconstructed.
+    void FastInverse(const CMatrix& in);
+    void ToEulerXYZ(float&, float&, float&) const;
+    void Orthonormalize();
     void Multiply(const CMatrix& a, const CMatrix& b);
     void BuildRotX(float angle);
     void BuildRotY(float angle);

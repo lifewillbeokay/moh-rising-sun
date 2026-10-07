@@ -30,13 +30,12 @@ not necessarily the easiest source match.
 | `DWI_free` | `0x801a8894` | 64 | 75 | Recover `freeSmall`'s result contract and the fallback to `MEM_free`. |
 | `GetStringCRC` | `0x801acb98` | 80 | 60 | Identify the CRC table/algorithm and signedness before selecting a public implementation. |
 
-The CMatrix work packet now has 20 accepted functions and a shared
+The CMatrix work packet now has 23 accepted functions and a shared
 64-byte matrix representation, including initialization, assignment and
-multiplication. See [the layout evidence and remaining vector questions](Matrix.md).
+multiplication. See [the matrix and vector layout evidence](Matrix.md).
 Their earlier unfinished-caller counts were 173, 127 and 75; these overlapping
-counts do not represent newly reconstructed callers. Further matrix work should
-resolve vector construction/layout before adding functions that need local or
-by-value vectors. The small string and allocation helpers above remain useful
+counts do not represent newly reconstructed callers. Further matrix work can reuse the recovered vector construction and assignment
+behavior, while checking each caller's aliasing and temporary lifetimes. The small string and allocation helpers above remain useful
 independent work packets. The larger library path remains
 [STLport container instantiations](STLport.md). The builtin/pointer subset is
 now accepted; remaining custom comparators and game value types require further

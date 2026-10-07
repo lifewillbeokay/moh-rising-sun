@@ -46,7 +46,7 @@ This is a qualitative work order, not a prediction of hours or a promise of matc
 | 4 | `powf` | 1,780 bytes; the research candidate differs in three indexed-load operand encodings | Further source/flag probes leave the same difference. A compiler word-size address-canonicalization difference is a research lead, not yet a proven cause; do not patch instructions. |
 | 5 | SN `add_separators` | 392 bytes; its ABI and formatter callers now match | Finish the helper's C reconstruction and register allocation; it remains context. |
 | 6 | Older network stack | Twenty accepted fragments establish older transport and PPP layouts; the Ethernet driver and unretained stack routines still differ | Compare protocol structures and behavior with original call sites, keeping retained code and storage complete. |
-| 7 | Shared game math, strings and allocation | `MathFun.cpp` has 1,268 unmatched bytes; string/allocation groups are also mapped | Recover common types, allocator contracts and constant ownership, then work through callers. |
+| 7 | Shared game math, strings and allocation | `MathFun.cpp` has 264 unmatched bytes; quaternion and line helpers now have scoped storage views | Extend [geometry helpers](Geometry.md) and transform callers; resolve the remaining MathFun constant ownership and allocator contracts. |
 
 The verified STL container profile now covers builtin, string, pointer and
 [scoped game-storage instances](GameContainers.md). The exact original release and broader configurations remain
@@ -59,8 +59,10 @@ reference; shared EA game/engine source compatibility has not been established h
 The direct-call portion of item 2 is now implemented by `tools/dependencies.py`.
 Its [ranked work packets](Dependencies.md) selected CMatrix for shared game-type
 work: initialization had 173 distinct unfinished callers. Initialization,
-assignment, multiplication and 17 related functions now match using one shared
-header. CVector3 remains opaque pending evidence of its complete layout.
+assignment, multiplication and 20 related matrix functions now match using one
+shared header. The independently recovered 16-byte CVector3 layout supports
+[vector methods](Matrix.md#cvector3-layout), [geometry helpers](Geometry.md) and
+camera/particle vector getters.
 Vtable/data references and broader type recovery remain future work.
 
 1. **Reference/version inventory.** For each family, record source URL and pinned commit,

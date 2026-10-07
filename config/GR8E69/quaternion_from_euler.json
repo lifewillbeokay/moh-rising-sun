@@ -1,0 +1,45 @@
+{
+  "id": "quaternion_from_euler",
+  "source": "src/quaternion/from_euler.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007cff8",
+      "size": 244
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b13c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetFromEuler__11CQuaternionfff",
+      "address": "0x8007cff8",
+      "size": 244,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "cosf": "0x80270840",
+    "sinf": "0x80270a08",
+    "Set__11CQuaternionffff": "0x8007ccc8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

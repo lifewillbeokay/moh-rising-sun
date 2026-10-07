@@ -92,6 +92,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `build/baseline/relinked.dol` | Rebuilt analysis image |
 | `build/audit/dependencies.json` | Local direct-branch dependency graph and research ranking (`python3 tools/dependencies.py`) |
 | `src/matrix/`, `include/game/CMatrix.h`, `include/game/CVector3.h` | Reconstructed matrix and [vector](docs/Matrix.md#cvector3-layout) functions and their shared layouts |
+| `src/quaternion/`, `src/geometry/` | Reconstructed [quaternion conversions, line geometry and integer-angle helpers](docs/Geometry.md), with scoped storage evidence |
 | `src/camera/`, `include/game/Camera.h` | Reconstructed [camera projection and transform functions](docs/Camera.md), guided by contributed runtime research |
 | `src/sys_memory.cpp` | Four game allocation operators; original heap routines remain external |
 | `src/stlport/` | Tree, container, sorting and heap functions using an attributed STLport 4.5.3 subset |
@@ -109,7 +110,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md) |
 | `src/objectives/` | Reconstructed [objective initialization, status and visibility helpers](docs/Objectives.md) |
 | `src/observers/` | Reconstructed observers, weak pointers and destruction queue; [evidence](docs/Observers.md) |
-| `src/MathFun.cpp` | Reconstructed functions from the original MathFun unit |
+| `src/MathFun.cpp`, `src/mathfun/` | Reconstructed [angles, rotations, pan/tilt and random helpers](docs/MathFun.md) from the original MathFun unit |
 | `src/lua/` | Restored Lua 4.0.1 source units, headers and copyright notice |
 | `src/dolphin/`, `include/dolphin-sdk/` | Accepted SDK source units, reference headers and attribution |
 | `src/newlib/`, `include/newlib/` | Accepted Newlib units, supporting headers and attribution |

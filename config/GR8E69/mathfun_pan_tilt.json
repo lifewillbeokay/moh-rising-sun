@@ -1,0 +1,46 @@
+{
+  "id": "mathfun_pan_tilt",
+  "source": "src/mathfun/pan_tilt.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801337b0",
+      "size": 340
+    }
+  ],
+  "functions": [
+    {
+      "name": "MathFunGetPanAngleDiffNoRoll__FP8CVector3N20",
+      "address": "0x801337b0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "MathFunGetTiltAngleDiffNoRoll__FP8CVector3N30",
+      "address": "0x80133838",
+      "size": 204,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunAtan2F__Fff": "0x80133590",
+    "MathFunNormalizeAngleNegativePiToPi__Ff": "0x80133714",
+    "MathFunRotateAboutZ__FPfT0f": "0x801336a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
