@@ -1,0 +1,53 @@
+{
+  "id": "ambient_track_location",
+  "source": "src/sound/AmbientTrackLocation.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80156f20",
+      "size": 124
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9c90",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "AmbientTrack_SetLocation__FPC8CVector3",
+      "address": "0x80156f20",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bDisableSound": "0x802c4de0",
+    "g_hAmbientTrack": "0x802c4d9c",
+    "g_ambientSourceOnPlayer": "0x802c4ddc",
+    "g_ambientSourcePos": "0x803393c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378,
+  "local_externals": [
+    "g_hAmbientTrack",
+    "g_ambientSourceOnPlayer",
+    "g_ambientSourcePos"
+  ]
+}

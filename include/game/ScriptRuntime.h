@@ -12,12 +12,8 @@ struct FlexPropList {
     int values[0]; // Variable tail, not a complete allocation.
 };
 
-// Method-only interface: the native TriggerObject layout remains unknown.
-class TriggerObject {
-public:
-    int GetLegacyField(int) const;
-    FlexPropList *GetList(const char *) const;
-};
+// TriggerObject's scoped view lives in TriggerObject.h.
+#include "TriggerObject.h"
 
 // Twelve-byte runtime message entry; match fields retain descriptive names.
 struct BSCode_MessageHandlerEntry_struct {

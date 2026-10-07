@@ -1,0 +1,59 @@
+{
+  "id": "bullet_base",
+  "source": "src/bullets/BulletBase.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014d114",
+      "size": 80
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8c1c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__7CBullet",
+      "address": "0x8014d114",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Draw__7CBulletR12CDrawContext",
+      "address": "0x8014d138",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "BulletBaseDraw__Fv",
+      "address": "0x8014d158",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "IsDrawEnabled__C7CBullet",
+      "address": "0x8014d15c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

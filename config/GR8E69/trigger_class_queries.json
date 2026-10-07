@@ -1,0 +1,51 @@
+{
+  "id": "trigger_class_queries",
+  "source": "src/triggers/TriggerClassQueries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801230f4",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLegacyField__C13TriggerObjecti",
+      "address": "0x801230f4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetClassName__C13TriggerObject",
+      "address": "0x80123118",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "IsAnimatedLight__C13TriggerObject",
+      "address": "0x80123150",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LoadPropertyData__FP18xyzProperty_Structi": "0x801209ec",
+    "GetClassName__C8FlexProp": "0x80126878"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

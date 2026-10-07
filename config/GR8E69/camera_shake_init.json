@@ -1,0 +1,43 @@
+{
+  "id": "camera_shake_init",
+  "source": "src/player/CameraShakeInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b8c7c",
+      "size": 56
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f478",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q213CPlayerObject12CCameraShake",
+      "address": "0x800b8c7c",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.Q213CPlayerObject12CCameraShake": "0x802e5030"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

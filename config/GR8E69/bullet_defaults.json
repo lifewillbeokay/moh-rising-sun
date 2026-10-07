@@ -1,0 +1,145 @@
+{
+  "id": "bullet_defaults",
+  "source": "src/bullets/BulletDefaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8014d164",
+      "size": 440
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8c50",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetPosition__C7CBulletR8CVector3",
+      "address": "0x8014d164",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C7CBulletR8CVector3",
+      "address": "0x8014d1b4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C7CBulletR8CVector3",
+      "address": "0x8014d204",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUp__C7CBulletR8CVector3",
+      "address": "0x8014d254",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C7CBulletR7CMatrix",
+      "address": "0x8014d2a4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "AsBullet__7CBullet",
+      "address": "0x8014d2d0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsBullet__C7CBullet",
+      "address": "0x8014d2d4",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetDamage__C7CBullet",
+      "address": "0x8014d2d8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptBulletType__C7CBullet",
+      "address": "0x8014d2e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetFiredBy__C7CBullet",
+      "address": "0x8014d2ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsThrown__7CBullet",
+      "address": "0x8014d2f4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsProjectile__7CBullet",
+      "address": "0x8014d2fc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetVelocity__7CBulletR8CVector3",
+      "address": "0x8014d304",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetExclusionPair__7CBulletP10ISceneNode",
+      "address": "0x8014d308",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Penetrate__7CBulletRC10CCollision",
+      "address": "0x8014d30c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetDamage__7CBulletf",
+      "address": "0x8014d310",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetBlastRadius__7CBulletf",
+      "address": "0x8014d314",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetExplosionParticleSystem__7CBulletUlQ27CBullet23EXPLOSION_PARTICLE_TYPE",
+      "address": "0x8014d318",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

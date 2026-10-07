@@ -1,0 +1,46 @@
+{
+  "id": "trigger_field_offset",
+  "source": "src/triggers/TriggerFieldOffset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801227e4",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetFieldOffset__C13TriggerObjectPCc",
+      "address": "0x801227e4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetData__C13TriggerObjecti",
+      "address": "0x80122820",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetStringCRC__FPCc": "0x801acb98",
+    "GetFieldOffset__C8FlexPropi": "0x80126294",
+    "GetData__C8FlexPropi": "0x801262cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

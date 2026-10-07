@@ -1,0 +1,42 @@
+{
+  "id": "thrown_collision_light",
+  "source": "src/bullets/ThrownCollisionLight.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153e10",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsCollisionEnabled__C13CThrownBullet",
+      "address": "0x80153e10",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetAttachedLight__C13CThrownBullet",
+      "address": "0x80153e18",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

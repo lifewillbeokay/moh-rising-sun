@@ -1,0 +1,38 @@
+{
+  "id": "trigger_point_test",
+  "source": "src/triggers/TriggerPointTest.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80124950",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsPointInTrigger__FRC8CVector3R13TriggerObject",
+      "address": "0x80124950",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsPointInFlexTrigger__FRC8CVector3P8FlexProp": "0x80124dc4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,48 @@
+{
+  "id": "thrown_setters",
+  "source": "src/bullets/ThrownSetters.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80153dd8",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetDamage__13CThrownBulletf",
+      "address": "0x80153dd8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetBlastRadius__13CThrownBulletf",
+      "address": "0x80153de4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetExplosionParticleSystem__13CThrownBulletUlQ27CBullet23EXPLOSION_PARTICLE_TYPE",
+      "address": "0x80153df0",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

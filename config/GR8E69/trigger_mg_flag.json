@@ -1,0 +1,42 @@
+{
+  "id": "trigger_mg_flag",
+  "source": "src/triggers/TriggerMGFlag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122270",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "MarkMGAsUsed__FP13TriggerObjectb",
+      "address": "0x80122270",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "IsMGUsed__FP13TriggerObject",
+      "address": "0x80122298",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

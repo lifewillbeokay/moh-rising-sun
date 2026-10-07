@@ -1,0 +1,46 @@
+{
+  "id": "trigger_field_position",
+  "source": "src/triggers/TriggerFieldPosition.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122bfc",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "HasField__C13TriggerObjectPCc",
+      "address": "0x80122bfc",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C13TriggerObjectR8CVector3",
+      "address": "0x80122c4c",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetStringCRC__FPCc": "0x801acb98",
+    "IsFieldValid__C8FlexPropi": "0x80126480",
+    "GetPosition__C8FlexPropR8CVector3": "0x801267d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

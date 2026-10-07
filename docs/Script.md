@@ -136,8 +136,8 @@ The byte named `depth` orders states during parent traversal and registration cl
 These accesses establish runtime roles and minimum extents, not complete allocations,
 historical member names, enum names or GameCube `.sin` serialization. The shared
 header also supplies the previously verified event-lookup views, avoiding divergent
-class/state declarations in separate fragments. `TriggerObject` is a method-only
-interface with no recovered native layout.
+class/state declarations in separate fragments. `TriggerObject`'s scoped flags
+and property view are described in [TriggerObject.md](TriggerObject.md).
 
 The transition follows these paths:
 

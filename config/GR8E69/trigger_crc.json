@@ -1,0 +1,38 @@
+{
+  "id": "trigger_crc",
+  "source": "src/triggers/TriggerCRC.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801229f8",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCRC__C13TriggerObjectPCc",
+      "address": "0x801229f8",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetEnum__C13TriggerObjectPCc": "0x80122ab4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

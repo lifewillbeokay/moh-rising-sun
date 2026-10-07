@@ -1,0 +1,69 @@
+{
+  "id": "sound_getters",
+  "source": "src/sound/SoundGetters.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80156a50",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "SoundGetVolumes__FRfT0",
+      "address": "0x80156a50",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SoundGetOneShotBankID__FRi",
+      "address": "0x80156a7c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SoundGetAmbientTrackEvent__FRi",
+      "address": "0x80156a8c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SoundGetMusicEventID__FRi",
+      "address": "0x80156a9c",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bDisableSound": "0x802c4de0",
+    "g_sfxVolume": "0x802c4dd4",
+    "g_musicVolume": "0x802c4dd8",
+    "g_OneShotBankID": "0x802c4da8",
+    "gAmbientTrackEvent": "0x80339360",
+    "gMusicCurEvent": "0x802c4dc4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sound.cpp",
+  "original_file_index": 1378,
+  "local_externals": [
+    "g_sfxVolume",
+    "g_musicVolume",
+    "g_OneShotBankID",
+    "gAmbientTrackEvent"
+  ]
+}

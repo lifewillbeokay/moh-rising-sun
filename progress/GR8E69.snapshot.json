@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 615652,
+    "matching_code_bytes": 618368,
     "total_executable_code_bytes": 2492032,
-    "percent": 24.704819199753455,
+    "percent": 24.813806564281677,
     "categories": {
-      "reconstructed_game": 223436,
+      "reconstructed_game": 226152,
       "restored_library": 392216
     },
-    "matching_functions": 2221
+    "matching_functions": 2297
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -110,6 +110,8 @@
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
     "config/GR8E69/ai_src.json": "136c56ec3f12ec8b879525cc1d5766e8b42c5f266a23e090ce86f5fae181bf66",
+    "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
+    "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
     "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
     "config/GR8E69/anim_light_pools.json": "54a79d91ca35237884367a52d2b3a0995cb51ab3ad5909b62585b24c2efe1205",
     "config/GR8E69/ar.json": "d8da1ec6cb2ac6c8f83ac2a4b995898cbb723d38d41c84a1d25a8d7a863b1908",
@@ -118,8 +120,12 @@
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
     "config/GR8E69/bpd_endian.json": "3aadb304ad55ca0cf66faa09c34e66abb388542cbec23719edc23a4a11d1bf4d",
     "config/GR8E69/bpd_light_volume.json": "e3931cdecf07dcd381e5058696fdf773127383abb36af8f4f317095e70d4849c",
+    "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
+    "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
     "config/GR8E69/camera_get_transform.json": "e718b74015c98fc9aa58fe5d2c6de29f40aac11d0ae8d291ca3afe1964bb03b4",
     "config/GR8E69/camera_projection.json": "40155878dbb04c59b1fe9f848d4f00f68d57b05e4d6d50c2213504b4358ab7be",
+    "config/GR8E69/camera_shake_evaluate.json": "6ddf6bb7a0dd3e9238029692d7e5fb10ab4ae446160eca63ce763f53719520c7",
+    "config/GR8E69/camera_shake_init.json": "81e1f9eeca8745cbd84ff8d58524fcc513b2bfbfdaf9383e0f051e7b421254e5",
     "config/GR8E69/camera_transforms.json": "565ea07c7752be54366701e13af7ee6bb4cd78c6cf7d4bd3c68f01b89bdbfe5d",
     "config/GR8E69/camera_update_projection.json": "775218cca1643d4a69f0fcc2512751434137da87c4c4079cf4bb361706150171",
     "config/GR8E69/dolphin-network-source.json": "6b039c8ef3fc502a7441ab8f55160567fd2facec6c12d818739c3bc7fd741b82",
@@ -496,6 +502,9 @@
     "config/GR8E69/newlib_wctomb_r.json": "fc59b588e63f3a1f302300e1257e93abec1acb4041e2ef289f02d12774f5ae70",
     "config/GR8E69/newlib_writer.json": "cf7eab1eebe3bf4b04912e61b9ce9a2c7c4191ebecc610aa267f69bdabe6512f",
     "config/GR8E69/newlib_wsetup.json": "61dd8c7f513073a2f4c355ee89bdcf2d300345cd74c632de1997cba9f3e84020",
+    "config/GR8E69/objectives_init.json": "eca4ead9759ddbaaf645bd69577bf42e99bb26ad920173006f50ff703e18e887",
+    "config/GR8E69/objectives_show.json": "6f555945147172984d179fd626392447493629055be0ce2ec5375fbba8951bf0",
+    "config/GR8E69/objectives_status.json": "9cd3cc5b2129ad22356374933f20ce7999389baeaa04ac450846279e1f73c811",
     "config/GR8E69/observer_8014acd0.json": "e5ca4989003a3994946cd5d06961e1648c8f636b4236c883f083d9296cf067c2",
     "config/GR8E69/observer_8014ad2c.json": "6d8b27f3717f48fea2504d75a05033778e52423fd1dd98f210caa5fae87cf0c9",
     "config/GR8E69/observer_8014ad64.json": "b19efb444e2535ddacbe3bc956c0023472651f33d7ef20d76afa932c959608db",
@@ -545,7 +554,12 @@
     "config/GR8E69/particle_terminate.json": "a86b85ccc5b1c04cc5f96524f3f4aee0e0605b48bdb06a2997185d7dad795f87",
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
-    "config/GR8E69/project.json": "026de967c8791234a792ada601d5f9199b542e94975859de46b496c7cdda5af5",
+    "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
+    "config/GR8E69/project.json": "e6eac4f1ff4734874c44fbcb4b4b855c35c19ab40edc29080c01a42752710b93",
+    "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
+    "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
+    "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
+    "config/GR8E69/projectile_set_damage.json": "0e47f354edcbd0b55242d939011e514111aa1f9b87d67194f2a9326b50dccd92",
     "config/GR8E69/scene_node_axis_defaults.json": "092b0d540e402069c588985246b692817db1af99a9d9c2cde0f3b1bfac31d590",
     "config/GR8E69/scene_node_centroid.json": "417789c5857125f62e4595e59f3e52ed74ac434de058b0123549164ceef3cd8b",
     "config/GR8E69/scene_node_destructor.json": "2421437a4581f16904fb69d4f06b23754bc5d337e70bdec86806d8f9f3f370a5",
@@ -593,6 +607,7 @@
     "config/GR8E69/script_timer_unregister.json": "9883fdd4e5b066ad830ffcbda089fb08eca3c630575f76860bec1a3342e99652",
     "config/GR8E69/script_timer_update.json": "599226c5a53db74ed0eb5b8fbf358f989ae2ded972d1eb1c5fa9c4d2deae8fa6",
     "config/GR8E69/sn-library-source.json": "606ef80cd17599d3b7c2833a01c483622529485e2455c15ac76c975ba20507dc",
+    "config/GR8E69/sound_getters.json": "8383c1475babb703fa21c8d7d0af5c5f4d30a34856a855c40c8d91557df51c51",
     "config/GR8E69/stl_80278d64.json": "04dc314cda8644a93aa797638a2f5a3e946a7bc954506e9bb2be731800b7646a",
     "config/GR8E69/stl_80278ea0.json": "784844808dbfcbe4c0b2a360cdd8a5cd6c1115260192d1fa5e52d4a7ae8c4ebf",
     "config/GR8E69/stl_80278eec.json": "e32e4cdf075141acad3a5566b3d28a9cdd34b5cdb5c67b8da65fb91eb6effd05",
@@ -790,6 +805,17 @@
     "config/GR8E69/string_crc.json": "d56c053467a7985f3635bbf7e9a4ae344af88e23d604153f71d4c6848c7b0d92",
     "config/GR8E69/sys_memory_operators.json": "593181060ad84668f2fdb91654d17a410ae9aaaceec9493f698e682fe683b96b",
     "config/GR8E69/target.json": "48fb9548419f5549d49ebba1794d3193398e58c37c0d15569e6ed1810d8adb8f",
+    "config/GR8E69/thrown_accessors.json": "6b256ab3fbe4b068539a2e125fee54b0d77a57f5580e2c54d92df8ccbddfb6ba",
+    "config/GR8E69/thrown_collision_id.json": "04d24660bd9119a8a1e1f3ab63098d321f48395eaf774e07e78d90c255f397ef",
+    "config/GR8E69/thrown_collision_light.json": "fdfd6732347b431c2ac9a3fd1a931f21fe5eb21c21321383bbbac597cb6dcd27",
+    "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
+    "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
+    "config/GR8E69/trigger_crc.json": "57cd002698d440841e4fb02835924dc36c0243c2405dfaf44d33d792c3bb8767",
+    "config/GR8E69/trigger_field_offset.json": "93d865e0819dd4ba96e97db94628e893061def8364a0e0a8b2b822d5ee9e3740",
+    "config/GR8E69/trigger_field_position.json": "c665f68cb33d085bced8a95d9efd2c497942ef0a270cc7501958b1a220a07c8d",
+    "config/GR8E69/trigger_mg_flag.json": "65ef538055b6a3394f4c7e55ab5c6372e7495bf5a0b15232d52959f43d2dc679",
+    "config/GR8E69/trigger_point_test.json": "fbed27bb04bae97da04f0a9f8cf6cf9677e553207b7b28031038f4cef4074ee6",
+    "config/GR8E69/trigger_position_z.json": "eec30ac89d31e13a4242a958f3a1a703efc3cb388c8548071479bc20a93fda89",
     "config/GR8E69/vector_dot.json": "3a018e12136189037665a12a59e33136f545f8777e45cf4813501da197158016",
     "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
     "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
@@ -962,9 +988,11 @@
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/BPD.h": "0b35cb4e9be9dbf3be60fb20019f0500b0667671505801d6afd698573bf0f111",
+    "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CMatrix.h": "59b6809fe696700ad004ac77d35676495ff649fb2d9bebfa4f9300ee9197014c",
     "include/game/CVector3.h": "6620724fd56e37259e31d274061127a79d1184446804c122f2d0a0542921cc52",
     "include/game/Camera.h": "226257f70f2360cef00394559a793815cdb4c93e419f6c4a21acfb08ae7379cb",
+    "include/game/CameraShake.h": "e046350a12377965ac2392f2cf1031cb95372524cd098c2a2ad4c77a490b6051",
     "include/game/DestructorQueue.h": "434ec17ba96007c8368db0dc62c9454d1650bc2c4d5615a13aad40969412bda8",
     "include/game/EAGLAnim/AnimAllocation.h": "8e2480f7003eca4c8a99d7bc1189b4f00ee9e31bacd9192d6b1bb0bfbc2b38f8",
     "include/game/EAGLAnim/AnimBank.h": "1909b5d1278c6dd4499ea046c279628048e486ca444f53ee161169cab63a8d1a",
@@ -1017,18 +1045,21 @@
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
     "include/game/Light.h": "2ed36fd70b129fe2e1ce7cec7fffb8b7cc61794dfef4987e90ca65ad7df2fe6c",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
+    "include/game/Objectives.h": "02d448413ce41bb563313b153f3203339391dfd24c634615ad2d091d2ae9ced8",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
     "include/game/ParticleClock.h": "28f3badf71350136523be63cd81fe70e6af6977dca794be22c84784ee720cf68",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
     "include/game/SceneNode.h": "7230717c2c9ba0d0449b4fc6caeb407a932569ae7fabccd2a9b38b571fc22768",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
-    "include/game/ScriptRuntime.h": "15aee0559d5ce4ea71a0302a203a8dbdc31b9833ab7196180ae69362ec2c1355",
+    "include/game/ScriptRuntime.h": "7077af61586d5579f509596d9dafbda28f58e528362ef04def82703a66ac56e9",
     "include/game/ScriptTimers.h": "58499aef9e474fcee6e5ee4c7fc1bd63a02f8dd17e678e3e936dae2acc2a4c25",
+    "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/StringCRC.h": "3940d0af2ade9e671b10c5bb1ef12705a7322101b231aae92cfd2aab4a07fa31",
     "include/game/TARExtension.h": "cf1f48aa0be63a29babdba7f53c58439facb94141d7e04d0d32fcc878bad2cb3",
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
+    "include/game/TriggerObject.h": "d168f74c7d63598db941d214e88e3ec641b656ab545b21aa49dfaa14790b08f5",
     "include/game/Volume.h": "c81634d5040c155172fe79d9c2c0d4303e184e17736667562e84e4a03ea0c839",
     "include/game-containers/AlgorithmTypes.h": "a4959e24b9ab8edd66054b63ed6d53516aebc500f71f821e27babbf931b8d51a",
     "include/game-containers/ContainerTypes.h": "9a676b3cfa6794b828f4916a9ce252e00ac4913c5379a1c37bd5e5f1db7c2a2b",
@@ -1179,6 +1210,16 @@
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
+    "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
+    "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
+    "src/bullets/ProjectileAccessors.cpp": "60d0d7620bf7c3723851e848fc6e154349f9edb6ad3aea9938ab416083d9b51a",
+    "src/bullets/ProjectileCollisionId.cpp": "e2099b55d071eaa139984b86c61c2178f76c457820b99e203450a3d7590f5e93",
+    "src/bullets/ProjectileExclusionPair.cpp": "3d23978cd6f335ab1d307a83b977fbed2e333144d506ab9b0a770908d82438aa",
+    "src/bullets/ProjectileSetDamage.cpp": "b5f0ffb726f4b76751273f7129ac8221202e7852782d26ad8bf335c4ea8cbd0a",
+    "src/bullets/ThrownAccessors.cpp": "75f15567da1e4cd07646edd4c9661481a1e24c371089b7de4ee4e29c48f683cf",
+    "src/bullets/ThrownCollisionId.cpp": "c110604bd231f02c32524d8569fa009c16e50951be9c301d6e5a54059414f480",
+    "src/bullets/ThrownCollisionLight.cpp": "773de461b874b6bb1b3a066e0ac5a8124c5df3a0ac5595a58ebb984375882d56",
+    "src/bullets/ThrownSetters.cpp": "53bd8f3d5543f02d514a21a46422d909dc36d86b9f9058bef0b5e99b6b703dd4",
     "src/camera/get_transform.cpp": "e3033e1c97452a331b5d46e6cdca18fba8f60ad43af2220d9cdc7bddbc12d468",
     "src/camera/projection.cpp": "4ed326a09aac21ee19656d0c6538dbe65908d865e795f163ae092f67e9972767",
     "src/camera/transforms.cpp": "4f1d6ff74f4f9d296d64a95495ab90f53f98010031fde9b051b8a5be89c7278a",
@@ -1714,6 +1755,9 @@
     "src/newlib/string/strpbrk.c": "ff1c75e57e95c5cbb7b97b7e6f7a4ab1c9c8259b351fafdf06355a0f2bdf457f",
     "src/newlib/string/strrchr.c": "402a6ca9631680b81811553ad4a60b85271b90f7cce71b898872c845b1931ff9",
     "src/newlib/string/strstr.c": "09437b966be6a045479e511b84d9ef0156823a5c9ccd29dc4c93d0f7c53998e7",
+    "src/objectives/ObjectivesInit.cpp": "d5b86240d3cb28c893c72f3068b076d8d34f5d2bb70191f34ee127d65b52b49f",
+    "src/objectives/ObjectivesShow.cpp": "30187052d1d8575538c3b9713505b78ccbcd0f192c78c04697bbeac35b8c8087",
+    "src/objectives/ObjectivesStatus.cpp": "5b127ad92191139eca6e5be978ac1a7a5a53ad7b3f7db5a0d7b690f5acc9a53e",
     "src/observers/observer_8014acd0.cpp": "d406558cdd0a660375aa2fc657b5691ab50bfc1e4f53e96970165bf7ac3ff1e4",
     "src/observers/observer_8014ad2c.cpp": "6a8946181b69ded5ecc9996e1e825555f79860c3e3869000c66e7855e9df9d57",
     "src/observers/observer_8014ad64.cpp": "7397237c589251c5822f9b14e18293eb90d6878b95ee4551791db4bfc7af1e05",
@@ -1774,6 +1818,9 @@
     "src/particles/ParticleTerminate.cpp": "914c27ab4643765eb14a64408684a0cccd29b62d947e8746829c4f5077447da3",
     "src/particles/ParticleVelocity.cpp": "ea620216e51ba6219de1500b4a0f6db91dee7a87a57af227afba091f8f8b910c",
     "src/pathfinding/PathFindingNetwork.cpp": "babf331f9fbf19dbc75fdda20d7a1011f6cf9f465f02285a89b6b572098e6b95",
+    "src/player/CameraShakeEvaluate.cpp": "e95f72c0c199549a3107c5461b9e59473f3adbd524bd4921581d1603595eff1e",
+    "src/player/CameraShakeInit.cpp": "c9ad4b5454c6f8413d1736380841195c7059fe9a6704e86141493afc382b2fe9",
+    "src/player/PlayerCameraShake.cpp": "1e90a17ff0d32649637c1c582ae97fff2153c64a64ce706c2f3d674703fdd5ca",
     "src/scene/MovingNodeLightDefaults.cpp": "d865f9d5d5a5a9193a6b79954821ae5c73dd4161daef037e9d5fe56d20ddb9fd",
     "src/scene/MovingNodeReset.cpp": "c2b3fc485ff5c1b562488b665e62ed8ec41130b5ac54daf2974e3835f16e9244",
     "src/scene/MovingNodeTransformDefaults.cpp": "7e49f15e9c0263e1a12315dff548c7981996f00128da21a72fba8727db90bc15",
@@ -1823,6 +1870,9 @@
     "src/script/timer_remove.cpp": "b6147df0676102f2bc1c773c21e8b8fdf4a7c9fb0d60c946d0411186351ef252",
     "src/script/timer_unregister.cpp": "5c415c03af1fa3ab506e0e74981efe419a24131684835603b030dfb40afbabf0",
     "src/script/timer_update.cpp": "412cce300aa91c28a1d70fd391597643e47f62f66b7ddfc436f36ce6d662436c",
+    "src/sound/AmbientTrack.cpp": "806bc651699acac158151883251a45c29078a06e4fd195081a3d1d7443a56e52",
+    "src/sound/AmbientTrackLocation.cpp": "933b8b3e8cf005a72f8374effa77b8128854c80a1ad55a34b724e440a079ee4e",
+    "src/sound/SoundGetters.cpp": "e45a78805eeb00887fc9f92e3208fc185d1fce6f4b9bf8f763955e7161b1ecf3",
     "src/stlport/CONTAINERS_NOTICE": "7c59267a930cdf87e1af44873547a8275a61b1329833c74ae5f821a5e507a22e",
     "src/stlport/COPYING.GCC": "dcc100d4161cc0b7177545ab6e47216f84857cda3843847c792a25289852dcaa",
     "src/stlport/containers/stl_80278d64.cpp": "e75a070f28a3c316c4e6064da2c7c710838c54dd1b2297c5d808bb5037c33590",
@@ -2022,6 +2072,13 @@
     "src/stlport/tree_impl.h": "a20d4ffe6b46823cc4dceeba30bdd7aa285453aedd811b72e698ced00a4e502b",
     "src/string_crc.cpp": "fd942a8cef3597b73ede9a98e461447854127fb60411d49b2d5edac94da9e6c0",
     "src/sys_memory.cpp": "410ee07c9718afe0881a5f14e4c15815cd33bb035d05b19ad6cf4135dae323d8",
+    "src/triggers/TriggerCRC.cpp": "63a73103ce5d533542444f8cf0e72cfe2a9465d0dd683453594c1445f3314d88",
+    "src/triggers/TriggerClassQueries.cpp": "a255ba4b654549127c92f4aa12259953c16deaa90ea143ee9095ffa183ca3196",
+    "src/triggers/TriggerFieldOffset.cpp": "975f36f14daba01860762fe00e01f5b8bd3d06be1030aa827d15d7d2ccbc75e3",
+    "src/triggers/TriggerFieldPosition.cpp": "58fdd0a8e43de5b0eb6b91b34535ece24541b1d62636cfa6f7e685123a65ef1c",
+    "src/triggers/TriggerMGFlag.cpp": "123c5d4300b4a5dfce512a895bd83eb718d3098c3a4d33dab915b5236bb2ea9b",
+    "src/triggers/TriggerPointTest.cpp": "6476383c9da337c1c51527cfd0eb81f3dac75ea87ca9d3cf6841676d3405f945",
+    "src/triggers/TriggerPositionZ.cpp": "8133df34772c29939b958d590f5c7d8edc4dee3766866058b6ff3dbe024cefc1",
     "tools/audit.py": "42f9dd301ef76d300f0cad2f791ddbcac862418b6532e252fc38c02d1a222245",
     "tools/baseline.py": "9705053a0b99d969062f336b609a5ea4e0e5bc354d5619ecb9be6698530b314c",
     "tools/code_map.py": "1bb7545aef44792f54bfe21539f3e1ca2a61f14c57b8ddb81c342cf44a525901",
@@ -19558,6 +19615,474 @@
       "discarded_functions": [],
       "object_sha256": "cc03208cc760251703e96ccc77a7d52a6059cfc209114a5966f1f2edc50a5c4d",
       "linked_sha256": "849c6db32d30dea675b76fca69d9e6ca69915f05776320c5f51bb623f370338b"
+    },
+    {
+      "id": "bullet_base",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2d7b0e11bef12f591a1aee6e5f93a23e28580d576f0f9d7675ad93c5b4803843",
+      "linked_sha256": "ac217893193ead0f645dc9df9c5bbc11532dc74d92e19152e0b7cc0e1e2f10e7"
+    },
+    {
+      "id": "bullet_defaults",
+      "category": "reconstructed_game",
+      "functions": 18,
+      "code_bytes": 440,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "595f68f5ffae396bae9cd980601563db50fce9ae51d5e76a629030099a2672d9",
+      "linked_sha256": "2fd6eec598ec21f562a9e80e87b117130411fbb4746177c6a9c2f9de27e87a36"
+    },
+    {
+      "id": "projectile_collision_id",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "74be42c852cf1bc89eb9267f331c4d40e16820a1fd88e32a774ee4ea0bd993cd",
+      "linked_sha256": "bdcb81c8f3792ca534d180bf3e823dc0f4c15fd1bba6d6768e91b115d110d3e7"
+    },
+    {
+      "id": "projectile_exclusion_pair",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 4,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "01d16ded29228d14d1e72c2b9dd976602f99c1636a8be036ef9a211620ac0f0d",
+      "linked_sha256": "125bafbf5cbc03072d48c541c30ef1d45c65fc23f60caa0775673c5266b931f3"
+    },
+    {
+      "id": "projectile_set_damage",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 12,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5ea45487db806bb1665e5d39dec84b805980990fef0872c15b8b4180c551b184",
+      "linked_sha256": "85b6b7540fddc49f8769d828102c10cdd92988159f6fefd6b956adbed4f3e7e4"
+    },
+    {
+      "id": "projectile_accessors",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d52b0af5c172dac18810b2f1e73b72e05cb6130eb5e841e994b39e990641e707",
+      "linked_sha256": "7ab891bd5c24d07cd5fe60e5a8cd658407de74cec0b7968d48b4fee7b8f47333"
+    },
+    {
+      "id": "thrown_collision_id",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e66c324a4e6182d6bf5e9b8321f3cb785ccd353cd2e853879a0270bee4012de2",
+      "linked_sha256": "6c93da2d302de9302b8ed208603a162a3c3ad540dba8587de7c7400180cd8c24"
+    },
+    {
+      "id": "thrown_setters",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 40,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cce13ea755afc3359f30dbb121b1b0173a9c5d9e57ac30752588556e2862c9a4",
+      "linked_sha256": "1636e8f06ebdc3159688cde2c5b4b1f2078bf61aad31586e10041ee53e5c42c7"
+    },
+    {
+      "id": "thrown_collision_light",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 16,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6ba880a75d4c50035eeaa8e860d2b7100136c564ccb8693acc6eca28094feb5c",
+      "linked_sha256": "25b7a88dfd10968d120e4d918def9da454fdc94b2d2216540ffe757ebfe83170"
+    },
+    {
+      "id": "thrown_accessors",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 24,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "15cb104cf978aecbbb6b8ce69f637f9636a06fad06f23f34fc1018b2c243b0a2",
+      "linked_sha256": "889a9401d765d409870885ae14aac69b8937cd05ef5964e160646c1fa7fdcd70"
+    },
+    {
+      "id": "trigger_mg_flag",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 52,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "076ab2256c46fc634919b9b3600fa291012b1eff47e582b0146e12c92fce528e",
+      "linked_sha256": "0bb0e6af23570ed662bc77999597b60ad526e7c551f5e98878ab8806b5f53900"
+    },
+    {
+      "id": "trigger_field_offset",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "393b83c8a59bc4aeea3e6ef65055fdba69c99c76a37eec6fed078542d88adb56",
+      "linked_sha256": "560d5fd7c23b57ec5ce0ec41a874a5b2392ce05d9b84b2b670b3bb31e176e3b6"
+    },
+    {
+      "id": "trigger_crc",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a876961119979ce66b90c163d53a5cbb8e689ee9bfb47515a0d1c01d7c053d0f",
+      "linked_sha256": "dd833134b909f0f7ee8a51b7f7271758dd3a55646a3ec678d7cb25203940683c"
+    },
+    {
+      "id": "trigger_field_position",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 160,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "28a6cb9ef3d96c2ee58ca7262ac043b5a9f4a9ad4dbb55767dbdf45ae59735c2",
+      "linked_sha256": "4cb9e6a6774a68b4247d2a75039e86f08f814eeaef9d9eb3184e3a8bc7e5bcc7"
+    },
+    {
+      "id": "trigger_position_z",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d9536de021472402e3b443b85d65fcb4650db1198773f8f5ef362421a8c96ff9",
+      "linked_sha256": "e676f616daec5caa524f384804e93191f1d8c49f0f6015368cbb54309f52bd21"
+    },
+    {
+      "id": "trigger_class_queries",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 136,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ae78a6dd4d9a12dd0ca4ed508caed067227f88c53b538da124c19b0b709e50e7",
+      "linked_sha256": "2062d86adff87352949c9436d80a3f9ece3ea735e387f428f2275412037ac81b"
+    },
+    {
+      "id": "trigger_point_test",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 36,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "dc0593c8b379e7723a5fee906ef55e8f89b121638bcf1b833f4059fdfb7ce7a7",
+      "linked_sha256": "7a1b230ff6c9e9a13dc9149a23569563dd7337675cb38fc3f81f8b4c14fe58fc"
+    },
+    {
+      "id": "sound_getters",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 92,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6a85d75f71e64dbdac6b59c030cbb289b6d0b63fddf71b8cb16117b370e362be",
+      "linked_sha256": "a331bde85a5bde227142b18995457095601e5db2d2bca88dfee6daba1ce133f4"
+    },
+    {
+      "id": "ambient_track",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 320,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7e00412b835cb9078b1f14a2e18497d8b2891856f7299ed318af0a84f2c9d145",
+      "linked_sha256": "16494488fe23de46b94889932657ebf29a97a5404a93efc2e609d84e12bfe359"
+    },
+    {
+      "id": "ambient_track_location",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d169b2bde5bec30763489b0626c7c704f07ccf401763bd0449090f2d851385cb",
+      "linked_sha256": "fce327a770eee46231d282c297c5b1bacb1669df2318a1d55d8c3c1baa6d889f"
+    },
+    {
+      "id": "camera_shake_init",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b98f7e9326d03a28db359247b252ff9eb9b378d3cff3859fd44ebee515a787e6",
+      "linked_sha256": "f203716fb16f989c08daacfb0482032f503bb94d772909a5994c9cd3927f99fc"
+    },
+    {
+      "id": "camera_shake_evaluate",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "83f048112ce7662084e3387932e6cd833e95d5f86a434738e8e0f2aefa3b5301",
+      "linked_sha256": "878f09d26d239cc1b0d8cb94d95a2cdc9166154aad5b06931edc0c92a268879d"
+    },
+    {
+      "id": "player_camera_shake",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 268,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f90af7a4176a5d1eeed0cfafb93339182d2afabc2a0e0c57dedd6c9ff8227776",
+      "linked_sha256": "09faa73fe5bd507e195f6b1def543d563721b8fbaf53b397d001278776ee07d4"
+    },
+    {
+      "id": "objectives_init",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "15936cac5ab84cdd7f3a81a7fcbc83d92d617712bce6d164c72c0d040702fc2c",
+      "linked_sha256": "d78f3c66f06a5991c2854f39a8f31447612469a70072eba41fa6c8321e5fa920"
+    },
+    {
+      "id": "objectives_show",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "629ec7b99955f6682e95edc787765ade6a359e699def321e4c75f95631d252bb",
+      "linked_sha256": "f489e91504cd9a76203e726ac9cae7869ed78e1e2eee862ded194e527688a8b2"
+    },
+    {
+      "id": "objectives_status",
+      "category": "reconstructed_game",
+      "functions": 6,
+      "code_bytes": 252,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bd402256a38349d4c595007a50e26de610492e4eb712294684bc1149b651b00b",
+      "linked_sha256": "c32b8da0aae47c2c00baa7a2e850fa19cb9f136115a73985cc536f61be296499"
     }
   ],
   "code_map": {
@@ -32708,48 +33233,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b4364",
-            "size": 36,
-            "kind": "function",
-            "name": "SetCameraShake__13CPlayerObjectffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4388",
-            "size": 36,
-            "kind": "function",
-            "name": "StartCameraShake__13CPlayerObjectff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b43ac",
-            "size": 48,
-            "kind": "function",
-            "name": "StopCameraShake__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b43dc",
-            "size": 36,
-            "kind": "function",
-            "name": "StartBackgroundCameraShake__13CPlayerObjectff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4400",
-            "size": 48,
-            "kind": "function",
-            "name": "StopBackgroundCameraShake__13CPlayerObjectf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b4430",
-            "size": 64,
-            "kind": "function",
-            "name": "DoMotionShake__13CPlayerObjectff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b4470",
             "size": 700,
             "kind": "function",
@@ -33037,31 +33520,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800b8c7c",
-            "size": 56,
-            "kind": "function",
-            "name": "__Q213CPlayerObject12CCameraShake",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800b8cb4",
             "size": 308,
             "kind": "function",
             "name": "SetShake__Q213CPlayerObject12CCameraShakeffff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b8de8",
-            "size": 48,
-            "kind": "function",
-            "name": "SetShake__Q213CPlayerObject12CCameraShakeff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800b8e18",
-            "size": 192,
-            "kind": "function",
-            "name": "Evaluate__Q213CPlayerObject12CCameraShakeRfT1",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -47623,20 +48085,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80122270",
-            "size": 40,
-            "kind": "function",
-            "name": "MarkMGAsUsed__FP13TriggerObjectb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122298",
-            "size": 12,
-            "kind": "function",
-            "name": "IsMGUsed__FP13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801222a4",
             "size": 284,
             "kind": "function",
@@ -47679,20 +48127,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x801227e4",
-            "size": 60,
-            "kind": "function",
-            "name": "GetFieldOffset__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122820",
-            "size": 36,
-            "kind": "function",
-            "name": "GetData__C13TriggerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80122844",
             "size": 108,
             "kind": "function",
@@ -47721,13 +48155,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801229f8",
-            "size": 32,
-            "kind": "function",
-            "name": "GetCRC__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80122a18",
             "size": 156,
             "kind": "function",
@@ -47749,20 +48176,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80122bfc",
-            "size": 80,
-            "kind": "function",
-            "name": "HasField__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122c4c",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C13TriggerObjectR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80122c9c",
             "size": 148,
             "kind": "function",
@@ -47774,13 +48187,6 @@
             "size": 164,
             "kind": "function",
             "name": "GetMatrix__C13TriggerObjectR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122dd4",
-            "size": 36,
-            "kind": "function",
-            "name": "SetPositionZ__13TriggerObjectf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -47823,27 +48229,6 @@
             "size": 104,
             "kind": "function",
             "name": "GetChildScript__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801230f4",
-            "size": 36,
-            "kind": "function",
-            "name": "GetLegacyField__C13TriggerObjecti",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80123118",
-            "size": 56,
-            "kind": "function",
-            "name": "GetClassName__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80123150",
-            "size": 44,
-            "kind": "function",
-            "name": "IsAnimatedLight__C13TriggerObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -47939,13 +48324,6 @@
             "size": 212,
             "kind": "function",
             "name": "UniquePropertyEnterHandler__FP13TriggerObjectP10BSGO_Basicb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80124950",
-            "size": 36,
-            "kind": "function",
-            "name": "IsPointInTrigger__FRC8CVector3R13TriggerObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -51586,160 +51964,6 @@
             "kind": "function",
             "name": "Init__7CBulletb",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d114",
-            "size": 36,
-            "kind": "function",
-            "name": "Shutdown__7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d138",
-            "size": 32,
-            "kind": "function",
-            "name": "Draw__7CBulletR12CDrawContext",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d158",
-            "size": 4,
-            "kind": "function",
-            "name": "BulletBaseDraw__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d15c",
-            "size": 8,
-            "kind": "function",
-            "name": "IsDrawEnabled__C7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d164",
-            "size": 80,
-            "kind": "function",
-            "name": "GetPosition__C7CBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d1b4",
-            "size": 80,
-            "kind": "function",
-            "name": "GetRightward__C7CBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d204",
-            "size": 80,
-            "kind": "function",
-            "name": "GetForward__C7CBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d254",
-            "size": 80,
-            "kind": "function",
-            "name": "GetUp__C7CBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2a4",
-            "size": 44,
-            "kind": "function",
-            "name": "GetTMLocalToWorld__C7CBulletR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2d0",
-            "size": 4,
-            "kind": "function",
-            "name": "AsBullet__7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2d4",
-            "size": 4,
-            "kind": "function",
-            "name": "AsBullet__C7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2d8",
-            "size": 12,
-            "kind": "function",
-            "name": "GetDamage__C7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2e4",
-            "size": 8,
-            "kind": "function",
-            "name": "GetScriptBulletType__C7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2ec",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFiredBy__C7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2f4",
-            "size": 8,
-            "kind": "function",
-            "name": "AsThrown__7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d2fc",
-            "size": 8,
-            "kind": "function",
-            "name": "AsProjectile__7CBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d304",
-            "size": 4,
-            "kind": "function",
-            "name": "GetVelocity__7CBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d308",
-            "size": 4,
-            "kind": "function",
-            "name": "SetExclusionPair__7CBulletP10ISceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d30c",
-            "size": 4,
-            "kind": "function",
-            "name": "Penetrate__7CBulletRC10CCollision",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d310",
-            "size": 4,
-            "kind": "function",
-            "name": "SetDamage__7CBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d314",
-            "size": 4,
-            "kind": "function",
-            "name": "SetBlastRadius__7CBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014d318",
-            "size": 4,
-            "kind": "function",
-            "name": "SetExplosionParticleSystem__7CBulletUlQ27CBullet23EXPLOSION_PARTICLE_TYPE",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -51851,13 +52075,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014e30c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCollisionId__C17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014e314",
             "size": 264,
             "kind": "function",
@@ -51886,24 +52103,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8014ecdc",
-            "size": 4,
-            "kind": "function",
-            "name": "SetExclusionPair__17CProjectileBulletP10ISceneNode",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8014ece0",
             "size": 92,
             "kind": "function",
             "name": "GetVelocity__17CProjectileBulletR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed3c",
-            "size": 12,
-            "kind": "function",
-            "name": "SetDamage__17CProjectileBulletf",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -51925,34 +52128,6 @@
             "size": 8,
             "kind": "function",
             "name": "GetWorldBoundingVolume__C17CProjectileBulletQ210ISceneNode11EVolumeType",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed80",
-            "size": 12,
-            "kind": "function",
-            "name": "GetDamage__C17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed8c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFiredBy__C17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed94",
-            "size": 4,
-            "kind": "function",
-            "name": "AsProjectile__17CProjectileBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8014ed98",
-            "size": 16,
-            "kind": "function",
-            "name": "SetDrawForward__17CProjectileBulletb",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -52269,13 +52444,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x801533b8",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCollisionId__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x801533c0",
             "size": 1696,
             "kind": "function",
@@ -52360,27 +52528,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80153dd8",
-            "size": 12,
-            "kind": "function",
-            "name": "SetDamage__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153de4",
-            "size": 12,
-            "kind": "function",
-            "name": "SetBlastRadius__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153df0",
-            "size": 16,
-            "kind": "function",
-            "name": "SetExplosionParticleSystem__13CThrownBulletUlQ27CBullet23EXPLOSION_PARTICLE_TYPE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80153e00",
             "size": 8,
             "kind": "function",
@@ -52395,45 +52542,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80153e10",
-            "size": 8,
-            "kind": "function",
-            "name": "IsCollisionEnabled__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e18",
-            "size": 8,
-            "kind": "function",
-            "name": "GetAttachedLight__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80153e20",
             "size": 8,
             "kind": "function",
             "name": "SetLightVolumeTransitionDuration__13CThrownBulletf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e28",
-            "size": 12,
-            "kind": "function",
-            "name": "GetDamage__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e34",
-            "size": 8,
-            "kind": "function",
-            "name": "GetFiredBy__C13CThrownBullet",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80153e3c",
-            "size": 4,
-            "kind": "function",
-            "name": "AsThrown__13CThrownBullet",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -52638,34 +52750,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80156a50",
-            "size": 44,
-            "kind": "function",
-            "name": "SoundGetVolumes__FRfT0",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156a7c",
-            "size": 16,
-            "kind": "function",
-            "name": "SoundGetOneShotBankID__FRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156a8c",
-            "size": 16,
-            "kind": "function",
-            "name": "SoundGetAmbientTrackEvent__FRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156a9c",
-            "size": 16,
-            "kind": "function",
-            "name": "SoundGetMusicEventID__FRi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80156aac",
             "size": 48,
             "kind": "function",
@@ -52705,34 +52789,6 @@
             "size": 32,
             "kind": "function",
             "name": "OneShotMalloc__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156de0",
-            "size": 160,
-            "kind": "function",
-            "name": "AmbientTrack_Start__Fv",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80156e80",
-            "size": 116,
-            "kind": "function",
-            "name": "AmbientTrack_Select__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156ef4",
-            "size": 44,
-            "kind": "function",
-            "name": "AmbientTrack_Volume__Ff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80156f20",
-            "size": 124,
-            "kind": "function",
-            "name": "AmbientTrack_SetLocation__FPC8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -56803,20 +56859,6 @@
         "file_name": "Objectives.cpp",
         "ranges": [
           {
-            "address": "0x8017bf10",
-            "size": 48,
-            "kind": "function",
-            "name": "__17CPlayerObjectives",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017bf40",
-            "size": 64,
-            "kind": "function",
-            "name": "Reset__17CPlayerObjectives",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017bf80",
             "size": 180,
             "kind": "function",
@@ -56824,59 +56866,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8017c034",
-            "size": 32,
-            "kind": "function",
-            "name": "ShowObjective__17CPlayerObjectivesUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8017c054",
             "size": 80,
             "kind": "function",
             "name": "ChangeObjectivePrompt__17CPlayerObjectivesUiUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c0a4",
-            "size": 28,
-            "kind": "function",
-            "name": "SetObjectiveStatus__17CPlayerObjectivesUib",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c0c0",
-            "size": 36,
-            "kind": "function",
-            "name": "GetObjectiveStatus__17CPlayerObjectivesUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c0e4",
-            "size": 60,
-            "kind": "function",
-            "name": "GetNumCompletedObjectives__17CPlayerObjectives",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c120",
-            "size": 60,
-            "kind": "function",
-            "name": "CheckIfAllMainObjectivsAreCompleted__17CPlayerObjectives",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c15c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetNumBonusObjectives__17CPlayerObjectives",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8017c164",
-            "size": 60,
-            "kind": "function",
-            "name": "GetNumCompletedBonusObjectives__17CPlayerObjectives",
             "evidence": "adjacent-compiler-markers"
           },
           {

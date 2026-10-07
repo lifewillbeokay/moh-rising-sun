@@ -1,0 +1,74 @@
+{
+  "id": "player_camera_shake",
+  "source": "src/player/PlayerCameraShake.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b4364",
+      "size": 268
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f1f8",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCameraShake__13CPlayerObjectffff",
+      "address": "0x800b4364",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "StartCameraShake__13CPlayerObjectff",
+      "address": "0x800b4388",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "StopCameraShake__13CPlayerObjectf",
+      "address": "0x800b43ac",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "StartBackgroundCameraShake__13CPlayerObjectff",
+      "address": "0x800b43dc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "StopBackgroundCameraShake__13CPlayerObjectf",
+      "address": "0x800b4400",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "DoMotionShake__13CPlayerObjectff",
+      "address": "0x800b4430",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetShake__Q213CPlayerObject12CCameraShakeffff": "0x800b8cb4",
+    "SetShake__Q213CPlayerObject12CCameraShakeff": "0x800b8de8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

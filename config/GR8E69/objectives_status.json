@@ -1,0 +1,66 @@
+{
+  "id": "objectives_status",
+  "source": "src/objectives/ObjectivesStatus.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017c0a4",
+      "size": 252
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetObjectiveStatus__17CPlayerObjectivesUib",
+      "address": "0x8017c0a4",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetObjectiveStatus__17CPlayerObjectivesUi",
+      "address": "0x8017c0c0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetNumCompletedObjectives__17CPlayerObjectives",
+      "address": "0x8017c0e4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "CheckIfAllMainObjectivsAreCompleted__17CPlayerObjectives",
+      "address": "0x8017c120",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetNumBonusObjectives__17CPlayerObjectives",
+      "address": "0x8017c15c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetNumCompletedBonusObjectives__17CPlayerObjectives",
+      "address": "0x8017c164",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
