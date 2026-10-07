@@ -3,7 +3,8 @@
 `src/lighting/` reconstructs seven `CLightVolumeManager` methods (752 executable
 bytes) and 32 `CLight`, `CPropertyAnimLight`, `CInstancedAnimLight`,
 `CAnimLightManager` and light helper functions (1,908 bytes) from the pinned GR8E69 executable. Claude Code assisted the analysis and
-verification. The [BPD evidence](BPD.md) supplies the light-volume prefix used here.
+verification. The later [BPD setup extension](BPD.md#property-setup-and-cleanup)
+adds the 20-byte `CLight::Register` with Codex assistance. The [BPD evidence](BPD.md) supplies the light-volume prefix used here.
 
 ## Accepted fragments
 
@@ -131,6 +132,7 @@ float at `+0xd8` and the radius at `+0xdc`; storage between is not declared.
 | Manifest | Functions | Code bytes | Generated data |
 | --- | --- | ---: | --- |
 | `light_destroy` | `CLight::Destroy` (empty) | 4 | None |
+| `light_register` | `Register` saves the pattern pointer and count in the original manager | 20 | None |
 | `light_default_volume` | `GetDefaultLightVolume` returns the global `g_DefaultLightVolume` | 12 | None |
 | `light_transforms` | `AttemptUpdate`, `CommitUpdate` (empty), `Attach`, `Detach`, `IsVisible`, `Reset`, `PreTransform`, `Transform`, `SetTMLocalToWorld`, `SetPosition`, `SetBasis`, `Move`, `Rotate` | 896 | 4 bytes at `0x802a79c0` |
 | `light_axes` | `Orthonormalize`, `GetTMLocalToWorld`, `GetPosition`, `GetRightward`, `GetForward`, `GetUpward` | 400 | 16 bytes at `0x802a79dc` |
@@ -154,7 +156,12 @@ whose assignment copies each float, as `BeginUpdate`'s copy shows.
 `+0x58` (property lights) with the same storage, used-head, free-head, capacity and
 count shape as the particle-system pool; each `Destroy` overload unlinks the light
 through the link at `+0xf0` without a membership check and pushes it onto the free
-list. The manager's earlier storage and base classes are not declared.
+list. `Register(void *, int)` now establishes the pattern pointer at manager `+0x38`
+and signed count at `+0x3c`. The original `Create(unsigned int)` independently
+reads these fields, searches records at a 124-byte stride and passes a selected
+record to `CInstancedAnimLight`'s constructor. The manager's remaining earlier
+storage and base classes are not declared; the original private manager remains
+bound to the `light.cpp` file record.
 
 `Attach(node, offset, slot)` stores the slot at `+0xc4`, copies the offset into
 the matrix at `+0x80` or, without one, sets that matrix to identity and copies the

@@ -15,7 +15,10 @@ in place of the earlier method-only interface.
   machine-gun "used" flag of `MarkMGAsUsed`/`IsMGUsed`.
 - **Properties at `+8`**, modeled as a union of the two forms.
 
-Names of the flag fields and the union are descriptive.
+Names of the flag fields and the union are descriptive. The reconstructed
+[BPD setup](BPD.md#property-setup-and-cleanup) independently establishes a 12-byte
+stride in the original `g_pTriggerObjects` array and stores its legacy pointer at
+`+8`. The array remains original storage.
 
 ## Accepted fragments
 

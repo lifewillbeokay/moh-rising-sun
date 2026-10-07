@@ -1,0 +1,72 @@
+{
+  "id": "bpd_patch_all",
+  "source": "src/bpd/patch_all.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80120c00",
+      "size": 1132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a651c",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "PatchUpAllPropertyData__FP9BPDHeader",
+      "address": "0x80120c00",
+      "size": 1132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pTriggerObjects": "0x80326d68",
+    "offsetPtr__H1ZPv_RPX01i_v": "0x80286a08",
+    "ChangeEndian__H1ZPv_RX01_v": "0x80286a20",
+    "offsetPtr__H1Zv_RPX01i_v": "0x80286a4c",
+    "EndianSwap__FR18xyzProperty_Struct": "0x80123648",
+    "EndianSwap__FR24MOH_animatedLight_Struct": "0x801238a8",
+    "offsetPtr__H1ZUl_RPX01i_v": "0x80286a64",
+    "offsetPtr__H1Zf_RPX01i_v": "0x80286a7c",
+    "ChangeEndian__FRf": "0x800585fc",
+    "Register__6CLightPvi": "0x8012ff14",
+    "EndianSwap__FR14BPDLightVolume": "0x801238ec",
+    "offsetPtr__H1Z10PropPlane4_RPX01i_v": "0x80286a94",
+    "offsetPtr__H1Z8BPDLight_RPX01i_v": "0x80286aac",
+    "ChangeEndian__FRi": "0x8005861c",
+    "EndianSwap__FR19MOH_mechanic_Struct": "0x80123784",
+    "PatchUpCore__FP15MOH_core_Struct": "0x8012106c",
+    "PatchUpMechanic__FP19MOH_mechanic_Struct": "0x80121190",
+    "EndianSwap__FR25MOH_mechanicEnvMod_Struct": "0x8012386c",
+    "PatchUpMechEnvMod__FP25MOH_mechanicEnvMod_Struct": "0x80121194",
+    "EndianSwap__FR16MOH_enemy_Struct": "0x801237b8",
+    "PatchUpEnemy__FP16MOH_enemy_Struct": "0x80121198",
+    "PatchUpAnimLight__FP24MOH_animatedLight_Structi": "0x8012119c",
+    "EndianSwap__FR15MOH_core_Struct": "0x801236c4",
+    "DebugMsg__FPCce": "0x80279094",
+    "Create__11StringTablePc": "0x801268ec",
+    "g_pStringTable": "0x802c4ae0",
+    "LoadClasses__16FlexPropDatabasePvi": "0x80125438",
+    "LoadProperties__16FlexPropDatabasePvT1i": "0x80125a14"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

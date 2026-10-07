@@ -110,8 +110,8 @@ initialization and leaf-trigger checks; static calls do not prove runtime reacha
 The original setup caller first creates the string table, then passes header
 fields `+0x40`/`+0x44` as the class buffer/count. It next passes the header base
 itself and fields `+0x48`/`+0x4c` to `LoadProperties`. This independently identifies
-the relocation base at that call site and the setup order. Those callers remain
-original context with no new source credit.
+the relocation base at that call site and the setup order. Those callers are now reconstructed in the
+[BPD setup and cleanup extension](BPD.md#property-setup-and-cleanup).
 
 ### Record and container evidence
 

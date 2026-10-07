@@ -1,0 +1,48 @@
+{
+  "id": "bpd_free_properties",
+  "source": "src/bpd/free_properties.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121f30",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "FreePropertyMemory__Fv",
+      "address": "0x80121f30",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_pStringTable": "0x802c4ae0",
+    "ShutdownSplinePathManager__15CAIFilterGlobal": "0x800d8680",
+    "g_pPBSPHeader": "0x802c47c0",
+    "__builtin_delete": "0x801a8990",
+    "UnloadClasses__16FlexPropDatabase": "0x801259ac",
+    "UnloadProperties__16FlexPropDatabase": "0x801260c4",
+    "TLT_CloseFile__FPv": "0x801a9764",
+    "g_pBPDHeader": "0x802c47bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

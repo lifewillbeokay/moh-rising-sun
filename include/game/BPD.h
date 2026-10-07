@@ -1,8 +1,8 @@
 #ifndef GAME_BPD_H
 #define GAME_BPD_H
 
-// Scoped GameCube storage views for conversion and plane tests. These are not
-// complete allocation types. Field names are descriptive; see docs/BPD.md.
+// Scoped GameCube storage views for conversion and pointer setup. Verified array
+// strides are documented in docs/BPD.md; other prefixes are not allocation types.
 // Opaque prefixes and gaps must not be assigned an inferred historical type.
 struct BPDPolyPath;
 struct BPDPathFindingNode;
@@ -10,7 +10,11 @@ struct BPDPathFindingArea;
 struct BPDPathFindingBSP;
 struct PropVec3;
 struct PropPlane4 { float x, y, z, d; };
-struct BPDLight;
+struct BPDLight {
+    int type;
+    float position[3], direction[3], color[3], intensity;
+    unsigned char unknown2c[4];
+};
 struct BPDLightVolume;
 struct BPDHeader {
     int field00, field04, field08;
@@ -40,8 +44,8 @@ struct BPDHeader {
     BPDPathFindingBSP *bsp;
     int bspCount;
 };
-// The plane test independently establishes a 16-byte PropPlane4 stride.
-// BPDLightVolume below stops at the last accessed field, not its allocation size.
+// GameCube setup establishes 48-byte BPDLight and BPDLightVolume strides.
+// Their final four bytes are untouched and retain no inferred type.
 struct BPDLightVolume {
     float minimum[3], maximum[3];
     int planeCount;
@@ -49,6 +53,7 @@ struct BPDLightVolume {
     int lightCount;
     BPDLight *lights;
     int priority;
+    unsigned char unknown2c[4];
 };
 struct xyzProperty_Struct {
     int field00;
@@ -69,26 +74,27 @@ struct MOH_core_Struct {
     unsigned long field50;
     char *field54;
     unsigned long *field58, *field5c, *field60, *field64, *field68;
+    unsigned long *field6c; // Relocated by PatchUpCore; not converted by EndianSwap.
 };
 struct MOH_mechanic_Struct {
     MOH_core_Struct core;
-    unsigned char unknown6c[8];
+    unsigned char unknown70[4];
     int field74;
 };
 struct MOH_enemy_Struct {
     MOH_core_Struct core;
-    unsigned char unknown6c[18];
+    unsigned char unknown70[14];
     short field7e, field80, field82, field84, field86, field88, field8a, field8c, field8e;
     int field90, field94, field98, field9c, fielda0, fielda4, fielda8, fieldac;
 };
 struct MOH_mechanicEnvMod_Struct {
     MOH_core_Struct core;
-    unsigned char unknown6c[8];
+    unsigned char unknown70[4];
     int field74, field78;
 };
 struct MOH_animatedLight_Struct {
     MOH_core_Struct core;
-    unsigned char unknown6c[6];
+    unsigned char unknown70[2];
     short field72;
     unsigned long *colours;
     float *times;

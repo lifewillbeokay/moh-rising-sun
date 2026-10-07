@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 627128,
+    "matching_code_bytes": 628968,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.165326929991267,
+    "percent": 25.239162257948532,
     "categories": {
-      "reconstructed_game": 234912,
+      "reconstructed_game": 236752,
       "restored_library": 392216
     },
-    "matching_functions": 2338
+    "matching_functions": 2352
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -119,7 +119,12 @@
     "config/GR8E69/base64.json": "e88ebd5740a86b7f43b5b6812b6c4e81114d43dfae07a3e7429abb7c6a1bfec7",
     "config/GR8E69/baseline.json": "9ebff32fd809e72fdf889ab49760be2aa1172768f855af86d0251c1fc4da2ef7",
     "config/GR8E69/bpd_endian.json": "3aadb304ad55ca0cf66faa09c34e66abb388542cbec23719edc23a4a11d1bf4d",
+    "config/GR8E69/bpd_free_properties.json": "17e2cd4532e14143ded1a6ba46fcf5321fdd74f2705320ca5178cf75b171c6a9",
     "config/GR8E69/bpd_light_volume.json": "e3931cdecf07dcd381e5058696fdf773127383abb36af8f4f317095e70d4849c",
+    "config/GR8E69/bpd_offset_pointer_table.json": "4f87cae5d8cd43211a2589a7d2f5a3f4e326330df18bb0cfc4ec882db6256f3c",
+    "config/GR8E69/bpd_offset_property_pointers.json": "d43a808de5b69f5e4c03bf30a14f56a5008dd6c072e56b1a1a33af0f2cc9497d",
+    "config/GR8E69/bpd_patch_all.json": "bb9fd8b48ef07a6163f1e3ec90c286cdbcd4264f5e7bf40b4f2cead76fd8e2d7",
+    "config/GR8E69/bpd_patch_records.json": "6593603d4e9bad112ef7294b3a469491ea14b8dd83486063c4aaff08021afedc",
     "config/GR8E69/bullet_base.json": "d8ad4b0b2ecf97d51aea4435cd18856d706c669ebf8a50c3091accaab524bc15",
     "config/GR8E69/bullet_defaults.json": "9afaed1670e7097d3e6ca0bdaeb6cb1f737a23e4bcead4d865fa070882d62d14",
     "config/GR8E69/camera_axes.json": "28db4af00ca57a333100571e7bdfb74c71c39d8c090ffdd46b5b38e2fb2e4ea2",
@@ -381,6 +386,7 @@
     "config/GR8E69/light_destroy.json": "d581d4a9ea6e83abc28e30fd69780b0e874ccaa3965e42f2647f924bbb7ec6cc",
     "config/GR8E69/light_ids.json": "d27f6f7edd683611127ca74f25ca1d7965cc569b4b1c95943621c77e21af33c6",
     "config/GR8E69/light_mark_destruction.json": "387f60d8922b30526f9ca39ad0ec15b88488343fc2ab7018bc7b309202fd9105",
+    "config/GR8E69/light_register.json": "00fb5a4bfd5b346a5e80e9ed1e8b3486dd2d12a756cc7129cb87046281675c4c",
     "config/GR8E69/light_transforms.json": "89e40f5f3228cb0dd14ccb3f586ad84e9bdd87a7b23f105a9af98c74c173dd41",
     "config/GR8E69/light_volume_manager.json": "a1020b4f836e05cc516687609a15be559ca43ece249e7a1abfa2ed9adb4a1b8b",
     "config/GR8E69/light_volume_transition.json": "6dd24de125e3978833dba0ac54a2f0af965db4cac5faeaf057d813f5150e5cc3",
@@ -580,7 +586,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "d9b38f3fc545829f138112783f55482bdf4696c8bb309c400e952ff44657abf4",
+    "config/GR8E69/project.json": "8eb850425919bcae6682edc89f433dbda9c4390157c4aaf55ad30f502146dbdf",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1018,7 +1024,8 @@
     "include/dolphin-sdk/libc/wchar.h": "eb9359b3f8c80e980c291b31b08b913739a9fda753a2a5007f8bf2bf3c646439",
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
-    "include/game/BPD.h": "0b35cb4e9be9dbf3be60fb20019f0500b0667671505801d6afd698573bf0f111",
+    "include/game/AIFilterGlobal.h": "e8750f5ccaae47d4ec91c0866b7fd70f81cce76a894c4445153d4a24b772f37e",
+    "include/game/BPD.h": "7b70c40ba25476a6dfef991b1e8dc9a0b6ce44ef58e8185849ae2408b0b265f2",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
     "include/game/CLine3.h": "671ce5d07b583fd857df0b2ce304517d72a20d34e27967fa945b8a42de815760",
@@ -1079,13 +1086,15 @@
     "include/game/FlexProp.h": "d7acf26c7290756b6d01a2e59ff49c8928d58d954f45f4ab7f87f44b65fa7ed7",
     "include/game/FlexPropDatabase.h": "e3bb33faf5cff3877d051efc3335ff33c373c9d228a7afcb8b2c16f4ee97c767",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
-    "include/game/Light.h": "2ed36fd70b129fe2e1ce7cec7fffb8b7cc61794dfef4987e90ca65ad7df2fe6c",
+    "include/game/Light.h": "9c9d98c0d8cae651e2ea1dad3b8b3801f6af9b042a9b00b0a2eb6df4bb453d23",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
     "include/game/MathFun.h": "c5b2b1a4c5a9fb0fd42d6e2175caede46bc0d849512f200d6d987fee3c3ed793",
     "include/game/Objectives.h": "02d448413ce41bb563313b153f3203339391dfd24c634615ad2d091d2ae9ced8",
     "include/game/ObserverTypes.h": "687dfc07deb4adc23a1d0247270d6ab04c34b758bd88846bf5e4b6ef33e7cc1f",
+    "include/game/OffsetPtr.h": "06d2e4c320890063bd6b210c1ddda4b7cefc28e7aa9a4f276e76c128c0a68499",
     "include/game/ParticleClock.h": "28f3badf71350136523be63cd81fe70e6af6977dca794be22c84784ee720cf68",
     "include/game/ParticleRecipe.h": "04bba33839dcdae3132d1316e831585288f74ef842a5b01c6f6d6c37929ee61d",
+    "include/game/PropertyData.h": "6e4ff4e84eaee8d44483d32b5f4b8981c8fc0f533aa1b2966a8de58bbbb33c85",
     "include/game/SceneNode.h": "7230717c2c9ba0d0449b4fc6caeb407a932569ae7fabccd2a9b38b571fc22768",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
@@ -1247,7 +1256,13 @@
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
+    "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
+    "src/bpd/offset_pointer_table.cpp": "d9e5f1038f2923fa5af968234ca1f0f7700f3d2c60fd3b1ffaa7b72b43c4be86",
+    "src/bpd/offset_property_pointers.cpp": "0d79ba65148b6ec629d4603df8851155dca9f17be28ec96ab4d6b3ed6a87dc5a",
+    "src/bpd/offset_ptr_impl.h": "db4acef03417529731388feaf56f8930c81c8934eaed672d7c9f08cbc2bc7586",
+    "src/bpd/patch_all.cpp": "66dd4f1589d52c66df482b21aea4bb35132f9d5211e6d9ea2044e74a186890a2",
+    "src/bpd/patch_records.cpp": "77bf36745231abe23bcb4d7f58e3cfd3ecca5ac1b35883c7169f3e813d12d670",
     "src/bullets/BulletBase.cpp": "de919c365b4a23044f2996c4fa3f3f082f72d669bd28abd699741a58af15b38a",
     "src/bullets/BulletDefaults.cpp": "4a4f7513a432cccdf3ef03fa86ea740e75f99397054dde976b3e6e3050c8a678",
     "src/bullets/ProjectileAccessors.cpp": "60d0d7620bf7c3723851e848fc6e154349f9edb6ad3aea9938ab416083d9b51a",
@@ -1637,6 +1652,7 @@
     "src/lighting/LightDestroy.cpp": "2bc0cfe25e1fe819f6a38b5d8b6dec09d221c0578221a5f0e1a0dd2f15566317",
     "src/lighting/LightIDs.cpp": "1718a611882b2970bf7f645185304160affb5623dc9e7498efe1cedec2326f5b",
     "src/lighting/LightMarkForDestruction.cpp": "6d26e22d4787cbfd939d62ed723252db1c30ad7c292d70c792c065d31c327f7d",
+    "src/lighting/LightRegister.cpp": "4ec4fd3529f28763d90a486b03326880b0af55fde2e631cc92a6edd5eec9f6df",
     "src/lighting/LightTransforms.cpp": "ba96d733258bc6075bc3c87ac6e9033d968bd23311ac98d15573432b5df83736",
     "src/lighting/LightVolumeManager.cpp": "8fa209705371c72103581ac7cefa45bed6f0a8f3d81f270728056d336ddb53a8",
     "src/lighting/LightVolumeTransition.cpp": "5dc77fdedce8a31fc78252361b12a0c68bf781418a028cf4d59b7e270d07d6bc",
@@ -20713,6 +20729,114 @@
       "discarded_functions": [],
       "object_sha256": "110d06e64f3bb88ce1a6151b6461d6fdd782312c01f0bde5ee038a3d834f05a5",
       "linked_sha256": "63bd520dbb559eba3a688e18e90facca74634187061505e917478bd5412ec1d5"
+    },
+    {
+      "id": "bpd_patch_records",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 420,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "707707be5e38b8dd3379b8488abde7163e69d992a60af250c8509c8229ef528c",
+      "linked_sha256": "5ea195f8eb09c20cbe1d7b6593aaa41b3ad5a5d5ff4b433821dd25d0339bde49"
+    },
+    {
+      "id": "bpd_patch_all",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 1132,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c429762854aea3376bf916f2b4ae87dca61771607955f26aefbe3256afd0fc5f",
+      "linked_sha256": "513873710820c9c3b6e46601625f8ae1262c36917fe5b43625578703fec9617d"
+    },
+    {
+      "id": "bpd_free_properties",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "39ff7fdccc1416da685c9817af22e6542fcaba58261f9b1d6d80b765be5fb8f2",
+      "linked_sha256": "2412c2c5938eb0f87436d59242b07ae1a75e0b4dcac7e0aa386e2eb824e61ff0"
+    },
+    {
+      "id": "light_register",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 20,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "7da870f6d70ef89785dbf1359d8669d90207d8a0fd33aca7bb24e4ba90eb1732",
+      "linked_sha256": "60e6fcd3efbafd8d5f81d87438ae4396c4f58f84826ff11155cd68ed7a1769ad"
+    },
+    {
+      "id": "bpd_offset_pointer_table",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 24,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "67dca4aefa74bec8940e1e7241955bd84bd7bad5483ca9cddb2bfa6339fa2183",
+      "linked_sha256": "451a2ef7d881b1b75240c081daa28668202885be8fb0ed36966d83a00c732dcc"
+    },
+    {
+      "id": "bpd_offset_property_pointers",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "475fcc769e6551346965cf264c421c3f1b822739163c31f939aa0648083e15cb",
+      "linked_sha256": "2610a4bac1202863a2ba25b09fe1302f736b6f3fec7764ced87c8902553ac72f"
     }
   ],
   "code_map": {
@@ -48462,48 +48586,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80120c00",
-            "size": 1132,
-            "kind": "function",
-            "name": "PatchUpAllPropertyData__FP9BPDHeader",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012106c",
-            "size": 292,
-            "kind": "function",
-            "name": "PatchUpCore__FP15MOH_core_Struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121190",
-            "size": 4,
-            "kind": "function",
-            "name": "PatchUpMechanic__FP19MOH_mechanic_Struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121194",
-            "size": 4,
-            "kind": "function",
-            "name": "PatchUpMechEnvMod__FP25MOH_mechanicEnvMod_Struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121198",
-            "size": 4,
-            "kind": "function",
-            "name": "PatchUpEnemy__FP16MOH_enemy_Struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012119c",
-            "size": 116,
-            "kind": "function",
-            "name": "PatchUpAnimLight__FP24MOH_animatedLight_Structi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80121210",
             "size": 120,
             "kind": "function",
@@ -48585,13 +48667,6 @@
             "size": 168,
             "kind": "function",
             "name": "PatchUpPropBSPTreeLeaf__FPcP12_PropBSPLeaf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121f30",
-            "size": 124,
-            "kind": "function",
-            "name": "FreePropertyMemory__Fv",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -49887,13 +49962,6 @@
             "size": 40,
             "kind": "function",
             "name": "ResetClass__6CLight",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012ff14",
-            "size": 20,
-            "kind": "function",
-            "name": "Register__6CLightPvi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -78821,56 +78889,24 @@
             "kind": "function",
             "name": "u4Reflect__4CCRCUiUi",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286a08",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1ZPv_RPX01i_v",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80286a20",
+        "ranges": [
           {
             "address": "0x80286a20",
             "size": 44,
             "kind": "function",
             "name": "ChangeEndian__H1ZPv_RX01_v",
             "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286a4c",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1Zv_RPX01i_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286a64",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1ZUl_RPX01i_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286a7c",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1Zf_RPX01i_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286a94",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1Z10PropPlane4_RPX01i_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286aac",
-            "size": 24,
-            "kind": "function",
-            "name": "offsetPtr__H1Z8BPDLight_RPX01i_v",
-            "evidence": "unknown-file"
-          },
+          }
+        ]
+      },
+      {
+        "name": "Unknown file/.text @ 80286ac4",
+        "ranges": [
           {
             "address": "0x80286ac4",
             "size": 248,

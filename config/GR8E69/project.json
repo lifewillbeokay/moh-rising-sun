@@ -834,7 +834,13 @@
     "flex_load_classes.json",
     "flex_unload_classes.json",
     "flex_load_properties.json",
-    "flex_unload_properties.json"
+    "flex_unload_properties.json",
+    "bpd_patch_records.json",
+    "bpd_patch_all.json",
+    "bpd_free_properties.json",
+    "light_register.json",
+    "bpd_offset_pointer_table.json",
+    "bpd_offset_property_pointers.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
