@@ -489,5 +489,7 @@ The original BSP fixups, navigation import, trigger initialization, closest-para
 search and `CAISplinePath::GenerateTestSplinePath` remain useful next targets.
 Spline-module construction and concrete virtual interfaces, player
 `UpdateMovePath` (1,036 bytes), and locomotion `UpdateArbitraryPoint` (332 bytes)
-also remain original. The verified controls, dispatch contract, clock and spline
-evaluators now provide callers and storage evidence for those larger routines.
+also remain original. The [targeting reconstruction](Targeting.md) now supplies
+matching target-value, last-seen and visibility helpers for the locomotion path;
+its selector branches still need work. The verified controls, dispatch contract,
+clock and spline evaluators provide evidence for these larger routines.

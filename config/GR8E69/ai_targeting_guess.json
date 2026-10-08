@@ -1,0 +1,40 @@
+{
+  "id": "ai_targeting_guess",
+  "source": "src/ai/targeting_guess.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ee468",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTargetGuessPosition__12CAITargetingR8CVector3",
+      "address": "0x800ee468",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLastSeenTargetPosition__12CAITargetingR8CVector3": "0x800ece88"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

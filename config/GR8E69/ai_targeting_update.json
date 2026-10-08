@@ -1,0 +1,42 @@
+{
+  "id": "ai_targeting_update",
+  "source": "src/ai/targeting_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ecf6c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__12CAITargeting",
+      "address": "0x800ecf6c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "UpdateReactionTime__12CAITargeting": "0x800ecfec",
+    "UpdateTargetPosition__12CAITargeting": "0x800ed064",
+    "UpdateNonAITargetPosition__12CAITargeting": "0x800ed424"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

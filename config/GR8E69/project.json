@@ -871,7 +871,16 @@
     "ai_locomotion_walk.json",
     "ai_locomotion_start.json",
     "ai_locomotion_dispatch.json",
-    "ai_filter_clock.json"
+    "ai_filter_clock.json",
+    "ai_target_identity.json",
+    "ai_targeting_last_seen.json",
+    "ai_targeting_modified.json",
+    "ai_targeting_seen_state.json",
+    "ai_targeting_update.json",
+    "ai_targeting_reaction.json",
+    "ai_targeting_queries.json",
+    "ai_targeting_distance.json",
+    "ai_targeting_guess.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 636084,
+    "matching_code_bytes": 637152,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.52471236324413,
+    "percent": 25.567568955775847,
     "categories": {
-      "reconstructed_game": 243868,
+      "reconstructed_game": 244936,
       "restored_library": 392216
     },
-    "matching_functions": 2416
+    "matching_functions": 2435
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -136,6 +136,15 @@
     "config/GR8E69/ai_spline_traversal_next.json": "29b07837170c9d8f8c740d5dc5e910de813ae58ae62e2fdeaf42c3b28471763f",
     "config/GR8E69/ai_spline_traversal_setup.json": "9a806948e7b7bd797b966f4e23f6226b763bd74f0b308878ee2cd230c6391543",
     "config/GR8E69/ai_src.json": "136c56ec3f12ec8b879525cc1d5766e8b42c5f266a23e090ce86f5fae181bf66",
+    "config/GR8E69/ai_target_identity.json": "ba1b0171c3e97714b042cde5e9f598421d3b734ee7f7ef05c18312d2401cbbac",
+    "config/GR8E69/ai_targeting_distance.json": "379181c521bd3103d8dcd895acf5abdbadfbffb43a629f8271df4b53fb49c545",
+    "config/GR8E69/ai_targeting_guess.json": "3eb179e1d0d03a6f15202f2e18548d734430cd9cd6e1ec0110564d61a9702507",
+    "config/GR8E69/ai_targeting_last_seen.json": "a62302932cb0f608edd5b410911cdb030d5e458f5bf3539da22a8de12e213392",
+    "config/GR8E69/ai_targeting_modified.json": "83541469b9d33c886bf735e46c9c41ac9d57202c681e7c62e826fcbc9d64d769",
+    "config/GR8E69/ai_targeting_queries.json": "b6bcbd0fb02f8959555ac487df2dd076fa7abf91d40dea05175e63c975026ed5",
+    "config/GR8E69/ai_targeting_reaction.json": "a4e611b7084bb41da18463ae9bd7de3157f069be59542abee5945bd758e168d7",
+    "config/GR8E69/ai_targeting_seen_state.json": "9dc2dad0d5d748bd4431f4e417456c7515ed3748dcc4b363b368b99a274b8e7f",
+    "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
     "config/GR8E69/anim_light.json": "9ffbd37f12a017d9299881ad77528bd7b94bc35a5e4970c59fb96ce107610dfb",
@@ -617,7 +626,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "562a46ea635587f0681ddb5b96ed95fe8a114be0ad5128b64467311befefc004",
+    "config/GR8E69/project.json": "59034c792520aaeddbc78f011495e032f1b56ef4d9b19f2e60c744a51161b076",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1058,6 +1067,7 @@
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "2cff8f67263207fdabdc5c51aae82d2f20aba46126c7534ab4ce594ffa666632",
     "include/game/AISplinePath.h": "0e2fbea7401e695bbd39715647275824906aca759203813a5597d047a3fd7770",
+    "include/game/AITargeting.h": "2adc082a0305474f24ef2df3ba60cf6fe27bbda371867c88644dc79324b72eb9",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
@@ -1314,6 +1324,15 @@
     "src/ai/spline_traversal_lifecycle.cpp": "0ccda8d66c6cb26aee19305fe3d6495173bb78348d68a46e62d292d8248b4116",
     "src/ai/spline_traversal_next.cpp": "4b65884848682f7d988eea051d9e6ba994d09d8e5411d1183567589097909ada",
     "src/ai/spline_traversal_setup.cpp": "a9f8bde6ddef94da3ec2b2d5cb009385560194634c11f91d61766a2eeaf8b209",
+    "src/ai/target_identity.cpp": "ddcef227947b91a25014cecdc51f4efa5a85a238540a4c6cb4021bb1769a18c2",
+    "src/ai/targeting_distance.cpp": "8c88d5604854bd459c6612d79283b78c3ec781da02d47c8c74a48f3d36991750",
+    "src/ai/targeting_guess.cpp": "ded400e7d66de7c25a438a8d8305a5c370dbe3f61b25fb402144b7bd63419d8a",
+    "src/ai/targeting_last_seen.cpp": "d029128c1140cecfb98971aa20456fb914c10732d548eb0798b18c31d827ab54",
+    "src/ai/targeting_modified.cpp": "16415d18aef4f6af53a0eeaef229ff28edaf74227b019087beee0217673deff7",
+    "src/ai/targeting_queries.cpp": "0b3146b7e41216930ee9d236d183921a82e2fc2aa68b1db7f30070e1b3b84fd4",
+    "src/ai/targeting_reaction.cpp": "c5f82b3ed7416fa76dc16cbcf47b4ab034366b701dd74cebc8fee1c5fc35a858",
+    "src/ai/targeting_seen_state.cpp": "1d16cbfa44a3fce19fa0facb9363add3af1307bead8a982202ae981b1d43de3a",
+    "src/ai/targeting_update.cpp": "efa38085cd71d0f02270c2c78c31115170fb46b2abe25150043975d5d59420b5",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
@@ -21460,6 +21479,168 @@
       "discarded_functions": [],
       "object_sha256": "897fccd36397c87efb7bd988e371c98c381e7faa69ebc25581cab447688c4ba4",
       "linked_sha256": "50cb0c302c89c0be3f5b9e8fa3422fa0b9e70286265b676211235e3e2e7dce72"
+    },
+    {
+      "id": "ai_target_identity",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 236,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "40b5a5fa2df55096a13df89a57bbdfbdfc6b07d4190feb46c2fd5291a6f6edfe",
+      "linked_sha256": "0a17c05b6fdba856f846db687b64ecbe1d425bd77e5c95811537941c652df2c5"
+    },
+    {
+      "id": "ai_targeting_last_seen",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8797c67e20ce49b3d677b0c05c2eb8ef1a9e4371c44421c6d01ed021d60c576b",
+      "linked_sha256": "0f8748371c87f2ee6f8108bfeee32b1714aca6178fa32178db12730e21076776"
+    },
+    {
+      "id": "ai_targeting_modified",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 64,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "52d142e7635bf5973bbad54adbc76a2176f0652fa85acce646e2a491234b65a5",
+      "linked_sha256": "d279b49afaddaf40873533aed61993796b2ea0b718a01839607a063e935e88fb"
+    },
+    {
+      "id": "ai_targeting_seen_state",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 100,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c6170cdc7813eed75c4857d0663fd786f59b53e3741d90f8a1300bf4d760b708",
+      "linked_sha256": "217137212e677f4b90dbb8867a6b5d218cddd13cca25c64951c3de6bce9a67be"
+    },
+    {
+      "id": "ai_targeting_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 128,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4fe910459102a94a3f8a19f6cc857cc65d175dbc6cdc4d09cd46d96bf1cbd57d",
+      "linked_sha256": "16c21b81695c64aa51a405bcb7fce9e6dd55cca264f726982d81c2e269701d30"
+    },
+    {
+      "id": "ai_targeting_reaction",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 120,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "66d18c9ac00b6d4529d10c88abf3535c28da542efaa66e002ea749e30b4af520",
+      "linked_sha256": "63fbfa74fa8943a0e88ecd17326b50d949894bb34d8b7db905abf9a0bea98c77"
+    },
+    {
+      "id": "ai_targeting_queries",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 180,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6afc5acfa4f664b95cfc3fdb95f66911701bb8970c88e3bdc3465a69f17e00d7",
+      "linked_sha256": "398b23d19662f45532ac0fc21311fa9a8fdbfe10e8dc11f75f74afa98e06e289"
+    },
+    {
+      "id": "ai_targeting_distance",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 116,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "6ea07e44145d50855e1a32c1af3773bd686f4da620c847a8af51d336d06b44fb",
+      "linked_sha256": "957d0e448cb1707546ea8ffbef4b557f2e3afd56e13479971a7edaa2959b5854"
+    },
+    {
+      "id": "ai_targeting_guess",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "cbd111796fa29a739b16077ba55bcc7e3f9756afabf90d56a4637eb602d6f7c4",
+      "linked_sha256": "7222931b1fdfe08ebdfb634a97ea35a7287994df95b03fbf102e9e7c1fedd8ca"
     }
   ],
   "code_map": {
@@ -42541,55 +42722,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ece88",
-            "size": 64,
-            "kind": "function",
-            "name": "GetLastSeenTargetPosition__12CAITargetingR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecec8",
-            "size": 64,
-            "kind": "function",
-            "name": "GetModifiedTargetPosition__12CAITargetingR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecf08",
-            "size": 84,
-            "kind": "function",
-            "name": "SetLastSeenTargetPosition__12CAITargetingRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecf5c",
-            "size": 8,
-            "kind": "function",
-            "name": "IsLastSeenTargetPositionSet__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecf64",
-            "size": 8,
-            "kind": "function",
-            "name": "CouldVisionSeeTarget__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecf6c",
-            "size": 128,
-            "kind": "function",
-            "name": "Update__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ecfec",
-            "size": 120,
-            "kind": "function",
-            "name": "UpdateReactionTime__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ed064",
             "size": 960,
             "kind": "function",
@@ -42618,38 +42750,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ed948",
-            "size": 116,
-            "kind": "function",
-            "name": "GetDistanceToTargetSquaredXYZReal__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ed9bc",
             "size": 348,
             "kind": "function",
             "name": "SetTarget__12CAITargetingP9CAIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800edb18",
-            "size": 36,
-            "kind": "function",
-            "name": "GetTargetScript__C12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800edb3c",
-            "size": 40,
-            "kind": "function",
-            "name": "IsNonAITarget__C12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800edb64",
-            "size": 104,
-            "kind": "function",
-            "name": "HasValidTarget__C12CAITargeting",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -42699,13 +42803,6 @@
             "size": 508,
             "kind": "function",
             "name": "AdjustAimPosition__12CAITargetingP8CVector3iP24AIFILTER_WEAPON_AIM_MODE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ee468",
-            "size": 60,
-            "kind": "function",
-            "name": "GetTargetGuessPosition__12CAITargetingR8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -42762,55 +42859,6 @@
             "size": 304,
             "kind": "function",
             "name": "GetForward__C9CAITarget",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eecc8",
-            "size": 76,
-            "kind": "function",
-            "name": "Matches__9CAITargetRC9CAITarget",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed14",
-            "size": 48,
-            "kind": "function",
-            "name": "GetScriptObject__C9CAITarget",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed44",
-            "size": 24,
-            "kind": "function",
-            "name": "SetAsNonAITarget__9CAITargetP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed5c",
-            "size": 20,
-            "kind": "function",
-            "name": "Nullify__9CAITarget",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed70",
-            "size": 20,
-            "kind": "function",
-            "name": "SetAsAITarget__9CAITargetP9CAIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed84",
-            "size": 24,
-            "kind": "function",
-            "name": "__9CAITargetP9CAIObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800eed9c",
-            "size": 24,
-            "kind": "function",
-            "name": "__9CAITarget",
             "evidence": "adjacent-compiler-markers"
           },
           {

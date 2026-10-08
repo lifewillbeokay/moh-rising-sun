@@ -1,0 +1,55 @@
+{
+  "id": "ai_targeting_seen_state",
+  "source": "src/ai/targeting_seen_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ecf08",
+      "size": 100
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a47ac",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetLastSeenTargetPosition__12CAITargetingRC8CVector3",
+      "address": "0x800ecf08",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "IsLastSeenTargetPositionSet__12CAITargeting",
+      "address": "0x800ecf5c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "CouldVisionSeeTarget__12CAITargeting",
+      "address": "0x800ecf64",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}
