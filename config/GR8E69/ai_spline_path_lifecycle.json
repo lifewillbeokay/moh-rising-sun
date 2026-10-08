@@ -1,0 +1,48 @@
+{
+  "id": "ai_spline_path_lifecycle",
+  "source": "src/ai/spline_path_lifecycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800df764",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "__13CAISplinePath",
+      "address": "0x800df764",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "_._13CAISplinePath",
+      "address": "0x800df768",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._20CAISplinePathSegment": "0x800df19c",
+    "__builtin_vec_delete": "0x801a89b0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}

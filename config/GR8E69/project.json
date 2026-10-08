@@ -844,7 +844,17 @@
     "bpd_load_properties.json",
     "bpd_load_bsp.json",
     "ai_filter_splines.json",
-    "ai_spline_manager.json"
+    "ai_spline_manager.json",
+    "ai_spline_segment_math.json",
+    "ai_spline_segment_lifecycle.json",
+    "ai_spline_path_lifecycle.json",
+    "ai_spline_last_point.json",
+    "ai_spline_breakdown_lifecycle.json",
+    "ai_spline_breakdown_crossed.json",
+    "ai_spline_traversal_lifecycle.json",
+    "ai_spline_traversal_getters.json",
+    "ai_spline_traversal_setup.json",
+    "ai_spline_traversal_next.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

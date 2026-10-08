@@ -1,18 +1,36 @@
 #ifndef GAME_AI_SPLINE_PATH_H
 #define GAME_AI_SPLINE_PATH_H
 #include "BPD.h"
+#include "CVector3.h"
 // AI-assisted reconstruction from GR8E69; see docs/Paths.md.
 class CAISplinePathManager;
-class CAISplinePathSegment;
+// Eighty-byte array stride, independently observed in generation/destruction.
+// Coefficient names and parameterStep describe their observed use.
+class CAISplinePathSegment {
+public:
+    unsigned char unknown00[4];
+    float parameterStep;
+    unsigned char unknown08[8];
+    CVector3 cubic, quadratic, linear, constant;
+    CAISplinePathSegment();
+    ~CAISplinePathSegment();
+    void Set(float, const CVector3 &, const CVector3 &, const CVector3 &, const CVector3 &);
+    void Expand(float, CVector3 &);
+    void ExpandDerivative(float, CVector3 &);
+    void ExpandSecondDerivative(float, CVector3 &);
+    float GetClosestParameter(float, const CVector3 &);
+};
 // The original array construction, destruction and lookup establish a 12-byte
-// stride. Field names are descriptive; the word at +4 remains opaque.
+// stride. Generation writes input point count minus one at +4; GetLastPoint
+// indexes that entry and evaluates it at zero. Field names are descriptive.
 class CAISplinePath {
 public:
     CAISplinePathSegment *segments;
-    unsigned char unknown04[4];
+    unsigned int lastSegment;
     unsigned int id;
     CAISplinePath();
     ~CAISplinePath();
+    void GetLastPoint(CVector3 *);
     void GenerateTestSplinePath(const CAISplinePathManager &, unsigned int, const PropVec3 *, bool);
 };
 // Its allocation and six constructor stores establish 24 bytes. Buffer element
@@ -27,5 +45,39 @@ public:
     void AllocateGenerateBuffers();
     void FreeGenerateBuffers();
     void GenerateSplinePath(unsigned int, unsigned int, unsigned int, const PropVec3 *);
+};
+// Observed vector prefix only; no complete allocation size is established.
+class CAISplinePathBreakdownPoint {
+public:
+    CVector3 position;
+    CAISplinePathBreakdownPoint();
+    ~CAISplinePathBreakdownPoint();
+    bool WasCrossedDistance(const CVector3 &, float *);
+};
+// Method-only interface; this is not the complete navigation class.
+class CAIAreaPathFinding {
+public:
+    bool SetupAStarPathWalkForPatrol(const CVector3 &);
+};
+// Prefix through the next-point vector at +0x20. The untouched bytes at
+// +0x18 and the complete allocation size remain unestablished.
+class CAISplinePathTraversal {
+public:
+    int state;
+    float parameter, previousDistanceSquared;
+    unsigned int segmentIndex;
+    CAISplinePath *path;
+    CAISplinePathSegment *segment;
+    unsigned char unknown18[8];
+    CAISplinePathBreakdownPoint nextPoint;
+    CAISplinePathTraversal();
+    ~CAISplinePathTraversal();
+    float GetCurrentParameterValue(float, const CVector3 &);
+    void MakeModifiedNextPoint();
+    void SetupNextSegmentForward(const CVector3 &);
+    void PrepareForTraversalForward(CAISplinePath *, bool, CAIAreaPathFinding *);
+    void RestartForwardTraversal(CAIAreaPathFinding *);
+    void GetFinalPointForward(CVector3 *);
+    void GetCurrentDerivative(CVector3 *);
 };
 #endif

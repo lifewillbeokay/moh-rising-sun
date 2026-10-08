@@ -1,0 +1,51 @@
+{
+  "id": "ai_spline_breakdown_lifecycle",
+  "source": "src/ai/spline_breakdown_lifecycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800df0d0",
+      "size": 60
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2e68",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__27CAISplinePathBreakdownPoint",
+      "address": "0x800df0d0",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "_._27CAISplinePathBreakdownPoint",
+      "address": "0x800df0e4",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}

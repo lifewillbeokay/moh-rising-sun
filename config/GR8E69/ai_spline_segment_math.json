@@ -1,0 +1,61 @@
+{
+  "id": "ai_spline_segment_math",
+  "source": "src/ai/spline_segment_math.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800df1c4",
+      "size": 736
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2e80",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "Set__20CAISplinePathSegmentfRC8CVector3N32",
+      "address": "0x800df1c4",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "Expand__20CAISplinePathSegmentfR8CVector3",
+      "address": "0x800df2c4",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "ExpandDerivative__20CAISplinePathSegmentfR8CVector3",
+      "address": "0x800df390",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "ExpandSecondDerivative__20CAISplinePathSegmentfR8CVector3",
+      "address": "0x800df430",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}
