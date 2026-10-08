@@ -1,0 +1,49 @@
+{
+  "id": "ai_locomotion_walk",
+  "source": "src/ai/locomotion_walk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ef180",
+      "size": 256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4984",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "WalkToArbitraryPoint__13CAILocomotion",
+      "address": "0x800ef180",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "UpdateArbitraryPoint__13CAILocomotion": "0x800eeeb8",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "DistanceXY__C8CVector3RC8CVector3": "0x8007bd44",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AILocomotion.cpp",
+  "original_file_index": 1075
+}

@@ -861,7 +861,17 @@
     "ai_locomotion_access.json",
     "ai_physics_orientation.json",
     "ai_physics_position.json",
-    "ai_physics_directions.json"
+    "ai_physics_directions.json",
+    "player_spline_position.json",
+    "player_spline_tangent.json",
+    "player_path_controls.json",
+    "ai_locomotion_distance.json",
+    "ai_locomotion_setup.json",
+    "ai_locomotion_requests.json",
+    "ai_locomotion_walk.json",
+    "ai_locomotion_start.json",
+    "ai_locomotion_dispatch.json",
+    "ai_filter_clock.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

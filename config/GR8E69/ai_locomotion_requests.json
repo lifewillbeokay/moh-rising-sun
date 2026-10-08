@@ -1,0 +1,57 @@
+{
+  "id": "ai_locomotion_requests",
+  "source": "src/ai/locomotion_requests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ef310",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4990",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "CantReachTarget__13CAILocomotion",
+      "address": "0x800ef310",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetArbitraryWalkMPType__13CAILocomotion14EMovePointType",
+      "address": "0x800ef344",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "TeleportTo__13CAILocomotionRC8CVector3",
+      "address": "0x800ef34c",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AILocomotion.cpp",
+  "original_file_index": 1075
+}

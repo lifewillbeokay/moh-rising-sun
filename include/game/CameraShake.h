@@ -1,10 +1,11 @@
-// AI-assisted scoped reconstruction from GR8E69; see docs/CameraShake.md.
+// AI-assisted scoped reconstruction from GR8E69; see docs/CameraShake.md and docs/Paths.md.
 #ifndef GAME_CAMERA_SHAKE_H
 #define GAME_CAMERA_SHAKE_H
 #pragma interface
+class CAISplinePath;
 
-// Scoped view of CPlayerObject: the nested shake controller and the members its
-// camera-shake wrappers use.
+// Scoped member view of CPlayerObject for shake and path controls. This does not
+// establish the complete allocation, base classes or virtual interface.
 class CPlayerObject {
   public:
     // 36 bytes: eight floats, then the table pointer at +32 (the class declares its
@@ -27,19 +28,26 @@ class CPlayerObject {
         void Update(float);
     };
 
-    // Member-only view: the shake controllers and motion-shake values the wrappers
-    // use. The prefix, base classes and table pointer are not declared.
+    // Member-only view; unknown bytes retain their original ownership.
     struct Flags {
         unsigned int unknown_31_26 : 6;
         unsigned int motionShake : 1;   // Bit 25: set by DoMotionShake for a positive amount.
         unsigned int unknown_low : 25;
     };
-    unsigned char unknown_0[0xd4c];
+    unsigned char unknown_0[0xd44];
+    unsigned int pathFlags; // +0xd44; bit 19 enables path movement.
+    unsigned char unknown_d48[4];
     Flags flags;
     unsigned char unknown_d50[0xd58 - 0xd50];
     CCameraShake cameraShake;
     CCameraShake backgroundShake;
     float motionShakeAmount, motionShakeRate, motionShakeTime;
+
+    unsigned char unknown_dac[0xe00 - 0xdac];
+    CAISplinePath *movePath, *lookPath; // +0xe00, +0xe04
+    float pathParameter, pathRate; // +0xe08, +0xe0c
+    void MoveOnPath(CAISplinePath *, CAISplinePath *, float);
+    void StopPath();
 
     void SetCameraShake(float, float, float, float);
     void StartCameraShake(float, float);

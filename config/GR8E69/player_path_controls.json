@@ -1,0 +1,49 @@
+{
+  "id": "player_path_controls",
+  "source": "src/player/path_controls.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b472c",
+      "size": 80
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f210",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "MoveOnPath__13CPlayerObjectP13CAISplinePathT1f",
+      "address": "0x800b472c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "StopPath__13CPlayerObject",
+      "address": "0x800b476c",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}
