@@ -1,0 +1,57 @@
+{
+  "id": "ai_filter_clock",
+  "source": "src/ai/filter_clock.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d84d0",
+      "size": 124
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2274",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CAIFilterGlobal",
+      "address": "0x800d84d0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "UpdateFromGlobals__15CAIFilterGlobalf",
+      "address": "0x800d84f8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "UpdateToGlobals__15CAIFilterGlobal",
+      "address": "0x800d8548",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFrameCount__Fv": "0x80168a40"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIFilter.cpp",
+  "original_file_index": 970
+}

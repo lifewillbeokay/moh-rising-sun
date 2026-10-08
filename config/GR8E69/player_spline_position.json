@@ -1,0 +1,45 @@
+{
+  "id": "player_spline_position",
+  "source": "src/player/spline_position.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b477c",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f220",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "EvaluateSplinePath__FP13CAISplinePathfR8CVector3",
+      "address": "0x800b477c",
+      "size": 144,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "Expand__20CAISplinePathSegmentfR8CVector3": "0x800df2c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

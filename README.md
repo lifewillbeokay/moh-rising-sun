@@ -103,12 +103,12 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/scene/`, `include/game/SceneNode.h` | Recovered [scene-node virtual-slot order and base-class defaults](docs/SceneNode.md) |
 | `src/script/` | Reconstructed [all opcode handlers, script timers, message registrations, event lookup and music built-ins](docs/Script.md), guided by contributed PS2 research |
 | `src/bpd/`, `src/endian/` | Reconstructed [BPD/property conversion, pointer setup, cleanup and lighting-volume point test](docs/BPD.md) |
-| `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking and movement updates](docs/Paths.md), with scoped record and allocation evidence |
+| `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking, locomotion and AI clock](docs/Paths.md), with scoped record and allocation evidence |
 | `src/lighting/`, `include/game/Light.h` | Reconstructed [light-volume selection and transitions, scene-light transforms and animated-light lifecycle](docs/LightVolumes.md) |
 | `src/bullets/`, `include/game/Bullet.h` | Reconstructed [bullet defaults, accessors and collision helpers](docs/Bullets.md) |
 | `src/triggers/` | Reconstructed [trigger-object queries, positions and point tests](docs/TriggerObject.md) |
 | `src/sound/` | Reconstructed [ambient-track and sound accessors](docs/Sound.md) |
-| `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md) |
+| `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md), plus [path controls and spline evaluation](docs/Paths.md#player-paths-and-arbitrary-point-walking) |
 | `src/objectives/` | Reconstructed [objective initialization, status and visibility helpers](docs/Objectives.md) |
 | `src/observers/` | Reconstructed observers, weak pointers and destruction queue; [evidence](docs/Observers.md) |
 | `src/frontend/` | Reconstructed [uppercase conversion and front-end string hash](docs/FEHash.md), guided by the [EA reference comparison](docs/research/ea-shared-code.md) |

@@ -1,0 +1,44 @@
+{
+  "id": "ai_locomotion_dispatch",
+  "source": "src/ai/locomotion_dispatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ef280",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterWalkType__13CAILocomotionP19IAILocomotionMethod",
+      "address": "0x800ef280",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "StopWalkByType__13CAILocomotion23AIOBJECT_PATH_WALK_TYPE",
+      "address": "0x800ef2d0",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AILocomotion.cpp",
+  "original_file_index": 1075
+}

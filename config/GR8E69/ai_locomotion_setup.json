@@ -1,0 +1,38 @@
+{
+  "id": "ai_locomotion_setup",
+  "source": "src/ai/locomotion_setup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ef090",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetupArbitraryPointUpdate__13CAILocomotion14EMovePointTypeP23BS_STRUCT_Vector_structf",
+      "address": "0x800ef090",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AILocomotion.cpp",
+  "original_file_index": 1075
+}

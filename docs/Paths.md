@@ -283,7 +283,8 @@ The navigation constructor independently stores its locomotion argument at
 `+0x20`, agreeing with forward traversal. `AILocomotion.cpp` initialization and
 both objective getters establish the vector at `+0x10`; its constructor, stop/
 continue methods, and spline controls agree on the four-byte walk selector at
-`+0x3c`. `AIMovement.h` exposes that prefix, preserving all other bytes as unknown.
+`+0x3c`. The expanded locomotion prefix is documented below; untouched gaps
+remain unknown.
 Ordinary return types, member names, access control and the integer spelling of
 the walk selector are reconstruction choices, not a recovered full declaration.
 
@@ -338,6 +339,111 @@ The fourth Euler-vector word is untouched. Local inline component/subtraction
 helpers are descriptive reconstruction choices; no original helper spelling is
 claimed.
 
+## Player paths and arbitrary-point walking
+
+The next batch reconstructs 16 functions in ten units: **1,320 executable bytes**
+and 72 bytes of required constant pools. Only executable bytes receive progress
+credit. The player fragments belong to the original `player.cpp` file record
+(index 835); the spline evaluators retain their original local symbol binding.
+The AI fragments use `AILocomotion.cpp` (1075) and `AIFilter.cpp` (970).
+
+| Unit | Functions / code bytes | Required constant pool |
+| --- | --- | --- |
+| `player_path_controls` | `MoveOnPath`, `StopPath`: 2 / 80 at `0x800b472c` | 12 bytes at `0x8029f210` |
+| `player_spline_position` | `EvaluateSplinePath`: 1 / 144 at `0x800b477c` | 16 bytes at `0x8029f220` |
+| `player_spline_tangent` | `EvaluateSplineTangent`: 1 / 144 at `0x800b480c` | 16 bytes at `0x8029f230` |
+| `ai_locomotion_distance` | `GetDistanceToArbitraryPoint`: 1 / 44 at `0x800ef004` | None |
+| `ai_locomotion_setup` | `SetupArbitraryPointUpdate`: 1 / 16 at `0x800ef090` | None |
+| `ai_locomotion_start` | `StartWalkToArbitraryPoint`: 1 / 224 at `0x800ef0a0` | 4 bytes at `0x802a4980` |
+| `ai_locomotion_walk` | `WalkToArbitraryPoint`: 1 / 256 at `0x800ef180` | 12 bytes at `0x802a4984` |
+| `ai_locomotion_dispatch` | `RegisterWalkType`, `StopWalkByType`: 2 / 144 at `0x800ef280` | None |
+| `ai_locomotion_requests` | `CantReachTarget`, `SetArbitraryWalkMPType`, `TeleportTo`: 3 / 144 at `0x800ef310` | 4 bytes at `0x802a4990` |
+| `ai_filter_clock` | Constructor, `UpdateFromGlobals`, `UpdateToGlobals`: 3 / 124 at `0x800d84d0` | 8 bytes at `0x802a2274` |
+
+### Player controls and evaluation
+
+The shared `CPlayerObject` member view remains in `CameraShake.h`; the existing
+shake offsets are preserved. Path controls expose a separate flag word at
+`+0xd44`, movement/look path pointers at `+0xe00`/`+0xe04`, and parameter/rate at
+`+0xe08`/`+0xe0c`. These accesses also agree with the still-original
+`UpdateMovePath` at `0x800b489c`. The intervening bytes, base classes, complete
+allocation and virtual interface remain unknown.
+
+`MoveOnPath` enables bit 19, installs both paths, resets the parameter to zero,
+and stores `(1 / duration) * 0.016683351f`. That final factor is the observed
+single-precision constant; it must not be rounded to `1 / 60`. There is no
+zero-duration guard. `StopPath` only clears bit 19; it leaves the pointers and
+parameter storage unchanged.
+
+Both evaluation helpers multiply the supplied parameter by the path's unsigned
+`lastSegment`, convert the result to a signed integer by truncation toward zero,
+and evaluate that segment at the fractional remainder. The position helper
+calls `Expand`; the tangent helper calls `ExpandDerivative`. Neither clamps the
+parameter nor normalizes the tangent. Their complete integer-conversion pools
+are retained separately. An input of 1 selects the stored final segment at local
+parameter zero, agreeing with `GetLastPoint`.
+
+### Locomotion storage and dispatch
+
+The original constructor at `0x800eee50`, the previously accepted objective
+getters, and the new methods corroborate the following prefix. It is not a
+complete allocation or class inheritance model.
+
+| Offset | Observed storage/use |
+| --- | --- |
+| `+0x04`, `+0x08`, `+0x0c` | Physics, targeting and script-object pointers |
+| `+0x10`, `+0x20` | Current objective and arbitrary-point vectors |
+| `+0x30` | `EMovePointType` selector |
+| `+0x34`, `+0x38` | Arrival-distance value and `BS_STRUCT_Vector_struct` pointer |
+| `+0x3c`, `+0x40` | Walk selector and update-time value |
+| `+0x48` through `+0x58` | Five method pointers, cleared by the original constructor |
+| `+0x60`, `+0x70` | Teleport-position vector and four-byte request flag |
+
+The dispatch word at zero, words at `+0x44` and `+0x5c`, and any storage after
+`+0x73` retain no reconstructed meaning. Targeting and the script vector remain
+forward declarations. Enum tags are recovered from symbols; enumerator/member
+names and ordinary return-type spelling are reconstruction choices.
+
+`RegisterWalkType` stores its argument at the index returned by its virtual
+`GetWalkType`; `StopWalkByType` invokes the selected method's virtual `StopWalk`.
+The original `_vt.19CAISplinePathModule` and `_vt.18CAIAreaPathFinding` tables both
+place the destructor, `GetWalkType`, and `StopWalk` in that order. Call sites use
+a signed `this` adjustment at table `+0x10`/`+0x18` and the corresponding function
+at `+0x14`/`+0x1c`. `IAILocomotionMethod` models only this dispatch contract; its
+pure virtual declarations do not establish the historical base declaration.
+No concrete subclass inheritance, constructor, destructor or table is rebuilt.
+There are no added null/index checks.
+
+`StartWalkToArbitraryPoint` stops registered methods 1 and 2, sets walk selector
+3, assigns the supplied point to the stored arbitrary point, and then assigns
+that point to the current objective. All vector assignments retain their
+by-value return temporaries and leave destination fourth words unchanged.
+`GetDistanceToArbitraryPoint` measures XY distance from physics position.
+
+`SetupArbitraryPointUpdate` installs the movement-point selector, arrival distance
+and script vector pointer. `WalkToArbitraryPoint` preserves a surprising original
+branch: when `!(globalTime >= updateTime)`, it calls the still-original
+`UpdateArbitraryPoint` and copies the arbitrary point into the current objective;
+otherwise it only writes `updateTime = globalTime + 0.1f`. It then measures full
+3D distance for point selector 4, or XY distance for other selectors. If
+`!(distance - arrivalDistance >= 0.5f)`, it emits event 154. The negated comparisons
+retain the original unordered floating-point behavior. This routine does not
+stop walking after the event.
+
+`CantReachTarget` emits event 194. Both event calls pass null context/sender and
+true for the final flag. `SetArbitraryWalkMPType` only replaces the selector.
+`TeleportTo` sets the request flag to one and copies the requested position; it
+does not itself update physics or apply a teleport.
+
+### AI clock
+
+`CAIFilterGlobal` now exposes frame count at zero and accumulated time at `+4`.
+The constructor initializes those values and the spline manager pointer to zero,
+and writes `0x2400` at `+0x10`; the meaning of that last word is not established.
+`UpdateFromGlobals` obtains `GetFrameCount()` and accumulates its argument times
+`1.0f / 60.0f` into time. `UpdateToGlobals` is an original no-op. The word at
+`+8` stays opaque, and this prefix does not establish the singleton's full size.
+
 ## BSP loader and remaining fixups
 
 `LoadPropBSPTree` always calls the level-file loader, passing no size-output
@@ -381,6 +487,7 @@ the GameCube BPD/PBSP file bytes nor the complete level-loading path are validat
 
 The original BSP fixups, navigation import, trigger initialization, closest-parameter
 search and `CAISplinePath::GenerateTestSplinePath` remain useful next targets.
-Spline-module construction/virtual interfaces and the player-facing
-`EvaluateSplinePath`/`EvaluateSplineTangent` wrappers also remain original. The verified
-setup and manager interfaces now provide callers and storage evidence for them.
+Spline-module construction and concrete virtual interfaces, player
+`UpdateMovePath` (1,036 bytes), and locomotion `UpdateArbitraryPoint` (332 bytes)
+also remain original. The verified controls, dispatch contract, clock and spline
+evaluators now provide callers and storage evidence for those larger routines.
