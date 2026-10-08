@@ -1,0 +1,53 @@
+{
+  "id": "ai_spline_traversal_forward",
+  "source": "src/ai/spline_traversal_forward.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e03f4",
+      "size": 840
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2f18",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetNextPointForward__22CAISplinePathTraversalRC8CVector3T1P8CVector3P8BSObjectP19CAISplinePathModuleP18CAIAreaPathFinding",
+      "address": "0x800e03f4",
+      "size": 840,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetFinalPointForward__22CAISplinePathTraversalP8CVector3": "0x800e073c",
+    "WasCrossedDistance__27CAISplinePathBreakdownPointRC8CVector3Pf": "0x800df10c",
+    "GetCurrentParameterValue__22CAISplinePathTraversalfRC8CVector3": "0x800e00a0",
+    "SetupNextSegmentForward__22CAISplinePathTraversalRC8CVector3": "0x800e01fc",
+    "Expand__20CAISplinePathSegmentfR8CVector3": "0x800df2c4",
+    "MakeModifiedNextPoint__22CAISplinePathTraversal": "0x800e00c4",
+    "UpdateAStarPathWalk__18CAIAreaPathFinding": "0x800ea2e0",
+    "GetCurrentObjectivePosition__13CAILocomotion": "0x800ef088"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}

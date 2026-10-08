@@ -1,9 +1,10 @@
 # Property loading and spline-path management
 
 This reconstruction follows the [BPD setup](BPD.md#property-setup-and-cleanup) and the
-contributed [PS2 gameplay-layout research](research/ps2/bpd-format.md). The loading and management batch covers **11 functions and 1,484 executable
-bytes**; segment evaluation and traversal add **21 functions and 2,100 bytes**.
-Both were independently reconstructed from the pinned GameCube GR8E69 executable
+contributed [PS2 gameplay-layout research](research/ps2/bpd-format.md). The loading
+and management batch covers **11 functions and 1,484 executable bytes**; segment evaluation and traversal add **21 functions and 2,100 bytes**; walking
+controls and movement updates add **16 functions and 2,212 bytes**. These batches
+were independently reconstructed from the pinned GameCube GR8E69 executable
 with Codex assistance. The PS2 notes identified the path table but did not
 establish these GameCube layouts or bodies.
 
@@ -173,7 +174,8 @@ squared distance at `+8`, segment index at `+0x0c`, path pointer at `+0x10`, seg
 pointer at `+0x14`, and a breakdown-point vector at `+0x20`. Bytes `+0x18` through
 `+0x1f` remain opaque. The breakdown-point declaration likewise exposes only its
 observed vector prefix; it does not prove historical inheritance or full size.
-The navigation declaration is a method-only interface, not an allocatable class.
+The navigation declaration now exposes the independently observed locomotion
+pointer at `+0x20`; it remains a partial view that must not be allocated.
 Field names, ordinary return types and access control are reconstruction choices
 consistent with the observed uses; symbols preserve the method names and argument
 types, not a complete historical declaration.
@@ -209,10 +211,132 @@ types, not a complete historical declaration.
 
 The original `GetClosestParameter` uses an iterative derivative-based search and
 falls back to sampling. A private reconstruction still differs in generated
-arithmetic scheduling/register use and receives no source credit. Its full body,
-`GenerateTestSplinePath`, A-star continuation, and the larger `GetNextPointForward`
-remain original dependencies. The new types and evaluated segments provide
-verified interfaces for continuing those functions.
+arithmetic scheduling/register use and receives no source credit. Its full body and `GenerateTestSplinePath` remain original dependencies. A-star
+continuation and `GetNextPointForward` are now reconstructed as described below.
+
+## Forward walking and movement updates
+
+The third batch uses the established spline and vector declarations to reconstruct
+these seven fragments. All allocated output matches, including 44 float-pool bytes.
+
+| Manifest | Functions | Code bytes | Generated data |
+| --- | ---: | ---: | --- |
+| `ai_spline_traversal_astar` | 1 | 148 | 8 bytes at `0x802a2f10` |
+| `ai_spline_traversal_forward` | 1 | 840 | 12 bytes at `0x802a2f18` |
+| `ai_spline_module_walk` | 7 | 520 | 4 bytes at `0x802a2f58` |
+| `ai_locomotion_access` | 4 | 96 | 4 bytes at `0x802a497c` |
+| `ai_physics_orientation` | 1 | 232 | 4 bytes at `0x802a2cb8` |
+| `ai_physics_position` | 1 | 188 | 4 bytes at `0x802a2cbc` |
+| `ai_physics_directions` | 1 | 188 | 8 bytes at `0x802a2cc4` |
+
+The original file records are `AISplinePath.cpp` (index 992), `AILocomotion.cpp`
+(1075), and `AIPhysics.cpp` (988). The seven source files are reconstruction
+fragments, not recovered original translation-unit boundaries.
+
+### Forward traversal and script events
+
+`GetNextPointForward` preserves the numeric states and event IDs observed in the
+GameCube instructions. Historical enum/event names have not been established here.
+
+- State 7 writes input position plus the supplied direction, sends event 53 when a
+  script object exists, and returns. It sends that event on every invocation in
+  this state; no one-shot guard is added.
+- States 5 and 6 sample the final point and test whether it was crossed. Crossing
+  changes the state to 7 and sends event 53, then proceeds to the common output
+  selection. The position-plus-direction behavior starts on the next invocation.
+- States 1 and 2 require a crossing before advancing; other states reaching this
+  path proceed directly. A closest-parameter result replaces the stored parameter
+  unless it is below zero. The explicit negation preserves unordered comparisons.
+- Once the parameter is no longer below one, the function compares the unsigned
+  segment index against `path->lastSegment - 1`. At that limit it selects that
+  segment, resets previous squared distance to the largest finite float, changes
+  states 2/4 to 6 or 1/3 to 5, and samples the final point. Before that limit it
+  sends event 163, increments the index/pointer, and sets up the next segment.
+- Below one, states 1/2 send event 52 and become 3/4 respectively. The function
+  evaluates the current point and calls `MakeModifiedNextPoint`.
+- At the common exit, state 2 updates the original A-star walker and copies its
+  locomotion objective position; other states copy the spline next-point xyz.
+
+Events use the existing `BSObjectTriggerEvent` interface with both pointer
+arguments null and the final flag true. Its return value is ignored. The spline
+module parameter is unused. No state validation, null-path guard, empty-path
+handling, or event deduplication is introduced. Unsigned subtraction at a zero
+last index retains the original behavior rather than clamping it.
+
+`ContinueTraversalForwardAStar` measures XY distance from the next point to the
+physics position. When that distance is not at or below 1.5, it attempts the
+original A-star setup, sets state to 2 on success or 1 otherwise, and resets the
+previous squared distance. On the other branch it changes only state 2 to 4.
+The navigation search/setup/update implementations remain original code.
+
+### Walking controls and shared storage
+
+The module constructor, inspected as original code, corroborates pointers to
+physics at `+4`, navigation at `+8`, locomotion at `+0x0c`, and the script object
+at `+0x10`, followed by traversal at `+0x20`. Walking methods independently use
+these offsets. The prefix leaves bytes `+0x14` through `+0x1f` and the dispatch
+word at zero opaque. It does **not** recover the complete class size, inheritance,
+virtual interface, constructor or destructor. Do not allocate through this view
+or assume that its direct method declarations model virtual dispatch.
+
+The navigation constructor independently stores its locomotion argument at
+`+0x20`, agreeing with forward traversal. `AILocomotion.cpp` initialization and
+both objective getters establish the vector at `+0x10`; its constructor, stop/
+continue methods, and spline controls agree on the four-byte walk selector at
+`+0x3c`. `AIMovement.h` exposes that prefix, preserving all other bytes as unknown.
+Ordinary return types, member names, access control and the integer spelling of
+the walk selector are reconstruction choices, not a recovered full declaration.
+
+`StartSplinePathWalkForward` stops spline walking, stops A-star walking, prepares
+the requested path with A-star setup enabled, sets walk selector 1, and immediately
+computes the next objective point. `LoopSplinePathWalk` performs the same sequence
+through the stored path's restart helper. `WalkNextSplinePathPoint` passes the
+physics position and its second coordinate axis to traversal, then assigns the
+result to the locomotion objective vector, preserving the vector's fourth word.
+
+`StopSplinePathWalk` writes selector zero; `StopWalk` delegates to it;
+`GetWalkType` returns 1. `ContinueSplinePathWalk` resumes states 1/3/5 directly;
+states 2/4/6 first run A-star continuation and then deliberately fall through to
+write selector 1. Other states leave it unchanged. The locomotion-specific stop
+and continue methods write 0 and 3 respectively. Both objective getters expose
+the same vector: one assigns it to the reference argument, the other returns its
+address (represented as a reference in the reconstruction).
+
+### Physics position and coordinate conversion
+
+The physics declaration is a prefix through `+0x7f`, not a proven allocation or
+inheritance model. Its original constructor corroborates the vector boundaries;
+its update methods independently establish the following accesses:
+
+| Offset | Observed storage/use |
+| --- | --- |
+| `+0x10` | Current position vector |
+| `+0x20` | Euler-direction vector |
+| `+0x30`, `+0x40`, `+0x50` | Three coordinate-axis vectors, in argument order |
+| `+0x60` | Length of the most recent position displacement |
+| `+0x70` | Position displacement vector |
+
+The initial sixteen bytes, including original dispatch storage, and bytes
+`+0x64` through `+0x6f` remain opaque. The original function signature preserves
+`CAIFilterRealEulerDirection` and `CAIFilterRealCoordinateAxes`; their nested
+member spelling/composition in the header represents observed storage, not
+historical source. No axis is renamed right/front/up without separate evidence.
+
+`UpdatePositionFrom` subtracts old position from the supplied point into the
+stored displacement, assigns the new position, and stores the square root of
+its squared length. This is displacement length, not a velocity calculation:
+there is no division by elapsed time. It preserves component/write order and
+vector-assignment temporaries, with no temporary snapshot to promise alias safety.
+
+`UpdateOrientationFrom` assigns the three input axes in order, then calls
+`CalculateDirectionsFromCoord`. That helper stores z as the game's
+`MathFunAtan2F(-axis0.y, axis0.x)`, copies axis1 and rotates it about Z by the
+negative stored angle, sets y to zero, then stores x as
+`MathFunAtan2F(-rotated.z, rotated.y)`. It preserves the custom MathFun angle
+convention and does not normalize axes or replace it with the library `atan2f`.
+The fourth Euler-vector word is untouched. Local inline component/subtraction
+helpers are descriptive reconstruction choices; no original helper spelling is
+claimed.
 
 ## BSP loader and remaining fixups
 
@@ -256,6 +380,7 @@ the proprietary game. Runtime/emulator behavior remains untested, and neither
 the GameCube BPD/PBSP file bytes nor the complete level-loading path are validated.
 
 The original BSP fixups, navigation import, trigger initialization, closest-parameter
-search, forward-point traversal and `CAISplinePath::GenerateTestSplinePath` remain
-useful next targets. The verified
+search and `CAISplinePath::GenerateTestSplinePath` remain useful next targets.
+Spline-module construction/virtual interfaces and the player-facing
+`EvaluateSplinePath`/`EvaluateSplineTangent` wrappers also remain original. The verified
 setup and manager interfaces now provide callers and storage evidence for them.

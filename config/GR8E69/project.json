@@ -854,7 +854,14 @@
     "ai_spline_traversal_lifecycle.json",
     "ai_spline_traversal_getters.json",
     "ai_spline_traversal_setup.json",
-    "ai_spline_traversal_next.json"
+    "ai_spline_traversal_next.json",
+    "ai_spline_traversal_astar.json",
+    "ai_spline_traversal_forward.json",
+    "ai_spline_module_walk.json",
+    "ai_locomotion_access.json",
+    "ai_physics_orientation.json",
+    "ai_physics_position.json",
+    "ai_physics_directions.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
