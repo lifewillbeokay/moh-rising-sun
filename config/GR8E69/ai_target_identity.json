@@ -1,0 +1,74 @@
+{
+  "id": "ai_target_identity",
+  "source": "src/ai/target_identity.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800eecc8",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "Matches__9CAITargetRC9CAITarget",
+      "address": "0x800eecc8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__C9CAITarget",
+      "address": "0x800eed14",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SetAsNonAITarget__9CAITargetP8BSObject",
+      "address": "0x800eed44",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "Nullify__9CAITarget",
+      "address": "0x800eed5c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetAsAITarget__9CAITargetP9CAIObject",
+      "address": "0x800eed70",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "__9CAITargetP9CAIObject",
+      "address": "0x800eed84",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "__9CAITarget",
+      "address": "0x800eed9c",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}
