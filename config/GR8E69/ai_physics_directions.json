@@ -1,0 +1,46 @@
+{
+  "id": "ai_physics_directions",
+  "source": "src/ai/physics_directions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800dedfc",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2cc4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CalculateDirectionsFromCoord__FR27CAIFilterRealEulerDirectionR27CAIFilterRealCoordinateAxes",
+      "address": "0x800dedfc",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunAtan2F__Fff": "0x80133590",
+    "RotateAboutZ__8CVector3f": "0x8007bc68"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIPhysics.cpp",
+  "original_file_index": 988
+}

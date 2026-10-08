@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 632552,
+    "matching_code_bytes": 634764,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.382980635882685,
+    "percent": 25.471743541013918,
     "categories": {
-      "reconstructed_game": 240336,
+      "reconstructed_game": 242548,
       "restored_library": 392216
     },
-    "matching_functions": 2384
+    "matching_functions": 2400
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -110,13 +110,20 @@
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
+    "config/GR8E69/ai_locomotion_access.json": "a561dbd2e9dc1e3932ea24b9e503dd28adac5b45f786bacaa0dd26e3f5cc6154",
+    "config/GR8E69/ai_physics_directions.json": "195062e5217988105df2bc56948efa859f3be10f356a6de3dffde518d6bd0d83",
+    "config/GR8E69/ai_physics_orientation.json": "dc91d54aa1289efcf0427ead19deeeca04133e5df231ab1d4724806310e339aa",
+    "config/GR8E69/ai_physics_position.json": "f55b5b0ff0fa81c64d206bc34e9dd280e06db2fce4af3df923e72ae3550af429",
     "config/GR8E69/ai_spline_breakdown_crossed.json": "5b09f885dd9cb7223180d62fa55de6fa921a1f1c7772f02d067761ccd175a74f",
     "config/GR8E69/ai_spline_breakdown_lifecycle.json": "8d670df94ac34fab28664d9def3e001a47ca99d48c75d7148953e7afd5fbbd42",
     "config/GR8E69/ai_spline_last_point.json": "fa09a59effa24a69491007134611028e5ced4b2c17b01282c061a6e12a648089",
     "config/GR8E69/ai_spline_manager.json": "780f6dda5fc1ee9242d84e8600cd16da58146f39e0843711b9bed008bc3a3b90",
+    "config/GR8E69/ai_spline_module_walk.json": "15765d460debfbfe5c93abf00da0cbe8ce5490128acf41b55035e4d9939dc220",
     "config/GR8E69/ai_spline_path_lifecycle.json": "e408a1dd0997bf78d23c37944622cba5b004a3c755bf6a7ce0b167d73fc4180c",
     "config/GR8E69/ai_spline_segment_lifecycle.json": "14bde7e8ec50c66ef5beda34100c2104647ceec87012b921e387a3ce5948a993",
     "config/GR8E69/ai_spline_segment_math.json": "2e6acb42fb85644541a9f5f908461565efb019a306025ab574168eadbc01455f",
+    "config/GR8E69/ai_spline_traversal_astar.json": "5862d355919a3877e118df9afa43bd2b2e2af4911c04d4e828c822fbdd70e0e5",
+    "config/GR8E69/ai_spline_traversal_forward.json": "b3e55fd0e78d5ee5295e8032599a245cb597eb841a0ce11e63c2b8c77eab5947",
     "config/GR8E69/ai_spline_traversal_getters.json": "bc6e9a5cf042d0107acf2bb8a08c8e4b709500b0e8212c2224f9fd797546edb7",
     "config/GR8E69/ai_spline_traversal_lifecycle.json": "d41dd680a5c9915dacadb1da2a0d50fb0958ff169b7921b4478ebe5a354f3b3b",
     "config/GR8E69/ai_spline_traversal_next.json": "29b07837170c9d8f8c740d5dc5e910de813ae58ae62e2fdeaf42c3b28471763f",
@@ -600,7 +607,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "befb6aeca99277fd01ff9b6d7ee35d9cda2eb829a84a4810e3aef869d8eba7d2",
+    "config/GR8E69/project.json": "05b4885420cd30a0db335b8a7473937cc7e4a6010dae03658ee9d26c4798a475",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1039,7 +1046,8 @@
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/AIFilterGlobal.h": "564bf36777efb99d73e5ec51981e1efd74ca2c2b7be8f45ada05eb2b1863649a",
-    "include/game/AISplinePath.h": "f75f957f6c20358755ae57ef372fd14b92617af1080b620a091b8eaff97858c5",
+    "include/game/AIMovement.h": "c47f902d542708460da167278ab8e34556373ecb4263dd16e65cdb3e32d431c5",
+    "include/game/AISplinePath.h": "0e2fbea7401e695bbd39715647275824906aca759203813a5597d047a3fd7770",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
@@ -1271,13 +1279,20 @@
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
+    "src/ai/locomotion_access.cpp": "b1d0b54e757064f8d4f6d747b4b7a48592465e918a044177e2a51f1df07fd08e",
+    "src/ai/physics_directions.cpp": "e431691b34d4d136549b294e8d2718461516479cdcdefb185fbda8e5ee32a157",
+    "src/ai/physics_orientation.cpp": "a61b87af024ddc241fecf7f5238a2e12cebf2bc9c1a78e0bfe433964eb48c6f7",
+    "src/ai/physics_position.cpp": "46e8ac8af54677d89bb00e0f10332ac6e54f417696ae84fdf1ffa6be0ba985a0",
     "src/ai/spline_breakdown_crossed.cpp": "7c4466179e61ad33a806ecb3fcbfd1d388ddbb1f6ab3ad169203a507aabaedc2",
     "src/ai/spline_breakdown_lifecycle.cpp": "e384271371ed15e794a49d909f3f1cbc221b7a6a181ab83533f115b1f4e80e35",
     "src/ai/spline_last_point.cpp": "15d4241cba525d22c1331fefe747696f4e473f15ce0c7e30226ff8e6dca04449",
     "src/ai/spline_manager.cpp": "952363022642f1a99488cf85917051f5e16223b7ee9e20c4d0ba93a9da2aca5e",
+    "src/ai/spline_module_walk.cpp": "b928e2cc269263ad87fd98ccea298b40b515708c79b803b8d71b47ccc584ba48",
     "src/ai/spline_path_lifecycle.cpp": "417efdfa8393bff9dc0331ad5a308e8caa22e6e6495ba8b8faa339b52ad88660",
     "src/ai/spline_segment_lifecycle.cpp": "688c8e2f236c9d32f2ac5e779ae4dcd35f117690cf913447624a0a8a91f0b6f4",
     "src/ai/spline_segment_math.cpp": "953e69f39ff1f2f2f28dbb6eadb0ce2c0e352cf5f2ee85a7b88c461217c797ab",
+    "src/ai/spline_traversal_astar.cpp": "55ce264ddf58feae784ae5188b4f18ea722c0c165d4ded5e8f2abb84ffcc50f4",
+    "src/ai/spline_traversal_forward.cpp": "56dd0f6985e876f5a65941dc2855576ec55877da158a1015e7179c1766d08030",
     "src/ai/spline_traversal_getters.cpp": "3bc908592c8b5a2add1cbcdca1428f00dde719ba59ce276c9b3654113ba8d063",
     "src/ai/spline_traversal_lifecycle.cpp": "0ccda8d66c6cb26aee19305fe3d6495173bb78348d68a46e62d292d8248b4116",
     "src/ai/spline_traversal_next.cpp": "4b65884848682f7d988eea051d9e6ba994d09d8e5411d1183567589097909ada",
@@ -21119,6 +21134,132 @@
       "discarded_functions": [],
       "object_sha256": "fa05f5bb9b27259acb874644587a4d65dc1868626d402355c5fd103e59e1f7da",
       "linked_sha256": "02ed7d53b926695cab231e1654d18e15d665ed9e7d90bddf89cffee58e41697e"
+    },
+    {
+      "id": "ai_spline_traversal_astar",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 148,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "548783d507b3187fbd896f92719f995b4cf7b2f7270dd75113933eb54eddeafa",
+      "linked_sha256": "d1a66de2701ca275792377c74fd8dcd0d1bf244c28d51e022ce6fac4f8d55f2a"
+    },
+    {
+      "id": "ai_spline_traversal_forward",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 840,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ff480b7124b9d91dccf70e26d743eb7624cf5481a4e6f568e7fea2ae3ba6552f",
+      "linked_sha256": "0933337bd638ac88dd2693d8ab82d26da437b91898936ebaca896433db2c8a1f"
+    },
+    {
+      "id": "ai_spline_module_walk",
+      "category": "reconstructed_game",
+      "functions": 7,
+      "code_bytes": 520,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e871aefb78cf584267724c16f928d340b51511bd80369dde607890b0a99eb4ae",
+      "linked_sha256": "25328b0f8fe8dec2fcc29793e0420751cd20222b8aa43d812b340d9f0c5c98e9"
+    },
+    {
+      "id": "ai_locomotion_access",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 96,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e7656093f14ab2e63b7a51e44b7a4d2fc1bcb5f51009c9a23f6a5e594a5220aa",
+      "linked_sha256": "066a66fd89764fa786b0092cbb1888b59a0a32f9c432bcf8254ae536fa65bc64"
+    },
+    {
+      "id": "ai_physics_orientation",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 232,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e579e9cd7af701670feb32b88b6276817817512cb7be990fa831416521e06352",
+      "linked_sha256": "873d103d914cb3c3cbfe72d65e51404c66badd5ae05709896da93e275ae4a59b"
+    },
+    {
+      "id": "ai_physics_position",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "975cfb75ddb40089a8c5498890de4ae1f6b65d4369068cb6763e3a04766f8b84",
+      "linked_sha256": "b0a1f9380330c1f9f7dcebf12f3def231104e3847f38158e6ea3f09bdf0f6e15"
+    },
+    {
+      "id": "ai_physics_directions",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 188,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c5f5aa1831e87d9011679912a7bc8a587b62c584d688557913a0a8d2e29b668a",
+      "linked_sha256": "d46851c89ffc3e3d4107fe1c1c643a2fe2e6d3b199849cc4c64c48430685042a"
     }
   ],
   "code_map": {
@@ -39733,27 +39874,6 @@
             "kind": "function",
             "name": "_._10CAIPhysics",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dec58",
-            "size": 232,
-            "kind": "function",
-            "name": "UpdateOrientationFrom__10CAIPhysicsRC8CVector3N21",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ded40",
-            "size": 188,
-            "kind": "function",
-            "name": "UpdatePositionFrom__10CAIPhysicsRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dedfc",
-            "size": 188,
-            "kind": "function",
-            "name": "CalculateDirectionsFromCoord__FR27CAIFilterRealEulerDirectionR27CAIFilterRealCoordinateAxes",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -39820,73 +39940,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800e0360",
-            "size": 148,
-            "kind": "function",
-            "name": "ContinueTraversalForwardAStar__22CAISplinePathTraversalP10CAIPhysicsP18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e03f4",
-            "size": 840,
-            "kind": "function",
-            "name": "GetNextPointForward__22CAISplinePathTraversalRC8CVector3T1P8CVector3P8BSObjectP19CAISplinePathModuleP18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800e0a20",
             "size": 108,
             "kind": "function",
             "name": "__19CAISplinePathModuleP10CAIPhysicsP18CAIAreaPathFindingP13CAILocomotionP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0a8c",
-            "size": 96,
-            "kind": "function",
-            "name": "StartSplinePathWalkForward__19CAISplinePathModuleP13CAISplinePath",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0aec",
-            "size": 160,
-            "kind": "function",
-            "name": "WalkNextSplinePathPoint__19CAISplinePathModule",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0b8c",
-            "size": 16,
-            "kind": "function",
-            "name": "StopSplinePathWalk__19CAISplinePathModule",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0b9c",
-            "size": 124,
-            "kind": "function",
-            "name": "ContinueSplinePathWalk__19CAISplinePathModule",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0c18",
-            "size": 84,
-            "kind": "function",
-            "name": "LoopSplinePathWalk__19CAISplinePathModule",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0c6c",
-            "size": 8,
-            "kind": "function",
-            "name": "GetWalkType__19CAISplinePathModule",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0c74",
-            "size": 32,
-            "kind": "function",
-            "name": "StopWalk__19CAISplinePathModule",
             "evidence": "adjacent-compiler-markers"
           }
         ],
@@ -42649,34 +42706,6 @@
             "size": 44,
             "kind": "function",
             "name": "GetDistanceToArbitraryPoint__13CAILocomotion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ef030",
-            "size": 12,
-            "kind": "function",
-            "name": "StopWalkToArbitraryPoint__13CAILocomotion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ef03c",
-            "size": 12,
-            "kind": "function",
-            "name": "ContinueWalkToArbitraryPoint__13CAILocomotion",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ef048",
-            "size": 64,
-            "kind": "function",
-            "name": "GetCurrentObjectivePosition__13CAILocomotionR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ef088",
-            "size": 8,
-            "kind": "function",
-            "name": "GetCurrentObjectivePosition__13CAILocomotion",
             "evidence": "adjacent-compiler-markers"
           },
           {

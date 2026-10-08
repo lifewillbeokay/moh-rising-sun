@@ -1,0 +1,85 @@
+{
+  "id": "ai_spline_module_walk",
+  "source": "src/ai/spline_module_walk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e0a8c",
+      "size": 520
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2f58",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "StartSplinePathWalkForward__19CAISplinePathModuleP13CAISplinePath",
+      "address": "0x800e0a8c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "StopSplinePathWalk__19CAISplinePathModule",
+      "address": "0x800e0b8c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "WalkNextSplinePathPoint__19CAISplinePathModule",
+      "address": "0x800e0aec",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "ContinueSplinePathWalk__19CAISplinePathModule",
+      "address": "0x800e0b9c",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "LoopSplinePathWalk__19CAISplinePathModule",
+      "address": "0x800e0c18",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetWalkType__19CAISplinePathModule",
+      "address": "0x800e0c6c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "StopWalk__19CAISplinePathModule",
+      "address": "0x800e0c74",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "StopAStarPathWalk__18CAIAreaPathFinding": "0x800eb780",
+    "PrepareForTraversalForward__22CAISplinePathTraversalP13CAISplinePathbP18CAIAreaPathFinding": "0x800e029c",
+    "GetNextPointForward__22CAISplinePathTraversalRC8CVector3T1P8CVector3P8BSObjectP19CAISplinePathModuleP18CAIAreaPathFinding": "0x800e03f4",
+    "ContinueTraversalForwardAStar__22CAISplinePathTraversalP10CAIPhysicsP18CAIAreaPathFinding": "0x800e0360",
+    "RestartForwardTraversal__22CAISplinePathTraversalP18CAIAreaPathFinding": "0x800e0334"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}
