@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 630452,
+    "matching_code_bytes": 632552,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.298712055061895,
+    "percent": 25.382980635882685,
     "categories": {
-      "reconstructed_game": 238236,
+      "reconstructed_game": 240336,
       "restored_library": 392216
     },
-    "matching_functions": 2363
+    "matching_functions": 2384
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -110,7 +110,17 @@
     "config/GR8E69/UDPTransport.json": "2c2b2e2ed43cd5a432f9ba61b70b14c627ec3416e9a439b78e980b9aeb584f5c",
     "config/GR8E69/ai.json": "7b00f17f4fb56ada896ab693b54981297a779945d629d8e0920f1bffedda5893",
     "config/GR8E69/ai_filter_splines.json": "26b024e231fa1eb564b501c3108a8fb71d50e76cdc7ad97470e83b7b39b7fbde",
+    "config/GR8E69/ai_spline_breakdown_crossed.json": "5b09f885dd9cb7223180d62fa55de6fa921a1f1c7772f02d067761ccd175a74f",
+    "config/GR8E69/ai_spline_breakdown_lifecycle.json": "8d670df94ac34fab28664d9def3e001a47ca99d48c75d7148953e7afd5fbbd42",
+    "config/GR8E69/ai_spline_last_point.json": "fa09a59effa24a69491007134611028e5ced4b2c17b01282c061a6e12a648089",
     "config/GR8E69/ai_spline_manager.json": "780f6dda5fc1ee9242d84e8600cd16da58146f39e0843711b9bed008bc3a3b90",
+    "config/GR8E69/ai_spline_path_lifecycle.json": "e408a1dd0997bf78d23c37944622cba5b004a3c755bf6a7ce0b167d73fc4180c",
+    "config/GR8E69/ai_spline_segment_lifecycle.json": "14bde7e8ec50c66ef5beda34100c2104647ceec87012b921e387a3ce5948a993",
+    "config/GR8E69/ai_spline_segment_math.json": "2e6acb42fb85644541a9f5f908461565efb019a306025ab574168eadbc01455f",
+    "config/GR8E69/ai_spline_traversal_getters.json": "bc6e9a5cf042d0107acf2bb8a08c8e4b709500b0e8212c2224f9fd797546edb7",
+    "config/GR8E69/ai_spline_traversal_lifecycle.json": "d41dd680a5c9915dacadb1da2a0d50fb0958ff169b7921b4478ebe5a354f3b3b",
+    "config/GR8E69/ai_spline_traversal_next.json": "29b07837170c9d8f8c740d5dc5e910de813ae58ae62e2fdeaf42c3b28471763f",
+    "config/GR8E69/ai_spline_traversal_setup.json": "9a806948e7b7bd797b966f4e23f6226b763bd74f0b308878ee2cd230c6391543",
     "config/GR8E69/ai_src.json": "136c56ec3f12ec8b879525cc1d5766e8b42c5f266a23e090ce86f5fae181bf66",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
@@ -590,7 +600,7 @@
     "config/GR8E69/particle_tm_local_to_world.json": "8857f22743da7deaf073d151e725db0f9a853e07de836188155d521797832301",
     "config/GR8E69/particle_velocity.json": "0e01a076771a973ea3070d16303239017aecb9fe38ed3185d094fff6f62a21b9",
     "config/GR8E69/player_camera_shake.json": "e84e47bc3d83583f390ee37b3c7f560dc41557b2caf040164d989361cfe04d2c",
-    "config/GR8E69/project.json": "ea3c953f8f1a7853e4f95857f9138405f74310ac41c8cb0b305d8321f7bb38ba",
+    "config/GR8E69/project.json": "befb6aeca99277fd01ff9b6d7ee35d9cda2eb829a84a4810e3aef869d8eba7d2",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1029,7 +1039,7 @@
     "include/dolphin-sdk/macros.inc": "4e92f656bb511fbb45d66081291371c47ceba7bce9c55f86871116203cf38a46",
     "include/dolphin-sn/dolphin/types.h": "ca31e0bbb97e93ca4713654367df29578f6392f3acaf40ca68bc1de1c913af93",
     "include/game/AIFilterGlobal.h": "564bf36777efb99d73e5ec51981e1efd74ca2c2b7be8f45ada05eb2b1863649a",
-    "include/game/AISplinePath.h": "4504ff5376ddf953734b91762e8232466cfd8f61641a89e3e05f504c25fd8ad8",
+    "include/game/AISplinePath.h": "f75f957f6c20358755ae57ef372fd14b92617af1080b620a091b8eaff97858c5",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
     "include/game/CLine2.h": "e92fdbfd47ed264651ab9bbb90557a0461c3f6469267837079a5d514eb583f2c",
@@ -1261,7 +1271,17 @@
     "include/target/string.h": "b73138d3d89c4db3ea017939b94e7a8ed7b59d4f090f7e4df068a1fe854d0297",
     "src/MathFun.cpp": "62fdc1c10ab2ff80ae713d40d1fa1efc22748836588999759447f0350ca8bc91",
     "src/ai/filter_splines.cpp": "58cc98352a9799c6cb33d6bb8c2cc23892071c78418aa670ce0283f29fc5a5f3",
+    "src/ai/spline_breakdown_crossed.cpp": "7c4466179e61ad33a806ecb3fcbfd1d388ddbb1f6ab3ad169203a507aabaedc2",
+    "src/ai/spline_breakdown_lifecycle.cpp": "e384271371ed15e794a49d909f3f1cbc221b7a6a181ab83533f115b1f4e80e35",
+    "src/ai/spline_last_point.cpp": "15d4241cba525d22c1331fefe747696f4e473f15ce0c7e30226ff8e6dca04449",
     "src/ai/spline_manager.cpp": "952363022642f1a99488cf85917051f5e16223b7ee9e20c4d0ba93a9da2aca5e",
+    "src/ai/spline_path_lifecycle.cpp": "417efdfa8393bff9dc0331ad5a308e8caa22e6e6495ba8b8faa339b52ad88660",
+    "src/ai/spline_segment_lifecycle.cpp": "688c8e2f236c9d32f2ac5e779ae4dcd35f117690cf913447624a0a8a91f0b6f4",
+    "src/ai/spline_segment_math.cpp": "953e69f39ff1f2f2f28dbb6eadb0ce2c0e352cf5f2ee85a7b88c461217c797ab",
+    "src/ai/spline_traversal_getters.cpp": "3bc908592c8b5a2add1cbcdca1428f00dde719ba59ce276c9b3654113ba8d063",
+    "src/ai/spline_traversal_lifecycle.cpp": "0ccda8d66c6cb26aee19305fe3d6495173bb78348d68a46e62d292d8248b4116",
+    "src/ai/spline_traversal_next.cpp": "4b65884848682f7d988eea051d9e6ba994d09d8e5411d1183567589097909ada",
+    "src/ai/spline_traversal_setup.cpp": "a9f8bde6ddef94da3ec2b2d5cb009385560194634c11f91d61766a2eeaf8b209",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
     "src/bpd/light_volume.cpp": "c22922ba3e285d879080bb5c45ebb5030b1db234219d2f12b920c79b8aaaf1bd",
@@ -20919,6 +20939,186 @@
       "discarded_functions": [],
       "object_sha256": "1448edfd6fccd52671f7d5216f2c69ac9e2986bfab5b7debd93a76e0321fcae6",
       "linked_sha256": "247ab44fd322ea41dcf183ce5a8a9eba8a88f1edfad4e3741ab60f93bd470666"
+    },
+    {
+      "id": "ai_spline_segment_math",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 736,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "1ba6cd7d5b8c6af8dfade1f608d5078156fbc5024310542e67b02be4cde5a7b6",
+      "linked_sha256": "289bf56a90b82b6f7ea47d23c689acb4d9c182e9daaedb420152f5342a9628fd"
+    },
+    {
+      "id": "ai_spline_segment_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 72,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8c8c129e2ce1b59e4e01b9c3c68a7a52317386d2112b74aa9702f5ba347998c4",
+      "linked_sha256": "794a3386a70b9e617d6afa30219ac64c0c3646c91372a7fcf3afb10eafe1090d"
+    },
+    {
+      "id": "ai_spline_path_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 144,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0a6c9aebf32888a2aaa3f0f7feaa13d3cdc2684b04e18ecbaf4e3d21b0068c79",
+      "linked_sha256": "beb3ee055f57a77dd0844df0cc90c5e80b88f87b8699ca290c90aaddbb068d03"
+    },
+    {
+      "id": "ai_spline_last_point",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 56,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e2bfb86086fcff5b3fd61e11646cc22ae365f5361b5d01a4574d67ad8005f33f",
+      "linked_sha256": "25239330f7aba16eb6ed0c39a2916889ceb2a2d63ca90bc06fc5b03056698b90"
+    },
+    {
+      "id": "ai_spline_breakdown_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 60,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9bb4439267b6f2bdf2048286014b185588d79074744cb572d2a0444729cf033b",
+      "linked_sha256": "680d5e4eb9293a2375b6d99d7e39ab7c0b2ced5adbbc5bcb46b5b044dc6ba349"
+    },
+    {
+      "id": "ai_spline_breakdown_crossed",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 112,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "a236ee0d023a3f5b459c93231f4f709cbf007a1d670d82b298cc651ee5dacf57",
+      "linked_sha256": "1e14dae9ae302102a9dc6f263004d79e0a4625923bee317bc4881f5dedea23b7"
+    },
+    {
+      "id": "ai_spline_traversal_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 172,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f0dbc30b2e1a3d523fc95a9d17fc75392485245d835ee74e5c5a91ff9f63084d",
+      "linked_sha256": "313eab4aa0fbadae3115b6a513f05320ec7e9dd40e17d1223ab1837229d49620"
+    },
+    {
+      "id": "ai_spline_traversal_getters",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 80,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2a1430bf97ec4fd06c8d466c20f4cb2c3812d06f28c85b31d6e36e096767565c",
+      "linked_sha256": "1885a5382c4785b351d2f66711ae205bbb0abcda43129f2752a50cc0982b1459"
+    },
+    {
+      "id": "ai_spline_traversal_setup",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 356,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0e71f79817702ac8188c79b7bbc5294689a78a885f0b4b55d6c18cb17558663f",
+      "linked_sha256": "b1c8278a692fa706b3bf36bc1631d17ccbf2169a09e39cfa13fbe919928eccb7"
+    },
+    {
+      "id": "ai_spline_traversal_next",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 312,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fa05f5bb9b27259acb874644587a4d65dc1868626d402355c5fd103e59e1f7da",
+      "linked_sha256": "02ed7d53b926695cab231e1654d18e15d665ed9e7d90bddf89cffee58e41697e"
     }
   ],
   "code_map": {
@@ -39606,69 +39806,6 @@
         "file_name": "AISplinePath.cpp",
         "ranges": [
           {
-            "address": "0x800df0d0",
-            "size": 20,
-            "kind": "function",
-            "name": "__27CAISplinePathBreakdownPoint",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df0e4",
-            "size": 40,
-            "kind": "function",
-            "name": "_._27CAISplinePathBreakdownPoint",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df10c",
-            "size": 112,
-            "kind": "function",
-            "name": "WasCrossedDistance__27CAISplinePathBreakdownPointRC8CVector3Pf",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df17c",
-            "size": 32,
-            "kind": "function",
-            "name": "__20CAISplinePathSegment",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df19c",
-            "size": 40,
-            "kind": "function",
-            "name": "_._20CAISplinePathSegment",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df1c4",
-            "size": 256,
-            "kind": "function",
-            "name": "Set__20CAISplinePathSegmentfRC8CVector3N32",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df2c4",
-            "size": 204,
-            "kind": "function",
-            "name": "Expand__20CAISplinePathSegmentfR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df390",
-            "size": 160,
-            "kind": "function",
-            "name": "ExpandDerivative__20CAISplinePathSegmentfR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df430",
-            "size": 116,
-            "kind": "function",
-            "name": "ExpandSecondDerivative__20CAISplinePathSegmentfR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800df4a4",
             "size": 704,
             "kind": "function",
@@ -39676,80 +39813,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800df764",
-            "size": 4,
-            "kind": "function",
-            "name": "__13CAISplinePath",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800df768",
-            "size": 140,
-            "kind": "function",
-            "name": "_._13CAISplinePath",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800df7f4",
             "size": 2028,
             "kind": "function",
             "name": "GenerateTestSplinePath__13CAISplinePathRC20CAISplinePathManagerUiPC8PropVec3b",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800dffe0",
-            "size": 56,
-            "kind": "function",
-            "name": "GetLastPoint__13CAISplinePathP8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0018",
-            "size": 64,
-            "kind": "function",
-            "name": "__22CAISplinePathTraversal",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0058",
-            "size": 72,
-            "kind": "function",
-            "name": "_._22CAISplinePathTraversal",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e00a0",
-            "size": 36,
-            "kind": "function",
-            "name": "GetCurrentParameterValue__22CAISplinePathTraversalfRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e00c4",
-            "size": 312,
-            "kind": "function",
-            "name": "MakeModifiedNextPoint__22CAISplinePathTraversal",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e01fc",
-            "size": 160,
-            "kind": "function",
-            "name": "SetupNextSegmentForward__22CAISplinePathTraversalRC8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e029c",
-            "size": 152,
-            "kind": "function",
-            "name": "PrepareForTraversalForward__22CAISplinePathTraversalP13CAISplinePathbP18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0334",
-            "size": 44,
-            "kind": "function",
-            "name": "RestartForwardTraversal__22CAISplinePathTraversalP18CAIAreaPathFinding",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -39764,20 +39831,6 @@
             "size": 840,
             "kind": "function",
             "name": "GetNextPointForward__22CAISplinePathTraversalRC8CVector3T1P8CVector3P8BSObjectP19CAISplinePathModuleP18CAIAreaPathFinding",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e073c",
-            "size": 36,
-            "kind": "function",
-            "name": "GetFinalPointForward__22CAISplinePathTraversalP8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800e0760",
-            "size": 44,
-            "kind": "function",
-            "name": "GetCurrentDerivative__22CAISplinePathTraversalP8CVector3",
             "evidence": "adjacent-compiler-markers"
           },
           {

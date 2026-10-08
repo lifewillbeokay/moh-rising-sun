@@ -1,0 +1,4 @@
+// AI-assisted reconstruction from GR8E69; see docs/Paths.md.
+#include "AISplinePath.h"
+CAISplinePathBreakdownPoint::CAISplinePathBreakdownPoint() {}
+CAISplinePathBreakdownPoint::~CAISplinePathBreakdownPoint() {}

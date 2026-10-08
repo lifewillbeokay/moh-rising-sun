@@ -1,0 +1,60 @@
+{
+  "id": "ai_spline_traversal_setup",
+  "source": "src/ai/spline_traversal_setup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e01fc",
+      "size": 356
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2f00",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetupNextSegmentForward__22CAISplinePathTraversalRC8CVector3",
+      "address": "0x800e01fc",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "PrepareForTraversalForward__22CAISplinePathTraversalP13CAISplinePathbP18CAIAreaPathFinding",
+      "address": "0x800e029c",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "RestartForwardTraversal__22CAISplinePathTraversalP18CAIAreaPathFinding",
+      "address": "0x800e0334",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentParameterValue__22CAISplinePathTraversalfRC8CVector3": "0x800e00a0",
+    "Expand__20CAISplinePathSegmentfR8CVector3": "0x800df2c4",
+    "MakeModifiedNextPoint__22CAISplinePathTraversal": "0x800e00c4",
+    "SetupAStarPathWalkForPatrol__18CAIAreaPathFindingRC8CVector3": "0x800e9f04"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}

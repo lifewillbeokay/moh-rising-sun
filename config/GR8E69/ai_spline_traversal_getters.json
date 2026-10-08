@@ -1,0 +1,52 @@
+{
+  "id": "ai_spline_traversal_getters",
+  "source": "src/ai/spline_traversal_getters.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e073c",
+      "size": 80
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a2f24",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetFinalPointForward__22CAISplinePathTraversalP8CVector3",
+      "address": "0x800e073c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentDerivative__22CAISplinePathTraversalP8CVector3",
+      "address": "0x800e0760",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLastPoint__13CAISplinePathP8CVector3": "0x800dffe0",
+    "ExpandDerivative__20CAISplinePathSegmentfR8CVector3": "0x800df390"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISplinePath.cpp",
+  "original_file_index": 992
+}
