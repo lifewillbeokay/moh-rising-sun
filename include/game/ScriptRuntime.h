@@ -2,6 +2,8 @@
 #define GAME_SCRIPT_RUNTIME_H
 
 #include "ScriptMachine.h"
+#include "BSGameObject.h"
+#include "../game-containers/TargetTypes.h"
 
 // Scoped GR8E69 runtime views. Names for fields and View types are descriptive.
 // Only the documented accesses/strides are established; these are not complete
@@ -79,9 +81,13 @@ struct BSObject {
     BSClass_struct *scriptClass;
     BSMachineThread_struct *threads;
     TriggerObject *nativeObject;
-    unsigned char unknown0c[24];
+    WeakPtr<BSGO_Basic, 8> gameObject; // +0x0c; subject at +0x20, non-owning.
     unsigned int queueIdentity; // +0x24
 };
+
+typedef char BSGameWeakStorageCheck[sizeof(WeakPtr<BSGO_Basic, 8>) == 24 ? 1 : -1];
+typedef char BSObjectPrefixCheck[sizeof(BSObject) == 0x28 ? 1 : -1];
+void GetScriptPosition(BSObject *, ISceneNode *, CVector3 &);
 
 struct BSMessageListView {
     BSMessageRegistration_struct *handler;

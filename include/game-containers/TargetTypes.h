@@ -13,6 +13,9 @@ template <class T, int N> class WeakPtr : public IObserver {
         Assign(other.subject);
         return *this;
     }
+    // Descriptive inline accessors; script spatial callers corroborate these operations.
+    operator bool() const { return subject != 0; }
+    T *operator->() const { return static_cast<T *>(subject); }
     virtual void HandleEvent(ISubject *, ESubjectEvent event) {
         if (event & N)
             Assign(0);

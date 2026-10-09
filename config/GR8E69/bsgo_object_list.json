@@ -1,0 +1,44 @@
+{
+  "id": "bsgo_object_list",
+  "source": "src/script/game_object_list.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012b380",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddObjectToList__FP10BSGO_BasicPP10BSGO_Basic",
+      "address": "0x8012b380",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "RemoveObjectFromList__FP10BSGO_BasicPP10BSGO_Basic",
+      "address": "0x8012b3a8",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objcreate.cpp",
+  "original_file_index": 1242
+}

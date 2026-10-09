@@ -1,7 +1,7 @@
 # AI targeting reconstruction
 
-Nine fragments in `src/ai/` reconstruct **19 functions and 1,068 executable
-bytes**, plus 16 bytes of required float constants. The original `AITargeting.cpp`
+Eleven fragments in `src/ai/` reconstruct **21 functions and 1,676 executable
+bytes**, plus 24 bytes of required float constants. The original `AITargeting.cpp`
 file record (index 1071) supports their grouping; these fragments are not complete
 historical translation units. Codex assisted the reconstruction from the pinned
 GameCube GR8E69 executable. No external source was imported.
@@ -10,6 +10,8 @@ GameCube GR8E69 executable. No external source was imported.
 
 | Unit | Functions / executable bytes | Original start | Constant pool |
 | --- | --- | --- | --- |
+| `ai_target_position` | `GetPosition`: 1 / 304 | `0x800eea68` | 4 bytes at `0x802a48a0` |
+| `ai_target_forward` | `GetForward`: 1 / 304 | `0x800eeb98` | 4 bytes at `0x802a48a4` |
 | `ai_target_identity` | `Matches`, `GetScriptObject`, `SetAsNonAITarget`, `Nullify`, `SetAsAITarget`, both constructors: 7 / 236 | `0x800eecc8` | None |
 | `ai_targeting_last_seen` | `GetLastSeenTargetPosition`: 1 / 64 | `0x800ece88` | 4 bytes at `0x802a47a4` |
 | `ai_targeting_modified` | `GetModifiedTargetPosition`: 1 / 64 | `0x800ecec8` | 4 bytes at `0x802a47a8` |
@@ -50,10 +52,10 @@ by `SetAsNonAITarget` compare equal even if their script pointers differ, becaus
 both AI pointers are null. This fallback is retained, rather than replacing it
 with a conventional tagged-union equality rule.
 
-The `CAIObject` declaration is only a prefix through `+0x3f`. It exposes the
-script-object pointer at `+0x0c` and a position vector at `+0x30`, as used by
-`GetScriptObject` and the distance query. The original `CAITarget::GetPosition`
-independently uses the same position offset. No complete allocation, inheritance
+The `CAIObject` declaration is only a prefix through `+0x6f`. It exposes the
+script-object pointer at `+0x0c`, a position vector at `+0x30`, and a forward vector
+at `+0x60`. `GetScriptObject`, the distance query and the two target spatial
+queries corroborate these accesses. No complete allocation, inheritance
 relationship, virtual interface or meaning for the intervening bytes is claimed.
 
 `CAITargeting` is a prefix through `+0x7f`:
@@ -76,7 +78,22 @@ class extends beyond this view; do not allocate an instance from this prefix.
 
 ## Position, validity and update behavior
 
-The position getters use the shared [CVector3 assignment](Matrix.md#cvector3-layout),
+`CAITarget::GetPosition` and `GetForward` return vectors by value. For an AI target
+(selector zero), they copy the respective vector directly from the AI object.
+For a non-AI target, they first test the script object's embedded
+[weak game-object reference](Script.md#script-game-object-bridge). If that reference
+is nonnull and its virtual `GetSceneNode` returns nonnull, they call `GetSceneNode`
+again and query the node's position or forward direction. Otherwise they query
+the script object's native `TriggerObject`.
+
+The repeated virtual call and intervening pointer re-reads are preserved; the
+node is not cached across the first callback. The non-AI branch default-constructs
+a local vector (only its fourth word is initialized), then returns a copy. The
+shared CVector3 copy operation writes XYZ and resets the returned fourth word to
+1.0f. The queries add no null checks for the selected AI/script object or fallback
+trigger. The original TriggerObject spatial implementations remain external.
+
+The remembered-position getters use the shared [CVector3 assignment](Matrix.md#cvector3-layout),
 including its by-value temporary and preservation of the destination's fourth
 word. `SetLastSeenTargetPosition` assigns the position and sets the last-seen
 value to one; it does not update time. The two flag getters return their stored
@@ -136,8 +153,8 @@ The original `CAILocomotion::UpdateArbitraryPoint` (332 bytes) now has matching
 last-seen and visibility helpers, but its candidate still differs in the selector
 branches. It remains private research with zero source credit. The candidate for
 `UpdatePostionOffsetMin` (192 bytes, original spelling) also remains unaccepted.
-`CAITarget::GetPosition`/`GetForward`, larger target-position updates, target
-selection, location-target containers and the full targeting constructor and
-virtual interface are useful follow-ups. Scene-backed script targets require
-additional evidence for the bridge stored in `BSObject` at `+0x20`; the accepted
-work does not invent that interface.
+The recovered script/game-object bridge and spatial queries now support work on
+larger target-position updates. Target selection, location-target containers and
+the full targeting constructor and virtual interface remain useful follow-ups.
+Concrete BSGO accessors offer further evidence for derived prefixes, but their
+complete storage and ownership still need investigation.
