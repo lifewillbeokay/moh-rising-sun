@@ -101,10 +101,10 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/eagl_loading/` | Reconstructed EAGL symbol pools and dynamic-loader fragments; [reference and evidence](docs/Loading.md) |
 | `src/particles/`, `src/flexprop/`, `src/string_crc.cpp` | Reconstructed [particle recipes, state, pool and clock helpers](docs/ParticleRecipes.md), [FlexProp loading, lookup and string CRC](docs/FlexProp.md) |
 | `src/scene/`, `include/game/SceneNode.h` | Recovered [scene-node virtual-slot order and base-class defaults](docs/SceneNode.md) |
-| `src/script/` | Reconstructed [all opcode handlers, script timers, message registrations, event lookup and music built-ins](docs/Script.md), guided by contributed PS2 research |
+| `src/script/` | Reconstructed [all opcode handlers, script timers, message registrations, event lookup, spatial access and music built-ins](docs/Script.md), guided by contributed PS2 research |
 | `src/bpd/`, `src/endian/` | Reconstructed [BPD/property conversion, pointer setup, cleanup and lighting-volume point test](docs/BPD.md) |
 | `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking, locomotion and AI clock](docs/Paths.md), with scoped record and allocation evidence |
-| `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, validity checks, remembered positions, update dispatch and distance queries](docs/Targeting.md) |
+| `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, spatial queries, remembered positions, validity checks and update dispatch](docs/Targeting.md) |
 | `src/lighting/`, `include/game/Light.h` | Reconstructed [light-volume selection and transitions, scene-light transforms and animated-light lifecycle](docs/LightVolumes.md) |
 | `src/bullets/`, `include/game/Bullet.h` | Reconstructed [bullet defaults, accessors and collision helpers](docs/Bullets.md) |
 | `src/triggers/` | Reconstructed [trigger-object queries, positions and point tests](docs/TriggerObject.md) |

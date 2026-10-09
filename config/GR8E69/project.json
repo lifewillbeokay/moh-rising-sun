@@ -880,7 +880,12 @@
     "ai_targeting_reaction.json",
     "ai_targeting_queries.json",
     "ai_targeting_distance.json",
-    "ai_targeting_guess.json"
+    "ai_targeting_guess.json",
+    "ai_target_position.json",
+    "ai_target_forward.json",
+    "script_position.json",
+    "bsgo_basic_defaults.json",
+    "bsgo_object_list.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

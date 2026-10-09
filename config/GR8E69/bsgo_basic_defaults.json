@@ -1,0 +1,54 @@
+{
+  "id": "bsgo_basic_defaults",
+  "source": "src/script/game_object_defaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80283530",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "Destroy__10BSGO_Basic",
+      "address": "0x80283530",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptData__10BSGO_Basic",
+      "address": "0x80283534",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetSceneNode__10BSGO_Basic",
+      "address": "0x8028353c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetProximityData__10BSGO_Basic",
+      "address": "0x80283544",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

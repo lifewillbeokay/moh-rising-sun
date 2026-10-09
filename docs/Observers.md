@@ -37,6 +37,12 @@ compiler-emitted vtable remain unaccepted context. No generated vtable is droppe
 from an accepted object. The source fragments are not recovered historical
 translation-unit boundaries.
 
+The [script/game-object bridge](Script.md#script-game-object-bridge) now reuses this
+observer layout for the `WeakPtr<BSGO_Basic, 8>` embedded in `BSObject`. Its boolean
+conversion and arrow access preserve the original spatial callers' null checks
+and subject reads. The bridge contributes no additional observer event handlers;
+its accepted functions are counted with script and AI targeting code.
+
 ## Accepted methods
 
 | Function | Original address | Code bytes |

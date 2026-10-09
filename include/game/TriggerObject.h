@@ -31,6 +31,7 @@ class TriggerObject {
     int GetCRC(const char *) const;
     bool HasField(const char *) const;
     void GetPosition(CVector3 &) const;
+    void GetForward(CVector3 &) const;
     void SetPositionZ(float);
     int GetLegacyField(int) const;
     const char *GetClassName() const;

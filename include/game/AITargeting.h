@@ -4,7 +4,7 @@
 #include "AIMovement.h"
 class CAIObjectParameters;
 class ISceneNode;
-// Observed script-object and position prefix, not a complete allocation,
+// Observed script-object, position and forward-vector prefix, not a complete allocation,
 // inheritance model or virtual interface. Unknown bytes retain their ownership.
 class CAIObject {
 public:
@@ -12,6 +12,8 @@ public:
     BSObject *scriptObject;
     unsigned char unknown10[0x20];
     CVector3 position;
+    unsigned char unknown40[0x20];
+    CVector3 forward;
 };
 // Twelve-byte value copied by the original targeting callers. Field names and
 // inline helper names are descriptive; method symbols retain original names.
@@ -27,6 +29,8 @@ public:
     void SetAsNonAITarget(BSObject *);
     void Nullify();
     void SetAsAITarget(CAIObject *);
+    CVector3 GetPosition() const;
+    CVector3 GetForward() const;
     bool HasTarget() const { return aiObject || scriptObject; }
 };
 typedef char CAITargetStorageSizeCheck[sizeof(CAITarget) == 12 ? 1 : -1];

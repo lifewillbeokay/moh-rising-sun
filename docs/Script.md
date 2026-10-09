@@ -8,16 +8,19 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-Forty fragments in `src/script/` reconstruct **68 functions and 10,812 executable
+Forty-three fragments in `src/script/` reconstruct **75 functions and 11,140 executable
 bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
-bytes), event lookup (220 bytes), three music built-ins (372 bytes), and all twelve named
-timer routines (1,960 bytes).
+bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
+timer routines (1,960 bytes), a spatial query (196 bytes), and six game-object
+default/list routines (132 bytes).
 Their exact symbols, ranges and dependencies are in
-`config/GR8E69/script_*.json`. Original file markers support the `bsmachin.cpp`,
-`bsmessage.cpp`, `bsfile.cpp`, `bsbifunc.cpp` and `bstimer.cpp` groupings; these fragments are not
-complete original translation units. Private globals retain their original
-file-record scope in the manifests and remain original storage, with no source/data
+`config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
+support the `bsmachin.cpp`,
+`bsmessage.cpp`, `bsfile.cpp`, `bsbifunc.cpp`, `bstimer.cpp` and `objcreate.cpp`
+groupings; these fragments are not complete original translation units. The
+BSGO base defaults have no established original file owner. Private globals retain
+their original file-record scope in the manifests and remain original storage, with no source/data
 credit.
 
 ## Verified instruction behaviour
@@ -377,6 +380,74 @@ first integer argument to the corresponding `MUSIC_*` routine. Those music routi
 the table's initialization, and `PathfinderFadeVolume` remain original context.
 Historical return-type spelling for ignored-return interfaces is not established
 by this reconstruction.
+
+## Script game-object bridge
+
+Three additional fragments use ProDG 3.8.1 with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`:
+
+| Unit | Functions | Original start | Code bytes |
+| --- | --- | --- | ---: |
+| `script_position` | `GetScriptPosition` | `0x8010389c` | 196 |
+| `bsgo_basic_defaults` | `BSGO_Basic::Destroy`, `GetScriptData`, `GetSceneNode`, `GetProximityData` | `0x80283530` | 28 |
+| `bsgo_object_list` | `AddObjectToList`, `RemoveObjectFromList` | `0x8012b380` | 104 |
+
+`BSObject` contains a 24-byte `WeakPtr<BSGO_Basic, 8>` beginning at `+0x0c`;
+its subject pointer is therefore at `+0x20`. This replaces the previously opaque
+24-byte interval without moving the queue identity at `+0x24`. The reference uses
+the shared [observer layout](Observers.md), not an owning raw pointer.
+
+Evidence extends beyond the spatial callers. The original `CreateBSObject` at
+`0x800f6b5c` unlinks the embedded observer's node at object `+0x14`, stores its
+BSGO argument at object `+0x20`, and registers the observer at object `+0x0c` with
+`ISubject::AddObserver` when that argument is nonnull. The named weak-pointer
+vtable at `0x802e8228` and existing matched specialization of `HandleEvent` at
+`0x80286664` corroborate the tag and destruction-event value 8. `CreateBSObject`
+and the vtable remain original context and earn no new source credit. The inline
+boolean conversion and arrow operator are descriptive source factoring of the
+observed null test and subject access, not recovered historical declarations.
+
+`BSGameObject.h` declares a scoped `BSGO_Basic : ISubject` prefix. The base table
+at `0x802e5048`, player table at `0x802e8270`, and dummy table at `0x802e6bf0`
+independently support the same virtual order:
+
+| Table adjustment/function offsets | Method |
+| --- | --- |
+| `+0x08` / `+0x0c` | Inherited `ISubject::MarkForDestruction` |
+| `+0x10` / `+0x14` | Destructor |
+| `+0x18` / `+0x1c` | `Destroy` |
+| `+0x20` / `+0x24` | `GetScriptData` |
+| `+0x28` / `+0x2c` | `GetSceneNode` |
+| `+0x30` / `+0x34` | `GetProximityData` |
+
+`Destroy` is empty; the three base accessors return null. The script-data and
+proximity-data returns use `void *` as pointer ABI placeholders: their actual
+pointee types and extents remain unknown. `GetSceneNode` returns `ISceneNode *`,
+corroborated by the subsequent scene virtual calls. No BSGO destructor or table is
+emitted by these fragments, and no generated output is discarded.
+
+The list routines establish next and previous BSGO pointers at `+0x0c` and `+0x10`.
+The four bytes at `+8` remain opaque. Insertion sets the old head's previous link,
+stores the old head as the new object's next link, clears its previous link and
+replaces the head. Removal reconnects present neighbors and advances the head
+when removing it; it deliberately leaves the removed object's links unchanged.
+The view ends at `+0x14` and does not establish a complete allocation or derived
+object layout. These object-list links are separate from the subject's observer
+list at `+4`.
+
+`GetScriptPosition` gives an explicitly supplied scene node priority. Without
+one, it consults a nonnull script object's nonnull weak game-object reference for
+a scene node. A node supplies its position through the existing scene virtual
+slot at table `+0xa8` / `+0xac`. If there is no node, a nonnull script object's
+nonnull native trigger supplies the position. With neither source it leaves the
+output untouched. No vector initialization is added. The routine's ignored return
+is modeled as `void`; original return spelling is not encoded in its symbol.
+
+The [AI target position and forward queries](Targeting.md) share these interfaces.
+They preserve two `GetSceneNode` calls where the original does, unlike the one-call
+lookup in `GetScriptPosition`. The BSGO prefix, weak pointer and BSObject prefix
+have target-compiler size checks; none authorizes allocating the larger original
+runtime objects from these scoped views.
 
 ## Verification and next work
 
