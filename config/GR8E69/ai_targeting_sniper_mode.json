@@ -1,0 +1,41 @@
+{
+  "id": "ai_targeting_sniper_mode",
+  "source": "src/ai/targeting_sniper_mode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800edd68",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChooseSniperAimMode__12CAITargetingP24AIFILTER_WEAPON_AIM_MODE",
+      "address": "0x800edd68",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunGetRandomPercent__Fv": "0x80133b6c",
+    "MathFunTestPercent__Fxx": "0x80133bb0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

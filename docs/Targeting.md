@@ -1,14 +1,15 @@
 # AI targeting reconstruction
 
-Eleven fragments in `src/ai/` reconstruct **21 functions and 1,676 executable
-bytes**, plus 24 bytes of required float constants. The original `AITargeting.cpp`
+Sixteen fragments in `src/ai/` reconstruct **27 functions and 3,080 executable
+bytes**, plus 100 required read-only bytes (constants, a diagnostic string and
+alignment padding). The original `AITargeting.cpp`
 file record (index 1071) supports their grouping; these fragments are not complete
 historical translation units. Codex assisted the reconstruction from the pinned
 GameCube GR8E69 executable. No external source was imported.
 
 ## Accepted functions
 
-| Unit | Functions / executable bytes | Original start | Constant pool |
+| Unit | Functions / executable bytes | Original start | Read-only data |
 | --- | --- | --- | --- |
 | `ai_target_position` | `GetPosition`: 1 / 304 | `0x800eea68` | 4 bytes at `0x802a48a0` |
 | `ai_target_forward` | `GetForward`: 1 / 304 | `0x800eeb98` | 4 bytes at `0x802a48a4` |
@@ -21,6 +22,11 @@ GameCube GR8E69 executable. No external source was imported.
 | `ai_targeting_queries` | `GetTargetScript`, `IsNonAITarget`, `HasValidTarget`: 3 / 180 | `0x800edb18` | None |
 | `ai_targeting_distance` | `GetDistanceToTargetSquaredXYZReal`: 1 / 116 | `0x800ed948` | None |
 | `ai_targeting_guess` | `GetTargetGuessPosition`: 1 / 60 | `0x800ee468` | None |
+| `ai_targeting_non_ai_update` | `UpdateNonAITargetPosition`: 1 / 336 | `0x800ed424` | 4 bytes at `0x802a47c0` |
+| `ai_targeting_set_non_ai` | `SetNonAITarget`: 1 / 412 | `0x800edbcc` | 48 bytes at `0x802a47ec` |
+| `ai_targeting_sniper_mode` | `ChooseSniperAimMode`: 1 / 88 | `0x800edd68` | None |
+| `ai_targeting_bazooka_mode` | `ChooseBazookaAimMode`: 1 / 124 | `0x800ede90` | None |
+| `ai_targeting_aim_queries` | `GetAdjustedAimTargetPosition`, `DoBlindFire`: 2 / 444 | `0x800ee4a4` | 24 bytes at `0x802a4888` |
 
 Exact function ranges, bindings and external dependencies are recorded in the
 corresponding `config/GR8E69/ai_target*.json` manifests. Data earns no code credit.
@@ -58,7 +64,7 @@ at `+0x60`. `GetScriptObject`, the distance query and the two target spatial
 queries corroborate these accesses. No complete allocation, inheritance
 relationship, virtual interface or meaning for the intervening bytes is claimed.
 
-`CAITargeting` is a prefix through `+0x7f`:
+`CAITargeting` is a prefix through `+0x107`:
 
 | Offset | Observed storage/use |
 | --- | --- |
@@ -67,13 +73,20 @@ relationship, virtual interface or meaning for the intervening bytes is claimed.
 | `+0x20` | Last-seen position vector |
 | `+0x30` | Time value used by `UpdateReactionTime` |
 | `+0x34`, `+0x38` | Four-byte last-seen and vision-visible values |
+| `+0x40` | Target position written by scene/trigger queries |
 | `+0x70` | Modified target-position vector |
+| `+0xf8` | Time written after updating a script target |
+| `+0xfc` | Blind-fire selector; observed values 0, 1 and 2 |
+| `+0x100` | Integer weapon selector passed to `AdjustAimPosition` |
+| `+0x104` | `AIFILTER_WEAPON_AIM_MODE` value passed by address |
 
 The original constructor at `0x800ecde0` corroborates the first three pointer
 stores, calls the target constructor at `+0x10`, initializes the flag/time fields,
 and initializes vector fourth words at `+0x2c` and `+0x7c`. That constructor and its
-virtual table remain original. The initial dispatch word, `+0x1c`, and the bytes
-between the visibility value and modified position stay opaque. The complete
+virtual table remain original. The new position and trailing fields follow the
+accesses in `SetNonAITarget`, `UpdateNonAITargetPosition` and `DoBlindFire`; a
+compiler size check fixes this view at `0x108` bytes. The initial dispatch word,
+`+0x1c`, `+0x3c`, `+0x50`–`+0x6f` and `+0x80`–`+0xf7` stay opaque. The complete
 class extends beyond this view; do not allocate an instance from this prefix.
 
 ## Position, validity and update behavior
@@ -130,9 +143,76 @@ the [reconstructed AI global clock](Paths.md#ai-clock).
 `Update` first calls `UpdateReactionTime`. When that returns true, it uses a target
 value copy to check the AI pointer and calls the still-original
 `UpdateTargetPosition` if present. Otherwise it uses another value copy to check
-the script pointer and calls the still-original `UpdateNonAITargetPosition` if
+the script pointer and calls the reconstructed `UpdateNonAITargetPosition` if
 present. It does not dispatch from the selector word or clear positions when both
 pointers are absent.
+
+## Script-target setup and updates
+
+`SetNonAITarget` first nullifies the target value. For a nonnull script argument,
+it sets the target as non-AI and keeps a reference to that object's embedded weak
+pointer. If the weak reference and its scene node are present, it calls
+`GetSceneNode` a second time and writes the scene position to `targetPosition`.
+Otherwise a nonnull native trigger can supply that position. Either successful
+path copies the target position into both modified and last-seen positions, then
+sets the last-seen flag to one. The vector assignments preserve destination fourth
+words and retain the shared by-value temporaries.
+
+A nonnull script argument also causes the original `AI::Log` call with the receiver
+scene node's `GetAIObject` result and the modified XYZ coordinates. The original
+43-character diagnostic and terminator occupy 44 bytes at `0x802a47ec`; the
+assignment constant 1.0f follows at `0x802a4818`. The log implementation remains
+external. If neither position source exists, the routine still logs the existing
+modified position. A null script argument only nullifies the target: it does not
+clear remembered positions or the last-seen flag. No additional scene-node guard
+or logging filter is introduced.
+
+`UpdateNonAITargetPosition` requires a script target, a live weak game-object
+reference and a scene node. It has no native-trigger fallback. It caches the
+address of the embedded weak reference across the first scene lookup, then reads
+its subject again for the second lookup. It obtains the target position, copies
+it into modified and last-seen positions, sets the last-seen flag, and calls the
+still-original `AdjustAimPosition` with the modified-position address, weapon
+selector and aim-mode address. Only after that call does it write the global AI
+time into `targetUpdateTime` at `+0xf8`. It leaves the separate `lastSeenTime` field
+at `+0x30` unchanged. Missing prerequisites leave the stored state untouched.
+
+## Aim selection and blind fire
+
+The original mangled signatures establish the `AIFILTER_WEAPON_AIM_MODE` tag.
+Its named members in the shared header describe observed numbers, not recovered
+historical enumerators or a complete enumeration. Both mode choosers leave any
+nonzero input mode unchanged without consuming random values.
+
+`ChooseSniperAimMode` generates one signed 64-bit percentage value and tests it
+against 10 with the existing [MathFun percentage helper](MathFun.md). A successful
+test selects mode 1; otherwise it selects mode 2. `ChooseBazookaAimMode` also draws
+one value, testing that same value first against 10 and then, if needed, against
+80. Both successful branches select mode 6; only failure of both tests selects
+mode 8. This repeated mode value and the separate helper calls are preserved.
+The numeric modes' gameplay meanings are not inferred from this fragment.
+
+`GetAdjustedAimTargetPosition` first requires at least one target payload pointer.
+With an AI pointer it obtains the modified target position. Without an AI pointer
+but with a last-seen flag, it obtains the remembered position and adds 1.0f to Z.
+If neither path supplies a position, it adds the physics position at `+0x10` to
+the second physics axis at `+0x40`, writes XYZ directly, then adds 1.0f to Z.
+Those two vector addresses are retained across the output stores, preserving the
+original aliasing behavior. It does not use a remembered position when both
+target payload pointers are absent. Every branch preserves the output's fourth
+word.
+
+`DoBlindFire` chooses an integer threshold of 10, 25 or 50 for selectors 0, 1 or 2;
+other selectors retain zero. It calls `MathFunRandomRealSigned(0.0f, 100.0f)` and
+returns whether the result is **greater than** the threshold. The helper's signed
+random behavior and this comparison direction are retained; these thresholds
+must not be presented as literal firing probabilities. No clamping or replacement
+random generator is used.
+
+The two adjacent query functions share one complete 24-byte constant pool: 1.0f
+at `0x802a4888`, 0.0f at `0x802a488c`, 100.0f at `0x802a4890`, four alignment bytes,
+and the eight-byte integer-conversion constant at `0x802a4898`. All bytes are
+verified and receive no code credit.
 
 ## Verification and remaining work
 
@@ -153,8 +233,15 @@ The original `CAILocomotion::UpdateArbitraryPoint` (332 bytes) now has matching
 last-seen and visibility helpers, but its candidate still differs in the selector
 branches. It remains private research with zero source credit. The candidate for
 `UpdatePostionOffsetMin` (192 bytes, original spelling) also remains unaccepted.
-The recovered script/game-object bridge and spatial queries now support work on
-larger target-position updates. Target selection, location-target containers and
-the full targeting constructor and virtual interface remain useful follow-ups.
+The recovered script/game-object bridge now supports script-target setup and
+updates. AI-target updates and setters, `CalculateTargetPosition`, weapon-specific
+aim adjustment, location-target containers and the full targeting constructor
+remain useful follow-ups. Several aim-adjustment routines call through the
+`CAIObject` table pointer at `+0x72c`. The original constructor at `0x800d99c8`
+stores the named table `0x802e78f0` there; its slot 12 (adjustment at `+0x60`,
+function at `+0x64`) is `IsCrouching`. That constructor also initializes a
+`CAIPhysics` member at `+0x20`, corroborating the existing object-position and
+forward-vector offsets. These are leads for recovering a shared native virtual
+interface; the constructor, table and crouching queries earn no new credit here.
 Concrete BSGO accessors offer further evidence for derived prefixes, but their
 complete storage and ownership still need investigation.

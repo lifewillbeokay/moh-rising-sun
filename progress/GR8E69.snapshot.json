@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 638088,
+    "matching_code_bytes": 639492,
     "total_executable_code_bytes": 2492032,
-    "percent": 25.605128666084546,
+    "percent": 25.661468231547587,
     "categories": {
-      "reconstructed_game": 245872,
+      "reconstructed_game": 247276,
       "restored_library": 392216
     },
-    "matching_functions": 2444
+    "matching_functions": 2450
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -139,13 +139,18 @@
     "config/GR8E69/ai_target_forward.json": "993820ff1fc41b8739478bb9bf91737f9848cac21943a0e0723d9e0fe02625d0",
     "config/GR8E69/ai_target_identity.json": "ba1b0171c3e97714b042cde5e9f598421d3b734ee7f7ef05c18312d2401cbbac",
     "config/GR8E69/ai_target_position.json": "f768a9b8fdb318f06d28babf5486b45efba676d5ad7957aafae7fb31a4f34d84",
+    "config/GR8E69/ai_targeting_aim_queries.json": "384b5de433fad597eebd34635a63fe47353f596a818a4b9bb146a6214372954f",
+    "config/GR8E69/ai_targeting_bazooka_mode.json": "fc8a478ff37962c45a8141267b02fd2732b40c261b510b937055c293acbbd038",
     "config/GR8E69/ai_targeting_distance.json": "379181c521bd3103d8dcd895acf5abdbadfbffb43a629f8271df4b53fb49c545",
     "config/GR8E69/ai_targeting_guess.json": "3eb179e1d0d03a6f15202f2e18548d734430cd9cd6e1ec0110564d61a9702507",
     "config/GR8E69/ai_targeting_last_seen.json": "a62302932cb0f608edd5b410911cdb030d5e458f5bf3539da22a8de12e213392",
     "config/GR8E69/ai_targeting_modified.json": "83541469b9d33c886bf735e46c9c41ac9d57202c681e7c62e826fcbc9d64d769",
+    "config/GR8E69/ai_targeting_non_ai_update.json": "5b270c7511e3c693a5664f3a8db0bb1892daf0ab99fc4ee30a3f8baa432b8535",
     "config/GR8E69/ai_targeting_queries.json": "b6bcbd0fb02f8959555ac487df2dd076fa7abf91d40dea05175e63c975026ed5",
     "config/GR8E69/ai_targeting_reaction.json": "a4e611b7084bb41da18463ae9bd7de3157f069be59542abee5945bd758e168d7",
     "config/GR8E69/ai_targeting_seen_state.json": "9dc2dad0d5d748bd4431f4e417456c7515ed3748dcc4b363b368b99a274b8e7f",
+    "config/GR8E69/ai_targeting_set_non_ai.json": "f50fbe4abef38ea85ab966197f9c37124e9d5e3c62d7c59a8acd92da2116a320",
+    "config/GR8E69/ai_targeting_sniper_mode.json": "7cf6e9774880d72eef3dd55f63aa7c55b4ef9736dfd2e2db5a70ee2c2f480db0",
     "config/GR8E69/ai_targeting_update.json": "a43d0b595f7aea069b47939e3555dbccc71ed0811278060a364b909b9c874f5f",
     "config/GR8E69/ambient_track.json": "a0e649c1f923a48f87645de3f5d54aadb4db1db43872d0a7376af7a7406ab4fd",
     "config/GR8E69/ambient_track_location.json": "12f454bd3ebed794c46407c0cd1a158fa22ad409d61b7847a70849566d7557bd",
@@ -630,7 +635,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "bb5ef95bc800251cc27e49bdc62d7c4643ed91a8bfbc0be3f6768f9603a551de",
+    "config/GR8E69/project.json": "66103c0fbb68f6c181c8d0735386bdb31db71bdc2716c338538687580997e48c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1072,7 +1077,7 @@
     "include/game/AIFilterGlobal.h": "26368f15313dbd6390bee4c45582bcdfc36d8d433aaec5b0241541e52b9d677a",
     "include/game/AIMovement.h": "2cff8f67263207fdabdc5c51aae82d2f20aba46126c7534ab4ce594ffa666632",
     "include/game/AISplinePath.h": "0e2fbea7401e695bbd39715647275824906aca759203813a5597d047a3fd7770",
-    "include/game/AITargeting.h": "273a98300f91c9583e995e0d5ec17d0e829faf72cbf7333bf537e30121a37947",
+    "include/game/AITargeting.h": "1a2b714820f3269b2f39c525e7c2824351457463a12e2625d81482e6da3c2b8f",
     "include/game/BPD.h": "ec4a3aceb83f181db2c6adf8ac87137ede2cd6a0e643548159c73a827aadd19e",
     "include/game/BSGameObject.h": "0251918a776754b0d6b3d30b69e61b0d0c8f919721dbd147dbecf710b180a45a",
     "include/game/Bullet.h": "45cacf08155b054da6b27867d28acad7fda912eeca6aee7d98eb782e7138a4a0",
@@ -1333,13 +1338,18 @@
     "src/ai/target_forward.cpp": "6c3585de616184913291b44020e61b6eca35f11e3648929cb06dc95f1d565c2f",
     "src/ai/target_identity.cpp": "ddcef227947b91a25014cecdc51f4efa5a85a238540a4c6cb4021bb1769a18c2",
     "src/ai/target_position.cpp": "d89898cb2d0f041dee9ed6a5901451b701433679d040645ad244963efd0d10cd",
+    "src/ai/targeting_aim_queries.cpp": "c2909fea937ab943dc0cb85e4b81fe3add2a550eb793af9cb2d59a47826994cf",
+    "src/ai/targeting_bazooka_mode.cpp": "5022aa760d3c5665da7a5f44948648af616d248817488454b02e128ff4313634",
     "src/ai/targeting_distance.cpp": "8c88d5604854bd459c6612d79283b78c3ec781da02d47c8c74a48f3d36991750",
     "src/ai/targeting_guess.cpp": "ded400e7d66de7c25a438a8d8305a5c370dbe3f61b25fb402144b7bd63419d8a",
     "src/ai/targeting_last_seen.cpp": "d029128c1140cecfb98971aa20456fb914c10732d548eb0798b18c31d827ab54",
     "src/ai/targeting_modified.cpp": "16415d18aef4f6af53a0eeaef229ff28edaf74227b019087beee0217673deff7",
+    "src/ai/targeting_non_ai_update.cpp": "d728def95e0ebc4627bd4df8439a4911711b303d234b70c67cdbcd698c569a06",
     "src/ai/targeting_queries.cpp": "0b3146b7e41216930ee9d236d183921a82e2fc2aa68b1db7f30070e1b3b84fd4",
     "src/ai/targeting_reaction.cpp": "c5f82b3ed7416fa76dc16cbcf47b4ab034366b701dd74cebc8fee1c5fc35a858",
     "src/ai/targeting_seen_state.cpp": "1d16cbfa44a3fce19fa0facb9363add3af1307bead8a982202ae981b1d43de3a",
+    "src/ai/targeting_set_non_ai.cpp": "0c748f62608a79fac85d81fc8b9e20f8969ab980d197836ac434d82e93791c7a",
+    "src/ai/targeting_sniper_mode.cpp": "39d77be2b8d949ec7fb2af726e999fe2f0c0f432f284a175dd8ee698409235a5",
     "src/ai/targeting_update.cpp": "efa38085cd71d0f02270c2c78c31115170fb46b2abe25150043975d5d59420b5",
     "src/bpd/endian.cpp": "319fe162774583e7968ef97f898b64e6f7cc49d0263c5173dbde60878dc7459b",
     "src/bpd/free_properties.cpp": "5e6ccb4af115415f37acba5f48b16fc2e4bc9e5648ce7c4438fdc0a67970b824",
@@ -21742,6 +21752,96 @@
       "discarded_functions": [],
       "object_sha256": "00df43564bbba3106de4c3feb808ac351ca14361366d4df6f5b6cc284a941cce",
       "linked_sha256": "11496279f5e8c7fe0cec965fd03f7ae7bc463a329aad495ab35d168e596bf033"
+    },
+    {
+      "id": "ai_targeting_non_ai_update",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 336,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2525858a8adc69b3f8785c7b83b65870ce7bad85d7d0e134fd54910955e2e287",
+      "linked_sha256": "7b6b49a45ac6efb758d3b27cab1dd5376ad324771d870fd14a8f671b2c6d4d3c"
+    },
+    {
+      "id": "ai_targeting_set_non_ai",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 412,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "305f3aa2732e4dd5015a9756781db80d2c74b1bc95cda9bf5ac05c64cae978e3",
+      "linked_sha256": "57914ab03e0f5406164a7528b90bcf657088abdb3af37c2e35c7d63c0d78aa1c"
+    },
+    {
+      "id": "ai_targeting_sniper_mode",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 88,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "35fcaa5c9bc086d287960af2d956d44345df6c4dcf6d5a74cef26b3e9bcb92eb",
+      "linked_sha256": "fb75478c8d8d17e1481dc64d034ada9141d53a0d92b0e66880ad3dc4a4fcbe00"
+    },
+    {
+      "id": "ai_targeting_bazooka_mode",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 124,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "83a8f0510262c87890cee63eecc2b062069996bd4dc06bfbe04f879cf5677005",
+      "linked_sha256": "a15020357a361bf501e6bc7f6b8e9aeaf7d2da4fd626a42d52ec9e9fae18e2a9"
+    },
+    {
+      "id": "ai_targeting_aim_queries",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 444,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d8049cf522b4758f97fb4f669b44e5f031de2ef8435a3b164f1447ee59f636ae",
+      "linked_sha256": "60d395b795ae1271a7536abc5ae6c4745a66c266129dc1ac1b5a6d2193b4ca63"
     }
   ],
   "code_map": {
@@ -42830,13 +42930,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800ed424",
-            "size": 336,
-            "kind": "function",
-            "name": "UpdateNonAITargetPosition__12CAITargeting",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800ed574",
             "size": 788,
             "kind": "function",
@@ -42858,31 +42951,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x800edbcc",
-            "size": 412,
-            "kind": "function",
-            "name": "SetNonAITarget__12CAITargetingP8BSObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800edd68",
-            "size": 88,
-            "kind": "function",
-            "name": "ChooseSniperAimMode__12CAITargetingP24AIFILTER_WEAPON_AIM_MODE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800eddc0",
             "size": 208,
             "kind": "function",
             "name": "AdjustForSniperAimMode__12CAITargetingP8CVector324AIFILTER_WEAPON_AIM_MODE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ede90",
-            "size": 124,
-            "kind": "function",
-            "name": "ChooseBazookaAimMode__12CAITargetingP24AIFILTER_WEAPON_AIM_MODE",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -42904,20 +42976,6 @@
             "size": 508,
             "kind": "function",
             "name": "AdjustAimPosition__12CAITargetingP8CVector3iP24AIFILTER_WEAPON_AIM_MODE",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ee4a4",
-            "size": 276,
-            "kind": "function",
-            "name": "GetAdjustedAimTargetPosition__12CAITargetingR8CVector3",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800ee5b8",
-            "size": 168,
-            "kind": "function",
-            "name": "DoBlindFire__12CAITargeting",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -1,0 +1,46 @@
+{
+  "id": "ai_targeting_non_ai_update",
+  "source": "src/ai/targeting_non_ai_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ed424",
+      "size": 336
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a47c0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateNonAITargetPosition__12CAITargeting",
+      "address": "0x800ed424",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AdjustAimPosition__12CAITargetingP8CVector3iP24AIFILTER_WEAPON_AIM_MODE": "0x800ee26c",
+    "g_aigAIFilterGlobalObject": "0x80309bfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}
