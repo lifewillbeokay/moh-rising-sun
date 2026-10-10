@@ -46,4 +46,7 @@ class CPlayerObjectives {
     int GetNumCompletedBonusObjectives();
 };
 
+// Original shared storage; this declaration does not allocate a new object.
+extern CPlayerObjectives g_Objectives;
+
 #endif

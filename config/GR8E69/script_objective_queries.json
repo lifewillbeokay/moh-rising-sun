@@ -1,0 +1,50 @@
+{
+  "id": "script_objective_queries",
+  "source": "src/script/objective_queries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010abdc",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_GetObjective__FPPiPv",
+      "address": "0x8010abdc",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CheckMainObjectiveStatus__FPPiPv",
+      "address": "0x8010ac64",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_Objectives": "0x803e81a4",
+    "GetObjectiveStatus__17CPlayerObjectivesUi": "0x8017c0c0",
+    "CheckIfAllMainObjectivsAreCompleted__17CPlayerObjectives": "0x8017c120"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

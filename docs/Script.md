@@ -8,12 +8,13 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-Forty-three fragments in `src/script/` reconstruct **75 functions and 11,140 executable
+Forty-eight fragments in `src/script/` reconstruct **83 functions and 12,188 executable
 bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
-timer routines (1,960 bytes), a spatial query (196 bytes), and six game-object
-default/list routines (132 bytes).
+timer routines (1,960 bytes), a spatial query (196 bytes), six game-object
+default/list routines (132 bytes), three objective built-ins (368 bytes), three
+ambient-sound built-ins (536 bytes), and two value built-ins (144 bytes).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -380,6 +381,70 @@ first integer argument to the corresponding `MUSIC_*` routine. Those music routi
 the table's initialization, and `PathfinderFadeVolume` remain original context.
 Historical return-type spelling for ignored-return interfaces is not established
 by this reconstruction.
+
+## Objective, ambient-sound and value built-ins
+
+Five additional fragments reconstruct eight complete `bsbifunc.cpp` wrappers,
+using ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`.
+They were reconstructed independently from GR8E69 with Codex assistance and reuse
+the established objective, sound, script-object and vector interfaces.
+
+| Manifest | Functions (`BIFunc_` prefix omitted) | Code bytes |
+| --- | --- | ---: |
+| `script_objective_show` | `ShowObjective` | 132 |
+| `script_objective_queries` | `GetObjective`, `CheckMainObjectiveStatus` | 236 |
+| `script_ambience` | `AmbientTrack_Select`, `AmbientTrack_Volume` | 344 |
+| `script_ambience_location` | `AmbientTrack_Azimuth` | 192 |
+| `script_values` | `FloatToInt`, `InitToInvalid` | 144 |
+
+The wrappers locate the first argument one four-byte slot above the argument base
+calculated from the table's signed `argumentCount`. After an external call they
+re-read the current built-in index, table pointer and signed `stackAdjustment`.
+Returning wrappers write their result at the adjusted top; they do not perform
+an additional push. Valid table indices and stack storage remain preconditions.
+
+`ShowObjective` forwards the integer ID to `g_Objectives.ShowObjective`.
+`GetObjective` returns `GetObjectiveStatus`, and `CheckMainObjectiveStatus` returns
+`CheckIfAllMainObjectivsAreCompleted` without reading an argument. All three callees
+already have matching source. The original shared `g_Objectives` symbol is at
+`0x803e81a4`, with a 212-byte symbol extent; the header adds only an external
+declaration and no new allocation or data credit. The wrappers add no ID validation
+beyond the existing [objective methods](Objectives.md).
+
+`AmbientTrack_Select` forwards its integer track ID. `AmbientTrack_Volume` converts
+an integer percentage to single precision, multiplies by `0.01f`, then clamps to
+zero and one before calling the existing volume setter. The negated `>=` and `<=`
+tests preserve the original comparison instructions. No range restriction is
+imposed on the input integer before conversion.
+
+`AmbientTrack_Azimuth` uses its integer argument as a flag. A nonzero value obtains
+the current `g_pBSObject`'s native trigger position and passes a temporary
+`CVector3` to `AmbientTrack_SetLocation`. Zero passes a null position, which the
+existing sound helper uses to select player-relative ambience. This wrapper
+does not calculate an angle despite its name. It uses the shared script object's
+native pointer at `+8` and adds no null checks on the nonzero path; the unused
+second wrapper parameter is not the position source.
+
+`FloatToInt` interprets the first slot's bits as a float and truncates it to a
+signed integer with the target's conversion instruction. It adds no clamp for
+out-of-range or nonfinite values. `InitToInvalid` writes zero at the adjusted top;
+its name does not justify changing that value to `-1` or `0xffffffff`.
+
+All 24 generated read-only bytes are compared separately from code credit:
+the volume fragment has a 16-byte pool at `0x802a5de0` (integer-conversion constant,
+`0.01f`, zero), followed by its four-byte `1.0f` at `0x802a5df0`. The source gives
+that upper bound a descriptive `.rodata.volume_maximum` storage annotation so
+the fragment does not add alignment over the next routine's literal. The azimuth
+wrapper generates that separate four-byte vector-constructor `1.0f` at
+`0x802a5df4`. The annotation is not a recovered historical identifier. No emitted
+data or padding is discarded, and no instruction is patched.
+
+`AddObjective`, `ChangeObjectivePrompt`, `SetObjective`, both random-value wrappers
+and `PathfinderFadeVolume` remain original context. Research implementations have
+unresolved differences in argument-load scheduling/register copies; they receive
+no source credit. The eight accepted wrappers and their complete allocated sections
+match, and the complete source-built analysis image is compared separately.
+Runtime and emulator behavior remain untested.
 
 ## Script game-object bridge
 

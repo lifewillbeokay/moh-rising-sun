@@ -29,6 +29,13 @@ descriptive.
   `ChangeObjectivePrompt` match except for the order in which the parameters are
   copied and the index is computed; they are not accepted.
 
+Three [script built-ins](Script.md#objective-ambient-sound-and-value-built-ins)
+now call the accepted visibility and status methods through the original shared
+`g_Objectives`: `BIFunc_ShowObjective`, `BIFunc_GetObjective` and
+`BIFunc_CheckMainObjectiveStatus`. Their 368 bytes are counted in `src/script/`,
+separately from the nine methods above. The shared object's symbol has a 212-byte
+extent at `0x803e81a4`; it remains external original storage.
+
 ## Verification
 
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces every
