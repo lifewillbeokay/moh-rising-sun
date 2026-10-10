@@ -1,0 +1,53 @@
+{
+  "id": "ai_targeting_aim_queries",
+  "source": "src/ai/targeting_aim_queries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ee4a4",
+      "size": 444
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4888",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetAdjustedAimTargetPosition__12CAITargetingR8CVector3",
+      "address": "0x800ee4a4",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "DoBlindFire__12CAITargeting",
+      "address": "0x800ee5b8",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLastSeenTargetPosition__12CAITargetingR8CVector3": "0x800ece88",
+    "GetModifiedTargetPosition__12CAITargetingR8CVector3": "0x800ecec8",
+    "MathFunRandomRealSigned__Fff": "0x80133ac0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

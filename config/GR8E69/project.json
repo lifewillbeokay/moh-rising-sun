@@ -885,7 +885,12 @@
     "ai_target_forward.json",
     "script_position.json",
     "bsgo_basic_defaults.json",
-    "bsgo_object_list.json"
+    "bsgo_object_list.json",
+    "ai_targeting_non_ai_update.json",
+    "ai_targeting_set_non_ai.json",
+    "ai_targeting_sniper_mode.json",
+    "ai_targeting_bazooka_mode.json",
+    "ai_targeting_aim_queries.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -104,7 +104,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/script/` | Reconstructed [all opcode handlers, script timers, message registrations, event lookup, spatial access and music built-ins](docs/Script.md), guided by contributed PS2 research |
 | `src/bpd/`, `src/endian/` | Reconstructed [BPD/property conversion, pointer setup, cleanup and lighting-volume point test](docs/BPD.md) |
 | `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking, locomotion and AI clock](docs/Paths.md), with scoped record and allocation evidence |
-| `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, spatial queries, remembered positions, validity checks and update dispatch](docs/Targeting.md) |
+| `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, script-target updates, spatial queries, aim-mode choices and blind fire](docs/Targeting.md) |
 | `src/lighting/`, `include/game/Light.h` | Reconstructed [light-volume selection and transitions, scene-light transforms and animated-light lifecycle](docs/LightVolumes.md) |
 | `src/bullets/`, `include/game/Bullet.h` | Reconstructed [bullet defaults, accessors and collision helpers](docs/Bullets.md) |
 | `src/triggers/` | Reconstructed [trigger-object queries, positions and point tests](docs/TriggerObject.md) |
