@@ -890,7 +890,12 @@
     "ai_targeting_set_non_ai.json",
     "ai_targeting_sniper_mode.json",
     "ai_targeting_bazooka_mode.json",
-    "ai_targeting_aim_queries.json"
+    "ai_targeting_aim_queries.json",
+    "script_objective_show.json",
+    "script_objective_queries.json",
+    "script_ambience.json",
+    "script_ambience_location.json",
+    "script_values.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

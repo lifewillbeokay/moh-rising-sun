@@ -1,0 +1,60 @@
+{
+  "id": "script_ambience",
+  "source": "src/script/ambience.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80111270",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5de0",
+      "size": 16
+    },
+    {
+      "name": ".rodata.volume_maximum",
+      "address": "0x802a5df0",
+      "size": 4,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AmbientTrack_Select__FPPiPv",
+      "address": "0x80111270",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AmbientTrack_Volume__FPPiPv",
+      "address": "0x801112ec",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "AmbientTrack_Select__Fi": "0x80156e80",
+    "AmbientTrack_Volume__Ff": "0x80156ef4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

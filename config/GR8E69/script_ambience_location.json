@@ -1,0 +1,49 @@
+{
+  "id": "script_ambience_location",
+  "source": "src/script/ambience_location.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80111490",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5df4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AmbientTrack_Azimuth__FPPiPv",
+      "address": "0x80111490",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pBSObject": "0x8031d100",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "AmbientTrack_SetLocation__FPC8CVector3": "0x80156f20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

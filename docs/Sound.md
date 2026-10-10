@@ -37,6 +37,12 @@ The `.rodata` between the two fragments holds an `AmbientTrack_Stop(): EndEvent(
 FAILED` message. No `AmbientTrack_Stop` code exists in the executable; it is left as
 original context rather than given an invented body.
 
+Three [script built-ins](Script.md#objective-ambient-sound-and-value-built-ins)
+now call these accepted ambient-track helpers. They select a track, convert and
+clamp an integer volume percentage, and choose the current script trigger's
+position or player-relative ambience. These 536 code bytes and 24 literal bytes
+are verified in `src/script/` and counted separately from the sound functions above.
+
 ## Verification
 
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces every
