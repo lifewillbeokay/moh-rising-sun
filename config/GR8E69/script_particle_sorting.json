@@ -1,0 +1,42 @@
+{
+  "id": "script_particle_sorting",
+  "source": "src/script/particle_sorting.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80115664",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_ReverseParticleVsTranslucentSorting__FPPiPv",
+      "address": "0x80115664",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "_12CDrawContext.b_ReverseParticleVsTranslucentSorting": "0x802c4b00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}
