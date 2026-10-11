@@ -1,0 +1,46 @@
+{
+  "id": "script_adjust_aim",
+  "source": "src/script/adjust_aim.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010cf24",
+      "size": 664
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5c90",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "AdjustAim__FR8CVector3f",
+      "address": "0x8010cf24",
+      "size": 664,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "sqrtf": "0x80270538",
+    "MathFunRandomReal__Fff": "0x80133a54"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

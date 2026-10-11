@@ -101,7 +101,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/eagl_loading/` | Reconstructed EAGL symbol pools and dynamic-loader fragments; [reference and evidence](docs/Loading.md) |
 | `src/particles/`, `src/flexprop/`, `src/string_crc.cpp` | Reconstructed [particle recipes, state, pool and clock helpers](docs/ParticleRecipes.md), [FlexProp loading, lookup and string CRC](docs/FlexProp.md) |
 | `src/scene/`, `include/game/SceneNode.h` | Recovered [scene-node virtual-slot order and base-class defaults](docs/SceneNode.md) |
-| `src/script/` | Reconstructed [all opcode handlers, timers, message registrations, spatial access, and music, ambience, objective and value built-ins](docs/Script.md), guided by contributed PS2 research |
+| `src/script/` | Reconstructed [all opcode handlers, timers, message registrations, spatial access, projectile aiming and controls, and music, ambience, objective and value built-ins](docs/Script.md), guided by contributed PS2 research and independent GameCube analysis |
 | `src/bpd/`, `src/endian/` | Reconstructed [BPD/property conversion, pointer setup, cleanup and lighting-volume point test](docs/BPD.md) |
 | `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking, locomotion and AI clock](docs/Paths.md), with scoped record and allocation evidence |
 | `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, script-target updates, spatial queries, aim-mode choices and blind fire](docs/Targeting.md) |

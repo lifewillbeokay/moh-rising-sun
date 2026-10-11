@@ -1,10 +1,10 @@
 # MathFun reconstruction evidence
 
-Fourteen functions, **1,340 matching code bytes**, are reconstructed in six build fragments from the original 1,604-byte `MathFun.cpp` interval. The newer fragments are under `src/mathfun/`; the initial six-function fragment remains in `src/MathFun.cpp`. These are partial reconstructions of one original file, not recovered translation-unit boundaries. Analysis, reconstruction and verification used AI assistance.
+Fifteen functions, **1,448 matching code bytes**, are reconstructed in seven build fragments from the original 1,604-byte `MathFun.cpp` interval. The newer fragments are under `src/mathfun/`; the initial six-function fragment remains in `src/MathFun.cpp`. These are partial reconstructions of one original file, not recovered translation-unit boundaries. Analysis, reconstruction and verification used AI assistance.
 
 ## Evidence and boundaries
 
-The pinned `MOH3RDVD.ELF` symbol table contains a `MathFun.cpp` file entry and an associated local `gcc2_compiled.` marker at `0x80133590`. The next file is `collision.cpp`, whose marker is at `0x80133bd4`. Named MathFun functions occupy this 1,604-byte interval. The initial fragment is the contiguous interval `[0x80133904, 0x80133a54)`. Five additional fragments now cover eight more functions; only `MathFunNormalizeAngleNegativePiToPi` (156 bytes) and `MathFunRandomReal` (108 bytes) remain original context. The pan/tilt fragment uses the independently recovered [CVector3 layout](Matrix.md#cvector3-layout).
+The pinned `MOH3RDVD.ELF` symbol table contains a `MathFun.cpp` file entry and an associated local `gcc2_compiled.` marker at `0x80133590`. The next file is `collision.cpp`, whose marker is at `0x80133bd4`. Named MathFun functions occupy this 1,604-byte interval. The initial fragment is the contiguous interval `[0x80133904, 0x80133a54)`. Six additional fragments now cover nine more functions; only `MathFunNormalizeAngleNegativePiToPi` (156 bytes) remains original context. The pan/tilt fragment uses the independently recovered [CVector3 layout](Matrix.md#cvector3-layout).
 
 | Original symbol | Address | Bytes |
 | --- | --- | ---: |
@@ -24,12 +24,13 @@ The ELF names and sizes are checked on every build against `config/GR8E69/MathFu
 | `mathfun_atan` | `MathFunAtan2F` | `0x80133590`–`0x80133634` | 164 | 20 bytes at `0x802a7c70` |
 | `mathfun_rotations` | `MathFunRotateAboutY`, `MathFunRotateAboutZ` | `0x80133634`–`0x80133714` | 224 | None |
 | `mathfun_pan_tilt` | `MathFunGetPanAngleDiffNoRoll`, `MathFunGetTiltAngleDiffNoRoll` | `0x801337b0`–`0x80133904` | 340 | None |
+| `mathfun_random_real` | `MathFunRandomReal` | `0x80133a54`–`0x80133ac0` | 108 | 12 bytes at `0x802a7cdc` |
 | `mathfun_random_real_signed` | `MathFunRandomRealSigned` | `0x80133ac0`–`0x80133b6c` | 172 | 16 bytes at `0x802a7ce8` |
 | `mathfun_percent` | `MathFunGetRandomPercent`, `MathFunTestPercent` | `0x80133b6c`–`0x80133bd4` | 104 | None |
 
-The new fragments use ProDG 3.8.1 with `-O2 -G0 -fno-exceptions
+The additional fragments use ProDG 3.8.1 with `-O2 -G0 -fno-exceptions
 -fno-implicit-templates`. No generated functions or data are discarded. Their
-complete constant pools, including native alignment padding in the random-real
+complete constant pools, including native alignment padding in the signed-random
 fragment, are compared. Constants and padding earn no code credit.
 
 `MathFunAtan2F` implements the original game-specific angle convention through
@@ -47,6 +48,20 @@ They preserve the fourth vector word. The local `by` reference describes the
 same component address retained across the original calls; it introduces no
 extra state. The original angle-normalization routine remains an external call
 and earns no new credit here. Parameter names are descriptive, not recovered.
+
+`MathFunRandomReal` computes `max - min`, consumes one `rand()` result, scales
+the range by the single-precision `2^-31` factor, then multiplies by the random
+integer converted to float and adds `min`. It always consumes a random value,
+including when the bounds are equal. No bound reordering or equal-bound shortcut
+is added. The emitted final operation is fused multiply-add, and expression
+grouping preserves its original rounding. This helper is also used by the newly
+reconstructed [projectile aim-spread routine](Script.md#projectile-aim-and-controls).
+
+The four-byte scaling literal at `0x802a7cdc` has a descriptive read-only
+subsection; its original identifier is unknown. The compiler's eight-byte integer
+conversion constant is at `0x802a7ce0`. Both entire sections are compared, with no
+discarded padding or code. The neighboring original float at `0x802a7cd8` remains
+original context, and these data bytes earn no executable credit.
 
 `MathFunRandomRealSigned` returns the supplied value immediately when the bounds
 compare equal, without consuming random values. Otherwise it scales one `rand`
@@ -74,7 +89,7 @@ This preserves the original floating-point comparisons, including NaNs and the
 branch behavior when the bounds are reversed. No generic `std::clamp` substitute
 or per-type specialization is used. Both complete objects contain only code and
 use the standard ProDG 3.8.1 game profile. These 76 bytes are separate from the
-1,340 accepted bytes in the original MathFun interval above.
+1,448 accepted bytes in the original MathFun interval above.
 
 ## Compiler profile and uncertainty
 

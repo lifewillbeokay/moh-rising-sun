@@ -8,13 +8,14 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-Forty-eight fragments in `src/script/` reconstruct **83 functions and 12,188 executable
+Fifty-one fragments in `src/script/` reconstruct **86 functions and 13,020 executable
 bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
 timer routines (1,960 bytes), a spatial query (196 bytes), six game-object
 default/list routines (132 bytes), three objective built-ins (368 bytes), three
-ambient-sound built-ins (536 bytes), and two value built-ins (144 bytes).
+ambient-sound built-ins (536 bytes), two value built-ins (144 bytes), and a
+projectile aim helper with two projectile controls (832 bytes).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -514,6 +515,63 @@ lookup in `GetScriptPosition`. The BSGO prefix, weak pointer and BSObject prefix
 have target-compiler size checks; none authorizes allocating the larger original
 runtime objects from these scoped views.
 
+## Projectile aim and controls
+
+Three fragments add **832 executable bytes** from the `bsbifunc.cpp` marker
+interval. The local `AdjustAim` symbol also belongs to its original file record;
+it retains internal linkage. These are independent reconstruction fragments,
+not recovered original source-file boundaries.
+
+| Manifest | Original function | Address | Code bytes |
+| --- | --- | --- | ---: |
+| `script_adjust_aim` | `AdjustAim__FR8CVector3f` | `0x8010cf24` | 664 |
+| `script_grenade_timer_get` | `BIFunc_GetGrenadeTimer__FPPiPv` | `0x8010bdcc` | 92 |
+| `script_fake_bullets` | `BIFunc_AllowFakeBullets__FPPiPv` | `0x8010da60` | 76 |
+
+`AdjustAim` starts with a +Z reference axis, crosses the input direction with
+that axis and normalizes the result, then crosses that result with the input
+direction and normalizes the second basis vector. It draws two values between
+negative and positive half the supplied spread, scales the two basis vectors,
+adds them to the direction in order, and normalizes the final direction.
+Each normalization skips division when its computed length equals zero. There
+is no fallback axis for degenerate inputs, no spread clamp, and no zero-spread
+shortcut: it still makes both random calls. Only x/y/z are changed; the input's
+fourth word is preserved. The shared [vector declaration](Matrix.md#cvector3-layout)
+and its existing compound operators reproduce the original temporaries and
+arithmetic. `Cross` and `Normalize` are descriptive inline helpers, not recovered
+historical names. Their intermediate copies and operation order are retained.
+
+The zero, one and half literals occupy 12 fully compared bytes at `0x802a5c90`.
+The same batch reconstructs `MathFunRandomReal` (108 bytes plus 12 literal bytes),
+so both random calls now resolve to accepted source. Its always-consume behavior
+and literal placement are described in [MathFun.md](MathFun.md).
+The original direct-branch graph identifies three callers of `AdjustAim`:
+`BIFunc_FireProjectile`, `BIFunc_FireAllTurret01s` and
+`BIFunc_FireProjectileAtPath`. `MathFunRandomReal` has 41 distinct direct callers.
+Those relationships guided this work; they do not establish runtime frequency
+or award credit to the remaining callers.
+
+`GetGrenadeTimer` treats its first script slot as a bullet pointer, reads float
+`+0xb0`, truncates it to a signed integer and writes the result to the adjusted
+stack top. It reuses `CBullet::field_b0` in the existing scoped
+[bullet view](Bullets.md), without redefining the class or claiming a complete
+allocation. Valid storage and representable conversion remain original
+preconditions; no null check or saturation is added.
+
+`AllowFakeBullets` copies the first integer slot directly into the original
+four-byte `g_bFakeBulletsEnabled` at `0x802c47a4`, then adjusts the stack.
+It does not normalize the value to zero or one. That global remains original
+storage and earns no data credit. The timer setter remains unmatched; its
+separate experiment is not part of the accepted getter fragment.
+
+These functions were reconstructed from the pinned GameCube executable with
+Codex assistance. A local Ghidra trial helped identify the projectile helper and
+its dependencies; original instructions, symbols and complete compiled-byte
+comparisons supplied the acceptance evidence. All four new objects use ProDG
+3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`, without stripping,
+patching instructions or substituting assembly. This is a working compiler
+profile, not proof of the historical release.
+
 ## Verification and next work
 
 All fifteen accepted `bsmachin.cpp` fragments, ten `bsmessage.cpp` fragments and
@@ -532,8 +590,8 @@ their compiler profile earns no new source credit. These comparisons establish a
 working profile, not the historical compiler release or original source spelling.
 
 No instructions are patched, no assembly bodies are substituted, and no functions
-or sections are discarded or clipped. These fragments generate code and the 152
-read-only constant/string bytes described above. Generated data earns no executable credit,
+or sections are discarded or clipped. The manifests list the complete generated
+code and read-only constant/string sections. Generated data earns no executable credit,
 and all external storage remains original context.
 
 The complete rebuilt 2,860,576-byte analysis image also matches the original,
