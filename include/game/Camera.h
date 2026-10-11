@@ -41,5 +41,6 @@ public:
     float GetHFOV() const;
     float GetVFOV() const;
     void UpdateCameraToClip();
+    void UpdateWorldToCamera();
 };
 #endif

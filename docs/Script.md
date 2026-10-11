@@ -8,14 +8,15 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-Fifty-one fragments in `src/script/` reconstruct **86 functions and 13,020 executable
+Fifty-seven fragments in `src/script/` reconstruct **93 functions and 13,676 executable
 bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
 timer routines (1,960 bytes), a spatial query (196 bytes), six game-object
 default/list routines (132 bytes), three objective built-ins (368 bytes), three
 ambient-sound built-ins (536 bytes), two value built-ins (144 bytes), and a
-projectile aim helper with two projectile controls (832 bytes).
+projectile aim helper with two projectile controls (832 bytes), and seven fog,
+far-clip and particle-sorting controls (656 bytes).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -571,6 +572,65 @@ comparisons supplied the acceptance evidence. All four new objects use ProDG
 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`, without stripping,
 patching instructions or substituting assembly. This is a working compiler
 profile, not proof of the historical release.
+
+## Fog queries and rendering controls
+
+Six fragments reconstruct seven complete built-ins, adding **656 code bytes**.
+They were independently reconstructed from GR8E69 with Codex assistance; the
+fog setup routines were inspected as layout evidence and remain original code.
+
+| Manifest | Functions (`BIFunc_` prefix omitted) | Original start | Code bytes |
+| --- | --- | --- | ---: |
+| `script_fog_distances` | `GetFogStart`, `GetFogEnd` | `0x8011509c` | 152 |
+| `script_fog_red` | `GetFogRed` | `0x80115134` | 108 |
+| `script_fog_green` | `GetFogGreen` | `0x801151a0` | 112 |
+| `script_fog_blue` | `GetFogBlue` | `0x80115210` | 108 |
+| `script_particle_sorting` | `ReverseParticleVsTranslucentSorting` | `0x80115664` | 76 |
+| `script_far_clip` | `SetFarClipPlane` | `0x80115820` | 100 |
+
+The queries adjust the stack first, then read the fog state and write float bits
+into the adjusted integer slot. Start and end are copied as floats, without
+integer conversion. RGB channels are extracted from the packed word and converted
+to floats on the **0–255** scale; there is no division by 255. The green extraction
+retains the original halfword load and low-byte mask. Its expression, like red and
+blue, is a shift/mask of the packed colour rather than a new byte-field layout.
+
+`Fog.h` describes only a prefix of the original 96-byte `g_fog` symbol at
+`0x802fad40`. The class tag `CFog` is corroborated by the original `SetW` method
+called with this object. The prefix ends at `0x5c`; unknown bytes remain opaque,
+and it must not be used to allocate or construct the original object.
+
+| Offset | Descriptive member | Independent evidence |
+| --- | --- | --- |
+| `0x44` | `colour` | Queries read its high three bytes; `SetFogParams` and `SetDefaultFogParams` store a complete RGBA word here before converting it for EAGL. |
+| `0x50` | `start` | Query reads a float; both setup routines store it and pass it to `SetFogStart`. |
+| `0x58` | `end` | Query reads a float; both setup routines store it and pass it to `SetFogEnd`. |
+
+The member names and packed-word spelling are reconstruction choices. No fog
+storage, setup code or EAGL conversion earns credit from this prefix. The original
+setup methods at `0x8011527c` and `0x801156b0` remain useful follow-ups.
+
+The sorting wrapper copies its first integer argument without boolean
+normalization to `CDrawContext::b_ReverseParticleVsTranslucentSorting`, the original
+four-byte object at `0x802c4b00`. Its local class declaration exposes only this
+static member and establishes no instance layout. It then adjusts the script stack.
+
+The far-clip wrapper interprets its first argument as float bits, stores it in
+the existing `CCamera::farClip`, clears world-to-clip and camera-to-clip validity,
+and writes one to `field_160`. It leaves world-to-camera validity untouched and
+adds no clamp or projection rebuild. The original 704-byte `g_camera` symbol at
+`0x803e6f00` remains external; the existing scoped [camera view](Camera.md) is reused
+without claiming that it describes the complete object.
+
+The distance queries use ProDG **3.9.3** with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. This preserves their original
+float temporary store/load; ProDG 3.8.1 collapses that same source to a shorter
+integer transfer. The other five functions use the existing **3.8.1** profile.
+These are working profiles, not evidence of different historical releases.
+Each colour query emits its own complete eight-byte unsigned-integer conversion
+constant, at `0x802a5ed8`, `0x802a5ee0` and `0x802a5ee8`. All 24 bytes are verified
+separately and excluded from code credit. No functions, sections or padding are
+discarded, and no instructions are patched.
 
 ## Verification and next work
 

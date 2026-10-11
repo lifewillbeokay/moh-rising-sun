@@ -899,7 +899,14 @@
     "script_adjust_aim.json",
     "mathfun_random_real.json",
     "script_grenade_timer_get.json",
-    "script_fake_bullets.json"
+    "script_fake_bullets.json",
+    "script_fog_distances.json",
+    "script_fog_red.json",
+    "script_fog_green.json",
+    "script_fog_blue.json",
+    "script_far_clip.json",
+    "script_particle_sorting.json",
+    "camera_world_to_camera.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

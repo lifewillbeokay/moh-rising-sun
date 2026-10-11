@@ -1,7 +1,7 @@
 # Camera projection and transforms
 
-Nineteen `CCamera` functions compile to **1,344 matching executable bytes** in
-five fragments, with twenty generated read-only bytes. They use ProDG 3.8.1
+Twenty `CCamera` functions compile to **1,768 matching executable bytes** in
+six fragments, with twenty-four generated read-only bytes. They use ProDG 3.8.1
 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`; this working profile
 does not identify the original compiler release.
 
@@ -18,12 +18,13 @@ GameCube verification used Codex. No source was imported from the PS2 remake.
 | `camera_axes` | `0x8012bdf0`–`0x8012bf40` | 4 | 320 |
 | `camera_transforms` | `0x8012bf40`–`0x8012c188` | 8 | 584 |
 | `camera_projection` | `0x8012c4a0`–`0x8012c5b0` | 5 | 272 |
+| `camera_world_to_camera` | `0x8012c768`–`0x8012c910` | 1 | 424 |
 | `camera_update_projection` | `0x8012c910`–`0x8012c98c` | 1 | 124 |
 
 The functions are `GetTMLocalToWorld`, `PreTransform`, `Reset`, `Transform`,
 `SetTMLocalToWorld`, `SetPosition`, `SetBasis`, `Move`, `Rotate`,
 `Orthonormalize`, `SetPerspective`, `SetOrthographic`, `GetHFOV`, `GetVFOV`
-and `UpdateCameraToClip`, plus the four vector getters `GetPosition`,
+and `UpdateCameraToClip`, `UpdateWorldToCamera`, plus the four vector getters `GetPosition`,
 `GetRightward`, `GetForward` and `GetUpward`. Each manifest records individual original symbol
 names, addresses and sizes. The adjacent `camera.cpp` and `draw_context.cpp`
 compiler markers bound these global functions at `0x8012ba60`–`0x8012d26c`,
@@ -116,9 +117,31 @@ The complete 2,860,576-byte image retains SHA-1
 `6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d`. The public snapshot was refreshed after
 local verification; CI validates that snapshot rather than rebuilding the game.
 
-The remaining camera update and pitch/roll/yaw routines are
+`UpdateWorldToClip`, update dispatch and the remaining pitch/roll/yaw routines are
 useful follow-ups. Their local vectors can now use the
 [`CVector3` declaration](Matrix.md#cvector3-layout); each body still needs its own
 comparison. Frustum members and
 `field_160` also need further analysis; the current storage view deliberately
 leaves them unresolved.
+
+## World-to-camera update
+
+`UpdateWorldToCamera` copies the local-to-world right, front, up and position
+vectors before writing the destination. It transposes the saved basis with an
+up/front axis swap: the three output rows are `(right.x, up.x, front.x)`,
+`(right.y, up.y, front.y)` and `(right.z, up.z, front.z)`. Translation is the negative
+dot product of position with right, up and front, in that order. The function calls
+the already reconstructed matrix setters and sets only `worldToCameraValid` to one.
+It does not normalize the basis or perform a general matrix inversion.
+
+The matrix setters preserve each fourth component; the reconstruction does not
+reset those destination words. The saved vectors, component-pointer view of right,
+and default-constructed translation retain the original temporary lifetimes and
+floating-point operation order. `DotComponents` is a descriptive inline helper,
+not a recovered original name. No additional camera or matrix storage was inferred.
+The generated four-byte `1.0f` at `0x802a76b8` is fully compared and earns no code
+credit. This fragment was independently reconstructed with Codex assistance.
+
+The same batch adds the script far-clip setter described in [Script.md](Script.md).
+That wrapper reuses the existing camera prefix and invalidation flags; neither
+the external global camera storage nor the remaining update routines earn credit.
