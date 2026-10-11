@@ -895,7 +895,11 @@
     "script_objective_queries.json",
     "script_ambience.json",
     "script_ambience_location.json",
-    "script_values.json"
+    "script_values.json",
+    "script_adjust_aim.json",
+    "mathfun_random_real.json",
+    "script_grenade_timer_get.json",
+    "script_fake_bullets.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
