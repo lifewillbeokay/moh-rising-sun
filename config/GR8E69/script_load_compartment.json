@@ -1,0 +1,44 @@
+{
+  "id": "script_load_compartment",
+  "source": "src/script/load_compartment.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80116e84",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_LoadCompartment__FPPiPv",
+      "address": "0x80116e84",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Acquire__12CWorldObjectRCQ212CWorldObject11SAcquireSetbT2": "0x800c49b0",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_scene": "0x803e6d90",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

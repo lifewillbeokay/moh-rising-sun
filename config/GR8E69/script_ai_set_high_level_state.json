@@ -1,0 +1,118 @@
+{
+  "id": "script_ai_set_high_level_state",
+  "source": "src/script/ai_set_high_level_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80117020",
+      "size": 1756
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AISetHighLevelState__FPPiPv",
+      "address": "0x80117020",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SoldierSetScriptHighLevelState__FPPiPv",
+      "address": "0x801170b8",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIChooseBehavior__FPPiPv",
+      "address": "0x80117154",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIChooseNewBehavior__FPPiPv",
+      "address": "0x801171c8",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStartBehavior__FPPiPv",
+      "address": "0x8011723c",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStopBehavior__FPPiPv",
+      "address": "0x801172b0",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIGetBehaviorCapability__FPPiPv",
+      "address": "0x80117348",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIClearBehavior__FPPiPv",
+      "address": "0x801173e4",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIEnableBehavior__FPPiPv",
+      "address": "0x80117454",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIDisableBehavior__FPPiPv",
+      "address": "0x801174ec",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_AIDisableBehavior__FPPiPv",
+      "address": "0x80117584",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_AIEnableBehavior__FPPiPv",
+      "address": "0x80117640",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ChooseBehavior__9CAIObject": "0x800dc47c",
+    "ChooseNewBehavior__9CAIObject": "0x800dc4c8",
+    "ClearBehavior__9CAIObject": "0x800dc5b8",
+    "DisableBehavior__9CAIObject13EBehaviorType": "0x800dca3c",
+    "EnableBehavior__9CAIObject13EBehaviorType": "0x800dc9c8",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "GetBehaviorCapability__9CAIObject11ECapability": "0x800dc60c",
+    "SetAllowedHighLevelState__17CScriptedBehavior17EAIHighLevelState": "0x800e728c",
+    "SetHighLevelState__9CAIObject17EAIHighLevelState": "0x800da1fc",
+    "StartBehavior__9CAIObject": "0x800dc51c",
+    "StopBehavior__9CAIObjectb": "0x800dc578",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

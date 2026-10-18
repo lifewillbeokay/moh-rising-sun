@@ -1,0 +1,65 @@
+{
+  "id": "script_tutorial_text",
+  "source": "src/script/tutorial_text.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80106fa0",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_DisplayBIGPromptText__FPPiPv",
+      "address": "0x80106fa0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_DisplayTutorialText__FPPiPv",
+      "address": "0x80106fd0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_KillTutorialText__FPPiPv",
+      "address": "0x80107000",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ToggleTutorialIcon__FPPiPv",
+      "address": "0x80107030",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SEDEvent__FPPiPv",
+      "address": "0x80107060",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

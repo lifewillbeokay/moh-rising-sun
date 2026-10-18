@@ -1,0 +1,38 @@
+{
+  "id": "script_bullet_type_class",
+  "source": "src/script/bullet_type_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80116168",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetClassFromBulletType__F17EScriptBulletType",
+      "address": "0x80116168",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

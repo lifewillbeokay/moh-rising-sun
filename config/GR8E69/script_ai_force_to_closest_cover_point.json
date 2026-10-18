@@ -1,0 +1,58 @@
+{
+  "id": "script_ai_force_to_closest_cover_point",
+  "source": "src/script/ai_force_to_closest_cover_point.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80105cd0",
+      "size": 696
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIForceToClosestCoverPoint__FPPiPv",
+      "address": "0x80105cd0",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIForceToClosestMMG__FPPiPv",
+      "address": "0x80105dc0",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIForceToMMGFeeder__FPPiPv",
+      "address": "0x80105eb0",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnableBehavior__9CAIObject13EBehaviorType": "0x800dc9c8",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "ForceToCoverPoint__19CCoverpointBehavior": "0x800f1764",
+    "ForceToMMGFeeder__26CMountedMachineGunBehavior": "0x800e4438",
+    "ForceToMMG__26CMountedMachineGunBehavior": "0x800e3f7c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

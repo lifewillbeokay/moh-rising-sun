@@ -1,0 +1,243 @@
+{
+  "id": "script_coop_triggers",
+  "source": "src/script/coop_triggers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011cb70",
+      "size": 1856
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetSplitScreen__FPPiPv",
+      "address": "0x8011cb70",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AssignCptDistances__FPPiPv",
+      "address": "0x8011cba0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayerWarp__FPPiPv",
+      "address": "0x8011cbd0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AttachPlayerToMountedMachineGunCoop__FPPiPv",
+      "address": "0x8011cc00",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayerWarpToStartPointID__FPPiPv",
+      "address": "0x8011cc30",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerActivateLookatTriggerCoop__FPPiPv",
+      "address": "0x8011cc60",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerDeactivateLookatTriggerCoop__FPPiPv",
+      "address": "0x8011cc90",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerStartLookAtCoop__FPPiPv",
+      "address": "0x8011ccc0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CoopTimedTaskTrigger__FPPiPv",
+      "address": "0x8011ccf0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_IsPlayerLooking__FPPiPv",
+      "address": "0x8011cd20",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CoopTimedTaskTriggerDelay__FPPiPv",
+      "address": "0x8011cd58",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_HasTimedTaskFinished__FPPiPv",
+      "address": "0x8011cd88",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ActivateEOWCheck__FPPiPv",
+      "address": "0x8011cdc0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_DeactivateEOWCheck__FPPiPv",
+      "address": "0x8011cdf0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetForceWarpTriggerActiveStatus__FPPiPv",
+      "address": "0x8011ce20",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterMovie__FPPiPv",
+      "address": "0x8011ce50",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CoopChangePlayerSkin__FPPiPv",
+      "address": "0x8011cedc",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_BotDeath__FPPiPv",
+      "address": "0x8011cf0c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CoopForcedCompartmentLoad__FPPiPv",
+      "address": "0x8011cf7c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerHolsterWeapon__FPPiPv",
+      "address": "0x8011cfac",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_LinkPlayerRespawnToPoint__FPPiPv",
+      "address": "0x8011cfdc",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerLookAtMech__FPPiPv",
+      "address": "0x8011d00c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerLockInPlace__FPPiPv",
+      "address": "0x8011d03c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_LoadCompartmentAndWarpIfNecessary__FPPiPv",
+      "address": "0x8011d06c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_InCoop__FPPiPv",
+      "address": "0x8011d09c",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_IsVisibleToPlayers__FPPiPv",
+      "address": "0x8011d0d8",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerExcludeCollision__FPPiPv",
+      "address": "0x8011d110",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetAvatarMMGOffset__FPPiPv",
+      "address": "0x8011d140",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_DoCatchup__FPPiPv",
+      "address": "0x8011d170",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_IsPlayerFiringWeapon__FPPiPv",
+      "address": "0x8011d1a0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ArePlayersAttachedToHierMMG__FPPiPv",
+      "address": "0x8011d1d8",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayerWarpToStartPoint__FPPiPv",
+      "address": "0x8011d210",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_GetMMGPlayerID__FPPiPv",
+      "address": "0x8011d240",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_IsPlayerUsingMMG__FPPiPv",
+      "address": "0x8011d278",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BotDead__FP10CBotObject": "0x80092a28",
+    "SetMovieName__12ShellManageriPc": "0x80181314",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

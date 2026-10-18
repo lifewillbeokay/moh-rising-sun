@@ -1,0 +1,42 @@
+{
+  "id": "script_set_animation_state_on_partition",
+  "source": "src/script/set_animation_state_on_partition.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f9c40",
+      "size": 244
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetAnimationStateOnPartition__FPPiPv",
+      "address": "0x800f9c40",
+      "size": 244,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetAnimationState__14CSoldierObjectPCciQ214CSoldierObject9Partition": "0x800c1c2c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

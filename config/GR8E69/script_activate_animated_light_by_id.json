@@ -1,0 +1,46 @@
+{
+  "id": "script_activate_animated_light_by_id",
+  "source": "src/script/activate_animated_light_by_id.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80109d2c",
+      "size": 220
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_ActivateAnimatedLightByID__FPPiPv",
+      "address": "0x80109d2c",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__6CLightPv": "0x8012ff54",
+    "GetID__C13TriggerObject": "0x80122fd8",
+    "IsAnimatedLight__C13TriggerObject": "0x80123150",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

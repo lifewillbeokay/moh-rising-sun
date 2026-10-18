@@ -1,0 +1,86 @@
+{
+  "id": "script_soldier_suspend_aiming",
+  "source": "src/script/soldier_suspend_aiming.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801165d0",
+      "size": 1280
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_Soldier_SuspendAiming__FPPiPv",
+      "address": "0x801165d0",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_ResumeAiming__FPPiPv",
+      "address": "0x80116684",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ActivatePropAiming__FPPiPv",
+      "address": "0x80116734",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SuspendPropAiming__FPPiPv",
+      "address": "0x801167cc",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ResumePropAiming__FPPiPv",
+      "address": "0x80116840",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_ActivatePropAiming__FPPiPv",
+      "address": "0x801168b0",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_SuspendPropAiming__FPPiPv",
+      "address": "0x8011696c",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_ResumePropAiming__FPPiPv",
+      "address": "0x80116a20",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnablePropAimModifier__14CSoldierObjectb": "0x800c1020",
+    "ResumeAimModifier__14CSoldierObject": "0x800c1074",
+    "ResumePropAimModifier__14CSoldierObject": "0x800c108c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

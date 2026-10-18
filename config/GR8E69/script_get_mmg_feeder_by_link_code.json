@@ -1,0 +1,49 @@
+{
+  "id": "script_get_mmg_feeder_by_link_code",
+  "source": "src/script/get_mmg_feeder_by_link_code.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80113258",
+      "size": 284
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_GetMMGFeederByLinkCode__FPPiPv",
+      "address": "0x80113258",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterBuddyFollowObject__FPPiPv",
+      "address": "0x801132d8",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFeederByLinkCode__26CMountedMachineGunBehaviori": "0x800e43a4",
+    "RegisterBuddyFollowObject__20CBuddyFollowBehaviorP8BSObjectffff": "0x800e5564",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,79 @@
+{
+  "id": "script_enter_buddy_teleport_area",
+  "source": "src/script/enter_buddy_teleport_area.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80117ca0",
+      "size": 1448
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_EnterBuddyTeleportArea__FPPiPv",
+      "address": "0x80117ca0",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ExitBuddyTeleportArea__FPPiPv",
+      "address": "0x80117d94",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_IsBuddyInArea__FPPiPv",
+      "address": "0x80117e88",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StartScriptedBehavior__FPPiPv",
+      "address": "0x80117f50",
+      "size": 352,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopScriptedBehavior__FPPiPv",
+      "address": "0x801180b0",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetScriptedBehaviorCapability__FPPiPv",
+      "address": "0x80118170",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnterBuddyTeleportArea__20CBuddyFollowBehaviori": "0x800e5608",
+    "ExitBuddyTeleportArea__20CBuddyFollowBehaviori": "0x800e561c",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "IsBuddyInArea__20CBuddyFollowBehaviori": "0x800e5644",
+    "SetCapability__17CScriptedBehavior11ECapabilityb": "0x800e727c",
+    "StartScript__17CScriptedBehaviorP8BSObject": "0x800e71f4",
+    "StopScript__17CScriptedBehavior": "0x800e725c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

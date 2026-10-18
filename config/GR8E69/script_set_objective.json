@@ -1,0 +1,43 @@
+{
+  "id": "script_set_objective",
+  "source": "src/script/set_objective.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010ab40",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetObjective__FPPiPv",
+      "address": "0x8010ab40",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetObjectiveStatus__17CPlayerObjectivesUib": "0x8017c0a4",
+    "g_Objectives": "0x803e81a4",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

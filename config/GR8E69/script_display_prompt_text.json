@@ -1,0 +1,68 @@
+{
+  "id": "script_display_prompt_text",
+  "source": "src/script/display_prompt_text.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80106cfc",
+      "size": 676
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5aec",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_DisplayPromptText__FPPiPv",
+      "address": "0x80106cfc",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_DisplayPromptInteger__FPPiPv",
+      "address": "0x80106e50",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindClosestPlayer__6CSceneRC8CVector3": "0x80148914",
+    "GetString__17CUserMessageTablei": "0x8017bc10",
+    "appendMessageToPrompt__FPCci": "0x8010652c",
+    "displayPromptBuffer__Fsf": "0x801062dc",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pPopUpMessageHandler": "0x80326390",
+    "g_pTriggeringPlayer": "0x802c4760",
+    "g_prompt": "0x802c4788",
+    "g_promptBuffer": "0x803266c0",
+    "g_promptCursor": "0x802c4790",
+    "g_scene": "0x803e6d90",
+    "sprintf": "0x80263a3c"
+  },
+  "local_externals": [
+    "g_prompt",
+    "g_promptBuffer",
+    "g_promptCursor"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

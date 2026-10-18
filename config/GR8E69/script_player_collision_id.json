@@ -1,0 +1,38 @@
+{
+  "id": "script_player_collision_id",
+  "source": "src/script/player_collision_id.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011bbf8",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCollisionIDFromScriptCollisionType__F20EPlayerCollisionType",
+      "address": "0x8011bbf8",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

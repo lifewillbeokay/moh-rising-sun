@@ -1,0 +1,54 @@
+{
+  "id": "script_play_sound_from_input_trigger2",
+  "source": "src/script/play_sound_from_input_trigger2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80107500",
+      "size": 412
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5b1c",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlaySoundFromInputTrigger2__FPPiPv",
+      "address": "0x80107500",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlaySoundAtOffset2__FPPiPv",
+      "address": "0x801075c8",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PlaySoundFromTriggerOrObject2__FP13TriggerObjectP8BSObjectPvUiiR8CVector3b": "0x801072f4",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

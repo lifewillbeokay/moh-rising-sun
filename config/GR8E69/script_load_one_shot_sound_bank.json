@@ -1,0 +1,46 @@
+{
+  "id": "script_load_one_shot_sound_bank",
+  "source": "src/script/load_one_shot_sound_bank.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801060ac",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_LoadOneShotSoundBank__FPPiPv",
+      "address": "0x801060ac",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LoadOneShotSound__Fiii": "0x80156c3c",
+    "g_CurrentLevel": "0x802c477c",
+    "g_CurrentMission": "0x802c4778",
+    "g_CurrentSoundBank": "0x802c4780",
+    "g_GameSettings": "0x802f80c8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

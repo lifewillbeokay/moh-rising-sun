@@ -6,6 +6,7 @@
 #include "BPD.h"
 
 struct FlexPropList;
+struct BSObject;
 
 // Bit positions count from the least significant bit; names are descriptive.
 struct TriggerObjectFlags {
@@ -15,11 +16,12 @@ struct TriggerObjectFlags {
     unsigned int mgUsed : 1;       // Bit 0: MarkMGAsUsed / IsMGUsed.
 };
 
-// Scoped view: the flags word and the properties at +8. Other storage is unknown.
+// Scoped view: the flags word, script object at +4 and the properties at +8. Other storage is unknown.
+class CMatrix;
 class TriggerObject {
   public:
     TriggerObjectFlags flags;
-    unsigned int unknown_4;
+    BSObject *scriptObject; // +4: the trigger's script object (BIFunc_SendEventParent).
     union {
         FlexProp flex;                // When flags.flexFormat is set.
         xyzProperty_Struct *legacy;   // Otherwise.
@@ -31,10 +33,14 @@ class TriggerObject {
     int GetCRC(const char *) const;
     bool HasField(const char *) const;
     void GetPosition(CVector3 &) const;
+    void GetMatrix(CMatrix &) const;
+    void GetRotationMatrix(CMatrix &) const;
     void GetForward(CVector3 &) const;
     void SetPositionZ(float);
     int GetLegacyField(int) const;
     const char *GetClassName() const;
+    int GetID() const;
+    int GetNativeBindingType() const;
     int IsAnimatedLight() const;
     FlexPropList *GetList(const char *) const;
 };

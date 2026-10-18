@@ -1,0 +1,51 @@
+{
+  "id": "script_attach_to_prop",
+  "source": "src/script/attach_to_prop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010f188",
+      "size": 764
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AttachToProp__FPPiPv",
+      "address": "0x8010f188",
+      "size": 456,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AttachAndAlignToProp__FPPiPv",
+      "address": "0x8010f350",
+      "size": 308,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AttachAndAlignObject__17CAttachableObjectP11CAnimObjecti": "0x800ba6f4",
+    "AttachObject__17CAttachableObjectP11CAnimObjecti": "0x800ba5fc",
+    "AttachObject__17CAttachableObjectP13CPlayerObjectib": "0x800ba4c8",
+    "AttachObject__17CAttachableObjectP13CStaticObjecti": "0x800ba3e8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

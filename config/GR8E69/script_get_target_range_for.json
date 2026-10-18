@@ -1,0 +1,50 @@
+{
+  "id": "script_get_target_range_for",
+  "source": "src/script/get_target_range_for.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801031f8",
+      "size": 572
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a598c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_GetTargetRangeFor__FPPiPv",
+      "address": "0x801031f8",
+      "size": 572,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetLastSeenTargetPosition__12CAITargetingR8CVector3": "0x800ece88",
+    "GetTargetScript__C12CAITargeting": "0x800edb18",
+    "IsNonAITarget__C12CAITargeting": "0x800edb3c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

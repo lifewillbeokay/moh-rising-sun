@@ -8,15 +8,16 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-Fifty-seven fragments in `src/script/` reconstruct **93 functions and 13,676 executable
-bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
+373 fragments in `src/script/` reconstruct **600 functions and 103,516
+executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
 timer routines (1,960 bytes), a spatial query (196 bytes), six game-object
 default/list routines (132 bytes), three objective built-ins (368 bytes), three
 ambient-sound built-ins (536 bytes), two value built-ins (144 bytes), and a
 projectile aim helper with two projectile controls (832 bytes), and seven fog,
-far-clip and particle-sorting controls (656 bytes).
+far-clip and particle-sorting controls (656 bytes), and 507 further built-in wrappers
+and stubs (89,840 bytes; [see below](#built-in-wrappers-stubs-and-ai-behavior-controls)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -631,6 +632,458 @@ Each colour query emits its own complete eight-byte unsigned-integer conversion
 constant, at `0x802a5ed8`, `0x802a5ee0` and `0x802a5ee8`. All 24 bytes are verified
 separately and excluded from code credit. No functions, sections or padding are
 discarded, and no instructions are patched.
+
+## Built-in wrappers, stubs and AI behavior controls
+
+316 fragments add **507 functions and 89,840 executable bytes** from the
+`bsbifunc.cpp` marker interval. All use the ProDG 3.8.1 profile of the earlier
+built-ins and are independent fragments, not recovered file boundaries.
+
+The work was guided by kyleckroeger's CC0
+[Frontline GameCube reconstruction](https://github.com/kyleckroeger/moh-frontline-decomp)
+(GMFE69, CodeWarrior). Frontline's source names the built-ins' globals, members and
+callees, but its bytes cannot match ProDG output; every body here was checked
+against the GR8E69 instructions, and many differ from Frontline (see below).
+
+**Stubs.** Seventy-seven built-ins only pop their arguments, return zero, return -1,
+or return `g_bCoopMultiplayer`; most are co-op, split-screen, tutorial and debug
+entries that this single-player build leaves empty. `RegisterMovie` and `BotDeath`
+in the same block forward to `ShellManager::SetMovieName` and `BotDead`.
+`EnterAStarVolume`, `ExitAStarVolume` and `SoldierSetScriptHighLevelState` never
+pop their arguments; the reconstructions keep that.
+
+**Argument access.** Two spellings reproduce the observed loads. Single-argument
+built-ins read `args = *stack - argumentCount` and index it. Built-ins with two or
+more arguments read each slot as `*(*stack - (count - n))` from a saved
+`argumentCount`; this produces the duplicated base register (`mr r11,r9`) the
+original keeps, which the `args[n]` form does not. Booleans that the callee receives
+unconverted are read through a `bool *` view of the slot (GCC 2.x `bool` is four
+bytes on this target).
+
+**AI object modules.** The AI built-ins reach `CAIObject` through
+`ISceneNode::GetAIObject` and pass the addresses of embedded modules: targeting at
+`+0xa0`, locomotion at `+0x1b0`, A* area path finding at `+0x230` and the spline-path
+module at `+0x2f0`. The scoped view in `AITargeting.h` now embeds the existing module
+prefixes at those offsets with opaque gaps between them. It still does not establish
+the complete allocation. Frontline's equivalents manipulate walk-state fields on
+the AI object directly, so Rising Sun's module calls are a real design difference,
+not a naming one.
+
+**Behaviors.** `CAIObject::FindMatchingBehavior` takes the selectors 1 (buddy lead),
+2 (buddy follow), 3 (mounted machine gun), 4 (cover point), 5 (scripted), 8 (sword)
+and 10 (grenade response). Each value is the return of that class's `GetType`.
+`AIBehavior.h` declares method-only views; the built-ins convert the returned
+pointer without adjustment. Null checks, the weak game-object test, and whether a
+built-in pops its arguments differ between otherwise similar wrappers, and each is
+kept as observed.
+
+**Player and weapon.** Player flags at `+0xd4c` gain `canCrouch` (bit 26),
+`wielding` (bit 23) and `triggerChecks` (bit 22) beside the existing motion-shake
+bit. Bit 27 of the word at `+0xd44` is read as "aiming". The weapon view adds the
+property record pointer at `+0x300` (refire rate `+6`, projectile flag `+0xe`) before
+the reload bit at `+0x350`. `TriggerObject` `+4` is its script object, used by
+`SendEventParent`. The schedule-stop built-ins name their file-local
+schedulers through `local_externals`.
+
+**Scene objects and virtual slots.** `SceneObjects.h` declares member-only views of
+`CStaticObject`, `CAnimObject` and `CSoldierObject`; each starts at the
+`ISceneNode` subobject the casts return. `CAnimObjectInterface` names slots 89-113
+from the original `CSoldierObject` table (0x802e5498): animation state, animation
+callbacks, fades and the aim modifier, among others. Behavior views place their
+table pointer at `+0xc` after twelve bytes of base data; slot 4 is
+`UpdateHeuristicScore`, which the force-to-cover and force-to-MMG built-ins call.
+The player view adds the clip settings at `+0x1150`, the heads-up display at
+`+0x1410` and the look-at controller at `+0x1cf0`; the soldier view adds the weapon
+slot table at `+0xb84` and the current slot at `+0xf20`.
+
+**Observed rules.** A grenade's detonation time is the script value multiplied by
+60. Tactical-position and run-away move points use move type 3 with an arrival
+distance of 1.2. The A* last-position walk starts only when the closest network
+point is more than 1 unit from the AI (squared distance 1.0), and
+`AtClosestPointToPlayerOffNetwork` tests a squared distance of 4.0.
+`GetClassFromBulletType` maps script bullet types to weapon classes (0, 14, 15, 19
+and 20 to 3; 1, 4 and 6-9 to 2; 2 to 6; 3 and 21-24 to 7; 5, 13 and 16 to 5; 11, 17,
+18 and 25 to 1; 12 to 4; anything else to 0), and weapon class 20 counts as not
+holding a weapon. Hit directions map 0, 1, 2, 3 to HUD indicators 1, 3, 4, 2.
+Triggered hints occupy a 20-entry table; removal shifts later entries down. Film
+canister type 0 uses the first mask and any type other than 0 or 1 uses the second;
+type 1 is ignored, as compiled. Awards apply only to levels 0-10.
+`SetMotionBlurDuration` clamps the blur amount to [0, 1] and its times to zero or
+more. Several built-ins (`EnterAStarVolume`, `ExitAStarVolume`,
+`SoldierSetScriptHighLevelState`, `ActivateSoundBuss`, `RegisterAStarVolume`,
+`RegisterAStarLinkPoint`, `Soldier_EnableSkeletalPartition` and
+`LetterboxTransition`) never pop their arguments; the reconstructions keep that.
+
+**Code-generation notes.** Literal values are checked by the full build, not by the
+instruction comparison, so constants were confirmed against the original bytes.
+`ActivateSoundBuss` keeps the unfolded `g_SoundMan` address only when it is taken
+through a pointer. `LoadCompartment`'s `memset` call sets CR1 as for a variadic
+callee, so its declaration is variadic. Switches whose return blocks appear in
+result order are written with their case groups in that order.
+
+| Manifest | Built-ins | Address | Code bytes |
+| --- | --- | --- | ---: |
+| `script_is_alarm_activated` | `IsAlarmActivated`, `SetAlarmActivated` | `0x800d83ac` | 136 |
+| `script_asset_crc` | `AssetCRC` | `0x800f8d80` | 44 |
+| `script_enable_partition` | `EnablePartition` | `0x800f968c` | 252 |
+| `script_mp_set_aiming` | `MPSetAiming` | `0x800f9788` | 180 |
+| `script_enable_partition_on_other` | `EnablePartitionOnOther`, `SetAnimationStatePartitionOnOther` | `0x800f983c` | 448 |
+| `script_set_animation_state_on_other` | `SetAnimationStateOnOther` | `0x800f99fc` | 160 |
+| `script_set_animation_on_hier_object` | `SetAnimationOnHierObject` | `0x800f9a9c` | 236 |
+| `script_set_animation_state` | `SetAnimationState` | `0x800f9b88` | 184 |
+| `script_set_animation_state_on_partition` | `SetAnimationStateOnPartition` | `0x800f9c40` | 244 |
+| `script_play_weapon_animation` | `PlayWeaponAnimation` | `0x800f9d34` | 204 |
+| `script_play_turn_animation` | `PlayTurnAnimation` | `0x800f9f2c` | 236 |
+| `script_set_anim_callback` | `SetAnimCallback`, `SetAnimCallbackOnOther` | `0x800fa018` | 328 |
+| `script_set_anim_adjust` | `SetAnimAdjust` | `0x800fa160` | 288 |
+| `script_set_allow_animation_translation` | `SetAllowAnimationTranslation` | `0x800fa280` | 340 |
+| `script_set_japanese` | `SetJapanese` | `0x800fa3d4` | 72 |
+| `script_do_something_interesting` | `DoSomethingInteresting` | `0x800fa41c` | 148 |
+| `script_ai_setup_target_match_list` | `AISetupTargetMatchList`, `AIChooseTarget` | `0x800fa4b0` | 364 |
+| `script_choose_target_by_id` | `ChooseTargetByID` | `0x800fa61c` | 296 |
+| `script_ai_choose_target_by_id` | `AIChooseTargetByID`, `Soldier_AIChooseTargetByID` | `0x800fa744` | 348 |
+| `script_register_location_target` | `RegisterLocationTarget`, `DeRegisterLocationTarget` | `0x800fa8a0` | 288 |
+| `script_set_location_target` | `SetLocationTarget` | `0x800fa9c0` | 200 |
+| `script_ai_set_hearing_radius` | `AISetHearingRadius`, `AIGetSoldierMatchListStruct` | `0x800faa88` | 248 |
+| `script_ai_start_spline_path_walk` | `AIStartSplinePathWalk` | `0x800fab80` | 192 |
+| `script_is_on_astar_mesh` | `IsOnAStarMesh` | `0x800fac40` | 204 |
+| `script_is_nearby_position_on_astar_mesh` | `IsNearbyPositionOnAStarMesh` | `0x800fad0c` | 212 |
+| `script_soldier_ai_start_spline_path_walk` | `Soldier_AIStartSplinePathWalk` | `0x800fade0` | 228 |
+| `script_ai_stop_spline_path_walk` | `AIStopSplinePathWalk` | `0x800faec4` | 116 |
+| `script_soldier_ai_stop_spline_path_walk` | `Soldier_AIStopSplinePathWalk` | `0x800faf38` | 180 |
+| `script_ai_continue_spline_path_walk` | `AIContinueSplinePathWalk` | `0x800fafec` | 116 |
+| `script_soldier_ai_continue_spline_path_walk` | `Soldier_AIContinueSplinePathWalk` | `0x800fb060` | 180 |
+| `script_ai_loop_spline_path_walk` | `AILoopSplinePathWalk` | `0x800fb114` | 116 |
+| `script_ai_get_distance_to_target_xyz` | `AIGetDistanceToTargetXYZ` | `0x800fb240` | 128 |
+| `script_ai_start_astar_path_walk` | `AIStartAStarPathWalk` | `0x800fb2c0` | 172 |
+| `script_ai_start_astar_path_walk_to_last_position_on_network` | `AIStartAStarPathWalkToLastPositionOnNetwork`, `AtClosestPointToPlayerOffNetwork` | `0x800fb36c` | 620 |
+| `script_ai_start_astar_path_walk_to_move_point` | `AIStartAStarPathWalkToMovePoint`, `AIStopAStarPathWalk`, `AIStartCoverPointWalk`, `AIStopCoverPointWalk` | `0x800fb5d8` | 520 |
+| `script_ai_invalidate_cover_point_by_id` | `AIInvalidateCoverPointByID` | `0x800fb7e0` | 132 |
+| `script_ai_invalidate_cover_point` | `AIInvalidateCoverPoint` | `0x800fb864` | 136 |
+| `script_ai_match_object_id` | `AIMatchObjectID` | `0x800fb8ec` | 204 |
+| `script_ai_find_tactical_position` | `AIFindTacticalPosition` | `0x800fb9b8` | 288 |
+| `script_arrived_at_coverpoint` | `ArrivedAtCoverpoint`, `EndCoverpoint` | `0x800fbad8` | 368 |
+| `script_ai_set_run_away_movepoint` | `AISetRunAwayMovepoint` | `0x800fbc48` | 308 |
+| `script_register_nav_point` | `RegisterNavPoint` | `0x800fbd7c` | 132 |
+| `script_get_nav_point` | `GetNavPoint` | `0x800fbe00` | 128 |
+| `script_ai_fire_at_current_target` | `AIFireAtCurrentTarget` | `0x800fbe80` | 172 |
+| `script_soldier_ai_fire_at_current_target` | `Soldier_AIFireAtCurrentTarget` | `0x800fbf2c` | 208 |
+| `script_ai_fire_mmg_at_current_target` | `AIFireMMGAtCurrentTarget` | `0x800fbffc` | 248 |
+| `script_ai_collision_test` | `AICollisionTest`, `Soldier_AICollisionTest` | `0x800fc0f4` | 412 |
+| `script_set_move_point` | `SetMovePoint` | `0x800fc290` | 184 |
+| `script_ai_set_move_point_on_other` | `AISetMovePointOnOther`, `AIStartMovePointWalk` | `0x800fcc64` | 404 |
+| `script_ai_stop_move_point_walk` | `AIStopMovePointWalk`, `AIContinueMovePointWalk` | `0x800fcdf8` | 232 |
+| `script_ai_snap_to_move_point` | `AISnapToMovePoint`, `AISnapToMovePointAndAngle` | `0x800fcee0` | 436 |
+| `script_ai_get_distance_to_move_point` | `AIGetDistanceToMovePoint` | `0x800fd094` | 128 |
+| `script_ai_get_pan_angle_to_move_point` | `AIGetPanAngleToMovePoint` | `0x800fd114` | 288 |
+| `script_soldier_ai_get_distance_to_move_point` | `Soldier_AIGetDistanceToMovePoint` | `0x800fd234` | 200 |
+| `script_ai_send_flag` | `AISendFlag` | `0x800fd2fc` | 320 |
+| `script_ai_set_status_var` | `AISetStatusVar` | `0x800fd43c` | 396 |
+| `script_soldier_setup_grenade_shot` | `Soldier_SetupGrenadeShot` | `0x800fd708` | 172 |
+| `script_set_gravity` | `SetGravity`, `SetGroundCheck`, `InduceGroundCheck` | `0x800fd7b4` | 452 |
+| `script_set_hd_collision` | `SetHDCollision` | `0x800fd978` | 288 |
+| `script_set_collision_to_player` | `SetCollisionToPlayer` | `0x800fda98` | 224 |
+| `script_set_can_be_pushed` | `SetCanBePushed` | `0x800fdb78` | 200 |
+| `script_set_in_shadow` | `SetInShadow` | `0x800fdc40` | 224 |
+| `script_enter_astar_volume` | `EnterAStarVolume`, `ExitAStarVolume` | `0x800fdd20` | 320 |
+| `script_register_astar_link_point` | `RegisterAStarLinkPoint`, `RegisterAStarVolume` | `0x800fde60` | 192 |
+| `script_disable_collision` | `DisableCollision` | `0x800fdf20` | 136 |
+| `script_set_collision` | `SetCollision` | `0x800fdfa8` | 480 |
+| `script_path_mech_allow_collision_damage` | `PathMechAllowCollisionDamage`, `SetHeadAsRoot`, `SetPlayerCollision` | `0x800fe188` | 472 |
+| `script_send_event_self` | `SendEventSelf` | `0x800fe360` | 116 |
+| `script_send_event_weapon_immediate` | `SendEventWeaponImmediate` | `0x800fe3d4` | 576 |
+| `script_send_event_parent` | `SendEventParent` | `0x800fe614` | 120 |
+| `script_send_event_parent_immediate` | `SendEventParentImmediate` | `0x800fe68c` | 120 |
+| `script_send_event` | `SendEvent`, `SendEventImmediate`, `SendEventDelayed`, `SendMessage` | `0x800fe704` | 660 |
+| `script_send_message_via_proxy` | `SendMessageViaProxy` | `0x800fe998` | 148 |
+| `script_send_messages` | `SendMessages` | `0x800fea2c` | 224 |
+| `script_match_group` | `MatchGroup` | `0x800feb0c` | 136 |
+| `script_get_cookie` | `GetCookie`, `SetCookie` | `0x800feb94` | 364 |
+| `script_get_current_frame_number` | `GetCurrentFrameNumber` | `0x800fed00` | 60 |
+| `script_player_is_my_weapon_a_projectile` | `PlayerIsMyWeaponAProjectile`, `SetPlayerWielding`, `PlayerFireMyWeapon` | `0x800fed3c` | 352 |
+| `script_player_reload` | `PlayerStartReloading`, `PlayerReloadSingle`, `PlayerClearReloading`, `PlayerFinishedReloading` | `0x800fee9c` | 472 |
+| `script_player_set_camera_shake` | `PlayerSetCameraShake`, `PlayerStartCameraShake`, `PlayerStopCameraShake` and 2 more | `0x800ff074` | 2060 |
+| `script_player_can_crouch` | `PlayerCanCrouch` | `0x800ff880` | 156 |
+| `script_player_motion_shake` | `PlayerMotionShake` | `0x800ff91c` | 180 |
+| `script_player_screen_flash` | `PlayerScreenFlash`, `PlayerScreenFadeIn`, `PlayerScreenFadeOut` | `0x800ff9d0` | 540 |
+| `script_texture_fade` | `PlayerTextureFadeIn`, `PlayerTextureFadeOut` | `0x800ffbec` | 96 |
+| `script_player_start_path` | `PlayerStartPath` | `0x800ffc4c` | 380 |
+| `script_player_stop_path` | `PlayerStopPath` | `0x800ffdc8` | 104 |
+| `script_player_death` | `PlayerDeath` | `0x800ffe30` | 164 |
+| `script_player_get_weapon_refire_rate` | `PlayerGetWeaponRefireRate` | `0x800ffed4` | 136 |
+| `script_player_add_hit_direction` | `PlayerAddHitDirection` | `0x800fff5c` | 244 |
+| `script_is_player_holding_weapon` | `IsPlayerHoldingWeapon` | `0x80100050` | 92 |
+| `script_is_player_aiming` | `IsPlayerAiming` | `0x801000ac` | 120 |
+| `script_is_player_disguised` | `IsPlayerDisguised` | `0x80100124` | 196 |
+| `script_is_player_crouching` | `IsPlayerCrouching`, `SetPlayerFallingDamage` | `0x801001e8` | 332 |
+| `script_make_player_invincible` | `MakePlayerInvincible` | `0x80100334` | 148 |
+| `script_player_respawn` | `PlayerRespawn` | `0x801003c8` | 112 |
+| `script_player_get_weapon_class` | `PlayerGetWeaponClass` | `0x80100438` | 144 |
+| `script_player_action_stubs` | `PlayerGeneratedTrigger`, `SetFullscreenMode`, `PlayerToggleDuckForShoulderClimb` and 4 more | `0x801004c8` | 344 |
+| `script_play_facial_animation` | `PlayFacialAnimation` | `0x80100620` | 132 |
+| `script_register_timer_event` | `RegisterTimerEvent` | `0x801006a4` | 152 |
+| `script_register_multiple_timer_event` | `RegisterMultipleTimerEvent` | `0x8010073c` | 152 |
+| `script_cancel_timer_event` | `CancelTimerEvent` | `0x801007d4` | 132 |
+| `script_enable_non_vis_destruct` | `EnableNonVisDestruct` | `0x80100858` | 188 |
+| `script_player_has_melee_weapon` | `PlayerHasMeleeWeapon`, `PlayerCanSwitchWeapon` | `0x80100914` | 260 |
+| `script_player_switch_weapons` | `PlayerSwitchWeapons` | `0x80100a18` | 160 |
+| `script_player_has_grenade` | `PlayerHasGrenade` | `0x80100ab8` | 112 |
+| `script_player_throw_grenade` | `PlayerThrowGrenade` | `0x80100b28` | 128 |
+| `script_player_reset_grenade_count` | `PlayerResetGrenadeCount` | `0x80100ba8` | 128 |
+| `script_get_random_integer` | `GetRandomInteger` | `0x80100c28` | 176 |
+| `script_get_random_float` | `GetRandomFloat` | `0x80100cd8` | 160 |
+| `script_get_my_instance_data` | `GetMyInstanceData` | `0x80100d78` | 128 |
+| `script_get_instance_data_for` | `GetInstanceDataFor` | `0x80100df8` | 136 |
+| `script_bs_object_as_scene_node` | `BSObject_AsSceneNode` | `0x80100e80` | 180 |
+| `script_create_child_root_hier_object` | `CreateChildRootHierObject`, `CreateChildSubHierObject`, `CreateChildSubHierAnimObject` | `0x80100f34` | 636 |
+| `script_swap_hier_object` | `SwapHierObject` | `0x801011b0` | 164 |
+| `script_destroy_sub_hier_object` | `DestroySubHierObject` | `0x80101254` | 188 |
+| `script_create_child` | `CreateChild` | `0x80101310` | 316 |
+| `script_destroy_child` | `DestroyChild` | `0x8010144c` | 232 |
+| `script_destroy_object` | `DestroyObject` | `0x80101534` | 268 |
+| `script_destroy_script` | `DestroyScript` | `0x80101640` | 96 |
+| `script_destroy_dump_object` | `DestroyDumpObject` | `0x801016a0` | 124 |
+| `script_can_i_create_child` | `CanICreateChild` | `0x8010171c` | 108 |
+| `script_attach` | `Attach`, `AttachChild`, `AttachParent` | `0x80101788` | 572 |
+| `script_register_distance_to_target` | `RegisterDistanceToTarget`, `RegisterCheckObjectsInsideAngularRange`, `RegisterCheckObjectsOutsideAngularRange` and 4 more | `0x801019c4` | 1616 |
+| `script_stop_check_objects_inside_range_secondary` | `StopCheckObjectsInsideRange_Secondary`, `StopCheckObjectsOutsideRange_Secondary` | `0x80102014` | 344 |
+| `script_set_game_fov` | `SetGameFOV` | `0x8010216c` | 160 |
+| `script_change_clip_plane` | `ChangeClipPlane` | `0x8010220c` | 172 |
+| `script_change_letterbox_width` | `ChangeLetterboxWidth` | `0x801022b8` | 124 |
+| `script_register_target_search` | `RegisterTargetSearch` | `0x80102334` | 296 |
+| `script_register_corpse_search` | `RegisterCorpseSearch` | `0x8010245c` | 220 |
+| `script_register_target_check` | `RegisterTargetCheck` | `0x80102538` | 748 |
+| `script_register_position_check` | `RegisterPositionCheck` | `0x80102824` | 192 |
+| `script_register_for_property_message` | `RegisterForPropertyMessage`, `StopPropertyMessage` | `0x801028e4` | 280 |
+| `script_stop_target_search` | `StopTargetSearch`, `StopTargetCheck`, `StopDistanceToTarget` | `0x801029fc` | 588 |
+| `script_stop_check_objects_inside_range` | `StopCheckObjectsInsideRange`, `StopCheckObjectsOutsideRange`, `StopCheckObjectsInsideAngularRange` and 2 more | `0x80102c48` | 860 |
+| `script_set_weapon_enable` | `SetWeaponEnable` | `0x80102fa4` | 168 |
+| `script_break_point` | `BreakPoint` | `0x8010304c` | 100 |
+| `script_debug_print` | `DebugTTYPrint`, `AILog`, `ScriptError` | `0x801030b0` | 144 |
+| `script_get_target_for` | `GetTargetFor` | `0x80103140` | 184 |
+| `script_get_target_range_for` | `GetTargetRangeFor` | `0x801031f8` | 572 |
+| `script_set_obj_info` | `SetObjInfo`, `Soldier_SetObjInfo` | `0x8010567c` | 344 |
+| `script_get_distance_to_object_from_trigger` | `GetDistanceToObjectFromTrigger` | `0x801057d4` | 252 |
+| `script_make_noise` | `MakeNoise` | `0x801059b0` | 408 |
+| `script_get_voice_handle` | `GetVoiceHandle` | `0x80105b48` | 128 |
+| `script_stop_current_voice` | `StopCurrentVoice` | `0x80105bc8` | 164 |
+| `script_register_coverpoint` | `RegisterCoverpoint` | `0x80105c6c` | 100 |
+| `script_ai_force_to_closest_cover_point` | `AIForceToClosestCoverPoint`, `AIForceToClosestMMG`, `AIForceToMMGFeeder` | `0x80105cd0` | 696 |
+| `script_display_letterbox` | `DisplayLetterbox` | `0x80105f88` | 140 |
+| `script_letterbox_transition` | `LetterboxTransition` | `0x80106014` | 152 |
+| `script_load_one_shot_sound_bank` | `LoadOneShotSoundBank` | `0x801060ac` | 172 |
+| `script_set_sound_zone` | `SetSoundZone` | `0x80106158` | 84 |
+| `script_debug_init_from_trigger` | `DebugInitFromTrigger` | `0x801061ac` | 48 |
+| `script_display_prompt_text` | `DisplayPromptText`, `DisplayPromptInteger` | `0x80106cfc` | 676 |
+| `script_tutorial_text` | `DisplayBIGPromptText`, `DisplayTutorialText`, `KillTutorialText` and 2 more | `0x80106fa0` | 240 |
+| `script_play_sound_from_input_trigger` | `PlaySoundFromInputTrigger`, `PlaySoundAtOffset`, `PlaySound` | `0x80107098` | 604 |
+| `script_play_sound_from_input_trigger2` | `PlaySoundFromInputTrigger2`, `PlaySoundAtOffset2` | `0x80107500` | 412 |
+| `script_remove_vocal` | `RemoveVocal`, `Soldier_RemoveVocal` | `0x80107aa8` | 416 |
+| `script_activate_sound_buss` | `ActivateSoundBuss` | `0x80107c48` | 92 |
+| `script_end_sound` | `EndSound` | `0x80107ca4` | 148 |
+| `script_generic_sound_memory` | `GetGenericSoundStructureMemory` | `0x801086b4` | 60 |
+| `script_reset_particle_system_rotation` | `ResetParticleSystemRotation` | `0x80108780` | 280 |
+| `script_create_particle_system_by_type` | `CreateParticleSystemByType`, `CreateParticleSystemByName`, `CreateParticleSystemByNameAtAttachPoint`, `CreateParticleSystemByNameAtWeaponsAttachPoint` | `0x80108898` | 1396 |
+| `script_set_particle_system_velocity` | `SetParticleSystemVelocity` | `0x80108e0c` | 252 |
+| `script_destroy_particle_system` | `DestroyParticleSystem` | `0x80108f08` | 152 |
+| `script_clear_decals` | `ClearDecals` | `0x80108fa0` | 88 |
+| `script_projector_create_by_type` | `ProjectorCreateByType`, `ProjectorCreateByName` | `0x80108ff8` | 1156 |
+| `script_projector_destroy` | `ProjectorDestroy` | `0x8010947c` | 48 |
+| `script_glare_create_by_type` | `GlareCreateByType`, `GlareCreateByName` | `0x801094ac` | 1228 |
+| `script_glare_destroy` | `GlareDestroy` | `0x80109978` | 48 |
+| `script_create_light_by_type` | `CreateLightByType` | `0x801099a8` | 340 |
+| `script_destroy_light` | `DestroyLight` | `0x80109afc` | 156 |
+| `script_set_max_light_priority` | `SetMaxLightPriority` | `0x80109c90` | 156 |
+| `script_activate_animated_light_by_id` | `ActivateAnimatedLightByID` | `0x80109d2c` | 220 |
+| `script_deactivate_animated_light_by_id` | `DeactivateAnimatedLightByID` | `0x80109e08` | 124 |
+| `script_event_memory_block` | `GetEventSystemMemBlock` | `0x80109e84` | 96 |
+| `script_add_objective` | `AddObjective`, `ChangeObjectivePrompt` | `0x80109ee4` | 340 |
+| `script_static_object_play_animation` | `StaticObjectPlayAnimation` | `0x8010a038` | 224 |
+| `script_hier_object_play_animation` | `HierObjectPlayAnimation`, `StartMotionPlayback` | `0x8010a118` | 608 |
+| `script_stop_motion_playback` | `StopMotionPlayback` | `0x8010a378` | 276 |
+| `script_resume_motion_playback` | `ResumeMotionPlayback` | `0x8010a48c` | 192 |
+| `script_modify_motion_data` | `ModifyMotionData` | `0x8010a54c` | 352 |
+| `script_translate_rel` | `TranslateRel`, `RotateRel` | `0x8010a6ac` | 888 |
+| `script_get_rotate_rel` | `GetRotateRel`, `GetTranslateRel` | `0x8010aa24` | 152 |
+| `script_set_objective` | `SetObjective` | `0x8010ab40` | 156 |
+| `script_get_soldier_weapon_in_slot` | `GetSoldierWeaponInSlot` | `0x8010b908` | 112 |
+| `script_get_current_weapon_class` | `GetCurrentWeaponClass` | `0x8010b978` | 148 |
+| `script_get_current_npc_weapon_class` | `GetCurrentNPCWeaponClass` | `0x8010ba0c` | 300 |
+| `script_get_weapon_info` | `GetWeaponInfo` | `0x8010bb38` | 228 |
+| `script_catch_grenade` | `CatchGrenade` | `0x8010bce4` | 232 |
+| `script_set_grenade_timer` | `SetGrenadeTimer` | `0x8010be28` | 124 |
+| `script_player_weapon_info` | `PlayerWeaponInfo` | `0x8010bea4` | 444 |
+| `script_player_super_aim_mode` | `PlayerSuperAimMode` | `0x8010c200` | 148 |
+| `script_is_player_invincible` | `IsPlayerInvincible` | `0x8010c294` | 108 |
+| `script_player_eject_shell` | `PlayerEjectShell` | `0x8010c300` | 280 |
+| `script_disable_player_shoot` | `DisablePlayerShoot` | `0x8010c418` | 156 |
+| `script_use_binoculars` | `UseBinoculars` | `0x8010c4b4` | 360 |
+| `script_set_weapon_draw` | `SetWeaponDraw` | `0x8010c61c` | 196 |
+| `script_set_prop_draw` | `SetPropDraw`, `SetDrawEnabled` | `0x8010c6e0` | 392 |
+| `script_is_draw_enabled` | `IsDrawEnabled` | `0x8010c868` | 124 |
+| `script_player_activate_lookat_trigger` | `PlayerActivateLookatTrigger`, `PlayerDeactivateLookatTrigger`, `PlayerStartLookAt` | `0x8010c8e4` | 696 |
+| `script_player_stop_look_at` | `PlayerStopLookAt` | `0x8010cb9c` | 108 |
+| `script_create_mp_dump_object` | `CreateMPDumpObject`, `CreateDumpObject` | `0x8010cc08` | 796 |
+| `script_attach_to_prop` | `AttachToProp`, `AttachAndAlignToProp` | `0x8010f188` | 764 |
+| `script_detach_from_waypoint` | `DetachFromWaypoint` | `0x8010f768` | 204 |
+| `script_attach_player_to_prop` | `AttachPlayerToProp`, `DetachFromProp` | `0x8010f834` | 448 |
+| `script_detach_all_from_prop` | `DetachAllFromProp` | `0x8010f9f4` | 168 |
+| `script_detach_player_from_prop` | `DetachPlayerFromProp` | `0x8010fa9c` | 244 |
+| `script_detach_from_soldier` | `DetachFromSoldier` | `0x8010ffdc` | 136 |
+| `script_soldier_detach_from_soldier` | `Soldier_DetachFromSoldier` | `0x80110064` | 180 |
+| `script_attach_to_anim_object` | `AttachToAnimObject` | `0x80110118` | 236 |
+| `script_attach_to_hier_object` | `AttachToHierObject` | `0x80110204` | 636 |
+| `script_send_event_to_all_attached` | `SendEventToAllAttached` | `0x80110480` | 324 |
+| `script_set_jaw_motion` | `SetJawMotion` | `0x801111d4` | 156 |
+| `script_set_muzzle_fire_for_player` | `SetMuzzleFireForPlayer` | `0x801113c8` | 200 |
+| `script_create_explosion` | `CreateExplosion` | `0x80111550` | 400 |
+| `script_update_player_stats` | `UpdatePlayerStats` | `0x80112290` | 616 |
+| `script_change_players_team` | `ChangePlayersTeam` | `0x801125cc` | 200 |
+| `script_change_npc_team` | `ChangeNPCTeam` | `0x80112694` | 236 |
+| `script_ai_set_team` | `AISetTeam` | `0x80112780` | 184 |
+| `script_unhinge_camera_pitch` | `UnhingeCameraPitch` | `0x80112838` | 156 |
+| `script_toggle_player_vs_trigger_checks` | `TogglePlayerVsTriggerChecks` | `0x801128d4` | 96 |
+| `script_add_hint` | `AddHint` | `0x80112934` | 48 |
+| `script_end_level` | `EndLevel` | `0x80112964` | 104 |
+| `script_scale_rel` | `ScaleRel` | `0x801129cc` | 212 |
+| `script_attach_player_to_mounted_machine_gun` | `AttachPlayerToMountedMachineGun` | `0x80112c78` | 328 |
+| `script_attach_triggering_player_mmg` | `AttachTriggeringPlayerToMMG` | `0x80112dc0` | 48 |
+| `script_register_mounted_machine_gun` | `RegisterMountedMachineGun` | `0x80112df0` | 156 |
+| `script_deregister_mounted_machine_gun` | `DeregisterMountedMachineGun` | `0x80112e8c` | 124 |
+| `script_get_mounted_machine_gun_by_link_code` | `GetMountedMachineGunByLinkCode` | `0x80112f08` | 164 |
+| `script_arrived_at_mmg` | `ArrivedAtMMG`, `CantReachMMG`, `HitFromBehindMMG` | `0x80112fac` | 552 |
+| `script_register_mmg_feeder` | `RegisterMMGFeeder` | `0x801131d4` | 132 |
+| `script_get_mmg_feeder_by_link_code` | `GetMMGFeederByLinkCode`, `RegisterBuddyFollowObject` | `0x80113258` | 284 |
+| `script_buddy_cant_reach_target` | `BuddyCantReachTarget`, `BuddyFinishedMovingAway`, `SetDistances` | `0x80113374` | 632 |
+| `script_register_gag_action` | `RegisterGagAction`, `StartGag`, `StartGagCRC` | `0x801135ec` | 420 |
+| `script_get_bs_object` | `GetBSObject` | `0x80113790` | 164 |
+| `script_set_mg_waypoint_flag` | `SetMGWaypointFlag` | `0x80113834` | 144 |
+| `script_player_force_to_weapon` | `PlayerForceToWeapon` | `0x801138c4` | 156 |
+| `script_register_save_point` | `RegisterSavePoint`, `PerformSavePointResponse` | `0x80113e8c` | 280 |
+| `script_serialize_value` | `SerializeValue` | `0x80113fa4` | 156 |
+| `script_serializing_in` | `SerializingIn`, `SerializingOut` | `0x80114040` | 208 |
+| `script_serializable` | `Serializable`, `SerializeData`, `SaveGagState` | `0x80114110` | 632 |
+| `script_moving_mech_force_update_trigger` | `MovingMechForceUpdateTrigger`, `MechSetFlag` | `0x8011461c` | 328 |
+| `script_block_new_vibrations` | `BlockNewVibrations` | `0x80114978` | 272 |
+| `script_fade_out` | `FadeOut`, `FadeIn` | `0x80114a88` | 384 |
+| `script_attach_hier_base_to_mmg` | `AttachHierBaseToMMG` | `0x80114e60` | 220 |
+| `script_set_detonation_time` | `SetDetonationTime` | `0x80114f3c` | 144 |
+| `script_set_detonation_time_for_player_turret` | `SetDetonationTimeForPlayerTurret` | `0x80114fcc` | 160 |
+| `script_single_anim_ends_event` | `SetSingleAnimEndsEventDelivery` | `0x8011506c` | 48 |
+| `script_set_motion_blur` | `SetMotionBlur` | `0x80115498` | 208 |
+| `script_set_motion_blur_duration` | `SetMotionBlurDuration` | `0x80115568` | 252 |
+| `script_stop_corpse_search` | `StopCorpseSearch` | `0x80115884` | 196 |
+| `script_hier_object_set_look_object` | `HierObjectSetLookObject` | `0x80115948` | 172 |
+| `script_hier_object_map_weapon` | `HierObjectMapWeapon` | `0x801159f4` | 188 |
+| `script_hier_object_fire` | `HierObjectFire` | `0x80115ca8` | 184 |
+| `script_hier_object_register_bullet_damage` | `HierObjectRegisterBulletDamage` | `0x80115d60` | 232 |
+| `script_ai_find_tank` | `AIFindTank` | `0x80115e48` | 108 |
+| `script_get_constrained_rotate_angle` | `GetConstrainedRotateAngle` | `0x801160b8` | 176 |
+| `script_bullet_type_class` | `GetClassFromBulletType` | `0x80116168` | 240 |
+| `script_activate_aiming` | `ActivateAiming` | `0x80116370` | 172 |
+| `script_suspend_aiming` | `SuspendAiming`, `ResumeAiming` | `0x8011641c` | 228 |
+| `script_soldier_activate_aiming` | `Soldier_ActivateAiming` | `0x80116500` | 208 |
+| `script_soldier_suspend_aiming` | `Soldier_SuspendAiming`, `Soldier_ResumeAiming`, `ActivatePropAiming` and 5 more | `0x801165d0` | 1280 |
+| `script_set_head_track_player` | `SetHeadTrackPlayer` | `0x80116ad0` | 152 |
+| `script_reset_mmg` | `ResetMMG` | `0x80116c28` | 216 |
+| `script_get_flex_property` | `GetFlexProperty` | `0x80116d00` | 388 |
+| `script_load_compartment` | `LoadCompartment` | `0x80116e84` | 256 |
+| `script_is_in_any_other_compartment` | `IsInAnyOtherCompartment` | `0x80116f84` | 156 |
+| `script_ai_set_high_level_state` | `AISetHighLevelState`, `SoldierSetScriptHighLevelState`, `AIChooseBehavior` and 9 more | `0x80117020` | 1756 |
+| `script_ai_finished_behavior` | `AIFinishedBehavior` | `0x801176fc` | 48 |
+| `script_ai_is_behavior_enabled` | `AIIsBehaviorEnabled` | `0x8011772c` | 156 |
+| `script_enter_buddy_teleport_area` | `EnterBuddyTeleportArea`, `ExitBuddyTeleportArea`, `IsBuddyInArea` and 3 more | `0x80117ca0` | 1448 |
+| `script_get_scripted_behavior_type` | `GetScriptedBehaviorType`, `SetScriptedBehaviorType` | `0x80118248` | 400 |
+| `script_create_mp_health` | `CreateMPHealth`, `CreateMPRankedAmmoWeapon` | `0x801183d8` | 576 |
+| `script_mp_get_player_body` | `MPGetPlayerBody` | `0x80118618` | 152 |
+| `script_mp_get_player_velocity` | `MPGetPlayerVelocity` | `0x801186b0` | 176 |
+| `script_set_mmg_location` | `SetMMGLocation` | `0x80118760` | 244 |
+| `script_ai_get_previous_behavior_type` | `AIGetPreviousBehaviorType` | `0x80118854` | 192 |
+| `script_ai_get_previous_behavior_script` | `AIGetPreviousBehaviorScript`, `AISetPreviousBehaviorScript` | `0x80118914` | 384 |
+| `script_ai_get_next_behavior_type` | `AIGetNextBehaviorType`, `AIGetNextBehaviorScript` | `0x80118a94` | 384 |
+| `script_soldier_set_current_weapon` | `Soldier_SetCurrentWeapon` | `0x80118c14` | 204 |
+| `script_soldier_get_current_weapon` | `Soldier_GetCurrentWeapon` | `0x80118ce0` | 228 |
+| `script_soldier_get_weapon_type` | `Soldier_GetWeaponType` | `0x80118ed4` | 216 |
+| `script_soldier_get_locomotion_info` | `Soldier_GetLocomotionInfo`, `Soldier_EnableSkeletalPartition` | `0x80118fac` | 360 |
+| `script_soldier_disable_skeletal_partition` | `Soldier_DisableSkeletalPartition` | `0x80119114` | 180 |
+| `script_soldier_create_explosion` | `Soldier_CreateExplosion` | `0x80119424` | 440 |
+| `script_anim_object_set_anim_callback` | `AnimObject_SetAnimCallback` | `0x801195dc` | 208 |
+| `script_signal_buddy_lead_checkpoint_reached` | `SignalBuddyLeadCheckpointReached` | `0x801196ac` | 260 |
+| `script_signal_buddy_lead_checkpoint_reached_by_player` | `SignalBuddyLeadCheckpointReachedByPlayer` | `0x801197b0` | 124 |
+| `script_get_buddy_lead_checkpoint_from_id` | `GetBuddyLeadCheckpointFromID` | `0x8011982c` | 184 |
+| `script_get_distance_to_player` | `GetDistanceToPlayer` | `0x801198e4` | 196 |
+| `script_validation_build` | `ValidationBuild` | `0x801199a8` | 304 |
+| `script_start_slow_moh` | `StartSlowMOH` | `0x80119ad8` | 248 |
+| `script_stop_slow_moh` | `StopSlowMOH` | `0x80119bd0` | 88 |
+| `script_initialize_animated_texture` | `InitializeAnimatedTexture`, `SetAnimatedTextureState` | `0x80119d6c` | 536 |
+| `script_set_animated_texture_frame` | `SetAnimatedTextureFrame`, `SetAnimatedTextureFrameRate` | `0x80119f84` | 280 |
+| `script_reset_animated_texture` | `ResetAnimatedTexture`, `AdvanceAnimatedTexture` | `0x8011a09c` | 264 |
+| `script_add_replay_item` | `AddReplayItem` | `0x8011a1a4` | 128 |
+| `script_has_replay_item` | `HasReplayItem` | `0x8011a224` | 276 |
+| `script_add_film_canister` | `AddFilmCanister` | `0x8011a338` | 232 |
+| `script_has_any_film_canister` | `HasAnyFilmCanister` | `0x8011a420` | 164 |
+| `script_has_film_canister` | `HasFilmCanister` | `0x8011a4c4` | 212 |
+| `script_give_cheat_number` | `GiveCheatNumber` | `0x8011a598` | 132 |
+| `script_grenade_response_finished` | `GrenadeResponseFinished` | `0x8011a61c` | 196 |
+| `script_finished_investigation` | `FinishedInvestigation` | `0x8011a6e0` | 140 |
+| `script_sword_drawn` | `SwordDrawn` | `0x8011a76c` | 188 |
+| `script_has_pistol` | `HasPistol` | `0x8011a828` | 248 |
+| `script_ai_add_corpse_threat` | `AIAddCorpseThreat` | `0x8011a920` | 180 |
+| `script_get_weapon_info_helper` | `GetWeaponInfoHelper` | `0x8011b95c` | 48 |
+| `script_player_collision_id` | `GetCollisionIDFromScriptCollisionType` | `0x8011bbf8` | 60 |
+| `script_add_triggered_hint` | `AddTriggeredHint` | `0x8011bc34` | 168 |
+| `script_remove_triggered_hint` | `RemoveTriggeredHint` | `0x8011bcdc` | 244 |
+| `script_coop_attach` | `AttachPlayerToPropCoop2`, `AttachPlayerToPropCoop`, `AttachPlayerIDToPropCoop` and 5 more | `0x8011c678` | 408 |
+| `script_get_distance_between_players` | `GetDistanceBetweenPlayers` | `0x8011c810` | 76 |
+| `script_coop_players` | `SetParanoiaParameters`, `MPAddBotHealth`, `ForcePlayersApart` and 11 more | `0x8011c85c` | 712 |
+| `script_update_fire_position` | `UpdateFirePosition` | `0x8011cb24` | 76 |
+| `script_coop_triggers` | `SetSplitScreen`, `AssignCptDistances`, `ForcePlayerWarp` and 31 more | `0x8011cb70` | 1856 |
+| `script_bot_done_reloading` | `BotDoneReloading` | `0x8011d2b0` | 144 |
+
+**Further code-generation idioms.** A float result is computed into a plain
+local, the stack is popped, and the value is then copied through
+`volatile float result = x; **stack = *(int *)&result;`, which reproduces the
+`stfs`/`lwz` pair after the pop; a constant float result declares the volatile
+before the pop, and a result that follows by-reference outputs reads it back with
+`*(volatile int *)&result`. Schedule registrations read every argument into a
+local in argument order before the call, square distances in place and type the
+event as `unsigned short`. Floating tests compiled as `cror so,eq,gt` come from
+`!(x >= c)`. A `CMatrix` local repeats the original inline class-initialization
+check (`if (!CMatrix::s_ClassInit) CMatrix::InitClass();`); a `CMatrix *` local
+keeps the matrix address in a saved register where the original does. Switch
+decision trees depend on the case set: separate case bodies with the same value
+give separate equality tests, and an explicit empty case below the smallest real
+case makes GCC test that case first. The degree-to-radian scale in `RotateRel` is
+`3.141593f / 180.0f`, one unit in the last place above pi/180. `CAIObject`'s table
+pointer is at `+0x72c` (`CAIObjectInterface`): slot 2 is `AsAISoldierObject`,
+slot 9 `OnDeath`, slot 10 `SetupTargetMatchList` and slot 11 `ChooseTarget`.
+
+**Observed rules (continued).** Player turret detonation time is the script value
+times 30. `EndLevel` sets the level-won bit (mask `0x200`) in the profile word at
+`+0x31664` and sets `g_GameFlow+8`, which `CPauseMenu::RestartLevel` also sets.
+`BreakPoint` prints `"break point!\n"`. The alarm built-ins belong to `alarm.cpp`,
+not `bsbifunc.cpp`. `AISetStatusVar` treats status variable 11 reaching 15 as a
+death (Frontline uses 13). `MechFollowPath` scales its speed by 1/59.94 and its
+angles by degrees-per-frame in radians.
+
+**Remaining blockers.** Some built-ins cannot be separated into their own units
+under the current manifest rules:
+- `ModifyTotalKillableEnemyCount` reads a string merged with an earlier
+  function's literal.
+- `AttachToSoldier`, `AttachToSoldierEmptyHand`, `AttachMMGProp` and
+  `DetachMMGProp` read `"rt_hand"`, which the linker shares with another file.
+- `GiveEnemyGrenadeWeapon`, its `Soldier_` variant and the bearing built-ins use
+  function-local statics with dynamic initialization in `.bss`.
+- `MechSetPathFlag` and `DoDamageIfLocationMatches` match as code, but their
+  double-plus-float read-only data pads to 16 bytes while the next word belongs to
+  a still-unmatched function.
+
+Others are close but not yet exact: `IsAliasSoundLooping` (which also holds the
+`"none"` string that `PlayAliasSound` and `PlayVocal` need), both `GetObjInfo`
+variants, `AddPlayerAmmo`, `SetExpression`, `TeleportToPlayerByNavPoint`,
+`CanMeleeTarget`, `SetBlinkState`, `SetDefaultFogParams`,
+`GetSpeedRelativeToPlayer`, `MoveFromObjToObj`, `MechFollowPath` and
+`PlayVibrationEvent`. These remain original context.
 
 ## Verification and next work
 

@@ -1,0 +1,56 @@
+{
+  "id": "script_player_screen_flash",
+  "source": "src/script/player_screen_flash.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ff9d0",
+      "size": 540
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerScreenFlash__FPPiPv",
+      "address": "0x800ff9d0",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerScreenFadeIn__FPPiPv",
+      "address": "0x800ffa8c",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerScreenFadeOut__FPPiPv",
+      "address": "0x800ffb3c",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FadeIn__6CFaderG6CColorf": "0x80068714",
+    "FadeOut__6CFaderG6CColorf": "0x80068848",
+    "Flash__6CFaderG6CColorff": "0x80068984",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

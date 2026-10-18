@@ -1,0 +1,42 @@
+{
+  "id": "script_send_message_via_proxy",
+  "source": "src/script/send_message_via_proxy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fe998",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SendMessageViaProxy__FPPiPv",
+      "address": "0x800fe998",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv": "0x800f76e8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

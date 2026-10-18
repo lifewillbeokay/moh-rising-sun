@@ -1,0 +1,49 @@
+{
+  "id": "script_player_has_melee_weapon",
+  "source": "src/script/player_has_melee_weapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100914",
+      "size": 260
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerHasMeleeWeapon__FPPiPv",
+      "address": "0x80100914",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerCanSwitchWeapon__FPPiPv",
+      "address": "0x801009a4",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CanPlayerSwitchWeapon__13CPlayerObject": "0x800ab4c8",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

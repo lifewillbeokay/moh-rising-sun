@@ -1,0 +1,63 @@
+{
+  "id": "script_send_event",
+  "source": "src/script/send_event.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fe704",
+      "size": 660
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SendEvent__FPPiPv",
+      "address": "0x800fe704",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SendEventImmediate__FPPiPv",
+      "address": "0x800fe7b8",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SendEventDelayed__FPPiPv",
+      "address": "0x800fe86c",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SendMessage__FPPiPv",
+      "address": "0x800fe904",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BSRegisterTimerEvent__FiUsP8BSObjectPv19ETimerReplaceMethod": "0x8011e034",
+    "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv": "0x800f76e8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

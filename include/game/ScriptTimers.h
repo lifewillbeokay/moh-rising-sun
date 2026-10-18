@@ -46,4 +46,6 @@ enum ETimerReplaceMethod {
     TIMER_KEEP_EARLIER = 1,
     TIMER_APPEND = 2
 };
+void BSRegisterTimerEvent(int, unsigned short, BSObject *, void *, ETimerReplaceMethod);
+void BSCancelTimerEvent(unsigned short, BSObject *);
 #endif

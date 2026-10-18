@@ -1,0 +1,43 @@
+{
+  "id": "script_player_super_aim_mode",
+  "source": "src/script/player_super_aim_mode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010c200",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerSuperAimMode__FPPiPv",
+      "address": "0x8010c200",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

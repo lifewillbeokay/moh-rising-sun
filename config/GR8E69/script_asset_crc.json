@@ -1,0 +1,41 @@
+{
+  "id": "script_asset_crc",
+  "source": "src/script/asset_crc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f8d80",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "AssetCRC__FPc",
+      "address": "0x800f8d80",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBaseName__FPCcPc": "0x80122a18",
+    "GetStringCRC__FPCc": "0x801acb98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

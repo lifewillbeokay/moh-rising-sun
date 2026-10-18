@@ -1,0 +1,38 @@
+{
+  "id": "script_get_weapon_info_helper",
+  "source": "src/script/get_weapon_info_helper.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011b95c",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetWeaponInfoHelper__FP7CWeapon11EWeaponInfo",
+      "address": "0x8011b95c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

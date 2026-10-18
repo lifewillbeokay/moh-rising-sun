@@ -1,0 +1,40 @@
+{
+  "id": "script_set_move_point",
+  "source": "src/script/set_move_point.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fc290",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMovePoint__F14EMovePointTypeP10ISceneNodeR8CVector3f",
+      "address": "0x800fc290",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetupArbitraryPointUpdate__13CAILocomotion14EMovePointTypeP23BS_STRUCT_Vector_structf": "0x800ef090"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

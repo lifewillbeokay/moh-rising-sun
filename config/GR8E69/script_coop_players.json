@@ -1,0 +1,119 @@
+{
+  "id": "script_coop_players",
+  "source": "src/script/coop_players.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011c85c",
+      "size": 712
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetParanoiaParameters__FPPiPv",
+      "address": "0x8011c85c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_MPAddBotHealth__FPPiPv",
+      "address": "0x8011c88c",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayersApart__FPPiPv",
+      "address": "0x8011c8c4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForceTriggeringPlayerCrouch__FPPiPv",
+      "address": "0x8011c8f4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForceTriggeringPlayerStand__FPPiPv",
+      "address": "0x8011c924",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayersStand__FPPiPv",
+      "address": "0x8011c954",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ForcePlayersCrouch__FPPiPv",
+      "address": "0x8011c984",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_GetActionedPlayerID__FPPiPv",
+      "address": "0x8011c9b4",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCompartmentTrigger__FPPiPv",
+      "address": "0x8011c9ec",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCompartmentWarpTrigger__FPPiPv",
+      "address": "0x8011ca1c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckPointTrigger__FPPiPv",
+      "address": "0x8011ca4c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateParticleSystemAtPlayer__FPPiPv",
+      "address": "0x8011ca7c",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateLightAtPlayer__FPPiPv",
+      "address": "0x8011cab4",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_GetTriggeringPlayerID__FPPiPv",
+      "address": "0x8011caec",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

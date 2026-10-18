@@ -1,0 +1,49 @@
+{
+  "id": "script_initialize_animated_texture",
+  "source": "src/script/initialize_animated_texture.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80119d6c",
+      "size": 536
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_InitializeAnimatedTexture__FPPiPv",
+      "address": "0x80119d6c",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetAnimatedTextureState__FPPiPv",
+      "address": "0x80119e7c",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitByCRC__9AnimShapeiQ29AnimShape6EStatef": "0x8006a2c0",
+    "SetStateByCRC__9AnimShapeiQ29AnimShape6EState": "0x8006a3f0",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,42 @@
+{
+  "id": "script_ai_start_astar_path_walk",
+  "source": "src/script/ai_start_astar_path_walk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fb2c0",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIStartAStarPathWalk__FPPiPv",
+      "address": "0x800fb2c0",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "StartAStarPathWalk__18CAIAreaPathFindingP8BSObject21EAStarDestinationInfo": "0x800e9548",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,48 @@
+{
+  "id": "script_suspend_aiming",
+  "source": "src/script/suspend_aiming.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011641c",
+      "size": 228
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SuspendAiming__FPPiPv",
+      "address": "0x8011641c",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ResumeAiming__FPPiPv",
+      "address": "0x80116490",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ResumeAimModifier__14CSoldierObject": "0x800c1074",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

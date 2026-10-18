@@ -1,11 +1,15 @@
 #ifndef GAME_AI_SPLINE_PATH_H
 #define GAME_AI_SPLINE_PATH_H
+#include "AIFilterGlobal.h"
 #include "BPD.h"
 #include "AIMovement.h"
 // AI-assisted reconstruction from GR8E69; see docs/Paths.md.
 class CAISplinePathManager;
 class CAISplinePathModule;
 struct BSObject;
+class TriggerObject;
+// Original enum tag; its members are unknown.
+enum EAStarDestinationInfo { AStarDestinationUnknown = 0 };
 // Eighty-byte array stride, independently observed in generation/destruction.
 // Coefficient names and parameterStep describe their observed use.
 class CAISplinePathSegment {
@@ -63,8 +67,20 @@ public:
     unsigned char unknown00[0x20];
     CAILocomotion *locomotion;
     void StopAStarPathWalk();
+    int StartAStarPathWalk(BSObject *, EAStarDestinationInfo);
+    int StartAStarPathWalk(EAStarDestinationInfo);
+    void EnterAStarVolume(int);
+    void GetClosestPositionOnAStar(CVector3 *) const;
+    static void RegisterAStarVolume(TriggerObject *, int);
+    static void RegisterAStarLinkPoint(TriggerObject *, int, int, int);
+    void ExitAStarVolume(int);
     void UpdateAStarPathWalk();
     bool SetupAStarPathWalkForPatrol(const CVector3 &);
+};
+// Static navigation-mesh query.
+class AIPathFinding {
+public:
+    static int IsPointOnNetwork(const CVector3 &);
 };
 // Prefix through the next-point vector at +0x20. The untouched bytes at
 // +0x18 and the complete allocation size remain unestablished.
@@ -109,4 +125,14 @@ public:
     int GetWalkType();
     void StopWalk();
 };
+// Inline id lookup used by BIFunc_PlayerStartPath. A missing id yields the
+// slot one past the last path, as in the original.
+inline CAISplinePath *FindSplinePath(unsigned int id) {
+    CAISplinePathManager *manager = g_aigAIFilterGlobalObject.splineManager;
+    unsigned int i;
+    for (i = 0; i < manager->pathCount; i++)
+        if (manager->paths[i].id == id)
+            break;
+    return &manager->paths[i];
+}
 #endif

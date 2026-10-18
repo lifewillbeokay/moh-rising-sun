@@ -14,4 +14,7 @@ template <class T> T MathFunClamp(T value, T min, T max) {
         return result;
     }
 }
+float MathFunRandomReal(float, float);
+class CVector3;
+float MathFunGetPanAngleDiffNoRoll(CVector3 *, CVector3 *, CVector3 *);
 #endif

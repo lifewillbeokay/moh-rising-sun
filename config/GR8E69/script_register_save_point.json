@@ -1,0 +1,50 @@
+{
+  "id": "script_register_save_point",
+  "source": "src/script/register_save_point.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80113e8c",
+      "size": 280
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_RegisterSavePoint__FPPiPv",
+      "address": "0x80113e8c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PerformSavePointResponse__FPPiPv",
+      "address": "0x80113f18",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RegisterSavePoint__13CGameSettingsib": "0x80170f6c",
+    "TriggerSavePointResponse__13CGameSettingsib": "0x80170fbc",
+    "g_GameSettings": "0x802f80c8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

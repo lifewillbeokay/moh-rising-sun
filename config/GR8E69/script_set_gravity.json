@@ -1,0 +1,54 @@
+{
+  "id": "script_set_gravity",
+  "source": "src/script/set_gravity.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fd7b4",
+      "size": 452
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetGravity__FPPiPv",
+      "address": "0x800fd7b4",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetGroundCheck__FPPiPv",
+      "address": "0x800fd848",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_InduceGroundCheck__FPPiPv",
+      "address": "0x800fd8dc",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

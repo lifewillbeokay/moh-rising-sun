@@ -1,0 +1,60 @@
+{
+  "id": "script_create_mp_dump_object",
+  "source": "src/script/create_mp_dump_object.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010cc08",
+      "size": 796
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5c88",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_CreateMPDumpObject__FPPiPv",
+      "address": "0x8010cc08",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateDumpObject__FPPiPv",
+      "address": "0x8010cd88",
+      "size": 412,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AssetCRC__FPc": "0x800f8d80",
+    "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType": "0x80127638",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "GetRotationMatrix__C13TriggerObjectR7CMatrix": "0x80122df8",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

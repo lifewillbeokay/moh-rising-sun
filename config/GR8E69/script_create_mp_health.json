@@ -1,0 +1,56 @@
+{
+  "id": "script_create_mp_health",
+  "source": "src/script/create_mp_health.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801183d8",
+      "size": 576
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_CreateMPHealth__FPPiPv",
+      "address": "0x801183d8",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateMPRankedAmmoWeapon__FPPiPv",
+      "address": "0x801184c8",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType": "0x80127638",
+    "GetMatrix__C13TriggerObjectR7CMatrix": "0x80122d30",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pMPWeaponSet": "0x802c4784"
+  },
+  "local_externals": [
+    "g_pMPWeaponSet"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,58 @@
+{
+  "id": "script_create_child_root_hier_object",
+  "source": "src/script/create_child_root_hier_object.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100f34",
+      "size": 636
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_CreateChildRootHierObject__FPPiPv",
+      "address": "0x80100f34",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateChildSubHierObject__FPPiPv",
+      "address": "0x80100fe8",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateChildSubHierAnimObject__FPPiPv",
+      "address": "0x801010c0",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AssetCRC__FPc": "0x800f8d80",
+    "CreateRootHierObject__FP13TriggerObjectiii": "0x80129270",
+    "CreateSubHierAnimObject__FP11CHierObjectiiUiiii": "0x8012a0a8",
+    "CreateSubHierObject__FP11CHierObjectiiUiii": "0x80129a9c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

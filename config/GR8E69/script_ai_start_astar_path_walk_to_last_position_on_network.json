@@ -1,0 +1,56 @@
+{
+  "id": "script_ai_start_astar_path_walk_to_last_position_on_network",
+  "source": "src/script/ai_start_astar_path_walk_to_last_position_on_network.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fb36c",
+      "size": 620
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a58b4",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIStartAStarPathWalkToLastPositionOnNetwork__FPPiPv",
+      "address": "0x800fb36c",
+      "size": 312,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AtClosestPointToPlayerOffNetwork__FPPiPv",
+      "address": "0x800fb4a4",
+      "size": 308,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquared__C8CVector3RC8CVector3": "0x8007bdac",
+    "GetClosestPositionOnAStar__C18CAIAreaPathFindingP8CVector3": "0x800ebde0",
+    "SetMovePoint__F14EMovePointTypeP10ISceneNodeR8CVector3f": "0x800fc290",
+    "StartAStarPathWalk__18CAIAreaPathFinding21EAStarDestinationInfo": "0x800ea078",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

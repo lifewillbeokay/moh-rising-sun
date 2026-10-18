@@ -1,0 +1,53 @@
+{
+  "id": "script_set_prop_draw",
+  "source": "src/script/set_prop_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010c6e0",
+      "size": 392
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5c78",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetPropDraw__FPPiPv",
+      "address": "0x8010c6e0",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetDrawEnabled__FPPiPv",
+      "address": "0x8010c7a0",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetAttachedObjectAt__14CSoldierObjectPc": "0x800c0724",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

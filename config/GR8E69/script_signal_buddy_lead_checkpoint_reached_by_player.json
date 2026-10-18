@@ -1,0 +1,42 @@
+{
+  "id": "script_signal_buddy_lead_checkpoint_reached_by_player",
+  "source": "src/script/signal_buddy_lead_checkpoint_reached_by_player.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801197b0",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SignalBuddyLeadCheckpointReachedByPlayer__FPPiPv",
+      "address": "0x801197b0",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "HandleCheckpointReachedByPlayer__18CBuddyLeadBehaviori": "0x800e4d48",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

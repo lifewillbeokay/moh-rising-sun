@@ -1,0 +1,80 @@
+{
+  "id": "script_stop_check_objects_inside_range",
+  "source": "src/script/stop_check_objects_inside_range.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80102c48",
+      "size": 860
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_StopCheckObjectsInsideRange__FPPiPv",
+      "address": "0x80102c48",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopCheckObjectsOutsideRange__FPPiPv",
+      "address": "0x80102cf4",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopCheckObjectsInsideAngularRange__FPPiPv",
+      "address": "0x80102da0",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopCheckObjectsOutsideAngularRange__FPPiPv",
+      "address": "0x80102e4c",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopPositionCheck__FPPiPv",
+      "address": "0x80102ef8",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Unregister__10BSScheduleP35BSScheduleRegistrationRecord_struct": "0x8011e85c",
+    "Unregister__10BSScheduleP8BSObject": "0x8011e8d8",
+    "g_CheckObjectsInsideAngularRangeSchedule": "0x803262b0",
+    "g_CheckObjectsInsideRangeSchedule": "0x80326278",
+    "g_CheckObjectsOutsideAngularRangeSchedule": "0x803262cc",
+    "g_CheckObjectsOutsideRangeSchedule": "0x80326294",
+    "g_PositionSchedule": "0x803262e8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "local_externals": [
+    "g_CheckObjectsInsideAngularRangeSchedule",
+    "g_CheckObjectsInsideRangeSchedule",
+    "g_CheckObjectsOutsideAngularRangeSchedule",
+    "g_CheckObjectsOutsideRangeSchedule",
+    "g_PositionSchedule"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

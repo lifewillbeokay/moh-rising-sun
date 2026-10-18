@@ -1,0 +1,45 @@
+{
+  "id": "script_can_i_create_child",
+  "source": "src/script/can_i_create_child.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010171c",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_CanICreateChild__FPPiPv",
+      "address": "0x8010171c",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_iGermanCreationQueueHeadIndex": "0x802c4ae8",
+    "g_iGermanCreationQueueTailIndex": "0x802c4aec",
+    "g_maxActiveSoldiers": "0x8032d018",
+    "g_numActiveSoldiers": "0x8032d014",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

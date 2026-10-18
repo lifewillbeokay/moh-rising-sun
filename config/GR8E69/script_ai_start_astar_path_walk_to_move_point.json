@@ -1,0 +1,64 @@
+{
+  "id": "script_ai_start_astar_path_walk_to_move_point",
+  "source": "src/script/ai_start_astar_path_walk_to_move_point.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fb5d8",
+      "size": 520
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIStartAStarPathWalkToMovePoint__FPPiPv",
+      "address": "0x800fb5d8",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStopAStarPathWalk__FPPiPv",
+      "address": "0x800fb678",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStartCoverPointWalk__FPPiPv",
+      "address": "0x800fb6ec",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStopCoverPointWalk__FPPiPv",
+      "address": "0x800fb768",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "StartAStarPathWalk__18CAIAreaPathFinding21EAStarDestinationInfo": "0x800ea078",
+    "StartCoverPointWalk__19CCoverpointBehavior": "0x800f1cd8",
+    "StopAStarPathWalk__18CAIAreaPathFinding": "0x800eb780",
+    "StopCoverPointWalk__19CCoverpointBehavior": "0x800f2634",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

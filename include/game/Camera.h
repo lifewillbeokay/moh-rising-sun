@@ -48,4 +48,6 @@ public:
     void UpdateWorldToClip();
 };
 typedef char CCameraPrefixSizeCheck[sizeof(CCamera) == 0x2b0 ? 1 : -1];
+// Original storage (0x2c0 bytes); this declaration does not allocate it.
+extern CCamera g_camera;
 #endif

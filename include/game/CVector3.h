@@ -31,6 +31,12 @@ class CVector3 {
         z += o.z;
         return *this;
     }
+    CVector3 &operator-=(const CVector3 &o) {
+        x -= o.x;
+        y -= o.y;
+        z -= o.z;
+        return *this;
+    }
     void Set(float ax, float ay, float az) {
         x = ax;
         y = ay;

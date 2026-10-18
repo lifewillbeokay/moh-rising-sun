@@ -1,0 +1,42 @@
+{
+  "id": "script_get_random_integer",
+  "source": "src/script/get_random_integer.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100c28",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_GetRandomInteger__FPPiPv",
+      "address": "0x80100c28",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunRandomI64__Fxx": "0x801339dc",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

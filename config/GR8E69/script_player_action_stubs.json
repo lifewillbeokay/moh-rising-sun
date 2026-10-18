@@ -1,0 +1,77 @@
+{
+  "id": "script_player_action_stubs",
+  "source": "src/script/player_action_stubs.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801004c8",
+      "size": 344
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerGeneratedTrigger__FPPiPv",
+      "address": "0x801004c8",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetFullscreenMode__FPPiPv",
+      "address": "0x80100500",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerToggleDuckForShoulderClimb__FPPiPv",
+      "address": "0x80100530",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerJumpOverShoulderClimb__FPPiPv",
+      "address": "0x80100560",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerInsideCrouchAction__FPPiPv",
+      "address": "0x80100590",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerOutsideCrouchAction__FPPiPv",
+      "address": "0x801005c0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ToggleCoopMechanicIcon__FPPiPv",
+      "address": "0x801005f0",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

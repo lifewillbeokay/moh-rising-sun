@@ -1,0 +1,50 @@
+{
+  "id": "script_serializing_in",
+  "source": "src/script/serializing_in.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80114040",
+      "size": 208
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SerializingIn__FPPiPv",
+      "address": "0x80114040",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SerializingOut__FPPiPv",
+      "address": "0x801140a8",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SerializingIn__C13CGameSettings": "0x80170ee0",
+    "SerializingOut__C13CGameSettings": "0x80170ef4",
+    "g_GameSettings": "0x802f80c8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

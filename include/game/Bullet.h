@@ -9,6 +9,10 @@ class CCollision;
 class CProjectileBullet;
 class CThrownBullet;
 
+// Original enum tag; script bullet-type numbers are used directly.
+enum EScriptBulletType { ScriptBulletTypeUnknown = 0 };
+int GetClassFromBulletType(EScriptBulletType);
+
 // CBullet's table (0x802e9eb0) follows the IMovingSceneNode slot map and adds slots
 // 89-102 in this order. Field names are descriptive; unlisted storage is unknown.
 class CBullet : public IMovingSceneNode {
@@ -84,6 +88,7 @@ class CProjectileBullet : public CBullet {
 
 class CThrownBullet : public CBullet {
   public:
+    void SomebodyCaughtYou();
     unsigned char unknown_b8[0xc8 - 0xb8];
     ThrownBulletProperties_struct *properties;     // Stored by Init.
     unsigned char unknown_cc[0xe0 - 0xcc];
@@ -103,7 +108,27 @@ class CThrownBullet : public CBullet {
     void SetBlastRadius(float);
     void SetExplosionParticleSystem(unsigned long, EXPLOSION_PARTICLE_TYPE);
     CLight *GetAttachedLight() const;
+    void SetDetonationTime(float);
     virtual unsigned int IsCollisionEnabled() const;
 };
 
+// Scoped view of the hit record passed to the damage built-in.
+struct ScriptHitInfo {
+    int unknown_0;
+    float damage;                  // +0x4
+    int unknown_8;
+    EScriptBulletType bulletType;  // +0xc
+    int location;                  // +0x10
+};
+class CScene;
+class ISceneNode;
+class CVector3;
+// Stack-constructed blast; its constructor writes through +0x44. The script
+// built-ins fix its frame at 0x4c or 0x50 bytes; 0x4c is used here.
+class CExplosion {
+  public:
+    unsigned char unknown_0[0x4c];
+    CExplosion(CScene &, const CVector3 &, float, float, float, EScriptBulletType, ISceneNode *, bool, bool);
+    ~CExplosion();
+};
 #endif

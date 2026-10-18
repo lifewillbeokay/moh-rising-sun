@@ -1,0 +1,44 @@
+{
+  "id": "script_soldier_ai_start_spline_path_walk",
+  "source": "src/script/soldier_ai_start_spline_path_walk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fade0",
+      "size": 228
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_Soldier_AIStartSplinePathWalk__FPPiPv",
+      "address": "0x800fade0",
+      "size": 228,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSplinePath__C15CAIFilterGlobalUib": "0x800d86c4",
+    "StartSplinePathWalkForward__19CAISplinePathModuleP13CAISplinePath": "0x800e0a8c",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

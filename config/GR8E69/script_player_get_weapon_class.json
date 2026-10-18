@@ -1,0 +1,42 @@
+{
+  "id": "script_player_get_weapon_class",
+  "source": "src/script/player_get_weapon_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100438",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerGetWeaponClass__FPPiPv",
+      "address": "0x80100438",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

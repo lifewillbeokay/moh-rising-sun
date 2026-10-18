@@ -1,0 +1,50 @@
+{
+  "id": "script_register_astar_link_point",
+  "source": "src/script/register_astar_link_point.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fde60",
+      "size": 192
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_RegisterAStarLinkPoint__FPPiPv",
+      "address": "0x800fde60",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterAStarVolume__FPPiPv",
+      "address": "0x800fdec8",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RegisterAStarLinkPoint__18CAIAreaPathFindingP13TriggerObjectiii": "0x800ebe50",
+    "RegisterAStarVolume__18CAIAreaPathFindingP13TriggerObjecti": "0x800ec344",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

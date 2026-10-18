@@ -1,0 +1,41 @@
+{
+  "id": "script_bs_object_as_scene_node",
+  "source": "src/script/bs_object_as_scene_node.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100e80",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_BSObject_AsSceneNode__FPPiPv",
+      "address": "0x80100e80",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

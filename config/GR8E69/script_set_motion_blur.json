@@ -1,0 +1,47 @@
+{
+  "id": "script_set_motion_blur",
+  "source": "src/script/set_motion_blur.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80115498",
+      "size": 208
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5ef4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetMotionBlur__FPPiPv",
+      "address": "0x80115498",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetFrameBlur__10MotionBlurffff": "0x8006afe4",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

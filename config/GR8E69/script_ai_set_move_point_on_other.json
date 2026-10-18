@@ -1,0 +1,55 @@
+{
+  "id": "script_ai_set_move_point_on_other",
+  "source": "src/script/ai_set_move_point_on_other.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fcc64",
+      "size": 404
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a58f4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AISetMovePointOnOther__FPPiPv",
+      "address": "0x800fcc64",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AIStartMovePointWalk__FPPiPv",
+      "address": "0x800fcd18",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "SetMovePoint__F14EMovePointTypeP10ISceneNodeR8CVector3f": "0x800fc290",
+    "StartWalkToArbitraryPoint__13CAILocomotionR8CVector3": "0x800ef0a0",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

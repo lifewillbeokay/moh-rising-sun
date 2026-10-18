@@ -1,0 +1,42 @@
+{
+  "id": "script_is_player_holding_weapon",
+  "source": "src/script/is_player_holding_weapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80100050",
+      "size": 92
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsPlayerHoldingWeapon__Fv",
+      "address": "0x80100050",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,43 @@
+{
+  "id": "script_sword_drawn",
+  "source": "src/script/sword_drawn.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011a76c",
+      "size": 188
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SwordDrawn__FPPiPv",
+      "address": "0x8011a76c",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "IsSwordDrawn__14CSwordBehavior": "0x800e59b4",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,54 @@
+{
+  "id": "script_translate_rel",
+  "source": "src/script/translate_rel.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010a6ac",
+      "size": 888
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5b88",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_TranslateRel__FPPiPv",
+      "address": "0x8010a6ac",
+      "size": 428,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RotateRel__FPPiPv",
+      "address": "0x8010a858",
+      "size": 460,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSubObject__11CHierObjecti": "0x800d078c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

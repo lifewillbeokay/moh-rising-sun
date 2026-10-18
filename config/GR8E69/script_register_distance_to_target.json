@@ -1,0 +1,97 @@
+{
+  "id": "script_register_distance_to_target",
+  "source": "src/script/register_distance_to_target.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801019c4",
+      "size": 1616
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_RegisterDistanceToTarget__FPPiPv",
+      "address": "0x801019c4",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsInsideAngularRange__FPPiPv",
+      "address": "0x80101af4",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsOutsideAngularRange__FPPiPv",
+      "address": "0x80101bcc",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsInsideRange__FPPiPv",
+      "address": "0x80101ca4",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsOutsideRange__FPPiPv",
+      "address": "0x80101d80",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsInsideRange_Secondary__FPPiPv",
+      "address": "0x80101e5c",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_RegisterCheckObjectsOutsideRange_Secondary__FPPiPv",
+      "address": "0x80101f38",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "HasValidTarget__C12CAITargeting": "0x800edb64",
+    "Register__10BSScheduleP8BSObjectUsbiiiii": "0x8011e770",
+    "g_CheckObjectsInsideAngularRangeSchedule": "0x803262b0",
+    "g_CheckObjectsInsideRangeSchedule": "0x80326278",
+    "g_CheckObjectsInsideRangeSchedule_Secondary": "0x80326304",
+    "g_CheckObjectsOutsideAngularRangeSchedule": "0x803262cc",
+    "g_CheckObjectsOutsideRangeSchedule": "0x80326294",
+    "g_CheckObjectsOutsideRangeSchedule_Secondary": "0x80326320",
+    "g_DistanceToTargetSchedule": "0x80326208",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "local_externals": [
+    "g_CheckObjectsInsideAngularRangeSchedule",
+    "g_CheckObjectsInsideRangeSchedule",
+    "g_CheckObjectsInsideRangeSchedule_Secondary",
+    "g_CheckObjectsOutsideAngularRangeSchedule",
+    "g_CheckObjectsOutsideRangeSchedule",
+    "g_CheckObjectsOutsideRangeSchedule_Secondary",
+    "g_DistanceToTargetSchedule"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

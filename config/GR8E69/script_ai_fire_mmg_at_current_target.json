@@ -1,0 +1,42 @@
+{
+  "id": "script_ai_fire_mmg_at_current_target",
+  "source": "src/script/ai_fire_mmg_at_current_target.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fbffc",
+      "size": 248
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIFireMMGAtCurrentTarget__FPPiPv",
+      "address": "0x800fbffc",
+      "size": 248,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FireMMG__14CSoldierObjectP13CStaticObject": "0x800c0224",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

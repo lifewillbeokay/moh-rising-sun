@@ -1,0 +1,43 @@
+{
+  "id": "script_ai_set_status_var",
+  "source": "src/script/ai_set_status_var.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fd43c",
+      "size": 396
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AISetStatusVar__FPPiPv",
+      "address": "0x800fd43c",
+      "size": 396,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetVarValue__C9CAIStatus12aistatus_var": "0x8028399c",
+    "SetVarValue__9CAIStatus12aistatus_vari": "0x80283a80",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

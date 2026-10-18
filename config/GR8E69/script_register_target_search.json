@@ -1,0 +1,49 @@
+{
+  "id": "script_register_target_search",
+  "source": "src/script/register_target_search.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80102334",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_RegisterTargetSearch__FPPiPv",
+      "address": "0x80102334",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Register__10BSScheduleP8BSObjectUsbiiiii": "0x8011e770",
+    "SetupFieldOfViewModeList__9CAIObjectP14aistatus_matchiff": "0x800db1c0",
+    "SetupLineOfSightModeList__9CAIObjectP14aistatus_matchif": "0x800dbbb0",
+    "g_TargetSearchSchedule": "0x80326224",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "local_externals": [
+    "g_TargetSearchSchedule"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

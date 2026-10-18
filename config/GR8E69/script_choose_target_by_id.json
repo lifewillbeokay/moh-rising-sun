@@ -1,0 +1,42 @@
+{
+  "id": "script_choose_target_by_id",
+  "source": "src/script/choose_target_by_id.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fa61c",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChooseTargetByID__FP9CAIObjectP8BSObject",
+      "address": "0x800fa61c",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetNonAITarget__12CAITargetingP8BSObject": "0x800edbcc",
+    "SetTarget__12CAITargetingP9CAIObject": "0x800ed9bc",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

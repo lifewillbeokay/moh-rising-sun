@@ -1,0 +1,51 @@
+{
+  "id": "script_add_objective",
+  "source": "src/script/add_objective.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80109ee4",
+      "size": 340
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AddObjective__FPPiPv",
+      "address": "0x80109ee4",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ChangeObjectivePrompt__FPPiPv",
+      "address": "0x80109f9c",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObjective__17CPlayerObjectivesUiUibN23": "0x8017bf80",
+    "ChangeObjectivePrompt__17CPlayerObjectivesUiUi": "0x8017c054",
+    "g_Objectives": "0x803e81a4",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_iHighestObjectiveNumber": "0x803266bc",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

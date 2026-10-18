@@ -1,0 +1,50 @@
+{
+  "id": "script_register_location_target",
+  "source": "src/script/register_location_target.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fa8a0",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_RegisterLocationTarget__FPPiPv",
+      "address": "0x800fa8a0",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_DeRegisterLocationTarget__FPPiPv",
+      "address": "0x800fa934",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DeRegisterLocationTarget__12CAITargetingi": "0x800ee848",
+    "RegisterLocationTarget__12CAITargetingib5ETeamP8BSObject": "0x800ee6c8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,56 @@
+{
+  "id": "script_stop_check_objects_inside_range_secondary",
+  "source": "src/script/stop_check_objects_inside_range_secondary.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80102014",
+      "size": 344
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_StopCheckObjectsInsideRange_Secondary__FPPiPv",
+      "address": "0x80102014",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_StopCheckObjectsOutsideRange_Secondary__FPPiPv",
+      "address": "0x801020c0",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Unregister__10BSScheduleP35BSScheduleRegistrationRecord_struct": "0x8011e85c",
+    "Unregister__10BSScheduleP8BSObject": "0x8011e8d8",
+    "g_CheckObjectsInsideRangeSchedule_Secondary": "0x80326304",
+    "g_CheckObjectsOutsideRangeSchedule_Secondary": "0x80326320",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "local_externals": [
+    "g_CheckObjectsInsideRangeSchedule_Secondary",
+    "g_CheckObjectsOutsideRangeSchedule_Secondary"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

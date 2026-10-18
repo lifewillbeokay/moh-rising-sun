@@ -1,0 +1,47 @@
+{
+  "id": "script_modify_motion_data",
+  "source": "src/script/modify_motion_data.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010a54c",
+      "size": 352
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_ModifyMotionData__FPPiPv",
+      "address": "0x8010a54c",
+      "size": 352,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSubObject__11CHierObjecti": "0x800d078c",
+    "InitMotionData__FPCc": "0x800cdcc8",
+    "ModifyMotionData__11CHierObjectP10MotionData": "0x800d2b5c",
+    "ModifyMotionData__13CStaticObjectP10MotionData": "0x800a93a4",
+    "StopMotionPlayback__13CStaticObject": "0x800a9384",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

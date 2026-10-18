@@ -1,0 +1,55 @@
+{
+  "id": "script_player_is_my_weapon_a_projectile",
+  "source": "src/script/player_is_my_weapon_a_projectile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fed3c",
+      "size": 352
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerIsMyWeaponAProjectile__FPPiPv",
+      "address": "0x800fed3c",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetPlayerWielding__FPPiPv",
+      "address": "0x800fedb8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerFireMyWeapon__FPPiPv",
+      "address": "0x800fee08",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FireMyWeapon__13CPlayerObjectf": "0x800b4dac",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

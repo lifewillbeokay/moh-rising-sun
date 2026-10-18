@@ -1,0 +1,49 @@
+{
+  "id": "script_enter_astar_volume",
+  "source": "src/script/enter_astar_volume.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fdd20",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_EnterAStarVolume__FPPiPv",
+      "address": "0x800fdd20",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ExitAStarVolume__FPPiPv",
+      "address": "0x800fddc0",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnterAStarVolume__18CAIAreaPathFindingi": "0x800ebe20",
+    "ExitAStarVolume__18CAIAreaPathFindingi": "0x800ebe34",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

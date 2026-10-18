@@ -1,0 +1,47 @@
+{
+  "id": "script_ai_get_previous_behavior_script",
+  "source": "src/script/ai_get_previous_behavior_script.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80118914",
+      "size": 384
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AIGetPreviousBehaviorScript__FPPiPv",
+      "address": "0x80118914",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AISetPreviousBehaviorScript__FPPiPv",
+      "address": "0x801189d4",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

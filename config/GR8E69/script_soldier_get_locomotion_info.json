@@ -1,0 +1,48 @@
+{
+  "id": "script_soldier_get_locomotion_info",
+  "source": "src/script/soldier_get_locomotion_info.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80118fac",
+      "size": 360
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_Soldier_GetLocomotionInfo__FPPiPv",
+      "address": "0x80118fac",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_Soldier_EnableSkeletalPartition__FPPiPv",
+      "address": "0x80119060",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnableSkeletalPartition__14CSoldierObjectQ214CSoldierObject9Partition": "0x800c1110",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

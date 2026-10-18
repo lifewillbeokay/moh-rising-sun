@@ -1,0 +1,40 @@
+{
+  "id": "script_get_soldier_weapon_in_slot",
+  "source": "src/script/get_soldier_weapon_in_slot.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010b908",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetSoldierWeaponInSlot__Fi",
+      "address": "0x8010b908",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBSObject": "0x8031d100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

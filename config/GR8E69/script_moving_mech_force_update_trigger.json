@@ -1,0 +1,49 @@
+{
+  "id": "script_moving_mech_force_update_trigger",
+  "source": "src/script/moving_mech_force_update_trigger.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011461c",
+      "size": 328
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_MovingMechForceUpdateTrigger__FPPiPv",
+      "address": "0x8011461c",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_MechSetFlag__FPPiPv",
+      "address": "0x80114684",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ForceUpdateProximityTriggerStatus__FP10BSGO_Basicb": "0x80123bf8",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

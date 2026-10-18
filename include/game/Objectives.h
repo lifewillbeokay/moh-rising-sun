@@ -16,6 +16,8 @@ class PopUpMessageHandler {
     CUserMessageTable messages;
 };
 extern PopUpMessageHandler *g_pPopUpMessageHandler;
+void appendMessageToPrompt(const char *, int);
+void displayPromptBuffer(short, float);
 
 // One of ten 20-byte objective records. Names are descriptive.
 struct PlayerObjective {

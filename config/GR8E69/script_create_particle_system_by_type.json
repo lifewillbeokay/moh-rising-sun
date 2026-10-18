@@ -1,0 +1,71 @@
+{
+  "id": "script_create_particle_system_by_type",
+  "source": "src/script/create_particle_system_by_type.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80108898",
+      "size": 1396
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5b68",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_CreateParticleSystemByType__FPPiPv",
+      "address": "0x80108898",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateParticleSystemByName__FPPiPv",
+      "address": "0x80108a18",
+      "size": 388,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateParticleSystemByNameAtAttachPoint__FPPiPv",
+      "address": "0x80108b9c",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_CreateParticleSystemByNameAtWeaponsAttachPoint__FPPiPv",
+      "address": "0x80108cc0",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AssetCRC__FPc": "0x800f8d80",
+    "Create__10CPSManagerUib15eParticleSystem": "0x80066a70",
+    "GetMatrix__C13TriggerObjectR7CMatrix": "0x80122d30",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "PreTranslate__7CMatrixRC8CVector3": "0x8007ae98",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

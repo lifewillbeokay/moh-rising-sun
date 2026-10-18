@@ -1,0 +1,52 @@
+{
+  "id": "script_set_anim_adjust",
+  "source": "src/script/set_anim_adjust.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fa160",
+      "size": 288
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a58a8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetAnimAdjust__FPPiPv",
+      "address": "0x800fa160",
+      "size": 288,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "GetRotationMatrix__C13TriggerObjectR7CMatrix": "0x80122df8",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "StartAnimAdjust__11CAnimObjectRC8CVector3fb": "0x800a5d30",
+    "ToEulerXYZ__C7CMatrixRfN21": "0x8007b8b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

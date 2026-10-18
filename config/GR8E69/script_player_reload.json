@@ -1,0 +1,63 @@
+{
+  "id": "script_player_reload",
+  "source": "src/script/player_reload.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800fee9c",
+      "size": 472
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayerStartReloading__FPPiPv",
+      "address": "0x800fee9c",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerReloadSingle__FPPiPv",
+      "address": "0x800fef10",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerClearReloading__FPPiPv",
+      "address": "0x800fef84",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayerFinishedReloading__FPPiPv",
+      "address": "0x800ff000",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DoneReloading__7CWeapon": "0x8014bb1c",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "ReloadSingle__7CWeapon": "0x8014bae0",
+    "StartReloading__7CWeapon": "0x8014bad0",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

@@ -1,0 +1,50 @@
+{
+  "id": "script_update_player_stats",
+  "source": "src/script/update_player_stats.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80112290",
+      "size": 616
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_UpdatePlayerStats__FPPiPv",
+      "address": "0x80112290",
+      "size": 616,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "Set_enemiesKilled__13CGameSettingsUib": "0x8016da6c",
+    "Set_hitsTaken__13CGameSettingsUib": "0x8016da44",
+    "Set_hits__13CGameSettingsUib": "0x8016da1c",
+    "Set_shotLocation__13CGameSettingsUi14EShotLocationsb": "0x8016da94",
+    "Set_shotsFired__13CGameSettingsUib": "0x8016d9f4",
+    "g_GameSettings": "0x802f80c8",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

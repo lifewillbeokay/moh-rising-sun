@@ -1,0 +1,57 @@
+{
+  "id": "script_buddy_cant_reach_target",
+  "source": "src/script/buddy_cant_reach_target.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80113374",
+      "size": 632
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_BuddyCantReachTarget__FPPiPv",
+      "address": "0x80113374",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_BuddyFinishedMovingAway__FPPiPv",
+      "address": "0x8011342c",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetDistances__FPPiPv",
+      "address": "0x801134e4",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CantReachTarget__20CBuddyFollowBehavior": "0x800e54f8",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "FinishedMovingAway__20CBuddyFollowBehavior": "0x800e5708",
+    "SetDistances__20CBuddyFollowBehaviorffff": "0x800e5590",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

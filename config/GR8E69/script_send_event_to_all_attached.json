@@ -1,0 +1,45 @@
+{
+  "id": "script_send_event_to_all_attached",
+  "source": "src/script/send_event_to_all_attached.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80110480",
+      "size": 324
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SendEventToAllAttached__FPPiPv",
+      "address": "0x80110480",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetChild__17CAttachableObjecti": "0x800ba3c8",
+    "GetFirstChildHandle__17CAttachableObject": "0x800ba340",
+    "GetNextChildHandle__17CAttachableObjecti": "0x800ba378",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

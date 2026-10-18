@@ -1,0 +1,53 @@
+{
+  "id": "script_is_player_crouching",
+  "source": "src/script/is_player_crouching.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801001e8",
+      "size": 332
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_IsPlayerCrouching__FPPiPv",
+      "address": "0x801001e8",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetPlayerFallingDamage__FPPiPv",
+      "address": "0x801002a4",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "IsPlayerCrouching__C13CPlayerObject": "0x800b7640",
+    "SetFallingDamageState__13CPlayerObjectb": "0x800b4d9c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

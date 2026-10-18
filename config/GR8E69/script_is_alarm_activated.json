@@ -1,0 +1,51 @@
+{
+  "id": "script_is_alarm_activated",
+  "source": "src/script/is_alarm_activated.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d83ac",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_IsAlarmActivated__FPPiPv",
+      "address": "0x800d83ac",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_SetAlarmActivated__FPPiPv",
+      "address": "0x800d83e8",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_alarm_activated": "0x802c3438",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "local_externals": [
+    "g_alarm_activated"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "alarm.cpp",
+  "original_file_index": 964
+}
