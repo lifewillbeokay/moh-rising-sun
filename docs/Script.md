@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-373 fragments in `src/script/` reconstruct **600 functions and 103,516
+375 fragments in `src/script/` reconstruct **606 functions and 104,816
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -17,7 +17,8 @@ default/list routines (132 bytes), three objective built-ins (368 bytes), three
 ambient-sound built-ins (536 bytes), two value built-ins (144 bytes), and a
 projectile aim helper with two projectile controls (832 bytes), and seven fog,
 far-clip and particle-sorting controls (656 bytes), and 507 further built-in wrappers
-and stubs (89,840 bytes; [see below](#built-in-wrappers-stubs-and-ai-behavior-controls)).
+and stubs (89,840 bytes; [see below](#built-in-wrappers-stubs-and-ai-behavior-controls)),
+and six follow-up wrappers (1,300 bytes; [evidence below](#follow-up-wrappers-from-pr-31)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -380,8 +381,9 @@ the stack after the call. The latter field is re-read after the music call, pres
 the original dependency on current table state. Other fields remain unknown.
 
 `PathfinderSetLevel`, `PathfinderEvent` and `PathfinderSetLatency` each forward their
-first integer argument to the corresponding `MUSIC_*` routine. Those music routines,
-the table's initialization, and `PathfinderFadeVolume` remain original context.
+first integer argument to the corresponding `MUSIC_*` routine. Those music routines
+and the table's initialization remain original context. `PathfinderFadeVolume`
+now has matching source in the [follow-up batch](#follow-up-wrappers-from-pr-31).
 Historical return-type spelling for ignored-return interfaces is not established
 by this reconstruction.
 
@@ -398,7 +400,7 @@ the established objective, sound, script-object and vector interfaces.
 | `script_objective_queries` | `GetObjective`, `CheckMainObjectiveStatus` | 236 |
 | `script_ambience` | `AmbientTrack_Select`, `AmbientTrack_Volume` | 344 |
 | `script_ambience_location` | `AmbientTrack_Azimuth` | 192 |
-| `script_values` | `FloatToInt`, `InitToInvalid` | 144 |
+| `script_music_values_rotation` (value functions) | `FloatToInt`, `InitToInvalid` | 144 |
 
 The wrappers locate the first argument one four-byte slot above the argument base
 calculated from the table's signed `argumentCount`. After an external call they
@@ -442,11 +444,12 @@ wrapper generates that separate four-byte vector-constructor `1.0f` at
 `0x802a5df4`. The annotation is not a recovered historical identifier. No emitted
 data or padding is discarded, and no instruction is patched.
 
-`AddObjective`, `ChangeObjectivePrompt`, `SetObjective`, both random-value wrappers
-and `PathfinderFadeVolume` remain original context. Research implementations have
-unresolved differences in argument-load scheduling/register copies; they receive
-no source credit. The eight accepted wrappers and their complete allocated sections
-match, and the complete source-built analysis image is compared separately.
+The initial experiments for `AddObjective`, `ChangeObjectivePrompt`, `SetObjective`,
+the random-value wrappers and `PathfinderFadeVolume` had argument-load scheduling
+and register-copy differences. The [larger built-in batch](#built-in-wrappers-stubs-and-ai-behavior-controls)
+and [follow-up work](#follow-up-wrappers-from-pr-31) subsequently reconstructed them.
+Only the accepted bodies and their complete generated sections receive credit;
+the complete source-built analysis image is compared separately.
 Runtime and emulator behavior remain untested.
 
 ## Script game-object bridge
@@ -635,7 +638,8 @@ discarded, and no instructions are patched.
 
 ## Built-in wrappers, stubs and AI behavior controls
 
-316 fragments add **507 functions and 89,840 executable bytes** from the
+PR [#31](https://github.com/lifewillbeokay/moh-rising-sun/pull/31) introduced
+316 fragments containing **507 functions and 89,840 executable bytes** from the
 `bsbifunc.cpp` marker interval. All use the ProDG 3.8.1 profile of the earlier
 built-ins and are independent fragments, not recovered file boundaries.
 
@@ -881,8 +885,8 @@ result order are written with their case groups in that order.
 | `script_remove_vocal` | `RemoveVocal`, `Soldier_RemoveVocal` | `0x80107aa8` | 416 |
 | `script_activate_sound_buss` | `ActivateSoundBuss` | `0x80107c48` | 92 |
 | `script_end_sound` | `EndSound` | `0x80107ca4` | 148 |
-| `script_generic_sound_memory` | `GetGenericSoundStructureMemory` | `0x801086b4` | 60 |
-| `script_reset_particle_system_rotation` | `ResetParticleSystemRotation` | `0x80108780` | 280 |
+| `script_music_values_rotation` (sound memory) | `GetGenericSoundStructureMemory` | `0x801086b4` | 60 |
+| `script_music_values_rotation` (rotation) | `ResetParticleSystemRotation` | `0x80108780` | 280 |
 | `script_create_particle_system_by_type` | `CreateParticleSystemByType`, `CreateParticleSystemByName`, `CreateParticleSystemByNameAtAttachPoint`, `CreateParticleSystemByNameAtWeaponsAttachPoint` | `0x80108898` | 1396 |
 | `script_set_particle_system_velocity` | `SetParticleSystemVelocity` | `0x80108e0c` | 252 |
 | `script_destroy_particle_system` | `DestroyParticleSystem` | `0x80108f08` | 152 |
@@ -1079,11 +1083,62 @@ under the current manifest rules:
   a still-unmatched function.
 
 Others are close but not yet exact: `IsAliasSoundLooping` (which also holds the
-`"none"` string that `PlayAliasSound` and `PlayVocal` need), both `GetObjInfo`
-variants, `AddPlayerAmmo`, `SetExpression`, `TeleportToPlayerByNavPoint`,
+`"none"` string that `PlayAliasSound` and `PlayVocal` need), `Soldier_GetObjInfo`,
+`AddPlayerAmmo`, `SetExpression`, `TeleportToPlayerByNavPoint`,
 `CanMeleeTarget`, `SetBlinkState`, `SetDefaultFogParams`,
 `GetSpeedRelativeToPlayer`, `MoveFromObjToObj`, `MechFollowPath` and
 `PlayVibrationEvent`. These remain original context.
+
+## Follow-up wrappers from PR #31
+
+kyleckroeger's [PR #31](https://github.com/lifewillbeokay/moh-rising-sun/pull/31)
+provided the argument-access and float-return idioms above, along with useful
+near-match and constant-ownership leads. Applying those notes to independently
+checked GR8E69 instructions adds six complete functions, **1,300 executable
+bytes**, with the same ProDG 3.8.1 profile:
+
+| Function (`BIFunc_` prefix omitted) | Address | New code bytes | Observed behavior |
+| --- | --- | ---: | --- |
+| `GetObjInfo` | `0x801051b4` | 256 | Calls the original query helper with three script arguments and the native receiver, then returns either integer or float bits according to the helper's output flag. |
+| `MakeNoiseFromInputTrigger` | `0x801058d0` | 224 | Reads the trigger position and calls `MakeNoise` with type 49 for a nonzero flag, otherwise 48, and the supplied float radius. |
+| `PathfinderFadeVolume` | `0x80108584` | 180 | Converts the integer volume to float, scales by `0.01f`, and calls `MUSIC_Fade` with the second integer argument unchanged. It does not clamp the volume. |
+| `SetLightVolumeTransitionDuration` | `0x80109b98` | 248 | Resolves an explicit script object's scene node or uses the current receiver, then sets the duration if `AsMovingNode` succeeds. |
+| `SetGrenadeSlot` | `0x8010bc1c` | 200 | Searches weapon slots 0 through 3 for the first weapon with class 7, storing its slot or -1 in the receiver's script data at `+0x84`. |
+| `EjectHelmet` | `0x80116b68` | 192 | Initializes the vector's fourth word to one and x/y/z to zero, replaces z with the script argument, and forwards the vector to the native soldier. |
+
+`GetObjInfo`'s integer local precedes its boolean local, reproducing the original
+initialization-store order. A plain, function-scope float temporary and a
+`volatile int` read reproduce the by-reference result's store/load sequence.
+This accepts only the 256-byte wrapper; the 6,228-byte query helper at
+`0x80103960` and `Soldier_GetObjInfo` remain original context. The trigger-noise
+wrapper reuses the flag local for the selected noise type, preserving its lifetime
+across vector construction. `EjectHelmet` uses a descriptive inline `ClearVector`
+helper and a local vector pointer; these are reconstruction choices, not recovered
+historical names or evidence for another `CVector3` constructor.
+
+The grenade-slot prefix is local to that wrapper. Only the signed word at `+0x84`
+is established; earlier bytes remain opaque, and the view must not be used to
+allocate script objects. Its weapon search uses the already reconstructed
+`GetSoldierWeaponInSlot`. None of these wrappers adds validation or null checks
+absent from the original.
+
+**Complete constant ownership.** `music_values_rotation.cpp` compiles the
+contiguous `0x80108584`–`0x80108897` range: the new fade wrapper followed by the
+already accepted `PathfinderSetLatency`, `GetGenericSoundStructureMemory`,
+`FloatToInt`, `InitToInvalid` and `ResetParticleSystemRotation`. It replaces four
+smaller manifests. The six bodies total 788 bytes, but only the fade wrapper's
+180 bytes are new progress; the other 608 bytes retain their existing credit.
+This is a selected fragment of `bsbifunc.cpp`, not a recovered file boundary.
+
+Together they generate the complete 16-byte read-only pool at `0x802a5b58`:
+the integer-conversion double, fade scale `0.01f`, and rotation vector's `1.0f`.
+Compiling fade alone would instead pad the pool over the neighboring vector
+constant. Combining the actual neighboring bodies verifies all emitted data
+without clipping padding, importing uncompiled bytes or patching instructions.
+The other new wrappers generate 16 read-only bytes in total: four each for the
+object-query and trigger-position wrappers and eight for helmet ejection.
+Of the 32 generated data bytes checked by the six new manifests, four were
+already accepted with the rotation wrapper; none earns code-progress credit.
 
 ## Verification and next work
 

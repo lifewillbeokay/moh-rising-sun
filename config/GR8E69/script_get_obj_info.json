@@ -1,6 +1,6 @@
 {
-  "id": "script_values",
-  "source": "src/script/values.cpp",
+  "id": "script_get_obj_info",
+  "source": "src/script/get_obj_info.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,25 +18,25 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x801086f0",
-      "size": 144
+      "address": "0x801051b4",
+      "size": 256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5a50",
+      "size": 4
     }
   ],
   "functions": [
     {
-      "name": "BIFunc_FloatToInt__FPPiPv",
-      "address": "0x801086f0",
-      "size": 88,
-      "binding": 1
-    },
-    {
-      "name": "BIFunc_InitToInvalid__FPPiPv",
-      "address": "0x80108748",
-      "size": 56,
+      "name": "BIFunc_GetObjInfo__FPPiPv",
+      "address": "0x801051b4",
+      "size": 256,
       "binding": 1
     }
   ],
   "externals": {
+    "GetObjInfo__FiP8BSObjectfP10ISceneNodeRbRiRf": "0x80103960",
     "g_iCurrentBIFIndex": "0x803263e4",
     "g_pBuiltInFunctions": "0x8032638c"
   },

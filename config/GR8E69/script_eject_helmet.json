@@ -1,6 +1,6 @@
 {
-  "id": "script_generic_sound_memory",
-  "source": "src/script/generic_sound_memory.cpp",
+  "id": "script_eject_helmet",
+  "source": "src/script/eject_helmet.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,22 +18,27 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x801086b4",
-      "size": 60
+      "address": "0x80116b68",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5f24",
+      "size": 8
     }
   ],
   "functions": [
     {
-      "name": "BIFunc_GetGenericSoundStructureMemory__FPPiPv",
-      "address": "0x801086b4",
-      "size": 60,
+      "name": "BIFunc_EjectHelmet__FPPiPv",
+      "address": "0x80116b68",
+      "size": 192,
       "binding": 1
     }
   ],
   "externals": {
+    "EjectHelmet__14CSoldierObjectR8CVector3": "0x800bf8c8",
     "g_iCurrentBIFIndex": "0x803263e4",
-    "g_pBuiltInFunctions": "0x8032638c",
-    "g_pGenericSoundMemory": "0x8032666c"
+    "g_pBuiltInFunctions": "0x8032638c"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
