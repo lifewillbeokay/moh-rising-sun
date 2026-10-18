@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-375 fragments in `src/script/` reconstruct **606 functions and 104,816
+378 fragments in `src/script/` reconstruct **611 functions and 106,156
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -18,7 +18,9 @@ ambient-sound built-ins (536 bytes), two value built-ins (144 bytes), and a
 projectile aim helper with two projectile controls (832 bytes), and seven fog,
 far-clip and particle-sorting controls (656 bytes), and 507 further built-in wrappers
 and stubs (89,840 bytes; [see below](#built-in-wrappers-stubs-and-ai-behavior-controls)),
-and six follow-up wrappers (1,300 bytes; [evidence below](#follow-up-wrappers-from-pr-31)).
+six follow-up wrappers (1,300 bytes; [evidence below](#follow-up-wrappers-from-pr-31)),
+and five sound, path-flag and damage wrappers (1,340 bytes;
+[evidence below](#sound-playback-path-flags-and-location-damage)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -1070,20 +1072,20 @@ not `bsbifunc.cpp`. `AISetStatusVar` treats status variable 11 reaching 15 as a
 death (Frontline uses 13). `MechFollowPath` scales its speed by 1/59.94 and its
 angles by degrees-per-frame in radians.
 
-**Remaining blockers.** Some built-ins cannot be separated into their own units
-under the current manifest rules:
+**Remaining blockers.** Some built-ins still need storage or scope work before
+acceptance:
 - `ModifyTotalKillableEnemyCount` reads a string merged with an earlier
   function's literal.
 - `AttachToSoldier`, `AttachToSoldierEmptyHand`, `AttachMMGProp` and
   `DetachMMGProp` read `"rt_hand"`, which the linker shares with another file.
 - `GiveEnemyGrenadeWeapon`, its `Soldier_` variant and the bearing built-ins use
   function-local statics with dynamic initialization in `.bss`.
-- `MechSetPathFlag` and `DoDamageIfLocationMatches` match as code, but their
-  double-plus-float read-only data pads to 16 bytes while the next word belongs to
-  a still-unmatched function.
 
-Others are close but not yet exact: `IsAliasSoundLooping` (which also holds the
-`"none"` string that `PlayAliasSound` and `PlayVocal` need), `Soldier_GetObjInfo`,
+`MechSetPathFlag` and `DoDamageIfLocationMatches` now have matching source and
+complete generated-data verification through the literal placement described
+[below](#sound-playback-path-flags-and-location-damage).
+
+Others are close but not yet exact: `IsAliasSoundLooping`, `Soldier_GetObjInfo`,
 `AddPlayerAmmo`, `SetExpression`, `TeleportToPlayerByNavPoint`,
 `CanMeleeTarget`, `SetBlinkState`, `SetDefaultFogParams`,
 `GetSpeedRelativeToPlayer`, `MoveFromObjToObj`, `MechFollowPath` and
@@ -1139,6 +1141,78 @@ The other new wrappers generate 16 read-only bytes in total: four each for the
 object-query and trigger-position wrappers and eight for helmet ejection.
 Of the 32 generated data bytes checked by the six new manifests, four were
 already accepted with the rotation wrapper; none earns code-progress credit.
+
+## Sound playback, path flags and location damage
+
+A second follow-up to kyleckroeger's [PR #31](https://github.com/lifewillbeokay/moh-rising-sun/pull/31)
+uses its argument-access pattern, float-return sequence, switch-case ordering and
+constant-ownership notes to reconstruct five more functions. They were independently
+checked against GR8E69 with Codex assistance and the same ProDG 3.8.1 profile.
+Three new manifests add **1,340 executable bytes** and **56 generated read-only
+bytes**, with no changes to shared headers or prior accepted fragments.
+
+| Manifest | Function (`BIFunc_` prefix omitted) | Address | Code bytes |
+| --- | --- | --- | ---: |
+| `script_alias_playback` | `PlayAliasSound` | `0x80107788` | 244 |
+| `script_alias_playback` | `PlayAliasSoundOnOther` | `0x8010787c` | 312 |
+| `script_alias_playback` | `PlayVocal` | `0x801079b4` | 244 |
+| `script_mech_path_flag` | `MechSetPathFlag` | `0x80114518` | 260 |
+| `script_location_damage` | `DoDamageIfLocationMatches` | `0x80116258` | 280 |
+
+**Sound playback.** `PlayAliasSound` and `PlayVocal` compare their unsigned sound
+ID with `GetStringCRC("none")`, returning -1 for that sentinel. Otherwise they
+call the original `PlaySoundFromTriggerOrObject2` with the current script object,
+its native trigger, the supplied native receiver and flags, and a zero x/y/z
+offset whose fourth word is one. The last argument selects ordinary sound or
+vocal playback. A zero sound ID is not separately rejected.
+
+`PlayAliasSoundOnOther` resolves its first argument's native trigger and, when
+its weak game-object pointer is present, its scene node. It returns -1 if both
+are null; otherwise it uses them as the playback receiver while retaining
+`g_pBSObject` as the script context. This variant does not check the `"none"`
+sentinel. All three wrappers return the helper's handle after the table-directed
+stack adjustment. The playback helper remains original context; `GetStringCRC`
+already has accepted source.
+
+The complete sound pool at `0x802a5b28` is 32 bytes: the five-byte `"none"` string,
+three alignment bytes, then three zero/one float pairs. `IsAliasSoundLooping` also
+references that string but remains unmatched. The accepted playback source emits
+the shared literal itself at the existing address; accepting its caller does not
+require crediting the earlier query function. A future reconstruction of that
+query must share this pool rather than claim overlapping data ownership.
+
+**Mech path flags.** The receiver is converted with `AsStaticObject` before
+reading the arguments. Selector 1 writes bit 23 of the word at `+0x218`, normalized
+from the supplied integer. Selector 0 and every other selector store the integer
+converted to float and multiplied by `0.01f` at `+0x110`. The explicit case 0
+preserves the original switch decision tree. There is no clamp or new null check.
+The existing scoped `CStaticObject` view is reused without expanding its layout.
+
+**Location damage.** The first argument is the existing `ScriptHitInfo` prefix.
+If its location at `+0x10` differs from the requested location, the wrapper returns
+the input float unchanged. On a match, an available hierarchy receiver supplies
+a damage multiplier for that location and the mapped bullet class. The wrapper
+multiplies the hit record's damage at `+4` in place, then subtracts that damage
+from the input float. Without a hierarchy receiver, it subtracts the original
+damage directly. The result becomes zero unless it is strictly greater than the
+double constant `0.001`; the original unordered comparison also sends NaN to
+zero on this path. The result is returned as float bits at the adjusted stack
+top; PR #31's temporary-value idiom reproduces the observed store/load schedule.
+The class-mapping helper already matches; hierarchy-specific damage multiplication
+remains original context.
+
+**Literal placement.** Each of the last two functions uses an eight-byte constant
+followed by a four-byte float. The path wrapper's conversion double is at
+`0x802a5ec0`, with `0.01f` at `0x802a5ec8`. The damage wrapper's double threshold
+is at `0x802a5f18`, with zero at `0x802a5f20`. In separate translation units, leaving
+the float in the compiler's double-aligned pool generates unwanted trailing
+padding over the next function's literal. The source therefore places that float
+in a four-byte `.rodata.*` subsection, using the same descriptive storage
+annotation as the accepted arithmetic and ambience fragments. The labels are not
+recovered historical globals. Both complete generated sections are compared;
+no emitted bytes are discarded, no instructions are patched, and the neighboring
+vibration and helmet-ejection constants retain their existing ownership. All 56
+data bytes are excluded from executable progress.
 
 ## Verification and next work
 

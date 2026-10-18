@@ -1,0 +1,52 @@
+{
+  "id": "script_mech_path_flag",
+  "source": "src/script/mech_path_flag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80114518",
+      "size": 260
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5ec0",
+      "size": 8
+    },
+    {
+      "name": ".rodata.path_scale",
+      "address": "0x802a5ec8",
+      "size": 4,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_MechSetPathFlag__FPPiPv",
+      "address": "0x80114518",
+      "size": 260,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}
