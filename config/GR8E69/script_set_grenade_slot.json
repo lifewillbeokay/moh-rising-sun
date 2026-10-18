@@ -1,6 +1,6 @@
 {
-  "id": "script_music_latency",
-  "source": "src/script/music_latency.cpp",
+  "id": "script_set_grenade_slot",
+  "source": "src/script/set_grenade_slot.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,22 +18,22 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80108638",
-      "size": 124
+      "address": "0x8010bc1c",
+      "size": 200
     }
   ],
   "functions": [
     {
-      "name": "BIFunc_PathfinderSetLatency__FPPiPv",
-      "address": "0x80108638",
-      "size": 124,
+      "name": "BIFunc_SetGrenadeSlot__FPPiPv",
+      "address": "0x8010bc1c",
+      "size": 200,
       "binding": 1
     }
   ],
   "externals": {
+    "GetSoldierWeaponInSlot__Fi": "0x8010b908",
     "g_iCurrentBIFIndex": "0x803263e4",
-    "g_pBuiltInFunctions": "0x8032638c",
-    "MUSIC_SetLatency__Fi": "0x80159130"
+    "g_pBuiltInFunctions": "0x8032638c"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],

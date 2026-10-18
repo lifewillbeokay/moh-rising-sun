@@ -1,0 +1,83 @@
+{
+  "id": "script_music_values_rotation",
+  "source": "src/script/music_values_rotation.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80108584",
+      "size": 788
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5b58",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PathfinderFadeVolume__FPPiPv",
+      "address": "0x80108584",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PathfinderSetLatency__FPPiPv",
+      "address": "0x80108638",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_GetGenericSoundStructureMemory__FPPiPv",
+      "address": "0x801086b4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_FloatToInt__FPPiPv",
+      "address": "0x801086f0",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_InitToInvalid__FPPiPv",
+      "address": "0x80108748",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_ResetParticleSystemRotation__FPPiPv",
+      "address": "0x80108780",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "MUSIC_Fade__Ffi": "0x80159270",
+    "MUSIC_SetLatency__Fi": "0x80159130",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pGenericSoundMemory": "0x8032666c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

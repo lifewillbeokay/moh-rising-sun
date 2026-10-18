@@ -1,6 +1,6 @@
 {
-  "id": "script_reset_particle_system_rotation",
-  "source": "src/script/reset_particle_system_rotation.cpp",
+  "id": "script_make_noise_from_input_trigger",
+  "source": "src/script/make_noise_from_input_trigger.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,28 +18,26 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80108780",
-      "size": 280
+      "address": "0x801058d0",
+      "size": 224
     },
     {
       "name": ".rodata",
-      "address": "0x802a5b64",
+      "address": "0x802a5a70",
       "size": 4
     }
   ],
   "functions": [
     {
-      "name": "BIFunc_ResetParticleSystemRotation__FPPiPv",
-      "address": "0x80108780",
-      "size": 280,
+      "name": "BIFunc_MakeNoiseFromInputTrigger__FPPiPv",
+      "address": "0x801058d0",
+      "size": 224,
       "binding": 1
     }
   ],
   "externals": {
-    "GetSlot__7CMatrixUi": "0x802790e0",
-    "InitClass__7CMatrix": "0x8007a9b4",
-    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
-    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "MakeNoise__FPvP9CAIObjectRC8CVector3ifbi": "0x800f4034",
     "g_iCurrentBIFIndex": "0x803263e4",
     "g_pBuiltInFunctions": "0x8032638c"
   },
