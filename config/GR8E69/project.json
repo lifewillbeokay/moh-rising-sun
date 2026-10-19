@@ -1229,7 +1229,11 @@
     "script_music_values_rotation.json",
     "script_alias_playback.json",
     "script_mech_path_flag.json",
-    "script_location_damage.json"
+    "script_location_damage.json",
+    "script_soldier_attach.json",
+    "script_enemy_count.json",
+    "script_animated_crc.json",
+    "crc.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

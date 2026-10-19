@@ -30,6 +30,7 @@ class TriggerObject {
     int GetFieldOffset(const char *) const;
     void *GetData(int) const;
     int GetEnum(const char *) const;
+    int GetInt(const char *) const;
     int GetCRC(const char *) const;
     bool HasField(const char *) const;
     void GetPosition(CVector3 &) const;

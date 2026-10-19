@@ -1,0 +1,48 @@
+{
+  "id": "crc",
+  "source": "src/crc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802868f8",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reset__4CCRC",
+      "address": "0x802868f8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__apl__4CCRCUc",
+      "address": "0x80286904",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "u4Reflect__4CCRCUiUi",
+      "address": "0x802869b4",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

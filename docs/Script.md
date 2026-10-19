@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-378 fragments in `src/script/` reconstruct **611 functions and 106,156
+381 fragments in `src/script/` reconstruct **615 functions and 107,368
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -20,7 +20,9 @@ far-clip and particle-sorting controls (656 bytes), and 507 further built-in wra
 and stubs (89,840 bytes; [see below](#built-in-wrappers-stubs-and-ai-behavior-controls)),
 six follow-up wrappers (1,300 bytes; [evidence below](#follow-up-wrappers-from-pr-31)),
 and five sound, path-flag and damage wrappers (1,340 bytes;
-[evidence below](#sound-playback-path-flags-and-location-damage)).
+[evidence below](#sound-playback-path-flags-and-location-damage)), and four attachment,
+enemy-count and texture-hash wrappers (1,212 bytes;
+[evidence below](#soldier-attachments-enemy-counts-and-texture-crc)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -1074,10 +1076,9 @@ angles by degrees-per-frame in radians.
 
 **Remaining blockers.** Some built-ins still need storage or scope work before
 acceptance:
-- `ModifyTotalKillableEnemyCount` reads a string merged with an earlier
-  function's literal.
-- `AttachToSoldier`, `AttachToSoldierEmptyHand`, `AttachMMGProp` and
-  `DetachMMGProp` read `"rt_hand"`, which the linker shares with another file.
+- `AttachMMGProp` and `DetachMMGProp` read the hand-name strings now owned by
+  `script_soldier_attach`. They still need a verified shared-storage scope rather
+  than duplicate ownership of those literals.
 - `GiveEnemyGrenadeWeapon`, its `Soldier_` variant and the bearing built-ins use
   function-local statics with dynamic initialization in `.bss`.
 
@@ -1213,6 +1214,96 @@ recovered historical globals. Both complete generated sections are compared;
 no emitted bytes are discarded, no instructions are patched, and the neighboring
 vibration and helmet-ejection constants retain their existing ownership. All 56
 data bytes are excluded from executable progress.
+
+## Soldier attachments, enemy counts and texture CRC
+
+A further batch applies kyleckroeger's [PR #31](https://github.com/lifewillbeokay/moh-rising-sun/pull/31)
+argument-loading and shared-literal leads to four built-ins, and follows the texture
+hash wrapper into its three `CCRC` dependencies. Codex independently reconstructed
+all seven functions from GR8E69. Four manifests add **1,484 executable bytes**
+(1,212 in `src/script/`, 272 in `src/crc.cpp`) and **220 read-only bytes** using
+ProDG 3.8.1 with the usual script flags. No compiler output is stripped or patched.
+
+| Manifest | Function | Address | Code bytes |
+| --- | --- | --- | ---: |
+| `script_soldier_attach` | `BIFunc_AttachToSoldier` | `0x8010fb90` | 300 |
+| `script_soldier_attach` | `BIFunc_AttachToSoldierEmptyHand` | `0x8010fcbc` | 376 |
+| `script_enemy_count` | `BIFunc_ModifyTotalKillableEnemyCount` | `0x801124f8` | 212 |
+| `script_animated_crc` | `BIFunc_GetAnimatedTextureCRC` | `0x80119c28` | 324 |
+| `crc` | `CCRC::Reset` | `0x802868f8` | 12 |
+| `crc` | `CCRC::operator+=(unsigned char)` | `0x80286904` | 176 |
+| `crc` | `CCRC::u4Reflect(unsigned int, unsigned int)` | `0x802869b4` | 84 |
+
+**Attachment behavior.** `AttachToSoldier` resolves the supplied script object's
+scene node, attaches it at `lt_hand` for selector 0 or `rt_hand` for selector 1,
+and passes the third argument unchanged as flags. It removes the node from the
+scene regardless of the attachment result, including when neither selector
+matches. This is the observed behavior, not a success-only removal policy.
+
+`AttachToSoldierEmptyHand` first checks that the resolved node is in the scene.
+Otherwise, it prints the existing duplicate/removed-prop diagnostic with the
+trigger's `ID` when the script-object pointer is nonzero. For a present node it
+tries the right hand, then the left hand only if the first attempt fails. It
+returns 1 for right-hand success, 0 for left-hand success, or -1 for failure,
+removing the node only after success. The shared exit preserves the original
+branch order and stack adjustment. Both functions dereference the input before
+any diagnostic-path pointer check; they retain the original valid-object
+precondition. The existing scene and animated-object interfaces are unchanged.
+
+**Enemy-count behavior.** `ModifyTotalKillableEnemyCount` adds the signed script
+argument to `g_iNumberOfEnemiesSpawned` only when the current trigger's native
+binding type is 3 and its `Team` integer is 2. That path also prints the original
+message containing “Ignoring for total enemy count”; despite that wording, the
+instructions do update the counter. The manifest keeps the original global and
+trigger methods external. `TriggerObject.h` adds only the symbol-supported
+`GetInt(const char *) const` declaration, with no storage or virtual-table change.
+
+**Shared literal ownership.** The attachment fragment emits the complete diagnostic
+pool at `0x802a5d20` (100 bytes), `lt_hand` at `0x802a5d18` (8 bytes), `rt_hand` at
+`0x802a55fc` (8 bytes) and `ID` at `0x802a59ec` (4 bytes). The counter fragment
+emits its diagnostic at `0x802a5e28` (68 bytes) and `Team` at `0x802a59e4` (8 bytes).
+Each named literal is placed in a read-only subsection using the project's
+existing literal-placement mechanism; names describe storage and are not
+recovered globals. Character-list initializers keep `ID` and `Team` in those
+sections instead of being folded into the compiler's ordinary string pool.
+All terminators and emitted alignment bytes are compared. Other original callers
+continue to use the same shared bytes and earn no new credit; future source must
+not claim these ranges again.
+
+**Texture hashing and CCRC.** The built-in copies at most 1,024 bytes of its string
+argument into a stack buffer with `strncpy`, lowercases it with `strlwr`, allocates
+28 bytes with `DWI_alloc` and initializes a reflected 32-bit CRC with polynomial
+`0x04c11db7`, an all-ones mask, initial value and final XOR. After `Reset`, it feeds
+bytes until the first zero, reflects the accumulated value and applies the final
+XOR, deletes the CRC object, and returns the bits in the script stack. The original
+24-byte allocation-label pool at `0x802a5564` is generated and checked. The wrapper
+adds neither an allocation-failure branch nor an explicit buffer terminator after
+`strncpy`; inputs must satisfy the original string/buffer preconditions.
+
+`include/game/CRC.h` describes the seven four-byte fields established by that
+28-byte allocation, initialization and the three methods. Field names, the
+original constructor spelling and the unused return types of `Reset`/`operator+=`
+are not recovered. The reconstruction initializes the fields explicitly, preserving
+the emitted store order, rather than inventing a historical constructor signature.
+The three globally named method ranges are verified directly; their original
+translation-unit boundary is unproven and the manifest does not assign one.
+
+`Reset` copies the initial value into the running value. The byte-update operator
+optionally reflects eight input bits, XORs them into the high part of the CRC,
+then performs eight shift/polynomial steps, masking after each step. `u4Reflect`
+reverses the requested low bits while leaving higher input bits intact; a zero
+count returns the input. The wrapper uses width 32 and reflection counts 8 and 32.
+No new checks or portable behavior for invalid shift counts are claimed. This
+bitwise class is separate from the previously accepted, table-driven
+`GetStringCRC`; the texture wrapper also lowercases its input, which that helper
+does not do.
+
+The complete-image build verifies these fragments together with every prior unit.
+A separate host build of `src/crc.cpp` agrees with Python's `zlib.crc32` for the
+empty string, `123456789` and `texture.dds`; reflection checks also preserve upper
+bits and the zero-count input. This tests the recovered CRC interpretation, not
+game execution. All generated data is excluded from code progress. Runtime and
+emulator behavior remain untested.
 
 ## Verification and next work
 

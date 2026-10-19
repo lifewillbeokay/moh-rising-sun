@@ -1,0 +1,53 @@
+{
+  "id": "script_animated_crc",
+  "source": "src/script/animated_crc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80119c28",
+      "size": 324
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5564",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_GetAnimatedTextureCRC__FPPiPv",
+      "address": "0x80119c28",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Reset__4CCRC": "0x802868f8",
+    "__apl__4CCRCUc": "0x80286904",
+    "__builtin_delete": "0x801a8990",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "strlwr": "0x80266bdc",
+    "strncpy": "0x80266dd4",
+    "u4Reflect__4CCRCUiUi": "0x802869b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

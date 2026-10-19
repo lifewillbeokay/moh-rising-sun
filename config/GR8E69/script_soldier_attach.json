@@ -1,0 +1,75 @@
+{
+  "id": "script_soldier_attach",
+  "source": "src/script/soldier_attach.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010fb90",
+      "size": 676
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5d20",
+      "size": 100
+    },
+    {
+      "name": ".rodata.left_hand",
+      "address": "0x802a5d18",
+      "size": 8,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.right_hand",
+      "address": "0x802a55fc",
+      "size": 8,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.id_field",
+      "address": "0x802a59ec",
+      "size": 4,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_AttachToSoldier__FPPiPv",
+      "address": "0x8010fb90",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_AttachToSoldierEmptyHand__FPPiPv",
+      "address": "0x8010fcbc",
+      "size": 376,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "GetInt__C13TriggerObjectPCc": "0x80122844",
+    "IsNodeInScene__C6CScenePC10ISceneNode": "0x8014ac34",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

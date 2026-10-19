@@ -1,0 +1,57 @@
+{
+  "id": "script_enemy_count",
+  "source": "src/script/enemy_count.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801124f8",
+      "size": 212
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5e28",
+      "size": 68
+    },
+    {
+      "name": ".rodata.team_field",
+      "address": "0x802a59e4",
+      "size": 8,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_ModifyTotalKillableEnemyCount__FPPiPv",
+      "address": "0x801124f8",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "GetInt__C13TriggerObjectPCc": "0x80122844",
+    "GetNativeBindingType__C13TriggerObject": "0x80122e9c",
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_iNumberOfEnemiesSpawned": "0x8032d020",
+    "g_pBSObject": "0x8031d100",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}
