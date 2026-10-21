@@ -1233,7 +1233,11 @@
     "script_soldier_attach.json",
     "script_enemy_count.json",
     "script_animated_crc.json",
-    "crc.json"
+    "crc.json",
+    "trigger_typed_fields.json",
+    "trigger_enum_list.json",
+    "trigger_identity.json",
+    "trigger_base_name.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

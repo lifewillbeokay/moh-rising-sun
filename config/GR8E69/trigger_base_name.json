@@ -1,0 +1,42 @@
+{
+  "id": "trigger_base_name",
+  "source": "src/triggers/TriggerBaseName.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122a18",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetBaseName__FPCcPc",
+      "address": "0x80122a18",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "strchr": "0x80266918",
+    "strcpy": "0x80266a7c",
+    "strrchr": "0x80266f20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

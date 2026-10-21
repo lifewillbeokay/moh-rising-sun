@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 737620,
+    "matching_code_bytes": 739140,
     "total_executable_code_bytes": 2492032,
-    "percent": 29.599138373825056,
+    "percent": 29.660132775181058,
     "categories": {
-      "reconstructed_game": 345404,
+      "reconstructed_game": 346924,
       "restored_library": 392216
     },
-    "matching_functions": 2997
+    "matching_functions": 3009
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -640,7 +640,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "817012f5c446d88311aa71fa0544e09fbc020cec3b4e8ddf1d919ddeae033ad7",
+    "config/GR8E69/project.json": "0f3fcf1782cd37bf5f417f3838cec64a73c7be2754596e966131b7c0c726f8f2",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1239,13 +1239,17 @@
     "config/GR8E69/thrown_collision_id.json": "04d24660bd9119a8a1e1f3ab63098d321f48395eaf774e07e78d90c255f397ef",
     "config/GR8E69/thrown_collision_light.json": "fdfd6732347b431c2ac9a3fd1a931f21fe5eb21c21321383bbbac597cb6dcd27",
     "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
+    "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
     "config/GR8E69/trigger_crc.json": "57cd002698d440841e4fb02835924dc36c0243c2405dfaf44d33d792c3bb8767",
+    "config/GR8E69/trigger_enum_list.json": "43e0bdac06e0ad1ebc92997f0a17f9ac31026f38f3a09e1103e403e2a8c5bb41",
     "config/GR8E69/trigger_field_offset.json": "93d865e0819dd4ba96e97db94628e893061def8364a0e0a8b2b822d5ee9e3740",
     "config/GR8E69/trigger_field_position.json": "c665f68cb33d085bced8a95d9efd2c497942ef0a270cc7501958b1a220a07c8d",
+    "config/GR8E69/trigger_identity.json": "32a45e5f347acc6556248455cc3ffda1b5a4546e62dff08bc551c830addbe829",
     "config/GR8E69/trigger_mg_flag.json": "65ef538055b6a3394f4c7e55ab5c6372e7495bf5a0b15232d52959f43d2dc679",
     "config/GR8E69/trigger_point_test.json": "fbed27bb04bae97da04f0a9f8cf6cf9677e553207b7b28031038f4cef4074ee6",
     "config/GR8E69/trigger_position_z.json": "eec30ac89d31e13a4242a958f3a1a703efc3cb388c8548071479bc20a93fda89",
+    "config/GR8E69/trigger_typed_fields.json": "aa3758e3e206708f2cd8e42a9fcaf87b495b75b47b47bd23ee2a180f385c2121",
     "config/GR8E69/vector_dot.json": "3a018e12136189037665a12a59e33136f545f8777e45cf4813501da197158016",
     "config/GR8E69/vector_methods.json": "912ec9c6f429286eddc371a4eb9c495967c3be2239f5254be03ef35402d749e5",
     "config/GR8E69/vi.json": "dd95046e01890cb33bdb0006c936ff713366f21401f267c9cf268a70ac8b8833",
@@ -1488,6 +1492,7 @@
     "include/game/Frustum.h": "517f595d8940b305a44b055a26e31588a43151816c24e27381a86ae90cfc6062",
     "include/game/GameSettings.h": "c7165131b00f5b517b2950f9154e869382c8f8b27c05ea0c4e3febb6d7fb26eb",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
+    "include/game/LegacyField.h": "3c683aeabb0beee5b8282d74ebf4ee9dbc149fc1c395aa12a8f722cbc4f209b8",
     "include/game/Light.h": "3e6d3b90e5f95e09203a7333f15d856e04c645967b5e2bbfe50361742a406ee7",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
@@ -1513,7 +1518,7 @@
     "include/game/TARExtension.h": "cf1f48aa0be63a29babdba7f53c58439facb94141d7e04d0d32fcc878bad2cb3",
     "include/game/TevStage.h": "47aaf3de5425dace0c30e2852896a9494f78ab4a4dcaad6be03d4aa4204d7466",
     "include/game/TevStageInlines.h": "03b19716c4d88b4eb2f3c74cdf2040ca0bb6c43e842d1eefc2c8bd148a278645",
-    "include/game/TriggerObject.h": "6ccc96738bbb0eccaa33894ffc71dbe7e37551cb82cae8d8cc897f7d7a5a1cf9",
+    "include/game/TriggerObject.h": "cd7b8a148c74c52a82226874562d185c49ba25eb056b38626aae9f41fcd54200",
     "include/game/Volume.h": "c81634d5040c155172fe79d9c2c0d4303e184e17736667562e84e4a03ea0c839",
     "include/game/Weapon.h": "d8d9930cfad9bab9e7430ac7dd79ddfd55c7507ee0af7c7203e5d348a1b72c42",
     "include/game/WorldObject.h": "42b3aea62c8f901dc28efdec6da40b0c2a9ff8a32e667ddb2d8d53cbefa87c16",
@@ -2961,13 +2966,17 @@
     "src/stlport/tree_impl.h": "a20d4ffe6b46823cc4dceeba30bdd7aa285453aedd811b72e698ced00a4e502b",
     "src/string_crc.cpp": "fd942a8cef3597b73ede9a98e461447854127fb60411d49b2d5edac94da9e6c0",
     "src/sys_memory.cpp": "410ee07c9718afe0881a5f14e4c15815cd33bb035d05b19ad6cf4135dae323d8",
+    "src/triggers/TriggerBaseName.cpp": "2a819d05d32a484de94b6f477345ac5a568a93ef16626a45887c45d8706ce7d6",
     "src/triggers/TriggerCRC.cpp": "63a73103ce5d533542444f8cf0e72cfe2a9465d0dd683453594c1445f3314d88",
     "src/triggers/TriggerClassQueries.cpp": "a255ba4b654549127c92f4aa12259953c16deaa90ea143ee9095ffa183ca3196",
+    "src/triggers/TriggerEnumList.cpp": "a30d377b8240cc4fb48d4f6137a79be75ec76659ced4db8cb4b8268eedb582d6",
     "src/triggers/TriggerFieldOffset.cpp": "975f36f14daba01860762fe00e01f5b8bd3d06be1030aa827d15d7d2ccbc75e3",
     "src/triggers/TriggerFieldPosition.cpp": "58fdd0a8e43de5b0eb6b91b34535ece24541b1d62636cfa6f7e685123a65ef1c",
+    "src/triggers/TriggerIdentity.cpp": "9ef6c2db15cb2486f0d28e7cf03658fc61ec6074ff30d4ea2cf6553b9ad85d7d",
     "src/triggers/TriggerMGFlag.cpp": "123c5d4300b4a5dfce512a895bd83eb718d3098c3a4d33dab915b5236bb2ea9b",
     "src/triggers/TriggerPointTest.cpp": "6476383c9da337c1c51527cfd0eb81f3dac75ea87ca9d3cf6841676d3405f945",
     "src/triggers/TriggerPositionZ.cpp": "8133df34772c29939b958d590f5c7d8edc4dee3766866058b6ff3dbe024cefc1",
+    "src/triggers/TriggerTypedFields.cpp": "9e5921a0f7a2b61330423d544c4090fc188546cc61c1c4cf7d08f8705a10e7c3",
     "tools/audit.py": "42f9dd301ef76d300f0cad2f791ddbcac862418b6532e252fc38c02d1a222245",
     "tools/baseline.py": "9705053a0b99d969062f336b609a5ea4e0e5bc354d5619ecb9be6698530b314c",
     "tools/code_map.py": "1bb7545aef44792f54bfe21539f3e1ca2a61f14c57b8ddb81c342cf44a525901",
@@ -28714,6 +28723,78 @@
       "discarded_functions": [],
       "object_sha256": "6fc617c2ad5ade973bcffd37ad2c939fd9b815365199275135ce333696f2c382",
       "linked_sha256": "2f84b2f66ebaaa9e982054d9ac95d29681a2daa9d18fcf71e484c042a7409d23"
+    },
+    {
+      "id": "trigger_typed_fields",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 436,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2f59143ce97edc6a043f193ae0b2bba5cda868a6bd0b8ebf759d81db3d915c4f",
+      "linked_sha256": "0f3b0417f7a8bfdb12817b51c04d88c3f1d60bf21731c1c8952df37f111462a9"
+    },
+    {
+      "id": "trigger_enum_list",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 328,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "91f03eafe58473de0738cce1c1104acda3a2b64a9b22d5bfe660cd3861accdfe",
+      "linked_sha256": "dd6ac7c918667d92aadc4e6cb2a94a79b34370b57e257e55f33ad6e478dea572"
+    },
+    {
+      "id": "trigger_identity",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 600,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2c3b090aede161cb9d276d0bcb96a005f745f063b4e89235b5c43cc3466d7a05",
+      "linked_sha256": "45e7de67ff43cb3e633bc5ddae7a71dc5afd87e88ca7939af317ef228d0aa999"
+    },
+    {
+      "id": "trigger_base_name",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 156,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9db473d316304b2224a9c3a09c1bda607b5ea7d1d1fab56f163d489d814b6c3e",
+      "linked_sha256": "aa52f56b59d561420c865db81971164f6f22f5ec5dea76bd568ea37c76867aa8"
     }
   ],
   "code_map": {
@@ -52179,55 +52260,6 @@
             "evidence": "local-file-symbol"
           },
           {
-            "address": "0x80122844",
-            "size": 108,
-            "kind": "function",
-            "name": "GetInt__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801228b0",
-            "size": 112,
-            "kind": "function",
-            "name": "GetFloat__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122920",
-            "size": 108,
-            "kind": "function",
-            "name": "GetString__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012298c",
-            "size": 108,
-            "kind": "function",
-            "name": "GetBool__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122a18",
-            "size": 156,
-            "kind": "function",
-            "name": "GetBaseName__FPCcPc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122ab4",
-            "size": 220,
-            "kind": "function",
-            "name": "GetEnum__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122b90",
-            "size": 108,
-            "kind": "function",
-            "name": "GetList__C13TriggerObjectPCc",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80122c9c",
             "size": 148,
             "kind": "function",
@@ -52246,41 +52278,6 @@
             "size": 164,
             "kind": "function",
             "name": "GetRotationMatrix__C13TriggerObjectR7CMatrix",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122e9c",
-            "size": 252,
-            "kind": "function",
-            "name": "GetNativeBindingType__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122f98",
-            "size": 64,
-            "kind": "function",
-            "name": "GetChildType__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122fd8",
-            "size": 68,
-            "kind": "function",
-            "name": "GetID__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012301c",
-            "size": 112,
-            "kind": "function",
-            "name": "GetScript__C13TriggerObject",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8012308c",
-            "size": 104,
-            "kind": "function",
-            "name": "GetChildScript__C13TriggerObject",
             "evidence": "adjacent-compiler-markers"
           },
           {
