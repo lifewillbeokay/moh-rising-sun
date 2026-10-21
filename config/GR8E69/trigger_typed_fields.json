@@ -1,0 +1,80 @@
+{
+  "id": "trigger_typed_fields",
+  "source": "src/triggers/TriggerTypedFields.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122844",
+      "size": 436
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6a68",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetInt__C13TriggerObjectPCc",
+      "address": "0x80122844",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetFloat__C13TriggerObjectPCc",
+      "address": "0x801228b0",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "GetString__C13TriggerObjectPCc",
+      "address": "0x80122920",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetBool__C13TriggerObjectPCc",
+      "address": "0x8012298c",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBool__C8FlexPropPCc": "0x80126408",
+    "GetFloat__C8FlexPropPCc": "0x80126390",
+    "GetInt__C8FlexPropPCc": "0x80126318",
+    "GetLegacyFieldBool__FPvP15LegacyFieldInfoiPCcRb": "0x801223c0",
+    "GetLegacyFieldFloat__FPvP15LegacyFieldInfoiPCcRf": "0x80122564",
+    "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi": "0x80122484",
+    "GetLegacyFieldString__FPvP15LegacyFieldInfoiPCcRPCc": "0x8012267c",
+    "GetLegacyField__H1ZPCc_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286cb4",
+    "GetLegacyField__H1Zb_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286dac",
+    "GetLegacyField__H1Zf_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286bbc",
+    "GetLegacyField__H1Zi_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286ac4",
+    "GetString__C8FlexPropPCc": "0x801263cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204,
+  "local_externals": [
+    "GetLegacyFieldBool__FPvP15LegacyFieldInfoiPCcRb",
+    "GetLegacyFieldFloat__FPvP15LegacyFieldInfoiPCcRf",
+    "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi",
+    "GetLegacyFieldString__FPvP15LegacyFieldInfoiPCcRPCc"
+  ]
+}

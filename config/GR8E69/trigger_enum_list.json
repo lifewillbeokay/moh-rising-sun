@@ -1,0 +1,59 @@
+{
+  "id": "trigger_enum_list",
+  "source": "src/triggers/TriggerEnumList.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122ab4",
+      "size": 328
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetEnum__C13TriggerObjectPCc",
+      "address": "0x80122ab4",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "GetList__C13TriggerObjectPCc",
+      "address": "0x80122b90",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBaseName__FPCcPc": "0x80122a18",
+    "GetEnum__C8FlexPropPCc": "0x80126354",
+    "GetFieldType__C8FlexPropPCc": "0x80126804",
+    "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi": "0x80122484",
+    "GetLegacyFieldList__FPvP15LegacyFieldInfoiPCcRP12FlexPropList": "0x80122728",
+    "GetLegacyField__H1ZP12FlexPropList_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286ea4",
+    "GetLegacyField__H1Zi_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v": "0x80286ac4",
+    "GetList__C8FlexPropPCc": "0x80126444",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "GetString__C8FlexPropPCc": "0x801263cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204,
+  "local_externals": [
+    "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi",
+    "GetLegacyFieldList__FPvP15LegacyFieldInfoiPCcRP12FlexPropList"
+  ]
+}

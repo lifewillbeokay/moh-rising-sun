@@ -1,0 +1,93 @@
+{
+  "id": "trigger_identity",
+  "source": "src/triggers/TriggerIdentity.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122e9c",
+      "size": 600
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6a7c",
+      "size": 16
+    },
+    {
+      "name": ".rodata.binding_name",
+      "address": "0x802a67d8",
+      "size": 16,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.child_type",
+      "address": "0x802a6880",
+      "size": 12,
+      "target_name": ".rodata"
+    },
+    {
+      "name": ".rodata.id_name",
+      "address": "0x802a6574",
+      "size": 4,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetNativeBindingType__C13TriggerObject",
+      "address": "0x80122e9c",
+      "size": 252,
+      "binding": 1
+    },
+    {
+      "name": "GetChildType__C13TriggerObject",
+      "address": "0x80122f98",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetID__C13TriggerObject",
+      "address": "0x80122fd8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetScript__C13TriggerObject",
+      "address": "0x8012301c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "GetChildScript__C13TriggerObject",
+      "address": "0x8012308c",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetClassName__C8FlexProp": "0x80126878",
+    "GetEnum__C13TriggerObjectPCc": "0x80122ab4",
+    "GetEnum__C8FlexPropPCc": "0x80126354",
+    "GetFieldType__C8FlexPropPCc": "0x80126804",
+    "GetInt__C8FlexPropPCc": "0x80126318",
+    "GetString__C8FlexPropPCc": "0x801263cc",
+    "IsFieldValid__C8FlexPropPCc": "0x801262dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

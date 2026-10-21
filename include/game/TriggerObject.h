@@ -31,6 +31,9 @@ class TriggerObject {
     void *GetData(int) const;
     int GetEnum(const char *) const;
     int GetInt(const char *) const;
+    float GetFloat(const char *) const;
+    const char *GetString(const char *) const;
+    bool GetBool(const char *) const;
     int GetCRC(const char *) const;
     bool HasField(const char *) const;
     void GetPosition(CVector3 &) const;
@@ -41,6 +44,9 @@ class TriggerObject {
     int GetLegacyField(int) const;
     const char *GetClassName() const;
     int GetID() const;
+    int GetChildType() const;
+    const char *GetScript() const;
+    const char *GetChildScript() const;
     int GetNativeBindingType() const;
     int IsAnimatedLight() const;
     FlexPropList *GetList(const char *) const;
