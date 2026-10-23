@@ -1237,7 +1237,9 @@
     "trigger_typed_fields.json",
     "trigger_enum_list.json",
     "trigger_identity.json",
-    "trigger_base_name.json"
+    "trigger_base_name.json",
+    "legacy_field_callbacks.json",
+    "legacy_field_lookup.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

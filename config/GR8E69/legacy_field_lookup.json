@@ -1,0 +1,73 @@
+{
+  "id": "legacy_field_lookup",
+  "source": "src/triggers/LegacyFieldLookup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80286ac4",
+      "size": 1240
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLegacyField__H1Zi_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
+      "address": "0x80286ac4",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetLegacyField__H1Zf_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
+      "address": "0x80286bbc",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetLegacyField__H1ZPCc_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
+      "address": "0x80286cb4",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetLegacyField__H1Zb_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
+      "address": "0x80286dac",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetLegacyField__H1ZP12FlexPropList_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
+      "address": "0x80286ea4",
+      "size": 248,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "s_enemyFields": "0x802c4990",
+    "s_mechanicFields": "0x802c4960",
+    "s_powerupFields": "0x802c4ac0",
+    "s_coreFields": "0x802c47d0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204,
+  "local_externals": [
+    "s_enemyFields",
+    "s_mechanicFields",
+    "s_powerupFields",
+    "s_coreFields"
+  ]
+}
