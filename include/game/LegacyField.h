@@ -12,7 +12,8 @@ union ANY_PROP {
     xyzProperty_Struct *xyz; // Descriptive member name.
 };
 
-// These templates and the propdat.cpp callbacks remain original code.
+// Reconstructed lookup templates and private propdat.cpp callbacks.
+// These declarations bridge separately verified fragments.
 template<class T>
 void GetLegacyField(ANY_PROP, const char *, T &,
     bool (*)(void *, LegacyFieldInfo *, int, const char *, T &));

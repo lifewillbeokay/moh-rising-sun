@@ -1,0 +1,77 @@
+{
+  "id": "legacy_field_callbacks",
+  "source": "src/triggers/LegacyFieldCallbacks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801223c0",
+      "size": 1060
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6a58",
+      "size": 16
+    },
+    {
+      "name": ".rodata.legacy_diagnostic",
+      "address": "0x802a6a44",
+      "size": 20,
+      "target_name": ".rodata"
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetLegacyFieldBool__FPvP15LegacyFieldInfoiPCcRb",
+      "address": "0x801223c0",
+      "size": 196,
+      "binding": 0
+    },
+    {
+      "name": "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi",
+      "address": "0x80122484",
+      "size": 224,
+      "binding": 0
+    },
+    {
+      "name": "GetLegacyFieldFloat__FPvP15LegacyFieldInfoiPCcRf",
+      "address": "0x80122564",
+      "size": 280,
+      "binding": 0
+    },
+    {
+      "name": "GetLegacyFieldString__FPvP15LegacyFieldInfoiPCcRPCc",
+      "address": "0x8012267c",
+      "size": 172,
+      "binding": 0
+    },
+    {
+      "name": "GetLegacyFieldList__FPvP15LegacyFieldInfoiPCcRP12FlexPropList",
+      "address": "0x80122728",
+      "size": 188,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "strcasecmp": "0x8026680c",
+    "DebugMsg__FPCce": "0x80279094"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204,
+  "local_externals": []
+}

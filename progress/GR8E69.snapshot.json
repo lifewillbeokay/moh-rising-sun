@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 739140,
+    "matching_code_bytes": 741440,
     "total_executable_code_bytes": 2492032,
-    "percent": 29.660132775181058,
+    "percent": 29.752426935127637,
     "categories": {
-      "reconstructed_game": 346924,
+      "reconstructed_game": 349224,
       "restored_library": 392216
     },
-    "matching_functions": 3009
+    "matching_functions": 3019
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -419,6 +419,8 @@
     "config/GR8E69/lcode.json": "162f9b95c02e2deadb9bd20fb8f981fadb822e69f034df9ef9e3470a7bd133f8",
     "config/GR8E69/ldebug.json": "9420eb2090ea2419519042fc7adf487c24936358c90eefc650246963b92dc186",
     "config/GR8E69/ldo.json": "d4b21d34601adf0fd4ca342bfc4ee9afe5b1ece56671d8a979b31aad0e4fe4d0",
+    "config/GR8E69/legacy_field_callbacks.json": "aa61d2a384e65dd6c12e0dfe3848b8d01f45c941153fe95d35f7ea5c85a79f96",
+    "config/GR8E69/legacy_field_lookup.json": "391319d50fbbcd707b701aea8fb2af4d7708b48b8a772762ae2fb8fa28c42100",
     "config/GR8E69/lfunc.json": "e68ccf18bd5ced2bbb611c4baee777b6a9f72bf51067afaafdc9e71280dacf1c",
     "config/GR8E69/lgc.json": "89c726cb4f457a7dca3299e3716efbb7bca90bd8ce1a8e5bc555e45f1cca9a00",
     "config/GR8E69/libgcc-source.json": "f91c4c97c8ce1ece70c4e36433e4bd18be55524e88610edd3376b57d8f6ec1d5",
@@ -640,7 +642,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "0f3fcf1782cd37bf5f417f3838cec64a73c7be2754596e966131b7c0c726f8f2",
+    "config/GR8E69/project.json": "3bda480f707a666ea8ada7c0ca77af06f5694e8c12ce0f215c4ca22660d1273a",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1492,7 +1494,8 @@
     "include/game/Frustum.h": "517f595d8940b305a44b055a26e31588a43151816c24e27381a86ae90cfc6062",
     "include/game/GameSettings.h": "c7165131b00f5b517b2950f9154e869382c8f8b27c05ea0c4e3febb6d7fb26eb",
     "include/game/IDestructible.h": "1427a08ba92fefc7fdc63c4ba8fc7aab3ec64bc8d2d1cfb7fe035346b685379f",
-    "include/game/LegacyField.h": "3c683aeabb0beee5b8282d74ebf4ee9dbc149fc1c395aa12a8f722cbc4f209b8",
+    "include/game/LegacyField.h": "95883bc2693fd14b7014d3f1e6a6e514ed5126af239699aa46d05f565bce5afe",
+    "include/game/LegacyFieldInfo.h": "bb18c3680e0a67e1a775b5bc35547c3ceb0fa3a880ca2530dfeee4568a2ba52b",
     "include/game/Light.h": "3e6d3b90e5f95e09203a7333f15d856e04c645967b5e2bbfe50361742a406ee7",
     "include/game/LightVolumeManager.h": "f86744d00d312738c23085d84d513fbd05c495194b97a10bf4cde2011dbaf958",
     "include/game/MPWeaponSet.h": "86bcb747bbed525dbf73844a22a156b74e8da90bd482fb541bc707e66cddae2c",
@@ -2966,6 +2969,8 @@
     "src/stlport/tree_impl.h": "a20d4ffe6b46823cc4dceeba30bdd7aa285453aedd811b72e698ced00a4e502b",
     "src/string_crc.cpp": "fd942a8cef3597b73ede9a98e461447854127fb60411d49b2d5edac94da9e6c0",
     "src/sys_memory.cpp": "410ee07c9718afe0881a5f14e4c15815cd33bb035d05b19ad6cf4135dae323d8",
+    "src/triggers/LegacyFieldCallbacks.cpp": "a39b49f24b41e7faf2081645b2616fe978f228985484ad3c68e4310e481882aa",
+    "src/triggers/LegacyFieldLookup.cpp": "7a5e80654370f1740a2b711b9242fc225e2673f17650eea8f3cc02ecc221762e",
     "src/triggers/TriggerBaseName.cpp": "2a819d05d32a484de94b6f477345ac5a568a93ef16626a45887c45d8706ce7d6",
     "src/triggers/TriggerCRC.cpp": "63a73103ce5d533542444f8cf0e72cfe2a9465d0dd683453594c1445f3314d88",
     "src/triggers/TriggerClassQueries.cpp": "a255ba4b654549127c92f4aa12259953c16deaa90ea143ee9095ffa183ca3196",
@@ -28795,6 +28800,42 @@
       "discarded_functions": [],
       "object_sha256": "9db473d316304b2224a9c3a09c1bda607b5ea7d1d1fab56f163d489d814b6c3e",
       "linked_sha256": "aa52f56b59d561420c865db81971164f6f22f5ec5dea76bd568ea37c76867aa8"
+    },
+    {
+      "id": "legacy_field_callbacks",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1060,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "9ab22a07a6c93328101c314ccece8391bc60d1fd6a586aa33c3b1d8e12ef46f7",
+      "linked_sha256": "ad66caaa0517a416765e6791ea65dff3a78b72999faf236ee2063d62cb07436a"
+    },
+    {
+      "id": "legacy_field_lookup",
+      "category": "reconstructed_game",
+      "functions": 5,
+      "code_bytes": 1240,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "fb667a57f25d7b12eb593857b5507931e551d9981440b1ae184983b8d166ad33",
+      "linked_sha256": "70bc901b7d69ba27a923be11d65560793dfba6beca12b9f87c19b98c7ef27891"
     }
   ],
   "code_map": {
@@ -52223,41 +52264,6 @@
             "kind": "function",
             "name": "SearchForClosestMachineGun__FP10ISceneNodef",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801223c0",
-            "size": 196,
-            "kind": "function",
-            "name": "GetLegacyFieldBool__FPvP15LegacyFieldInfoiPCcRb",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80122484",
-            "size": 224,
-            "kind": "function",
-            "name": "GetLegacyFieldInt__FPvP15LegacyFieldInfoiPCcRi",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80122564",
-            "size": 280,
-            "kind": "function",
-            "name": "GetLegacyFieldFloat__FPvP15LegacyFieldInfoiPCcRf",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x8012267c",
-            "size": 172,
-            "kind": "function",
-            "name": "GetLegacyFieldString__FPvP15LegacyFieldInfoiPCcRPCc",
-            "evidence": "local-file-symbol"
-          },
-          {
-            "address": "0x80122728",
-            "size": 188,
-            "kind": "function",
-            "name": "GetLegacyFieldList__FPvP15LegacyFieldInfoiPCcRP12FlexPropList",
-            "evidence": "local-file-symbol"
           },
           {
             "address": "0x80122c9c",
@@ -82269,43 +82275,8 @@
         ]
       },
       {
-        "name": "Unknown file/.text @ 80286ac4",
+        "name": "Unknown file/.text @ 80286f9c",
         "ranges": [
-          {
-            "address": "0x80286ac4",
-            "size": 248,
-            "kind": "function",
-            "name": "GetLegacyField__H1Zi_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286bbc",
-            "size": 248,
-            "kind": "function",
-            "name": "GetLegacyField__H1Zf_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286cb4",
-            "size": 248,
-            "kind": "function",
-            "name": "GetLegacyField__H1ZPCc_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286dac",
-            "size": 248,
-            "kind": "function",
-            "name": "GetLegacyField__H1Zb_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80286ea4",
-            "size": 248,
-            "kind": "function",
-            "name": "GetLegacyField__H1ZP12FlexPropList_G8ANY_PROPPCcRX01PFPvP15LegacyFieldInfoiPCcRX01_b_v",
-            "evidence": "unknown-file"
-          },
           {
             "address": "0x80286f9c",
             "size": 44,

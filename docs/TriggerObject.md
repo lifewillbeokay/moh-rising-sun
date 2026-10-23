@@ -1,10 +1,11 @@
 # TriggerObject
 
-`src/triggers/` reconstructs 24 trigger-related functions (2,068 executable bytes)
+`src/triggers/` reconstructs 34 trigger-related functions (4,368 executable bytes)
 from the pinned GR8E69 executable. Claude Code assisted the initial 12-function,
 548-byte subset; Codex independently reconstructed and verified the 12-function,
-1,520-byte property-access extension below. Original callback implementations,
-property storage and generated research remain outside the source credit.
+1,520-byte property-access extension and the 10-function, 2,300-byte legacy-field
+extension below. Original field tables, property storage and generated research
+remain outside the source credit.
 
 ## Scoped view
 
@@ -38,6 +39,8 @@ stride in the original `g_pTriggerObjects` array and stores its legacy pointer a
 | `trigger_enum_list` | `GetEnum`, `GetList` | 328 |
 | `trigger_identity` | `GetNativeBindingType`, `GetChildType`, `GetID`, `GetScript`, `GetChildScript` | 600 |
 | `trigger_base_name` | `GetBaseName` | 156 |
+| `legacy_field_callbacks` | Five typed legacy-field readers | 1,060 |
+| `legacy_field_lookup` | Five `GetLegacyField<T>` instantiations | 1,240 |
 
 Behavior read from the bodies:
 
@@ -52,8 +55,8 @@ Behavior read from the bodies:
   format bit; `IsPointInTrigger` always uses the `FlexProp` form.
 
 `GetForward`, `GetMatrix`, `GetRotationMatrix`, save/load and the larger creation
-helpers remain unmatched. The typed accessors now have source; their legacy-field
-templates and callbacks remain original code.
+helpers remain unmatched. The typed accessors and their legacy-field templates
+and callbacks now have source; the original descriptor tables remain external.
 
 ## Typed properties and identity queries
 
@@ -80,7 +83,7 @@ to file record 1204 rather than resolved solely by an unscoped name.
 
 **Typed reads.** `GetInt`, `GetFloat`, `GetString`, `GetBool` and `GetList`
 initialize their result to zero, false or null. For FlexProp data they call the
-corresponding already reconstructed accessor. Otherwise they call the original
+corresponding already reconstructed accessor. Otherwise they call the now-reconstructed
 `GetLegacyField<T>` template only when the legacy record's word at `+8` is 4,
 passing the matching `propdat.cpp` callback and the result by reference. Other
 legacy records retain the initial default. This selector is separate from the
@@ -90,8 +93,9 @@ legacy object's type word at `+0x0c`.
 scoped `ANY_PROP` union containing the observed four-byte record pointer. The
 aggregate name comes from the symbols; its `xyz` member name is descriptive.
 The caller passes a copy of that pointer in the target's aggregate-by-value ABI.
-Other original union members and `LegacyFieldInfo` storage remain unknown.
-Neither helper bodies nor their original storage receive source credit. ProDG's
+Other original union members remain unknown. The legacy-field extension below
+now establishes the `LegacyFieldInfo` descriptor view; its original tables remain
+external storage. ProDG's
 four-byte `bool` result is passed and returned as observed, without adding a
 second boolean normalization step.
 
@@ -140,8 +144,91 @@ The direct-dependency scan at this checkpoint finds **58 distinct caller ranges
 outside this batch**, of which **47 remain unfinished**. These are static direct
 references, not a runtime-frequency measurement or additional source credit. The
 accepted script attachments and enemy-count wrapper now reach reconstructed
-`GetInt` and native-binding accessors; legacy conversion internals remain future
-work.
+`GetInt` and native-binding accessors. The legacy-field extension below supplies
+the shared lookup and conversion bodies used by those typed reads.
+
+## Legacy-field lookup and typed readers
+
+This extension independently reconstructs **10 functions / 2,300 code bytes**
+from GR8E69, plus **36 read-only bytes** checked separately. No implementation
+from another game is imported. The callback names and `LegacyFieldInfo` type name
+come from the original symbols. Descriptor member names are descriptive.
+
+| Function | GR8E69 address | Code bytes |
+| --- | --- | ---: |
+| `GetLegacyFieldBool` | `0x801223c0` | 196 |
+| `GetLegacyFieldInt` | `0x80122484` | 224 |
+| `GetLegacyFieldFloat` | `0x80122564` | 280 |
+| `GetLegacyFieldString` | `0x8012267c` | 172 |
+| `GetLegacyFieldList` | `0x80122728` | 188 |
+| `GetLegacyField<int>` | `0x80286ac4` | 248 |
+| `GetLegacyField<float>` | `0x80286bbc` | 248 |
+| `GetLegacyField<const char *>` | `0x80286cb4` | 248 |
+| `GetLegacyField<bool>` | `0x80286dac` | 248 |
+| `GetLegacyField<FlexPropList *>` | `0x80286ea4` | 248 |
+
+**Descriptor layout.** Each callback advances by sixteen bytes. Its reads establish
+a name pointer at `+0`, a signed type selector at `+4`, a byte offset at `+8` and
+a four-byte mask at `+12`. `LegacyFieldInfo.h` models that observed stride;
+these descriptors are separate from the variable-length BPD records they index.
+No allocation size for a property record or complete original enum is inferred.
+
+The readers search in order with `strcasecmp`. The first matching name stops the
+search, including when its type is incompatible. A missing name, zero count or
+negative count returns false and leaves the output untouched. A recognized name
+returns true; an incompatible type first writes zero, false or null and prints
+`Invalid Field type.`. This is a successful **name lookup**, not a successful type
+conversion, and must not trigger a fallback search.
+
+| Reader | Supported descriptor types and conversion |
+| --- | --- |
+| Boolean | Type 0: sign-extend the byte at the descriptor offset, apply the mask, then compare with zero. The byte load precedes the type check, including on the error path. |
+| Integer | Type 1: signed byte; type 2: signed halfword; types 3 and 4: four-byte integer. |
+| Float | Type 5: float load; type 6: signed halfword converted to float and multiplied by `0.0625f`. No physical unit is inferred. |
+| String | Type 7: load a string pointer without copying it. |
+| List | Type 8: load a `FlexPropList *` without examining the list contents. |
+
+The explicit rejected cases in the switches preserve the observed branch trees.
+The code adds no bounds checks, pointer validation or fallback on a type error.
+The existing caller's `+8 == 4` gate remains in `TriggerObject`; the generic lookup
+itself does not repeat that check.
+
+**Lookup order.** All five template instantiations share one source definition.
+The legacy record's signed type word at `+0x0c` selects an initial table:
+
+| Record type | First table | Entries | Original storage |
+| --- | --- | ---: | --- |
+| 3 | `s_enemyFields` | 19 | `0x802c4990`, 304 bytes |
+| 2 | `s_mechanicFields` | 3 | `0x802c4960`, 48 bytes |
+| 4 | `s_powerupFields` | 1 | `0x802c4ac0`, 16 bytes |
+| All others | `s_coreFields` | 25 | `0x802c47d0`, 400 bytes |
+
+For types 2, 3 and 4, a false callback result searches the core table next; a true
+result stops immediately. Other record types search the core table once. The
+lookup ignores the final core result and does not initialize the output itself.
+The explicit cases for 1 and 5–8 preserve the original dispatch tree without
+assigning names to those values.
+
+The four table symbols and sizes independently corroborate the descriptor stride
+and counts. They remain original data, with private references scoped to
+`propdat.cpp` file record 1204. The callbacks retain their original local binding.
+The template symbols are global; their manifest's file scope resolves the private
+tables and does not establish an original template translation-unit boundary.
+
+**Constants and scope.** The callback fragment owns the complete 20-byte diagnostic
+at `0x802a6a44`, placed in a named read-only subsection, and the 16-byte numeric
+pool at `0x802a6a58`: the compiler's signed-integer conversion bias, `0.0625f`,
+and zero. All emitted bytes and alignment are compared. The earlier typed-getter
+zero at `0x802a6a68` retains its separate ownership. No table data or caller code
+is counted again, and no functions are discarded.
+
+A separate host behavior check covers signed byte/halfword loads, sign extension
+before a boolean mask, fractional conversion, case-insensitive lookup, missing
+names and nonpositive counts, incompatible types, duplicate-name precedence,
+and specialized-table success/fallback for record types -1 through 15. It uses
+host-native test records and disables only target section-placement annotations;
+it does not validate the target ABI or run the game. The production compiler and
+complete-image checks validate target layouts and generated code separately.
 
 ## Verification
 
