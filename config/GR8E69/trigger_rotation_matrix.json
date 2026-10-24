@@ -1,0 +1,45 @@
+{
+  "id": "trigger_rotation_matrix",
+  "source": "src/triggers/TriggerRotationMatrix.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122df8",
+      "size": 164
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6a74",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetRotationMatrix__C13TriggerObjectR7CMatrix",
+      "address": "0x80122df8",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetMatrix__C8FlexPropR7CMatrix": "0x801266e8",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

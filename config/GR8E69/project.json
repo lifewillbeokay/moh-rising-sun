@@ -1239,7 +1239,11 @@
     "trigger_identity.json",
     "trigger_base_name.json",
     "legacy_field_callbacks.json",
-    "legacy_field_lookup.json"
+    "legacy_field_lookup.json",
+    "trigger_save_load.json",
+    "trigger_transform_queries.json",
+    "trigger_rotation_matrix.json",
+    "flexprop_matrix.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

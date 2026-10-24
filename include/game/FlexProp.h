@@ -52,6 +52,7 @@ class FlexProp {
     FlexPropList *GetList(const char *) const;
     int GetFieldType(int) const;
     int GetFieldType(const char *) const;
+    void GetMatrix(CMatrix &) const;
     void GetPosition(CVector3 &) const;
     void SetPositionZ(float);
     const char *GetClassName() const;

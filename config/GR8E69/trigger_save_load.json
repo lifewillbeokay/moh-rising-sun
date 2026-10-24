@@ -1,0 +1,46 @@
+{
+  "id": "trigger_save_load",
+  "source": "src/triggers/TriggerSaveLoad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121210",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "Save__13TriggerObject",
+      "address": "0x80121210",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "Load__13TriggerObject",
+      "address": "0x80121288",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

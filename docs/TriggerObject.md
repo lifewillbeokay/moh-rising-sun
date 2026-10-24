@@ -1,22 +1,25 @@
 # TriggerObject
 
-`src/triggers/` reconstructs 34 trigger-related functions (4,368 executable bytes)
+`src/triggers/` reconstructs 39 trigger-related functions (5,084 executable bytes)
 from the pinned GR8E69 executable. Claude Code assisted the initial 12-function,
 548-byte subset; Codex independently reconstructed and verified the 12-function,
 1,520-byte property-access extension and the 10-function, 2,300-byte legacy-field
-extension below. Original field tables, property storage and generated research
-remain outside the source credit.
+extension below. The transform and lifecycle extension adds five functions /
+716 bytes here and a 240-byte shared [FlexProp matrix getter](FlexProp.md#matrix-reconstruction).
+Original field tables, property storage and generated research remain outside
+the source credit.
 
 ## Scoped view
 
-`include/game/TriggerObject.h` gives `TriggerObject` the two parts every accepted
-accessor uses; the rest of the object is not declared. The script headers include it
+`include/game/TriggerObject.h` gives `TriggerObject` the three observed fields
+used by the accepted queries and event loops. The script headers include it
 in place of the earlier method-only interface.
 
 - **Flags at `+0`.** Bit 30 selects the property format: set, the object's
   properties are an embedded [`FlexProp`](FlexProp.md) at `+8`; clear, `+8` holds a
   pointer to a legacy `xyzProperty_Struct` ([BPD.md](BPD.md)). Bit 0 is the
   machine-gun "used" flag of `MarkMGAsUsed`/`IsMGUsed`.
+- **Script object at `+4`**, a nullable `BSObject *` used by the save/load loops.
 - **Properties at `+8`**, modeled as a union of the two forms.
 
 Names of the flag fields and the union are descriptive. The reconstructed
@@ -41,6 +44,9 @@ stride in the original `g_pTriggerObjects` array and stores its legacy pointer a
 | `trigger_base_name` | `GetBaseName` | 156 |
 | `legacy_field_callbacks` | Five typed legacy-field readers | 1,060 |
 | `legacy_field_lookup` | Five `GetLegacyField<T>` instantiations | 1,240 |
+| `trigger_save_load` | `Save`, `Load` | 240 |
+| `trigger_transform_queries` | `GetForward`, `GetMatrix` | 312 |
+| `trigger_rotation_matrix` | `GetRotationMatrix` | 164 |
 
 Behavior read from the bodies:
 
@@ -54,8 +60,7 @@ Behavior read from the bodies:
 - `GetLegacyField` and `SetPositionZ` pass straight through without checking the
   format bit; `IsPointInTrigger` always uses the `FlexProp` form.
 
-`GetForward`, `GetMatrix`, `GetRotationMatrix`, save/load and the larger creation
-helpers remain unmatched. The typed accessors and their legacy-field templates
+The larger creation helpers remain unmatched. The typed accessors and their legacy-field templates
 and callbacks now have source; the original descriptor tables remain external.
 
 ## Typed properties and identity queries
@@ -229,6 +234,80 @@ and specialized-table success/fallback for record types -1 through 15. It uses
 host-native test records and disables only target section-placement annotations;
 it does not validate the target ABI or run the game. The production compiler and
 complete-image checks validate target layouts and generated code separately.
+
+## Transform queries and save/load events
+
+Five further functions reconstruct **716 executable bytes**, plus **16 read-only
+bytes**. The shared 240-byte `FlexProp::GetMatrix` is accepted separately in
+[FlexProp.md](FlexProp.md#matrix-reconstruction); its credit is counted once.
+These bodies were independently reconstructed from GR8E69 with Codex assistance,
+using the existing matrix, vector, quaternion and BPD views.
+
+| Function | GR8E69 address | Code bytes |
+| --- | --- | ---: |
+| `TriggerObject::Save` | `0x80121210` | 120 |
+| `TriggerObject::Load` | `0x80121288` | 120 |
+| `TriggerObject::GetForward` | `0x80122c9c` | 148 |
+| `TriggerObject::GetMatrix` | `0x80122d30` | 164 |
+| `TriggerObject::GetRotationMatrix` | `0x80122df8` | 164 |
+
+**Transforms.** `GetMatrix` delegates to `FlexProp::GetMatrix` when the format bit
+is set. For legacy records it copies the floats at `+0x1c`, `+0x20`, `+0x24`,
+`+0x28` into a quaternion in the established memory order `w, x, y, z`. It also
+snapshots the position at `+0x10`–`+0x18` before calling quaternion-to-matrix
+conversion, then calls `SetPos`. No quaternion normalization or format gate
+beyond the format bit is added.
+
+`GetRotationMatrix` uses that same quaternion conversion for legacy records.
+For FlexProp it obtains the complete matrix, then clears its position through
+`SetPos` and a temporary zero vector. It does not change basis values or scale,
+and it is not an orthonormalization operation. The three query bodies reuse the
+previously verified 64-byte matrix, 16-byte quaternion and 16-byte vector views;
+no constructors or storage fields are added to those shared classes.
+
+`GetForward` is different: it **always** reads the FlexProp representation at
+`+8`, without testing the format bit. It initializes the matrix class only when
+`s_ClassInit` is zero, fills a local matrix and assigns its front row to the output
+vector. The output's fourth word is preserved by the existing vector assignment.
+This behavior must not be replaced by a call to `TriggerObject::GetMatrix`, which
+would introduce legacy-format dispatch absent from the original.
+
+The private inline helpers have descriptive names. `InitLocalMatrix` models only
+the observed class-initialization check and preserves the local matrix address;
+it does not initialize matrix contents or establish the full historical default
+constructor. `SetLegacyRotation` assigns four observed quaternion components and
+is not a new recovered method. All emitted temporaries and constants are checked.
+
+The contiguous forward/full-matrix fragment owns two float-one constants at
+`0x802a6a6c` and `0x802a6a70`. The rotation fragment owns float one and zero at
+`0x802a6a74` and `0x802a6a78`. All sixteen bytes are compared separately and earn
+no executable credit. `SetPositionZ`, which lies between the full-matrix and
+rotation-matrix functions, retains its existing fragment and ownership.
+
+**Save/load notifications.** Both functions walk `g_pTriggerObjects` using the
+already established twelve-byte stride and the **unsigned** `g_pNumTriggers` at
+`0x80326d64`. Each nonnull script-object pointer at `+4` receives
+`BSObjectTriggerEvent(object, 422, null, null, true)`. **Both entry points use
+422**, despite their different names. The event's original symbolic name and
+purpose are not established by these bodies; neither a different load event nor
+serialization logic is invented.
+
+The loop reloads the count after each iteration, including after an event call,
+and skips null script-object slots. The count and 24,000-byte trigger array remain
+original storage. Static membership is supported by the calls in
+`CGameSettings::StoreSaveData(bool)` at `0x80170ad8` and
+`CGameSettings::RestoreSerializedData()` at `0x80170668`: neither supplies a
+trigger receiver. These call sites and the bodies establish a global traversal,
+not a per-object save/load method.
+
+A separate host check combines these six new bodies with the accepted quaternion
+conversion, matrix setters and identity initializer. It checks distinct FlexProp
+rows, legacy identity and non-unit quaternions, zeroed rotation-only position,
+forward output and its preserved fourth word, one-time class initialization,
+identical save/load event arguments, null slots and count shrink/growth during a
+callback. Host-native fixtures and an opaque event stub exercise behavior; they
+do not model target pointer sizes or the `BSObject` allocation. Target ABI and
+complete-image verification remain separate, and no runtime/emulator test was run.
 
 ## Verification
 
