@@ -1,0 +1,53 @@
+{
+  "id": "trigger_transform_queries",
+  "source": "src/triggers/TriggerTransforms.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122c9c",
+      "size": 312
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6a6c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetForward__C13TriggerObjectR8CVector3",
+      "address": "0x80122c9c",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "GetMatrix__C13TriggerObjectR7CMatrix",
+      "address": "0x80122d30",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "GetMatrix__C8FlexPropR7CMatrix": "0x801266e8",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,47 @@
+{
+  "id": "flexprop_matrix",
+  "source": "src/flexprop/matrix.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801266e8",
+      "size": 240
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6e00",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetMatrix__C8FlexPropR7CMatrix",
+      "address": "0x801266e8",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

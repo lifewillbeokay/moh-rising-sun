@@ -4,7 +4,7 @@
 
 ## Accepted lookup path
 
-`src/flexprop/` reconstructs field search and its comparator, name-to-key wrappers, typed scalar/list access, position access and class ancestry queries. `src/string_crc.cpp` reconstructs their string hash dependency. The original lookup fragments comprise 25 functions and 1,552 executable bytes; the string-table/database helpers add six functions and 400 bytes, and the database loading/cleanup extension adds four functions and 3,396 bytes. Individual ranges and generated string/constant storage are recorded in their manifests.
+`src/flexprop/` reconstructs field search and its comparator, name-to-key wrappers, typed scalar/list access, position access and class ancestry queries. `src/string_crc.cpp` reconstructs their string hash dependency. The original lookup fragments comprise 25 functions and 1,552 executable bytes; the string-table/database helpers add six functions and 400 bytes, the database loading/cleanup extension adds four functions and 3,396 bytes, and the matrix getter adds one function and 240 bytes. Individual ranges and generated string/constant storage are recorded in their manifests.
 
 `FlexProp` holds a format pointer at offset zero. The format’s pointer at `+4` leads to a class-description record containing its name at `+0`, parent at `+8`, field count at `+12`, and a variable tail of twelve-byte field records at `+16`. Each field contains a signed CRC key, a type word and a byte offset. The original `bsearch` stride, comparator and field accesses independently establish those three words. The zero-length array in the scoped header represents the variable tail; it is not a complete class allocation.
 
@@ -16,7 +16,7 @@
 
 Name-taking wrappers hash the exact input and call their integer-key overloads. Both string-getter overloads are accepted; the integer-key implementation uses the recovered string-table virtual interface described below. `GetFieldType` returns zero for an absent field. `GetClassName` reads the first class name; `IsA` compares names with `strcmp` while following parents. Case folding is not added.
 
-Position accesses confirm floats at format offsets `0x30`, `0x34` and `0x38`, with `SetPositionZ` writing the last. Independent inspection of the original matrix getter supports the twelve-float transform prefix beginning at `0x0c`; that matrix getter is not reconstructed here. The position helper writes only the first three floats of the independently recovered 16-byte CVector3 representation; its fourth word is preserved. The database loaders below establish the remaining leading name/size fields. Complete allocation sizes, original field spelling and historical return-type spelling remain unproven.
+Position accesses confirm floats at format offsets `0x30`, `0x34` and `0x38`, with `SetPositionZ` writing the last. The now-reconstructed matrix getter independently verifies the twelve-float transform prefix beginning at `0x0c`; see [matrix reconstruction](#matrix-reconstruction). The position helper writes only the first three floats of the independently recovered 16-byte CVector3 representation; its fourth word is preserved. The database loaders below establish the remaining leading name/size fields. Complete allocation sizes, original field spelling and historical return-type spelling remain unproven.
 
 ## CRC details useful for future name recovery
 
@@ -79,8 +79,8 @@ layout. `Rewind` selects `begin()`, count uses `size()`, and indexed access stor
 the selected format pointer without checking bounds. Both private globals remain
 original storage, resolved within the `flexprop.cpp` file record.
 
-The matrix getter and string lookup were also investigated but remain unaccepted;
-their partial source comparisons do not increase progress.
+The matrix getter is now accepted below. The original string-table lookup body
+remains external; its earlier partial comparison earns no source credit.
 
 ## Database loading and cleanup
 
@@ -180,3 +180,29 @@ outside this reconstruction.
 ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates` reproduces every accepted function, diagnostic string and generated constant. No byte patches, inline assembly implementations, discarded functions, clipped sections or fuzzy matches are used. The private comparator and dependencies retain their original symbol binding/file scope. Whole-image verification and the public snapshot checks remain required; runtime behavior has not been emulator-tested.
 
 These declarations and the recipe evidence in [ParticleRecipes.md](ParticleRecipes.md) provide a starting point for applying the [contributed PS2 research](research/README.md). The script/opcode, `.bpd` and music-rule notes record their own GameCube comparisons; they do not add reconstructed source in this batch.
+
+## Matrix reconstruction
+
+`src/flexprop/matrix.cpp` reconstructs `FlexProp::GetMatrix(CMatrix &) const` at
+`0x801266e8`: **240 code bytes**, plus a four-byte float-one constant at
+`0x802a6e00`. Codex independently reconstructed the body from GR8E69 using
+ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`. No source from
+another game is imported. This is the shared dependency of the now-accepted
+[trigger transform queries](TriggerObject.md#transform-queries-and-saveload-events).
+
+The method captures the format pointer, default-constructs four vectors and copies
+all twelve transform floats into them **before** changing the destination matrix.
+Those groups, at format offsets `+0x0c`, `+0x18`, `+0x24` and `+0x30`, become
+right, front, up and position respectively. Each vector's fourth word is 1.0.
+It then calls `GetSlot(0)`, followed by `SetRight`, `SetFront`, `SetUp` and `SetPos`
+in that order. The setters replace three components per row, so the resulting
+homogeneous words remain zero, zero, zero and one. Basis values are copied as-is;
+no normalization, orthogonality check or property validation is added.
+
+Local pointer aliases preserve the observed vector-address lifetimes and stores.
+Their names and the underlying format member names remain descriptive; the method
+adds no new class fields or array stride. Its one four-byte float constant remains
+separate from the following string-table allocation diagnostic at `0x802a6e04`. No generated bytes are clipped
+or discarded. The complete rebuilt image and all existing fragments are checked;
+the host behavior checks are described with the trigger queries, while game
+runtime/emulator behavior remains untested.

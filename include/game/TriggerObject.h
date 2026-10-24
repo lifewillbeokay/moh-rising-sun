@@ -27,6 +27,8 @@ class TriggerObject {
         xyzProperty_Struct *legacy;   // Otherwise.
     } properties;
 
+    static void Save();
+    static void Load();
     int GetFieldOffset(const char *) const;
     void *GetData(int) const;
     int GetEnum(const char *) const;
