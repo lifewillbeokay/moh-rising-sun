@@ -1,0 +1,56 @@
+{
+  "id": "trigger_player_starts",
+  "source": "src/triggers/PlayerStarts.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121654",
+      "size": 372
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6548",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindPlayerStarts__Fv",
+      "address": "0x80121654",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "APlayerStartExistsForSavePoint__Fi",
+      "address": "0x80121720",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_numPlayerStarts": "0x802c47cc",
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68",
+    "g_playerStartIndices": "0x8032cca8",
+    "GetNativeBindingType__C13TriggerObject": "0x80122e9c",
+    "GetChildType__C13TriggerObject": "0x80122f98",
+    "DebugMsg__FPCce": "0x80279094",
+    "GetInt__C13TriggerObjectPCc": "0x80122844"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

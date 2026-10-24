@@ -1,0 +1,46 @@
+{
+  "id": "trigger_closest_machine_gun",
+  "source": "src/triggers/ClosestMachineGun.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "src/triggers",
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801222a4",
+      "size": 284
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a67d0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SearchForClosestMachineGun__FP10ISceneNodef",
+      "address": "0x801222a4",
+      "size": 284,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pMGTriggerObject": "0x8032cb28",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

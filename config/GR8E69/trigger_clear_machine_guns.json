@@ -1,0 +1,39 @@
+{
+  "id": "trigger_clear_machine_guns",
+  "source": "src/triggers/ClearMachineGuns.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "src/triggers",
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80122244",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "ClearMGTriggerObjects__Fv",
+      "address": "0x80122244",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pMGTriggerObject": "0x8032cb28"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

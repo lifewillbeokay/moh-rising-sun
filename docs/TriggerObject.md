@@ -1,13 +1,14 @@
 # TriggerObject
 
-`src/triggers/` reconstructs 39 trigger-related functions (5,084 executable bytes)
+`src/triggers/` reconstructs 45 trigger-related functions (6,088 executable bytes)
 from the pinned GR8E69 executable. Claude Code assisted the initial 12-function,
 548-byte subset; Codex independently reconstructed and verified the 12-function,
 1,520-byte property-access extension and the 10-function, 2,300-byte legacy-field
 extension below. The transform and lifecycle extension adds five functions /
 716 bytes here and a 240-byte shared [FlexProp matrix getter](FlexProp.md#matrix-reconstruction).
-Original field tables, property storage and generated research remain outside
-the source credit.
+The startup-sizing, player-start and machine-gun-search extension adds another
+six functions / 1,004 bytes. Original field tables, property storage and generated
+research remain outside the source credit.
 
 ## Scoped view
 
@@ -47,6 +48,10 @@ stride in the original `g_pTriggerObjects` array and stores its legacy pointer a
 | `trigger_save_load` | `Save`, `Load` | 240 |
 | `trigger_transform_queries` | `GetForward`, `GetMatrix` | 312 |
 | `trigger_rotation_matrix` | `GetRotationMatrix` | 164 |
+| `trigger_memory_usage` | `GetTriggerBSObjectMemUsage`, `GetTriggerScriptMemUsage` | 304 |
+| `trigger_player_starts` | `FindPlayerStarts`, `APlayerStartExistsForSavePoint` | 372 |
+| `trigger_clear_machine_guns` | `ClearMGTriggerObjects` | 44 |
+| `trigger_closest_machine_gun` | `SearchForClosestMachineGun` | 284 |
 
 Behavior read from the bodies:
 
@@ -308,6 +313,94 @@ identical save/load event arguments, null slots and count shrink/growth during a
 callback. Host-native fixtures and an opaque event stub exercise behavior; they
 do not model target pointer sizes or the `BSObject` allocation. Target ABI and
 complete-image verification remain separate, and no runtime/emulator test was run.
+
+## Startup sizing, player starts and machine-gun search
+
+Six further functions reconstruct **1,004 executable bytes**, with **52 read-only
+bytes** checked separately. Codex independently reconstructed these bodies from
+GR8E69, using ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`.
+No implementation from another game is imported. The methods reuse the already
+accepted trigger accessors, vector representation and scene-node virtual slots.
+
+| Function | GR8E69 address | Code bytes |
+| --- | --- | ---: |
+| `GetTriggerBSObjectMemUsage(int)` | `0x80121300` | 144 |
+| `GetTriggerScriptMemUsage(int)` | `0x80121390` | 160 |
+| `FindPlayerStarts()` | `0x80121654` | 204 |
+| `APlayerStartExistsForSavePoint(int)` | `0x80121720` | 168 |
+| `ClearMGTriggerObjects()` | `0x80122244` | 44 |
+| `SearchForClosestMachineGun(ISceneNode *, float)` | `0x801222a4` | 284 |
+
+**Memory sizing.** Both helpers start at the supplied trigger index and traverse
+`g_pNumTriggers - first` entries, reloading the unsigned count after every
+iteration. Null and empty script names contribute nothing. Object sizing adds
+exactly 48 for each remaining script. This literal is preserved independently
+of the scoped `BSObject` header; it does not turn that prefix into a complete
+48-byte allocation declaration.
+
+Script sizing calls `BSFileGetClass` for every nonempty script name, then adds
+the class word at `+0x54`. It ignores the lookup's return value and does not check
+the resulting class pointer. The original `BSUtilGetObjectInstanceMemory` at
+`0x800f8ac4` independently loads this word at `0x800f8ad8` and passes it as the
+size to `MemStack::Alloc` on the startup path. `ScriptRuntime.h` therefore names
+it `instanceMemorySize`, replacing four bytes of the opaque gap while preserving
+all established offsets and the prefix extent. The member name and ordinary
+integer spelling are descriptive; no on-disc class format is inferred.
+
+The original `InitAllTriggers` passes its saved legacy-trigger count to these
+helpers at `0x8012157c` and `0x80121588`, then uses the results to initialize the
+script and object startup allocators. That larger routine remains original code.
+The helpers add no range check, overflow handling, cached count or class-lookup
+fallback. A valid initial index and valid class output remain preconditions.
+
+**Player starts.** `FindPlayerStarts` returns immediately when the existing
+`g_numPlayerStarts` is nonzero. Otherwise it scans triggers in order, accepting
+native-binding value 1 and child-type value `0x271bd574`, and stores their indices
+in `g_playerStartIndices`. On reaching exactly twenty it emits
+`Player Starts Limit reached!` and stops. Zero matches leave the count zero, so
+a later call scans again; a nonzero result is cached. The globals remain original
+storage: count at `0x802c47cc` and eighty-byte index array at `0x8032cca8`.
+The numeric child-type selector is retained without claiming its original enum
+or string spelling.
+
+`APlayerStartExistsForSavePoint` applies the same two filters, then reads
+`GetInt("SavePointID")` and returns true on the first equal value. It scans the
+full trigger collection independently of the twenty-entry cache. Both loops
+preserve short-circuit order and reload the trigger count after each iteration.
+Their complete 44-byte string pool at `0x802a6548` includes the newline, zero
+terminators and alignment, ending just before the separate `ID` string at
+`0x802a6574`.
+
+**Machine-gun entries.** `g_pMGTriggerObject` is a different table from the main
+trigger array. Its original symbol has 384 bytes at `0x8032cb28`. The original
+producer `FindAllMGPointsInBPDFile` writes trigger pointers at entry `+0` and
+`+4` at `0x80122200`/`0x80122204`, then advances twelve bytes. The nearest search
+reads the second pointer and passes it to `TriggerObject::GetPosition`.
+`src/triggers/mg_entries.h` records this evidence as `MGTriggerEntryView`, with
+descriptive `sourceTrigger`/`positionTrigger` names and an opaque four-byte word
+at `+8`. It does not reuse the `TriggerObject` layout or claim a recovered
+historical entry type. `ClearMGTriggerObjects` clears all three words in each of
+32 entries; it does not free the pointed-to objects or rebuild the producer.
+
+The search visits all 32 entries, skips null second pointers, and returns the
+entry index or -1. For each populated entry it calls the scene node's virtual
+`GetPosition` again (slot 21, adjustment/function at `+0xa8`/`+0xac`), then obtains
+the trigger position and computes full 3D Euclidean distance. It does not cache
+the node position or test the trigger's used flag. The best distance starts at
+**10000.0**, so finite distances must be below both that value and the supplied
+maximum. Equal distances preserve the earlier entry. The two tests retain
+negated `>=` comparisons, including their unordered/NaN behavior; substituting
+ordinary `<` comparisons would change it. Its float-one and 10000 constants
+occupy the complete eight-byte pool at `0x802a67d0`.
+
+Separate host checks exercise null/empty scripts, nonzero starting indices,
+class-size accumulation and count changes; player-start filtering, caching,
+zero-result retries, the twenty-entry limit and save-point queries beyond it;
+and entry clearing, empty/full-range search, exact distance limits, equal-distance
+ties, NaNs and repeated node-position calls. Host-native fixtures replace only
+the script-class and scene-node ABI boundaries and do not establish target
+layout or virtual slots. The production build checks those separately. No
+runtime/emulator test was performed.
 
 ## Verification
 

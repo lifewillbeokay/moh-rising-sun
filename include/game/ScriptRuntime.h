@@ -69,7 +69,8 @@ typedef BSCode_struct BSLevelView;
 
 struct BSClass_struct {
     BSLevelView *levels;
-    unsigned char unknown04[84];
+    unsigned char unknown04[80];
+    int instanceMemorySize; // +0x54: used by trigger sizing and the instance allocator.
     unsigned short levelCount; // +0x58
     unsigned char unknown5a[6];
     int *sharedValues; // +0x60
