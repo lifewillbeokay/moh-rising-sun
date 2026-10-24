@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 742396,
+    "matching_code_bytes": 743400,
     "total_executable_code_bytes": 2492032,
-    "percent": 29.790789203348915,
+    "percent": 29.831077610560378,
     "categories": {
-      "reconstructed_game": 350180,
+      "reconstructed_game": 351184,
       "restored_library": 392216
     },
-    "matching_functions": 3025
+    "matching_functions": 3031
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -643,7 +643,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "6d89167927c2de74a076779ef5a8ddcba5a71d74a9128d4d625005aa47cabd66",
+    "config/GR8E69/project.json": "39eba06d6f4596df92b9b50715a71edbcb49f028efd13bcd5133f1fdf3de208f",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -1244,12 +1244,16 @@
     "config/GR8E69/thrown_setters.json": "02e1ce7099126fe919d35532bd92037630cdd0509363f68024c8d97863480977",
     "config/GR8E69/trigger_base_name.json": "720744b136f7bb7ac5c28e8625176cd5bcbf30d91d1d9b25b98d52aaf8a14bb9",
     "config/GR8E69/trigger_class_queries.json": "04f920434d465df34440d49bc465c126e67d17658789ebd75ad202457be41b17",
+    "config/GR8E69/trigger_clear_machine_guns.json": "7d85e192fd50b647ac560e95dc0c8e35ad1eb48c3d0072dcc439779fae8c0136",
+    "config/GR8E69/trigger_closest_machine_gun.json": "5527826ff72413332516a5677b72db298f1f6649233498b0dab3a44f6efe7e23",
     "config/GR8E69/trigger_crc.json": "57cd002698d440841e4fb02835924dc36c0243c2405dfaf44d33d792c3bb8767",
     "config/GR8E69/trigger_enum_list.json": "43e0bdac06e0ad1ebc92997f0a17f9ac31026f38f3a09e1103e403e2a8c5bb41",
     "config/GR8E69/trigger_field_offset.json": "93d865e0819dd4ba96e97db94628e893061def8364a0e0a8b2b822d5ee9e3740",
     "config/GR8E69/trigger_field_position.json": "c665f68cb33d085bced8a95d9efd2c497942ef0a270cc7501958b1a220a07c8d",
     "config/GR8E69/trigger_identity.json": "32a45e5f347acc6556248455cc3ffda1b5a4546e62dff08bc551c830addbe829",
+    "config/GR8E69/trigger_memory_usage.json": "e4d83467cf1811f12a34d778381659594f10da258a8fc3558b23ac90c5a14052",
     "config/GR8E69/trigger_mg_flag.json": "65ef538055b6a3394f4c7e55ab5c6372e7495bf5a0b15232d52959f43d2dc679",
+    "config/GR8E69/trigger_player_starts.json": "7a57eeac7d0248fa8b94f74469098c3cd3f6cf96310860cf2a548b928f8434b9",
     "config/GR8E69/trigger_point_test.json": "fbed27bb04bae97da04f0a9f8cf6cf9677e553207b7b28031038f4cef4074ee6",
     "config/GR8E69/trigger_position_z.json": "eec30ac89d31e13a4242a958f3a1a703efc3cb388c8548071479bc20a93fda89",
     "config/GR8E69/trigger_rotation_matrix.json": "87c74672fc5420b2029a679e1c14aba676b7289d4a021ee6cfa2c4ccdbffd479",
@@ -1514,7 +1518,7 @@
     "include/game/SceneObjects.h": "cf54c69f386d7806a798afb7cfe4d520c10f56d541a1f6d52c56860e03eb2286",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
-    "include/game/ScriptRuntime.h": "e6c5e20e70b740f8fae024d5b0711e408ad2db30aeaba9ceb7f72cbcc442ad8d",
+    "include/game/ScriptRuntime.h": "76f6cb02e5238af51d3cb3847ac870a45a20db488900ec4f3e04297744001bff",
     "include/game/ScriptSchedule.h": "6158dc9d8f6d57c34c31e527ba680a988f21a160149047de2f54bd5c216c1e19",
     "include/game/ScriptTimers.h": "9e52bcdc4e35052e47f16ee3fceee11bd6d04dda30c24c403304629b2ad8872d",
     "include/game/Shell.h": "aac7dbeba4aa3119857814e65ea571c09c9078703e75663b8797bed92d03a4a6",
@@ -2974,8 +2978,11 @@
     "src/stlport/tree_impl.h": "a20d4ffe6b46823cc4dceeba30bdd7aa285453aedd811b72e698ced00a4e502b",
     "src/string_crc.cpp": "fd942a8cef3597b73ede9a98e461447854127fb60411d49b2d5edac94da9e6c0",
     "src/sys_memory.cpp": "410ee07c9718afe0881a5f14e4c15815cd33bb035d05b19ad6cf4135dae323d8",
+    "src/triggers/ClearMachineGuns.cpp": "cb4f4a17f8824126123dc2ac54c292e122e7efa820824019b68a9895c0c76b13",
+    "src/triggers/ClosestMachineGun.cpp": "7eda6a4cf8f80aefbfdd3d9261ea52a6cfdc7a3a182f09100f5f6226fdad74f0",
     "src/triggers/LegacyFieldCallbacks.cpp": "a39b49f24b41e7faf2081645b2616fe978f228985484ad3c68e4310e481882aa",
     "src/triggers/LegacyFieldLookup.cpp": "7a5e80654370f1740a2b711b9242fc225e2673f17650eea8f3cc02ecc221762e",
+    "src/triggers/PlayerStarts.cpp": "1a5b1f9efe2e07ed17bd65836f410a4e6288f5c1db277c110fe959a030697fbd",
     "src/triggers/TriggerBaseName.cpp": "2a819d05d32a484de94b6f477345ac5a568a93ef16626a45887c45d8706ce7d6",
     "src/triggers/TriggerCRC.cpp": "63a73103ce5d533542444f8cf0e72cfe2a9465d0dd683453594c1445f3314d88",
     "src/triggers/TriggerClassQueries.cpp": "a255ba4b654549127c92f4aa12259953c16deaa90ea143ee9095ffa183ca3196",
@@ -2984,12 +2991,14 @@
     "src/triggers/TriggerFieldPosition.cpp": "58fdd0a8e43de5b0eb6b91b34535ece24541b1d62636cfa6f7e685123a65ef1c",
     "src/triggers/TriggerIdentity.cpp": "9ef6c2db15cb2486f0d28e7cf03658fc61ec6074ff30d4ea2cf6553b9ad85d7d",
     "src/triggers/TriggerMGFlag.cpp": "123c5d4300b4a5dfce512a895bd83eb718d3098c3a4d33dab915b5236bb2ea9b",
+    "src/triggers/TriggerMemory.cpp": "760e211e73f1f6fbc892e7a3b02ca76dec1c9c19acbd2a20c3520c01921762b4",
     "src/triggers/TriggerPointTest.cpp": "6476383c9da337c1c51527cfd0eb81f3dac75ea87ca9d3cf6841676d3405f945",
     "src/triggers/TriggerPositionZ.cpp": "8133df34772c29939b958d590f5c7d8edc4dee3766866058b6ff3dbe024cefc1",
     "src/triggers/TriggerRotationMatrix.cpp": "18b23d4d9f31568ef13aee02be4b310cc511b63fbb77e36dc1c598088c30e46a",
     "src/triggers/TriggerSaveLoad.cpp": "ada34089eb0bdf52bbbd8dc0c4043282b48e129d80f5f98e25afa80c47a2d818",
     "src/triggers/TriggerTransforms.cpp": "f8b57f4feb0820442db55ae6292803c0643f053bb06d6e63bdaf48b6a46c1421",
     "src/triggers/TriggerTypedFields.cpp": "9e5921a0f7a2b61330423d544c4090fc188546cc61c1c4cf7d08f8705a10e7c3",
+    "src/triggers/mg_entries.h": "03bdf8ceaf0fe020483f29832a9ca98a9632d686dbc075985efa1f3e42aa6da4",
     "tools/audit.py": "42f9dd301ef76d300f0cad2f791ddbcac862418b6532e252fc38c02d1a222245",
     "tools/baseline.py": "9705053a0b99d969062f336b609a5ea4e0e5bc354d5619ecb9be6698530b314c",
     "tools/code_map.py": "1bb7545aef44792f54bfe21539f3e1ca2a61f14c57b8ddb81c342cf44a525901",
@@ -28916,6 +28925,78 @@
       "discarded_functions": [],
       "object_sha256": "646c369783d635e693b3f2d2f38df90e4cdeadfd4b59dc3a9cb52ecda7de1843",
       "linked_sha256": "26019af0afb2fd9f16010a93a7fcd54c96f330d5c4926e056651bc7c3bff378a"
+    },
+    {
+      "id": "trigger_memory_usage",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 304,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0e5a7708beaf4cb327cf05d3dda2823852dfe5c1aebbe894f971dd5d9a81d3c3",
+      "linked_sha256": "0bb9e9d61963b07f64369c8b8603d49871f7216ed54955b54929e28c00365626"
+    },
+    {
+      "id": "trigger_player_starts",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 372,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "2cdda8bbde0410ad004936918f205f1ae0d3896695fe1ce8626bd84ae5199c92",
+      "linked_sha256": "025ed146eb8c8c8101d99dbf7442d78b5eaaec9e0b873757798a816b3cd06d0c"
+    },
+    {
+      "id": "trigger_clear_machine_guns",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 44,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c6d5bd5fb4a13bcd5cfc4ac0cda7295a94c98ad2cc73d5cd39d63e3762856c43",
+      "linked_sha256": "9e2e43130a928f228461cd8103f38a81ea652f041a251ec5878da5ac4bb3a77e"
+    },
+    {
+      "id": "trigger_closest_machine_gun",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 284,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bd3c64560aa2e5dbd1fd057e6aa25fbc1145844e75bdad5313c46845263d5a79",
+      "linked_sha256": "64e97f88a933675b75b64e385d4819545fac1c1ad0f213c17d090d68ecaa2cc2"
     }
   ],
   "code_map": {
@@ -52248,38 +52329,10 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80121300",
-            "size": 144,
-            "kind": "function",
-            "name": "GetTriggerBSObjectMemUsage__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121390",
-            "size": 160,
-            "kind": "function",
-            "name": "GetTriggerScriptMemUsage__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80121430",
             "size": 548,
             "kind": "function",
             "name": "InitAllTriggers__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121654",
-            "size": 204,
-            "kind": "function",
-            "name": "FindPlayerStarts__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80121720",
-            "size": 168,
-            "kind": "function",
-            "name": "APlayerStartExistsForSavePoint__Fi",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -52315,20 +52368,6 @@
             "size": 664,
             "kind": "function",
             "name": "FindAllMGPointsInBPDFile__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80122244",
-            "size": 44,
-            "kind": "function",
-            "name": "ClearMGTriggerObjects__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x801222a4",
-            "size": 284,
-            "kind": "function",
-            "name": "SearchForClosestMachineGun__FP10ISceneNodef",
             "evidence": "adjacent-compiler-markers"
           },
           {

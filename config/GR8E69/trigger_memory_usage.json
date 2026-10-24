@@ -1,0 +1,47 @@
+{
+  "id": "trigger_memory_usage",
+  "source": "src/triggers/TriggerMemory.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121300",
+      "size": 304
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTriggerBSObjectMemUsage__Fi",
+      "address": "0x80121300",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "GetTriggerScriptMemUsage__Fi",
+      "address": "0x80121390",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68",
+    "GetScript__C13TriggerObject": "0x8012301c",
+    "BSFileGetClass__FPCcPP14BSClass_struct": "0x800f44e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

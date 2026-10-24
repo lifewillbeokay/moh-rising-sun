@@ -1243,7 +1243,11 @@
     "trigger_save_load.json",
     "trigger_transform_queries.json",
     "trigger_rotation_matrix.json",
-    "flexprop_matrix.json"
+    "flexprop_matrix.json",
+    "trigger_memory_usage.json",
+    "trigger_player_starts.json",
+    "trigger_clear_machine_guns.json",
+    "trigger_closest_machine_gun.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

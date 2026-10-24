@@ -151,6 +151,14 @@ header also supplies the previously verified event-lookup views, avoiding diverg
 class/state declarations in separate fragments. `TriggerObject`'s scoped flags
 and property view are described in [TriggerObject.md](TriggerObject.md).
 
+The [trigger startup-sizing helpers](TriggerObject.md#startup-sizing-player-starts-and-machine-gun-search)
+now also establish the instance-memory size at class `+0x54`. The original
+`BSUtilGetObjectInstanceMemory` independently uses that word as an allocation
+size. `ScriptRuntime.h` exposes it within the existing gap, preserving level count
+at `+0x58`, shared values at `+0x60` and the existing prefix extent. The member
+name is descriptive; this is runtime storage evidence, not a `.sin` file layout.
+The helper functions are counted under trigger reconstruction, not again here.
+
 The transition follows these paths:
 
 1. Read the target state's depth. If thread flag bit 0 is clear and the current depth
