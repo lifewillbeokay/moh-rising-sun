@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-392 fragments in `src/script/` reconstruct **643 functions and 110,012
+397 fragments in `src/script/` reconstruct **655 functions and 111,020
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -26,7 +26,8 @@ enemy-count and texture-hash wrappers (1,212 bytes;
 helpers (240 bytes; [see below](#startup-allocation-and-system-state)), and fifteen
 pool, object-lifecycle and instance-memory functions (1,104 bytes;
 [see below](#script-pool-and-instance-memory)), and nine object-management and
-class-sizing functions (1,300 bytes; [see below](#script-object-management)).
+class-sizing functions (1,300 bytes; [see below](#script-object-management)), and twelve event-memory and handler-lookup functions
+(1,008 bytes; [see below](#event-memory-and-handler-lookup)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -1598,3 +1599,107 @@ and MemStack allocation are stubbed at their original boundaries. These checks
 are separate from the original-object baseline, complete rebuilt-image comparison,
 55 validation tests and progress snapshot audit. All previously accepted object
 and linked hashes remain unchanged. No game or Dolphin runtime test was performed.
+
+
+## Event memory and handler lookup
+
+Five fragments independently reconstructed from GR8E69 with Codex assistance add
+**12 functions and 1,008 game-code bytes**. All complete functions and generated
+sections match under ProDG 3.8.1 with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. No code from another game was
+imported. There are no generated data sections, discarded functions, instruction
+patches or original-context credit. This is a working compiler profile, not proof
+of the historical compiler release.
+
+| Function | Address | Code bytes |
+| --- | --- | ---: |
+| `BSEventGetMemoryRequirements` | `0x8011d430` | 56 |
+| `BSInitEvent` | `0x8011d468` | 344 |
+| `BSEndEvent` | `0x8011d5c0` | 32 |
+| `BSEventIncrimentReferenceCount` | `0x8011d5e0` | 16 |
+| `BSEventDecrimentReferenceCount` | `0x8011d5f0` | 80 |
+| `BSEventFindAnyEventHandler` | `0x8011daac` | 44 |
+| `BSEventFindDeclaredState` | `0x8011dad8` | 208 |
+| `BSEventGetEventMemoryBlock` | `0x8011dba8` | 52 |
+| `BSEventCheckMemBlockReferenceCount` | `0x8011dbdc` | 72 |
+| `BSEventIsEventMemoryBlock` | `0x8011dc24` | 44 |
+| `BSEventCurrentlyProcessingMessages` | `0x8011dc50` | 36 |
+| `BSEventGetFreeEventRecord` | `0x8011dd98` | 24 |
+
+`ScriptEvents.h` describes the original 44-byte `g_BSEventModule` symbol at
+`0x80326d1c`, private to file record **1183, `bsevents.cpp`**. Its bucket table,
+record array and free head occupy `+0`, `+4` and `+8`; pending head/tail are at
+`+0x0c`/`+0x10`, current record at `+0x14`, immediate head/tail at
+`+0x18`/`+0x1c`, processing state at `+0x20`, and arena base/offset at
+`+0x24`/`+0x28`. Queue/process accesses independently establish those roles;
+member names and the module/bucket/memory view names are descriptive. The
+`BSEventRecord_struct` tag is recovered from original function symbols. Its
+40-byte stride and next pointer at `+8` are established here; the remaining bytes
+stay opaque in this view. None of these views establishes an on-disc format.
+The global 28-byte allocator `g_pMemBlockAllocator` at `0x80326d00` uses the
+[previously reconstructed pool](#script-pool-and-instance-memory). Both original
+storage symbols remain external and earn no data credit.
+
+Initialization requests **15,504 bytes**: sixteen eight-byte buckets, 256
+40-byte event records, and 5,136 bytes for 128 memory blocks. Each block has a
+32-byte payload, a signed reference count at `+0x20`, and the allocator's free
+link at `+0x24`, giving a 40-byte stride. Record links end at null, as do the
+block links. The original calls `DWI_charfill` with the full 15,504-byte request
+starting at the record array, **128 bytes into the arena**. This clears 128 bytes
+past the nominal allocation; the reconstruction preserves that call and does not
+infer that the surrounding arena provides safe backing. `BSEndEvent` only clears
+the bucket, record-array and free-head pointers, then returns zero; it neither
+frees memory nor resets the other module fields.
+
+The block allocator ignores its unsigned size argument, obtains an element and
+zeros only its reference count. It adds no exhaustion check before writing through
+the returned pointer. Record allocation similarly pops the free head without an
+empty-list check and leaves the removed record's link intact. Ownership delegates
+to the pool, including its documented recognition of aligned trailing padding;
+it does not establish that a block is allocated.
+
+The original `Incriment`/`Decriment` spellings are retained. Decrement first
+reduces the count, then frees when the result is nonpositive and is not
+**-65536**, writing that sentinel before returning the block. The check-only
+helper applies the same test without decrementing. In particular, decrementing
+an already sentinel-marked block produces -65537 and frees again; the sentinel
+is not a double-free guard on that path. Valid lifetime management remains a
+caller responsibility. The message-processing helper sets the module state to
+three for true and zero for false.
+
+`BSEventFindAnyEventHandler` tests a bit in the class's inline mask at `+0x64`.
+This differs from the previously accepted `BSFindAnyEventHandler`, which scans
+levels and states. The shared class view records only the mask prefix with a
+zero-length tail; this does not establish its allocation extent or valid event
+range. The signed shift spelling reproduces the target compiler's word-bit
+operation, including bit 31; it is not a portable host implementation.
+`BSCode_EventHandlerEntry_struct` is recovered from the lookup signature and
+replaces the descriptive event-entry tag, with `BSEventView` retained as an alias.
+The established eight-byte layout is unchanged.
+
+Declared-state lookup scans the current state's event entries, then its parents,
+with **0xffff** ending the chain and indicating failure. Entries are expected in
+ascending event-number order: a larger number ends that state's scan. Flag 4
+blocks lookup before comparing the event number. A matching declaration with
+flag 1 clear also returns failure immediately, without parent fallback. Success
+returns the declaring state's ID and entry pointer; failure clears the output
+pointer. The original supplies no state, parent-cycle, array or output-pointer
+validation.
+
+These helpers support the still-unreconstructed event queue and dispatch path,
+including `BSObjectTriggerEvent`. The direct dependency scan finds **17 other
+unfinished caller ranges** for this batch. These references are prioritization
+evidence only; they establish neither runtime reachability nor source credit for
+those callers.
+
+Local isolated PowerPC fixtures execute all twelve production-linked functions
+under Unicorn 2.1.4, together with the accepted pool and script-arena allocator.
+They check arena sizing, all record/block links, the oversized clear, payload
+preservation, ignored size arguments, exhaustion, reference transitions and
+sentinel ordering, ownership boundaries/padding, minimal cleanup, message state,
+bitset boundaries and inherited-state lookup. Only `DWI_charfill` is stubbed at
+its original call boundary; the fixture implements its clear and records both
+calls. These checks do not boot the game or Dolphin. The original-object baseline,
+complete rebuilt-image comparison, 55 validation tests and refreshed snapshot are
+checked separately. All previously accepted object and linked-image hashes remain
+unchanged.

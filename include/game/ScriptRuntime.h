@@ -38,12 +38,14 @@ struct BSMessageRegistration_struct {
     unsigned char unknown0e[2];
 };
 
-struct BSEventView {
+struct BSCode_EventHandlerEntry_struct {
     unsigned int code;
     unsigned short eventNumber;
     unsigned char unknown06;
     unsigned char flags;
 };
+
+typedef BSCode_EventHandlerEntry_struct BSEventView;
 
 struct BSStateView {
     unsigned int code;
@@ -76,6 +78,7 @@ struct BSClass_struct {
     unsigned short levelCount; // +0x58
     unsigned char unknown5a[6];
     int *sharedValues; // +0x60
+    unsigned int eventMask[0]; // +0x64: inline bitset prefix; extent is not established.
 };
 
 struct BSMachineThread_struct;
