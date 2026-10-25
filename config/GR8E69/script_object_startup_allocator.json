@@ -1,0 +1,53 @@
+{
+  "id": "script_object_startup_allocator",
+  "source": "src/script/object_startup_allocator.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6f28",
+      "size": 120
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a518c",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSInitBSObjectStartupAllocator__Fi",
+      "address": "0x800f6f28",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBSObjectMemStack": "0x802c34fc",
+    "_._8MemStack": "0x801acc38",
+    "DWI_alloc": "0x801a8670",
+    "__8MemStacki": "0x801acbe8",
+    "g_numBSObjectsOnMemStack": "0x802c3500"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsobject.cpp",
+  "original_file_index": 1116,
+  "local_externals": [
+    "g_pBSObjectMemStack",
+    "g_numBSObjectsOnMemStack"
+  ]
+}

@@ -94,7 +94,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/matrix/`, `include/game/CMatrix.h`, `include/game/CVector3.h` | Reconstructed matrix and [vector](docs/Matrix.md#cvector3-layout) functions and their shared layouts |
 | `src/quaternion/`, `src/geometry/` | Reconstructed [quaternion conversions, line geometry and integer-angle helpers](docs/Geometry.md), with scoped storage evidence |
 | `src/camera/`, `include/game/Camera.h`, `include/game/Frustum.h` | Reconstructed [camera projection, view/clip updates and frustum transforms](docs/Camera.md), guided by contributed runtime research |
-| `src/sys_memory.cpp` | Four game allocation operators; original heap routines remain external |
+| `src/sys_memory.cpp`, `src/memory/` | Reconstructed [game allocation operators and MemStack lifecycle](docs/Memory.md); original heap routines remain external |
 | `src/stlport/` | Tree, container, sorting and heap functions using an attributed STLport 4.5.3 subset |
 | `src/eagl/` | Reconstructed rendering state and material drawing fragments; [evidence and remaining work](docs/Rendering.md) |
 | `src/eagl_anim/` | Reconstructed animation decoders, channels and support interfaces; [reference and evidence](docs/Animation.md) |
@@ -107,7 +107,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, script-target updates, spatial queries, aim-mode choices and blind fire](docs/Targeting.md) |
 | `src/lighting/`, `include/game/Light.h` | Reconstructed [light-volume selection and transitions, scene-light transforms and animated-light lifecycle](docs/LightVolumes.md) |
 | `src/bullets/`, `include/game/Bullet.h` | Reconstructed [bullet defaults, accessors and collision helpers](docs/Bullets.md) |
-| `src/triggers/` | Reconstructed [trigger-object queries, positions and point tests](docs/TriggerObject.md) |
+| `src/triggers/` | Reconstructed [trigger initialization, property/transform queries, startup sizing, player starts and machine-gun searches](docs/TriggerObject.md) |
 | `src/sound/` | Reconstructed [ambient-track and sound accessors](docs/Sound.md) |
 | `src/player/` | Reconstructed [camera-shake initialization, evaluation and player wrappers](docs/CameraShake.md), plus [path controls and spline evaluation](docs/Paths.md#player-paths-and-arbitrary-point-walking) |
 | `src/objectives/` | Reconstructed [objective initialization, status and visibility helpers](docs/Objectives.md) |

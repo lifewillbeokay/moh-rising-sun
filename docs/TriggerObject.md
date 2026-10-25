@@ -1,13 +1,13 @@
 # TriggerObject
 
-`src/triggers/` reconstructs 45 trigger-related functions (6,088 executable bytes)
+`src/triggers/` reconstructs 46 trigger-related functions (6,636 executable bytes)
 from the pinned GR8E69 executable. Claude Code assisted the initial 12-function,
 548-byte subset; Codex independently reconstructed and verified the 12-function,
 1,520-byte property-access extension and the 10-function, 2,300-byte legacy-field
 extension below. The transform and lifecycle extension adds five functions /
 716 bytes here and a 240-byte shared [FlexProp matrix getter](FlexProp.md#matrix-reconstruction).
 The startup-sizing, player-start and machine-gun-search extension adds another
-six functions / 1,004 bytes. Original field tables, property storage and generated
+six functions / 1,004 bytes. The full trigger initializer now adds 548 bytes. Original field tables, property storage and generated
 research remain outside the source credit.
 
 ## Scoped view
@@ -19,7 +19,9 @@ in place of the earlier method-only interface.
 - **Flags at `+0`.** Bit 30 selects the property format: set, the object's
   properties are an embedded [`FlexProp`](FlexProp.md) at `+8`; clear, `+8` holds a
   pointer to a legacy `xyzProperty_Struct` ([BPD.md](BPD.md)). Bit 0 is the
-  machine-gun "used" flag of `MarkMGAsUsed`/`IsMGUsed`.
+  machine-gun "used" flag of `MarkMGAsUsed`/`IsMGUsed`. The descriptive
+  `flagBits` union view exposes the same word for initialization and masks; it
+  adds no storage or recovered historical member name.
 - **Script object at `+4`**, a nullable `BSObject *` used by the save/load loops.
 - **Properties at `+8`**, modeled as a union of the two forms.
 
@@ -52,6 +54,7 @@ stride in the original `g_pTriggerObjects` array and stores its legacy pointer a
 | `trigger_player_starts` | `FindPlayerStarts`, `APlayerStartExistsForSavePoint` | 372 |
 | `trigger_clear_machine_guns` | `ClearMGTriggerObjects` | 44 |
 | `trigger_closest_machine_gun` | `SearchForClosestMachineGun` | 284 |
+| `trigger_initialization` | `InitAllTriggers` | 548 |
 
 Behavior read from the bodies:
 
@@ -65,7 +68,8 @@ Behavior read from the bodies:
 - `GetLegacyField` and `SetPositionZ` pass straight through without checking the
   format bit; `IsPointInTrigger` always uses the `FlexProp` form.
 
-The larger creation helpers remain unmatched. The typed accessors and their legacy-field templates
+The larger per-player creation helpers remain unmatched; `InitAllTriggers` is
+now reconstructed below. The typed accessors and their legacy-field templates
 and callbacks now have source; the original descriptor tables remain external.
 
 ## Typed properties and identity queries
@@ -349,7 +353,7 @@ integer spelling are descriptive; no on-disc class format is inferred.
 
 The original `InitAllTriggers` passes its saved legacy-trigger count to these
 helpers at `0x8012157c` and `0x80121588`, then uses the results to initialize the
-script and object startup allocators. That larger routine remains original code.
+script and object startup allocators. That routine is now reconstructed below.
 The helpers add no range check, overflow handling, cached count or class-lookup
 fallback. A valid initial index and valid class output remain preconditions.
 
@@ -401,6 +405,61 @@ ties, NaNs and repeated node-position calls. Host-native fixtures replace only
 the script-class and scene-node ABI boundaries and do not establish target
 layout or virtual slots. The production build checks those separately. No
 runtime/emulator test was performed.
+
+## Complete trigger initialization
+
+`InitAllTriggers` at `0x80121430` now reconstructs **548 code bytes**, plus the
+complete twenty-byte `BuddyLeadCheckpoint` string at `0x802a6534`. Codex
+independently reconstructed the body from GR8E69. It reuses the accepted property
+accessors and startup-sizing helpers, alongside the newly reconstructed
+[script startup allocators](Script.md#startup-allocation-and-system-state) and
+[MemStack lifecycle](Memory.md#memstack-lifecycle). Those dependencies receive
+their own nonoverlapping credit; `CreateBSObject`, event dispatch and light
+creation remain external.
+
+The original sequence is preserved:
+
+1. Save the initial trigger count as the first FlexProp index. Walk the existing
+   legacy entries, clear their flags and script-object pointer, and create a
+   light only when the record type at `+0x0c` is 13 and its pointer at `+0x40`
+   is null. An empty but nonnull string does not satisfy this test. The loop
+   reloads the global count; it does not use the saved count as its bound.
+2. Append the reported FlexProp count to `g_pNumTriggers`. Starting at the saved
+   index, copy each property and set its flags to `0x40000000`. Native-binding
+   value 5 tests child-type value `0x5b607813`; a match sets bit 28 and clears the
+   low 24 bits while retaining the high byte. Other native bindings query
+   `IsA("BuddyLeadCheckpoint")` and set bit 27 on success. Native binding 5
+   never reaches that ancestry query, even when its child-type test fails.
+3. Set script-system state to 1. Compute script memory and initialize its stack,
+   then compute object memory and initialize its stack. Both sizing helpers
+   receive the saved first FlexProp index, so this phase sizes the appended
+   entries rather than the original legacy range.
+4. Visit the appended properties in order. Null or empty script names clear the
+   script-object pointer. Other names call `CreateBSObject` with the output
+   pointer, null game object, current trigger and null final output. Its return
+   value is ignored. Existing fields are not independently initialized on that
+   branch before the creation call.
+5. Set state to 2, then make a separate pass over appended properties. Each
+   currently nonempty script name sends event 41 with null context/sender and
+   true for the final flag. Every creation call therefore precedes every event
+   call. The source retains repeated script-name queries and does not add a
+   guard for a null script-object result after creation.
+
+All three FlexProp loops re-query `GetNumProperties` at each iteration. No new
+capacity check, error recovery, flag interpretation or event name is introduced.
+The `MOH_core_Struct` cast accesses only the independently established pointer
+at `+0x40`; this does not establish a complete legacy-record allocation.
+The enum tag `EScriptSystemState` comes from symbols; the names for values 1 and
+2 describe their observed phases, not a recovered complete enumeration.
+
+An integrated host check combines this body, the accepted sizing helpers, both
+new startup allocators, state accessors and MemStack lifecycle. It checks the
+legacy light gate, native/child/ancestry dispatch, high-byte preservation and
+low-bit clearing, computed stack sizes, replacement of existing stacks, all
+creations before event 41, ignored creation failure and empty startup. Stubbed
+property/class/event/light interfaces and a host-sized MemStack allocation
+operator exercise behavior, not target offsets, bitfield order or ABI. Those
+remain covered by the complete ProDG source build. No emulator test was run.
 
 ## Verification
 

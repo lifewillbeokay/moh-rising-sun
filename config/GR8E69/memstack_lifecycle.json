@@ -1,0 +1,51 @@
+{
+  "id": "memstack_lifecycle",
+  "source": "src/memory/memstack.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801acbe8",
+      "size": 156
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b83c0",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8MemStacki",
+      "address": "0x801acbe8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "_._8MemStack",
+      "address": "0x801acc38",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__builtin_vec_delete": "0x801a89b0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
