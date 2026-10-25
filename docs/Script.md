@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-384 fragments in `src/script/` reconstruct **619 functions and 107,608
+387 fragments in `src/script/` reconstruct **634 functions and 108,712
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -23,7 +23,9 @@ and five sound, path-flag and damage wrappers (1,340 bytes;
 [evidence below](#sound-playback-path-flags-and-location-damage)), and four attachment,
 enemy-count and texture-hash wrappers (1,212 bytes;
 [evidence below](#soldier-attachments-enemy-counts-and-texture-crc)), and four startup-allocation/state
-helpers (240 bytes; [see below](#startup-allocation-and-system-state)).
+helpers (240 bytes; [see below](#startup-allocation-and-system-state)), and fifteen
+pool, object-lifecycle and instance-memory functions (1,104 bytes;
+[see below](#script-pool-and-instance-memory)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -344,12 +346,12 @@ represent modes observed at direct callers and in the registration body:
 
 Registration computes the stored time by adding the integer delay to the float
 clock and truncating to an integer, then selects the bucket with signed remainder
-modulo 120. It preserves the `0xffffffff` object-identity rejection. The method-only
-`BSUtilObjectInstanceMemoryAllocator` declaration supplies its original
-`DoWeOwnThisMemory` call; it does not establish an allocator layout or permit local
-allocation of that class. The original object named `g_pMemBlockAllocator`, timer
-globals, arena allocator, event reference-count functions and event dispatcher
-remain external storage/code and earn no credit from these fragments.
+modulo 120. It preserves the `0xffffffff` object-identity rejection. The timer declaration now imports the independently reconstructed
+[script pool allocator](#script-pool-and-instance-memory) from `ScriptPool.h`,
+including `DoWeOwnThisMemory`. The original object named `g_pMemBlockAllocator`,
+timer globals, event reference-count functions and event dispatcher remain
+external storage/code and earn no credit from these timer fragments. The shared
+arena allocator is counted separately below.
 
 Several surprising original behaviours are retained. Removal scans use an inclusive
 range of 121 ticks for a 120-bucket table, revisiting the first bucket. When mode 1
@@ -1395,3 +1397,104 @@ checks cover replacement, size/count calculations and state sequencing in the
 trigger initializer; target compilation checks private bindings and the deleting
 destructor ABI. Full-image verification and snapshot validation are separate
 from host behavior checks. No runtime/emulator test was performed.
+
+## Script pool and instance memory
+
+Three fragments independently reconstructed from GR8E69 with Codex assistance
+add **15 functions and 1,104 game-code bytes**. They use ProDG 3.8.1 with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. Every generated section and
+complete function matches; there are no generated data sections, discarded
+functions, instruction patches or original-context credit. The compiler profile
+is evidence of a working reconstruction, not the historical compiler release.
+
+| Function | Address | Code bytes |
+| --- | --- | ---: |
+| `BSUtilObjectInstanceMemoryAllocator::ComputeElementSize` | `0x800f830c` | 36 |
+| `BSUtilObjectInstanceMemoryAllocator::ComputeNeededSize` | `0x800f8330` | 64 |
+| `BSUtilObjectInstanceMemoryAllocator::Init` | `0x800f8370` | 132 |
+| `BSUtilObjectInstanceMemoryAllocator::GetFreeElement` | `0x800f83f4` | 60 |
+| `BSUtilObjectInstanceMemoryAllocator::FreeElement` | `0x800f8430` | 36 |
+| `BSUtilObjectInstanceMemoryAllocator::MakeHeap` | `0x800f8454` | 104 |
+| `BSUtilObjectInstanceMemoryAllocator::DoWeOwnThisMemory` | `0x800f84bc` | 76 |
+| `BSUtilObjectInstanceMemoryAllocator::GetIndexOfObject` | `0x800f8508` | 20 |
+| `BSUtilObjectInstanceMemoryAllocator::GetObjectByIndex` | `0x800f851c` | 20 |
+| `BSObjectGetMemoryRequirements` | `0x800f6a58` | 52 |
+| `BSInitBSObject` | `0x800f6a8c` | 72 |
+| `BSFreeAllBSObject` | `0x800f6ad4` | 136 |
+| `BSUtilGetMemory` | `0x800f8a90` | 52 |
+| `BSUtilGetObjectInstanceMemory` | `0x800f8ac4` | 144 |
+| `BSUtilFreeObjectInstanceMemory` | `0x800f8b54` | 100 |
+
+`ScriptPool.h` retains the original allocator class tag and method signatures.
+Its seven words are payload size in four-byte words at `+0`, element stride in
+words at `+4`, element count at `+8`, allocated count at `+0x0c`, total arena size
+in words at `+0x10`, arena base at `+0x14`, and free-list head at `+0x18`.
+The original 28-byte `g_pBSObjectAllocator` symbol, 112-byte `g_pMemAllocators`
+array, initialization stores, and caller stride independently agree on the size.
+Field names and the inline `PayloadSize()` accessor are descriptive; the accessor
+has no separately credited function. This establishes the allocator representation,
+not a full BSObject or class-file layout.
+
+Element sizing adds four bytes for a free-list link, then applies the optional
+alignment mask. Arena sizing always advances to the next 16-byte boundary,
+including an extra sixteen bytes when the product was already aligned. `Init`
+converts byte sizes to word counts with signed shifts, resets the allocated count,
+and builds the links at the end of each payload. Allocation pops the head and
+increments the count; exhaustion returns null. Its boolean argument is unused.
+Freeing pushes the supplied pointer and decrements the count. No clearing,
+null check, double-free protection or ownership check is added to these methods.
+The caller must supply valid backing storage, sizes, alignment and pool state;
+`MakeHeap` still writes a terminal link even for a zero element count.
+
+Ownership checks the entire computed arena interval and requires a byte offset
+divisible by four times the stored stride. It does not check whether the element
+is allocated, and can recognize a stride-aligned address in trailing arena padding.
+The two index helpers instead divide/multiply **byte offsets by the stored word
+stride without a factor of four**. For a 48-byte payload, the stride field is 13:
+the second element's index is 4, and index 1 yields base plus 13 bytes. These
+surprising operations match the original instructions and are preserved; the
+helpers are not normalized into conventional element indexing.
+
+`BSObjectGetMemoryRequirements` requests 228 objects with 48-byte payloads and
+alignment zero, yielding 11,872 bytes. Initialization obtains that memory from
+the script arena, initializes the original pool, and returns zero. Cleanup repeatedly
+reloads the active-list head after `DestroyBSObject`, clears both list endpoints,
+deletes the startup MemStack if present, then clears its pointer and count.
+Destruction of individual BSObjects remains external.
+
+`BSUtilGetMemory` advances a shared offset without a capacity check. Nonzero
+alignment always advances to the next boundary, even when the old offset is
+already aligned. Instance allocation reads the class's established `+0x54` size.
+In state 1 it calls the startup stack with alignment four. Otherwise it scans four
+pools in order, skips insufficient payload capacities, and returns the first
+successful allocation, or null when none succeeds. Freeing scans the same pools,
+returns the memory to the first owner, and does nothing if no pool owns it;
+it does not free startup-stack memory through another path.
+
+Private externals retain their original symbol scope:
+
+| Global | Address | Original file record |
+| --- | --- | --- |
+| `g_pBSObjectAllocator` | `0x8031d134` | `bsobject.cpp`, 1116 |
+| `g_pBSObjectMemStack`, `g_numBSObjectsOnMemStack` | `0x802c34fc`, `0x802c3500` | `bsobject.cpp`, 1116 |
+| `g_pMemAllocators` | `0x80326178` | `bsutil.cpp`, 1136 |
+| `g_pScriptMemory`, `g_memOffset` | `0x802c3514`, `0x802c3518` | `bsutil.cpp`, 1136 |
+| `g_pScriptMemStack`, `g_script_system_state` | `0x802c3510`, `0x802c3520` | `bsutil.cpp`, 1136 |
+
+The list endpoints `g_pBSObjectListStart` and `g_pBSObjectListEnd` are original
+global symbols at `0x802c34f4` and `0x802c34f8`. All storage remains external and
+receives no source credit. A direct dependency scan finds 37 other unfinished
+caller ranges for this batch; that count describes research opportunities, not
+newly reconstructed callers or runtime reachability.
+
+Local isolated PowerPC checks execute all fifteen production-linked functions
+under Unicorn 2.1.4. They cover pool links, payload preservation, exhaustion,
+LIFO reuse, ownership boundaries/padding, the unusual index arithmetic, arena
+alignment, 228-object initialization, startup allocation failure, fallback across
+all four runtime pools, unowned-pointer freeing, list-head reloading and cleanup
+order. MemStack allocation, BSObject destruction and MemStack destruction are
+stubbed at their original call boundaries; the latter verifies deleting flag 3.
+These are instruction-level fixture checks, not a game or Dolphin runtime test.
+The original-object baseline, complete rebuilt-image comparison, 55 validation
+tests and refreshed progress snapshot are checked separately. All previously
+accepted object and linked-image hashes remain unchanged.

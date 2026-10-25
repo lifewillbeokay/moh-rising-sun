@@ -1,0 +1,66 @@
+{
+  "id": "script_object_lifecycle",
+  "source": "src/script/object_lifecycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6a58",
+      "size": 260
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSObjectGetMemoryRequirements__Fv",
+      "address": "0x800f6a58",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "BSInitBSObject__Fv",
+      "address": "0x800f6a8c",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "BSFreeAllBSObject__Fv",
+      "address": "0x800f6ad4",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBSObjectAllocator": "0x8031d134",
+    "ComputeNeededSize__35BSUtilObjectInstanceMemoryAllocatoriii": "0x800f8330",
+    "BSUtilGetMemory__Fii": "0x800f8a90",
+    "Init__35BSUtilObjectInstanceMemoryAllocatorPviii": "0x800f8370",
+    "g_pBSObjectListStart": "0x802c34f4",
+    "DestroyBSObject__FP8BSObject": "0x800f6cec",
+    "g_pBSObjectMemStack": "0x802c34fc",
+    "g_pBSObjectListEnd": "0x802c34f8",
+    "_._8MemStack": "0x801acc38",
+    "g_numBSObjectsOnMemStack": "0x802c3500"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsobject.cpp",
+  "original_file_index": 1116,
+  "local_externals": [
+    "g_pBSObjectAllocator",
+    "g_pBSObjectMemStack",
+    "g_numBSObjectsOnMemStack"
+  ]
+}

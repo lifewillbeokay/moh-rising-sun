@@ -1,0 +1,84 @@
+{
+  "id": "script_pool_allocator",
+  "source": "src/script/pool_allocator.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f830c",
+      "size": 548
+    }
+  ],
+  "functions": [
+    {
+      "name": "ComputeElementSize__35BSUtilObjectInstanceMemoryAllocatorii",
+      "address": "0x800f830c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ComputeNeededSize__35BSUtilObjectInstanceMemoryAllocatoriii",
+      "address": "0x800f8330",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Init__35BSUtilObjectInstanceMemoryAllocatorPviii",
+      "address": "0x800f8370",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "MakeHeap__35BSUtilObjectInstanceMemoryAllocator",
+      "address": "0x800f8454",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb",
+      "address": "0x800f83f4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv",
+      "address": "0x800f8430",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "DoWeOwnThisMemory__35BSUtilObjectInstanceMemoryAllocatorPv",
+      "address": "0x800f84bc",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetIndexOfObject__35BSUtilObjectInstanceMemoryAllocatorPv",
+      "address": "0x800f8508",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetObjectByIndex__35BSUtilObjectInstanceMemoryAllocatori",
+      "address": "0x800f851c",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

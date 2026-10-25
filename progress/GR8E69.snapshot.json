@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 744344,
+    "matching_code_bytes": 745448,
     "total_executable_code_bytes": 2492032,
-    "percent": 29.868958344034105,
+    "percent": 29.913259540808465,
     "categories": {
-      "reconstructed_game": 352128,
+      "reconstructed_game": 353232,
       "restored_library": 392216
     },
-    "matching_functions": 3038
+    "matching_functions": 3053
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -644,7 +644,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "64e1f3e8c31e3bb3ae764843c45aa9d7bc2afd5eb9e5ce2fc96e240d340fab13",
+    "config/GR8E69/project.json": "4a14758d074bc0756dd35f206d1fabd6a0b7485772c5e19d06ef01e426f4e795",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -831,6 +831,7 @@
     "config/GR8E69/script_hier_object_register_bullet_damage.json": "4a67436f4e27364b24911d136b1806f24c759e502c12117acc49811e75a40395",
     "config/GR8E69/script_hier_object_set_look_object.json": "e628cbcad19cbce0e507790ae28880c24c01279126b734f9507a0c86f163a441",
     "config/GR8E69/script_initialize_animated_texture.json": "03995072e6a9b3aa7c8295734b98b6d061f6f050d2d259d712f788279c4f921e",
+    "config/GR8E69/script_instance_memory.json": "04111039c0156c354b479bb4aee7576c4288d4029007d688e3e9527f5a5b1751",
     "config/GR8E69/script_instance_startup_allocator.json": "b0c31cd67e8cd3eccd54e07b98148a67cf5d102dbb55cd644bb320c3eede6199",
     "config/GR8E69/script_is_alarm_activated.json": "0b32b980030c937bd3552c177f85fe1d6353ba3e60f6458c67ef43503dc55364",
     "config/GR8E69/script_is_draw_enabled.json": "767f93f405be27ad145606a49ad4e955a813048382c3dfef2bb7ab639ae2c671",
@@ -874,6 +875,7 @@
     "config/GR8E69/script_negate.json": "3d8e298c5786753cc413da81cceb6cfeba6c9193b63cb037990198e2095a2b7e",
     "config/GR8E69/script_nextstate.json": "3cb66f1f8c7df768fa9f377bee6f3fc91e710a8ebdae6c25df52b9481cc55c14",
     "config/GR8E69/script_not.json": "47c7af683c943669b447f0a28b5b1ba781fee3a38dd73461947134b0d81c4f62",
+    "config/GR8E69/script_object_lifecycle.json": "56c7e99fd1cb39034b1a4d40975dd360703be239346384b3c07735e0902982f4",
     "config/GR8E69/script_object_startup_allocator.json": "a5131f1f26c8b40e15fb703c3916bad39eef2f90f274dc5be4b4fd77f3fefdaa",
     "config/GR8E69/script_objective_queries.json": "255426562e37c7788b5eed93c27e8985066bb3653e4741da73f5079733b2d1ed",
     "config/GR8E69/script_objective_show.json": "08067dd09b24e5fc84bd6286c7ab7aeb3453bd6eb0295461257e71970d1652fc",
@@ -911,6 +913,7 @@
     "config/GR8E69/script_player_switch_weapons.json": "d9d3f771b781b593c880b28303d4080ccd2ff4651b56834b1ae108ef2203550d",
     "config/GR8E69/script_player_throw_grenade.json": "589a25ec22c587794c41375b4a197e924ea0bd9a6aca7e6c40204b225984eb23",
     "config/GR8E69/script_player_weapon_info.json": "1e7ae7f701332b671ae3756732980b3e36386a741e622fb6c8b702edeb687ea0",
+    "config/GR8E69/script_pool_allocator.json": "4f44f84ae35183692018cd49b7bd8f205ca343379ee0cc67d4d82fb4cb78beb8",
     "config/GR8E69/script_position.json": "34f3c8a7d3ee65da3811d5965e96cbfa8289084ceac1b16668a35e833814c97f",
     "config/GR8E69/script_projector_create_by_type.json": "a33e113ecbd09d59ecbf7851aa97a237e88f2e051c9dfc7772ca0ef634484b14",
     "config/GR8E69/script_projector_destroy.json": "4d7c1b46e932fac53737e64c6eb43ec447b12b379450f3a7999dfa79e448a985",
@@ -1524,10 +1527,11 @@
     "include/game/SceneObjects.h": "cf54c69f386d7806a798afb7cfe4d520c10f56d541a1f6d52c56860e03eb2286",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
+    "include/game/ScriptPool.h": "0b67c9753d8531ff457f4c8b898a248cfc8c4f6423e2b5a4f340255d72585fb9",
     "include/game/ScriptRuntime.h": "76f6cb02e5238af51d3cb3847ac870a45a20db488900ec4f3e04297744001bff",
     "include/game/ScriptSchedule.h": "6158dc9d8f6d57c34c31e527ba680a988f21a160149047de2f54bd5c216c1e19",
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
-    "include/game/ScriptTimers.h": "9e52bcdc4e35052e47f16ee3fceee11bd6d04dda30c24c403304629b2ad8872d",
+    "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
     "include/game/Shell.h": "aac7dbeba4aa3119857814e65ea571c09c9078703e75663b8797bed92d03a4a6",
     "include/game/SoundAmbience.h": "a8ffdd3a842aa24e0d8511216e05fd27625c8c2e96c7db19d7557afa729b1fb5",
     "include/game/SoundManager.h": "8aff3f442f2017a377fdb5aefb163df0137b62a91e978796fa06cde849a4084f",
@@ -2577,6 +2581,7 @@
     "src/script/hier_object_register_bullet_damage.cpp": "62234399dc2c47654241a9c50ec630451b9a0b6e2afee87b02816368eea7deda",
     "src/script/hier_object_set_look_object.cpp": "ee009425512928f7acffe5b6abab31907b05314ab2cf7e3f15d034a1a39f509c",
     "src/script/initialize_animated_texture.cpp": "78054039cd6a317bd722f912361b1369c42dfc35f3e0642383612d190d91d89c",
+    "src/script/instance_memory.cpp": "35d060717be7e5b4830b485ea5da0f7b746634a3fb4f0f315b50628dc8a4982b",
     "src/script/instance_startup_allocator.cpp": "7b01cb57ddf4006e37784cccc3ef746a880fba71b4c40805a6d21c2d406b19a0",
     "src/script/is_alarm_activated.cpp": "ce286f40a8c2c3e302cf1ea969fd756d2e7237605b2956d5fc6c539f0215a828",
     "src/script/is_draw_enabled.cpp": "78c5ddb64f644270435f2f679bfd269e4e9ac94ee6704ea2e5c2057299258661",
@@ -2620,6 +2625,7 @@
     "src/script/negate.cpp": "f6a920b97c8c4df32b02d9c8754c3f0dc6d69d34d8c56a1f3f48b57b1d211e88",
     "src/script/nextstate.cpp": "3d03451278563dbffef29e20da6b33890c4e4ff891c28b53c9ce3c403ea211e0",
     "src/script/not.cpp": "6a042ba188f55af543191aecccbb4496d1aa55eef9a44bd4b87f0931d69ce977",
+    "src/script/object_lifecycle.cpp": "1528b2307ba25ae244d29dac83207773f0111d1719669d75636a043b37b1ed42",
     "src/script/object_startup_allocator.cpp": "551cfeeaf4b8c5ca38201ec46e7d488e61396ffa4bddf94b0496711461e1dcc3",
     "src/script/objective_queries.cpp": "b12c45721356a53b6b311b1ba5f5626b9f35637b4b221498c3c283a0f2f84247",
     "src/script/objective_show.cpp": "29780a4ce409086b175b8ed7d23aee0088ced3fb467883ad58bbb108f0277c32",
@@ -2657,6 +2663,7 @@
     "src/script/player_switch_weapons.cpp": "c72aaae652a11da0b1c53b6002c1e1aa27157e250b20bc699087e582fa51a5c7",
     "src/script/player_throw_grenade.cpp": "704a8591cc78fa07c30f79b07f0ff533c0e947ffe3c8a9a88740f0411ed7f0ab",
     "src/script/player_weapon_info.cpp": "67c789b2149a84c47613009836eec6032ee70dde9becd6ee3213ac6841bae9fc",
+    "src/script/pool_allocator.cpp": "845397c38b9aff8d058fbfa03dbc8159ccd5828e7a5eb697cba914b241a84dcf",
     "src/script/position.cpp": "389e7407321bf715f99aa798bc1dd29dd89f3667ca7872fe256f57680a41b4a4",
     "src/script/projector_create_by_type.cpp": "3cae50e79f621f704d39dd8fec81daa18a1931a2a14bfc5e0e4134847440cc89",
     "src/script/projector_destroy.cpp": "97efa1106097c689d7e8ce4b71c383b050239e804d22580090acd291754e87fe",
@@ -29099,6 +29106,60 @@
       "discarded_functions": [],
       "object_sha256": "90288d79cc9777b44e109797933c6680e3cdaaf207a78ea6c1c7936d3e88f4b7",
       "linked_sha256": "2f017fa107613d591c8096046935b66fa42578cdecc307f6ae75c5a02470eb95"
+    },
+    {
+      "id": "script_pool_allocator",
+      "category": "reconstructed_game",
+      "functions": 9,
+      "code_bytes": 548,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "448becf95877ef46d550b654582ca21840919a698b3bc8021e826c945f61adee",
+      "linked_sha256": "e1ccf2a684c0aed9eb1acd51c5b4264ee5c9f4412287c24ce6d76fa2f259c2bb"
+    },
+    {
+      "id": "script_object_lifecycle",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 260,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "ae10fa60d7162a42f28fdf2738d8a2e8c966a8774f7ab799b1e068be2804f5a2",
+      "linked_sha256": "566e308e4fe67d4198f8a7480df42fdc55dce432814a90791d03ba2702cd7a92"
+    },
+    {
+      "id": "script_instance_memory",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 296,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "5e49849916484ac7a5f8152f04af7ad54ab2fd26e032f2786329cf94e730403f",
+      "linked_sha256": "dc9e1e6e4ccfa3fb8c581cdbf70f4c5739afab338006a6ad4a6bce1b13d69d8b"
     }
   ],
   "code_map": {
@@ -51126,27 +51187,6 @@
         "file_name": "bsobject.cpp",
         "ranges": [
           {
-            "address": "0x800f6a58",
-            "size": 52,
-            "kind": "function",
-            "name": "BSObjectGetMemoryRequirements__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f6a8c",
-            "size": 72,
-            "kind": "function",
-            "name": "BSInitBSObject__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f6ad4",
-            "size": 136,
-            "kind": "function",
-            "name": "BSFreeAllBSObject__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f6b5c",
             "size": 400,
             "kind": "function",
@@ -51316,69 +51356,6 @@
         "file_name": "bsutil.cpp",
         "ranges": [
           {
-            "address": "0x800f830c",
-            "size": 36,
-            "kind": "function",
-            "name": "ComputeElementSize__35BSUtilObjectInstanceMemoryAllocatorii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8330",
-            "size": 64,
-            "kind": "function",
-            "name": "ComputeNeededSize__35BSUtilObjectInstanceMemoryAllocatoriii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8370",
-            "size": 132,
-            "kind": "function",
-            "name": "Init__35BSUtilObjectInstanceMemoryAllocatorPviii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f83f4",
-            "size": 60,
-            "kind": "function",
-            "name": "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8430",
-            "size": 36,
-            "kind": "function",
-            "name": "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8454",
-            "size": 104,
-            "kind": "function",
-            "name": "MakeHeap__35BSUtilObjectInstanceMemoryAllocator",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f84bc",
-            "size": 76,
-            "kind": "function",
-            "name": "DoWeOwnThisMemory__35BSUtilObjectInstanceMemoryAllocatorPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8508",
-            "size": 20,
-            "kind": "function",
-            "name": "GetIndexOfObject__35BSUtilObjectInstanceMemoryAllocatorPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f851c",
-            "size": 20,
-            "kind": "function",
-            "name": "GetObjectByIndex__35BSUtilObjectInstanceMemoryAllocatori",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x800f8530",
             "size": 1136,
             "kind": "function",
@@ -51397,27 +51374,6 @@
             "size": 100,
             "kind": "function",
             "name": "BSUtilUpdate__Ff",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8a90",
-            "size": 52,
-            "kind": "function",
-            "name": "BSUtilGetMemory__Fii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8ac4",
-            "size": 144,
-            "kind": "function",
-            "name": "BSUtilGetObjectInstanceMemory__FP14BSClass_struct",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x800f8b54",
-            "size": 100,
-            "kind": "function",
-            "name": "BSUtilFreeObjectInstanceMemory__FPv",
             "evidence": "adjacent-compiler-markers"
           },
           {

@@ -1252,7 +1252,10 @@
     "script_object_startup_allocator.json",
     "script_instance_startup_allocator.json",
     "script_system_state.json",
-    "memstack_lifecycle.json"
+    "memstack_lifecycle.json",
+    "script_pool_allocator.json",
+    "script_object_lifecycle.json",
+    "script_instance_memory.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

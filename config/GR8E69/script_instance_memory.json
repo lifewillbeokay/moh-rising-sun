@@ -1,0 +1,67 @@
+{
+  "id": "script_instance_memory",
+  "source": "src/script/instance_memory.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f8a90",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSUtilGetMemory__Fii",
+      "address": "0x800f8a90",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "BSUtilGetObjectInstanceMemory__FP14BSClass_struct",
+      "address": "0x800f8ac4",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "BSUtilFreeObjectInstanceMemory__FPv",
+      "address": "0x800f8b54",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_memOffset": "0x802c3518",
+    "g_pScriptMemory": "0x802c3514",
+    "g_script_system_state": "0x802c3520",
+    "g_pScriptMemStack": "0x802c3510",
+    "Alloc__8MemStackii": "0x801acc84",
+    "g_pMemAllocators": "0x80326178",
+    "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb": "0x800f83f4",
+    "DoWeOwnThisMemory__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f84bc",
+    "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f8430"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsutil.cpp",
+  "original_file_index": 1136,
+  "local_externals": [
+    "g_memOffset",
+    "g_pScriptMemory",
+    "g_script_system_state",
+    "g_pScriptMemStack",
+    "g_pMemAllocators"
+  ]
+}
