@@ -33,11 +33,7 @@ extern void BSTimerRemoveTimerEvent(BSTimerEvent_struct *, BSTimerEvent_struct *
 extern void BSTimerRemoveDuplicateTimerInstances(BSObject *, unsigned short, int);
 extern int BSTimerRemoveLatterTimerInstances(BSObject *, unsigned short, int);
 extern void BSTimerRemoveTimerInstances(BSObject *);
-// Original class tag; only this method interface is established here.
-class BSUtilObjectInstanceMemoryAllocator {
-public:
-    int DoWeOwnThisMemory(void *);
-};
+#include "ScriptPool.h"
 extern BSUtilObjectInstanceMemoryAllocator g_pMemBlockAllocator;
 extern void BSEventIncrimentReferenceCount(void *);
 // The enum tag is recovered; enumerator names describe observed cases.
