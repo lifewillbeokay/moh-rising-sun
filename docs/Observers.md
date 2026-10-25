@@ -41,7 +41,10 @@ The [script/game-object bridge](Script.md#script-game-object-bridge) now reuses 
 observer layout for the `WeakPtr<BSGO_Basic, 8>` embedded in `BSObject`. Its boolean
 conversion and arrow access preserve the original spatial callers' null checks
 and subject reads. The bridge contributes no additional observer event handlers;
-its accepted functions are counted with script and AI targeting code.
+its accepted functions are counted with script and AI targeting code. The
+[script-object lifecycle](Script.md#script-object-management) also reuses the
+inline observer construction/assignment and nondeleting destructor boundary;
+its complete 48-byte BSObject extent is established separately.
 
 ## Accepted methods
 

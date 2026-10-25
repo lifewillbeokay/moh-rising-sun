@@ -6,7 +6,7 @@ extern BSObject *g_pBSObjectListStart, *g_pBSObjectListEnd;
 extern MemStack *g_pBSObjectMemStack;
 extern unsigned int g_numBSObjectsOnMemStack;
 extern void *BSUtilGetMemory(int, int);
-extern void DestroyBSObject(BSObject *);
+extern int DestroyBSObject(BSObject *);
 int BSObjectGetMemoryRequirements() {
     return g_pBSObjectAllocator.ComputeNeededSize(48, 228, 0);
 }

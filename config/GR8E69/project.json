@@ -1255,7 +1255,12 @@
     "memstack_lifecycle.json",
     "script_pool_allocator.json",
     "script_object_lifecycle.json",
-    "script_instance_memory.json"
+    "script_instance_memory.json",
+    "script_object_access.json",
+    "script_object_list.json",
+    "script_object_destroy.json",
+    "script_object_create.json",
+    "script_class_memory.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

@@ -1,0 +1,49 @@
+{
+  "id": "script_object_create",
+  "source": "src/script/object_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6b5c",
+      "size": 400
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateBSObject__FPCcPP8BSObjectP10BSGO_BasicP13TriggerObjectPPv",
+      "address": "0x800f6b5c",
+      "size": 400,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFreeBSObject__Fv": "0x800f7088",
+    "BSFileGetClass__FPCcPP14BSClass_struct": "0x800f44e4",
+    "BSUtilGetObjectInstanceMemory__FP14BSClass_struct": "0x800f8ac4",
+    "g_uniqueIDCount": "0x802c34f0",
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "BSCreateThread__FP8BSObjectP13BSCode_structP22BSMachineThread_structPv": "0x800f505c",
+    "AddBSObjectToList__FP8BSObject": "0x800f71c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsobject.cpp",
+  "original_file_index": 1116,
+  "local_externals": [
+    "g_uniqueIDCount"
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "id": "script_object_list",
+  "source": "src/script/object_list.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f71c0",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddBSObjectToList__FP8BSObject",
+      "address": "0x800f71c0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "RemoveBSObjectFromList__FP8BSObject",
+      "address": "0x800f71f8",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBSObjectListStart": "0x802c34f4",
+    "g_pBSObjectListEnd": "0x802c34f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

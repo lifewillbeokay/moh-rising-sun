@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-387 fragments in `src/script/` reconstruct **634 functions and 108,712
+392 fragments in `src/script/` reconstruct **643 functions and 110,012
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -25,7 +25,8 @@ enemy-count and texture-hash wrappers (1,212 bytes;
 [evidence below](#soldier-attachments-enemy-counts-and-texture-crc)), and four startup-allocation/state
 helpers (240 bytes; [see below](#startup-allocation-and-system-state)), and fifteen
 pool, object-lifecycle and instance-memory functions (1,104 bytes;
-[see below](#script-pool-and-instance-memory)).
+[see below](#script-pool-and-instance-memory)), and nine object-management and
+class-sizing functions (1,300 bytes; [see below](#script-object-management)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -488,8 +489,8 @@ Evidence extends beyond the spatial callers. The original `CreateBSObject` at
 BSGO argument at object `+0x20`, and registers the observer at object `+0x0c` with
 `ISubject::AddObserver` when that argument is nonnull. The named weak-pointer
 vtable at `0x802e8228` and existing matched specialization of `HandleEvent` at
-`0x80286664` corroborate the tag and destruction-event value 8. `CreateBSObject`
-and the vtable remain original context and earn no new source credit. The inline
+`0x80286664` corroborate the tag and destruction-event value 8. `CreateBSObject` is now reconstructed in the [object-management batch](#script-object-management);
+the vtable remains original context and earns no source credit. The inline
 boolean conversion and arrow operator are descriptive source factoring of the
 observed null test and subject access, not recovered historical declarations.
 
@@ -531,9 +532,10 @@ is modeled as `void`; original return spelling is not encoded in its symbol.
 
 The [AI target position and forward queries](Targeting.md) share these interfaces.
 They preserve two `GetSceneNode` calls where the original does, unlike the one-call
-lookup in `GetScriptPosition`. The BSGO prefix, weak pointer and BSObject prefix
-have target-compiler size checks; none authorizes allocating the larger original
-runtime objects from these scoped views.
+lookup in `GetScriptPosition`. The BSGO prefix, weak pointer and BSObject storage
+have target-compiler size checks. The BSGO view remains a prefix; the
+[object-management reconstruction](#script-object-management) independently establishes
+the complete 48-byte BSObject allocation.
 
 ## Projectile aim and controls
 
@@ -1432,8 +1434,8 @@ in words at `+0x10`, arena base at `+0x14`, and free-list head at `+0x18`.
 The original 28-byte `g_pBSObjectAllocator` symbol, 112-byte `g_pMemAllocators`
 array, initialization stores, and caller stride independently agree on the size.
 Field names and the inline `PayloadSize()` accessor are descriptive; the accessor
-has no separately credited function. This establishes the allocator representation,
-not a full BSObject or class-file layout.
+has no separately credited function. This establishes the allocator representation. BSObject storage is established
+independently below; class-file layouts remain outside this reconstruction.
 
 Element sizing adds four bytes for a free-list link, then applies the optional
 alignment mask. Arena sizing always advances to the next 16-byte boundary,
@@ -1460,7 +1462,8 @@ alignment zero, yielding 11,872 bytes. Initialization obtains that memory from
 the script arena, initializes the original pool, and returns zero. Cleanup repeatedly
 reloads the active-list head after `DestroyBSObject`, clears both list endpoints,
 deletes the startup MemStack if present, then clears its pointer and count.
-Destruction of individual BSObjects remains external.
+Destruction of individual BSObjects is reconstructed in the
+[object-management batch](#script-object-management).
 
 `BSUtilGetMemory` advances a shared offset without a capacity check. Nonzero
 alignment always advances to the next boundary, even when the old offset is
@@ -1498,3 +1501,100 @@ These are instruction-level fixture checks, not a game or Dolphin runtime test.
 The original-object baseline, complete rebuilt-image comparison, 55 validation
 tests and refreshed progress snapshot are checked separately. All previously
 accepted object and linked-image hashes remain unchanged.
+
+## Script object management
+
+Five fragments independently reconstructed from GR8E69 with Codex assistance add
+**nine functions and 1,300 game-code bytes**. All complete generated functions
+and sections match under ProDG 3.8.1 with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. No data sections, vtables,
+discarded output, instruction patches or partial-match credit are introduced.
+The working compiler profile does not establish the historical compiler release.
+
+| Function | Address | Code bytes |
+| --- | --- | ---: |
+| `CreateBSObject` | `0x800f6b5c` | 400 |
+| `DestroyBSObject` | `0x800f6cec` | 164 |
+| `BSGetObjectByIndex` | `0x800f6fa0` | 104 |
+| `BSGetIndexByObject` | `0x800f7008` | 128 |
+| `GetFreeBSObject` | `0x800f7088` | 224 |
+| `FreeBSObject` | `0x800f7168` | 88 |
+| `AddBSObjectToList` | `0x800f71c0` | 56 |
+| `RemoveBSObjectFromList` | `0x800f71f8` | 76 |
+| `BSUtilComputeClassMemoryRequirements` | `0x800f8bb8` | 60 |
+
+The existing BSObject view now extends from 40 to **48 bytes**. The final two
+words are a dispatch-related value at `+0x28`, retained as `field_28` because its
+complete meaning is unresolved, and the active-list next pointer at `+0x2c`.
+The original 48-byte allocation request, pool payload, index stride, constructor
+stores and list operations independently agree on the complete object extent.
+The weak observer remains at `+0x0c`, its subject at `+0x20`, and the queue identity
+at `+0x24`. The ordinary inline constructor clears the three leading pointers,
+constructs and clears the weak reference, sets identity to `0xffffffff`, and
+clears the final words. This is reconstructed source factoring; no separate
+constructor symbol or historical spelling is claimed.
+
+`GetFreeBSObject` uses a 48-byte, four-byte-aligned startup-stack allocation in
+state 1 and the object pool with argument `true` otherwise. It constructs only
+when allocation succeeds and returns null on exhaustion. `FreeBSObject` destroys
+the embedded weak observer first, using the compiler's nondeleting destructor
+flag 2, then returns the object to the pool only if that pool owns its address.
+Startup-stack objects are not individually released. The observer vtables remain
+original dependencies at `0x802e9aa0` and `0x802e8228`.
+
+The index lookup treats signed-short `-1` as null. Values below the signed view
+of the startup count select a 48-byte stack element; all others subtract that
+count and call the pool's index helper. The reverse lookup uses ownership to
+choose between pool indexing plus the startup count and a BSObject pointer
+difference in startup memory, then narrows to signed short. It preserves the
+pool's unusual byte-offset/word-stride units documented above. Other negative
+indices, null object pointers, invalid stack ranges and narrowing overflow get
+no new guards. The count's existing unsigned storage is retained with an explicit
+signed comparison at lookup, matching the observed instructions.
+
+Creation publishes the allocated object through the required output and, when
+present, the optional `void **` output before class lookup. It clears the class
+pointer, asks `BSFileGetClass` to fill it, and returns **13** if it remains null.
+That failure keeps the allocated object; no rollback is added. With a class,
+creation obtains instance memory, assigns and increments the unique identity,
+stores the native trigger, assigns the weak game-object reference and clears
+`field_28`. It does not add a null check for either allocation.
+
+The runtime BSCode view now names an unsigned-short context-word count at
+`+0x14`, supported independently by creation and the class-sizing function.
+Sizing sums one 32-byte thread plus four bytes per context word for each class
+level. Creation places all thread records first, followed by each level's context
+words, and calls `BSCreateThread` in level order. It re-reads the level count after
+each callback while preserving the initially computed context base. A nonzero
+thread result returns immediately without rollback or list insertion. Zero levels
+still allow insertion, and successful creation returns zero. This evidence
+establishes runtime storage and does not imply a matching on-disc class format.
+
+Destruction sends event **334** immediately before invalidating the identity,
+destroys each level's thread, unregisters timers, releases instance memory,
+unlinks the object, and finally destroys/recycles the object itself. It returns
+zero. Existing callers' declarations now agree on that integer return; their
+generated code remains unchanged. Event-dispatch and class-loading internals are
+still external dependencies of this batch.
+
+List insertion appends and clears the new tail's next pointer. Removal scans the
+whole list, reconnects a matching node's predecessor and recomputes the tail from
+the last retained node. It leaves the removed object's own next pointer intact.
+Empty lists and absent objects preserve valid endpoints; cycle handling is not
+added.
+
+The private globals `g_pBSObjectAllocator`, `g_pBSObjectMemStack`,
+`g_numBSObjectsOnMemStack` and `g_uniqueIDCount` retain `bsobject.cpp` file record
+1116. The identity counter is the four-byte symbol at `0x802c34f0`. The active-list
+endpoints remain original global symbols. All this storage earns no source credit.
+
+Isolated Unicorn 2.1.4 PPC32 checks execute all nine production-linked functions
+alongside the previously reconstructed pool and instance allocators. Fixtures
+cover construction, startup/pool selection, exhaustion, index boundaries, list
+positions, ownership-dependent freeing, creation/destruction sequencing, context
+slices, missing classes, thread failures, zero-level classes and changing level
+counts. Class lookup, thread/event/timer calls, observer registration/destruction
+and MemStack allocation are stubbed at their original boundaries. These checks
+are separate from the original-object baseline, complete rebuilt-image comparison,
+55 validation tests and progress snapshot audit. All previously accepted object
+and linked hashes remain unchanged. No game or Dolphin runtime test was performed.
