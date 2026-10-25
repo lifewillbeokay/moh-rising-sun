@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-381 fragments in `src/script/` reconstruct **615 functions and 107,368
+384 fragments in `src/script/` reconstruct **619 functions and 107,608
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -22,7 +22,8 @@ six follow-up wrappers (1,300 bytes; [evidence below](#follow-up-wrappers-from-p
 and five sound, path-flag and damage wrappers (1,340 bytes;
 [evidence below](#sound-playback-path-flags-and-location-damage)), and four attachment,
 enemy-count and texture-hash wrappers (1,212 bytes;
-[evidence below](#soldier-attachments-enemy-counts-and-texture-crc)).
+[evidence below](#soldier-attachments-enemy-counts-and-texture-crc)), and four startup-allocation/state
+helpers (240 bytes; [see below](#startup-allocation-and-system-state)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -1344,3 +1345,53 @@ event dispatch, message-send filtering and music internals remain future work. T
 [script](research/ps2/script-opcodes.md), [class-description](research/ps2/sin-class-descriptions.md)
 and [music](research/ps2/pathfinder-music.md) research retains broader hypotheses and
 cross-platform questions beyond the matched bodies here.
+
+## Startup allocation and system state
+
+Four functions independently reconstructed by Codex from GR8E69 add **240 code
+bytes** and **68 read-only bytes**. They form part of the now-reconstructed
+[trigger initialization sequence](TriggerObject.md#complete-trigger-initialization).
+All four use ProDG 3.8.1 with `-O2 -G0 -fno-exceptions -fno-implicit-templates`;
+this working profile does not establish the original compiler release.
+
+| Function | Address | Code bytes |
+| --- | --- | ---: |
+| `BSInitBSObjectStartupAllocator(int)` | `0x800f6f28` | 120 |
+| `BSUtilSetScriptingSystemState(EScriptSystemState)` | `0x800f8cb4` | 12 |
+| `BSUtilGetScriptingSystemState()` | `0x800f8cc0` | 12 |
+| `BSUtilInitStartupAllocator(int)` | `0x800f8ccc` | 96 |
+
+Both initialization functions delete the previous MemStack if present, allocate
+and construct a replacement, and store it in the original private global. The
+object variant also stores `unsigned(size) / 48`, preserving the unsigned
+arithmetic even though the parameter is signed. Neither adds allocation-failure
+handling or a negative-size guard. The separately reconstructed
+[MemStack lifecycle](Memory.md#memstack-lifecycle) supplies construction and
+destruction; the underlying heap and the MemStack allocation method stay external.
+
+`MemStack::operator new(size, label)` is a descriptive inline allocation boundary
+that calls `DWI_alloc` with flag value 1024. Its target size is twelve bytes.
+The complete diagnostic pools are checked at `0x802a518c` (36 bytes,
+`source/ai_script/bsobject.cpp:578`) and `0x802a54bc` (32 bytes,
+`source/ai_script/bsutil.cpp:906`), including terminators and alignment. No
+neighboring `bad_alloc` strings or original storage receive credit.
+
+The state setter stores its argument unchanged and the getter returns it;
+there is no transition validation. `ScriptStartup.h` retains the enum tag from
+the symbol and names the observed startup/running values 1 and 2. It does not
+claim the complete original enum or impose those two values on the accessors.
+
+Private original storage remains scoped in the manifests:
+
+| Global | Address | Original file record |
+| --- | --- | --- |
+| `g_pBSObjectMemStack` | `0x802c34fc` | `bsobject.cpp`, 1116 |
+| `g_numBSObjectsOnMemStack` | `0x802c3500` | `bsobject.cpp`, 1116 |
+| `g_pScriptMemStack` | `0x802c3510` | `bsutil.cpp`, 1136 |
+| `g_script_system_state` | `0x802c3520` | `bsutil.cpp`, 1136 |
+
+These four-byte objects are not recreated or counted as source progress. Host
+checks cover replacement, size/count calculations and state sequencing in the
+trigger initializer; target compilation checks private bindings and the deleting
+destructor ABI. Full-image verification and snapshot validation are separate
+from host behavior checks. No runtime/emulator test was performed.

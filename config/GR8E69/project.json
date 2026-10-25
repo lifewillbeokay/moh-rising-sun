@@ -1247,7 +1247,12 @@
     "trigger_memory_usage.json",
     "trigger_player_starts.json",
     "trigger_clear_machine_guns.json",
-    "trigger_closest_machine_gun.json"
+    "trigger_closest_machine_gun.json",
+    "trigger_initialization.json",
+    "script_object_startup_allocator.json",
+    "script_instance_startup_allocator.json",
+    "script_system_state.json",
+    "memstack_lifecycle.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

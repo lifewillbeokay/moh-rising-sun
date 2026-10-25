@@ -1,0 +1,58 @@
+{
+  "id": "trigger_initialization",
+  "source": "src/triggers/InitAllTriggers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80121430",
+      "size": 548
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6534",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitAllTriggers__Fv",
+      "address": "0x80121430",
+      "size": 548,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68",
+    "Create__6CLightPv": "0x8012ff54",
+    "GetNumProperties__16FlexPropDatabase": "0x80126190",
+    "GetPropertyByIndex__16FlexPropDatabaseiR8FlexProp": "0x801261ac",
+    "GetNativeBindingType__C13TriggerObject": "0x80122e9c",
+    "GetChildType__C13TriggerObject": "0x80122f98",
+    "IsA__C8FlexPropPCc": "0x80126888",
+    "BSUtilSetScriptingSystemState__F18EScriptSystemState": "0x800f8cb4",
+    "GetTriggerScriptMemUsage__Fi": "0x80121390",
+    "BSUtilInitStartupAllocator__Fi": "0x800f8ccc",
+    "GetTriggerBSObjectMemUsage__Fi": "0x80121300",
+    "BSInitBSObjectStartupAllocator__Fi": "0x800f6f28",
+    "GetScript__C13TriggerObject": "0x8012301c",
+    "CreateBSObject__FPCcPP8BSObjectP10BSGO_BasicP13TriggerObjectPPv": "0x800f6b5c",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

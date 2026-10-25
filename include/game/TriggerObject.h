@@ -20,7 +20,10 @@ struct TriggerObjectFlags {
 class CMatrix;
 class TriggerObject {
   public:
-    TriggerObjectFlags flags;
+    union {
+        TriggerObjectFlags flags;
+        unsigned int flagBits;
+    };
     BSObject *scriptObject; // +4: the trigger's script object (BIFunc_SendEventParent).
     union {
         FlexProp flex;                // When flags.flexFormat is set.

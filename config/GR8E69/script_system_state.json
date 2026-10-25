@@ -1,0 +1,49 @@
+{
+  "id": "script_system_state",
+  "source": "src/script/system_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f8cb4",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSUtilSetScriptingSystemState__F18EScriptSystemState",
+      "address": "0x800f8cb4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "BSUtilGetScriptingSystemState__Fv",
+      "address": "0x800f8cc0",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_script_system_state": "0x802c3520"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsutil.cpp",
+  "original_file_index": 1136,
+  "local_externals": [
+    "g_script_system_state"
+  ]
+}
