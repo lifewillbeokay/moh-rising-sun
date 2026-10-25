@@ -1,0 +1,75 @@
+{
+  "id": "script_object_access",
+  "source": "src/script/object_access.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6fa0",
+      "size": 544
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSGetObjectByIndex__Fs",
+      "address": "0x800f6fa0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BSGetIndexByObject__FP8BSObject",
+      "address": "0x800f7008",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeBSObject__Fv",
+      "address": "0x800f7088",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "FreeBSObject__FP8BSObject",
+      "address": "0x800f7168",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_numBSObjectsOnMemStack": "0x802c3500",
+    "g_pBSObjectAllocator": "0x8031d134",
+    "GetObjectByIndex__35BSUtilObjectInstanceMemoryAllocatori": "0x800f851c",
+    "g_pBSObjectMemStack": "0x802c34fc",
+    "DoWeOwnThisMemory__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f84bc",
+    "GetIndexOfObject__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f8508",
+    "BSUtilGetScriptingSystemState__Fv": "0x800f8cc0",
+    "Alloc__8MemStackii": "0x801acc84",
+    "GetFreeElement__35BSUtilObjectInstanceMemoryAllocatorb": "0x800f83f4",
+    "_vt.9IObserver": "0x802e9aa0",
+    "_vt.t7WeakPtr2Z10BSGO_Basici8": "0x802e8228",
+    "_._9IObserver": "0x8014ad64",
+    "FreeElement__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f8430"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsobject.cpp",
+  "original_file_index": 1116,
+  "local_externals": [
+    "g_numBSObjectsOnMemStack",
+    "g_pBSObjectAllocator",
+    "g_pBSObjectMemStack"
+  ]
+}

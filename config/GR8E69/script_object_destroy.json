@@ -1,0 +1,43 @@
+{
+  "id": "script_object_destroy",
+  "source": "src/script/object_destroy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6cec",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "DestroyBSObject__FP8BSObject",
+      "address": "0x800f6cec",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BSDestroyThread__FP22BSMachineThread_struct": "0x800f516c",
+    "BSUnregisterTimerEvents__FP8BSObject": "0x8011e1d8",
+    "BSUtilFreeObjectInstanceMemory__FPv": "0x800f8b54",
+    "RemoveBSObjectFromList__FP8BSObject": "0x800f71f8",
+    "FreeBSObject__FP8BSObject": "0x800f7168"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

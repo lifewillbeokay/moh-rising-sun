@@ -7,7 +7,8 @@
 
 // Scoped GR8E69 runtime views. Names for fields and View types are descriptive.
 // Only the documented accesses/strides are established; these are not complete
-// native object types or on-disc formats. Use only the established extents.
+// native object types or on-disc formats unless explicitly documented below.
+// Use only the established extents.
 
 struct FlexPropList {
     int count;
@@ -60,7 +61,8 @@ struct BSCode_struct {
     unsigned char unknown04[4];
     BSStateView **states;
     unsigned short stateCount;
-    unsigned char unknown0e[8];
+    unsigned char unknown0e[6];
+    unsigned short contextWordCount; // +0x14: instance context words for this level.
     unsigned short initialState; // +0x16
     unsigned char unknown18[4];
 };
@@ -78,16 +80,25 @@ struct BSClass_struct {
 
 struct BSMachineThread_struct;
 
+// The constructor, pool payload and index stride establish this 48-byte object.
 struct BSObject {
     BSClass_struct *scriptClass;
     BSMachineThread_struct *threads;
     TriggerObject *nativeObject;
     WeakPtr<BSGO_Basic, 8> gameObject; // +0x0c; subject at +0x20, non-owning.
     unsigned int queueIdentity; // +0x24
+    int field_28; // Event-dispatch gate; complete meaning remains unresolved.
+    BSObject *next; // +0x2c: active script-object list.
+    BSObject() : scriptClass(0), threads(0), nativeObject(0) {
+        gameObject.Assign(0);
+        queueIdentity = ~0U;
+        field_28 = 0;
+        next = 0;
+    }
 };
 
 typedef char BSGameWeakStorageCheck[sizeof(WeakPtr<BSGO_Basic, 8>) == 24 ? 1 : -1];
-typedef char BSObjectPrefixCheck[sizeof(BSObject) == 0x28 ? 1 : -1];
+typedef char BSObjectStorageCheck[sizeof(BSObject) == 0x30 ? 1 : -1];
 void GetScriptPosition(BSObject *, ISceneNode *, CVector3 &);
 
 struct BSMessageListView {

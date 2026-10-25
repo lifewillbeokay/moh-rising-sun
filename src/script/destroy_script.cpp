@@ -2,7 +2,7 @@
 #include "ScriptBuiltins.h"
 #include "ScriptRuntime.h"
 
-void DestroyBSObject(BSObject *);
+int DestroyBSObject(BSObject *);
 
 void BIFunc_DestroyScript(int **stack, void *) {
     DestroyBSObject(g_pBSObject);
