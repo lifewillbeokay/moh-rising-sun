@@ -1,0 +1,43 @@
+{
+  "id": "script_event_record",
+  "source": "src/script/event_record.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011dd98",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSEventGetFreeEventRecord__Fv",
+      "address": "0x8011dd98",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_BSEventModule": "0x80326d1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsevents.cpp",
+  "original_file_index": 1183,
+  "local_externals": [
+    "g_BSEventModule"
+  ]
+}

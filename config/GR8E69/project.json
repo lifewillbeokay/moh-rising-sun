@@ -1260,7 +1260,12 @@
     "script_object_list.json",
     "script_object_destroy.json",
     "script_object_create.json",
-    "script_class_memory.json"
+    "script_class_memory.json",
+    "script_event_init.json",
+    "script_event_refcount.json",
+    "script_event_memory.json",
+    "script_event_find.json",
+    "script_event_record.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
