@@ -41,7 +41,7 @@ struct BSMessageRegistration_struct {
 struct BSCode_EventHandlerEntry_struct {
     unsigned int code;
     unsigned short eventNumber;
-    unsigned char unknown06;
+    unsigned char queueBucket; // +6: deferred event bucket index.
     unsigned char flags;
 };
 
@@ -73,7 +73,9 @@ typedef BSCode_struct BSLevelView;
 
 struct BSClass_struct {
     BSLevelView *levels;
-    unsigned char unknown04[80];
+    unsigned char unknown04[68];
+    unsigned int field_48; // Compared by the multiplayer event-dispatch hook.
+    unsigned char unknown4c[8];
     int instanceMemorySize; // +0x54: used by trigger sizing and the instance allocator.
     unsigned short levelCount; // +0x58
     unsigned char unknown5a[6];
@@ -166,7 +168,7 @@ struct BSMessageQueueEntryView {
 extern int g_MessageQueueHead;
 extern int g_MessageQueueTail;
 extern BSMessageQueueEntryView g_MessageQueue[];
-extern void BSExecuteThread(BSObject *, BSMachineThread_struct *);
+extern int BSExecuteThread(BSObject *, BSMachineThread_struct *);
 extern BSMessageListView *FindCurrentMessageListEntry(BSMachineThread_struct *, BSCode_MessageHandlerEntry_struct *);
 extern void BSMessageExecuteHandler(BSMessageRegistration_struct *, BSObject *, BSObject *, TriggerObject *, void *);
 #endif

@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-397 fragments in `src/script/` reconstruct **655 functions and 111,020
+401 fragments in `src/script/` reconstruct **661 functions and 112,852
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -27,7 +27,8 @@ helpers (240 bytes; [see below](#startup-allocation-and-system-state)), and fift
 pool, object-lifecycle and instance-memory functions (1,104 bytes;
 [see below](#script-pool-and-instance-memory)), and nine object-management and
 class-sizing functions (1,300 bytes; [see below](#script-object-management)), and twelve event-memory and handler-lookup functions
-(1,008 bytes; [see below](#event-memory-and-handler-lookup)).
+(1,008 bytes; [see below](#event-memory-and-handler-lookup)), and six event-dispatch
+and queue-processing functions (1,832 bytes; [see below](#event-dispatch-and-queue-processing)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -143,7 +144,7 @@ retained where required by external function signatures.
 | View | Accesses established by the handler |
 | --- | --- |
 | State entry | Entry code at `+0`, events at `+4`, messages at `+8`, parent ID at `+0x0c`, depth at `+0x0e`, message count at `+0x0f`, event count at `+0x10`. |
-| Event entry | Eight-byte stride; code at `+0`, event number at `+4`, flags at `+7`. Bit 0 enables event 1 for the exit phase. Other flag bits and byte `+6` remain unknown. |
+| Event entry | Eight-byte stride; code at `+0`, event number at `+4`, flags at `+7`. Bit 0 enables event 1 for the exit phase. Further flag behavior and the bucket byte at `+6` are established by [event dispatch](#event-dispatch-and-queue-processing). |
 | Message entry | Twelve-byte stride passed to `BSRegisterMessage`; `NEXTSTATE` does not inspect the entry fields. Registration accesses are described below. |
 | Interpreter thread | Current state pointer at `+0x10`, level pointer at `+0x14`, registration-list head at `+0x18`, state ID at `+0x1c`, flags at `+0x1e`. |
 | Registration-list node | Handler pointer at `+0`, associated registration at `+4`, next node at `+8`, depth at `+0x0c`, state ID at `+0x0e`. |
@@ -350,10 +351,10 @@ Registration computes the stored time by adding the integer delay to the float
 clock and truncating to an integer, then selects the bucket with signed remainder
 modulo 120. It preserves the `0xffffffff` object-identity rejection. The timer declaration now imports the independently reconstructed
 [script pool allocator](#script-pool-and-instance-memory) from `ScriptPool.h`,
-including `DoWeOwnThisMemory`. The original object named `g_pMemBlockAllocator`,
-timer globals, event reference-count functions and event dispatcher remain
-external storage/code and earn no credit from these timer fragments. The shared
-arena allocator is counted separately below.
+including `DoWeOwnThisMemory`. The original object named `g_pMemBlockAllocator`
+and the timer globals remain external storage. Event reference-count and dispatch
+functions are reconstructed in the later event batches; they earn no credit from
+these timer fragments. The shared arena allocator is also counted separately below.
 
 Several surprising original behaviours are retained. Removal scans use an inclusive
 range of 121 ticks for a 120-bucket table, revisiting the first bucket. When mode 1
@@ -1346,7 +1347,8 @@ including its header, allocated ELF bytes, entry point and BSS extent. Follow th
 [build, test and snapshot process](Progress.md) for future changes. Runtime and
 emulator behaviour remain untested. The opcode-handler set is complete, but the
 interpreter as a whole is not: interpreter initialization/execution, class loading,
-event dispatch, message-send filtering and music internals remain future work. The
+message-send filtering and music internals remain future work. Event dispatch
+is reconstructed [below](#event-dispatch-and-queue-processing). The
 [script](research/ps2/script-opcodes.md), [class-description](research/ps2/sin-class-descriptions.md)
 and [music](research/ps2/pathfinder-music.md) research retains broader hypotheses and
 cross-platform questions beyond the matched bodies here.
@@ -1575,8 +1577,8 @@ Destruction sends event **334** immediately before invalidating the identity,
 destroys each level's thread, unregisters timers, releases instance memory,
 unlinks the object, and finally destroys/recycles the object itself. It returns
 zero. Existing callers' declarations now agree on that integer return; their
-generated code remains unchanged. Event-dispatch and class-loading internals are
-still external dependencies of this batch.
+generated code remains unchanged. Event dispatch is reconstructed in the
+[following batch](#event-dispatch-and-queue-processing); class loading remains external.
 
 List insertion appends and clears the new tail's next pointer. Removal scans the
 whole list, reconnects a matching node's predecessor and recomputes the tail from
@@ -1634,8 +1636,8 @@ record array and free head occupy `+0`, `+4` and `+8`; pending head/tail are at
 `+0x24`/`+0x28`. Queue/process accesses independently establish those roles;
 member names and the module/bucket/memory view names are descriptive. The
 `BSEventRecord_struct` tag is recovered from original function symbols. Its
-40-byte stride and next pointer at `+8` are established here; the remaining bytes
-stay opaque in this view. None of these views establishes an on-disc format.
+40-byte stride and next pointer at `+8` are established here; further record
+fields are recovered in the [dispatch batch](#event-dispatch-and-queue-processing). None of these views establishes an on-disc format.
 The global 28-byte allocator `g_pMemBlockAllocator` at `0x80326d00` uses the
 [previously reconstructed pool](#script-pool-and-instance-memory). Both original
 storage symbols remain external and earn no data credit.
@@ -1686,9 +1688,10 @@ returns the declaring state's ID and entry pointer; failure clears the output
 pointer. The original supplies no state, parent-cycle, array or output-pointer
 validation.
 
-These helpers support the still-unreconstructed event queue and dispatch path,
-including `BSObjectTriggerEvent`. The direct dependency scan finds **17 other
-unfinished caller ranges** for this batch. These references are prioritization
+These helpers support the event queue and dispatch path, reconstructed
+[below](#event-dispatch-and-queue-processing), including `BSObjectTriggerEvent`.
+At this checkpoint, the direct dependency scan found **17 other unfinished caller
+ranges** for this batch. These references are prioritization
 evidence only; they establish neither runtime reachability nor source credit for
 those callers.
 
@@ -1703,3 +1706,121 @@ calls. These checks do not boot the game or Dolphin. The original-object baselin
 complete rebuilt-image comparison, 55 validation tests and refreshed snapshot are
 checked separately. All previously accepted object and linked-image hashes remain
 unchanged.
+
+
+## Event dispatch and queue processing
+
+Four fragments independently reconstructed from GR8E69 with Codex assistance add
+**six functions and 1,832 game-code bytes**. Every complete function and generated
+section matches using ProDG 3.8.1 with
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. No other game's source is
+imported. No data, discarded output, instruction patches, partial matches or
+original context earn code credit. The profile is not proof of the original
+compiler release.
+
+| Function | Address | Code bytes |
+| --- | --- | ---: |
+| `BSObjectTriggerEvent` | `0x800f6d90` | 408 |
+| `BSEventTriggerEvent` | `0x8011d640` | 296 |
+| `BSEventQueueImmediateEvent` | `0x8011d768` | 260 |
+| `BSEventProcessImmediateEvents` | `0x8011d86c` | 180 |
+| `BSEventProcessEvents` | `0x8011d920` | 396 |
+| `BSEventProcessSingleEvent` | `0x8011dc74` | 292 |
+
+Together with the previous batch, the event fragments cover the continuous
+**2,432-byte range `[0x8011d430, 0x8011ddb0)`**, containing seventeen ordinary
+functions. The two following compiler-initialization helpers remain original
+context, as do the module/allocator storage; this is not a complete translation
+unit reconstruction.
+
+The 40-byte event-record view now names object/thread pointers at `+0`/`+4`, next
+at `+8`, captured handler at `+0x0c`, event number at `+0x10`, context/sender at
+`+0x14`/`+0x18`, captured object identity at `+0x1c`, an integer context-ownership
+flag at `+0x20`, and declared-state ID at `+0x24`. Two bytes at each of `+0x12` and
+`+0x26` remain unknown. The existing eight-byte handler entry's byte at `+6` is
+now named `queueBucket`, based on the enqueue access. Names are descriptive;
+these are runtime views, not on-disc layouts. The module retains private
+`bsevents.cpp` file-record scope **1183** at `0x80326d1c`.
+
+Both enqueue functions first test context ownership and acquire a reference if
+owned. An object whose identity is `0xffffffff` causes that reference to be
+released and returns **14**, without taking a record. Otherwise they pop the
+existing record free list, store the supplied context and state together with
+the object's current identity, and return zero. The deferred queue appends to
+the handler's bucket, or bucket **1** for a null handler; there is no bucket-bound
+check. The immediate queue appends to its single FIFO. Neither path adds record
+exhaustion handling.
+
+Immediate processing runs only when processing state is zero, changes it to two,
+and follows each record's next pointer **after** executing its handler. Events
+appended during a callback can therefore run in the same pass. Each processed
+record releases its owned context reference. The processed chain is then spliced
+onto the free list, both immediate endpoints are cleared, and state returns to
+zero. Nested immediate processing while state is nonzero returns zero without
+draining the queue.
+
+Deferred processing sets state one, concatenates the sixteen buckets in ascending
+index order, and clears their endpoints. FIFO ordering within a bucket is retained.
+The original first-nonempty-bucket branch connects its head to the pending queue
+but **does not update `pendingTail`**; only later nonempty buckets update that
+field. A single new bucket can therefore leave the pending tail null or stale.
+This behavior is preserved, not repaired or assumed safe for arbitrary queue
+states.
+
+The deferred processor executes at most its signed limit, releasing references
+and switching state to zero to drain immediate events between deferred records.
+Zero and negative limits still move bucket lists but execute no records and do
+not drain immediate events. Processed records return to the free list; the
+remaining pending head is retained, and the tail is cleared only if the queue is
+empty. The current-record field retains its last value. Callback return codes
+are ignored by both queue processors, which return zero. No general recursive
+deferred-processing or malformed-list protection is added.
+
+Single-event execution rejects a captured identity that no longer matches the
+object, then looks up the handler again using the thread's **current state**;
+it does not trust the handler pointer stored in the record. Game-loop states
+**4** and **5** suppress execution. A changed declaring state requires handler
+flag 2; an unchanged state permits execution. Event **41** sets `field_28` even
+when no handler executes, provided the identity check passed. Execution places
+context and sender at two words above and three words above `g_piStackTop`, sets
+the thread frame/stack pointers, and resolves the packed code address using its
+high-byte code-base index and low 24-bit word offset. It returns `BSExecuteThread`'s
+integer result. The shared declaration now reflects that return value; previously
+accepted callers ignore it and generate unchanged code.
+
+Object dispatch first forwards to `BotEvent` when the global
+`g_bInMultiplayerMode` at `0x802c1b30` is nonzero and the class word at `+0x48`
+equals **0x0a987c11**. The word remains `field_48`: its full meaning is not
+established by this comparison. Null objects return zero before context cleanup;
+other paths still require a valid class. Invalid object identities skip queueing.
+Immediate requests also require a nonzero `field_28`, except for event 41;
+deferred requests bypass that gate.
+
+Dispatch captures the class's level count once, then looks up each thread's
+current declaration and rechecks the class event mask. A mask hit counts as
+handled and queues a record even when that thread has no current enabled handler.
+Queue return codes do not change the handled result. An allowed immediate request
+drains the immediate queue after the loop, including when the level count is
+zero. An owned context with no handled mask hit is checked for release; an
+unhandled event 41 sets `field_28`. The returned handled flag therefore describes
+mask/queue selection, not proof that a handler ran.
+
+Local Unicorn 2.1.4 PPC32 fixtures execute all six production-linked functions
+with the accepted lookup, reference-count, record, pool and arena implementations.
+They cover both queues, invalid identities, shared context lifetimes, record
+fields, null-handler bucket selection, fresh lookup, state-change flags, game-state
+suppression, stack/code setup, return propagation, immediate guards and modeled
+callback-appended work, deferred ordering/limits/interleaving, recycling, the
+first-bucket tail behavior, object gating, zero-level draining, multiplayer
+forwarding and level-count/mask reload boundaries. Byte fill, game-state query,
+interpreter execution and the bot callback are stubbed at original boundaries.
+These are isolated instruction fixtures, not a game or Dolphin runtime test.
+
+The original-object baseline, complete rebuilt-image comparison, 55 regression
+tests and refreshed progress snapshot are checked separately. All 1,265 existing
+unit records retain identical object and linked-image hashes. The `bsobject.cpp`
+and `bsevents.cpp` unmatched groups now contain only their compiler-initialization
+helpers, so the generated labels change from inferred file groups to local symbols
+only. All four remaining ranges are unchanged and still receive zero credit. The static direct
+caller inventory identifies 105 other unfinished caller ranges for this batch;
+that is prioritization evidence, not additional source credit or runtime reachability.

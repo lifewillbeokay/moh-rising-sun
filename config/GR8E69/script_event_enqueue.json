@@ -1,0 +1,54 @@
+{
+  "id": "script_event_enqueue",
+  "source": "src/script/event_enqueue.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011d640",
+      "size": 556
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSEventTriggerEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us",
+      "address": "0x8011d640",
+      "size": 296,
+      "binding": 1
+    },
+    {
+      "name": "BSEventQueueImmediateEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us",
+      "address": "0x8011d768",
+      "size": 260,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pMemBlockAllocator": "0x80326d00",
+    "DoWeOwnThisMemory__35BSUtilObjectInstanceMemoryAllocatorPv": "0x800f84bc",
+    "BSEventIncrimentReferenceCount__FPv": "0x8011d5e0",
+    "BSEventDecrimentReferenceCount__FPv": "0x8011d5f0",
+    "BSEventGetFreeEventRecord__Fv": "0x8011dd98",
+    "g_BSEventModule": "0x80326d1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsevents.cpp",
+  "original_file_index": 1183,
+  "local_externals": [
+    "g_BSEventModule"
+  ]
+}

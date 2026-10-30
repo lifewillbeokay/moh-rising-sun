@@ -5,9 +5,18 @@
 
 // Scoped runtime storage. Field names are descriptive; unknown bytes remain opaque.
 struct BSEventRecord_struct {
-    unsigned char unknown00[8];
+    BSObject *object;
+    BSMachineThread_struct *thread;
     BSEventRecord_struct *next;
-    unsigned char unknown0c[28];
+    BSCode_EventHandlerEntry_struct *handler;
+    unsigned short eventNumber;
+    unsigned char unknown12[2];
+    void *context;
+    BSObject *sender;
+    unsigned int objectIdentity;
+    int ownsEventMemory;
+    unsigned short declaredState;
+    unsigned char unknown26[2];
 };
 struct BSEventBucketView {
     BSEventRecord_struct *head;
@@ -38,4 +47,15 @@ extern BSUtilObjectInstanceMemoryAllocator g_pMemBlockAllocator;
 extern void *BSUtilGetMemory(int, int);
 extern "C" void DWI_charfill(void *, int, int);
 int BSEventGetMemoryRequirements();
+extern BSEventRecord_struct *BSEventGetFreeEventRecord();
+extern void BSEventIncrimentReferenceCount(void *);
+extern void BSEventDecrimentReferenceCount(void *);
+extern int BSEventProcessSingleEvent(BSEventRecord_struct *);
+extern int BSEventProcessImmediateEvents();
+extern int BSEventFindAnyEventHandler(unsigned short, BSClass_struct *);
+extern unsigned short BSEventFindDeclaredState(unsigned short, BSMachineThread_struct *, BSCode_EventHandlerEntry_struct **);
+extern int BSEventTriggerEvent(BSObject *, BSMachineThread_struct *, BSCode_EventHandlerEntry_struct *, unsigned short, void *, BSObject *, unsigned short);
+extern int BSEventQueueImmediateEvent(BSObject *, BSMachineThread_struct *, BSCode_EventHandlerEntry_struct *, unsigned short, void *, BSObject *, unsigned short);
+extern int BSEventIsEventMemoryBlock(void *);
+extern void BSEventCheckMemBlockReferenceCount(void *);
 #endif
