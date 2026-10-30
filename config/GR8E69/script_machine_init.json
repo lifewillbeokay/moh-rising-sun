@@ -1,0 +1,92 @@
+{
+  "id": "script_machine_init",
+  "source": "src/script/machine_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f4dac",
+      "size": 600
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSInitMachine__Fv",
+      "address": "0x800f4dac",
+      "size": 600,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSMachineGetMemoryRequirements__Fv": "0x800f4d8c",
+    "BSUtilGetMemory__Fii": "0x800f8a90",
+    "BSOpCodeFunc_SG__Fv": "0x800f632c",
+    "BSOpCodeFunc_FNCALL__Fv": "0x800f64e0",
+    "BSOpCodeFunc_POP__Fv": "0x800f6254",
+    "g_pcClassList": "0x8031d070",
+    "BSOpCodeFunc_BNE__Fv": "0x800f5388",
+    "g_bocfOpCodeFuncs": "0x8031d078",
+    "g_iStopThread": "0x8031d10c",
+    "g_pBSMachineMemory": "0x8031d12c",
+    "BSOpCodeFunc_JMP__Fv": "0x800f53d8",
+    "BSOpCodeFunc_ADD__Fv": "0x800f53f4",
+    "BSOpCodeFunc_CAST__Fv": "0x800f61c4",
+    "BSOpCodeFunc_RETURN__Fv": "0x800f65b0",
+    "BSOpCodeFunc_SUB__Fv": "0x800f5534",
+    "BSOpCodeFunc_BREAK__Fv": "0x800f6614",
+    "BSOpCodeFunc_NEXTSTATE__Fv": "0x800f6650",
+    "BSOpCodeFunc_LG__Fv": "0x800f6368",
+    "BSOpCodeFunc_DIV__Fv": "0x800f5674",
+    "BSOpCodeFunc_MULT__Fv": "0x800f57b4",
+    "BSOpCodeFunc_NEG__Fv": "0x800f58f4",
+    "BSOpCodeFunc_EQ__Fv": "0x800f5f44",
+    "BSOpCodeFunc_NE__Fv": "0x800f607c",
+    "BSOpCodeFunc_LT__Fv": "0x800f5cc0",
+    "BSOpCodeFunc_GT__Fv": "0x800f5a3c",
+    "BSOpCodeFunc_LTE__Fv": "0x800f5dfc",
+    "BSOpCodeFunc_GTE__Fv": "0x800f5b78",
+    "BSOpCodeFunc_AND__Fv": "0x800f5970",
+    "BSOpCodeFunc_OR__Fv": "0x800f59c0",
+    "BSOpCodeFunc_NOT__Fv": "0x800f5a10",
+    "BSOpCodeFunc_LW__Fv": "0x800f62ec",
+    "BSOpCodeFunc_SW__Fv": "0x800f62b0",
+    "BSOpCodeFunc_PUSH__Fv": "0x800f6280",
+    "BSOpCodeFunc_BIFNCALL__Fv": "0x800f6544",
+    "BSOpCodeFunc_LM__Fv": "0x800f63e0",
+    "g_pBSMachineMemoryOffset": "0x8031d130",
+    "BSOpCodeFunc_SM__Fv": "0x800f63a8",
+    "BSOpCodeFunc_GP__Fv": "0x800f645c",
+    "BSOpCodeFunc_TRACE__Fv": "0x800f663c",
+    "BSOpCodeFunc_LS__Fv": "0x800f6414",
+    "BSInitMessageFreeList__Fv": "0x800f6964",
+    "g_iDefaultStackSize": "0x802c34e8",
+    "g_piStackBase": "0x8031d0fc",
+    "g_piStackTop": "0x8031d074",
+    "g_piFrame": "0x8031d108"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmachin.cpp",
+  "original_file_index": 1101,
+  "local_externals": [
+    "g_bocfOpCodeFuncs",
+    "g_iStopThread",
+    "g_pBSMachineMemory",
+    "g_pBSMachineMemoryOffset",
+    "g_iDefaultStackSize",
+    "g_piFrame"
+  ]
+}

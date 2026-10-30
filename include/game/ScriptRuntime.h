@@ -73,12 +73,15 @@ typedef BSCode_struct BSLevelView;
 
 struct BSClass_struct {
     BSLevelView *levels;
-    unsigned char unknown04[68];
+    BSClass_struct *next; // +4: loaded-class list link.
+    char name[0]; // +8: inline class-name string prefix; extent is unresolved.
+    unsigned char unknown08[64];
     unsigned int field_48; // Compared by the multiplayer event-dispatch hook.
     unsigned char unknown4c[8];
     int instanceMemorySize; // +0x54: used by trigger sizing and the instance allocator.
     unsigned short levelCount; // +0x58
-    unsigned char unknown5a[6];
+    unsigned char loaded; // +0x5a: nonzero skips another class-data read.
+    unsigned char unknown5b[5];
     int *sharedValues; // +0x60
     unsigned int eventMask[0]; // +0x64: inline bitset prefix; extent is not established.
 };

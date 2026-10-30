@@ -1,0 +1,44 @@
+{
+  "id": "script_machine_requirements",
+  "source": "src/script/machine_requirements.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f4d8c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSMachineGetMemoryRequirements__Fv",
+      "address": "0x800f4d8c",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_iDefaultStackSize": "0x802c34e8",
+    "g_iBSMessageRegistrationListSize": "0x8031d160"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmachin.cpp",
+  "original_file_index": 1101,
+  "local_externals": [
+    "g_iDefaultStackSize"
+  ]
+}

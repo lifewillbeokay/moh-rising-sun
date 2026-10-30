@@ -1,8 +1,8 @@
 #ifndef GAME_SCRIPT_MACHINE_H
 #define GAME_SCRIPT_MACHINE_H
 
-// Scoped interpreter interface. Original allocation, initialization and storage
-// remain external; the stack holds both values and 32-bit target addresses.
+// Scoped interpreter interface. Startup and shutdown are reconstructed; global
+// storage remains external. The stack holds values and 32-bit target addresses.
 extern int *g_piStackTop;
 extern int *g_piIP;
 extern int *g_piFrame;
