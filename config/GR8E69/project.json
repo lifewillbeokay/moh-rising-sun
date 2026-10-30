@@ -1265,7 +1265,11 @@
     "script_event_refcount.json",
     "script_event_memory.json",
     "script_event_find.json",
-    "script_event_record.json"
+    "script_event_record.json",
+    "script_event_enqueue.json",
+    "script_event_process.json",
+    "script_event_execute.json",
+    "script_object_event.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

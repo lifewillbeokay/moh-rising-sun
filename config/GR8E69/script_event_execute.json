@@ -1,0 +1,41 @@
+{
+  "id": "script_event_execute",
+  "source": "src/script/event_execute.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011dc74",
+      "size": 292
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSEventProcessSingleEvent__FP20BSEventRecord_struct",
+      "address": "0x8011dc74",
+      "size": 292,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSEventFindDeclaredState__FUsP22BSMachineThread_structPP31BSCode_EventHandlerEntry_struct": "0x8011dad8",
+    "Gameloop_QueryState__Fv": "0x80169014",
+    "g_piStackTop": "0x8031d074",
+    "BSExecuteThread__FP8BSObjectP22BSMachineThread_struct": "0x800f51c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 747756,
+    "matching_code_bytes": 749588,
     "total_executable_code_bytes": 2492032,
-    "percent": 30.00587472392008,
+    "percent": 30.079389028712313,
     "categories": {
-      "reconstructed_game": 355540,
+      "reconstructed_game": 357372,
       "restored_library": 392216
     },
-    "matching_functions": 3074
+    "matching_functions": 3080
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -644,7 +644,7 @@
     "config/GR8E69/player_path_controls.json": "a5a585ed38c40cd299ab995320748f8e6777003f8cc885f5376c7e440dc2b3b7",
     "config/GR8E69/player_spline_position.json": "5b4aa80de0af602d8d0cde27f43b24848fd3a5ad92b1972f1900f8f256617888",
     "config/GR8E69/player_spline_tangent.json": "36eccc91b26a0f0558ee6f02c6e52398927527bf754f986e8d6db6404022d9b8",
-    "config/GR8E69/project.json": "52aacf82958a31924a35cb6305f355034b3a2ae32de812f5dec023ae40a2bc9d",
+    "config/GR8E69/project.json": "3d7ac6ca3b458baf04dc7134dcb75e92742bff99589895a82a839fda9063394c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
     "config/GR8E69/projectile_exclusion_pair.json": "99afd0db09aa6eccc73fda17bb9ac1d24a6fe107780f8cf54fb758360cd20ef0",
@@ -780,11 +780,14 @@
     "config/GR8E69/script_enemy_count.json": "8afe27fbfe1d5b0c84c165a4038f401b611f1b63cdb8f17a470a85f07a963c0f",
     "config/GR8E69/script_enter_astar_volume.json": "c3231aa6379dd7d6cc5c8b413fdcc407c2c9e6273d4794f3bf3809f54bb01b95",
     "config/GR8E69/script_enter_buddy_teleport_area.json": "91402a5a07265bde850db08c5d5dd4d99c812263d677573a61e62816de3e585b",
+    "config/GR8E69/script_event_enqueue.json": "1a14eacffe15b867f0c2de5326c11a31738bddc5aac448d1806ac166f04bed29",
+    "config/GR8E69/script_event_execute.json": "527b2d77b4bf9f6bc281dc33162e8b2b37717db77d1075e8868af7865cf62fde",
     "config/GR8E69/script_event_find.json": "8f0b9f6e3a43820f431b2ae86e2a3a9d249af17250342675bd805e8e5fa0f63a",
     "config/GR8E69/script_event_init.json": "9ca4c735d4cb2939ae13dca479b13da46b74f6bee5b243319fd36b392a72b6f9",
     "config/GR8E69/script_event_lookup.json": "7234777fa0122f399f555d815b0592ea55386fd02987114a89562544c44a17ac",
     "config/GR8E69/script_event_memory.json": "a1cf0110bab724951cc866e4e4d5b0d21e53b4bee5f52723908029d2e0455d86",
     "config/GR8E69/script_event_memory_block.json": "68b22b9e8a40d345e99d95c85c93c03a288a380c3a1a413c9840b3347689c0e4",
+    "config/GR8E69/script_event_process.json": "02ee7788a00aad27b8debe3c848b9d1aa19dde7a37502d489de6d297804a9cb4",
     "config/GR8E69/script_event_record.json": "fc543d5be3c54550483e82f7a54b3ad90a1a4798634784c077a2f45dbc09fbe6",
     "config/GR8E69/script_event_refcount.json": "b6448e7f12ebc49a9fed954cbff0b29b8ee53a7d1ea3bc34dfe3bbc4d9f86d33",
     "config/GR8E69/script_fade_out.json": "d72f7d9646b25d1125bb82059059947db5558015ecd2cc8dffd2ed3a4e1f0c89",
@@ -884,6 +887,7 @@
     "config/GR8E69/script_object_access.json": "4f0601c19ee48e79d8683efda398d6119cb347ada589c088da1247a0631b3d23",
     "config/GR8E69/script_object_create.json": "d19f1dbced6b74d8978348ef2b6f2e5bc691158ec85d17747a9c9d3eccba018c",
     "config/GR8E69/script_object_destroy.json": "b902b51bc9dfa16b9c2699cf39c120dc5d1edec9fd7b71838023dc8efaa2fa36",
+    "config/GR8E69/script_object_event.json": "d0d6f2b223d1d8f94571f8f739f482aaa18b7bc006783e54f259de82d54f192a",
     "config/GR8E69/script_object_lifecycle.json": "56c7e99fd1cb39034b1a4d40975dd360703be239346384b3c07735e0902982f4",
     "config/GR8E69/script_object_list.json": "3badbfc5d8b97886ad447dd65f85c2ec5a6ee8e06cd34f1258b9b96d442cd4b7",
     "config/GR8E69/script_object_startup_allocator.json": "a5131f1f26c8b40e15fb703c3916bad39eef2f90f274dc5be4b4fd77f3fefdaa",
@@ -1536,10 +1540,10 @@
     "include/game/SceneNode.h": "1a6f0b01e88bda21ecb5b0ae8f4f3ad50df6422427adb3f5f52ea1c648a50fe4",
     "include/game/SceneObjects.h": "cf54c69f386d7806a798afb7cfe4d520c10f56d541a1f6d52c56860e03eb2286",
     "include/game/ScriptBuiltins.h": "7bf62823ffe81928c077dca0a79052458d5e88693a1f6f0bd3ee3e2116ecac50",
-    "include/game/ScriptEvents.h": "3a5044789268449bf60fd4c64252ac5b2d4cb90ec9c949b41348482376940656",
+    "include/game/ScriptEvents.h": "6f0e9842d783f7c80481cc6252f507ea76adc61a4ba7d68a8d0c80728461b9b9",
     "include/game/ScriptMachine.h": "b10adc3b1ca9b75d7da68e1aae2e3655c558a18feb2afe4a0e80c000d5575579",
     "include/game/ScriptPool.h": "0b67c9753d8531ff457f4c8b898a248cfc8c4f6423e2b5a4f340255d72585fb9",
-    "include/game/ScriptRuntime.h": "b4490d2889c2dde7ecabb8bb530fa867c8d668545f37239e9a5f91bbdbd27d59",
+    "include/game/ScriptRuntime.h": "595f0e32c386ec0eb00d864a0d0aa9d42ec184ddec45e6fae8654be85618c254",
     "include/game/ScriptSchedule.h": "6158dc9d8f6d57c34c31e527ba680a988f21a160149047de2f54bd5c216c1e19",
     "include/game/ScriptStartup.h": "ca298798406d593bc47296e17ca3c8778cde7e69bb465f05962cc05fc2eb40cc",
     "include/game/ScriptTimers.h": "a81f3399ff20908469a289229ed0f0aae2c28aa3a9889629e62049e8bb16705b",
@@ -2539,11 +2543,14 @@
     "src/script/enemy_count.cpp": "2e8805e2e35cdd8ebe01ea65cd0445752083438d67f5acdc1974db2b28327f31",
     "src/script/enter_astar_volume.cpp": "850efc3cbbe398a76091f73648382a51e43963dc1bbfcfd3170a3366ef03b3bc",
     "src/script/enter_buddy_teleport_area.cpp": "b12b08f4ae03512b5e3f5ead80632c59ba395f2ebfabd091c58f70217ce1ca31",
+    "src/script/event_enqueue.cpp": "aa292dc1ccc647c5919eefb1883c70bdb4e1bd345ba8fbf6418982b89fc1f7fb",
+    "src/script/event_execute.cpp": "f1e3658d647f2858609c53dbacdf8e9c10c9a3146bee2d18ffe470f141c168e9",
     "src/script/event_find.cpp": "3d1a28c9a72733691a4004eef2aac44dfb9cc915744e5b49603b6a7e110d990b",
     "src/script/event_init.cpp": "8b9dd75f2070b06d07342735df6a7e5dff0b2895f73d372cf04f4128d89ddb2f",
     "src/script/event_lookup.cpp": "e6444d247f01879da2f3d82c61c512a1cdec053754a160b056d68296bac6ef8f",
     "src/script/event_memory.cpp": "3aaa7f0344ff41a2d037ec787061d8a436746e5c6ca57f92aa9bb14a9f2ef4dd",
     "src/script/event_memory_block.cpp": "b27b5b70fbc5b7ec4df82c60f300d0cfc9c111efcbf0c8a7b0ccbc9fc3d5f9d9",
+    "src/script/event_process.cpp": "a45c738b462d06522d9510ac9552825fb595035a2185b3ac01a940a5ded022d7",
     "src/script/event_record.cpp": "8069fb52fa5da1d211409c5f29fdd4ab202a7b580d0b291e84a443f2bf19eeb6",
     "src/script/event_refcount.cpp": "ac6a69137053292b845ec929a1ff0d1e707619d92bd2b28039a267cf42b833a6",
     "src/script/fade_out.cpp": "4a3656ec5ddf44c52bba596f53aae4ae0f46262243fb0fd7449eee9a8dc3bcdb",
@@ -2645,6 +2652,7 @@
     "src/script/object_access.cpp": "91c0af53559d7ba76a19b1ceb1ae320f9ee3f77e2f44d3a1042cd309f1ccbec3",
     "src/script/object_create.cpp": "1fac39c57c657306112ceea900a932f3c01ab40968fdbf2ca2bcf30036e12ac4",
     "src/script/object_destroy.cpp": "9a353c80dc838e3a114b5d30aabcb4e3d1561e432725631091e39eb541a5b8fb",
+    "src/script/object_event.cpp": "82e29bb268ce87cec4538854adbc2d5166be4c2dad8775a79ba7e6d259d4176f",
     "src/script/object_lifecycle.cpp": "9557150991c45a1429358dbaf40adbb34140a3fbc83880d46cce60fb2af776bd",
     "src/script/object_list.cpp": "4c2040995f360009fe2e413dff7a961bd2428d163871af74d096b1bb275bd89b",
     "src/script/object_startup_allocator.cpp": "551cfeeaf4b8c5ca38201ec46e7d488e61396ffa4bddf94b0496711461e1dcc3",
@@ -29361,6 +29369,78 @@
       "discarded_functions": [],
       "object_sha256": "f33910b25c989a88c48abfa7715c3f74669094b6b8382a7065158dbf06f29995",
       "linked_sha256": "7d7ef07d35037e73f2bfd502a95105590622d4c7a1b2bb6670116c0fd4b6a937"
+    },
+    {
+      "id": "script_event_enqueue",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 556,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "51e75d14ee73ec2fcb878648dd0f7fe702c30be53b56ce95e7df5c021f159a1e",
+      "linked_sha256": "352fb81f84bf5cce0d70d663dbcc6f6600f7e4728125ff36dfa295db40f21c40"
+    },
+    {
+      "id": "script_event_process",
+      "category": "reconstructed_game",
+      "functions": 2,
+      "code_bytes": 576,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "d5bc621d72f5f9f492addc0251b199f5f523b343d832fb40518ec55054d3b456",
+      "linked_sha256": "eb2eee287f5e56fb9ae7f3e410a4acff15a6c53546afac41fa59006df96fa4e2"
+    },
+    {
+      "id": "script_event_execute",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 292,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b981cefe149e77eb26d821b8fb6e70d734e1f899421d929db1a3da6ecdbdfa2f",
+      "linked_sha256": "5ecc3a8fceaf62cbe3c2fc34f6541e8ac0210a5381a58d6295f30e528234fb12"
+    },
+    {
+      "id": "script_object_event",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 408,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "f706e7f8349946301dab55b1bb6a19fe27f9e284e92e2961c2707c26e13968cb",
+      "linked_sha256": "053c6a922a74aed01d6516917ba40356e424ed5df0d647c13f9fd17cd89d44b2"
     }
   ],
   "code_map": {
@@ -51383,17 +51463,10 @@
         ]
       },
       {
-        "name": "Unmatched files/bsobject.cpp [inferred file group]",
+        "name": "Unmatched files/bsobject.cpp [local symbols only]",
         "file_record": 194,
         "file_name": "bsobject.cpp",
         "ranges": [
-          {
-            "address": "0x800f6d90",
-            "size": 408,
-            "kind": "function",
-            "name": "BSObjectTriggerEvent__FP8BSObjectUsPvT0b",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x800f7244",
             "size": 4,
@@ -52127,45 +52200,10 @@
         ]
       },
       {
-        "name": "Unmatched files/bsevents.cpp [inferred file group]",
+        "name": "Unmatched files/bsevents.cpp [local symbols only]",
         "file_record": 198,
         "file_name": "bsevents.cpp",
         "ranges": [
-          {
-            "address": "0x8011d640",
-            "size": 296,
-            "kind": "function",
-            "name": "BSEventTriggerEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8011d768",
-            "size": 260,
-            "kind": "function",
-            "name": "BSEventQueueImmediateEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8011d86c",
-            "size": 180,
-            "kind": "function",
-            "name": "BSEventProcessImmediateEvents__Fv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8011d920",
-            "size": 396,
-            "kind": "function",
-            "name": "BSEventProcessEvents__Fi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8011dc74",
-            "size": 292,
-            "kind": "function",
-            "name": "BSEventProcessSingleEvent__FP20BSEventRecord_struct",
-            "evidence": "adjacent-compiler-markers"
-          },
           {
             "address": "0x8011ddb0",
             "size": 4,

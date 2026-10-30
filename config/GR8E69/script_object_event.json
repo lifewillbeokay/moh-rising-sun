@@ -1,0 +1,46 @@
+{
+  "id": "script_object_event",
+  "source": "src/script/object_event.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f6d90",
+      "size": 408
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSObjectTriggerEvent__FP8BSObjectUsPvT0b",
+      "address": "0x800f6d90",
+      "size": 408,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "BotEvent__FP8BSObjectUsPv": "0x8009c47c",
+    "BSEventFindDeclaredState__FUsP22BSMachineThread_structPP31BSCode_EventHandlerEntry_struct": "0x8011dad8",
+    "BSEventFindAnyEventHandler__FUsP14BSClass_struct": "0x8011daac",
+    "BSEventQueueImmediateEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us": "0x8011d768",
+    "BSEventTriggerEvent__FP8BSObjectP22BSMachineThread_structP31BSCode_EventHandlerEntry_structUsPvT0Us": "0x8011d640",
+    "BSEventProcessImmediateEvents__Fv": "0x8011d86c",
+    "BSEventIsEventMemoryBlock__FPv": "0x8011dc24",
+    "BSEventCheckMemBlockReferenceCount__FPv": "0x8011dbdc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
