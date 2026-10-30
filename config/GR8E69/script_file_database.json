@@ -1,0 +1,48 @@
+{
+  "id": "script_file_database",
+  "source": "src/script/file_database.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f458c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetClassFromDatabase__FPCc",
+      "address": "0x800f458c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "AddClassToDatabase__FP14BSClass_struct",
+      "address": "0x800f45f0",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pcClassList": "0x8031d070",
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsfile.cpp",
+  "original_file_index": 1099,
+  "local_externals": []
+}

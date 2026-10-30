@@ -1,0 +1,42 @@
+{
+  "id": "script_machine_end",
+  "source": "src/script/machine_end.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f5004",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSEndMachine__Fv",
+      "address": "0x800f5004",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pcClassList": "0x8031d070",
+    "BSFileDeleteClass__FP14BSClass_struct": "0x800f44e0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmachin.cpp",
+  "original_file_index": 1101,
+  "local_externals": []
+}

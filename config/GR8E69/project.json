@@ -1269,7 +1269,14 @@
     "script_event_enqueue.json",
     "script_event_process.json",
     "script_event_execute.json",
-    "script_object_event.json"
+    "script_object_event.json",
+    "script_machine_requirements.json",
+    "script_machine_init.json",
+    "script_machine_end.json",
+    "script_file_delete_class.json",
+    "script_file_get_class.json",
+    "script_file_load_class.json",
+    "script_file_database.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

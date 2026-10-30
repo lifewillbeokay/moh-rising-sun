@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-401 fragments in `src/script/` reconstruct **661 functions and 112,852
+408 fragments in `src/script/` reconstruct **669 functions and 113,872
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -28,7 +28,8 @@ pool, object-lifecycle and instance-memory functions (1,104 bytes;
 [see below](#script-pool-and-instance-memory)), and nine object-management and
 class-sizing functions (1,300 bytes; [see below](#script-object-management)), and twelve event-memory and handler-lookup functions
 (1,008 bytes; [see below](#event-memory-and-handler-lookup)), and six event-dispatch
-and queue-processing functions (1,832 bytes; [see below](#event-dispatch-and-queue-processing)).
+and queue-processing functions (1,832 bytes; [see below](#event-dispatch-and-queue-processing)), and eight machine-startup and class-database functions
+(1,020 bytes; [see below](#machine-startup-and-class-database)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -1824,3 +1825,70 @@ helpers, so the generated labels change from inferred file groups to local symbo
 only. All four remaining ranges are unchanged and still receive zero credit. The static direct
 caller inventory identifies 105 other unfinished caller ranges for this batch;
 that is prioritization evidence, not additional source credit or runtime reachability.
+
+
+## Machine startup and class database
+
+Seven fragments reconstruct eight complete functions, adding **1,020 executable
+bytes** with ProDG 3.9.3 and `-O2 -G0 -fno-exceptions -fno-implicit-templates`:
+
+| Fragment | Functions | Original start | Code bytes |
+| --- | --- | --- | ---: |
+| `script_machine_requirements` | `BSMachineGetMemoryRequirements` | `0x800f4d8c` | 32 |
+| `script_machine_init` | `BSInitMachine` | `0x800f4dac` | 600 |
+| `script_machine_end` | `BSEndMachine` | `0x800f5004` | 88 |
+| `script_file_delete_class` | `BSFileDeleteClass` | `0x800f44e0` | 4 |
+| `script_file_get_class` | `BSFileGetClass` | `0x800f44e4` | 40 |
+| `script_file_load_class` | `BSFileLoadClass` | `0x800f450c` | 128 |
+| `script_file_database` | `GetClassFromDatabase`, `AddClassToDatabase` | `0x800f458c` | 128 |
+
+Startup requests `4 * g_iDefaultStackSize + 16 *
+g_iBSMessageRegistrationListSize` bytes from the accepted script arena allocator,
+with alignment argument zero. It clears the stop flag, arena offset and loaded-class
+list, fills all 33 entries of the private opcode-dispatch table, initializes the
+accepted message-node free list, then reserves the remaining stack words. Stack
+base and top point to that reservation; the frame starts one word above the top.
+A positive message-node count, sufficient arena storage and a valid stack size
+remain original preconditions; no allocation-failure or bounds checks are added.
+The opcode table's order agrees with the contributed opcode research and all
+previously accepted handlers, including `NE` at index 30 and `LS` at index 32.
+
+The table, arena globals, stop flag, frame and default stack-size word remain
+original storage. Their manifests retain the private `bsmachin.cpp` file-record
+scope (1101); no data bytes earn source-code credit. The class helpers retain the
+`bsfile.cpp` record (1099). Each complete emitted object and allocated section is
+compared without stripping, instruction edits or discarded functions.
+
+The class view now identifies a linked-list pointer at `+4`, an inline name-string
+prefix at `+8`, and a byte at `+0x5a` whose nonzero value skips a class-data read.
+These are descriptive field names. The name's extent and full allocation remain
+unestablished: the zero-length `name` prefix overlays the existing opaque 64-byte
+region without claiming that all of it belongs to the string. No on-disc layout
+is inferred. Lookup walks `g_pcClassList` and returns the first name accepted by
+`strcasecmp`; insertion prepends the supplied class without duplicate checks.
+
+`BSFileGetClass` calls `BSFileLoadClass` with a true boolean, but the latter ignores
+its boolean argument. A found class with a nonzero `+0x5a` byte returns zero without
+reading. A found class with a zero byte calls `BSFileReadClass(name, true, false,
+result)` and propagates its status. A missing class calls that reader with both
+booleans true, then prepends the returned class and returns the insertion's zero
+status. It does not test the reader's return status before insertion. The original
+valid-result precondition and error-status behavior are preserved.
+
+Shutdown caches each next link before calling `BSFileDeleteClass`, then clears the
+global list head and returns zero. The deletion function itself is an empty stub
+in this target. Consequently, this shutdown path does not individually free or
+clear class storage. The larger `BSFileReadClass` parser and `BSExecuteThread`
+dispatch loop remain original context and receive no credit in this batch.
+
+Isolated PowerPC fixtures execute all eight production-linked functions. They
+cover one and multiple message nodes, arena sentinels and offsets, all 33 dispatch
+pointers, stack/frame setup, empty/single/multiple class lists, unchanged class
+storage under the real deletion stub, prepend order, first/tail/missing name
+lookups, ready/pending cache entries, ignored boolean input, the wrapper, and both
+reader-status paths. The accepted arena and message-list helpers execute directly.
+The file reader and ASCII case-insensitive comparator are controlled stubs; a
+separate destructive deletion callback checks the cached-next traversal before
+restoring the real empty function. These fixtures do not test file parsing,
+non-ASCII case handling or the game/Dolphin runtime. Complete-image verification
+and the public snapshot are separate checks.
