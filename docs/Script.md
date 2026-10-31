@@ -8,7 +8,7 @@ without checking the GameCube instructions and symbols.
 
 ## Accepted scope
 
-408 fragments in `src/script/` reconstruct **669 functions and 113,872
+412 fragments in `src/script/` reconstruct **676 functions and 114,936
 executable bytes**: all **33 opcode handlers** (5,596 bytes), ten message-registration and index
 helpers (964 bytes), nine thread/message-delivery and group-filter routines (1,700
 bytes), event lookup (220 bytes), three music built-ins (372 bytes), all twelve named
@@ -29,7 +29,9 @@ pool, object-lifecycle and instance-memory functions (1,104 bytes;
 class-sizing functions (1,300 bytes; [see below](#script-object-management)), and twelve event-memory and handler-lookup functions
 (1,008 bytes; [see below](#event-memory-and-handler-lookup)), and six event-dispatch
 and queue-processing functions (1,832 bytes; [see below](#event-dispatch-and-queue-processing)), and eight machine-startup and class-database functions
-(1,020 bytes; [see below](#machine-startup-and-class-database)).
+(1,020 bytes; [see below](#machine-startup-and-class-database)), and seven message-storage,
+dispatch and event-mapping functions (1,064 bytes;
+[see below](#message-storage-dispatch-and-event-mapping)).
 Their exact symbols, ranges and dependencies are in
 `config/GR8E69/script_*.json` and `config/GR8E69/bsgo_*.json`. Original file markers
 support the `bsmachin.cpp`,
@@ -205,7 +207,7 @@ used by `NEXTSTATE`; the subsequent thread and queue work is described below.
 | `BSGetMessageHandlerByIndex` / `BSGetMessageHandlerIndex` | 76 | Converts signed indices and pointers using a 16-byte registration stride; `-1` and null are the sentinel pair. |
 | `BSGetThreadIndex` / `BSGetThreadByIndex` | 80 | Searches an object's thread array or directly indexes it using a 32-byte stride. |
 | `BSInitMessageFreeList` / `BSMachineGetFreeMessageList` | 164 | Reserves and links 16-byte state-registration list nodes in the interpreter arena, then pops nodes from that list. |
-| `BSMessageGetMemoryRequirements` | 20 | Returns `16 * g_iBSMessageRegistrationListSize + 1776`. The constant is preserved without inferring an allocation breakdown. |
+| `BSMessageGetMemoryRequirements` | 20 | Returns `16 * g_iBSMessageRegistrationListSize + 1776`. The [storage initializers](#message-storage-dispatch-and-event-mapping) independently establish the fixed part as 444 registration-head pointers. |
 
 The shared runtime header now establishes these additional accesses:
 
@@ -1323,8 +1325,8 @@ emulator behavior remain untested.
 
 ## Verification and next work
 
-All fifteen accepted `bsmachin.cpp` fragments, ten `bsmessage.cpp` fragments and
-twelve `bstimer.cpp` fragments use ProDG **3.9.3** with
+The opcode and thread/message/group fragments, all fourteen `bsmessage.cpp`
+fragments and twelve `bstimer.cpp` fragments use ProDG **3.9.3** with
 `-O2 -G0 -fno-exceptions -fno-implicit-templates`. This profile reproduces all 33
 interpreter handlers, the nineteen thread/message/group helpers, all twelve timer
 routines and the generated constants. Event lookup and music
@@ -1347,7 +1349,7 @@ The complete rebuilt 2,860,576-byte analysis image also matches the original,
 including its header, allocated ELF bytes, entry point and BSS extent. Follow the
 [build, test and snapshot process](Progress.md) for future changes. Runtime and
 emulator behaviour remain untested. The opcode-handler set is complete, but the
-interpreter as a whole is not: interpreter initialization/execution, class loading,
+interpreter as a whole is not: interpreter execution, class-file parsing,
 message-send filtering and music internals remain future work. Event dispatch
 is reconstructed [below](#event-dispatch-and-queue-processing). The
 [script](research/ps2/script-opcodes.md), [class-description](research/ps2/sin-class-descriptions.md)
@@ -1892,3 +1894,85 @@ separate destructive deletion callback checks the cached-next traversal before
 restoring the real empty function. These fixtures do not test file parsing,
 non-ASCII case handling or the game/Dolphin runtime. Complete-image verification
 and the public snapshot are separate checks.
+
+## Message storage, dispatch and event mapping
+
+Four further `bsmessage.cpp` fragments reconstruct seven complete functions,
+adding **1,064 executable bytes**:
+
+| Function | Address | Bytes |
+| --- | --- | ---: |
+| `BSInitMessage` | `0x800f7288` | 160 |
+| `BSEndMessage` | `0x800f7328` | 128 |
+| `BSRegisterMessageToEvent` | `0x800f753c` | 96 |
+| `BSUnregisterMessageToEvent` | `0x800f759c` | 332 |
+| `BSProcessMessages` | `0x800f7b50` | 132 |
+| `BSInitMessageRegistrationArray` | `0x800f7bd4` | 72 |
+| `BSInitMessageRegistrationFreeList` | `0x800f7c1c` | 144 |
+
+Initialization reserves `BSMessageGetMemoryRequirements()` bytes through the
+accepted script-arena helper, resets the message-arena offset and both queue
+indices, initializes the registration storage, and finally clears the
+message-to-event map. The first 1,776 bytes are **444 four-byte registration-head
+pointers**, all cleared from index 443 down to zero. The following
+`16 * g_iBSMessageRegistrationListSize` bytes hold registration records. Only each
+record's signed next-index field is written: successive indices, then `-1` on the
+last record. The free-list head becomes the first record. Other fields and the
+surrounding arena bytes are untouched. Positive counts, representable indices and
+sufficient arena space remain caller requirements; there is no added allocation
+failure or range handling.
+
+Shutdown clears the map's nodes and nulls the registration-array and
+registration-storage pointers. It leaves the free-list head, arena pointer,
+arena offset and queue indices unchanged. The map's header allocation and script
+arena remain owned elsewhere. This limited cleanup is original behavior, not a
+claim that the remaining pointers are safe to use after shutdown.
+
+`BSProcessMessages(limit)` snapshots the ring occupancy as tail minus head,
+adding 1,024 on wrap, and caps that count by the supplied limit. Zero or negative
+limits process nothing. Each iteration enables the event module's
+message-processing state, consumes one queued message, disables that state, then
+processes immediate events. Messages added by callbacks do not increase the
+initial iteration bound. The queue indices are assumed valid, and the return is
+always zero; callback return values do not affect the loop.
+
+`ScriptMessageMap.h` uses the already attributed STLport multimap profile. The
+key is an unsigned-short message number. Independent stores and comparisons in
+these callers refine the eight-byte `BSMessageToEventRecord` to an object pointer
+at `+0`, an unsigned-short event number at `+4`, and two opaque bytes at `+6`.
+These member names are descriptive. Registration does not initialize the last
+two bytes; the original eight-byte value copy is retained. This is distinct from
+the 16-byte `BSMessageRegistration_struct` used by the indexed handler lists.
+The existing three STLport instantiations remain byte-identical and retain their
+512 bytes of library credit; no additional library restoration is claimed.
+
+Registration inserts a mapping without deduplicating equal keys. Removal finds
+the first matching message key, scans equal keys for the requested event and
+object, and erases only the first exact triple. The original scan checks `end()`
+once before entering, but does **not** recheck it after incrementing the iterator.
+A terminal equal-key miss can therefore read the header's value area. The matching
+source preserves this behavior; neither defined C++ behavior nor safe handling of
+all terminal misses is claimed. Unknown fields, original map storage and the
+private globals retain their existing scope and ownership.
+
+All seven bodies match with ProDG **3.9.3** and
+`-O2 -G0 -fno-exceptions -fno-implicit-templates`. Every emitted function and
+allocated section is compared without stripping, clipping, instruction patches
+or assembly substitutions. These fragments emit only text. The manifests retain
+original `bsmessage.cpp` file-record index 1124 for private externals. The full
+source build preserves the complete analysis image and all 1,276 prior unit
+records and hashes; only these seven newly reconstructed ranges earn additional
+code credit.
+
+Isolated Unicorn PowerPC fixtures execute all seven production-linked functions,
+the accepted arena and sizing helpers, the real event-state gate, and the restored
+STLport insertion, rotation, traversal and deletion algorithms. They cover 1, 7
+and 127 registration records, all 444 heads, arena sentinels and nonzero offsets,
+untouched record bytes, live/empty map initialization, repeated shutdown, duplicate
+mappings, mismatched event/object values, and a two-child tree removal. A terminal
+miss fixture observes the header-value read with a distinct synthetic sentinel
+key; it does not establish that this path is generally safe. Queue fixtures cover
+wrap, zero/negative/capped limits, callback appends and the exact per-message call
+order. Heap allocation/deletion and the queue-consumption/immediate-event
+callbacks are stubbed. These are isolated behavior checks, not game or Dolphin
+runtime validation.

@@ -52,7 +52,7 @@ source fidelity for unexamined game methods.
 | `SkeletonData::AttachPoint` map | 4 | 2,316 | Same comparator; a 40-byte node contains the 16-byte library string and eight copied value bytes. Strings retain their real constructors/destructors. |
 | `PathFindingNetwork` map | 4 | 1,304 | A 32-byte node contains the byte key and 12-byte value. Insertion calls the named copy constructor; erasure clears the contained list before freeing the node. |
 | `_LocationTargetInfo` map | 4 | 1,324 | A 32-byte node contains an integer key and 12 copied value bytes. |
-| `BSMessageToEventRecord` multimap | 3 | 512 | A 28-byte node contains the unsigned-short key and eight copied value bytes at a four-byte-aligned offset; equal-key insertion is retained. |
+| `BSMessageToEventRecord` multimap | 3 | 512 | A 28-byte node contains the unsigned-short key and eight copied value bytes at a four-byte-aligned offset; equal-key insertion is retained. [Message registration/removal](Script.md#message-storage-dispatch-and-event-mapping) independently establishes an object pointer at value `+0` and an unsigned-short event at `+4`; the final two bytes remain opaque. |
 | `CProjectorSystemDef` map | 4 | 1,300 | A 32-byte node contains an unsigned key and 12-byte value. Original copy constructor `0x80131eb8` copies three words; constructor `0x80131e44` initializes that extent. The original destructor remains a call. |
 | `StaticMesh*` to `vector<AnimShape>` map | 4 | 1,668 | Original pointer ordering and the library vector layout; each copied/destroyed `AnimShape` still calls its original lifecycle routine. |
 | `vector<CFont::FontRef>::reserve` | 1 | 320 | Allocation, copy and destruction loops use a 12-byte stride; values copy three words with no destructor call. |

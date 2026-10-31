@@ -1,0 +1,61 @@
+{
+  "id": "script_message_storage",
+  "source": "src/script/message_storage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/game-containers",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f7bd4",
+      "size": 216
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSInitMessageRegistrationArray__Fv",
+      "address": "0x800f7bd4",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "BSInitMessageRegistrationFreeList__Fv",
+      "address": "0x800f7c1c",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pBSMessageMemory": "0x80326170",
+    "g_pBSMessageMemoryOffset": "0x80326174",
+    "g_MessageRegistrationArray": "0x80326164",
+    "g_iBSMessageRegistrationListSize": "0x8031d160",
+    "g_MessageRegistrationFreeList": "0x80326168",
+    "g_MessageRegistrationFreeListHead": "0x8032616c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmessage.cpp",
+  "original_file_index": 1124,
+  "local_externals": [
+    "g_pBSMessageMemory",
+    "g_pBSMessageMemoryOffset",
+    "g_MessageRegistrationArray",
+    "g_MessageRegistrationFreeList",
+    "g_MessageRegistrationFreeListHead"
+  ]
+}

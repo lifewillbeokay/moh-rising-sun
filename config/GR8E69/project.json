@@ -1276,7 +1276,11 @@
     "script_file_delete_class.json",
     "script_file_get_class.json",
     "script_file_load_class.json",
-    "script_file_database.json"
+    "script_file_database.json",
+    "script_message_init.json",
+    "script_message_storage.json",
+    "script_message_dispatch.json",
+    "script_message_event.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
