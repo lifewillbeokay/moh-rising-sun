@@ -1,0 +1,68 @@
+{
+  "id": "script_message_init",
+  "source": "src/script/message_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/game-containers",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f7288",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSInitMessage__Fv",
+      "address": "0x800f7288",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "BSEndMessage__Fv",
+      "address": "0x800f7328",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSMessageGetMemoryRequirements__Fv": "0x800f7274",
+    "BSUtilGetMemory__Fii": "0x800f8a90",
+    "g_pBSMessageMemory": "0x80326170",
+    "g_pBSMessageMemoryOffset": "0x80326174",
+    "g_MessageQueueHead": "0x802c3508",
+    "g_MessageQueueTail": "0x802c350c",
+    "BSInitMessageRegistrationArray__Fv": "0x800f7bd4",
+    "BSInitMessageRegistrationFreeList__Fv": "0x800f7c1c",
+    "g_message_to_event_map": "0x8031d150",
+    "_M_erase__Q24_STLt8_Rb_tree5ZUsZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordZQ24_STLt4less1ZUsZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecord": "0x802866cc",
+    "g_MessageRegistrationArray": "0x80326164",
+    "g_MessageRegistrationFreeList": "0x80326168"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmessage.cpp",
+  "original_file_index": 1124,
+  "local_externals": [
+    "g_pBSMessageMemory",
+    "g_pBSMessageMemoryOffset",
+    "g_MessageQueueHead",
+    "g_MessageQueueTail",
+    "g_MessageRegistrationArray",
+    "g_MessageRegistrationFreeList"
+  ]
+}

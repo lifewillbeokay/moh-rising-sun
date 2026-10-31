@@ -94,8 +94,13 @@ public:
 struct _LocationTargetInfo {
     unsigned char unresolved_00[12] __attribute__((aligned(4)));
 };
+struct BSObject;
+// Message registration/removal independently establish these fields; names are
+// descriptive. The final two bytes remain opaque and are not initialized there.
 struct BSMessageToEventRecord {
-    unsigned char unresolved_00[8] __attribute__((aligned(4)));
+    BSObject *object;
+    unsigned short event;
+    unsigned char unknown06[2];
 };
 class CProjectorSystemDef {
     unsigned char unresolved_00[12] __attribute__((aligned(4)));

@@ -1,0 +1,54 @@
+{
+  "id": "script_message_event",
+  "source": "src/script/message_event.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.9.3",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/game-containers",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f753c",
+      "size": 428
+    }
+  ],
+  "functions": [
+    {
+      "name": "BSRegisterMessageToEvent__FUsUsP8BSObject",
+      "address": "0x800f753c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "BSUnregisterMessageToEvent__FUsUsP8BSObject",
+      "address": "0x800f759c",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_message_to_event_map": "0x8031d150",
+    "insert_equal__Q24_STLt8_Rb_tree5ZUsZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordZQ24_STLt4less1ZUsZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUsZ22BSMessageToEventRecordRCQ24_STLt4pair2ZCUsZ22BSMessageToEventRecord": "0x80286858",
+    "_Rebalance_for_erase__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_baseRPQ24_STL18_Rb_tree_node_baseN22": "0x8027de58",
+    "__builtin_delete": "0x801a8990",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsmessage.cpp",
+  "original_file_index": 1124,
+  "local_externals": []
+}
