@@ -120,9 +120,10 @@ used as a semantic reference under that project's CC0 license. Rising Sun's
 reference position, noise type, additional flag and all accepted bytes were
 checked independently against GR8E69. Parameter and field names are descriptive.
 
-`ShouldHeightCheckBeFlipped`, `TestRay` and `CheckForObstructions` remain research
-and receive no source credit. The obstruction routine normalizes the horizontal
-direction and tests three rays, adjusting the sample heights for crouching players,
+`ShouldHeightCheckBeFlipped`, `TestRay` and `CheckForObstructions` are maintained
+as [registered partial source](research/explosion-grenade-updates.md#maintained-partial-source).
+They receive measured similarity but no exact or linked credit. The obstruction
+routine normalizes the horizontal direction and tests three rays, adjusting the sample heights for crouching players,
 soldier look positions and the height-flip predicate. Understanding these operations
 does not establish a byte match or complete class layouts.
 
@@ -142,9 +143,11 @@ tests `AsWorldObject`/`AsSoldierObject` for script state 1, Rising Sun tests
 `CThrownBullet::Constrain` (bounce, friction and the optional keep-speed cheat word at
 `g_cheats` +0x1c, then a clamped time-of-impact position) and `CreateExplosionEffect` are
 reconstructed. `CExplosion` is 0x50 bytes: slot reuse across `CThrownBullet::CommitUpdate`
-fixes it. `CommitUpdate` itself remains unaccepted. Follow-up research identifies
-its explosion/effect construction, grenade and bazooka sound aliases, event 141
-notification, destruction and attached-light update; no partial credit is claimed.
+fixes it. `CommitUpdate` is maintained as partial source alongside the explosion
+helpers, with its explosion/effect construction, grenade and bazooka sound aliases,
+event 141 notification, destruction and attached-light update. The four functions
+cover 3,968 target bytes; all remain original context in the verified image.
+See the linked research notes for measurements and reproducible isolated PPC checks.
 
 `thrown_bullet_penetrate` reconstructs the complete 396-byte `Penetrate` at
 `0x80151e18` and its 16 constant bytes at `0x802a9510`. It uses the stored normal

@@ -1,0 +1,42 @@
+{
+  "id": "compare_explosion_ray",
+  "source": "src/bullets/ExplosionRay.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "explosion_constructor.json",
+  "evidence": "docs/research/explosion-grenade-updates.md#maintained-partial-source",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80154770",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9814",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestRay__10CExplosionRC8CVector3N21RC7CMatrix",
+      "address": "0x80154770",
+      "size": 588,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "TestRay__10CExplosionRC8CVector3N21RC7CMatrix"
+  ],
+  "context_units": [],
+  "externals": {
+    "Set__6CLine3RC8CVector3T1": "0x80281690",
+    "__10CCollision": "0x80133bd4",
+    "g_scene": "0x803e6d90",
+    "_._10CCollision": "0x80133d10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "explosion.cpp",
+  "original_file_index": 1374
+}

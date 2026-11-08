@@ -97,6 +97,9 @@
       "src/bullets/BulletSpritesLoad.cpp": "6b7d7b2d6207aa971040074d548dbf7da4578bf70d8d3bc634185336b518bb4a",
       "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
       "src/bullets/ExplosionConstructor.cpp": "a5eeb336a3192e3107ced6ed9d5725a1cb87dce1b3ff7685fe04147dbfdcc39d",
+      "src/bullets/ExplosionHeight.cpp": "80b7ddcedc7278372f2b8e67afa4bfb0914aad4bae732b144d1f3b4be1bb569e",
+      "src/bullets/ExplosionObstructions.cpp": "74ad282fb137cdd50e46699200d38e1fddddc295a7caf4f588d6b0a33d57ac16",
+      "src/bullets/ExplosionRay.cpp": "d276e4aa4c529b21ee296409ddb7401e193ebef27f8ccdad973d2449db77cd3d",
       "src/bullets/ExplosionVisit.cpp": "d885166f86453dd580af30fdbccfdfe8ae7c499722d85a161556aa4b50f8cd59",
       "src/bullets/ProjectileAccessors.cpp": "60d0d7620bf7c3723851e848fc6e154349f9edb6ad3aea9938ab416083d9b51a",
       "src/bullets/ProjectileBounds.cpp": "7a041b1292e5f30f1a52199b04587762d202e4cdeff249dc1426e229a4c8064a",
@@ -113,6 +116,7 @@
       "src/bullets/ThrownAccessors.cpp": "75f15567da1e4cd07646edd4c9661481a1e24c371089b7de4ee4e29c48f683cf",
       "src/bullets/ThrownBulletBounds.cpp": "2e2935a983aea60c104ba3d37bc5620f62c2314771911a2d62d8acaeef4af859",
       "src/bullets/ThrownBulletCollide.cpp": "b07f1dda279ed2090ae951ee48f154a6893ac75d68b572c846f1400c9106fbbd",
+      "src/bullets/ThrownBulletCommit.cpp": "49fc1fd3ba74b242447ca81e8471a4ed40fdbcfba4c1779524a35ceefc759061",
       "src/bullets/ThrownBulletConstrain.cpp": "6f550d54346ae0c08763f7d877a22469f732603de26d8a43bc466605df843005",
       "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
       "src/bullets/ThrownBulletEffect.cpp": "4fa8ccdead657142a555a43be1175e9228bcc4d06c3c1a85ab5c7c9c13651308",
@@ -2507,7 +2511,11 @@
       "config/GR8E69/comparisons/eagl_msh_texture2_env_lit.json": "f36072dc51b0a9c918b22dcabb862133d0c9571d98562b12bf546d61620494f4",
       "config/GR8E69/comparisons/eagl_msh_texture2_lightmap_lit.json": "4a150ca850b23a064de709a87840a2abc959f1c14b7f9f301860b0c476ac8ca9",
       "config/GR8E69/comparisons/eagl_msh_texture2_lit.json": "74362db8006bf221394746fb59d77802bd62530fe7c765e33d6734b2d54b755a",
-      "config/GR8E69/comparisons.json": "0d5b67740e4a38dc2ebd8617609948467c1dadd007b827de05c14a9a7344035e",
+      "config/GR8E69/comparisons/explosion_height.json": "3dc9e536c4c5b769b5c7fc12dc3b5b925775a864a729abded221f0d58ac55525",
+      "config/GR8E69/comparisons/explosion_obstructions.json": "7d9069f85be5c3958650a33e6d204db75a90f9015f923c9474f3f8616ad208f2",
+      "config/GR8E69/comparisons/explosion_ray.json": "e57d501be95ac4b5387355dba12a25a96ac55533f14730ee5e961f3e2e486859",
+      "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
+      "config/GR8E69/comparisons.json": "65c9c9a973164334032c6d9658dbdf7158fdf14982a3be35aa304fb97961dad5",
       "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
       "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
       "config/GR8E69/compartment_world_volume.json": "71def021fb15bf3854ec3741d80859e072ad197ebdecb6d4a2930523362f855f",
@@ -4522,6 +4530,102 @@
         "target_object_sha256": "a0d37445deb4f6b794359fa36126792f768a083a97f3529f12731618cd465b7d",
         "diff_object_sha256": "4eb2ec7354a61866d1ea015bb53ad887b131e96e7a56729bca81bb1a12f99b90",
         "diff_sha256": "0fb164e10c9281b82e182230b18888ecd09702aa4571fdfb64050dc97c711d4e"
+      },
+      {
+        "id": "compare_explosion_height",
+        "functions": [
+          {
+            "name": "ShouldHeightCheckBeFlipped__10CExplosionR10ISceneNode",
+            "address": "0x80154e54",
+            "size": 216,
+            "binding": 1,
+            "compiled_address": "0x80154e54",
+            "compiled_size": 216,
+            "target_sha256": "f11b2e06be933aa9b73e4743c7da93b6b9eab113c17da1767095f9be857fa97c",
+            "compiled_sha256": "c80bd591592e003a5b14ccf5bae35173601e1231417db092742feb96a21c1e7a",
+            "differing_bytes": 54,
+            "status": "partial",
+            "objdiff_percent": 95.18519,
+            "fuzzy_match_percent": 95.18519
+          }
+        ],
+        "object_sha256": "87b46e91d13ba008416a7bdac1f5c85608feb753f3361ff81c4ad93e4b777496",
+        "linked_sha256": "511acc6bd604d32d51f8c0fbe19c79237ea440a1a27fc9bbc2953c0f78304223",
+        "target_object_sha256": "0562c2bf5aae366bd52b1cd01269c77f8c8a9dbf63fb4c084289aece7c72de2a",
+        "diff_object_sha256": "15ea72600938af6cf6a697a5afc0132d1e079dd8560ecf2030093c1e76de35ee",
+        "diff_sha256": "a42e71b16158dd27bd8c9fe49e87f741ae122395f4236ef61ec726ba207e23b3"
+      },
+      {
+        "id": "compare_explosion_ray",
+        "functions": [
+          {
+            "name": "TestRay__10CExplosionRC8CVector3N21RC7CMatrix",
+            "address": "0x80154770",
+            "size": 588,
+            "binding": 1,
+            "compiled_address": "0x80154770",
+            "compiled_size": 588,
+            "target_sha256": "35069b95e7c28d959e7db2314b1354ed251ea5ea647dd7a9a89616a66138e03b",
+            "compiled_sha256": "f9236dd59b0e485af46066ce436d7dd12f8764bc761c3fdf612c3319e09b26a9",
+            "differing_bytes": 211,
+            "status": "partial",
+            "objdiff_percent": 68.353745,
+            "fuzzy_match_percent": 68.353745
+          }
+        ],
+        "object_sha256": "12cbbfe32f664af6b651ef52ef88fd1215393c4db6f82afb78285d5623e44a1e",
+        "linked_sha256": "a88deb5ebce0b6149a3cc751f718ada059bd067713b358d076d03454d55b2eeb",
+        "target_object_sha256": "a85dd9212fe845ec4b95a3dedddb8d4f0ab8cb5298bc255e1177fb40a6a43d13",
+        "diff_object_sha256": "1cfa75e0a68c6038669827dd2f0e007dc6c4dabea5df9c50aedeccb6f673a960",
+        "diff_sha256": "20afc6762223b80e2292a335cacb19f5ba8363d0956de029817328374975264b"
+      },
+      {
+        "id": "compare_explosion_obstructions",
+        "functions": [
+          {
+            "name": "CheckForObstructions__10CExplosionR10ISceneNode",
+            "address": "0x801549bc",
+            "size": 1176,
+            "binding": 1,
+            "compiled_address": "0x801549bc",
+            "compiled_size": 1184,
+            "target_sha256": "62c28936ce49cf36cf3571232417138a6ee731742ac182533c4990afade846ba",
+            "compiled_sha256": "05d28321ef75942211ddbf9362c871689119d35bb3e4ea07846147c6fd5c726c",
+            "differing_bytes": 1015,
+            "status": "partial",
+            "objdiff_percent": 91.7381,
+            "fuzzy_match_percent": 91.7381
+          }
+        ],
+        "object_sha256": "a54ad1479cc5cb7de524c8b9bfcf88cfe7aeada3ef5f296520f1a057c50ff453",
+        "linked_sha256": "c150eb8a6b7ee897ab19492841b0212843a03e0e034256248e20ba0328e5798b",
+        "target_object_sha256": "46fe74f58f8ac0e9481d03f2d4742d5b824a4346f6620c5e2a32915a204e067a",
+        "diff_object_sha256": "3fbc6cb01b82cdd8463caa56ea0b6d280106c7c35c6167e938071fd593eb4c33",
+        "diff_sha256": "b30cad783160801d72a31364cc7163158b3d237a96d6f300b2126c6cd9e81fa6"
+      },
+      {
+        "id": "compare_thrown_bullet_commit",
+        "functions": [
+          {
+            "name": "CommitUpdate__13CThrownBullet",
+            "address": "0x80152bf4",
+            "size": 1988,
+            "binding": 1,
+            "compiled_address": "0x80152bf4",
+            "compiled_size": 1972,
+            "target_sha256": "ebefddb2945df3d36b464d2049725d5ed7947cafc09e8427658355656cca82f0",
+            "compiled_sha256": "81c30b53949d9825c8ce609caa0ebe87379a007fbb233a566db80aaaafcb8493",
+            "differing_bytes": 1471,
+            "status": "partial",
+            "objdiff_percent": 96.03622,
+            "fuzzy_match_percent": 96.03622
+          }
+        ],
+        "object_sha256": "013a90a03279504f50cfce2675e7b2a8f644e1c74f030be8afeec827309369ff",
+        "linked_sha256": "508dcac86cb7d73fd49ba468a3453e89b493edbad424820772299146ed6e93c5",
+        "target_object_sha256": "66ade73ed81069f0893395a8ab4f4f2a97b5ae451260a8251cad6d0eaefab5c6",
+        "diff_object_sha256": "3da1239bfbc9b4dcee7249cf0baa4a09bd959dcac1a004479ecbc2b8566b370a",
+        "diff_sha256": "65d994a253480fb446af5514d28328e4d79afa7c664257137aa787c1889126be"
       }
     ]
   },
@@ -4797,7 +4901,11 @@
     "config/GR8E69/comparisons/eagl_msh_texture2_env_lit.json": "f36072dc51b0a9c918b22dcabb862133d0c9571d98562b12bf546d61620494f4",
     "config/GR8E69/comparisons/eagl_msh_texture2_lightmap_lit.json": "4a150ca850b23a064de709a87840a2abc959f1c14b7f9f301860b0c476ac8ca9",
     "config/GR8E69/comparisons/eagl_msh_texture2_lit.json": "74362db8006bf221394746fb59d77802bd62530fe7c765e33d6734b2d54b755a",
-    "config/GR8E69/comparisons.json": "0d5b67740e4a38dc2ebd8617609948467c1dadd007b827de05c14a9a7344035e",
+    "config/GR8E69/comparisons/explosion_height.json": "3dc9e536c4c5b769b5c7fc12dc3b5b925775a864a729abded221f0d58ac55525",
+    "config/GR8E69/comparisons/explosion_obstructions.json": "7d9069f85be5c3958650a33e6d204db75a90f9015f923c9474f3f8616ad208f2",
+    "config/GR8E69/comparisons/explosion_ray.json": "e57d501be95ac4b5387355dba12a25a96ac55533f14730ee5e961f3e2e486859",
+    "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
+    "config/GR8E69/comparisons.json": "65c9c9a973164334032c6d9658dbdf7158fdf14982a3be35aa304fb97961dad5",
     "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
     "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
     "config/GR8E69/compartment_world_volume.json": "71def021fb15bf3854ec3741d80859e072ad197ebdecb6d4a2930523362f855f",
@@ -6818,6 +6926,9 @@
     "src/bullets/BulletSpritesLoad.cpp": "6b7d7b2d6207aa971040074d548dbf7da4578bf70d8d3bc634185336b518bb4a",
     "src/bullets/BulletWeight.cpp": "9c74f0697e36d9ef28480ed1e200d46083a53d3bc317f77498ea1ad0a0f27899",
     "src/bullets/ExplosionConstructor.cpp": "a5eeb336a3192e3107ced6ed9d5725a1cb87dce1b3ff7685fe04147dbfdcc39d",
+    "src/bullets/ExplosionHeight.cpp": "80b7ddcedc7278372f2b8e67afa4bfb0914aad4bae732b144d1f3b4be1bb569e",
+    "src/bullets/ExplosionObstructions.cpp": "74ad282fb137cdd50e46699200d38e1fddddc295a7caf4f588d6b0a33d57ac16",
+    "src/bullets/ExplosionRay.cpp": "d276e4aa4c529b21ee296409ddb7401e193ebef27f8ccdad973d2449db77cd3d",
     "src/bullets/ExplosionVisit.cpp": "d885166f86453dd580af30fdbccfdfe8ae7c499722d85a161556aa4b50f8cd59",
     "src/bullets/ProjectileAccessors.cpp": "60d0d7620bf7c3723851e848fc6e154349f9edb6ad3aea9938ab416083d9b51a",
     "src/bullets/ProjectileBounds.cpp": "7a041b1292e5f30f1a52199b04587762d202e4cdeff249dc1426e229a4c8064a",
@@ -6834,6 +6945,7 @@
     "src/bullets/ThrownAccessors.cpp": "75f15567da1e4cd07646edd4c9661481a1e24c371089b7de4ee4e29c48f683cf",
     "src/bullets/ThrownBulletBounds.cpp": "2e2935a983aea60c104ba3d37bc5620f62c2314771911a2d62d8acaeef4af859",
     "src/bullets/ThrownBulletCollide.cpp": "b07f1dda279ed2090ae951ee48f154a6893ac75d68b572c846f1400c9106fbbd",
+    "src/bullets/ThrownBulletCommit.cpp": "49fc1fd3ba74b242447ca81e8471a4ed40fdbcfba4c1779524a35ceefc759061",
     "src/bullets/ThrownBulletConstrain.cpp": "6f550d54346ae0c08763f7d877a22469f732603de26d8a43bc466605df843005",
     "src/bullets/ThrownBulletDestroy.cpp": "e5de8c2c5c794bca8f5f289ee97f2eac6c0aed5df771f8a9479a7dc2e75de95f",
     "src/bullets/ThrownBulletEffect.cpp": "4fa8ccdead657142a555a43be1175e9228bcc4d06c3c1a85ab5c7c9c13651308",

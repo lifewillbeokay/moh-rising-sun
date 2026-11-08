@@ -1,0 +1,49 @@
+{
+  "id": "compare_explosion_obstructions",
+  "source": "src/bullets/ExplosionObstructions.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "explosion_constructor.json",
+  "evidence": "docs/research/explosion-grenade-updates.md#maintained-partial-source",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801549bc",
+      "size": 1176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9818",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckForObstructions__10CExplosionR10ISceneNode",
+      "address": "0x801549bc",
+      "size": 1176,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "CheckForObstructions__10CExplosionR10ISceneNode"
+  ],
+  "context_units": [],
+  "externals": {
+    "sqrtf": "0x80270538",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "IsPlayerCrouching__C13CPlayerObject": "0x800b7640",
+    "GetLookMatrix__14CSoldierObjectR7CMatrix": "0x800bec88",
+    "ShouldHeightCheckBeFlipped__10CExplosionR10ISceneNode": "0x80154e54",
+    "TestRay__10CExplosionRC8CVector3N21RC7CMatrix": "0x80154770"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "explosion.cpp",
+  "original_file_index": 1374
+}

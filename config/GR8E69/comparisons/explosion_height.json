@@ -1,0 +1,37 @@
+{
+  "id": "compare_explosion_height",
+  "source": "src/bullets/ExplosionHeight.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "explosion_constructor.json",
+  "evidence": "docs/research/explosion-grenade-updates.md#maintained-partial-source",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80154e54",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9840",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShouldHeightCheckBeFlipped__10CExplosionR10ISceneNode",
+      "address": "0x80154e54",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "ShouldHeightCheckBeFlipped__10CExplosionR10ISceneNode"
+  ],
+  "context_units": [],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "explosion.cpp",
+  "original_file_index": 1374
+}

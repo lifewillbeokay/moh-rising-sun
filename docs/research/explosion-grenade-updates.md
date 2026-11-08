@@ -7,25 +7,40 @@ PowerPC execution checks. Thanks to kyleckroeger for
 the bullet/scene reconstruction that made this follow-up possible. The previous
 Frontline comparison remains attributed in [Bullets.md](../Bullets.md).
 
-**The four functions below remain unmatched.** Their behavior has been checked
-on selected inputs; that does not make their C++ drafts accepted matching source.
-Experiments remain in ignored `scratch/`. No partial bytes, copied original
-code or new constants from these drafts are counted in progress.
+## Maintained partial source
 
-| Function | Original address | Original bytes | Current draft bytes | Remaining difference |
-| --- | --- | ---: | ---: | --- |
-| `CExplosion::ShouldHeightCheckBeFlipped` | `0x80154e54` | 216 | 216 | The true-result load is scheduled before the vector copies instead of after the comparison. |
-| `CExplosion::TestRay` | `0x80154770` | 588 | 588 | Matrix arithmetic, temporary lifetimes and register scheduling. |
-| `CExplosion::CheckForObstructions` | `0x801549bc` | 1,176 | 1,184 | Cross-product temporaries, saved registers and height/sign lifetimes. |
-| `CThrownBullet::CommitUpdate` | `0x80152bf4` | 1,988 | 1,984 | Sound-constructor zero initialization, flag registers and the final matrix address lifetime. |
+**The four functions below are registered partial source**, covering 3,968
+original executable bytes. Their complete bodies live in `src/bullets/` under
+`DECOMP_COMPARE`; `config/GR8E69/comparisons.json` registers the measurements.
+Their original bytes remain in the verified image. Similarity is reported
+separately; none of these functions earns exact or linked credit yet.
 
-These drafts use the established ProDG 3.8.1
+| Function / source | Original address | Original bytes | Compiled bytes | Objdiff similarity | Remaining difference |
+| --- | --- | ---: | ---: | ---: | --- |
+| `ShouldHeightCheckBeFlipped` / `ExplosionHeight.cpp` | `0x80154e54` | 216 | 216 | 95.19% | The true-result load is scheduled before the vector copies instead of after the comparison. |
+| `TestRay` / `ExplosionRay.cpp` | `0x80154770` | 588 | 588 | 68.35% | Matrix arithmetic, temporary lifetimes and register scheduling. |
+| `CheckForObstructions` / `ExplosionObstructions.cpp` | `0x801549bc` | 1,176 | 1,184 | 91.74% | Cross-product temporaries, saved registers and height/sign lifetimes. |
+| `CommitUpdate` / `ThrownBulletCommit.cpp` | `0x80152bf4` | 1,988 | 1,972 | 96.04% | Sound-constructor zero initialization, flag registers and the final matrix address lifetime. |
+
+The comparisons inherit `explosion_constructor.json`'s established ProDG 3.8.1
 `-O2 -G0 -fno-exceptions -fno-implicit-templates` profile. Their complete
 read-only sections match: 8 bytes at `0x802a9840`, 4 at `0x802a9814`, 40 at
 `0x802a9818` and 112 at `0x802a959c`, respectively. Matching constants earn
 no code credit. Alternate return forms, vector accesses, constructor spellings
 and compiler comparisons have not established an acceptable match; no compiler
-profile changes or instruction patches were accepted.
+profile changes or instruction patches were accepted. Generated data and native
+dependencies are verified in full, with no discarded functions or borrowed
+storage. The 8-byte overrun of the obstruction draft is isolated in its comparison
+output; it never overwrites the following height predicate in the verified image.
+
+The maintained source uses the current `Bullet.h`/`SoundEvents.h` interfaces.
+`CommitUpdate` reads the existing `explodeNow`/`caught` fields instead of the
+scratch draft's raw flag-word helpers. Its comparison-only inline sound bodies
+initialize the observed fields and reproduce the destructor/table transitions.
+They live in this source file, leaving the shared declarations and accepted sound
+units unchanged. Their original constructor signatures and spelling remain
+unconfirmed. The height helper's raw component view and other local vector
+helpers are descriptive reconstruction choices, not recovered original names.
 
 ## Height predicate
 
@@ -130,13 +145,28 @@ unknown type. The initial bit-24 return is the exception.
 
 ## Verification and accepted dependencies
 
-Local differential checks execute both original PowerPC instructions and the
-compiled drafts on **714 scenarios**: 48 height cases, 10 transformed-ray cases,
-96 obstruction cases and 560 update cases. They cover type boundaries, equality
+`tests/test_explosion_grenade.py` executes both original PowerPC instructions and
+the native comparison output on **750 scenarios**: 48 height cases, 10
+transformed-ray cases, 96 obstruction cases, 560 update cases and 36 additional
+bazooka backoff cases. They cover type boundaries, equality
 and unordered height/timer inputs, matrix scale/rotation/translation, collision
 result values, early ray termination, player crouch and soldier look heights,
 catch/explosion flags, the type-5 exception, unknown types and attached lights.
-Additional assertions check selected expected results and untouched object bytes.
+The backoff cases include zero, below/at/above the speed threshold, a nonzero
+third velocity component and unordered speed. Additional assertions check
+selected expected results and untouched object bytes. Integer results, object
+bytes and call order compare exactly; floating-point traces round to six decimal
+places, so these checks do not establish bitwise floating-point equivalence.
+
+After `python3 tools/comparisons.py`, run the tests in an environment with the
+optional `unicorn` package (tested with 2.1.4):
+
+```sh
+python3 -m unittest discover -s tests -p test_explosion_grenade.py -v
+```
+
+Public CI skips these tests without the original, native outputs or Unicorn.
+Exploratory variants and generated native output remain ignored.
 
 These are isolated function checks. Virtual queries, scene/effect construction,
 matrix setters, square root, collision bodies, sound scheduling, script
@@ -144,15 +174,16 @@ notification and destruction are stubbed as needed. The obstruction tests stub
 the ray/height helpers individually. This is neither exhaustive equivalence nor
 an integrated Dolphin/game test. A draft extending past its original function
 boundary is handled by the research harness; it is not overlaid into the
-accepted image and receives no matching credit.
+accepted image and receives no exact or linked credit.
 
-The accepted result of this investigation is the separate
+The previously accepted matching result of this investigation is the separate
 [sound-event reconstruction](../Sound.md#grenade-and-bazooka-sound-events):
 `SoundAliasEvent::SendEvent` and eleven supporting methods, 556 matching bytes.
 Its complete generated sections and twelve function boundaries are verified,
 and 63 additional original/production-linked scenarios exercise those functions.
 The pool, sound manager and unknown entry fields remain scoped views. The
-unresolved default sound constructors are deliberately not promoted with them.
+unresolved default sound constructors are included only in the guarded partial
+caller; no standalone constructor is promoted with them.
 
 For the next matching attempt, use the branch conditions above as constraints,
 then resolve the vector return/temporary forms and sound initialization

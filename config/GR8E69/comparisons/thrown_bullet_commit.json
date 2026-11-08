@@ -1,0 +1,55 @@
+{
+  "id": "compare_thrown_bullet_commit",
+  "source": "src/bullets/ThrownBulletCommit.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "explosion_constructor.json",
+  "evidence": "docs/research/explosion-grenade-updates.md#maintained-partial-source",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80152bf4",
+      "size": 1988
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a959c",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "CommitUpdate__13CThrownBullet",
+      "address": "0x80152bf4",
+      "size": 1988,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "CommitUpdate__13CThrownBullet"
+  ],
+  "context_units": [],
+  "externals": {
+    "g_scene": "0x803e6d90",
+    "__10CExplosionR6CSceneRC8CVector3fff17EScriptBulletTypeP10ISceneNodebT8": "0x80153e80",
+    "_._10CExplosion": "0x80153f64",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "BuildTrans__7CMatrixRC8CVector3": "0x8007ade8",
+    "CreateExplosionEffect__13CThrownBulletRC7CMatrixb": "0x80152a5c",
+    "_vt.20PositionSoundEmitter": "0x802eada8",
+    "SetPosition__20PositionSoundEmitterRC8CVector3": "0x801680d4",
+    "_vt.10SoundEvent": "0x802e4ce8",
+    "_vt.15SoundAliasEvent": "0x802ead68",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "SendEvent__15SoundAliasEvent": "0x801679b0",
+    "BSSendMessage__FUsP8BSObjectP13TriggerObjectT1Pv": "0x800f76e8",
+    "_vt.12SoundEmitter": "0x802e4ca0",
+    "sqrtf": "0x80270538",
+    "DebugMsg__FPCce": "0x80279094"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "thrownbullet.cpp",
+  "original_file_index": 1370
+}

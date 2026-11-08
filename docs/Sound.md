@@ -108,8 +108,11 @@ object deletion. The inline base-destructor declarations earn no separate
 credit for the still-original standalone base destructors.
 
 Default event/emitter constructors and distance/azimuth methods are declared
-but not reconstructed here. In particular, this header does not accept the
-unmatched constructor experiments inside `CommitUpdate`.
+but not reconstructed as matching source here. The maintained partial
+`src/bullets/ThrownBulletCommit.cpp` supplies comparison-only inline initialization,
+destructor and emitter-setter bodies using these declarations. Its complete caller
+is measured under `DECOMP_COMPARE`; the shared header and accepted sound units
+remain unchanged. No standalone constructor receives exact or linked credit.
 
 All allocated sections, function boundaries and external references are
 compared before complete-image verification. Sixty-three isolated PowerPC

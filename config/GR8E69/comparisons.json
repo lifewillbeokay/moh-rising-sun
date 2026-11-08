@@ -10,6 +10,10 @@
     "comparisons/eagl_msh_texture2_lightmap_lit.json",
     "comparisons/eagl_msh_texture1_env_lit.json",
     "comparisons/eagl_msh_texture2_env_lit.json",
-    "comparisons/eagl_msh_falloff_texture1_env_lit.json"
+    "comparisons/eagl_msh_falloff_texture1_env_lit.json",
+    "comparisons/explosion_height.json",
+    "comparisons/explosion_ray.json",
+    "comparisons/explosion_obstructions.json",
+    "comparisons/thrown_bullet_commit.json"
   ]
 }
