@@ -1,0 +1,51 @@
+{
+  "id": "sound_bank_parameters",
+  "source": "src/sound/SoundBankParameters.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015bf60",
+      "size": 156
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa0c0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSndPitch__14SoundEntryBanki",
+      "address": "0x8015bf60",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetNormSndVol__14SoundEntryBankf",
+      "address": "0x8015bf84",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDpitchmult": "0x8021e924",
+    "g_SoundMan": "0x80330c60",
+    "SNDvol": "0x80222804"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

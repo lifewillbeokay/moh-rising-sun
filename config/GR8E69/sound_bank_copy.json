@@ -1,0 +1,45 @@
+{
+  "id": "sound_bank_copy",
+  "source": "src/sound/SoundBankCopy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015bc98",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14SoundEntryBankRC14SoundEntryBank",
+      "address": "0x8015bc98",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Clone__C14SoundEntryBankP10SoundEntry",
+      "address": "0x8015bce8",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__10SoundEntryRC10SoundEntry": "0x8015b420",
+    "_vt.14SoundEntryBank": "0x802ea998"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

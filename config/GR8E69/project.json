@@ -1719,7 +1719,15 @@
     "sound_entry_update.json",
     "sound_entry_volume.json",
     "sound_pool_entries.json",
-    "sound_schedule_add.json"
+    "sound_schedule_add.json",
+    "sound_bank_copy.json",
+    "sound_bank_status.json",
+    "sound_bank_defaults.json",
+    "sound_bank_parameters.json",
+    "sound_bank_play.json",
+    "sound_entry_destructor.json",
+    "sound_entry_copy.json",
+    "sound_entry_options.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

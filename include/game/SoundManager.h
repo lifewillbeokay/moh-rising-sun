@@ -1,8 +1,11 @@
 // AI-assisted scoped reconstruction from GR8E69; see docs/Sound.md and docs/Script.md.
 #ifndef GAME_SOUND_MANAGER_H
 #define GAME_SOUND_MANAGER_H
+#pragma interface
+// Keep out-of-line constructors and virtual tables in their original units.
 
 class SoundEntryPool;
+struct SNDPLAYOPTS;
 // Only the type name is recovered; zero is a descriptive placeholder.
 enum SoundCBEventCode { SoundCBEventCode_None = 0 };
 class SoundEmitter;
@@ -29,7 +32,8 @@ class SoundSchedule {
 // Scoped view of a sound entry: data through +0xd4, then the table pointer.
 class SoundEntry {
   public:
-    unsigned char unknown_0[8];
+    unsigned char unknown_0[4];
+    int field_04; // Selects distance-based GetOpts volume only when equal to 1.
     int spatial; // +8; enables distance/azimuth processing.
     int looping;
     unsigned char unknown_10[8];
@@ -50,15 +54,22 @@ class SoundEntry {
     unsigned short updates; // +0xa0; dirty bits for playback parameters.
     unsigned char unknown_a2[2];
     int handle;
-    unsigned char unknown_a8[0xc4 - 0xa8];
+    short patch; // +0xa8
+    unsigned char unknown_aa[0xc4 - 0xaa];
     float currentVolume;
-    unsigned char unknown_c8[0xd4 - 0xc8];
+    signed char slotMode; // +0xc8; ResolveSlotNum maps values above 1.
+    unsigned char unknown_c9[3];
+    float field_cc;
+    int filterEnabled; // +0xd0; gates the optional playback filter.
     void SetEmitter(const SoundEmitter *);
     void DoNotifyCallback(SoundCBEventCode);
     void Calculate3D();
     int UpDateSoundParams();
     float CalculateVolDistance();
+    void GetOpts(SNDPLAYOPTS &, float &);
+    void copyData(const SoundEntry &);
     SoundEntry();
+    SoundEntry(const SoundEntry &);
     virtual ~SoundEntry();
     // Slot order is shared by the original bank and stream tables. Unused
     // external return types remain provisional where callers do not consume them.
@@ -69,7 +80,7 @@ class SoundEntry {
     virtual int IsFinished() = 0;
     virtual void SetFade(float, float, bool) = 0;
     virtual int CheckFade() = 0;
-    virtual void Stop() = 0;
+    virtual int Stop() = 0;
     virtual void SetNormSndVol(float) = 0;
     virtual void SetSndPitch(int) = 0;
 };
@@ -80,9 +91,11 @@ typedef char SoundSchedulePrefixSizeCheck[sizeof(SoundSchedule) == 0x230 ? 1 : -
 class SoundEntryBank : public SoundEntry {
   public:
     int field_d8;
-    unsigned char field_dc;
+    signed char field_dc; // Signed patch-table variation offset.
     SoundEntryBank() : field_d8(0), field_dc(0) {}
-    virtual ~SoundEntryBank() {}
+    SoundEntryBank(const SoundEntryBank &);
+    virtual ~SoundEntryBank();
+    void ResolveSlotNum();
     virtual int GetTypeID() const;
     virtual int Play();
     virtual void Clone(SoundEntry *) const;
@@ -90,16 +103,22 @@ class SoundEntryBank : public SoundEntry {
     virtual int IsFinished();
     virtual void SetFade(float, float, bool);
     virtual int CheckFade();
-    virtual void Stop();
+    virtual int Stop();
     virtual void SetNormSndVol(float);
     virtual void SetSndPitch(int);
 };
+
+typedef char SoundEntryBankSizeCheck[sizeof(SoundEntryBank) == 0xe0 ? 1 : -1];
 
 // Scoped view of the original 0x8700-byte g_SoundMan object (class cSoundMan).
 // SoundSchedule and cSoundBussMan are prefixes, not complete allocation types.
 class cSoundMan {
   public:
-    unsigned char unknown_0[0x837c];
+    unsigned char unknown_0[0x10];
+    short *slotMap; // +0x10; patch lookup table, owned externally.
+    unsigned char unknown_14[0x80b8 - 0x14];
+    float soundVolume; // +0x80b8; descriptive global playback gain.
+    unsigned char unknown_80bc[0x837c - 0x80bc];
     SoundSchedule schedule; // +0x837c
     unsigned char unknown_85ac[0x85f4 - 0x85ac]; // Remainder of schedule and following fields.
     int soundZone;          // +0x85f4; set by BIFunc_SetSoundZone.

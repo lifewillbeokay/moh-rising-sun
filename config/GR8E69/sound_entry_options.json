@@ -1,0 +1,44 @@
+{
+  "id": "sound_entry_options",
+  "source": "src/sound/SoundEntryOptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015b9a4",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9fdc",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetOpts__10SoundEntryR11SNDPLAYOPTSRf",
+      "address": "0x8015b9a4",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDplaysetdef": "0x8021f44c",
+    "CalculateVolDistance__10SoundEntry": "0x8015bc44"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

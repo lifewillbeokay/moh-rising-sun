@@ -1,0 +1,60 @@
+{
+  "id": "sound_bank_status",
+  "source": "src/sound/SoundBankStatus.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015be30",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsFinished__14SoundEntryBank",
+      "address": "0x8015be30",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetFade__14SoundEntryBankffb",
+      "address": "0x8015be94",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "ResolveSlotNum__14SoundEntryBank",
+      "address": "0x8015be98",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Stop__14SoundEntryBank",
+      "address": "0x8015bed0",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDtimeremaining": "0x80221f68",
+    "g_SoundMan": "0x80330c60",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDstop": "0x80220a5c",
+    "SNDSYS_leavecritical": "0x8021f988"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,57 @@
+{
+  "id": "sound_bank_defaults",
+  "source": "src/sound/SoundBankDefaults.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015bf1c",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._14SoundEntryBank",
+      "address": "0x8015bf1c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetTypeID__C14SoundEntryBank",
+      "address": "0x8015bf4c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdatePlayStatus__14SoundEntryBank",
+      "address": "0x8015bf54",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "CheckFade__14SoundEntryBank",
+      "address": "0x8015bf58",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.14SoundEntryBank": "0x802ea998",
+    "_._10SoundEntry": "0x8015b1cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

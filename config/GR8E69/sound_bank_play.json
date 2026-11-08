@@ -1,0 +1,48 @@
+{
+  "id": "sound_bank_play",
+  "source": "src/sound/SoundBankPlay.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015bd18",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa0b4",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "Play__14SoundEntryBank",
+      "address": "0x8015bd18",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetOpts__10SoundEntryR11SNDPLAYOPTSRf": "0x8015b9a4",
+    "g_SoundMan": "0x80330c60",
+    "SNDBANK_play": "0x8021a6bc",
+    "SNDSYS_entercritical": "0x8021f948",
+    "SNDCTRL_filteradd": "0x8021aa40",
+    "SNDSYS_leavecritical": "0x8021f988"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

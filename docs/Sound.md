@@ -246,11 +246,117 @@ equivalence or integrated Dolphin/game behavior. Complete-image verification,
 the repository validation suite and the captured progress snapshot are separate
 checks; existing matched function records must remain unchanged.
 
-`SoundEntry::GetOpts` remains research: its current 188-byte draft differs in
-register selection and earns no credit. The pool constructor, scheduler's `Add`,
-full buss processing and alias lookup also remain external work. This follow-up
-does not promote the explosion/update drafts documented in
+`SoundEntry::GetOpts` was left as research in that batch; it is now matched in
+the bank-playback work below. The pool constructor, scheduler's `Add`, full buss
+processing and alias lookup remain external work. Neither batch promotes the
+explosion/update drafts documented in
 [the previous research](research/explosion-grenade-updates.md).
+
+## Bank-backed playback and entry options
+
+Eight fragments reconstruct **sixteen functions / 1,236 executable bytes**.
+Codex assisted reconstruction directly from GR8E69 with the same ProDG 3.8.1
+`-O2 -G0 -fno-exceptions -fno-implicit-templates` profile; no external
+implementation is imported.
+
+| Manifest | Functions | Address | Code bytes | Generated data |
+| --- | --- | --- | ---: | --- |
+| `sound_entry_destructor` | `SoundEntry` destructor | `0x8015b1cc` | 120 | None |
+| `sound_entry_copy` | `SoundEntry` copy constructor | `0x8015b420` | 60 | None |
+| `sound_entry_options` | `GetOpts` | `0x8015b9a4` | 188 | 12 bytes at `0x802a9fdc` |
+| `sound_bank_copy` | `SoundEntryBank` copy constructor, `Clone` | `0x8015bc98` | 128 | None |
+| `sound_bank_play` | `Play` | `0x8015bd18` | 280 | 12 bytes at `0x802aa0b4` |
+| `sound_bank_status` | `IsFinished`, `SetFade`, `ResolveSlotNum`, `Stop` | `0x8015be30` | 236 | None |
+| `sound_bank_defaults` | destructor, `GetTypeID`, `UpdatePlayStatus`, `CheckFade` | `0x8015bf1c` | 68 | None |
+| `sound_bank_parameters` | `SetSndPitch`, `SetNormSndVol` | `0x8015bf60` | 156 | 8 bytes at `0x802aa0c0` |
+
+Every generated allocated section and complete function boundary matches. The
+32 constant bytes earn no code credit; no discarded functions or original
+context earn credit. The symbol table contains `SoundEntry.cpp` (1409) and
+`SoundEntryBank.cpp` (1411), but lacks a separate code-start marker for the
+latter. These new manifests leave original-file ownership unset: the class
+names and file records do not prove the boundary between those source files.
+The earlier association with `SoundEntry.cpp` is not a complete boundary map.
+
+### Copying, destruction and patch lookup
+
+The base copy constructor installs its table pointer and calls `copyData`, whose
+body remains original context. The bank copy constructor then installs the bank
+table and copies the word at `+0xd8` and byte at `+0xdc`, leaving tail padding
+untouched. `Clone` does nothing for a null destination; otherwise it uses
+placement copy construction in supplied storage, with no allocation or capacity
+check. The header's `#pragma interface` keeps original tables and unrelated
+out-of-line constructors external; it does not discard generated differences.
+
+The base destructor installs the base table, invokes a present emitter's virtual
+destructor with hidden flags 2, then clears the emitter pointer. Compiler-generated
+code deletes the entry only when its incoming destructor flags have bit 0 set.
+The bank destructor installs the derived table and forwards those flags to the
+base destructor. The accepted 120-byte and 48-byte functions include these
+compiler-generated paths; the source does not manually delete the inline emitter.
+
+`ResolveSlotNum` acts only when the signed byte at `+0xc8` exceeds 1. It adds the
+signed patch halfword at `+0xa8` to the signed variation byte at `+0xdc`, indexes
+the signed-halfword table at `g_SoundMan + 0x10`, and replaces the patch. There is
+no range or null check. These member names describe observed use; they are not
+recovered original names. The manager layout remains a scoped view.
+
+### Options, playback and volume conversion
+
+`SoundPlayOptions.h` repeats the existing `SNDplaysetdef` unit's 24-byte record
+declaration, using offset-based names. `GetOpts` first calls that initializer.
+When entry `+4` equals 1, it gets distance-adjusted volume and copies the low
+halfword of azimuth to options `+8`; otherwise it uses volume at `+0x1c` and
+retains the default azimuth. It returns the unscaled volume through the reference,
+sets the option's volume byte, and copies signed pitch to options `+0xc`.
+
+The three volume paths have different conversion order and unordered behavior:
+
+- `GetOpts` computes `volume * 127 + 0.5`, caps values above 127, maps negative
+  or unordered values to zero, then converts directly to the byte result.
+- `Play` first multiplies current volume by the global gain at manager `+0x80b8`,
+  then computes `product * 127 + 0.5`. It compares the float against 127 and zero
+  before converting directly to a byte. An unordered value reaches conversion.
+- `SetNormSndVol` computes that same scaled expression, converts to `int` first,
+  then clamps the integer to `[0, 127]` and calls `SNDvol`. Exceptional floating
+  conversions retain target-instruction behavior; no portable C++ result is
+  claimed for NaN, infinity or values outside the integer range.
+
+The generated code preserves the separate gain multiplication and fused
+multiply-add. Direct float-to-byte conversion resolved the register difference
+in the earlier `GetOpts` draft. Helper names are descriptive, and an instruction
+match does not establish the historical helper's exact declared return type.
+
+`Play` obtains options and current volume, replaces the volume byte using global
+gain, and calls `SNDBANK_play` with the bank word at `+0xd8` and signed patch.
+A negative result stores handle -12 and returns -1. A nonnegative result is saved
+as the handle. If filtering is enabled and an emitter exists, it requests the
+emitter's filter; a nonnull result is added inside enter/leave-critical calls.
+The filter-add result is ignored, and successful playback returns zero.
+`SetSndPitch` forwards the handle and integer pitch without clamping or updating
+entry storage. Opaque emitter return types remain provisional ABI views.
+
+### Completion and verification
+
+`Stop` always enters the critical section, calls `SNDstop`, leaves the critical
+section, and returns -1 for a negative result or zero otherwise. It does not
+reset the handle. This establishes an `int` return type, correcting the earlier
+provisional `void` declaration. `IsFinished` calls virtual `Stop`, stores -12,
+and returns 1 only when `SNDtimeremaining` is negative. Zero remaining time still
+returns 0. The stop result is ignored. `SetFade` and `UpdatePlayStatus` are
+no-ops; `GetTypeID` and `CheckFade` return zero.
+
+Local original-versus-production-linked PowerPC fixtures pass **396 cases**:
+16 copy/clone, 48 destruction, 4 default methods, 15 stop, 18 completion, 72
+signed slot lookups, 7 pitch, 80 options, 48 normalized-volume, and 88 playback
+cases. They check null destinations, preserved padding/storage, signed virtual
+adjustments, destructor flags, negative lookup offsets, zero-time completion,
+playback failure, filter gating/order, and finite/nonfinite volume inputs.
+The playback fixtures use the new `GetOpts` body and the previously matched
+`SNDplaysetdef`; copy fixtures stub the still-external `copyData`. External audio
+and selected virtual operations are stubbed. These are isolated instruction
+checks, not integrated Dolphin or game-runtime tests. Complete-image verification
+and the repository tests are separate checks.
 
 ## EA audio and REAL runtime libraries
 

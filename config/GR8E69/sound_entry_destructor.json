@@ -1,0 +1,39 @@
+{
+  "id": "sound_entry_destructor",
+  "source": "src/sound/SoundEntryDestructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015b1cc",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._10SoundEntry",
+      "address": "0x8015b1cc",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.10SoundEntry": "0x802ea930",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
