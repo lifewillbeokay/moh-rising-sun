@@ -77,7 +77,9 @@ Texture1Envmap and Texture2Envmap variants; and both Falloff_Texture1Envmap
 variants. Names describe the original entry points, not a promise that every
 variant's rendering path is complete. Four Falloff_Texture1/Texture2 `CompBlock004` variants add 11,704 bytes.
 Their behavior matches the corresponding block 3 routines, verified independently
-at each original address. Other block 4 functions and startup routines remain context.
+at each original address. Other block 4 functions and startup routines remain original context in the
+verified image. Four mesh-lighting variants now have maintained partial source
+as described below.
 Twenty outer mesh/CPT `Render` fragments add another 20,280 bytes. Each retained local function is
 scoped to its original file record and binding. Each generated constant pool is
 compared in full; no pool is counted twice.
@@ -131,6 +133,68 @@ These are GNU/SN compilation fragments verified with this toolchain, not an
 established portable C++ whole-source build. The original header organization,
 source spelling and visibility remain unknown. All class storage declarations
 are shared; no alternate TevStage layout is used by material callers.
+
+## Partial mesh-lighting blocks
+
+Four `CompBlock004` mesh functions are maintained under the
+[partial-source workflow](Progress.md#partial-source-workflow). They reconstruct
+normal-matrix setup, three directional-light inputs, ambient color, material and
+texture state, and the display-list/array paths. They add **13,380 target code
+bytes of partial source**, with no new exact or linked credit. The original
+functions remain in the byte-identical verified image.
+
+| Variant | Source | Original entry | Target bytes | Objdiff similarity | Differing bytes |
+| --- | --- | --- | ---: | ---: | ---: |
+| Color | [source](../src/eagl/eagl_msh_color_slots_lit.cpp) | `0x801c61c8` | 2,944 | 99.45652% | 16 |
+| Texture1 | [source](../src/eagl/eagl_msh_texture1_lit.cpp) | `0x801c7884` | 3,164 | 99.469025% | 22 |
+| Texture2 | [source](../src/eagl/eagl_msh_texture2_lit.cpp) | `0x801cafb4` | 3,636 | 99.53796% | 22 |
+| Texture1Lightmap | [source](../src/eagl/eagl_msh_texture1_lightmap_lit.cpp) | `0x801c92e8` | 3,636 | 99.53796% | 22 |
+
+The current measurements live in the public snapshot; these figures document the
+initial maintained versions. Each manifest preserves the original **local**
+function binding and source-file record. It reuses its corresponding accepted
+block-3 compiler profile (ProDG 3.8.1, `-O2 -G0 -fno-exceptions
+-fno-implicit-templates`) and adds only the standard `DECOMP_COMPARE` body guard.
+No existing linked function or storage is counted again. The complete sixteen-byte
+constant pool for each comparison matches at `0x802ba0ac`, `0x802ba268`,
+`0x802ba720`, or `0x802ba4a8`, respectively. All external definitions resolve to
+the pinned original. No renderer implementation is imported from another project.
+
+The shared `EAGLMaterialLighting.h` declares only the accessed storage prefix:
+three sixteen-byte direction records at zero, three sixteen-byte color records at
+`0x30`, and three ambient floats at `0x60`. The fourth word of each color record
+is unused here and retains unknown byte storage; the declaration does not infer
+an alpha field, constructor, complete allocation or historical type name.
+Directions use the independently reconstructed `COORD4` transform interface.
+The view copy zeroes its translation and sets its final element to one before
+transforming each active direction. A light is active if any RGB component is
+nonzero; colors are multiplied by 255 and converted without adding a clamp.
+The transformed direction is scaled by 1,048,576 for `GXInitLightPos`. Light-mask
+bits progress through 1, 2 and 4. Ambient and light alpha are set to 255.
+
+In the textured variants, the target reuses the light-object/direction temporary
+area for a later texture matrix. Limiting those lighting temporaries to their
+observed use reproduces the original **392-byte stack frame** and complete
+function lengths, improving the old drafts from roughly 97.5% similarity. Color
+retains its original 480-byte frame. These are reconstructed lifetimes, not proof
+of original brace placement. Fog, texture-dirty decisions, TEV stage ordering,
+triangle-strip overlap, array advancement, byte/halfword indices, cache flushing
+and FIFO padding remain as observed; this work adds no runtime fixes.
+
+The remaining differences are independent argument-setup instruction pairs:
+two pairs before `TransformPoint` in Color, and those pairs plus one before the
+third `GXLoadLightObjImm` in each textured variant. Focused original-dependent
+tests check complete native output, original function/frame sizes, and that every
+remaining instruction difference is an adjacent swap of independent `mr`/`addi`
+argument writes before an unchanged direct call. They also reject an internal
+branch entering halfway through a swap. All other instructions agree exactly.
+This is static comparison evidence, **not an emulator or rendering test**.
+Investigate source expression/scheduling choices next; do not pin registers,
+patch instructions, or turn these near matches into exact credit.
+
+The CPT block-4 variants use a different indexed point-light path and paired-single
+stores. They are not registered by this change and must not be cloned from these
+mesh routines without independent reconstruction.
 
 ## Render dispatch and state caching
 

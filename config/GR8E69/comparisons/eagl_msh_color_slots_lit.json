@@ -1,0 +1,67 @@
+{
+  "id": "compare_eagl_msh_color_slots_lit",
+  "source": "src/eagl/eagl_msh_color_slots_lit.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_msh_color_slots.json",
+  "evidence": "docs/Rendering.md#partial-mesh-lighting-blocks",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801c61c8",
+      "size": 2944
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ba0ac",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "CompBlock004Moh3_Msh_Color__FRQ212EAGLInternal9PCodeDataRQ212EAGLInternal10StaticData",
+      "address": "0x801c61c8",
+      "size": 2944,
+      "binding": 0
+    }
+  ],
+  "comparison_functions": [
+    "CompBlock004Moh3_Msh_Color__FRQ212EAGLInternal9PCodeDataRQ212EAGLInternal10StaticData"
+  ],
+  "context_units": [],
+  "externals": {
+    "Transpose__Q24EAGL9TransformRCQ24EAGL9TransformRQ24EAGL9Transform": "0x801e22a8",
+    "GXLoadPosMtxImm": "0x80248b30",
+    "GXSetCurrentMtx": "0x80248bd0",
+    "GXLoadNrmMtxImm": "0x80248b80",
+    "SetNumTexGens__Q24EAGL12TARExtensioni": "0x801e0ecc",
+    "__Q24EAGL8TevStage": "0x801e149c",
+    "SetTextureMapAndUVs__Q24EAGL8TevStage11_GXTexMapID13_GXTexCoordID": "0x801e15d0",
+    "SetColourIn__Q24EAGL8TevStage14_GXTevColorArgN31": "0x801e1578",
+    "SetAlphaIn__Q24EAGL8TevStage14_GXTevAlphaArgN31": "0x801e1534",
+    "Use__CQ24EAGL8TevStageUi": "0x801e15fc",
+    "GXSetNumChans": "0x802464b8",
+    "GXSetChanMatColor": "0x802463c8",
+    "GXSetChanAmbColor": "0x802462d8",
+    "GXInitLightColor": "0x80246250",
+    "TransformPoint__CQ24EAGL9TransformRC6COORD4R6COORD4": "0x801e1c0c",
+    "GXInitLightPos": "0x80246224",
+    "GXLoadLightObjImm": "0x8024625c",
+    "GXSetChanCtrl": "0x802464f4",
+    "SetPS2StyleOverBright__Q24EAGL8TevStagebT1": "0x801e1690",
+    "Use__CQ24EAGL21GeoPrimStateExtension": "0x801dea70",
+    "SetCurrentVertex__Q24EAGL21GeoPrimStateExtensionUiUi": "0x801dee90",
+    "SetHardware__Q24EAGL8TevStage": "0x801e1044",
+    "GXCallDisplayList": "0x80248990",
+    "GetPrimitiveType__CQ24EAGL12GeoPrimStateRQ24EAGL13PrimitiveType": "0x801df1c8",
+    "gpDisplayList": "0x802d2df8",
+    "gDisplayListSize": "0x802d2dfc",
+    "DCStoreRange": "0x80254604",
+    "IncrementArrays__Q24EAGL12RenderMethodi": "0x801dd658",
+    "GXBegin": "0x8024504c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3_Msh_Color.cpp",
+  "original_file_index": 2457
+}

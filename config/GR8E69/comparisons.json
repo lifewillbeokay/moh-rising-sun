@@ -2,6 +2,10 @@
   "schema_version": 1,
   "units": [
     "comparisons/FnDeltaQFast.json",
-    "comparisons/FnDeltaQ.json"
+    "comparisons/FnDeltaQ.json",
+    "comparisons/eagl_msh_color_slots_lit.json",
+    "comparisons/eagl_msh_texture1_lit.json",
+    "comparisons/eagl_msh_texture2_lit.json",
+    "comparisons/eagl_msh_texture1_lightmap_lit.json"
   ]
 }
