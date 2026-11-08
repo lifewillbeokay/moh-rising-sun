@@ -78,7 +78,7 @@ variants. Names describe the original entry points, not a promise that every
 variant's rendering path is complete. Four Falloff_Texture1/Texture2 `CompBlock004` variants add 11,704 bytes.
 Their behavior matches the corresponding block 3 routines, verified independently
 at each original address. Other block 4 functions and startup routines remain original context in the
-verified image. Four mesh-lighting variants now have maintained partial source
+verified image. Eight mesh-lighting variants now have maintained partial source
 as described below.
 Twenty outer mesh/CPT `Render` fragments add another 20,280 bytes. Each retained local function is
 scoped to its original file record and binding. Each generated constant pool is
@@ -195,6 +195,50 @@ patch instructions, or turn these near matches into exact credit.
 The CPT block-4 variants use a different indexed point-light path and paired-single
 stores. They are not registered by this change and must not be cloned from these
 mesh routines without independent reconstruction.
+
+### Additional lightmap and envmap lighting blocks
+
+Four more `CompBlock004` mesh entry points add **13,884 target bytes of partial
+source**. Each retains the original local binding and file record, reuses its
+accepted block-3 compiler profile, and has a separate comparison manifest. The
+original functions remain in the verified image and earn no new exact or linked
+credit. This completes maintained source for the eight directional-lighting mesh
+block-4 variants; the two mesh falloff Texture1/Texture2 block-4 variants were
+already linked and verified.
+
+| Variant | Source | Original entry | Target bytes | Initial objdiff similarity | Differing bytes |
+| --- | --- | --- | ---: | ---: | ---: |
+| Texture2Lightmap | [source](../src/eagl/eagl_msh_texture2_lightmap_lit.cpp) | `0x801ccf74` | 4,392 | 99.617485% | 22 |
+| Texture1Envmap | [source](../src/eagl/eagl_msh_texture1_env_lit.cpp) | `0x801cede4` | 3,164 | 99.469025% | 22 |
+| Texture2Envmap | [source](../src/eagl/eagl_msh_texture2_env_lit.cpp) | `0x801d0670` | 3,164 | 99.469025% | 22 |
+| Falloff_Texture1Envmap | [source](../src/eagl/eagl_msh_falloff_texture1_env_lit.cpp) | `0x801d557c` | 3,164 | 99.469025% | 22 |
+
+The shared lighting view, channel setup and active-light tests agree with each
+original routine independently. Scoping the light object and transformed direction
+before the later texture matrix reproduces all four original **392-byte frames**
+and complete function lengths. Every sixteen-byte constant pool is checked in
+full at `0x802ba9b4`, `0x802bac38`, `0x802bae58` and `0x802bb504`, respectively.
+The constants are 1, 0, 255 and 1,048,576 in that order. No new layout declarations,
+compiler flags, imported implementation or verification-tool changes are needed.
+
+Texture2Lightmap preserves the float-to-integer mode test against six, both
+four-stage TEV configurations, and three separately dirty texture bindings and
+texture matrices. Its state, textures, mode and matrix pointers come from parameter
+slots 10, 11–13, 14 and 16–18. The three envmap-named blocks use state slot 8,
+texture slot 9, fog slot 10 and texture-matrix slot 12. Their names are original
+symbols; they do not justify adding a second texture upload, an environment-matrix
+calculation or an extra falloff light to these particular bodies. Those paths
+are absent from the inspected instructions. The three bodies have equivalent
+instruction sequences after accounting for their own function, constant-pool and
+direct-call addresses; they remain separately checked original ranges.
+
+In each new routine, only three adjacent instruction pairs remain reordered:
+argument setup for the first two `TransformPoint` calls and the third
+`GXLoadLightObjImm` call. All other instruction words agree exactly. The existing
+static mesh-lighting tests now cover all eight partial functions, including full
+native output, target/frame sizes and independence of every reordered pair.
+No internal branch enters the middle of a pair. Runtime rendering remains untested;
+the remaining compiler-scheduling differences are still partial matches.
 
 ## Render dispatch and state caching
 

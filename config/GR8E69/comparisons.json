@@ -6,6 +6,10 @@
     "comparisons/eagl_msh_color_slots_lit.json",
     "comparisons/eagl_msh_texture1_lit.json",
     "comparisons/eagl_msh_texture2_lit.json",
-    "comparisons/eagl_msh_texture1_lightmap_lit.json"
+    "comparisons/eagl_msh_texture1_lightmap_lit.json",
+    "comparisons/eagl_msh_texture2_lightmap_lit.json",
+    "comparisons/eagl_msh_texture1_env_lit.json",
+    "comparisons/eagl_msh_texture2_env_lit.json",
+    "comparisons/eagl_msh_falloff_texture1_env_lit.json"
   ]
 }

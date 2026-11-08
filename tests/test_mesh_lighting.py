@@ -18,7 +18,9 @@ class MeshLightingComparisons(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.names = ['compare_eagl_msh_' + name + '_lit' for name in
-                     ('color_slots', 'texture1', 'texture2', 'texture1_lightmap')]
+                     ('color_slots', 'texture1', 'texture2', 'texture1_lightmap',
+                      'texture2_lightmap', 'texture1_env', 'texture2_env',
+                      'falloff_texture1_env')]
         if not all((ROOT/'build/comparisons'/name/'compiled.elf').exists() for name in cls.names):
             raise unittest.SkipTest('Run comparisons.py with the mesh-lighting sources first')
         from audit import load_target
@@ -26,8 +28,8 @@ class MeshLightingComparisons(unittest.TestCase):
         cls.units = [u for u in load_comparisons(ROOT) if u['id'] in cls.names]
 
     def test_complete_outputs_and_target_extent(self):
-        self.assertEqual(len(self.units), 4)
-        self.assertEqual(sum(f['size'] for u in self.units for f in u['functions']), 13380)
+        self.assertEqual(len(self.units), 8)
+        self.assertEqual(sum(f['size'] for u in self.units for f in u['functions']), 27264)
         for unit in self.units:
             with self.subTest(unit=unit['id']):
                 work = ROOT/'build/comparisons'/unit['id']

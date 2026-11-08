@@ -1,0 +1,68 @@
+{
+  "id": "compare_eagl_msh_texture1_env_lit",
+  "source": "src/eagl/eagl_msh_texture1_env_lit.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_msh_texture1_env.json",
+  "evidence": "docs/Rendering.md#additional-lightmap-and-envmap-lighting-blocks",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801cede4",
+      "size": 3164
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bac38",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "CompBlock004Moh3_Msh_Texture1Envmap__FRQ212EAGLInternal9PCodeDataRQ212EAGLInternal10StaticData",
+      "address": "0x801cede4",
+      "size": 3164,
+      "binding": 0
+    }
+  ],
+  "comparison_functions": [
+    "CompBlock004Moh3_Msh_Texture1Envmap__FRQ212EAGLInternal9PCodeDataRQ212EAGLInternal10StaticData"
+  ],
+  "context_units": [],
+  "externals": {
+    "Get__Q24EAGL6Device": "0x801db480",
+    "GetCurrentRenderContext__CQ24EAGL6Device": "0x801db43c",
+    "GetFogEnable__CQ24EAGL26RenderContextExtensionBaseRb": "0x801dd020",
+    "SetFogEnable__Q24EAGL26RenderContextExtensionBaseb": "0x801dcffc",
+    "Transpose__Q24EAGL9TransformRCQ24EAGL9TransformRQ24EAGL9Transform": "0x801e22a8",
+    "GXLoadPosMtxImm": "0x80248b30",
+    "GXSetCurrentMtx": "0x80248bd0",
+    "GXLoadNrmMtxImm": "0x80248b80",
+    "GXSetNumChans": "0x802464b8",
+    "GXSetChanMatColor": "0x802463c8",
+    "GXSetChanAmbColor": "0x802462d8",
+    "GXInitLightColor": "0x80246250",
+    "TransformPoint__CQ24EAGL9TransformRC6COORD4R6COORD4": "0x801e1c0c",
+    "GXInitLightPos": "0x80246224",
+    "GXLoadLightObjImm": "0x8024625c",
+    "GXSetChanCtrl": "0x802464f4",
+    "SetPS2StyleOverBright__Q24EAGL8TevStagebT1": "0x801e1690",
+    "Use__CQ24EAGL21GeoPrimStateExtension": "0x801dea70",
+    "SetCurrentVertex__Q24EAGL21GeoPrimStateExtensionUiUi": "0x801dee90",
+    "Use__Q24EAGL3TAR": "0x801e0b38",
+    "GXLoadTexMtxImm": "0x80248c04",
+    "SetTexCoordGen__Q24EAGL12TARExtension13_GXTexCoordID13_GXTexGenType12_GXTexGenSrcUiUcUi": "0x801e0ef8",
+    "SetHardware__Q24EAGL8TevStage": "0x801e1044",
+    "GXCallDisplayList": "0x80248990",
+    "GetPrimitiveType__CQ24EAGL12GeoPrimStateRQ24EAGL13PrimitiveType": "0x801df1c8",
+    "gpDisplayList": "0x802d2df8",
+    "gDisplayListSize": "0x802d2dfc",
+    "DCStoreRange": "0x80254604",
+    "IncrementArrays__Q24EAGL12RenderMethodi": "0x801dd658",
+    "GXBegin": "0x8024504c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3_Msh_Texture1Envmap.cpp",
+  "original_file_index": 2507
+}
