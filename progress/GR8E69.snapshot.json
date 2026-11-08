@@ -6,14 +6,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 917988,
+    "matching_code_bytes": 918756,
     "total_executable_code_bytes": 2492032,
-    "percent": 36.836926652627255,
+    "percent": 36.86774487647028,
     "categories": {
-      "reconstructed_game": 525772,
+      "reconstructed_game": 526540,
       "restored_library": 392216
     },
-    "matching_functions": 4398
+    "matching_functions": 4402
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -329,6 +329,7 @@
     "config/GR8E69/eagl_anim_compound_channel.json": "5071321f100279ef533ee5c692a2c97e6ff4e918fdcde560557215b9944c162d",
     "config/GR8E69/eagl_anim_csis_event_channel.json": "ac3a95d94c3295a93baa72996de785545a4bdd7b3016aa2e5227c961b26f2986",
     "config/GR8E69/eagl_anim_delta_chan.json": "f12c4cd6e0e32bae1dd8e96690042545027c19418323a4790c2e09e374ece9a0",
+    "config/GR8E69/eagl_anim_delta_chan_destruction.json": "24a3d3657d36b82d710fd8f64d847a0ddd2bb67ad8e48741cecf57c12f634f2a",
     "config/GR8E69/eagl_anim_delta_compressed_data.json": "4e5153acc0632c58b6326cd0c69c02a6d8ed12995563feb21428953cfd9466a0",
     "config/GR8E69/eagl_anim_delta_f1.json": "9a9270df3b46b75d1368f313eb57f938d1d9533f88fe049234d8322eeebd2620",
     "config/GR8E69/eagl_anim_delta_f3.json": "16b2cd76e552f475cdc363a58463a57f6c8340778ea19d2795e24da8a16d9576",
@@ -825,7 +826,7 @@
     "config/GR8E69/player_weapon_shutdown.json": "f90a42342572d125630e7ac3647193288c13301a5309bcdc49cc350364bc2b60",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "3b2c451d5a87f3c364301117b5f1b97c4115790393ca52e6b57ba86a70ab1f0f",
+    "config/GR8E69/project.json": "bd5d6274315acb000a183b89a20de4626d9d7184b840027688bd5994dba6a801",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -2620,6 +2621,7 @@
     "src/eagl_anim/CompoundChannel.cpp": "a6b7b98d5c61f749588675fc3acfc5f71043fd01884d7bb61eed0d8d102410a6",
     "src/eagl_anim/CsisEventChannel.cpp": "f5f740df1a3012673110de1eed269bee3b9ea6140c70a97886fb4ce54eca4c75",
     "src/eagl_anim/DeltaChan.cpp": "2eff0ca3c5722b80a99cdbe26de7de690c638890c6ca1808288396cb75b0f4a9",
+    "src/eagl_anim/DeltaChanDestruction.cpp": "8a889f9f67fbbf5a0f0fb8e7042a90977d42ca75c445495e308c0776a7b40b44",
     "src/eagl_anim/DeltaCompressedData.cpp": "268f1e753118e77d7d62f3c8bbff37babd400393a242f7b8352c3eb060f5d345",
     "src/eagl_anim/FnAnim.cpp": "93c06f0250059b13fcc8c778e8ec1b82b3b37d0215bb0969b6bc93f8cd43da93",
     "src/eagl_anim/FnAnimMemoryMap.cpp": "73dbd741a957870724a2bd2712d08b299b18505bfdb38fbe26d8355094a8e23b",
@@ -18183,6 +18185,24 @@
       "discarded_functions": [],
       "object_sha256": "1fdf82ad9004f70cb89dfb23eb5eb5ebba9d36954ac7b2c19b3e23aeee10040f",
       "linked_sha256": "089ec5c45c2c5f8ca89c01ec1149a5a3770b41c8b5e982da3a2920035599d8f9"
+    },
+    {
+      "id": "eagl_anim_delta_chan_destruction",
+      "category": "reconstructed_game",
+      "functions": 4,
+      "code_bytes": 768,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "648558b5d7100f11258da8995e4b6cf798528494e64c765595f8cdaff7740269",
+      "linked_sha256": "65900ddfcc92576a3be8b3bd05b1a48b8139d96d864521c81dc5d2d7e5af793a"
     },
     {
       "id": "eagl_loading_constructor_pool",
@@ -82490,34 +82510,6 @@
             "size": 128,
             "kind": "function",
             "name": "GetConstPhysical__Q28EAGLAnim6DeltaQ",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80293368",
-            "size": 192,
-            "kind": "function",
-            "name": "_._Q28EAGLAnim15FnDeltaLerpChan",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x80293428",
-            "size": 192,
-            "kind": "function",
-            "name": "_._Q28EAGLAnim15FnDeltaQuatChan",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802934e8",
-            "size": 192,
-            "kind": "function",
-            "name": "_._Q28EAGLAnim13FnKeyLerpChan",
-            "evidence": "unknown-file"
-          },
-          {
-            "address": "0x802935a8",
-            "size": 192,
-            "kind": "function",
-            "name": "_._Q28EAGLAnim13FnKeyQuatChan",
             "evidence": "unknown-file"
           }
         ]

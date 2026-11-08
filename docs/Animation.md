@@ -144,6 +144,29 @@ interpretation rather than substituting machine instructions. Masked evaluation
 uses an eight-bit bone index; bone enumeration retains its observed 16-bit result.
 Original vtables remain external context for these channel fragments.
 
+Four derived channel destructors add 768 bytes at `0x80293368`–`0x80293668`:
+`FnDeltaLerpChan`, `FnDeltaQuatChan`, `FnKeyLerpChan` and `FnKeyQuatChan`.
+Each releases the previous-value buffer and DOF mask independently when non-null,
+then invokes `FnAnimMemoryMap` destruction with a zero deletion flag. If the
+incoming deletion flag's low bit is set, it finally calls `EAGLFree` with the
+object pointer and size 36. The target installs the appropriate plain/keyed base
+vtable before buffer cleanup. No additional derived fields are implied.
+
+`DeltaChanDestruction.cpp` supplies scoped inline copies of the two already
+reconstructed base destructor bodies so ProDG can inline inherited cleanup into
+the four empty derived destructors. The out-of-line base bodies remain in
+`DeltaChan.cpp`; their behavior must stay synchronized. This follows the native
+compilation-fragment approach used for the channel and BoneMask interfaces,
+not a recovered historical header boundary. The resulting object contains exactly
+the four expected functions, with no generated allocated data, extra base
+functions or discarded code. It uses the existing ProDG 3.8.1 animation profile.
+
+Isolated PowerPC fixtures compare original and compiled destructors in 576 cases:
+both nullable buffers, six deletion flags, signed virtual-call adjustments, and
+memory-manager replacement after the first buffer free. They check call order,
+the 36-byte object-free argument, object guards and preserved registers/stack.
+External callbacks are stubbed; this does not test the game or allocator runtime.
+
 ## Event and allocation support
 
 The event, bank, allocator, scratch-buffer and raw-pose support fragments add
@@ -269,6 +292,27 @@ inline boundaries. Every generated allocated byte is checked; runtime behavior i
 the game remains untested.
 
 ## Quaternion support and control fragments
+
+### Unaccepted evaluator research
+
+A November 2026 recheck reproduced the parked `FnDeltaQFast` and `FnDeltaQ`
+drafts against the pinned original. Their four unfinished evaluators total 15,228
+bytes, all still original context. Both fast evaluators differ at the same
+reverse-playback guard: the draft selects CR0 where the original selects CR7,
+changing three bytes per function. Both regular evaluators also differ in
+instruction scheduling, for fifteen differing bytes each. Function addresses,
+sizes and the full generated constant/vtable sections agree in these drafts.
+This is diagnostic evidence, not partial source credit or runtime verification.
+
+ProDG 3.5, 3.5b140, 3.7, 3.8.1 and 3.9.3 reproduced the same differences.
+Equivalent guard rewrites and tested whole-file optimization variations did not
+resolve them while preserving the rest of each unit. A compiler-version switch
+alone is therefore not the next useful experiment. Investigate the condition's
+source lifetime and surrounding cache logic; retain complete comparisons and
+avoid register constraints or instruction patches. The reference quaternion
+implementation bodies remain empty, so they cannot supply the missing fix.
+
+### Accepted support
 
 Three `FnDeltaQFast` fragments add ten functions and **4,104 code bytes**:
 map binding and buffer initialization, unmasked next-key reconstruction, three

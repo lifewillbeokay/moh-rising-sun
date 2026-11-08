@@ -593,6 +593,7 @@
     "eagl_anim_compound_channel.json",
     "eagl_anim_delta_compressed_data.json",
     "eagl_anim_delta_chan.json",
+    "eagl_anim_delta_chan_destruction.json",
     "eagl_loading_constructor_pool.json",
     "eagl_loading_symbol_pool_insert_remove.json",
     "eagl_loading_symbol_pool_lifetime.json",

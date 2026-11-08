@@ -1,0 +1,60 @@
+{
+  "id": "eagl_anim_delta_chan_destruction",
+  "source": "src/eagl_anim/DeltaChanDestruction.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80293368",
+      "size": 768
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q28EAGLAnim15FnDeltaLerpChan",
+      "address": "0x80293368",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "_._Q28EAGLAnim15FnDeltaQuatChan",
+      "address": "0x80293428",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "_._Q28EAGLAnim13FnKeyLerpChan",
+      "address": "0x802934e8",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "_._Q28EAGLAnim13FnKeyQuatChan",
+      "address": "0x802935a8",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.Q28EAGLAnim11FnDeltaChan": "0x802ed088",
+    "_Q28EAGLAnim17MemoryPoolManager.gMemoryManager": "0x802d2e5c",
+    "_._Q28EAGLAnim15FnAnimMemoryMap": "0x801ee1e0",
+    "_12EAGLInternal.EAGLFree": "0x802d2e0c",
+    "_vt.Q28EAGLAnim14FnKeyDeltaChan": "0x802ece60"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}
