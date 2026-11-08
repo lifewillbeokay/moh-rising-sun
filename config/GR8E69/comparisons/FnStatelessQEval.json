@@ -1,0 +1,44 @@
+{
+  "id": "compare_FnStatelessQEval",
+  "source": "src/eagl_anim/FnStatelessQEval.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_anim_fn_stateless_q_control.json",
+  "evidence": "docs/Animation.md#partial-stateless-quaternion-evaluators",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80203d8c",
+      "size": 2380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf228",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "EvalSQT__Q28EAGLAnim12FnStatelessQfPfPCQ28EAGLAnim8BoneMask",
+      "address": "0x80203d8c",
+      "size": 1480,
+      "binding": 1
+    },
+    {
+      "name": "EvalSQTMask__Q28EAGLAnim12FnStatelessQfPfPCQ28EAGLAnim8BoneMaskbif",
+      "address": "0x80204354",
+      "size": 900,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "EvalSQT__Q28EAGLAnim12FnStatelessQfPfPCQ28EAGLAnim8BoneMask",
+    "EvalSQTMask__Q28EAGLAnim12FnStatelessQfPfPCQ28EAGLAnim8BoneMaskbif"
+  ],
+  "context_units": [],
+  "externals": {
+    "EvalSQTfast__Q28EAGLAnim13FnStatelessF3fPfPCQ28EAGLAnim8BoneMaskbif": "0x80205438"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

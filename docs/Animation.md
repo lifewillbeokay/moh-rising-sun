@@ -206,8 +206,9 @@ evaluator and six transformation helpers are described below.
 The stateless F3 and quaternion control fragments contribute ten functions each,
 852 and 896 code bytes respectively. Each complete native 184-byte vtable and
 8-byte conversion constant pool also matches. The larger evaluators remain
-original context; a matching control fragment does not imply decoded format
-coverage.
+original context in the verified image; the Q evaluators now have
+[maintained partial source](#partial-stateless-quaternion-evaluators).
+A matching control fragment does not imply decoded format coverage.
 
 Both function objects occupy 24 bytes, with previous-key halfword at sixteen,
 FPS-enable/FPS bytes at eighteen/nineteen and mask pointer at twenty. The Q
@@ -218,6 +219,41 @@ twenty-three. Q's bone enumerator forwards to that companion when present.
 F3 frame-count conversion retains unsigned-halfword truncation; Q uses a signed
 integer result. These differences are established by the original instructions.
 All formats remain runtime untested.
+
+### Partial stateless quaternion evaluators
+
+`src/eagl_anim/FnStatelessQEval.cpp` maintains `EvalSQT` and `EvalSQTMask` under
+`DECOMP_COMPARE`, inheriting the accepted Q control profile. Their original sizes
+are 1,480 and 900 bytes; native output is 1,476 and 900 bytes, with the second
+entry four bytes early. Objdiff similarity is 92.24% and 97.22%, respectively.
+Both remain partial, with no exact or linked credit. The full 24-byte constant
+pool at `0x802bf228` matches; there are no discarded functions or emitted vtables.
+
+The existing 24-byte Q map is followed by four unsigned halfwords per animated
+bone per key, then constant-bone data. Constant indices follow animated indices.
+Each component expands to float bits as
+`((value & 0x8000) << 16) | ((value & 0x7fff) << 15)`. The guarded helpers and
+temporary union are reconstruction choices. The pinned NFS reference supplies
+attributed names/interfaces, but its corresponding evaluator/format bodies are
+empty; these bodies follow GR8E69 instructions.
+
+Time selection preserves FPS scaling, cached forward/backward sparse-key search,
+the implicit first sparse key at time zero, and the final-key interpolation gate.
+Four decoded components are interpolated linearly without normalization or
+shortest-path sign adjustment. Quaternion outputs occupy `sqt + 4 + 12 * bone`;
+other pose components are preserved. The linked F3 evaluator receives the already
+selected time/key/scale and its return value is ignored.
+
+For masked constant bones, the packed-data pointer advances only when the bone
+is selected. Skipping a constant bone therefore leaves its values for the next
+selected constant bone. This surprising target behavior is preserved and checked
+explicitly. Input key counts, cached indices and backing storage remain original
+preconditions, not a validated file format.
+
+Key-loop scheduling, the shared last-key comparison and register allocation remain
+unmatched. [Batch verification](research/shortlist-partials.md) exercises sparse
+and dense time selection, FPS mode, cache histories, masks, constant skipping,
+shifted native entry addresses and the optional F3 call with isolated PPC checks.
 
 ## Skeleton poses and matrix callback
 

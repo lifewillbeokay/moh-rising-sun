@@ -1,0 +1,49 @@
+{
+  "id": "compare_loading_DynamicLoaderInitialize",
+  "source": "src/eagl_loading/DynamicLoaderInitialize.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_loading_dynamic_loader_symbol.json",
+  "evidence": "docs/Loading.md#maintained-partial-loading-functions",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801e9bb0",
+      "size": 2752
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802be738",
+      "size": 456
+    }
+  ],
+  "functions": [
+    {
+      "name": "Initialize__Q24EAGL13DynamicLoaderPFPCcRb_Pv",
+      "address": "0x801e9bb0",
+      "size": 2752,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "Initialize__Q24EAGL13DynamicLoaderPFPCcRb_Pv"
+  ],
+  "context_units": [],
+  "externals": {
+    "_12EAGLInternal.EAGLMalloc": "0x802d2e08",
+    "strcmp": "0x802669b4",
+    "strlen": "0x80266b70",
+    "strstr": "0x80266f6c",
+    "strcpy": "0x80266a7c",
+    "memmove": "0x8026668c",
+    "PrintMessage__4EAGLiPCce": "0x801e8890",
+    "_4EAGL.hashhead": "0x802d2e1c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "local_externals": [
+    "_4EAGL.hashhead"
+  ],
+  "original_file": "dlopen.cpp",
+  "original_file_index": 2682
+}

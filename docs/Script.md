@@ -1106,11 +1106,53 @@ acceptance:
 complete generated-data verification through the literal placement described
 [below](#sound-playback-path-flags-and-location-damage).
 
-Others are close but not yet exact: `IsAliasSoundLooping`, `Soldier_GetObjInfo`,
-`AddPlayerAmmo`, `SetExpression`, `TeleportToPlayerByNavPoint`,
-`CanMeleeTarget`, `SetBlinkState`, `SetDefaultFogParams`,
-`GetSpeedRelativeToPlayer`, `MoveFromObjToObj`, `MechFollowPath` and
-`PlayVibrationEvent`. These remain original context.
+Four earlier near-matches are now [maintained partial source](#maintained-partial-built-ins).
+`AddPlayerAmmo`, `TeleportToPlayerByNavPoint`, `CanMeleeTarget`, `SetBlinkState`,
+`SetDefaultFogParams`, `GetSpeedRelativeToPlayer`, `MoveFromObjToObj` and
+`MechFollowPath` still have no registered source. All these bodies remain original
+context in the verified image.
+
+## Maintained partial built-ins
+
+Four wrappers from the earlier PR #31 follow-up are now registered comparisons
+using the accepted ProDG 3.8.1 built-in profile. The exact totals above exclude
+their 1,428 target bytes. All four remain partial and earn similarity only.
+
+| Built-in (`BIFunc_` omitted) | Target bytes | Compiled bytes | Objdiff similarity |
+| --- | ---: | ---: | ---: |
+| `Soldier_GetObjInfo` | 312 | 312 | 99.81% |
+| `SetExpression` | 348 | 348 | 82.43% |
+| `IsAliasSoundLooping` | 236 | 236 | 94.58% |
+| `PlayVibrationEvent` | 532 | 484 | 90.90% |
+
+`Soldier_GetObjInfo` resolves the explicit soldier script object's node and uses
+the same query helper and integer/float return protocol as the accepted
+`GetObjInfo` wrapper. Its input and output storage remain scoped runtime views.
+`SetExpression` updates the existing eight-field facial-expression state: a
+pending expression causes immediate replacement; an empty current expression
+starts a blend; a differing current expression queues a transition. Identical
+current/requested expressions leave the state unchanged. The wrapper returns -1.
+
+`IsAliasSoundLooping` returns zero for a zero alias or the CRC of `none`; otherwise
+it constructs a bank entry, performs the lookup, reads its looping word and
+destroys the temporary. The guarded body and inline bank destructor live before
+the accepted playback functions in `alias_playback.cpp`. Its manifest names
+`script_alias_playback` as exact context: all three accepted bodies retain their
+addresses/bytes and the shared 32-byte pool at `0x802a5b28` is checked in full.
+Those context functions earn no second credit. Normal builds omit the partial
+body and retain the existing playback object.
+
+`PlayVibrationEvent` selects player 0 in single player. In multiplayer it uses
+the current script node's player index when available, otherwise the closest
+player to that node's position. It forwards the effect, flags, strength and
+duration without adding validation. Its separate four-byte pool at `0x802a5ecc`
+does not overlap the accepted path-scale storage. The other two wrappers verify
+their complete four/eight-byte pools at `0x802a5a54` and `0x802a5dac`.
+
+Argument/output scheduling, expression-store ordering and vibration temporaries
+remain unmatched. [Batch verification](research/shortlist-partials.md) records
+isolated original/native checks for these paths; external callees are stubbed
+and the game has not been tested.
 
 ## Follow-up wrappers from PR #31
 

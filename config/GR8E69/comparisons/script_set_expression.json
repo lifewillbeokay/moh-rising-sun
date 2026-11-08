@@ -1,0 +1,40 @@
+{
+  "id": "compare_script_set_expression",
+  "source": "src/script/set_expression_partial.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "script_alias_playback.json",
+  "evidence": "docs/Script.md#maintained-partial-built-ins",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80110e60",
+      "size": 348
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5dac",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_SetExpression__FPPiPv",
+      "address": "0x80110e60",
+      "size": 348,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "BIFunc_SetExpression__FPPiPv"
+  ],
+  "context_units": [],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

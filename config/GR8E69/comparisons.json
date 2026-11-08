@@ -14,6 +14,17 @@
     "comparisons/explosion_height.json",
     "comparisons/explosion_ray.json",
     "comparisons/explosion_obstructions.json",
-    "comparisons/thrown_bullet_commit.json"
+    "comparisons/thrown_bullet_commit.json",
+    "comparisons/loading_DynamicLoaderGetAddr.json",
+    "comparisons/loading_DynamicLoaderInitialize.json",
+    "comparisons/loading_SymbolPoolSearch.json",
+    "comparisons/FnStatelessQEval.json",
+    "comparisons/script_soldier_obj_info.json",
+    "comparisons/script_set_expression.json",
+    "comparisons/script_alias_looping.json",
+    "comparisons/script_vibration.json",
+    "comparisons/scene_static_init.json",
+    "comparisons/scene_static_anim_attempt.json",
+    "comparisons/scene_tank_add_weapon.json"
   ]
 }

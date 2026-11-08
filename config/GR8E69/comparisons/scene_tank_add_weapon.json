@@ -1,0 +1,35 @@
+{
+  "id": "compare_scene_tank_add_weapon",
+  "source": "src/scene/TankObjectAddWeaponPartial.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "scene_StaticObjectHead.json",
+  "evidence": "docs/SceneObjects.md#maintained-partial-scene-helpers",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c3a60",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddWeapon__11CTankObjectii",
+      "address": "0x800c3a60",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "AddWeapon__11CTankObjectii"
+  ],
+  "context_units": [],
+  "externals": {
+    "g_WeaponFactory": "0x803e6d40",
+    "CreateWeaponByCRC__14CWeaponFactoryiP10ISceneNodei": "0x8014f2b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Tank_object.cpp",
+  "original_file_index": 894
+}

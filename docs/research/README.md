@@ -36,6 +36,11 @@ records GR8E69 behavior and unresolved matching work for the explosion helpers
 and `CThrownBullet::CommitUpdate`, building on PR #47. It also identifies the
 sound-event dependencies now accepted as matching source.
 
+The [recovered partial-source batch](shortlist-partials.md) follows that work with
+twelve loader, quaternion, script and scene functions. It records complete native
+comparisons, shared-context ownership and reproducible isolated PowerPC checks,
+while keeping partial similarity separate from exact and linked coverage.
+
 The script dispatch table and named built-in functions provide concrete places to
 start reconstructing the script interpreter and small wrappers. The `.sin` and
 `.bpd` notes help interpret records used by class lookup and endian-conversion

@@ -4,7 +4,8 @@ The loader fragments reconstruct symbol-pool insertion/removal and lifecycle,
 constructor registration, dynamic-loader lifecycle, constructor dispatch, symbol
 inspection and lookup iteration. They adapt the public NFS Most Wanted
 reconstruction to Rising Sun's older `EAGL` interface. The remaining initializer,
-resolver and unfinished lookup bodies stay original context. Current accepted
+resolver and unfinished lookup bodies stay original context. The initializer and
+two lookup bodies now have maintained partial source, described below. Current accepted
 ranges are recorded in the project manifest and verified progress snapshot.
 
 ## Reference and storage evidence
@@ -60,4 +61,42 @@ model. The local `dlsym` and private `hashhead` dependency are bound to the
 original `dlopen.cpp` file record. All generated strings, code, symbols and
 section boundaries are checked, with complete-image verification required before
 publication. No instruction substitutions or clipped constant pools are used.
-Loading and destructor behavior have not been tested in an emulator.
+The game's loading and destructor path has not been exercised in Dolphin.
+
+## Maintained partial loading functions
+
+Three previously parked functions are registered comparisons, using the accepted
+`eagl_loading_dynamic_loader_symbol.json` ProDG profile. They retain the existing
+NFS attribution and native ELF/loader declarations; no fake callback cast or
+function-specific compiler setting is used.
+
+| Function | Target bytes | Compiled bytes | Objdiff similarity |
+| --- | ---: | ---: | ---: |
+| `DynamicLoader::GetAddr` | 476 | 476 | 99.92% |
+| `DynamicLoader::Initialize` | 2,752 | 2,848 | 73.14% |
+| `SymbolPool::Search` | 280 | 272 | 93.71% |
+
+`GetAddr` distinguishes the name and optional `0x7f`-prefixed type, returns either
+an absolute symbol or section-relative address, and falls back to the user callback.
+A failed callback can still set the output pointer. Its remaining two byte
+differences select registers in the final hash-index shift/load pair. The original
+out-of-range-index diagnostic continues through the chain; this is not repaired.
+
+`Initialize` swaps the ELF header, section and symbol fields in place, resolves
+section offsets through `ELFAddr`, rewrites `__type:::name` strings into
+`name\0\x7ftype`, builds the hash chains and original-section flags, and inserts
+the handle into the global doubly-linked list. Unsupported section diagnostics
+continue as in the target; this is not a general-purpose validated ELF parser.
+Both contiguous and separate relocation storage are exercised. `_4EAGL.hashhead`
+retains its original private `dlopen.cpp` file scope. Register allocation, loop
+induction and instruction scheduling remain unresolved.
+
+`Search` preserves linear probing, wraparound, repeated table reads and the
+original `count > mTableLength` stopping condition. Its loop induction still
+differs. Valid nonzero table length and suitable input storage remain caller
+preconditions; no new malformed-input checks are inferred.
+
+The complete 80-byte pool at `0x802be900` and 456-byte pool at `0x802be738` match;
+`Search` emits no allocated data. All three bodies stay out of the verified
+image and earn similarity only. [The batch verification notes](research/shortlist-partials.md)
+record the original/native checks and their limits.

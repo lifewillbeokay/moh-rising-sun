@@ -75,15 +75,13 @@ views and does not assert the original class layouts or inheritance order.
 These still differ, with instruction differences in brackets; drafts are kept outside the
 tree and a later reader should expect them to be close rather than solved.
 
-- `CStaticObject::Init` (2): the `+0x214` and `+0x110` stores swap.
 - `CStaticObject::CalculateMovementTime` (27): register allocation of the three times.
 - `CStaticObject::AnimUpdate`: one missing `fmr`, which shifts the rest; the period and its
   conversion share a register in this build.
-- `CStaticObject::AttemptAnimMotionUpdate` (3): one scheduled load.
 - `CStaticObject::StartMotionPlayback` (60): the key-frame temporaries.
 - `CAnimObject::BeginUpdate`, `DetectGround` and `Yaw`: a local's address stays in a saved
   register where the original rematerializes it.
-- `CHierObject::GetWorldLinearVelocity` (19) and `CTankObject::AddWeapon` (5): register choice.
+- `CHierObject::GetWorldLinearVelocity` (19): register choice.
 - `AllocateBoxVolume`: needs `CVolBox` data members that `Box.h` does not declare.
 - `CSoldierObject::CleanUp`, `DetachObject` and `GetBulletEmitterMatrix`: the original
   computes attach-slot addresses as `(this + i * 112) + offset`; no array or pointer form
@@ -104,3 +102,45 @@ tree and a later reader should expect them to be close rather than solved.
 
 The script-motion bits in `CStaticObject` are tested through inline accessors that each return
 one bit; without them `||` merges the tests into one mask. The accessor names are descriptive.
+
+## Maintained partial scene helpers
+
+Three functions from the older parked list are now maintained under
+`DECOMP_COMPARE` with the accepted `scene_StaticObjectHead.json` profile. The
+earlier contributor drafts were unavailable; the bodies were reconstructed using
+the current shared views and independently checked GR8E69 instructions, with
+[Frontline revision b7b6fff](https://github.com/kyleckroeger/moh-frontline-decomp/tree/b7b6fffaba0edd2989a8a8b02977c1236c72b68b)
+as a CC0 semantic reference. The earlier draft instruction counts do not describe
+these new builds. Codex assisted the reconstruction and checks.
+
+| Function | Target bytes | Compiled bytes | Objdiff similarity |
+| --- | ---: | ---: | ---: |
+| `CStaticObject::Init` | 144 | 132 | 54.97% |
+| `CStaticObject::AttemptAnimMotionUpdate` | 548 | 544 | 92.52% |
+| `CTankObject::AddWeapon` | 168 | 168 | 95.00% |
+
+`Init` synchronizes orientation with the transform, enables drawing, clears the
+three script-motion flags and velocity xyz, and resets the existing scale/path/
+priority fields. It preserves the velocity's fourth word and other flag bits.
+The collision-damage and path flags are cleared; `pathScale` becomes 0.5 and
+`maxLightPriority` -1. Store scheduling and flag grouping remain different.
+
+`AttemptAnimMotionUpdate` requires nonzero `motionLoop` and `motionRate` for the
+motion path. It stores the raw step, scales velocity by it, and clamps the
+interpolation amount `dt * motionSampleRate` with the original negated comparisons
+(including the unordered-to-one path). It interpolates the two established
+quaternions, updates the matrix and position, then updates the world's type-0
+volume and XY sort bounds. Without that volume it queries the node position for
+all four bounds. This differs from Frontline's motion guard and interpolation.
+
+`AddWeapon` clears the selected slot and returns zero for CRC `0xfb9630c9`.
+Otherwise it requests a weapon with ammunition 999. A successful allocation sets
+`bulletClass` to 4 for a nonzero signed property halfword at `+0x0e`, otherwise 10,
+and returns one. A failed allocation leaves a null slot and returns zero. The
+original adds no slot bounds check or cleanup of a replaced weapon.
+
+No new class layouts or complete allocations are inferred. Complete 12-byte and
+8-byte pools at `0x8029eb88` and `0x8029ebd0` match; the tank helper emits no data.
+All 860 target bytes remain original in the verified image, with no exact or
+linked credit. [The batch notes](research/shortlist-partials.md) describe the
+isolated state/flag/branch checks and remaining verification limits.

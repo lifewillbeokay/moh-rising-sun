@@ -1,0 +1,47 @@
+{
+  "id": "compare_script_vibration",
+  "source": "src/script/vibration_partial.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "script_alias_playback.json",
+  "evidence": "docs/Script.md#maintained-partial-built-ins",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80114764",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5ecc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_PlayVibrationEvent__FPPiPv",
+      "address": "0x80114764",
+      "size": 532,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "BIFunc_PlayVibrationEvent__FPPiPv"
+  ],
+  "context_units": [],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "g_pBSObject": "0x8031d100",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_scene": "0x803e6d90",
+    "FindClosestPlayer__6CSceneRC8CVector3": "0x80148914",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_inputMgr": "0x803077c4",
+    "SetFeedback__13CInputManagerUcUcUcff": "0x800d704c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

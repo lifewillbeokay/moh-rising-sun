@@ -1,0 +1,39 @@
+{
+  "id": "compare_loading_DynamicLoaderGetAddr",
+  "source": "src/eagl_loading/DynamicLoaderGetAddr.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_loading_dynamic_loader_symbol.json",
+  "evidence": "docs/Loading.md#maintained-partial-loading-functions",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801ea670",
+      "size": 476
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802be900",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetAddr__CQ24EAGL13DynamicLoaderPCcT1RPv",
+      "address": "0x801ea670",
+      "size": 476,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "GetAddr__CQ24EAGL13DynamicLoaderPCcT1RPv"
+  ],
+  "context_units": [],
+  "externals": {
+    "PrintMessage__4EAGLiPCce": "0x801e8890",
+    "strlen": "0x80266b70",
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

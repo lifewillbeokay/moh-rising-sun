@@ -5,6 +5,25 @@
 #include "StringCRC.h"
 #include "SceneNode.h"
 
+#if defined(DECOMP_COMPARE)
+// Partial looping query shares this fragment's complete literal pool.
+inline SoundEntryBank::~SoundEntryBank() {}
+
+void BIFunc_IsAliasSoundLooping(int **stack, void *) {
+    int *args = *stack - g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;
+    unsigned int sound = args[1];
+    int looping = 0;
+    if (sound && sound != GetStringCRC("none")) {
+        SoundEntryBank entry;
+        g_SoundMan.GetSound(entry, sound);
+        looping = entry.looping;
+    }
+    *stack -= g_pBuiltInFunctions[g_iCurrentBIFIndex].stackAdjustment;
+    **stack = looping;
+}
+
+#endif
+
 void BIFunc_PlayAliasSound(int **stack, void *object) {
     int count = g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;
     unsigned int sound = *(*stack - (count - 1));

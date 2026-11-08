@@ -1,0 +1,68 @@
+{
+  "id": "compare_script_alias_looping",
+  "source": "src/script/alias_playback.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "script_alias_playback.json",
+  "evidence": "docs/Script.md#maintained-partial-built-ins",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8010769c",
+      "size": 1036
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a5b28",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "BIFunc_IsAliasSoundLooping__FPPiPv",
+      "address": "0x8010769c",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayAliasSound__FPPiPv",
+      "address": "0x80107788",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayAliasSoundOnOther__FPPiPv",
+      "address": "0x8010787c",
+      "size": 312,
+      "binding": 1
+    },
+    {
+      "name": "BIFunc_PlayVocal__FPPiPv",
+      "address": "0x801079b4",
+      "size": 244,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "BIFunc_IsAliasSoundLooping__FPPiPv"
+  ],
+  "context_units": [
+    "script_alias_playback"
+  ],
+  "externals": {
+    "g_iCurrentBIFIndex": "0x803263e4",
+    "g_pBuiltInFunctions": "0x8032638c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "__10SoundEntry": "0x8015b098",
+    "g_SoundMan": "0x80330c60",
+    "_vt.14SoundEntryBank": "0x802ea998",
+    "GetSound__9cSoundManR14SoundEntryBankUi": "0x8015d618",
+    "_._10SoundEntry": "0x8015b1cc",
+    "g_pBSObject": "0x8031d100",
+    "PlaySoundFromTriggerOrObject2__FP13TriggerObjectP8BSObjectPvUiiR8CVector3b": "0x801072f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "bsbifunc.cpp",
+  "original_file_index": 1146
+}

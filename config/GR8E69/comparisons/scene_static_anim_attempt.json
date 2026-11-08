@@ -1,0 +1,42 @@
+{
+  "id": "compare_scene_static_anim_attempt",
+  "source": "src/scene/StaticObjectAnimAttemptPartial.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "scene_StaticObjectHead.json",
+  "evidence": "docs/SceneObjects.md#maintained-partial-scene-helpers",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a7344",
+      "size": 548
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ebd0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "AttemptAnimMotionUpdate__13CStaticObjectf",
+      "address": "0x800a7344",
+      "size": 548,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "AttemptAnimMotionUpdate__13CStaticObjectf"
+  ],
+  "context_units": [],
+  "externals": {
+    "Slerp__11CQuaternionT0T0f": "0x8007d0ec",
+    "GetMatrix__C11CQuaternionR7CMatrix": "0x8007cd64",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}

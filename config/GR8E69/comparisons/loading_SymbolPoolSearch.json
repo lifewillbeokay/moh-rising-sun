@@ -1,0 +1,32 @@
+{
+  "id": "compare_loading_SymbolPoolSearch",
+  "source": "src/eagl_loading/SymbolPoolSearch.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_loading_dynamic_loader_symbol.json",
+  "evidence": "docs/Loading.md#maintained-partial-loading-functions",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801eb418",
+      "size": 280
+    }
+  ],
+  "functions": [
+    {
+      "name": "Search__Q24EAGL10SymbolPoolPCcRb",
+      "address": "0x801eb418",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "Search__Q24EAGL10SymbolPoolPCcRb"
+  ],
+  "context_units": [],
+  "externals": {
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

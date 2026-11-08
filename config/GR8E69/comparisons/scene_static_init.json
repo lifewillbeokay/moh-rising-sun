@@ -1,0 +1,39 @@
+{
+  "id": "compare_scene_static_init",
+  "source": "src/scene/StaticObjectInitPartial.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "scene_StaticObjectHead.json",
+  "evidence": "docs/SceneObjects.md#maintained-partial-scene-helpers",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a6348",
+      "size": 144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029eb88",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__13CStaticObject",
+      "address": "0x800a6348",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "Init__13CStaticObject"
+  ],
+  "context_units": [],
+  "externals": {
+    "SetFromMatrix__11CQuaternionRC7CMatrix": "0x8007ce2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "static_obj.cpp",
+  "original_file_index": 833
+}
