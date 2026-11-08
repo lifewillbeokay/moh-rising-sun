@@ -68,6 +68,40 @@ class FnDeltaQFast : public FnAnimMemoryMap {
         return true;
     }
 
+#if defined(DECOMP_COMPARE)
+    void AddDelta(DeltaQFastPhysical *floorPhys, DeltaQFast *deltaQ, int prevDeltaIdx,
+                  int floorDeltaIdx, COORD4 *prevQs) {
+        DeltaQFastDelta *d = reinterpret_cast<DeltaQFastDelta *>(floorPhys + deltaQ->mNumBones) +
+                             prevDeltaIdx * deltaQ->mNumBones;
+        COORD4 delta;
+        for (int iframe = prevDeltaIdx; iframe < floorDeltaIdx; iframe++) {
+            for (int ibone = 0; ibone < deltaQ->mNumBones; ibone++) {
+                d->UnQuantize(mMinRangesf[ibone], delta);
+                prevQs[ibone].x += delta.x;
+                prevQs[ibone].y += delta.y;
+                prevQs[ibone].z += delta.z;
+                prevQs[ibone].w += delta.w;
+                d++;
+            }
+        }
+    }
+    void SubDelta(DeltaQFastPhysical *floorPhys, DeltaQFast *deltaQ, int prevDeltaIdx,
+                  int floorDeltaIdx, COORD4 *prevQs) {
+        DeltaQFastDelta *d = reinterpret_cast<DeltaQFastDelta *>(floorPhys + deltaQ->mNumBones) +
+                             (prevDeltaIdx * deltaQ->mNumBones - 1);
+        COORD4 delta;
+        for (int iframe = prevDeltaIdx - 1; iframe >= floorDeltaIdx; iframe--) {
+            for (int ibone = deltaQ->mNumBones - 1; ibone >= 0; ibone--) {
+                d->UnQuantize(mMinRangesf[ibone], delta);
+                prevQs[ibone].x -= delta.x;
+                prevQs[ibone].y -= delta.y;
+                prevQs[ibone].z -= delta.z;
+                prevQs[ibone].w -= delta.w;
+                d--;
+            }
+        }
+    }
+#endif
     void UpdateNextQs(DeltaQFast *, int, int, int);
     bool EvalSQTMask(float, float *, const BoneMask *);
     void AddDeltaMask(DeltaQFastPhysical *, DeltaQFast *, int, int, COORD4 *, const BoneMask *);

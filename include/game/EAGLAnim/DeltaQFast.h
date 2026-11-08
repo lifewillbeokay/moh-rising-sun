@@ -5,6 +5,14 @@
 #include "AnimCore.h"
 #include "EAGLTransform.h"
 namespace EAGLAnim {
+#if defined(DECOMP_COMPARE)
+static inline void LerpQ(const COORD4 &a, const COORD4 &b, float scale, COORD4 &q) {
+    q.x = a.x + scale * (b.x - a.x);
+    q.y = a.y + scale * (b.y - a.y);
+    q.z = a.z + scale * (b.z - a.z);
+    q.w = a.w + scale * (b.w - a.w);
+}
+#endif
 struct DeltaQFastMinRangef {
     COORD4 mMin;
     COORD4 mRange;

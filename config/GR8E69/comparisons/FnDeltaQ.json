@@ -1,0 +1,113 @@
+{
+  "id": "compare_FnDeltaQ",
+  "source": "src/eagl_anim/FnDeltaQ.cpp",
+  "category": "reconstructed_game",
+  "profile_from": "eagl_anim_delta_q_control.json",
+  "evidence": "docs/Animation.md#maintained-partial-evaluators",
+  "strip_unused": true,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801f3854",
+      "size": 11152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bed20",
+      "size": 88
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q28EAGLAnim8FnDeltaQ",
+      "address": "0x802ecab8",
+      "size": 192,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "EvalSQT__Q28EAGLAnim8FnDeltaQfPfPCQ28EAGLAnim8BoneMask",
+      "address": "0x801f3854",
+      "size": 5040,
+      "binding": 1
+    },
+    {
+      "name": "EvalSQTMasked__Q28EAGLAnim8FnDeltaQfPCQ28EAGLAnim8BoneMaskPf",
+      "address": "0x801f4c04",
+      "size": 5476,
+      "binding": 1
+    },
+    {
+      "name": "__Q28EAGLAnim8FnDeltaQ",
+      "address": "0x801f6168",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "_._Q28EAGLAnim8FnDeltaQ",
+      "address": "0x801f61d4",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimMemoryMap__Q28EAGLAnim8FnDeltaQPQ28EAGLAnim13AnimMemoryMap",
+      "address": "0x801f6268",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetLength__CQ28EAGLAnim8FnDeltaQRf",
+      "address": "0x801f6270",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q28EAGLAnim8FnDeltaQffPf",
+      "address": "0x801f62d4",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetAnimatedBonesAux__Q28EAGLAnim8FnDeltaQPQ28EAGLAnim8BoneMaskRiN22",
+      "address": "0x801f6314",
+      "size": 208,
+      "binding": 1
+    }
+  ],
+  "comparison_functions": [
+    "EvalSQT__Q28EAGLAnim8FnDeltaQfPfPCQ28EAGLAnim8BoneMask",
+    "EvalSQTMasked__Q28EAGLAnim8FnDeltaQfPCQ28EAGLAnim8BoneMaskPf"
+  ],
+  "externals": {
+    "GetConstBoneIdx__Q28EAGLAnim6DeltaQ": "0x80293278",
+    "GetConstPhysical__Q28EAGLAnim6DeltaQ": "0x802932e8",
+    "_Q28EAGLAnim17MemoryPoolManager.gMemoryManager": "0x802d2e5c",
+    "_Q28EAGLAnim6FnAnim.gReverseDeltaSumEnabled": "0x802d330c",
+    "sqrtf": "0x80270538",
+    "GetTargetCheckSum__CQ28EAGLAnim15FnAnimMemoryMap": "0x801ee22c",
+    "UseFPS__Q28EAGLAnim6FnAnimb": "0x801ee148",
+    "FindMatchTime__CQ28EAGLAnim6FnAnimRCQ28EAGLAnim15MatchPhaseInputRf": "0x801ee158",
+    "EvalPhase__Q28EAGLAnim6FnAnimfRQ28EAGLAnim10PhaseValue": "0x801ee168",
+    "EvalVel2D__Q28EAGLAnim6FnAnimfPf": "0x801ee170",
+    "EvalEvent__Q28EAGLAnim6FnAnimffPPQ28EAGLAnim12EventHandlerPv": "0x801ee178",
+    "EvalWeights__Q28EAGLAnim6FnAnimfPf": "0x801ee180",
+    "EvalState__Q28EAGLAnim6FnAnimfPQ28EAGLAnim5State": "0x801ee188",
+    "EvalPose__Q28EAGLAnim6FnAnimfPCQ28EAGLAnim15PosePaletteBankPf": "0x801ee190",
+    "FindTime__Q28EAGLAnim6FnAnimRCQ28EAGLAnim9StateTestfRf": "0x801ee198",
+    "GetPhaseChan__Q28EAGLAnim6FnAnim": "0x801ee1a0",
+    "GetAttributes__CQ28EAGLAnim6FnAnim": "0x801ee1b8",
+    "GetAnimatedBones__Q28EAGLAnim6FnAnimPQ28EAGLAnim8BoneMaskRiN22": "0x801ee1a8",
+    "GetAnimMemoryMap__Q28EAGLAnim15FnAnimMemoryMap": "0x801ee21c",
+    "GetAnimMemoryMap__CQ28EAGLAnim15FnAnimMemoryMap": "0x801ee224",
+    "__Q28EAGLAnim15FnAnimMemoryMap": "0x801ee1c0",
+    "_._Q28EAGLAnim15FnAnimMemoryMap": "0x801ee1e0",
+    "_12EAGLInternal.EAGLFree": "0x802d2e0c",
+    "SetBone__Q28EAGLAnim8BoneMaskib": "0x801ede64"
+  },
+  "discarded_functions": [
+    "InitBuffersAsRequired__Q28EAGLAnim8FnDeltaQ"
+  ],
+  "undefined_in_discarded_code": [],
+  "context_units": [
+    "eagl_anim_delta_q_control"
+  ]
+}

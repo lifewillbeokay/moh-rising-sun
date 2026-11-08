@@ -16,6 +16,8 @@ SNAPSHOT = Path("progress/GR8E69.snapshot.json")
 CATEGORIES = {
     "reconstructed_game": "Accepted game fragments",
     "restored_library": "Accepted library fragments",
+    "unlinked_game": "Unlinked game source comparisons",
+    "unlinked_library": "Unlinked library source comparisons",
     "unreconstructed": "Unreconstructed code (symbol map)",
 }
 
@@ -77,23 +79,32 @@ def capture(root):
     # Allow-list public fields. In particular, never copy source_blobs paths.
     accepted = [(int(f["address"], 16), int(f["address"], 16) + f["size"])
                 for unit in units for f in unit["functions"]]
-    return {"schema_version": 2, "verification": "local-complete-image-match",
+    from comparisons import measure
+    comparisons = measure(root)
+    return {"schema_version": 3, "comparisons": comparisons, "verification": "local-complete-image-match",
             "target": report["target"], "original_elf_sha256": report["original_elf_sha256"],
             "dol_sha1": report["dol_sha1"], "runtime_tested": False,
             "progress": report["progress"], "input_sha256": report["input_sha256"],
             "units": report["units"], "code_map": build_code_map(original, accepted)}
 
 
-def measures(total, matched):
-    percent = 100 * matched / total if total else 0
+def measures(total, matched, complete=None, fuzzy_bytes=None):
+    if complete is None:
+        complete = matched
+    if fuzzy_bytes is None:
+        fuzzy_bytes = matched
+    if not 0 <= complete <= matched <= total or not matched <= fuzzy_bytes <= total:
+        raise ValueError("Invalid progress measures")
     return {"total_code": str(total), "matched_code": str(matched),
-            "complete_code": str(matched), "matched_code_percent": percent,
-            "complete_code_percent": percent, "fuzzy_match_percent": percent}
+            "complete_code": str(complete),
+            "matched_code_percent": 100 * matched / total if total else 0,
+            "complete_code_percent": 100 * complete / total if total else 0,
+            "fuzzy_match_percent": 100 * fuzzy_bytes / total if total else 0}
 
 
 def export(snapshot, root):
     require_fresh(snapshot, root)
-    if snapshot["schema_version"] != 2 or snapshot["verification"] != "local-complete-image-match":
+    if snapshot["schema_version"] != 3 or snapshot["verification"] != "local-complete-image-match":
         raise ValueError("Unsupported verification snapshot")
     config = root / "config/GR8E69"
     project = read(config / "project.json")
@@ -140,30 +151,69 @@ def export(snapshot, root):
             p["matching_functions"] != function_count or
             p["categories"] != {k: totals[k] for k in ("reconstructed_game", "restored_library")}):
         raise ValueError("Snapshot totals differ from source coverage")
-    totals["unreconstructed"] = total - matched
     baseline = read(config / "baseline.json")
     sections = sorted([{"name": name, "address": baseline["sections"][name], "size": size}
                        for name, size in project["progress"]["executable_sections"].items()],
                       key=lambda s: int(s["address"], 16))
     code_map = snapshot["code_map"]
     validate_code_map(code_map, intervals, sections)
+    from comparisons import validate_receipt
+    comparisons = validate_receipt(snapshot["comparisons"], root, manifests, snapshot["original_elf_sha256"])
+    by_range = {(f["name"], f["address"], f["size"]): f for f in comparisons}
+    found = set()
+    extra_exact, extra_fuzzy = 0, 0.0
+    category_measures = {k: measures(totals[k], totals[k]) for k in ("reconstructed_game", "restored_library")}
+    for category, source_category in (("unlinked_game", "reconstructed_game"), ("unlinked_library", "restored_library")):
+        selected = [f for f in comparisons if f["category"] == source_category]
+        size = sum(f["size"] for f in selected)
+        exact = sum(f["size"] for f in selected if f["status"] == "exact_unlinked")
+        fuzzy = sum(f["size"] * f["fuzzy_match_percent"] / 100 for f in selected)
+        totals[category] = size
+        category_measures[category] = measures(size, exact, 0, fuzzy)
+        extra_exact += exact
+        extra_fuzzy += fuzzy
+        for name in dict.fromkeys(f["unit"] for f in selected):
+            fs = [f for f in selected if f["unit"] == name]
+            units.append({"name": name,
+                          "measures": measures(sum(f["size"] for f in fs),
+                                               sum(f["size"] for f in fs if f["status"] == "exact_unlinked"), 0,
+                                               sum(f["size"]*f["fuzzy_match_percent"]/100 for f in fs)),
+                          "functions": [{"name": f["name"], "size": str(f["size"]),
+                                         "fuzzy_match_percent": f["fuzzy_match_percent"],
+                                         "metadata": {"virtual_address": str(int(f["address"],16))}} for f in fs],
+                          "metadata": {"complete": False, "source_path": fs[0]["source"],
+                                       "progress_categories": [category]}})
+    totals["unreconstructed"] = total - matched - sum(f["size"] for f in comparisons)
+    category_measures["unreconstructed"] = measures(totals["unreconstructed"], 0)
     for mapped in code_map["units"]:
         functions, mapped_sections = [], []
+        remaining = []
         for item in mapped["ranges"]:
+            key = (item["name"], item["address"], item["size"])
+            if key in by_range and item["kind"] == "function":
+                if key in found:
+                    raise ValueError("Duplicate comparison map range")
+                found.add(key)
+                continue
+            remaining.append(item)
             record = {"name": item["name"], "size": str(item["size"]), "fuzzy_match_percent": 0,
                       "metadata": {"virtual_address": str(bounds(item)[0])}}
             (mapped_sections if item["kind"] == "unidentified" else functions).append(record)
+        if not remaining:
+            continue
         units.append({"name": mapped["name"],
-                      "measures": measures(sum(r["size"] for r in mapped["ranges"]), 0),
+                      "measures": measures(sum(r["size"] for r in remaining), 0),
                       "functions": functions, "sections": mapped_sections,
                       "metadata": {"complete": False, "auto_generated": True,
                                    "progress_categories": ["unreconstructed"]}})
+    if found != set(by_range):
+        raise ValueError("Comparison function is not a complete mapped target range")
     if len({u["name"] for u in units}) != len(units):
         raise ValueError("Duplicate accepted/mapped unit name")
     # Unknown function/unit/data denominators are intentionally not fabricated.
-    return {"version": 2, "measures": measures(total, matched), "units": units,
+    return {"version": 2, "measures": measures(total, matched + extra_exact, matched, matched + extra_fuzzy), "units": units,
             "categories": [{"id": key, "name": name,
-                            "measures": measures(totals[key], 0 if key == "unreconstructed" else totals[key])}
+                            "measures": category_measures[key]}
                            for key, name in CATEGORIES.items()]}
 
 
@@ -181,7 +231,9 @@ def main():
         report = export(read(ROOT / SNAPSHOT), ROOT)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(report, indent=2) + "\n")
-    print(f"Verified snapshot: {report['measures']['matched_code']} / {report['measures']['total_code']} code bytes")
+    m = report["measures"]
+    print(f"Verified snapshot: {m['matched_code']} / {m['total_code']} exact code bytes; "
+          f"{m['complete_code']} linked; {m['fuzzy_match_percent']:.6f}% similarity")
 
 
 if __name__ == "__main__":

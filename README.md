@@ -4,9 +4,11 @@ An early matching decompilation of **Medal of Honor: Rising Sun** for GameCube, 
 
 [![Verified progress snapshot](https://github.com/lifewillbeokay/moh-rising-sun/actions/workflows/progress.yml/badge.svg)](https://github.com/lifewillbeokay/moh-rising-sun/actions/workflows/progress.yml)
 
-**See [current matching progress and unfinished functions on decomp.dev](https://decomp.dev/lifewillbeokay/moh-rising-sun).** The project combines reconstructed game-specific C++ with compatible public library reconstructions, including Lua, Dolphin SDK, Newlib, GCC runtime, STLport and network helpers. Accepted source is checked against the original executable as part of a complete rebuilt analysis-image comparison. The remainder stays original binary context. AI-assisted contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
+**See [current matching progress and unfinished functions on decomp.dev](https://decomp.dev/lifewillbeokay/moh-rising-sun).** The project combines reconstructed game-specific C++ with compatible public library reconstructions, including Lua, Dolphin SDK, Newlib, GCC runtime, STLport and network helpers. Accepted source is checked against the original executable as part of a complete rebuilt analysis-image comparison. Unfinished functions may be maintained as measured partial source; their original
+bytes stay in the verified image until exact integration. AI-assisted contributions are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md).
 
-Progress counts verified, nonoverlapping source-built function bytes against all bytes in the original executable sections (`.init` and `.text`). Generated data and BSS are verified separately and earn no code-progress credit; neither do stripped functions, original context or debug metadata. Exact counts and input hashes live in the [verified snapshot](progress/GR8E69.snapshot.json). See [how progress is verified and published](docs/Progress.md) and the [reuse index](docs/ReuseMap.md) for library provenance, evidence and next work.
+Exact progress counts verified, nonoverlapping source-built function bytes against all bytes in the original executable sections (`.init` and `.text`). Generated data and BSS are verified separately and earn no code-progress credit; neither do stripped functions, original context or debug metadata. Objdiff similarity, complete exact functions and linked source coverage are reported
+separately. Exact counts and input hashes live in the [verified snapshot](progress/GR8E69.snapshot.json). See [how progress is verified and published](docs/Progress.md) and the [reuse index](docs/ReuseMap.md) for library provenance, evidence and next work.
 
 ## Verified starting point
 
@@ -71,6 +73,7 @@ python3 tools/setup.py
 python3 tools/audit.py
 python3 tools/baseline.py
 python3 tools/reconstruct.py
+python3 tools/comparisons.py
 python3 -m unittest discover -s tests -v
 ```
 
@@ -124,6 +127,8 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `build/reconstruction/units/` | Per-unit compiler, linker and generated-section output |
 | `build/reconstruction/rebuilt.dol` | Analysis image containing all accepted compiled source |
 | `progress/GR8E69.snapshot.json` | Verification metadata, source hashes and unfinished-code map; no original bytes |
+| `build/comparisons/` | Local native comparison objects, objdiff output and receipts (`python3 tools/comparisons.py`) |
+| `config/GR8E69/comparisons.json` | Registered partial and exact-unlinked source; [workflow](docs/Progress.md#partial-source-workflow) |
 | `build/progress/report.json` | Generated objdiff v2 progress for decomp.dev |
 
 The automatic dtk ELF split export emits warnings for this executable's symbol ordering. Treat it as research output; it is not accepted source ownership. The baseline uses a separate original-object split and retains every compared byte.
@@ -132,7 +137,7 @@ The automatic dtk ELF split export emits warnings for this executable's symbol o
 
 1. Extend the [animation formats](docs/Animation.md) using the shared delta-decoder interfaces and attributed NFS reference, and the [rendering reconstruction](docs/Rendering.md) through its remaining lighting blocks, startup registration and PCode interpreter. The [reuse index](docs/ReuseMap.md) ranks other candidates, including matrix, container, string and allocation helpers. Preserve the documented limits of shared storage views; establish missing types and constant ownership before adding callers that depend on them.
 2. Distinguish the original compiler release using larger functions. Five tested SN/ProDG versions match the accepted fragment, so its byte match alone cannot identify the original release. Nintendo libraries may use different compilers.
-3. Extend the network-library subset by recovering the older target's behavior and storage; the remaining TCP, UDP, PPP and Ethernet reference routines differ. Continue shared game-code reconstruction alongside library restoration. Only compiled source bytes that pass complete-image verification count toward progress.
+3. Extend the network-library subset by recovering the older target's behavior and storage; the remaining TCP, UDP, PPP and Ethernet reference routines differ. Continue shared game-code reconstruction alongside library restoration. Maintain measured partial source while matching proceeds; only exact source ranges that pass complete-image verification earn linked credit.
 4. Inspect Disc 2 and test the game's executable-loading path before claiming complete game coverage or a runnable replacement disc.
 
 See [the initial audit](docs/initial-audit.md) for evidence and limitations.
@@ -147,4 +152,5 @@ notices](docs/Licensing.md).
 
 ## Tooling
 
-Uses [decomp-toolkit](https://github.com/encounter/decomp-toolkit) 1.8.4, [gc-wii-binutils](https://github.com/encounter/gc-wii-binutils) 2.42-2, and [wibo](https://github.com/decompals/wibo) 1.0.3. The project layout follows the separation of originals, source and build output documented by [dtk-template](https://github.com/encounter/dtk-template); its standard CodeWarrior build configuration has not been adopted for the SN-compiled game code.
+Uses [objdiff](https://github.com/encounter/objdiff) 3.8.3 for partial-source similarity,
+[decomp-toolkit](https://github.com/encounter/decomp-toolkit) 1.8.4, [gc-wii-binutils](https://github.com/encounter/gc-wii-binutils) 2.42-2, and [wibo](https://github.com/decompals/wibo) 1.0.3. The project layout follows the separation of originals, source and build output documented by [dtk-template](https://github.com/encounter/dtk-template); its standard CodeWarrior build configuration has not been adopted for the SN-compiled game code.

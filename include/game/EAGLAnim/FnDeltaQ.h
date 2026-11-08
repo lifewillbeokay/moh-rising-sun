@@ -51,6 +51,24 @@ class FnDeltaQ : public FnAnimMemoryMap {
 
   protected:
     virtual bool EvalSQTMasked(float, const BoneMask *, float *);
+#if defined(DECOMP_COMPARE)
+    void InitBuffersAsRequired() {
+        if (!mBins) {
+            DeltaQ *deltaQ = reinterpret_cast<DeltaQ *>(mpAnim);
+            DeltaQMinRange *ranges = deltaQ->GetMinRange();
+            mBins = reinterpret_cast<unsigned char *>(ranges + deltaQ->mNumBones);
+            mConstBoneIdxs = deltaQ->GetConstBoneIdx();
+            mConstPhysical = deltaQ->GetConstPhysical();
+            mBinSize = deltaQ->GetBinSize();
+            if (deltaQ->mNumBones) {
+                void *block = MemoryPoolManager::NewBlock(deltaQ->mNumBones * sizeof(COORD4));
+                mMinRanges = ranges;
+                mPrevQBlock = block;
+                mPrevQs = reinterpret_cast<COORD4 *>(block);
+            }
+        }
+    }
+#endif
     DeltaQMinRange *mMinRanges;
     unsigned char *mBins;
     int mBinSize, mPrevKey;
