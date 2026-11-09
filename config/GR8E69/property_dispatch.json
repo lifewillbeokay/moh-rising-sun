@@ -1,0 +1,53 @@
+{
+  "id": "property_dispatch",
+  "source": "src/bpd/property_dispatch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801209ec",
+      "size": 260
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadPropertyData__FP18xyzProperty_Structi",
+      "address": "0x801209ec",
+      "size": 260,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_LoadPropertyData__FP15MOH_core_Structi": "0x8011eaa0",
+    "_LoadPropertyData__FP19MOH_mechanic_Structi": "0x8011ec44",
+    "_LoadPropertyData__FP16MOH_enemy_Structi": "0x8011ee1c",
+    "_LoadPropertyData__FP18MOH_powerup_Structi": "0x8011f3a4",
+    "_LoadPropertyData__FP19MOH_wayPoint_Structi": "0x8011f554",
+    "_LoadPropertyData__FP20MOH_pathPoint_Structi": "0x8011f7b4",
+    "_LoadPropertyData__FP17MOH_envMod_Structi": "0x8011f958",
+    "_LoadPropertyData__FP25MOH_mechanicEnvMod_Structi": "0x8011fb08",
+    "_LoadPropertyData__FP30MOH_projectileGenerator_Structi": "0x8011fcfc",
+    "_LoadPropertyData__FP36MOH_projectileGeneratorTarget_Structi": "0x8011ff80",
+    "_LoadPropertyData__FP23MOH_cameraShaker_Structi": "0x801201dc",
+    "_LoadPropertyData__FP31MOH_playerPathController_Structi": "0x80120400",
+    "_LoadPropertyData__FP24MOH_animatedLight_Structi": "0x80120608",
+    "_LoadPropertyData__FP20MOH_fogParams_Structi": "0x801207dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

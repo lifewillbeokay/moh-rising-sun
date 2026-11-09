@@ -46,7 +46,8 @@ class Run:
             ]
             for sec in e.sections:
                 if sec["flags"] & 2 and sec["size"]:
-                    self.u.mem_write(sec["address"], e.contents(sec))
+                    data = bytes(sec["size"]) if sec["type"] == 8 else e.contents(sec)
+                    self.u.mem_write(sec["address"], data)
         self.previous_pc = None
         self.trace = []
         self.hooks = {}

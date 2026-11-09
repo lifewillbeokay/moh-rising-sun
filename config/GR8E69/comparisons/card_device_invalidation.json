@@ -1,0 +1,42 @@
+{
+  "id": "compare_card_device_invalidation",
+  "source": "src/save/card_device_invalidation.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a71b4",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "Invalidate__9CMCDeviceb",
+      "address": "0x801a71b4",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "Cache__9CMCDeviceb",
+      "address": "0x801a71cc",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_hMemoryCard": "0x802f9884",
+    "Cache__11CMemoryCardPQ211CMemoryCard6Device": "0x801a3d04"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardDeviceGC.cpp",
+  "original_file_index": 2141,
+  "profile_from": "mc_a.json",
+  "evidence": "docs/research/broad-source-sweep.md",
+  "comparison_functions": [
+    "Invalidate__9CMCDeviceb",
+    "Cache__9CMCDeviceb"
+  ],
+  "context_units": []
+}

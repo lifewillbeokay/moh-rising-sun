@@ -1,0 +1,45 @@
+{
+  "id": "animshape_step",
+  "source": "src/animshape/step.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006ad0c",
+      "size": 40
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a5b0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "StepToNextFrame__9AnimShape",
+      "address": "0x8006ad0c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AdvanceFrames__9AnimShapef": "0x8006a90c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

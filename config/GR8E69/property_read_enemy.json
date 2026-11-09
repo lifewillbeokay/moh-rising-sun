@@ -1,0 +1,43 @@
+{
+  "id": "property_read_enemy",
+  "source": "src/bpd/property_read_enemy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011ee1c",
+      "size": 1416
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6460",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "_LoadPropertyData__FP16MOH_enemy_Structi",
+      "address": "0x8011ee1c",
+      "size": 1416,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

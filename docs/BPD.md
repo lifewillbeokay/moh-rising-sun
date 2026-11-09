@@ -185,3 +185,10 @@ themselves establish a complete portable file parser or level loader.
 useful next targets. [LightVolumes.md](LightVolumes.md)
 covers the lighting consumers and the remaining playback/blending work. The
 original compiler release remains unconfirmed.
+
+## Property-reader reuse
+
+The [broader source sweep](research/broad-source-sweep.md#frontline-reuse-and-property-readers)
+adapts thirteen Frontline property readers and reconstructs Rising Sun’s dispatcher.
+It records the target’s flag ordering, dispatch-ID differences, signed-halfword
+conversion behavior and the deferred fog constant-pool boundary.

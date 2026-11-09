@@ -1,0 +1,58 @@
+{
+  "id": "card_device_update",
+  "source": "src/save/card_device_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a6e68",
+      "size": 424
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChangeOfState__Q211CMemoryCard6Device",
+      "address": "0x801a6e68",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Update__Q211CMemoryCard6Deviceb",
+      "address": "0x801a6e7c",
+      "size": 404,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "gs_bChangeOfState": "0x802c7da0",
+    "g_hMemoryCard": "0x802f9884",
+    "IsBusy__C11CMemoryCard": "0x801a3230",
+    "gs_statusNow": "0x803f5354",
+    "gs_statusBefore": "0x803f534c",
+    "CARDProbeEx": "0x8023410c",
+    "gs_cards": "0x803f520c",
+    "Cache__9CMCDeviceb": "0x801a71cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardDeviceGC.cpp",
+  "original_file_index": 2141,
+  "local_externals": [
+    "gs_bChangeOfState",
+    "gs_statusNow",
+    "gs_statusBefore"
+  ]
+}

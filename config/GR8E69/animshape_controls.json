@@ -1,0 +1,53 @@
+{
+  "id": "animshape_controls",
+  "source": "src/animshape/controls.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006a3f0",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetStateByCRC__9AnimShapeiQ29AnimShape6EState",
+      "address": "0x8006a3f0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetFrameByCRC__9AnimShapeif",
+      "address": "0x8006a428",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "SetFrameRateByCRC__9AnimShapeif",
+      "address": "0x8006a464",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindFromCRC__9AnimShapei": "0x8006a25c",
+    "SetFrame__9AnimShapef": "0x8006ac58"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

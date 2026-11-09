@@ -1,0 +1,90 @@
+{
+  "id": "card_device_queries",
+  "source": "src/save/card_device_queries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a71fc",
+      "size": 320
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6f5c",
+      "size": 4
+    },
+    {
+      "name": ".bss",
+      "address": "0x803f518c",
+      "size": 128,
+      "type": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsAvailable__C9CMCDevice",
+      "address": "0x801a71fc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "WasJustInserted__C9CMCDevice",
+      "address": "0x801a7204",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "WasJustRemoved__C9CMCDevice",
+      "address": "0x801a7218",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetCount__9CMCDevice",
+      "address": "0x801a722c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetDevice__9CMCDeviceUi",
+      "address": "0x801a7234",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetStatusText__C9CMCDevice",
+      "address": "0x801a7248",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "IsSelectable__C9CMCDevice",
+      "address": "0x801a7334",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "gs_cards": "0x803f520c",
+    "sprintf": "0x80263a3c",
+    "g_pPopUpMessageHandler": "0x80326390",
+    "GetString__17CUserMessageTablei": "0x8017bc10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardDeviceGC.cpp",
+  "original_file_index": 2141
+}

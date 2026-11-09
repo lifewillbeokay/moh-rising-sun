@@ -1,0 +1,34 @@
+{
+  "id": "compare_animshape_rebind",
+  "source": "src/animshape/rebind.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006ad34",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "RebindTARs__9AnimShape",
+      "address": "0x8006ad34",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SwapShape__Q24EAGL3TARPC5SHAPE": "0x801e0dfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485,
+  "profile_from": "eagl_state_property_cull.json",
+  "evidence": "docs/research/broad-source-sweep.md",
+  "comparison_functions": [
+    "RebindTARs__9AnimShape"
+  ],
+  "context_units": []
+}

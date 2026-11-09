@@ -43,6 +43,7 @@ public:
     void *GetScratchpad() const;
     unsigned int GetScratchpadSize() const;
     static void Free(void *);
+    void Cache(Device *);
     int GetDeviceCount() const;
     const Device *GetDevice(unsigned int) const;
 };

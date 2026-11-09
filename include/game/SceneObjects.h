@@ -785,18 +785,7 @@ class CGlare {
     static IMovingSceneNode *Create(int, bool);
 };
 
-// Static animated-texture operations keyed by texture CRC.
-class AnimShape {
-  public:
-    // Original nested enum tag; the observed values are ASCII state letters.
-    enum EState { StateDefault = '-', StateL = 'L', Statel = 'l', StateO = 'O', Stateo = 'o', StateP = 'P', Statep = 'p' };
-    static void SetStateByCRC(int, EState);
-    static void InitByCRC(int, EState, float);
-    static void ResetByCRC(int);
-    static void AdvanceByCRC(int);
-    static void SetFrameByCRC(int, float);
-    static void SetFrameRateByCRC(int, float);
-};
+#include "AnimShape.h"
 
 // Static decal operations used by the script built-ins.
 class CDecalManager {

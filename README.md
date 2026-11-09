@@ -105,6 +105,8 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `src/particles/`, `src/flexprop/`, `src/string_crc.cpp` | Reconstructed [particle recipes, state, pool and clock helpers](docs/ParticleRecipes.md), [FlexProp loading, lookup and string CRC](docs/FlexProp.md) |
 | `src/scene/`, `include/game/SceneNode.h` | Recovered [scene-node virtual-slot order and base-class defaults](docs/SceneNode.md) |
 | `src/script/` | Reconstructed [all opcode handlers, timers, message registrations, spatial access, projectile aiming, fog and camera controls, music, ambience, objective and value built-ins, and AI behavior, player, event and stub built-ins](docs/Script.md), guided by contributed PS2 research, the Frontline GameCube reconstruction and independent GameCube analysis |
+| `src/animshape/`, `include/game/AnimShape.h` | Reconstructed [animated-texture lookup, controls and list helpers, plus maintained frame-advance and TAR-binding partials](docs/research/broad-source-sweep.md#animated-textures) |
+| `src/save/`, `include/game/MemoryCardDevice.h` | Reconstructed [memory-card device polling, status and query helpers](docs/research/broad-source-sweep.md#memory-card-devices) |
 | `src/bpd/`, `src/endian/` | Reconstructed [BPD/property conversion, pointer setup, cleanup and lighting-volume point test](docs/BPD.md) |
 | `src/ai/`, `src/bpd/load_properties.cpp`, `src/bpd/load_bsp.cpp` | Reconstructed [property loaders, spline walking, locomotion and AI clock](docs/Paths.md), with scoped record and allocation evidence |
 | `src/ai/target*.cpp`, `include/game/AITargeting.h` | Reconstructed [AI target values, script-target updates, spatial queries, aim-mode choices and blind fire](docs/Targeting.md) |

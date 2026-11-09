@@ -32,6 +32,7 @@ reference's material.
 | Network and Ethernet reconstructions and headers | [Network notice](../src/dolphin/NETWORK_NOTICE) and [provenance](Network.md); the BFBB-derived subset retains [LICENSE.bfbb](../src/dolphin/LICENSE.bfbb). The pinned Cuyler36 references have no repository-wide license grant |
 | EAGL animation adaptations | [NFS Most Wanted attribution](../src/eagl_anim/NOTICE), [upstream CC0 license](../src/eagl_anim/LICENSE.nfsmw) and [target evidence](Animation.md) |
 | EAGL loader adaptations | [NFS Most Wanted attribution](../src/eagl_loading/NOTICE), [upstream CC0 license](../src/eagl_loading/LICENSE.nfsmw) and [target evidence](Loading.md) |
+| Frontline property-reader adaptations | Upstream CC0 1.0, the matching [project license](../LICENSE), and [pinned source attribution and target changes](research/broad-source-sweep.md#frontline-reuse-and-property-readers) |
 | RSA MD5 implementation | The copyright and permission notice in [md5.c](../src/dolphin/eth/md5.c) |
 
 Per-file notices and the provenance manifests under `config/GR8E69/` identify the

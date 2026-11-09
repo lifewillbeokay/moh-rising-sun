@@ -1,0 +1,43 @@
+{
+  "id": "property_read_core",
+  "source": "src/bpd/property_read_core.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8011eaa0",
+      "size": 420
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a6440",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "_LoadPropertyData__FP15MOH_core_Structi",
+      "address": "0x8011eaa0",
+      "size": 420,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "propdat.cpp",
+  "original_file_index": 1204
+}

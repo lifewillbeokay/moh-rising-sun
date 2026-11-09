@@ -1,0 +1,40 @@
+{
+  "id": "compare_animshape_advance",
+  "source": "src/animshape/advance.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006a90c",
+      "size": 844
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a580",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "AdvanceFrames__9AnimShapef",
+      "address": "0x8006a90c",
+      "size": 844,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunClamp__H1Zf_X01X01X01_X01": "0x8027aa30",
+    "Decompress__9AnimShapei": "0x8006a10c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485,
+  "profile_from": "animshape_controls.json",
+  "evidence": "docs/research/broad-source-sweep.md",
+  "comparison_functions": [
+    "AdvanceFrames__9AnimShapef"
+  ],
+  "context_units": []
+}

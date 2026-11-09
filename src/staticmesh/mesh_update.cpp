@@ -3,14 +3,7 @@
 #include "StaticMesh.h"
 
 unsigned int GetFrameCount();
-class AnimShape {
-public:
-    void RebindTARs();
-    void Update(float);
-    unsigned char unknown00[12];
-    unsigned int updateFrame; // +0x0c
-    unsigned char unknown10[60 - 16];
-};
+#include "AnimShape.h"
 struct AnimShapeList {
     AnimShape *begin;
     AnimShape *end;

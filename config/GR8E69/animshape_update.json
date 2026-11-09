@@ -1,0 +1,45 @@
+{
+  "id": "animshape_update",
+  "source": "src/animshape/update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006a8d8",
+      "size": 52
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a57c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__9AnimShapef",
+      "address": "0x8006a8d8",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AdvanceFrames__9AnimShapef": "0x8006a90c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

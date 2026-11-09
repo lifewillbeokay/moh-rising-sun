@@ -22,6 +22,9 @@
     "comparisons/script_soldier_obj_info.json",
     "comparisons/script_set_expression.json",
     "comparisons/script_alias_looping.json",
-    "comparisons/script_vibration.json"
+    "comparisons/script_vibration.json",
+    "comparisons/animshape_advance.json",
+    "comparisons/animshape_rebind.json",
+    "comparisons/card_device_invalidation.json"
   ]
 }

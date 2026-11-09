@@ -66,8 +66,11 @@ struct xyzProperty_Struct {
 struct MOH_core_Struct {
     unsigned char unknown00[0x2c];
     short field2c, field2e, field30, field32;
-    unsigned char unknown34[2];
-    short field36, field38, field3a, field3c;
+    union {
+        struct { unsigned int flag18 : 1, flag20 : 1, unknownFlags : 30; };
+        struct { unsigned char unknown34, field35; short field36; };
+    };
+    short field38, field3a, field3c;
     unsigned char unknown3e[2];
     char *field40;
     unsigned long *field44;
@@ -80,23 +83,24 @@ struct MOH_core_Struct {
 };
 struct MOH_mechanic_Struct {
     MOH_core_Struct core;
-    unsigned char unknown70[4];
+    unsigned char field70, field71, unknown72[2];
     int field74;
 };
 struct MOH_enemy_Struct {
     MOH_core_Struct core;
-    unsigned char unknown70[14];
+    unsigned char field70, field71, field72, field73, field74, field75, field76;
+    unsigned char field77, field78, field79, field7a, field7b, field7c, unknown7d;
     short field7e, field80, field82, field84, field86, field88, field8a, field8c, field8e;
     int field90, field94, field98, field9c, fielda0, fielda4, fielda8, fieldac;
 };
 struct MOH_mechanicEnvMod_Struct {
     MOH_core_Struct core;
-    unsigned char unknown70[4];
+    unsigned char field70, field71, unknown72[2];
     int field74, field78;
 };
 struct MOH_animatedLight_Struct {
     MOH_core_Struct core;
-    unsigned char unknown70[2];
+    unsigned char field70, unknown71;
     short field72;
     unsigned long *colours;
     float *times;

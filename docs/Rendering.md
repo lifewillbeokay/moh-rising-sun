@@ -443,3 +443,9 @@ The device manager holds four 2284-byte `CGcDevice` records, each with a signed 
 (-1 for none), input state at `+2` and an event table at `+0x60`. The count is at `+0x23b0`.
 `SetPort`, `GetDeviceState`, the constructor, `Update`, `IsActive` and `GetCurrentState` remain
 original; the last four reach file-local port state tables in a file with no recorded name.
+
+## Animated-texture controls
+
+The [animated-texture sweep](research/broad-source-sweep.md#animated-textures)
+reconstructs `AnimShape` lookup, CRC controls, list operations and frame-selection
+helpers. Frame advancement and TAR rebinding remain measured partial source.

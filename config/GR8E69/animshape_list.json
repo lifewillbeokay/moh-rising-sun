@@ -1,0 +1,54 @@
+{
+  "id": "animshape_list",
+  "source": "src/animshape/list.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006a4dc",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "AdvanceByCRC__9AnimShapei",
+      "address": "0x8006a4dc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "AddToGlobalList__9AnimShape",
+      "address": "0x8006a508",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "RemoveFromGlobalList__9AnimShape",
+      "address": "0x8006a51c",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindFromCRC__9AnimShapei": "0x8006a25c",
+    "StepToNextFrame__9AnimShape": "0x8006ad0c",
+    "_9AnimShape.ms_pShapes": "0x80452584"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

@@ -77,3 +77,7 @@ files and bulk research dumps in ignored local directories; see the
 The [PR #59 integration review](pr59-review.md) records the file-wide compiler
 profiles, three partial-to-exact replacements, source-review boundaries and
 remaining tooling leads from the larger Frontline-guided contribution.
+
+The [broader property/card/animated-texture sweep](broad-source-sweep.md) adapts
+the Frontline property readers and records exact, partial and data-blocked work
+from one accumulated source batch.

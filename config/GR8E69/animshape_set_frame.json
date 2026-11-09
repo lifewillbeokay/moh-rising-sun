@@ -1,0 +1,45 @@
+{
+  "id": "animshape_set_frame",
+  "source": "src/animshape/set_frame.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006ac58",
+      "size": 180
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a598",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetFrame__9AnimShapef",
+      "address": "0x8006ac58",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Decompress__9AnimShapei": "0x8006a10c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}
