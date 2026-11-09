@@ -1,0 +1,37 @@
+{
+  "id": "compare_sphere_visibility",
+  "source": "src/geometry/sphere_visibility.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801377f0",
+      "size": 1284
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7f64",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestVisibility__C10CVolSphereR12CDrawContext",
+      "address": "0x801377f0",
+      "size": 1284,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sphere.cpp",
+  "original_file_index": 1314,
+  "evidence": "docs/research/collision-distance-traversal.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestVisibility__C10CVolSphereR12CDrawContext"
+  ],
+  "context_units": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "compare_box_sphere",
+  "source": "src/geometry/box_sphere.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013abe4",
+      "size": 1636
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8064",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C7CVolBoxRC10CVolSphereR10CCollisionb",
+      "address": "0x8013abe4",
+      "size": 1636,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sqrtf": "0x80270538",
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316,
+  "evidence": "docs/research/collision-distance-traversal.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C7CVolBoxRC10CVolSphereR10CCollisionb"
+  ],
+  "context_units": []
+}

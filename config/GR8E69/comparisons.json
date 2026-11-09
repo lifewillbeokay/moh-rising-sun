@@ -38,6 +38,17 @@
     "comparisons/cdb_triangle_box.json",
     "comparisons/cdb_triangle_capsule.json",
     "comparisons/cdb_triangle_line.json",
-    "comparisons/cdb_triangle_sphere.json"
+    "comparisons/cdb_triangle_sphere.json",
+    "comparisons/cdb_branch_box.json",
+    "comparisons/cdb_branch_sphere.json",
+    "comparisons/cdb_branch_capsule.json",
+    "comparisons/cdb_branch_animatedvolume.json",
+    "comparisons/cdb_object_line.json",
+    "comparisons/triangle_nearest.json",
+    "comparisons/box_capsule.json",
+    "comparisons/line_segment_distance.json",
+    "comparisons/sphere_visibility.json",
+    "comparisons/box_sphere.json",
+    "comparisons/capsule_visibility.json"
   ]
 }

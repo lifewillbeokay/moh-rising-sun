@@ -164,3 +164,9 @@ and capsule tests. The notes record Rising Sun-specific behavior changes,
 source provenance, constant-pool ownership and the known near-zero capsule
 contact differences. Partial functions keep their original bytes in the verified
 image; their similarity is not linked or exact credit.
+
+The [distance and traversal follow-up](research/collision-distance-traversal.md)
+maintains the segment-distance and triangle nearest-point helpers, box/sphere and
+box/capsule queries, sphere/capsule visibility, the four volume branch traversals,
+and the CDB line query. These remain partial, with the box/capsule contact limitation
+explicitly documented; its tests do not claim equivalence at true intersections.

@@ -85,3 +85,8 @@ from one accumulated source batch.
 The [Frontline collision batch](collision-batch.md) adapts box, triangle, sphere,
 line and capsule tests as complete measured bodies, with exact interval helpers
 and explicitly documented numerical limits in the capsule partial.
+
+The [collision distances and database traversal batch](collision-distance-traversal.md)
+adds eleven measured partial functions, with shared distance helpers, box queries,
+projected visibility bounds and collision-tree traversal. It records target
+differences and the unresolved box/capsule intersection contact behavior.

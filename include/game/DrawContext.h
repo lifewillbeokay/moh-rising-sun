@@ -23,7 +23,9 @@ public:
     void *visibleLists[3]; // +0xf0: the scene's vectors filled before a draw
     unsigned char unknown0fc[4];
     unsigned int clipFlags; // +0x100, cleared by CVolBox::TestVisibility
-    unsigned char unknown104[548 - 260];
+    float screenLowX, screenLowY;   // +0x104, projected bounds from volume visibility
+    float screenHighX, screenHighY; // +0x10c
+    unsigned char unknown114[548 - 276];
     void AddCommand(ERenderBins bin, const DrawCommand &command);
     void InitCommands();
     void ExecCommands();

@@ -1,0 +1,37 @@
+{
+  "id": "compare_triangle_nearest",
+  "source": "src/geometry/triangle_nearest.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80077d8c",
+      "size": 1036
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af70",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetNearestPoint__C12CCDBTriangleRC8CVector3PfT2",
+      "address": "0x80077d8c",
+      "size": 1036,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-distance-traversal.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "GetNearestPoint__C12CCDBTriangleRC8CVector3PfT2"
+  ],
+  "context_units": []
+}

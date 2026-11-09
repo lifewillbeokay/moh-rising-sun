@@ -1,0 +1,37 @@
+{
+  "id": "compare_line_segment_distance",
+  "source": "src/geometry/line_segment_distance.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007c668",
+      "size": 1424
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b0ac",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetSquaredDistanceBetweenSegments__C6CLine3RC6CLine3RfT2Pf",
+      "address": "0x8007c668",
+      "size": 1424,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "line.cpp",
+  "original_file_index": 552,
+  "evidence": "docs/research/collision-distance-traversal.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "GetSquaredDistanceBetweenSegments__C6CLine3RC6CLine3RfT2Pf"
+  ],
+  "context_units": []
+}

@@ -95,7 +95,7 @@ Run the scripts from any directory; all outputs remain inside this checkout. `ba
 | `build/baseline/relinked.dol` | Rebuilt analysis image |
 | `build/audit/dependencies.json` | Local direct-branch dependency graph and research ranking (`python3 tools/dependencies.py`) |
 | `src/matrix/`, `include/game/CMatrix.h`, `include/game/CVector3.h` | Reconstructed matrix and [vector](docs/Matrix.md#cvector3-layout) functions and their shared layouts |
-| `src/quaternion/`, `src/geometry/` | Reconstructed [quaternion conversions, line geometry and integer-angle helpers](docs/Geometry.md), with scoped storage evidence and [maintained collision partials](docs/research/collision-batch.md) |
+| `src/quaternion/`, `src/geometry/` | Reconstructed [quaternion conversions, line geometry and integer-angle helpers](docs/Geometry.md), with scoped storage evidence and [maintained collision partials](docs/research/collision-batch.md) and [distance/traversal follow-up](docs/research/collision-distance-traversal.md) |
 | `src/camera/`, `include/game/Camera.h`, `include/game/Frustum.h` | Reconstructed [camera projection, view/clip updates and frustum transforms](docs/Camera.md), guided by contributed runtime research |
 | `src/sys_memory.cpp`, `src/memory/` | Reconstructed [game allocation operators and MemStack lifecycle](docs/Memory.md); original heap routines remain external |
 | `src/stlport/` | Tree, container, sorting and heap functions using an attributed STLport 4.5.3 subset |

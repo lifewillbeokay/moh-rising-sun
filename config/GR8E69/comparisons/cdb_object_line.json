@@ -1,0 +1,43 @@
+{
+  "id": "compare_cdb_object_line",
+  "source": "src/geometry/cdb_object_line.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80073ba0",
+      "size": 2236
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ae60",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBObjectRC6CLine3R10CCollisionb",
+      "address": "0x80073ba0",
+      "size": 2236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__10CCDBVolBoxRC6CDBBox": "0x8007576c",
+    "TestCollision__C10CCDBVolBoxRC6CLine3R10CCollisionb": "0x80075ba0",
+    "_vt.7IVolume": "0x802e1c38",
+    "TestCollisionWithTriGroup__FRC11CDBTriGroupRC6CLine3R10CCollisionb": "0x80072e0c",
+    "DWI_free": "0x801a8894"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbobject.cpp",
+  "original_file_index": 533,
+  "evidence": "docs/research/collision-distance-traversal.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C10CCDBObjectRC6CLine3R10CCollisionb"
+  ],
+  "context_units": []
+}
