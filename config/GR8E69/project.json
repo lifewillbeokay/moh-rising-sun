@@ -2046,7 +2046,10 @@
     "property_read_powerup.json",
     "property_read_projectileGenerator.json",
     "property_read_projectileGeneratorTarget.json",
-    "property_read_wayPoint.json"
+    "property_read_wayPoint.json",
+    "cdb_separate1.json",
+    "cdb_separate2.json",
+    "cdb_separate3.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

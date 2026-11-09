@@ -1,0 +1,37 @@
+{
+  "id": "compare_box_visibility",
+  "source": "src/geometry/box_visibility.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013ca78",
+      "size": 328
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a80a4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestVisibility__C7CVolBoxR12CDrawContext",
+      "address": "0x8013ca78",
+      "size": 328,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "box.cpp",
+  "original_file_index": 1316,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestVisibility__C7CVolBoxR12CDrawContext"
+  ],
+  "context_units": []
+}

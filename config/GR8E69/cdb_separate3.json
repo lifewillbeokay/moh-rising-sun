@@ -1,0 +1,44 @@
+{
+  "id": "cdb_separate3",
+  "source": "src/geometry/cdb_separate3.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800754ec",
+      "size": 160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029aefc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "separate__Fffff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis",
+      "address": "0x800754ec",
+      "size": 160,
+      "binding": 0
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md"
+}

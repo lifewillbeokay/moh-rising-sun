@@ -1,0 +1,47 @@
+{
+  "id": "compare_cdb_box_triangle",
+  "source": "src/geometry/cdb_box_triangle.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80075cd4",
+      "size": 2332
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af3c",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC9CTriangleR10CCollisionb",
+      "address": "0x80075cd4",
+      "size": 2332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "separate__Fffff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis": "0x800754ec",
+    "sqrtf": "0x80270538",
+    "separate__Fff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis": "0x8007560c",
+    "separate__Ffff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis": "0x8007558c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "local_externals": [
+    "separate__Fffff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis",
+    "separate__Fff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis",
+    "separate__Ffff21EBoxTriSeperatingAxisRfR21EBoxTriSeperatingAxis"
+  ],
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C10CCDBVolBoxRC9CTriangleR10CCollisionb"
+  ],
+  "context_units": []
+}

@@ -1,0 +1,42 @@
+{
+  "id": "compare_cdb_triangle_line",
+  "source": "src/geometry/cdb_triangle_line.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800765f0",
+      "size": 1268
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af54",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C12CCDBTriangleRC6CLine3R10CCollisionPC6CDBTrib",
+      "address": "0x800765f0",
+      "size": 1268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsSeeThru__12CSurfaceTypeUsb": "0x8005ce24",
+    "GetLengthSquared__C6CLine3": "0x8027c878",
+    "sqrtf": "0x80270538",
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C12CCDBTriangleRC6CLine3R10CCollisionPC6CDBTrib"
+  ],
+  "context_units": []
+}

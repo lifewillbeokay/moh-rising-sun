@@ -25,6 +25,19 @@
     "comparisons/script_vibration.json",
     "comparisons/animshape_advance.json",
     "comparisons/animshape_rebind.json",
-    "comparisons/card_device_invalidation.json"
+    "comparisons/card_device_invalidation.json",
+    "comparisons/box_box_axis.json",
+    "comparisons/box_box_partial.json",
+    "comparisons/box_plane_partial.json",
+    "comparisons/box_visibility.json",
+    "comparisons/cdb_box_ctor.json",
+    "comparisons/cdb_box_line.json",
+    "comparisons/cdb_box_sphere.json",
+    "comparisons/cdb_box_triangle.json",
+    "comparisons/cdb_boxline_axis.json",
+    "comparisons/cdb_triangle_box.json",
+    "comparisons/cdb_triangle_capsule.json",
+    "comparisons/cdb_triangle_line.json",
+    "comparisons/cdb_triangle_sphere.json"
   ]
 }

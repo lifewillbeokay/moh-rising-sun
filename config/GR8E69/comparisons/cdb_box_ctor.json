@@ -1,0 +1,40 @@
+{
+  "id": "compare_cdb_box_ctor",
+  "source": "src/geometry/cdb_box_ctor.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007576c",
+      "size": 244
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af14",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CCDBVolBoxRC6CDBBox",
+      "address": "0x8007576c",
+      "size": 244,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.7CVolBox": "0x802e95d0",
+    "_vt.10CCDBVolBox": "0x802e2dd0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "__10CCDBVolBoxRC6CDBBox"
+  ],
+  "context_units": []
+}

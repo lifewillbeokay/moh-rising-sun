@@ -81,3 +81,7 @@ remaining tooling leads from the larger Frontline-guided contribution.
 The [broader property/card/animated-texture sweep](broad-source-sweep.md) adapts
 the Frontline property readers and records exact, partial and data-blocked work
 from one accumulated source batch.
+
+The [Frontline collision batch](collision-batch.md) adapts box, triangle, sphere,
+line and capsule tests as complete measured bodies, with exact interval helpers
+and explicitly documented numerical limits in the capsule partial.

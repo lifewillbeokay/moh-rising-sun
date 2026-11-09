@@ -1,0 +1,37 @@
+{
+  "id": "compare_cdb_box_sphere",
+  "source": "src/geometry/cdb_box_sphere.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80075860",
+      "size": 336
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af1c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C10CCDBVolBoxRC10CVolSphereR10CCollisionb",
+      "address": "0x80075860",
+      "size": 336,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C10CCDBVolBoxRC10CVolSphereR10CCollisionb"
+  ],
+  "context_units": []
+}

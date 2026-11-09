@@ -1,0 +1,42 @@
+{
+  "id": "compare_cdb_triangle_capsule",
+  "source": "src/geometry/cdb_triangle_capsule.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007833c",
+      "size": 9612
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af80",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C12CCDBTriangleRC11CVolCapsuleR10CCollisionPC6CDBTrib",
+      "address": "0x8007833c",
+      "size": 9612,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSquaredDistanceBetweenSegments__C6CLine3RC6CLine3RfT2Pf": "0x8007c668",
+    "GetNearestPoint__C12CCDBTriangleRC8CVector3PfT2": "0x80077d8c",
+    "sqrtf": "0x80270538",
+    "AddContact__10CCollisionRC12SClsnContact": "0x80133f5c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "TestCollision__C12CCDBTriangleRC11CVolCapsuleR10CCollisionPC6CDBTrib"
+  ],
+  "context_units": []
+}

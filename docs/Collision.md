@@ -105,12 +105,13 @@ the stored values are not adjusted twice. `Test` pads both volumes' radii by
 compiler's own number is kept. `SClsnContactPool` and its inline
 helpers are project names: no symbol records the pool's type.
 
-## Not reconstructed
+## Remaining exact-matching work
 
 `CCollisionVolume::~CCollisionVolume` inlines the `ISceneNode` destructor, which
 `SceneNode.h` declares out of line, and stays original context until that header decision
 is made. `CVolSphere::Create` waits on its file's header strings, above, and with it any
-whole `sphere.cpp`. The long vector tests that remain are listed by
+whole `sphere.cpp`. Several of the long tests now have [maintained partial source](research/collision-batch.md).
+The long vector tests still outside the verified image are listed by
 `config/GR8E69` by omission: the box's box, sphere, capsule and plane tests and visibility, the sphere's visibility, the capsule's
 visibility, the fiber's extents, `CCDBObject`'s line test and branch
 node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, and the segment distance.
@@ -153,3 +154,13 @@ along the axes before normalizing.
 name (`cdbobject.cpp`), not from the code map, which gives that address range no file.
 `csg_volume` and `animated_volume_tests` carry the file symbols 1336 and 1325 in the same
 way.
+
+## Frontline collision follow-up
+
+The [larger collision batch](research/collision-batch.md) maintains 16 complete
+function bodies: three exact interval helpers and 13 measured partials, including
+box/box, box/plane, box visibility, CDB-box queries and triangle/box, line, sphere
+and capsule tests. The notes record Rising Sun-specific behavior changes,
+source provenance, constant-pool ownership and the known near-zero capsule
+contact differences. Partial functions keep their original bytes in the verified
+image; their similarity is not linked or exact credit.

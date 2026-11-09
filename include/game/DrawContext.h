@@ -21,7 +21,9 @@ public:
     CFog *fog;            // +0xd8
     unsigned char unknown0dc[240 - 220];
     void *visibleLists[3]; // +0xf0: the scene's vectors filled before a draw
-    unsigned char unknown0fc[548 - 252];
+    unsigned char unknown0fc[4];
+    unsigned int clipFlags; // +0x100, cleared by CVolBox::TestVisibility
+    unsigned char unknown104[548 - 260];
     void AddCommand(ERenderBins bin, const DrawCommand &command);
     void InitCommands();
     void ExecCommands();

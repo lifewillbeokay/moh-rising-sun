@@ -1,0 +1,37 @@
+{
+  "id": "compare_cdb_boxline_axis",
+  "source": "src/geometry/cdb_boxline_axis.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80075654",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029af08",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "boxline_testaxis__FRC8CVector3N20fRfT4",
+      "address": "0x80075654",
+      "size": 280,
+      "binding": 0
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cdbgeom.cpp",
+  "original_file_index": 535,
+  "evidence": "docs/research/collision-batch.md",
+  "profile_from": "cdbgeom_box_plane.json",
+  "comparison_functions": [
+    "boxline_testaxis__FRC8CVector3N20fRfT4"
+  ],
+  "context_units": []
+}

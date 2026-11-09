@@ -12,6 +12,7 @@ class CCDBTriangle {
         b.Set(tri.vertex[1]->x, tri.vertex[1]->y, tri.vertex[1]->z);
         c.Set(tri.vertex[2]->x, tri.vertex[2]->y, tri.vertex[2]->z);
     }
+    CVector3 GetNearestPoint(const CVector3 &, float *, float *) const;
     CVector3 a;
     CVector3 b;
     CVector3 c;
