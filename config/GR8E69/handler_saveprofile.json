@@ -1,0 +1,52 @@
+{
+  "id": "handler_saveprofile",
+  "source": "src/frontend/handler_saveprofile.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019aea4",
+      "size": 248
+    }
+  ],
+  "functions": [
+    {
+      "name": "__18HandlerSaveProfile",
+      "address": "0x8019aea4",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "_._18HandlerSaveProfile",
+      "address": "0x8019af18",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RememberProfileDevices__13CGameSettings": "0x8017045c",
+    "RestoreProfileDevices__13CGameSettings": "0x80170490",
+    "_._14PackageHandler": "0x80187050",
+    "_vt.18HandlerSaveProfile": "0x802ebbc0",
+    "g_GameSettings": "0x802f80c8",
+    "g_PauseScreen": "0x802f8040",
+    "g_hMemoryCard": "0x802f9884"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerSaveProfile.cpp",
+  "original_file_index": 1985
+}

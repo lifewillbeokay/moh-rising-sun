@@ -2,7 +2,8 @@
 #define RCMP_H
 
 // RCMP, the movie player. Class and method names come from the original symbols; member names
-// follow what the code does with them. Codec slot names other than the destructor are inferred.
+// follow what the code does with them. Codec slot names other than the destructor are inferred. The original table has
+// pure virtuals in those slots; they are declared plainly here so that a unit does not own the table.
 namespace RCMP {
 
 class DECODER;
@@ -36,8 +37,10 @@ public:
 
 class CODEC {
 public:
-    virtual ~CODEC();
-    virtual void Init(DECODER *);
+    virtual ~CODEC() {}
+    static void *operator new(unsigned int size);
+    static void operator delete(void *p);
+    virtual int Init(DECODER *, CHUNK *);
     virtual FRAME *GetFrame(unsigned int);
     virtual unsigned int GetCurrentFrameNumber();
     virtual float GetFrameRate();
@@ -60,6 +63,7 @@ extern RCMP_SYSTEM rcmp_sys;
 
 inline void CHUNK::operator delete(void *p) { rcmp_sys.release(p); }
 inline CHUNK::~CHUNK() {}
+inline void CODEC::operator delete(void *p) { rcmp_sys.release(p); }
 
 class DECODER {
 public:

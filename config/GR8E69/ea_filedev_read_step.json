@@ -1,0 +1,55 @@
+{
+  "id": "ea_filedev_read_step",
+  "source": "src/ea/filedev_read_step.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020c4b4",
+      "size": 532
+    }
+  ],
+  "functions": [
+    {
+      "name": "QEndOp__Fv",
+      "address": "0x8020c4b4",
+      "size": 52,
+      "binding": 0
+    },
+    {
+      "name": "AyncDVDRead__FP11DVDFileInfo",
+      "address": "0x8020c4e8",
+      "size": 480,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "AyncDVDCallback__FlP11DVDFileInfo": "0x8020c88c",
+    "DCInvalidateRange": "0x802545a8",
+    "DVDReadAsyncPrio": "0x80239944",
+    "MEM_copy": "0x802187b0",
+    "gCurRead": "0x803ff4c0"
+  },
+  "local_externals": [
+    "AyncDVDCallback__FlP11DVDFileInfo"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "filedev.cpp",
+  "original_file_index": 2880
+}

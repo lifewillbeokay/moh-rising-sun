@@ -485,6 +485,16 @@ reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small
 matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
 inline destructor: `delete chunk` tests for null, which it does not for a class without one.
 
+## Scene-node sound emitter
+
+`SceneNodeSoundEmitter` (`GameSoundEmitter.cpp`) follows a scene node through a `WeakPtr<ISceneNode, 8>` at
+`+4`; the member name is inferred. Distance is from the node, or from the emitter's fixed position for
+`PositionSoundEmitter`, to the closest player in multiplayer and to player 0 otherwise; with no node it is the
+largest float. `GetFilterDef` returns the soldier's lip-sync filter. The destructor and the `GetObjRef` and
+`GetType` bodies are class-body functions emitted with the table at the end of the file. The local cast from
+`CPlayerObject` to `ISceneNode` stands in for a base class the shared view does not declare. Not reconstructed:
+`CalculateAzimuth`, which is complete but for the registers of the two literal loads after `atan2f`.
+
 ## Sound busses and event destructors
 
 `cSoundBuss` records are 216 bytes: the free list threads `g_AllBusses` (32 records) through `+0`,
@@ -510,6 +520,11 @@ followed by the slot map and, when the header word at `+0xc` is set, a 132-byte 
 the two sorted row tables. Their extents are inferred from their neighbors: 4096 sound rows at `+0xb0`,
 50 bus rows at `+0x80d4`. Names of members, header fields and `ESoundUberTask` enumerators are inferred
 from use; `UberFileHeader`, `ColumnMap`, `ESoundUberTask` and `BankMan` are symbol-table names.
+
+`BankMan` keeps 33 slots of bank handles, with -12 for an empty slot, and a matching array of
+header copies. `AddSoundBank` always fills slot 31. `GetBankHandle` walks slots 1 to 32 through the
+entry's mask at `+0xac`, skipping all but slots 31 and 32 while an asynchronous load is running, and
+counts each empty slot in the entry's signed byte at `+0xdc`. Member names are inferred.
 
 Observed quirks, kept as they are: `RemoveLevelStreamFile` passes the stream handle word where
 `FILESYS_delbigsync` takes a name, and `VerifyLevelBanks` builds its bank file names and never uses them.

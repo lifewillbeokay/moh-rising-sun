@@ -1,0 +1,64 @@
+{
+  "id": "mc_public_trc_files",
+  "source": "src/memorycard/public_trc_files.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020ed30",
+      "size": 1088
+    }
+  ],
+  "functions": [
+    {
+      "name": "TrcLoadFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
+      "address": "0x8020ed30",
+      "size": 268,
+      "binding": 1
+    },
+    {
+      "name": "TrcSaveFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
+      "address": "0x8020ee3c",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "TrcListFiles__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
+      "address": "0x8020ef50",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "TrcDeleteFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
+      "address": "0x8020f064",
+      "size": 268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mTaskTrcDeleteFile": "0x80409d68",
+    "_Q26Realmc11GCInterface.mTaskTrcListFiles": "0x80409dd0",
+    "_Q26Realmc11GCInterface.mTaskTrcLoadFile": "0x80409d04",
+    "_Q26Realmc11GCInterface.mTaskTrcSaveFile": "0x80409c84"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "public.cpp",
+  "original_file_index": 2923
+}

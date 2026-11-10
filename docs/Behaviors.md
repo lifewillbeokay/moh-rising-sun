@@ -89,14 +89,21 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   stop, trim and step functions, and the on-network test in `Update`. Its member names are
   inferred from these uses; `CAIPhysics` is at `+0x1c` and the solution list at `+0x88`.
 
+The mounted machine gun's registries are three file-private maps: guns and feeders by link code, and one `MMGBidInfo`
+(best bid and bidder) per trigger flagged as a gun point. `RegisterGun` and `RegisterFeeder` perform a lookup whose result
+is unused before assigning; that is what the target does.
+
+`WantToStrafe`, `ChaseDecision`, `DirectChase` and `CoverPointChase` share one unit because their literal pool holds a
+double that must sit on an eight-byte boundary.
+
+`WantToRetreat` builds a list of the empty weapon slots and then uses the random index as the slot directly; that is the target's behavior. Member names added for these functions are inferred from their use.
+
 ## Not reconstructed yet
 
 - `CAreaPathNode::LineEndsAtLinkEdge` and `GetNextNode`, `CAreaEdge::GetEdgeVector` and
   `GetMidPoint`: near misses (register allocation; the last two inline `GetEdgePoints`).
 - `BS_Enter_Retreat`, `BS_Enter_Chase` and `BS_Camp`: their strings are shared with neighbors in
   the same pool that are not reconstructed yet.
-- `CBotObject::DirectChase`: drafted, but its literal pool has a double at 4 mod 8 and needs
-  `ChaseDecision` and `CoverPointChase` in the same unit.
 - `CAIAreaPathFinding::PathDistance`: a near miss (a register for the first node).
 - `GetBestPath`: a private function called only by `ComputeAStarPath`, so it waits for that unit.
 - `ShrinkAreaMesh`: an empty body with a 224-byte frame; the locals behind that frame are unknown.
@@ -119,3 +126,16 @@ byte, with their native tables and literal pools. There is no Frontline counterp
   slot address forms in six functions. The threat type values have no recovered names.
 - The inline-virtual methods that the original emits at the end of each file (`GetType`,
   `GetScriptObject`) are written as ordinary out-of-line definitions in that order.
+
+## Tactical scoring and targeting
+
+`CAITactics` is an AI module that scores candidate positions: it rejects a point off the path network, too close to or
+beyond the engagement range of the target, or outside the field of view, and otherwise sums an aggression term, an allies
+term and an angle-from-target term. The term names come from the symbol table; the range and aggression fields of the
+script data are inferred. `FindTacticalPoint` is not reconstructed yet.
+
+`CAITargeting`'s location targets are a global map of `_LocationTargetInfo` records, keyed by id or, for id -1, by the
+script object's address. `GetLocationTarget` returns an uninitialized record with a null object when the id is absent; that
+is the target's behavior. `SetTarget` keeps a count of targeters on each AI object and exposes it to scripts capped at 15.
+`CAIModule` is the base these modules share; only its table pointer and destructor are known, and the modules' destructors
+are declared but not reconstructed yet.

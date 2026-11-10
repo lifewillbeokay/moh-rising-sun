@@ -32,6 +32,6 @@ int TLT_Async_Load() {
     int extra = 2;
     if ((unsigned)(mission - 2) <= 2)
         extra = 1;
-    g_toilet.asyncPercent = (float)(state + g_toilet.asyncStateBase) / (float)(extra + stateCount);
+    g_toilet.asyncPercent = (float)(state + g_toilet.soundBankIndex) / (float)(extra + stateCount);
     return 1;
 }

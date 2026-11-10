@@ -1,0 +1,66 @@
+{
+  "id": "shell_ListBoxRows",
+  "source": "src/shell/ListBoxRows.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80186bb0",
+      "size": 336
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetRowByIndex__7ListBoxl",
+      "address": "0x80186bb0",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GetRowIndexById__7ListBoxl",
+      "address": "0x80186c0c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetNumRows__7ListBox",
+      "address": "0x80186c6c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetNumScreenRows__7ListBox",
+      "address": "0x80186c80",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetRowFieldWidth__7ListBoxUc",
+      "address": "0x80186cc0",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CountRows__7ListBox": "0x80186e20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "dListBox.cpp",
+  "original_file_index": 1601
+}

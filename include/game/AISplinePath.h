@@ -125,7 +125,8 @@ public:
     unsigned char unknown00[4];
     int positionValid;        // +0x04; set with onNetwork by Update.
     int walkActive;           // +0x08
-    unsigned char unknown0c[0x14 - 0x0c];
+    int walkPending;          // +0x0c; name inferred, a new follow path waits for it to clear.
+    unsigned char unknown10[0x14 - 0x10];
     CAreaPathNode *currentNode; // +0x14
     unsigned char unknown18[0x1c - 0x18];
     CAIPhysics *physics;      // +0x1c

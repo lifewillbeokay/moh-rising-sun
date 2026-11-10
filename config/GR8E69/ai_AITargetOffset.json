@@ -1,0 +1,45 @@
+{
+  "id": "ai_AITargetOffset",
+  "source": "src/ai/AITargetOffset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ed888",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a47dc",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdatePostionOffsetMin__12CAITargeting",
+      "address": "0x800ed888",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunRandomRealSigned__Fff": "0x80133ac0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

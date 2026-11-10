@@ -1,0 +1,55 @@
+{
+  "id": "handler_languagemenu",
+  "source": "src/frontend/handler_languagemenu.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80199228",
+      "size": 428
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b50ac",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19HandlerLanguageMenu",
+      "address": "0x80199228",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__19HandlerLanguageMenuUiP8FEObjectUl",
+      "address": "0x80199264",
+      "size": 368,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "SetObjectListIndex__14PackageHandlerPcUi": "0x8018798c",
+    "Set_Language__13CGameSettings10ELanguages": "0x8016d910",
+    "_vt.19HandlerLanguageMenu": "0x802eba38",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerLanguageSelect.cpp",
+  "original_file_index": 1922
+}

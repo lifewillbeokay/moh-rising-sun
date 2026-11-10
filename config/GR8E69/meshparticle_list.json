@@ -1,0 +1,57 @@
+{
+  "id": "meshparticle_list",
+  "source": "src/particles/meshparticle_list.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80064688",
+      "size": 276
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299e1c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocParticle__18MeshParticleSystemRQ24_STLt4list2Z12MeshParticleZQ24_STLt9allocator1Z12MeshParticle",
+      "address": "0x80064688",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseParticle__18MeshParticleSystemRQ24_STLt4list2Z12MeshParticleZQ24_STLt9allocator1Z12MeshParticleRQ24_STLt14_List_iterator2Z12MeshParticleZQ24_STLt16_Nonconst_traits1Z12MeshParticle",
+      "address": "0x80064740",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__12MeshParticleRC12MeshParticle": "0x80279984",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "g_numActiveMeshParticles": "0x802fb1d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

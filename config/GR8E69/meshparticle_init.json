@@ -1,0 +1,50 @@
+{
+  "id": "meshparticle_init",
+  "source": "src/particles/meshparticle_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80064404",
+      "size": 260
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299e00",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__18MeshParticleSystem",
+      "address": "0x80064404",
+      "size": 260,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "g_meshParticleSystemList": "0x802fb1c0",
+    "g_numActiveMeshParticles": "0x802fb1d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

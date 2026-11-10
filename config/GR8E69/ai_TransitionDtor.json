@@ -1,0 +1,50 @@
+{
+  "id": "ai_TransitionDtor",
+  "source": "src/eala/TransitionDtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008f2a0",
+      "size": 328
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q34EALA9Character10Transition",
+      "address": "0x8008f2a0",
+      "size": 328,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__dl__Q34EALA9Character10TransitionPvUi": "0x8008e6f0",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "_vt.Q34EALA9Character10Transition": "0x802e3da8",
+    "_vt.Q34EALA9Character10Transition.8ISubject": "0x802e3d80",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Transition.cpp",
+  "original_file_index": 656
+}

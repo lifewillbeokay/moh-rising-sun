@@ -1,0 +1,65 @@
+{
+  "id": "ai_MMGBids",
+  "source": "src/ai/MMGBids.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e2f38",
+      "size": 552
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetBestBid__FP13TriggerObject",
+      "address": "0x800e2f38",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetBestBidder__FP13TriggerObject",
+      "address": "0x800e2fbc",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "CanClaimMMG__FP13TriggerObjectP9CAIObject",
+      "address": "0x800e3040",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BidOnMMG__FP13TriggerObjectP9CAIObjectf",
+      "address": "0x800e30a8",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CalculateHeuristicForMMG__FP13TriggerObjectP9CAIObject": "0x800e3160",
+    "g_MMGBidInfoMap": "0x8031cf3c"
+  },
+  "local_externals": [
+    "g_MMGBidInfoMap"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

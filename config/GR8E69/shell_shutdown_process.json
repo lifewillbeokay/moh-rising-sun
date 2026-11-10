@@ -1,0 +1,69 @@
+{
+  "id": "shell_shutdown_process",
+  "source": "src/frontend/shell_shutdown_process.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017f688",
+      "size": 604
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__12ShellManager",
+      "address": "0x8017f688",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "Process__12ShellManagerUi",
+      "address": "0x8017f7bc",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DestroyPackageHandler__12ShellFactoryP14PackageHandler": "0x80186038",
+    "DoCoopJoinInfoUpdating__12ShellManager": "0x80181fb8",
+    "DoCoopJoinScreenUpdate__12ShellManager": "0x801822dc",
+    "DoCoopPackageControlMaskUpdating__12ShellManager": "0x80181eb0",
+    "DoMPJoinScreenUpdate__12ShellManager": "0x80182060",
+    "DoPackageControlMaskUpdating__12ShellManager": "0x80181ce4",
+    "GetValue__C13CInputManagerUcUs": "0x800d6f08",
+    "MoveShellCamera__12ShellManager": "0x80181170",
+    "Process__11ShellLoader": "0x80183078",
+    "Process__12ShellFactory": "0x801839c4",
+    "UpdateUnplugged__12ShellManager": "0x8017f8e4",
+    "Update__7FEnginel": "0x8004d4ec",
+    "_._10CUnplugged": "0x8017c5b4",
+    "_._11FELocalizer": "0x8004ab18",
+    "_._11ShellLoader": "0x80182e08",
+    "_._12ShellFactory": "0x80183994",
+    "_._7FEngine": "0x8004ca1c",
+    "_M_erase__Q24_STLt8_Rb_tree5ZP9FEPackageZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerZQ24_STLt4less1ZP9FEPackageZQ24_STLt9allocator1ZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandler": "0x8028c974",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "g_GameFlow": "0x802f9ce0",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

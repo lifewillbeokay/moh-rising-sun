@@ -1,0 +1,62 @@
+{
+  "id": "handler_pausepreferences",
+  "source": "src/frontend/handler_pausepreferences.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801975b4",
+      "size": 656
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b4938",
+      "size": 316
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__23HandlerPausePreferencesUiP8FEObjectUl",
+      "address": "0x801975b4",
+      "size": 656,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "GetSaveData__C13CGameSettingsUiUi": "0x801710f0",
+    "MPRestartLevel__10CPauseMenu": "0x8017e230",
+    "QuitToShell__10CPauseMenub": "0x8017e174",
+    "RestartLevel__10CPauseMenu": "0x8017e1f4",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "UpdateUI__17CPlayerObjectivesP9FEPackage": "0x8017c250",
+    "g_GameSettings": "0x802f80c8",
+    "g_Objectives": "0x803e81a4",
+    "g_PauseScreen": "0x802f8040",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerPausePreferences.cpp",
+  "original_file_index": 1912
+}

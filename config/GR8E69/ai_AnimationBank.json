@@ -1,0 +1,135 @@
+{
+  "id": "ai_AnimationBank",
+  "source": "src/eala/AnimationBank.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007ea58",
+      "size": 1520
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b200",
+      "size": 96
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q34EALA9Character9Animation",
+      "address": "0x802e2ec0",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__Q34EALA9Character9Animation",
+      "address": "0x8007ea58",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "Gameloop_LoadLevel_Fixup_Animation__Fv",
+      "address": "0x8007eb10",
+      "size": 444,
+      "binding": 1
+    },
+    {
+      "name": "Alloc__Q34EALA9Character9AnimationUiPQ28EAGLAnim8AnimBank",
+      "address": "0x8007eccc",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character9AnimationPQ28EAGLAnim8AnimBankUi",
+      "address": "0x8007eda8",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "_._Q34EALA9Character9Animation",
+      "address": "0x8007ee14",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "Encache__Q34EALA9Character9Animation",
+      "address": "0x8007eeac",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Decache__Q34EALA9Character9Animation",
+      "address": "0x8007eee4",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "EncacheAll__Q34EALA9Character9Animation",
+      "address": "0x8007ef40",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "DecacheAll__Q34EALA9Character9Animation",
+      "address": "0x8007ef88",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "GetDuration__Q34EALA9Character9Animation",
+      "address": "0x8007efd0",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Compare__6AnimIDPCvT1": "0x8027c94c",
+    "DWI_alloc": "0x801a8670",
+    "GetNextSymbol__CQ24EAGL13DynamicLoaderPCcRiRQ34EAGL13DynamicLoader6Symbol": "0x801eae88",
+    "LoadFromMemory__Q24EALA10EAGLLoaderPvUiPCc": "0x801abfa0",
+    "NewFnAnim__CQ28EAGLAnim8AnimBanki": "0x801ee114",
+    "Release__Q24EAGL13DynamicLoader": "0x801eacb0",
+    "TLT_GetAnimationBankSize__Fv": "0x801aa6b0",
+    "TLT_GetAnimationBank__Fv": "0x801aa6a4",
+    "_Q24EAGL13DynamicLoader.AnimBankType": "0x802be284",
+    "_Q28EAGLAnim17MemoryPoolManager.gMemoryManager": "0x802d2e5c",
+    "_Q34EALA9Character9Animation.m_pHead": "0x802c2150",
+    "_Q34EALA9Character9Animation.ms_fPlaybackRate": "0x802fbf80",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "bsearch": "0x80264f3c",
+    "g_hLoader": "0x802fbf84",
+    "g_pBank": "0x802c214c",
+    "g_uBankMapSize": "0x802fdf88",
+    "g_vBankMap": "0x802fbf88",
+    "max__H1Zf_X01X01_X01": "0x8027c8e8",
+    "qsort": "0x80265300",
+    "sscanf": "0x80263b1c"
+  },
+  "local_externals": [
+    "g_hLoader",
+    "g_pBank",
+    "g_uBankMapSize",
+    "g_vBankMap"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Animation.cpp",
+  "original_file_index": 560
+}

@@ -1,0 +1,42 @@
+{
+  "id": "fereader_findreferencedobject",
+  "source": "src/frontend/fereader_findreferencedobject.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80054f88",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindReferencedObject__15FEPackageReaderUlPP8FEObjectPP9FEPackage",
+      "address": "0x80054f88",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindLibraryPackage__C7FEngineUl": "0x8004d350",
+    "FindLibraryReference__C9FEPackageUl": "0x80051ffc",
+    "FindObjectByGUID__9FEPackageUl": "0x800512c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

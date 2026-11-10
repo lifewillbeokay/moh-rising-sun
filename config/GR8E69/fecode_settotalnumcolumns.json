@@ -1,0 +1,44 @@
+{
+  "id": "fecode_settotalnumcolumns",
+  "source": "src/frontend/fecode_settotalnumcolumns.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800465c0",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetTotalNumColumns__13FECodeListBoxUl",
+      "address": "0x800465c0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetTotalNumRows__13FECodeListBoxUl",
+      "address": "0x80046604",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CalculateCurrentFromTarget__13FECodeListBoxUlUlUl": "0x800476f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

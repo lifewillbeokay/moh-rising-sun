@@ -1,0 +1,54 @@
+{
+  "id": "fengine_loadpackage",
+  "source": "src/frontend/fengine_loadpackage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004cdf4",
+      "size": 544
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadPackage__7FEnginePCvb",
+      "address": "0x8004cdf4",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "UnloadPackage__7FEngineP9FEPackage",
+      "address": "0x8004ce78",
+      "size": 412,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddToIdleList__7FEngineP9FEPackage": "0x8004d2a8",
+    "FindLibraryPackage__C7FEngineUl": "0x8004d350",
+    "Load__15FEPackageReaderPCvP15FEGameInterfaceP7FEnginebN24": "0x80052264",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "RemovePackage__13FEPackageListP9FEPackage": "0x8005215c",
+    "Shutdown__9FEPackageP15FEGameInterface": "0x8005108c",
+    "UnloadLibraryPackage__7FEngineP9FEPackage": "0x8004d014",
+    "_._15FEPackageReader": "0x80052208",
+    "__15FEPackageReader": "0x800521d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

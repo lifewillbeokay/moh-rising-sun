@@ -167,3 +167,36 @@ The helpers `RotateVector` and `UpdateLocalVectors` are descriptive names; the o
 at `+192` and `+224`, and pool links at `+256` in `g_meshParticleSystemList`, which has the same five
 words as the procedural pool. Flag names are inferred from the accessors; `running` is inferred only
 from `Terminate` clearing it.
+
+## Mesh particle pool setup
+
+`MeshParticleSystem::Init` sizes its pool from level resource type 27, entry 110, with a minimum of ten systems
+of 272 bytes each, and tags the allocation `source/system/freepool.h:38`. Its pool logic is written as a local
+inline here; the header line suggests the original had a pool template. `Detach` in both particle classes clears
+the attached node and the attach matrix (`+220` and `+0x144`). `MeshParticleSystem::DeInit` is not reconstructed:
+its two saved registers are rotated.
+
+## Particle system construction
+
+`CParticleSystem`'s default constructor runs a class-initialization check for each of its two member matrices,
+in member order, which `CheckedMatrix` in the header reproduces; the five vectors at `+0x40` and the matrix at
+`+0x100` have placeholder names. The pool's stride is 400 bytes and `ResetSystem` relinks every system onto the
+free list. `CProjectorSystemDef` (`projector.cpp`) loads a shape from the repository into a `TAR` at `+8`.
+
+## Setup from a definition
+
+Both `Init(CParticleDef *)` overrides keep the definition's typed view, reset their state and end with the virtual
+`Reload`. `CParticleSystem::Init` sets the flag bits for rotation (recipe entry 37) and fade (entries 47 and 48), and
+stamps four tick fields from `CPSManager::GetCurrentTicks`; their names, other than `deactivationTicks`, are
+placeholders. `Reload` marks the system eternal when entry 5 is zero and stores the particle acceleration (entries 19
+to 21) rotated into the system's local frame. `MeshParticleSystem::Init` randomizes the deactivation time from entries
+4 and 5.
+
+`MeshParticleSystem` keeps its particles in an `_STL::list<MeshParticle>` at `+208`. The header holds it as storage so
+that only units that use it need the container. `MeshParticle` is 112 bytes by the out-of-line copy constructor's
+reads; its list node puts it at `+16` of a 128-byte allocation, which is why it is declared with an inferred 16-byte
+alignment. `AllocParticle` refuses past 100 live particles, counted in `g_numActiveMeshParticles`.
+
+`MeshParticleSystem::BeginUpdate` scales the time step by 1/60, follows the attached node through the attach matrix
+and the offset at `+128`, updates the particles, then runs down `deactivationTicks` to call `Terminate` once dying or
+`DeActivate` otherwise.

@@ -2,7 +2,7 @@
 #include "FEngLists.h"
 
 FEObject *FEGroup::FindChild(unsigned long hash) const {
-    FEObject *child = children;
+    FEObject *child = (FEObject *)childList.head;
     while (child && child->hash != hash) child = (FEObject *)child->next;
     return child;
 }

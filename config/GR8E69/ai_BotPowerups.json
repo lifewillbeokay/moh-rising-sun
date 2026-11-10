@@ -1,0 +1,54 @@
+{
+  "id": "ai_BotPowerups",
+  "source": "src/ai/BotPowerups.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80098174",
+      "size": 432
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dc10",
+      "size": 32
+    },
+    {
+      "name": ".data",
+      "address": "0x802c2378",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckForNearbyPowerups__10CBotObject",
+      "address": "0x80098174",
+      "size": 432,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CalcAStarPath__10CBotObjectRC8CVector3P13CAreaPathNode": "0x80095d94",
+    "CalcMMGScore__7CBotManP10CBotObjectUlR8CVector3": "0x80091d00",
+    "FindClosestHealthPack__7CBotManP10CBotObjectR8CVector3": "0x80091bc4",
+    "GetHealthPercent__10CBotObject": "0x80099270",
+    "MathFunRandomSign__Fv": "0x80133978",
+    "PathDistance__C18CAIAreaPathFinding": "0x800ea264",
+    "g_BotMan": "0x803032f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

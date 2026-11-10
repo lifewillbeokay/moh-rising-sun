@@ -1,0 +1,58 @@
+{
+  "id": "ai_PlaybackOpcodes",
+  "source": "src/eala/PlaybackOpcodes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80089fe4",
+      "size": 820
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c730",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleOpcodes__Q34EALA9Character8Playback",
+      "address": "0x80089fe4",
+      "size": 688,
+      "binding": 1
+    },
+    {
+      "name": "CheckForPoseChange__Q34EALA9Character8PlaybackRQ34EALA9Character6Opcode",
+      "address": "0x8008a294",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCorePose__CQ34EALA9Character4Task": "0x8008fc78",
+    "SetCorePose__Q34EALA9Character4TaskUi": "0x8008fc70",
+    "_Q34EALA9Character9Animation.ms_fPlaybackRate": "0x802fbf80",
+    "floorf": "0x80270940",
+    "fmodf": "0x8026fc7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Playback.cpp",
+  "original_file_index": 627
+}

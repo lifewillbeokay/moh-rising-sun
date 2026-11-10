@@ -1,0 +1,43 @@
+{
+  "id": "handler_mpbots_validateskin",
+  "source": "src/frontend/handler_mpbots_validateskin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018d618",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "ValidateSkin__13HandlerMPBotsPciP14PackageHandleri",
+      "address": "0x8018d618",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetObjectListIndex__14PackageHandlerPc": "0x80187cc4",
+    "IsSkinUnlocked__13HandlerMPBotsii": "0x8018d550",
+    "SetNextObjectListIndex__14PackageHandlerPc": "0x80187a6c",
+    "SetPrevObjectListIndex__14PackageHandlerPc": "0x80187b7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPBots.cpp",
+  "original_file_index": 1711
+}

@@ -1,0 +1,48 @@
+{
+  "id": "ai_SentinelDtor",
+  "source": "src/eala/SentinelDtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008e5e0",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q34EALA9Character8Sentinel",
+      "address": "0x8008e5e0",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__dl__Q34EALA9Character8SentinelPvUi": "0x8008e3c4",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Sentinel.cpp",
+  "original_file_index": 650
+}

@@ -1,0 +1,77 @@
+{
+  "id": "lighting_AnimLightManager",
+  "source": "src/lighting/AnimLightManager.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801310c8",
+      "size": 1256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7a08",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__17CAnimLightManagerP6CScene",
+      "address": "0x801310c8",
+      "size": 344,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__17CAnimLightManager",
+      "address": "0x80131220",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "ResetClass__17CAnimLightManager",
+      "address": "0x801312dc",
+      "size": 352,
+      "binding": 1
+    },
+    {
+      "name": "Create__17CAnimLightManagerUi",
+      "address": "0x8013143c",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "Create__17CAnimLightManagerP24MOH_animatedLight_Struct",
+      "address": "0x8013151c",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "InitFromProperty__18CPropertyAnimLight": "0x80130d48",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "__18CPropertyAnimLightP24MOH_animatedLight_Struct": "0x80130c54",
+    "__19CInstancedAnimLightP24MOH_animatedLight_Struct": "0x80130fc4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "light.cpp",
+  "original_file_index": 1286
+}

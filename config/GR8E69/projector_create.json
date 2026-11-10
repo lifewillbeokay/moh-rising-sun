@@ -1,0 +1,55 @@
+{
+  "id": "projector_create",
+  "source": "src/camera/projector_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801322cc",
+      "size": 484
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__10CProjectorUib",
+      "address": "0x801322cc",
+      "size": 484,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "Alloc__10CProjector": "0x80132224",
+    "_._19CProjectorSystemDef": "0x80131e5c",
+    "__10CProjectorR19CProjectorSystemDef": "0x80131f64",
+    "__19CProjectorSystemDef": "0x80131e44",
+    "__19CProjectorSystemDefRC19CProjectorSystemDef": "0x80131eb8",
+    "__nw__10CProjectorUiPv": "0x80132218",
+    "g_ProjectorSystemsDefs": "0x8032d2a4",
+    "g_scene": "0x803e6d90",
+    "insert_unique__Q24_STLt8_Rb_tree5ZUiZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt4less1ZUiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefRCQ24_STLt4pair2ZCUiZ19CProjectorSystemDef": "0x8028912c"
+  },
+  "local_externals": [
+    "g_ProjectorSystemsDefs"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

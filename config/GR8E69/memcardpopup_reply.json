@@ -1,0 +1,48 @@
+{
+  "id": "memcardpopup_reply",
+  "source": "src/frontend/memcardpopup_reply.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a4434",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "RequestReply__16CMemoryCardPopup",
+      "address": "0x801a4434",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetReply__16CMemoryCardPopup",
+      "address": "0x801a4488",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCombinedJoyPadActiveMask__C12ShellManager": "0x801812d8",
+    "ShowSelections__16CMemoryCardPopup": "0x801a44a0",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardPopup.cpp",
+  "original_file_index": 2094
+}

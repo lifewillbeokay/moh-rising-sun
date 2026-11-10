@@ -1,0 +1,54 @@
+{
+  "id": "ai_OperationTurnDuration",
+  "source": "src/eala/OperationTurnDuration.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008d11c",
+      "size": 304
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029cae0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTaskDuration__Q34EALA9Character11TurnOperandRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008d11c",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character11TurnOperandRQ29Serialize3Any",
+      "address": "0x8008d1f8",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Serialize__Q44EALA9Character9Operation7OperandRQ29Serialize3Any": "0x8008cf18"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Operations.cpp",
+  "original_file_index": 640
+}

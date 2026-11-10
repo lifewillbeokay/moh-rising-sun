@@ -1,0 +1,64 @@
+{
+  "id": "handler_controlleroptions",
+  "source": "src/frontend/handler_controlleroptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801900e4",
+      "size": 1980
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b22e8",
+      "size": 576
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__24HandlerControllerOptionsUiP8FEObjectUl",
+      "address": "0x801900e4",
+      "size": 1980,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetCurrentLanguage__14PackageHandler": "0x80188c8c",
+    "GetNameFromSettings__13CGameSettingsi": "0x8016f5ac",
+    "GetProfileIndexFromPlayerID__13CGameSettingsi": "0x801718e4",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "InitControllerFromOptions__13CGameSettingsi": "0x8016f61c",
+    "Initialize__7CSliderP8FEObject": "0x8017db70",
+    "MathFunClamp__H1Zf_X01X01X01_X01": "0x8027aa30",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcP12FEWideString": "0x8018770c",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcT2": "0x8018769c",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "SetValue__7CSliderf": "0x8017dc08",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_PauseScreen": "0x802f8040",
+    "g_Shell": "0x802f4420",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerControllerOptions.cpp",
+  "original_file_index": 1760
+}

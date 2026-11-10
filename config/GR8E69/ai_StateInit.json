@@ -1,0 +1,58 @@
+{
+  "id": "ai_StateInit",
+  "source": "src/eala/StateInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80084274",
+      "size": 836
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b8e0",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__Q34EALA9Character5State",
+      "address": "0x80084274",
+      "size": 836,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "GetNextSymbol__CQ24EAGL13DynamicLoaderPCcRiRQ34EAGL13DynamicLoader6Symbol": "0x801eae88",
+    "LoadFromMemory__Q24EALA10EAGLLoaderPvUiPCc": "0x801abfa0",
+    "Release__Q24EAGL13DynamicLoader": "0x801eacb0",
+    "_Q24EAGL13DynamicLoader.AnimBankType": "0x802be284",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcRCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1Zc": "0x8027e344",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "insert_unique__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiRCQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUi": "0x8027fd28",
+    "memcmp": "0x80266558"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "State.cpp",
+  "original_file_index": 592
+}

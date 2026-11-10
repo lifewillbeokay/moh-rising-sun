@@ -34,4 +34,12 @@ extern char GameSettingReserve[];
 extern "C" unsigned char OSGetLanguage(void);
 #define IsCoop() (g_Shell.inCoop || g_bCoopMultiplayer)
 
+// The block of multiplayer setup data at +0x3201c of the saved settings. Screens update its flag word through a
+// pointer to the block, which shows it as one object; SCoreGameSettings still names its members separately.
+struct SMPSetup {
+    unsigned char playerCount;     // +0x00; SCoreGameSettings::unknown_3201c[0].
+    unsigned char unknown_01[0x58 - 1];
+    unsigned int flags;            // +0x58; SCoreGameSettings::field_32074.
+};
+inline SMPSetup *MPSetup() { return (SMPSetup *)g_GameSettings.profile->unknown_3201c; }
 #endif

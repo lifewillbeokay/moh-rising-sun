@@ -178,7 +178,8 @@ extern "C" int THREAD_testexit(OSThread* thread) {
     return OSIsThreadTerminated(resolvethread(thread)) != 0;
 }
 
-extern "C" int THREAD_waitexit(OSThread* thread) {
+// Thread::DeInit passes a second argument of 0; this body does not read it.
+extern "C" int THREAD_waitexit(OSThread* thread, int) {
     while (!THREAD_testexit(thread))
         THREAD_yield(10);
     return 1;

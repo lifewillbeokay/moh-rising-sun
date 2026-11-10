@@ -1,0 +1,96 @@
+{
+  "id": "fereader_readlibraryrefschunk",
+  "source": "src/frontend/fereader_readlibraryrefschunk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800528ac",
+      "size": 2976
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802980dc",
+      "size": 480
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadLibraryRefsChunk__15FEPackageReader",
+      "address": "0x800528ac",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "ReadResourceChunk__15FEPackageReader",
+      "address": "0x800529e8",
+      "size": 780,
+      "binding": 1
+    },
+    {
+      "name": "ReadPackageResponseChunk__15FEPackageReader",
+      "address": "0x80052cf4",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "ReadObjectChunk__15FEPackageReader",
+      "address": "0x80052d68",
+      "size": 1048,
+      "binding": 1
+    },
+    {
+      "name": "CreateObject__15FEPackageReaderUl",
+      "address": "0x80053180",
+      "size": 716,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "FEKeyInterp__FP8FEScriptUclP8FEObject": "0x80047d8c",
+    "FillAllCells__13FECodeListBox": "0x80046378",
+    "FindChild__15FEPackageReaderP7FEChunkUl": "0x800523a4",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "GetTypeSize__15FEPackageReaderUl": "0x8005247c",
+    "ReadMessageResponseTags__15FEPackageReaderP5FETagUlb": "0x80054b34",
+    "ReadObjectTags__15FEPackageReaderP5FETagUl": "0x8005344c",
+    "ReadScriptTags__15FEPackageReaderP5FETagUl": "0x800542e0",
+    "RecalculateCummulative__9FEListBox": "0x8004a7e4",
+    "SetCount__11FEButtonMapUl": "0x80045808",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4",
+    "SetDataSize__8FEObjectUl": "0x80050344",
+    "SetNumLibraryRefs__9FEPackageUl": "0x80051f24",
+    "__12FEWideString": "0x800568ec",
+    "__13FECodeListBox": "0x80045cac",
+    "__8FEObject": "0x8004ff9c",
+    "__9FEListBox": "0x80049a08",
+    "_vt.11FEAnimImage": "0x802e1368",
+    "_vt.13FESimpleImage": "0x802e1348",
+    "_vt.14FEColoredImage": "0x802e1388",
+    "_vt.7FEGroup": "0x802e1160",
+    "_vt.7FEImage": "0x802e13a8",
+    "_vt.7FEMovie": "0x802e13c8",
+    "_vt.8FEString": "0x802e13e8",
+    "_vt.9FEMinList": "0x802e1180",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

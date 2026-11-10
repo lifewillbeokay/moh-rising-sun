@@ -1,0 +1,53 @@
+{
+  "id": "meshparticle_update",
+  "source": "src/particles/meshparticle_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80065b68",
+      "size": 412
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299e50",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginUpdate__18MeshParticleSystemf",
+      "address": "0x80065b68",
+      "size": 412,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddParticles__18MeshParticleSystemf": "0x80064944",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "UpdateParticles__18MeshParticleSystemf": "0x80065214",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

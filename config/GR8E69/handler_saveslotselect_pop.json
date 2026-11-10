@@ -1,0 +1,60 @@
+{
+  "id": "handler_saveslotselect_pop",
+  "source": "src/frontend/handler_saveslotselect_pop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019abe0",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnCancel__21HandlerSaveSlotSelect",
+      "address": "0x8019abe0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "OnPop__21HandlerSaveSlotSelect",
+      "address": "0x8019ac00",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "__21HandlerLoadSlotSelect",
+      "address": "0x8019ac10",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._21HandlerLoadSlotSelect",
+      "address": "0x8019ac4c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Pop__19HandlerSaveSlotBase": "0x80199fc4",
+    "_._19HandlerSaveSlotBase": "0x801998d4",
+    "__19HandlerSaveSlotBase": "0x801998c0",
+    "_vt.21HandlerLoadSlotSelect": "0x802ebb20",
+    "g_PauseScreen": "0x802f8040"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

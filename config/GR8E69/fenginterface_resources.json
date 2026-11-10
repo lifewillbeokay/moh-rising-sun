@@ -1,0 +1,100 @@
+{
+  "id": "fenginterface_resources",
+  "source": "src/frontend/fenginterface_resources.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017c7bc",
+      "size": 848
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad5b8",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetBigFilePtr__14CFengInterfacePc",
+      "address": "0x8017c7bc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "LoadResources__14CFengInterfaceP9FEPackagelP17FEResourceRequest",
+      "address": "0x8017c7c4",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "UnloadResources__14CFengInterfaceP9FEPackagelP17FEResourceRequest",
+      "address": "0x8017c8f4",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "GetPackageData__14CFengInterfacePCcPPUcRb",
+      "address": "0x8017c9a8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "PackageWasLoaded__14CFengInterfaceP9FEPackage",
+      "address": "0x8017c9ec",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "PackageWillUnload__14CFengInterfaceP9FEPackage",
+      "address": "0x8017cafc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "BeginPackageRendering__14CFengInterfaceP9FEPackage",
+      "address": "0x8017cb04",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "EndPackageRendering__14CFengInterfaceP9FEPackage",
+      "address": "0x8017cb08",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "LoadFont__14CFengInterfaceP17FEResourceRequestPc": "0x8017d248",
+    "LoadTexture__14CFengInterfaceP17FEResourceRequestPc": "0x8017d1a4",
+    "SetPosition__8FEObjectRC9FEVector3b": "0x80050968",
+    "TLT_LoadFileFromBigFile__FPcPCcPi": "0x801a9b98",
+    "Update__9FEPackageP7FEnginel": "0x80051be8",
+    "_._5CFont": "0x80066e6c",
+    "_._7CSprite": "0x8005d1f4",
+    "__builtin_vec_delete": "0x801a89b0",
+    "printf": "0x8026374c",
+    "strrchr": "0x80266f20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563
+}

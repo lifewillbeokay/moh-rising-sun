@@ -1,0 +1,50 @@
+{
+  "id": "memcardpopup_events",
+  "source": "src/frontend/memcardpopup_events.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a40b0",
+      "size": 300
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6890",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnSoundEvent__16CMemoryCardPopupUiP8FEObject",
+      "address": "0x801a40b0",
+      "size": 300,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "SendEvent__15SoundAliasEvent": "0x801679b0",
+    "_vt.10SoundEvent": "0x802e4ce8",
+    "_vt.15SoundAliasEvent": "0x802ead68",
+    "g_GameFlow": "0x802f9ce0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardPopup.cpp",
+  "original_file_index": 2094
+}

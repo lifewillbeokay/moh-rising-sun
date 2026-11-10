@@ -1,0 +1,41 @@
+{
+  "id": "fecode_update",
+  "source": "src/frontend/fecode_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046894",
+      "size": 136
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802972c0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__13FECodeListBoxf",
+      "address": "0x80046894",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

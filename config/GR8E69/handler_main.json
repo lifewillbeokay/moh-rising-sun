@@ -1,0 +1,70 @@
+{
+  "id": "handler_main",
+  "source": "src/frontend/handler_main.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018907c",
+      "size": 796
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b1010",
+      "size": 232
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleTick__18PackageHandlerMain",
+      "address": "0x8018907c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__18PackageHandlerMainUiP8FEObjectUl",
+      "address": "0x801890a0",
+      "size": 760,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckControllers__13CInputManagerb": "0x800d7190",
+    "Convert__C12FEWideStringPc": "0x80056bd8",
+    "CopyNameIntoSettings__13CGameSettingsPCci": "0x8016f560",
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "HandleFEngQueries__14PackageHandlerUiP8FEObject": "0x80188698",
+    "HandleMovieEvent__14PackageHandlerUiP8FEObject": "0x80187e44",
+    "HandleSaveGameEvent__14PackageHandlerUiP8FEObject": "0x8018882c",
+    "InSelection__16HandlerMPProfile": "0x8018a244",
+    "InSelection__20HandlerProfileSelect": "0x8018f3d0",
+    "Instance__9MohLoader": "0x80059414",
+    "Length__C12FEWideString": "0x80056b40",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMain.cpp",
+  "original_file_index": 1657
+}

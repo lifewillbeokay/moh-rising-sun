@@ -1,0 +1,70 @@
+{
+  "id": "handler_customcontroller_keys",
+  "source": "src/frontend/handler_customcontroller_keys.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80191b64",
+      "size": 508
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindKeyIndex__23HandlerCustomControllers16EShellButtonType",
+      "address": "0x80191b64",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "FindButtonIndex__23HandlerCustomControllerUi",
+      "address": "0x80191c1c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "GetNumKeyNames__23HandlerCustomController16EShellButtonType",
+      "address": "0x80191c80",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetNumAssignableFunctions__23HandlerCustomController",
+      "address": "0x80191cb8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AssignToNextKeyIndex__23HandlerCustomControllerii",
+      "address": "0x80191cc0",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "analogKeyNames": "0x802c5c08",
+    "analogStickNames": "0x802c5ba0",
+    "controllerFunctionNames": "0x802c5ab0",
+    "controllerKeyNames": "0x802c5bc0",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCustomController.cpp",
+  "original_file_index": 1766
+}

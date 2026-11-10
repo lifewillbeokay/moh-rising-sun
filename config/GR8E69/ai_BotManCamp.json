@@ -1,0 +1,78 @@
+{
+  "id": "ai_BotManCamp",
+  "source": "src/ai/BotManCamp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009194c",
+      "size": 1368
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029d338",
+      "size": 48
+    },
+    {
+      "name": ".data",
+      "address": "0x802c21e0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindCampingPoint__7CBotManP10CBotObject",
+      "address": "0x8009194c",
+      "size": 328,
+      "binding": 1
+    },
+    {
+      "name": "CampingPointInUseByTeammate__7CBotManP10CBotObjecti",
+      "address": "0x80091a94",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "FindClosestHealthPack__7CBotManP10CBotObjectR8CVector3",
+      "address": "0x80091bc4",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "CalcMMGScore__7CBotManP10CBotObjectUlR8CVector3",
+      "address": "0x80091d00",
+      "size": 420,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquaredXY__C8CVector3RC8CVector3": "0x8007be08",
+    "DistanceSquared__C8CVector3RC8CVector3": "0x8007bdac",
+    "DistanceXY__C8CVector3RC8CVector3": "0x8007bd44",
+    "GetFirstDumpObject__20CDumpObjectContainer": "0x80126ec4",
+    "GetNextDumpObject__20CDumpObjectContainerP10DumpObject": "0x80126ecc",
+    "IsInUse__8MMG_Info": "0x80091ea4",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "g_DumpObjectContainer": "0x8032ce58",
+    "g_NumBotsCreated": "0x802c21d0",
+    "g_bTeamDM": "0x802c1b34",
+    "rand": "0x80265c98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotMan.cpp",
+  "original_file_index": 670
+}

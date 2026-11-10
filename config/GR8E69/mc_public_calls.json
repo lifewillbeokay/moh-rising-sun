@@ -1,0 +1,128 @@
+{
+  "id": "mc_public_calls",
+  "source": "src/memorycard/public_calls.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020f258",
+      "size": 1948
+    }
+  ],
+  "functions": [
+    {
+      "name": "CardExists__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020f258",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "GetCardInfo__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020f2e8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "Mount__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020f374",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "Unmount__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020f400",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "OpenFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDRCQ26Realmc8FileInfoQ26Realmc12FileOpenMode",
+      "address": "0x8020f48c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "CloseFile__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptor",
+      "address": "0x8020f528",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "Read__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptorPvi",
+      "address": "0x8020f5b0",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "Write__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptorPvi",
+      "address": "0x8020f64c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "Seek__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptoriQ26Realmc8SeekFrom",
+      "address": "0x8020f6e8",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "Flush__Q26Realmc11GCInterfacePQ26Realmc18OpenFileDescriptor",
+      "address": "0x8020f780",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "DeleteFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2",
+      "address": "0x8020f808",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "SetFileAttribute__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2Q26Realmc13FileAttribute",
+      "address": "0x8020f8a8",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "FindFile__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcT2",
+      "address": "0x8020f950",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mTaskCardExists": "0x80409e4c",
+    "_Q26Realmc11GCInterface.mTaskClose": "0x80409ef8",
+    "_Q26Realmc11GCInterface.mTaskDelete": "0x80409fcc",
+    "_Q26Realmc11GCInterface.mTaskFind": "0x8040a058",
+    "_Q26Realmc11GCInterface.mTaskFlush": "0x80409fa8",
+    "_Q26Realmc11GCInterface.mTaskGetCardInfo": "0x80409e70",
+    "_Q26Realmc11GCInterface.mTaskMount": "0x80409e90",
+    "_Q26Realmc11GCInterface.mTaskOpen": "0x80409ed0",
+    "_Q26Realmc11GCInterface.mTaskRead": "0x80409f1c",
+    "_Q26Realmc11GCInterface.mTaskSeek": "0x80409f7c",
+    "_Q26Realmc11GCInterface.mTaskSetAttribute": "0x8040a010",
+    "_Q26Realmc11GCInterface.mTaskUnmount": "0x80409eb0",
+    "_Q26Realmc11GCInterface.mTaskWrite": "0x80409f4c",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "public.cpp",
+  "original_file_index": 2923
+}

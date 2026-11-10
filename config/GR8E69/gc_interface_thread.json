@@ -1,0 +1,94 @@
+{
+  "id": "gc_interface_thread",
+  "source": "src/memorycard/gc_interface_thread.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d9f8",
+      "size": 812
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q26Realmc11GCInterface",
+      "address": "0x8020d9f8",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "GCMCThread__Q26Realmc11GCInterface",
+      "address": "0x8020dab4",
+      "size": 624,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FreeMemSize__6RealmcPvi": "0x802167b4",
+    "FreeMem__6RealmcPv": "0x8021678c",
+    "MUTEX_destroy": "0x80217f50",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "THREAD_waitexit": "0x80217ebc",
+    "THREAD_yield": "0x80217ce8",
+    "UpdateTaskCardExists__Q26Realmc11GCInterface": "0x80213700",
+    "UpdateTaskClose__Q26Realmc11GCInterface": "0x80213b8c",
+    "UpdateTaskDelete__Q26Realmc11GCInterface": "0x802140c8",
+    "UpdateTaskFindFile__Q26Realmc11GCInterface": "0x80214318",
+    "UpdateTaskFlush__Q26Realmc11GCInterface": "0x8021401c",
+    "UpdateTaskGetCardInfo__Q26Realmc11GCInterface": "0x802137b4",
+    "UpdateTaskMount__Q26Realmc11GCInterface": "0x80213880",
+    "UpdateTaskOpen__Q26Realmc11GCInterface": "0x80213a78",
+    "UpdateTaskRead__Q26Realmc11GCInterface": "0x80213c3c",
+    "UpdateTaskSeek__Q26Realmc11GCInterface": "0x80213f4c",
+    "UpdateTaskSetAttribute__Q26Realmc11GCInterface": "0x80214220",
+    "UpdateTaskTrcCardExists__Q26Realmc11GCInterface": "0x8020fda8",
+    "UpdateTaskTrcCheckSpace__Q26Realmc11GCInterface": "0x80212fa0",
+    "UpdateTaskTrcDeleteFile__Q26Realmc11GCInterface": "0x802118e4",
+    "UpdateTaskTrcGetCardInfo__Q26Realmc11GCInterface": "0x8020ff74",
+    "UpdateTaskTrcListFiles__Q26Realmc11GCInterface": "0x80211fbc",
+    "UpdateTaskTrcLoadFile__Q26Realmc11GCInterface": "0x802101ac",
+    "UpdateTaskTrcMountCardOperation__Q26Realmc11GCInterface": "0x802129ac",
+    "UpdateTaskTrcMountCard__Q26Realmc11GCInterface": "0x80212328",
+    "UpdateTaskTrcSaveFile__Q26Realmc11GCInterface": "0x80210de0",
+    "UpdateTaskTrcStartGame__Q26Realmc11GCInterface": "0x8020f9f4",
+    "UpdateTaskUnmount__Q26Realmc11GCInterface": "0x802139b8",
+    "UpdateTaskWrite__Q26Realmc11GCInterface": "0x80213dc4",
+    "_._Q26Realmc12InterfaceImp": "0x8021687c",
+    "_Q26Realmc11GCInterface.mExitThread": "0x80451280",
+    "_Q26Realmc11GCInterface.mMCardThread": "0x80450e2c",
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mStackBuffer": "0x80451278",
+    "_Q26Realmc11GCInterface.mTaskManager": "0x80409a9c",
+    "_Q26Realmc11GCInterface.mTaskMsg": "0x8040a1bc",
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c",
+    "_Q26Realmc11GCInterface.mpNewTaskMsg": "0x80451284",
+    "_vt.Q26Realmc11GCInterface": "0x802ed758"
+  },
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mExitThread",
+    "_Q26Realmc11GCInterface.mStackBuffer",
+    "_Q26Realmc11GCInterface.mpDriver",
+    "_Q26Realmc11GCInterface.mpNewTaskMsg"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916
+}

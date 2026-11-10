@@ -1,0 +1,117 @@
+{
+  "id": "ea_subtitle_setters",
+  "source": "src/ea/subtitle_setters.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b220c",
+      "size": 208
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24RCMP11AV_SUBTITLE",
+      "address": "0x801b220c",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "SetPosX__Q24RCMP11AV_SUBTITLEi",
+      "address": "0x801b2274",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetPosY__Q24RCMP11AV_SUBTITLEi",
+      "address": "0x801b227c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetWidth__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b2284",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetHeight__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b228c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetStrID__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b2294",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetFrameNumber__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b229c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetJustifyX__Q24RCMP11AV_SUBTITLEQ34RCMP11AV_SUBTITLE12JUSTIFY_ENUM",
+      "address": "0x801b22a4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetJustifyY__Q24RCMP11AV_SUBTITLEQ34RCMP11AV_SUBTITLE12JUSTIFY_ENUM",
+      "address": "0x801b22ac",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetShapeIndex__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b22b4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetA__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b22bc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetR__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b22c4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetG__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b22cc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetB__Q24RCMP11AV_SUBTITLEUi",
+      "address": "0x801b22d4",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

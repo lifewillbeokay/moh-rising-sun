@@ -1,0 +1,41 @@
+{
+  "id": "toilet_load_pause",
+  "source": "src/game/toilet_load_pause.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801aa54c",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_Load_WaitPause__Fv",
+      "address": "0x801aa54c",
+      "size": 84,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "TLT_LoadFile_Async_Load__FPPcPi": "0x801a94b4",
+    "g_toilet": "0x803f5360"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "toilet.cpp",
+  "original_file_index": 2188
+}

@@ -1,0 +1,99 @@
+{
+  "id": "eagl_device_cmn",
+  "source": "src/eagl/device_cmn.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801db26c",
+      "size": 544
+    }
+  ],
+  "functions": [
+    {
+      "name": "NewRenderContext__Q24EAGL6Device",
+      "address": "0x801db26c",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "DeleteRenderContext__Q24EAGL6DevicePQ24EAGL13RenderContext",
+      "address": "0x801db2d4",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "AddRenderContext__Q24EAGL6DevicePQ24EAGL17RenderContextBase",
+      "address": "0x801db340",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "RemoveRenderContext__Q24EAGL6DevicePQ24EAGL17RenderContextBase",
+      "address": "0x801db354",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentRenderContext__CQ24EAGL6Device",
+      "address": "0x801db43c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentContext__CQ24EAGL6Device",
+      "address": "0x801db448",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentRenderContext__Q212EAGLInternal13DevicePrivatePQ24EAGL13RenderContext",
+      "address": "0x801db454",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetNewOverride__Q24EAGL6DevicePFUiPCc_Pv",
+      "address": "0x801db468",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetDeleteOverride__Q24EAGL6DevicePFPvUi_v",
+      "address": "0x801db474",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Get__Q24EAGL6Device",
+      "address": "0x801db480",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_12EAGLInternal.EAGLFree": "0x802d2e0c",
+    "_12EAGLInternal.EAGLMalloc": "0x802d2e08",
+    "_Q212EAGLInternal13DevicePrivate.gpCurrentContext": "0x802cdaf4",
+    "_Q212EAGLInternal13DevicePrivate.gpCurrentDevice": "0x802cdae8",
+    "_Q212EAGLInternal13DevicePrivate.gpCurrentRenderContext": "0x802cdaec",
+    "__Q24EAGL13RenderContextPQ24EAGL6Device": "0x801dc58c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "device_cmn.cpp",
+  "original_file_index": 2612
+}

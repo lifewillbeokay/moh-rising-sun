@@ -72,14 +72,30 @@ public:
     };
 };
 
+class TriggerObject;
+// A link between path networks. Members are from the Register and GetLink methods; names are inferred.
 struct PathFindingNetworkLink {
-    unsigned char unresolved_00[20] __attribute__((aligned(4)));
+    unsigned char network;        // +0x00; the other network.
+    TriggerObject *fromTrigger;   // +0x04
+    unsigned char pointIndex;     // +0x08
+    TriggerObject *toTrigger;     // +0x0c
+    int linkIndex;                // +0x10
+    PathFindingNetworkLink() {
+        linkIndex = 0;
+        pointIndex = 0;
+        network = 0;
+        toTrigger = 0;
+        fromTrigger = 0;
+    }
 };
 class PathFindingNetwork {
-    unsigned char field_00; // Copied byte; semantic name remains unresolved.
-    _STL::list<PathFindingNetworkLink> links; // Observed member at offset 4.
 public:
+    unsigned char id; // +0x00; the visited-table index in GetLinkGoingTo.
+    _STL::list<PathFindingNetworkLink> links; // +0x04
     PathFindingNetwork(const PathFindingNetwork&);
+    void RegisterLinkTo(TriggerObject *, int, int, int);
+    void RegisterLinkFrom(TriggerObject *, int, int, int);
+    int GetLinkGoingTo(const class CVector3 &, unsigned char, unsigned char *, TriggerObject **, TriggerObject **);
 };
 
 class SHAPE;
@@ -91,9 +107,7 @@ public:
     };
 };
 }
-struct _LocationTargetInfo {
-    unsigned char unresolved_00[12] __attribute__((aligned(4)));
-};
+#include "../game/LocationTargetInfo.h"
 struct BSObject;
 // Message registration/removal independently establish these fields; names are
 // descriptive. The final two bytes remain opaque and are not initialized there.

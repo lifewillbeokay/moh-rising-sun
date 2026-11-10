@@ -1,0 +1,61 @@
+{
+  "id": "ai_AStarVolumes",
+  "source": "src/pathfinding/AStarVolumes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ec2d0",
+      "size": 444
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetAStarVolumes__18CAIAreaPathFinding",
+      "address": "0x800ec2d0",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "RegisterAStarVolume__18CAIAreaPathFindingP13TriggerObjecti",
+      "address": "0x800ec344",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "WhichNetwork__18CAIAreaPathFindingRC8CVector3",
+      "address": "0x800ec3f4",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsPointInTrigger__FRC8CVector3R13TriggerObject": "0x80124950",
+    "_M_erase__Q24_STLt8_Rb_tree5ZUcZQ24_STLt4pair2ZCUcZ18PathFindingNetworkZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUcZ18PathFindingNetworkZQ24_STLt4less1ZUcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUcZ18PathFindingNetworkPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCUcZ18PathFindingNetwork": "0x80285c14",
+    "__builtin_new": "0x801a8910",
+    "clear__Q24_STLt10_List_base2Z11AStarVolumeZQ24_STLt9allocator1Z11AStarVolume": "0x80285c88",
+    "find__H2ZQ24_STLt14_List_iterator2Z11AStarVolumeZQ24_STLt16_Nonconst_traits1Z11AStarVolumeZ11AStarVolume_4_STLX01X01RCX11_X01": "0x80285cf0",
+    "g_astar_volumes": "0x8031cfbc",
+    "g_networks": "0x8031cfac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

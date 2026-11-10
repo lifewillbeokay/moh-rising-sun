@@ -1,0 +1,59 @@
+{
+  "id": "ai_BotStateGoal",
+  "source": "src/ai/BotStateGoal.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80095fb8",
+      "size": 868
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029db24",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GoalReached__10CBotObject",
+      "address": "0x80095fb8",
+      "size": 432,
+      "binding": 1
+    },
+    {
+      "name": "WantToRetreat__10CBotObject",
+      "address": "0x80096168",
+      "size": 436,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CalcAStarPath__10CBotObjectRC8CVector3P13CAreaPathNode": "0x80095d94",
+    "DistanceSquaredXY__C8CVector3RC8CVector3": "0x8007be08",
+    "FindAmmo__10CBotObjectP8CVector3": "0x800969f4",
+    "FindHealth__10CBotObjectP8CVector3": "0x80096514",
+    "FindWeapon__10CBotObjectP8CVector3P7CWeapon": "0x80096e9c",
+    "FollowingAStar__10CBotObject": "0x8009938c",
+    "GetWeapon__C14CSoldierObjecti": "0x800c2f80",
+    "MathFunRandomI64__Fxx": "0x801339dc",
+    "RetreatForAmmo__10CBotObject": "0x80098a30",
+    "RetreatForHealth__10CBotObject": "0x8009898c",
+    "RetreatForWeapons__10CBotObject": "0x80098adc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

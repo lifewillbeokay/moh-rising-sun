@@ -1,0 +1,51 @@
+{
+  "id": "fecode_setcellcolor",
+  "source": "src/frontend/fecode_setcellcolor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80047768",
+      "size": 500
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCellColor__13FECodeListBoxUlUlUlUlUl",
+      "address": "0x80047768",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "SetCellScale__13FECodeListBoxUlUlRC7FEPointUlUl",
+      "address": "0x80047808",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "SetCellJustification__13FECodeListBoxUlUlUlUlUl",
+      "address": "0x800478b8",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetRealColumn__C13FECodeListBoxl": "0x800469d0",
+    "GetRealRow__C13FECodeListBoxl": "0x80046a48"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

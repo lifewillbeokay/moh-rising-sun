@@ -21,19 +21,19 @@ void FEPackage::Shutdown(FEGameInterface *game) {
     if (game) game->UnloadResources(this, resourceCount, resourceRequests);
 }
 FEMessageResponse *FEPackage::FindResponse(unsigned long message) {
-    FEMessageResponse *response = firstResponse;
+    FEMessageResponse *response = (FEMessageResponse *)responseList.head;
     while (response && response->message != message) response = (FEMessageResponse *)response->next;
     return response;
 }
 int FEPackage::ForAllChildren(FEGroup *group, FEObjectCallback &callback) {
-    for (FEObject *object = group->children; object; object = (FEObject *)object->next) {
+    for (FEObject *object = (FEObject *)group->childList.head; object; object = (FEObject *)object->next) {
         if (!callback.Callback(object)) return 0;
         if (object->type == 5 && !ForAllChildren((FEGroup *)object, callback)) return 0;
     }
     return 1;
 }
 int FEPackage::ForAllObjects(FEObjectCallback &callback) {
-    for (FEObject *object = firstObject; object; object = (FEObject *)object->next) {
+    for (FEObject *object = (FEObject *)objectList.head; object; object = (FEObject *)object->next) {
         if (!callback.Callback(object)) return 0;
         if (object->type == 5 && !ForAllChildren((FEGroup *)object, callback)) return 0;
     }

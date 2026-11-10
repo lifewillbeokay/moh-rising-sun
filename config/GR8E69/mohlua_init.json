@@ -1,0 +1,102 @@
+{
+  "id": "mohlua_init",
+  "source": "src/game/mohlua_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a7494",
+      "size": 572
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7054",
+      "size": 212
+    }
+  ],
+  "functions": [
+    {
+      "name": "LUAInit__Fv",
+      "address": "0x801a7494",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "LUAShutdown__Fv",
+      "address": "0x801a7614",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "LUAEvaluateState__FPvPCciT1",
+      "address": "0x801a764c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "LUAGetState__Fv",
+      "address": "0x801a76b8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "LUAGetCurrentObject__Fv",
+      "address": "0x801a76c4",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "LUABeginHurtling__FP9lua_State": "0x801a7c68",
+    "LUAGetBulletType__FP9lua_State": "0x801a7844",
+    "LUAGetHitIntensity__FP9lua_State": "0x801a79ec",
+    "LUAGetHitLocation__FP9lua_State": "0x801a7940",
+    "LUAGetPosture__FP9lua_State": "0x801a7798",
+    "LUAGetStateVariable__FP9lua_State": "0x801a7a98",
+    "LUAGetWeaponType__FP9lua_State": "0x801a76d0",
+    "LUAStartScriptDeath__FP9lua_State": "0x801a7b40",
+    "SetStateChoice__FP9lua_State": "0x801a7418",
+    "g_choice": "0x802c7da8",
+    "g_lua_object": "0x802c7dac",
+    "g_state": "0x803f535c",
+    "lua_close": "0x800418b4",
+    "lua_dobuffer": "0x8003baac",
+    "lua_mathlibopen": "0x8003eb88",
+    "lua_open": "0x800417c0",
+    "lua_pushcclosure": "0x80038e64",
+    "lua_setgcthreshold": "0x80039044",
+    "lua_setglobal": "0x80038ef0"
+  },
+  "local_externals": [
+    "LUABeginHurtling__FP9lua_State",
+    "LUAGetBulletType__FP9lua_State",
+    "LUAGetHitIntensity__FP9lua_State",
+    "LUAGetHitLocation__FP9lua_State",
+    "LUAGetPosture__FP9lua_State",
+    "LUAGetStateVariable__FP9lua_State",
+    "LUAGetWeaponType__FP9lua_State",
+    "LUAStartScriptDeath__FP9lua_State",
+    "SetStateChoice__FP9lua_State",
+    "g_choice",
+    "g_lua_object"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mohlua.cpp",
+  "original_file_index": 2149
+}

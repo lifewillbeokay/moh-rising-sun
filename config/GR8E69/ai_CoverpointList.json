@@ -1,0 +1,70 @@
+{
+  "id": "ai_CoverpointList",
+  "source": "src/ai/CoverpointList.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f26f8",
+      "size": 496
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4ca4",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetCoverpoints__19CCoverpointBehavior",
+      "address": "0x800f26f8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "RegisterCoverpoint__19CCoverpointBehaviorP13TriggerObject",
+      "address": "0x800f272c",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "InvalidateCoverPointByID__19CCoverpointBehaviori",
+      "address": "0x800f2820",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_getallocid": "0x801a8664",
+    "DWI_setallocid": "0x801a8658",
+    "GetID__C13TriggerObject": "0x80122fd8",
+    "InitFlags__11CCoverPoint": "0x800e1a44",
+    "Invalidate__11CCoverPoint": "0x800e2138",
+    "__builtin_new": "0x801a8910",
+    "clear__Q24_STLt10_List_base2ZP11CCoverPointZQ24_STLt9allocator1ZP11CCoverPoint": "0x8028645c",
+    "find__H2ZQ24_STLt14_List_iterator2ZP11CCoverPointZQ24_STLt16_Nonconst_traits1ZP11CCoverPointZP11CCoverPoint_4_STLX01X01RCX11_X01": "0x802864c4",
+    "g_Coverpoints": "0x8031d02c",
+    "g_CoverpointsOutOfAreaIterator": "0x8031d034",
+    "g_CoverpointsOutOfAreaValid": "0x802c34a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

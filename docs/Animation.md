@@ -646,8 +646,7 @@ behavior and is kept.
 out-of-line copy is a separate weak function; `ResourceTypes.h` is a `#pragma interface` header so that users
 do not emit that copy. `StateIterator`'s pool allocator and its size live in the file's anonymous namespace,
 whose compiler-generated symbol names cannot be spelled in source, so `operator new`, `operator delete` and the
-static initializer are not reconstructed yet. Both classes' destructors are also out: defining them emits their
-secondary `_vt.X.8ISubject` tables, which the unit manifests cannot own yet. `StateIterator::Set(unsigned int,
+static initializer are not reconstructed yet. `StateIterator::Set(unsigned int,
 float)` stays out too: the source form has its argument address loads one block later than the image.
 
 `Choreographer` runs a map from skeleton partition to context (a counted task pointer, the `EALA::Task` to run
@@ -655,4 +654,37 @@ when that task sends a message, an enabled word and a float) and passes rotation
 `ChoreographerClient`. Its context stack is in an anonymous namespace, so `Current`, `EvalPose`, `SetState` and
 the string form of `SetAuthoredTransitionState` wait for the same reason as the pool allocators. `State` keeps a
 `Substate` pointer per index after a 40-byte header, a name map, and a counted loader pointer; the `State`
-methods here come from the image and member names are inferred. `Operation`'s virtual order comes from its table.
+methods here come from the image and member names are inferred.
+
+`Jump`, `Message`, `Sentinel`, `Sequence` and `Transition` are the small task types. A `Jump` evaluates its
+target substate once, either immediately (promoting the result into its parent) or by a blended
+`StateIterator::Set` of `blendFrames` thirtieths of a second. A `Message` sends one message to its parent and
+then holds its kept task, or the still pose once it is older than ten seconds. A `Sequence` runs up to sixteen
+tasks and promotes the last one when it is alone. A `Transition` keeps both tasks until its time runs out, then
+promotes the target; it forwards the target's events only during the final evaluation. `operator new`, `operator delete` and the static initializers
+are out with the pool allocators. `Sentinel::EvalPose`, `Transition::Create`, `Transition::EvalPose` and `PerformBlend` are not
+reconstructed yet.
+
+`Operation` is the serialized tree a state's substates point at ([`CharacterOperation.h`](../include/game/CharacterOperation.h)).
+`AnimationOperation`, `MessageOperation`, `TransitionOperation` and `CompoundOperation` evaluate to a task; a
+compound holds an `Operation::Operator` and its `Operation::Operand`s. Slot orders, offsets and method names come
+from the tables and symbols; member names and `SerializedString`, `SerializedBlock` and their relatives are inferred.
+The class's small virtuals (`SizeOf`, `ClassName`, the `NoInit` constructors, `As*Operand`) follow the file's
+static initialization in the image and their strings lead its `.rodata`, as class-inline definitions would. They are
+written out of line here in that order, so their unit owns the strings. The header's `#pragma interface` keeps the tables and the implicit
+destructors, which the image holds in linkonce storage, out of these units. `MatrixBlendOperator::Eval` is not reconstructed:
+the source form schedules its stack argument one instruction earlier than the image. The word at `0x8029cadc`, between
+the script string and `GetTaskDuration`'s zero at `0x8029cae0`, has no reference in the image and no unit owns it.
+
+`CharacterTasks.h` and `CharacterBlends.h` are `#pragma interface` headers: a unit that defines a task's destructor, which is the class's key function, then emits neither its table nor the secondary `_vt.X.8ISubject` table. Those tables stay unowned, as they did before the destructors landed. Each destructor is empty in source; the base's inline destructor supplies the body.
+
+`LinearBlend` and `Playback` are the tasks the operations build. A `LinearBlend` holds up to four tasks, each with a range of a client value, and blends the two around the value; `PerformBlend` is not reconstructed (24 diffs: address operand order and scheduling). A `Playback` plays one cached animation a chosen number of loops, fires its opcodes as the time passes their frames, and tracks root motion through inverse quaternions. Its constructor, `EvalPose` and `GetTotalRootZAxisRotation` are not reconstructed: `EvalPose` is the quaternion math, and the constructor's double literal needs the literal `EvalPose` owns to complete the eight-byte `.rodata` unit.
+
+`Animation` is a counted handle on one animation of a bank, on a list of live handles. `Gameloop_LoadLevel_Fixup_Animation` loads the level's bank and sorts a table of `AnimID`s (name hash, index) from the bank's `S_0x%08x` names, which `Alloc` searches when no bank is given. The first `GetRootTransform` overload is not reconstructed: its null test on the skeleton data allocates one register differently. `PoolAllocator` is a first-fit free list with its links in the free blocks; the strings after `Dump`'s at `0x8029c850` have no remaining reference and no unit owns them.
+
+## SkeletonData name lookups
+
+`SkeletonData` keeps two `_STL::map<_STL::string, int>` in storage the shared view does not name: attach points at
+`+48` and joints at `+64`. `FindJoint` by CRC walks the map and hashes each name; `FindJoint` and `FindAttachPoint` by
+name use the map's `find`. `GatherAttachPoints` remaps four attach points to joints with fixed names. The field at `+8`
+leads to the file's dynamic loader, inferred from `GatherJoints`, which is not reconstructed.

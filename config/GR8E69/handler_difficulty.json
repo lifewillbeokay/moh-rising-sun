@@ -1,0 +1,67 @@
+{
+  "id": "handler_difficulty",
+  "source": "src/frontend/handler_difficulty.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801908a0",
+      "size": 1224
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b259c",
+      "size": 472
+    }
+  ],
+  "functions": [
+    {
+      "name": "__17HandlerDifficulty",
+      "address": "0x801908a0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__17HandlerDifficultyUiP8FEObjectUl",
+      "address": "0x80190908",
+      "size": 1120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "Get_currentDifficulty__C13CGameSettings": "0x80171798",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcP12FEWideString": "0x8018770c",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcT2": "0x8018769c",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "Set_currentDifficulty__13CGameSettingsUc": "0x8017152c",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "_vt.17HandlerDifficulty": "0x802eb468",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerDifficulty.cpp",
+  "original_file_index": 1762
+}

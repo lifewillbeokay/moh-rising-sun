@@ -1,0 +1,47 @@
+{
+  "id": "fenginterface_stubs",
+  "source": "src/frontend/fenginterface_stubs.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017db64",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "LocalizePackage__14CFengInterfaceP9FEPackage",
+      "address": "0x8017db64",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetMouseInfo__14CFengInterfaceR11FEMouseInfo",
+      "address": "0x8017db6c",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563
+}

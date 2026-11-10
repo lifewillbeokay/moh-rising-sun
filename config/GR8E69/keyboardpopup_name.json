@@ -1,0 +1,72 @@
+{
+  "id": "keyboardpopup_name",
+  "source": "src/frontend/keyboardpopup_name.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5114",
+      "size": 512
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6c54",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnSoundEvent__22CSaveGameKeyboardPopupUiP8FEObject",
+      "address": "0x801a5114",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "AddToNameString__22CSaveGameKeyboardPopupPcc",
+      "address": "0x801a5208",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "BackspaceNameString__22CSaveGameKeyboardPopupPc",
+      "address": "0x801a526c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "LocalizeString__22CSaveGameKeyboardPopupPCcT1",
+      "address": "0x801a52b0",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "SendEvent__15SoundAliasEvent": "0x801679b0",
+    "__as__12FEWideStringPCs": "0x80056a60",
+    "_vt.10SoundEvent": "0x802e4ce8",
+    "_vt.15SoundAliasEvent": "0x802ead68",
+    "g_Shell": "0x802f4420",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameKeyboardPopup.cpp",
+  "original_file_index": 2106
+}

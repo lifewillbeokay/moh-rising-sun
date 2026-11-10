@@ -1,0 +1,102 @@
+{
+  "id": "shellfactory",
+  "source": "src/frontend/shellfactory.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801839c8",
+      "size": 9904
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae72c",
+      "size": 7840
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreatePackageHandler__12ShellFactoryPCc",
+      "address": "0x801839c8",
+      "size": 9840,
+      "binding": 1
+    },
+    {
+      "name": "DestroyPackageHandler__12ShellFactoryP14PackageHandler",
+      "address": "0x80186038",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DebugMsg__FPCce": "0x80279094",
+    "__15HandlerLoadGame": "0x80194c0c",
+    "__16HandlerLevelMenu": "0x80192504",
+    "__16HandlerMPProfile": "0x8018a254",
+    "__16HandlerMovieMenu": "0x801931f4",
+    "__17HandlerDifficulty": "0x801908a0",
+    "__18HandlerSaveProfile": "0x8019aea4",
+    "__19HandlerBonusOptions": "0x80194f50",
+    "__19HandlerLanguageMenu": "0x80199228",
+    "__19HandlerSaveSlotBase": "0x801998c0",
+    "__20HandlerOnlineOptions": "0x8019bd6c",
+    "__20HandlerProfileSelect": "0x8018f3e0",
+    "__21HandlerLoadSlotSelect": "0x8019ac10",
+    "__21HandlerSaveSlotSelect": "0x8019aa5c",
+    "__22HandlerOnlineFavorites": "0x8019c674",
+    "__23HandlerControllerLayout": "0x80192cdc",
+    "__23HandlerCustomController": "0x8019124c",
+    "_vt.13HandlerMPBots": "0x802eb368",
+    "_vt.13HandlerMPJoin": "0x802eb250",
+    "_vt.15HandlerMainMenu": "0x802eb638",
+    "_vt.15Handler_2P_Menu": "0x802eb720",
+    "_vt.16HandlerMPWaiting": "0x802eb288",
+    "_vt.16HandlerNameEntry": "0x802eb4a0",
+    "_vt.17HandlerMPBotChild": "0x802eb330",
+    "_vt.17HandlerMapOverlay": "0x802eb878",
+    "_vt.17HandlerNumPlayers": "0x802eb180",
+    "_vt.17HandlerPauseOutro": "0x802eb9c8",
+    "_vt.18HandlerAudioConfig": "0x802eb3a0",
+    "_vt.18HandlerCoopProfile": "0x802eb778",
+    "_vt.18HandlerCoopProfile.Q211CMemoryCard8ScanTask": "0x802eb758",
+    "_vt.18HandlerGameOptions": "0x802eb520",
+    "_vt.18HandlerLeaderboard": "0x802eb958",
+    "_vt.18HandlerSplitScreen": "0x802eb1b8",
+    "_vt.18HandlerStatsScreen": "0x802eb840",
+    "_vt.18PackageHandlerMain": "0x802eb148",
+    "_vt.20HandlerCoop4WaySplit": "0x802eb6a8",
+    "_vt.20HandlerMPGameOptions": "0x802eb2f8",
+    "_vt.20HandlerMedalsOverlay": "0x802eb8b0",
+    "_vt.20HandlerPasswordEntry": "0x802ebb78",
+    "_vt.21HandlerCoopTempLaunch": "0x802eb5c8",
+    "_vt.21HandlerHUDPreferences": "0x802eb8e8",
+    "_vt.21HandlerOnlineKeyboard": "0x802ebc30",
+    "_vt.21HandlerPauseOutroCoop": "0x802eb990",
+    "_vt.22HandlerCoopGameOptions": "0x802eb6e8",
+    "_vt.22HandlerSpecialFeatures": "0x802eb670",
+    "_vt.23HandlerPausePreferences": "0x802eb920",
+    "_vt.24HandlerControllerOptions": "0x802eb430",
+    "_vt.26HandlerMPGameGlobalOptions": "0x802eb2c0",
+    "_vt.27HandlerOnlineNetConfWarning": "0x802ebcb0",
+    "_vt.27HandlerPauseBriefingOverlay": "0x802eba00",
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellFactory.cpp",
+  "original_file_index": 1599
+}

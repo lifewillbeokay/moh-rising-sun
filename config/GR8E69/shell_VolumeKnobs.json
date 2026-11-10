@@ -1,0 +1,62 @@
+{
+  "id": "shell_VolumeKnobs",
+  "source": "src/shell/VolumeKnobs.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017dcbc",
+      "size": 500
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad9b0",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "Setup__12CVolumeKnobs11EVolumeKnobP8FEObject",
+      "address": "0x8017dcbc",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Increase__12CVolumeKnobs11EVolumeKnob",
+      "address": "0x8017dd38",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "Decrease__12CVolumeKnobs11EVolumeKnob",
+      "address": "0x8017ddf4",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Initialize__7CSliderP8FEObject": "0x8017db70",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "SetValue__7CSliderf": "0x8017dc08",
+    "SoundGetVolumes__FRfT0": "0x80156a50",
+    "SoundSetVolumes__Fff": "0x801569ac",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "VolumeKnobs.cpp",
+  "original_file_index": 1568
+}

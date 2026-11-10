@@ -25,3 +25,16 @@ void ShellManager::RemoveMPViewPorts() {
 void ShellManager::ResetActiveControllerIndicies() {
     for (int i = 0; i < 4; i++) activeControllers[i] = -1;
 }
+void ShellManager::SetActiveControllerIndicies() {
+    ResetActiveControllerIndicies();
+    FEPackageList *list = (FEPackageList *)&engine->packages;
+    if (list) {
+        signed char count = 0;
+        for (int i = 0; i <= 3; i++) {
+            if ((coopJoinBits >> i) & 1) {
+                FEPackage *package = list->FindPackage("MPWaitingJoin.fng", i);
+                if (package) activeControllers[count++] = package->groupId;
+            }
+        }
+    }
+}

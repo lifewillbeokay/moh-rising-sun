@@ -110,3 +110,18 @@ names, including those of `FileInfo` and `GcFileDescriptor`, are inferred from u
 `CARDSetIcon*` macros follow the SDK's `card.h`, whose headers do not build under ProDG here. Not reconstructed:
 the constructor and destructor, `OpenFile`, `WriteFile` (two saved registers rotated), `FindFirst`, `FindNext`,
 `NGCSportsBioCreate` (register rotation only) and `VerifyHeaderChecksum`.
+
+`Realmc::GCInterface` (`gc_interface.cpp`) owns the driver and a thread, `GCMCThread`, that dispatches the
+current task to its `UpdateTask*` function under `mMutex` and publishes `mTaskMsg` through `mpNewTaskMsg`. Its
+state is static members named by the symbol table, also `-G8`. The small-data members are `mReadFailed` through
+`mpNewTaskMsg`. The member names of `GCMessage`, `MessageTimer` and `TaskManager`, and `GCMessage::Reset`, are
+inferred; the code writes `Clear`'s fields inline where the constructor calls `Clear` out of line. Not
+reconstructed: the constructor (one extra saved register for the high half of `mFindResult`'s address),
+`GetMessage` and its `__tcf_0` (a function-local static with a destructor) and the file's static initializer.
+
+Public calls (`public.cpp`, `RealmcPublic.h`) take `mMutex`, set up a static task and hand it to its manager's
+`StartTask`. Verified: the task's fields from `GcTask::Init` and each class's `Clear`, `TaskManager`'s stack, the file
+descriptors' `Clear` and `Init`. Inferred: member names and the `ArgsTask` and `NameTask` shapes, which stand for the
+original concrete task classes. Not reconstructed: the two wide `GetCardName`s, `EndTask` (a result register only),
+`TrcSingletonAssert` (a compare with no branch; no source form found), `TrcCardExists` and `TrcGetCardInfo` (scheduling
+of one address), the `GCMessage`, `BlockCalculator`, `DeviceDriver` and `BaseInterface` destructors, and the tables.

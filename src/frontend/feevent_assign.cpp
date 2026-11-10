@@ -10,12 +10,6 @@ class FEEventList {
     void operator=(FEEventList &);
     void SetCount(long);
 };
-class FEButtonMap {
-  public:
-    FEObject **buttons;  // +0x0
-    unsigned long count; // +0x4
-    void SetCount(unsigned long);
-};
 extern "C" void *DWI_alloc(const char *, int, int);
 
 void FEEventList::operator=(FEEventList &other) {

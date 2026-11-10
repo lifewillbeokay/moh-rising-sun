@@ -1,0 +1,70 @@
+{
+  "id": "handler_audioconfig",
+  "source": "src/frontend/handler_audioconfig.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018ec3c",
+      "size": 1924
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b1eac",
+      "size": 420
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__18HandlerAudioConfigUiP8FEObjectUl",
+      "address": "0x8018ec3c",
+      "size": 1660,
+      "binding": 1
+    },
+    {
+      "name": "Revert__18HandlerAudioConfig",
+      "address": "0x8018f2b8",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Decrease__12CVolumeKnobs11EVolumeKnob": "0x8017ddf4",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetSoundModeValue__13CGameSettingsi": "0x8016fb5c",
+    "Increase__12CVolumeKnobs11EVolumeKnob": "0x8017dd38",
+    "InitAudioFromOptions__13CGameSettingsib": "0x8016f7b4",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "SetSoundModeValue__13CGameSettingsi10ESoundMode": "0x8016fbec",
+    "Setup__12CVolumeKnobs11EVolumeKnobP8FEObject": "0x8017dcbc",
+    "SoundGetVolumes__FRfT0": "0x80156a50",
+    "SoundSetVolumes__Fff": "0x801569ac",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_PauseScreen": "0x802f8040",
+    "g_Shell": "0x802f4420",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerAudioConfig.cpp",
+  "original_file_index": 1723
+}

@@ -16,6 +16,7 @@ struct RuntimeAllocDestructorEntry {
 };
 class DynamicLoader {
   public:
+    static const char AnimBankType[]; // A symbol type name.
     struct Symbol {
         Symbol() : name(0), data(0) {}
         const char *name, *type;

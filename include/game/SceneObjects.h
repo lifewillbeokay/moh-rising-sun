@@ -857,11 +857,7 @@ class CGlare {
 
 #include "AnimShape.h"
 
-// Static decal operations used by the script built-ins.
-class CDecalManager {
-  public:
-    static void ClearDecals();
-};
+#include "DecalManager.h"
 
 #include "Color.h"
 

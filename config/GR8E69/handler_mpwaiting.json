@@ -1,0 +1,62 @@
+{
+  "id": "handler_mpwaiting",
+  "source": "src/frontend/handler_mpwaiting.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018b304",
+      "size": 1220
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b17f8",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__16HandlerMPWaitingPCc",
+      "address": "0x8018b304",
+      "size": 500,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__16HandlerMPWaitingUiP8FEObjectUl",
+      "address": "0x8018b4f8",
+      "size": 720,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DoCoopUnjoin__12ShellManagerP9FEPackageSc": "0x8018265c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetNumCoopPlayers__12ShellManager": "0x80182914",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "IsCoopOnTop__12ShellManagerUc": "0x80182600",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "_16HandlerMPWaiting.mbSplitScreenContinueSend": "0x802c5a28",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPWaiting.cpp",
+  "original_file_index": 1705
+}

@@ -1,0 +1,84 @@
+{
+  "id": "fenginterface_files",
+  "source": "src/frontend/fenginterface_files.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017d0e4",
+      "size": 612
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad7a4",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterUIObject__14CFengInterfaceP9CUIObject",
+      "address": "0x8017d0e4",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "ReplaceFilenameExtension__14CFengInterfacePcT1",
+      "address": "0x8017d140",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "LoadTexture__14CFengInterfaceP17FEResourceRequestPc",
+      "address": "0x8017d1a4",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "LoadFont__14CFengInterfaceP17FEResourceRequestPc",
+      "address": "0x8017d248",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "GenerateXformMatrix__14CFengInterfacePQ24EAGL9TransformP9FEObjDataUs",
+      "address": "0x8017d2c8",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AppendTranslate__Q24EAGL9Transformfff": "0x801e23ac",
+    "BuildScale__Q24EAGL9Transformffff": "0x801e213c",
+    "DWI_alloc": "0x801a8670",
+    "PostMult__Q24EAGL9TransformRCQ24EAGL9Transform": "0x801e20fc",
+    "TLT_LoadFileFromBigFile__FPcPCcPi": "0x801a9b98",
+    "__5CFontPc": "0x80066e14",
+    "__7CSpriteP9ShapeFile": "0x8005d110",
+    "insert_unique__Q24_STLt8_Rb_tree5ZP9CUIObjectZP9CUIObjectZQ24_STLt9_Identity1ZP9CUIObjectZQ24_STLt4less1ZP9CUIObjectZQ24_STLt9allocator1ZP9CUIObjectRCP9CUIObject": "0x8028c7a0",
+    "printf": "0x8026374c",
+    "sprintf": "0x80263a3c",
+    "strchr": "0x80266918",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563
+}

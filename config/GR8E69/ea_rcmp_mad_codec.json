@@ -1,0 +1,147 @@
+{
+  "id": "ea_rcmp_mad_codec",
+  "source": "src/ea/rcmp_mad_codec.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80272f08",
+      "size": 2720
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802c0540",
+      "size": 240
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.18MAD_CODEC_INTERNAL",
+      "address": "0x802edc78",
+      "size": 64,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetChunkType__FPQ24RCMP5CHUNK",
+      "address": "0x80272f08",
+      "size": 68,
+      "binding": 0
+    },
+    {
+      "name": "__9MAD_FRAMEUiUi",
+      "address": "0x80272f4c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "_._9MAD_FRAME",
+      "address": "0x80273008",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "__18MAD_CODEC_INTERNAL",
+      "address": "0x80273080",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "_._18MAD_CODEC_INTERNAL",
+      "address": "0x802730d8",
+      "size": 312,
+      "binding": 1
+    },
+    {
+      "name": "Init__18MAD_CODEC_INTERNALPQ24RCMP7DECODERPQ24RCMP5CHUNK",
+      "address": "0x80273210",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentFrameNumber__18MAD_CODEC_INTERNAL",
+      "address": "0x8027322c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetFrameRate__18MAD_CODEC_INTERNAL",
+      "address": "0x80273234",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetNextChunk__18MAD_CODEC_INTERNALPPQ24RCMP5CHUNK",
+      "address": "0x8027323c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseChunk__18MAD_CODEC_INTERNALPQ24RCMP5CHUNK",
+      "address": "0x80273280",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "DecodeChunk__18MAD_CODEC_INTERNALPQ24RCMP5CHUNK",
+      "address": "0x802732ac",
+      "size": 980,
+      "binding": 1
+    },
+    {
+      "name": "GetFrame__18MAD_CODEC_INTERNALUi",
+      "address": "0x80273680",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "CreateKorM__18MAD_CODEC_INTERNAL",
+      "address": "0x802737b4",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "CreateE__18MAD_CODEC_INTERNAL",
+      "address": "0x80273858",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseFrame__18MAD_CODEC_INTERNALPQ24RCMP5FRAME",
+      "address": "0x802738fc",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "MAD_CODEC_create__4RCMPv",
+      "address": "0x8027395c",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetChunk__Q24RCMP7DECODER": "0x801b10f8",
+    "MAD_decodemacroblock__FPCUcN20PUcN23i": "0x802741c4",
+    "MAD_initdecode__FPCUsii": "0x802740ec",
+    "MEM_fill": "0x8021866c",
+    "REAL_abortmessage": "0x80218268",
+    "ReleaseChunk__Q24RCMP7DECODERPQ24RCMP5CHUNK": "0x801b1150",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "_vt.Q24RCMP5CODEC": "0x802edcb8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

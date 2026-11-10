@@ -1,0 +1,88 @@
+{
+  "id": "gc_interface_messages",
+  "source": "src/memorycard/gc_interface_messages.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020de9c",
+      "size": 528
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bf560",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetTrcMessageFile__Q26Realmc11GCInterfacePCv",
+      "address": "0x8020de9c",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "SendMessage__Q26Realmc11GCInterfaceQ26Realmc11UserMessagei",
+      "address": "0x8020dee8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "ConvertUmsgToOption__Q26Realmc11GCInterfaceQ26Realmc11UserMessageiQ26Realmc6TaskID",
+      "address": "0x8020df60",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "CheckCard__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020e038",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "ClearTask__Q26Realmc11GCInterface",
+      "address": "0x8020e06c",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsCardPresent__Q26Realmc8GCDriver": "0x80215dd8",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "SetTrcFile__Q26Realmc6LocalePCv": "0x802169d8",
+    "_Q26Realmc11GCInterface.mMsgTimer": "0x80409a8c",
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mNoCheckingCardWarning": "0x80451268",
+    "_Q26Realmc11GCInterface.mTaskManager": "0x80409a9c",
+    "_Q26Realmc11GCInterface.mTaskMsg": "0x8040a1bc",
+    "_Q26Realmc11GCInterface.mUserMsg": "0x80451270",
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c",
+    "sprintf": "0x80263a3c"
+  },
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mNoCheckingCardWarning",
+    "_Q26Realmc11GCInterface.mUserMsg",
+    "_Q26Realmc11GCInterface.mpDriver"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916
+}

@@ -1,0 +1,46 @@
+{
+  "id": "fereader_readmessageresponsetags",
+  "source": "src/frontend/fereader_readmessageresponsetags.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80054b34",
+      "size": 592
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadMessageResponseTags__15FEPackageReaderP5FETagUlb",
+      "address": "0x80054b34",
+      "size": 592,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "FindResponse__C8FEObjectUl": "0x800507e0",
+    "PurgeResponses__17FEMessageResponse": "0x8004c298",
+    "SetCount__17FEMessageResponseUl": "0x8004c314",
+    "SetParam__10FEResponsePCc": "0x8004bf3c",
+    "__nw__17FEMessageResponseUi": "0x8004c060",
+    "_vt.17FEMessageResponse": "0x802e1248"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

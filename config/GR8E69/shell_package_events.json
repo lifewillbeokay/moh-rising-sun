@@ -1,0 +1,66 @@
+{
+  "id": "shell_package_events",
+  "source": "src/frontend/shell_package_events.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017fa3c",
+      "size": 772
+    }
+  ],
+  "functions": [
+    {
+      "name": "PackageWasLoaded__12ShellManagerP9FEPackage",
+      "address": "0x8017fa3c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "PackageWillUnload__12ShellManagerP9FEPackage",
+      "address": "0x8017fad8",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "NotificationMessage__12ShellManagerUlP8FEObjectUlUl",
+      "address": "0x8017fbd0",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "NotifySoundMessage__12ShellManagerUlP8FEObjectUlUl",
+      "address": "0x8017fc88",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreatePackageHandler__12ShellFactoryPCc": "0x801839c8",
+    "DestroyPackageHandler__12ShellFactoryP14PackageHandler": "0x80186038",
+    "Update__9FEPackageP7FEnginel": "0x80051be8",
+    "_Rebalance_for_erase__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_baseRPQ24_STL18_Rb_tree_node_baseN22": "0x8027de58",
+    "__builtin_delete": "0x801a8990",
+    "insert_unique__Q24_STLt8_Rb_tree5ZP9FEPackageZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerZQ24_STLt4less1ZP9FEPackageZQ24_STLt9allocator1ZQ24_STLt4pair2ZCP9FEPackageZP14PackageHandlerRCQ24_STLt4pair2ZCP9FEPackageZP14PackageHandler": "0x8028caf0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

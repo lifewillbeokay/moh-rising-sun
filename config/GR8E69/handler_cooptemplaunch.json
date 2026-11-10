@@ -1,0 +1,40 @@
+{
+  "id": "handler_cooptemplaunch",
+  "source": "src/frontend/handler_cooptemplaunch.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801931d0",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__21HandlerCoopTempLaunchUiP8FEObjectUl",
+      "address": "0x801931d0",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "HandleCoopLevelStartEvent__14PackageHandlerUiP8FEObject": "0x801884bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopTempLaunch.cpp",
+  "original_file_index": 1814
+}

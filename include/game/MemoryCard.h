@@ -36,6 +36,8 @@ public:
     virtual int WasDataWritten() const;
     int IsBusy() const;
     void OnEnterInteractiveMode();
+    int ScanVisibly(ScanTask &, int);
+    int Load(const char *, unsigned int, struct SPlayerProfile &);
     void CancelReplyRequest();
     int WaitingForReply() const;
     void *GetTextDatabase() const;

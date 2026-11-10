@@ -1,0 +1,65 @@
+{
+  "id": "projector_system_def",
+  "source": "src/camera/projector_system_def.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80131e44",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19CProjectorSystemDef",
+      "address": "0x80131e44",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "_._19CProjectorSystemDef",
+      "address": "0x80131e5c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "__19CProjectorSystemDefRC19CProjectorSystemDef",
+      "address": "0x80131eb8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "__19CProjectorSystemDefP24LevelFileContentsStruct_",
+      "address": "0x80131ed8",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetClampMode__Q24EAGL3TARQ24EAGL9ClampMode": "0x801e0b6c",
+    "TLT_LoadFromRepository__FPCcPiPb": "0x801a9c88",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "_12EAGLInternal.EAGLMalloc": "0x802d2e08",
+    "__Q24EAGL3TARPC5SHAPE": "0x801e09cc",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

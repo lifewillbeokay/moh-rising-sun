@@ -1,0 +1,50 @@
+{
+  "id": "ai_StateIteratorDtor",
+  "source": "src/eala/StateIteratorDtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008594c",
+      "size": 268
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q34EALA9Character13StateIterator",
+      "address": "0x8008594c",
+      "size": 268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__dl__Q34EALA9Character13StateIteratorPvUi": "0x800857ac",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "_vt.Q34EALA9Character13StateIterator": "0x802e3098",
+    "_vt.Q34EALA9Character13StateIterator.8ISubject": "0x802e3070",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StateIterator.cpp",
+  "original_file_index": 596
+}

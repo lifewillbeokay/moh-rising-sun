@@ -1,0 +1,51 @@
+{
+  "id": "handler_mpprofile_scan",
+  "source": "src/frontend/handler_mpprofile_scan.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018b094",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "Execute__16HandlerMPProfilePCcUi",
+      "address": "0x8018b094",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "_._16HandlerMPProfile",
+      "address": "0x8018b100",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._14PackageHandler": "0x80187050",
+    "_16HandlerMPProfile.m_lastProfile": "0x802c5a20",
+    "_16HandlerMPProfile.m_profiles": "0x80449e14",
+    "_vt.16HandlerMPProfile": "0x802eb218",
+    "_vt.Q211CMemoryCard8ScanTask": "0x802e1550",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPProfile.cpp",
+  "original_file_index": 1665
+}

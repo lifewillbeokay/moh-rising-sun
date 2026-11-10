@@ -1,0 +1,74 @@
+{
+  "id": "ai_TurnB",
+  "source": "src/eala/TurnB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008f5dc",
+      "size": 732
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029d03c",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__Q34EALA9Character4TurnRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008f5dc",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character4Turn",
+      "address": "0x8008f644",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "EvalPose__Q34EALA9Character4TurnfPf",
+      "address": "0x8008f6a0",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "Dump__Q34EALA9Character4TurnUi",
+      "address": "0x8008f768",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Assign__Q34EALA9Character4TurnRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Taskfff",
+      "address": "0x8008f798",
+      "size": 288,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "DebugMsg__FPCce": "0x80279094",
+    "DumpPrefix__Q34EALA9Character4TaskUi": "0x8008fd24",
+    "__Q34EALA9Character4TurnRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f46c",
+    "__nw__Q34EALA9Character4TurnUi": "0x8008f414"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

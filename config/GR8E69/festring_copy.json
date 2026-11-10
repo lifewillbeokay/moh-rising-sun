@@ -1,0 +1,60 @@
+{
+  "id": "festring_copy",
+  "source": "src/frontend/festring_copy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055e18",
+      "size": 324
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80298490",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8FEStringRC8FEStringb",
+      "address": "0x80055e18",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "SetLabel__8FEStringPCc",
+      "address": "0x80055ea0",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "SetLength__12FEWideStringUl": "0x80056b64",
+    "_8FEString.pLabelCallback": "0x802c1810",
+    "__12FEWideStringRC12FEWideString": "0x80056974",
+    "__8FEObjectRC8FEObjectb": "0x8005002c",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.8FEString": "0x802e13e8",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEString.cpp",
+  "original_file_index": 341
+}

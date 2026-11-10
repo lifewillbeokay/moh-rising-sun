@@ -1,0 +1,62 @@
+{
+  "id": "fenode_fenode",
+  "source": "src/frontend/fenode_fenode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004966c",
+      "size": 292
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297554",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "__6FENode",
+      "address": "0x8004966c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "_._6FENode",
+      "address": "0x8004969c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetName__6FENodePCc",
+      "address": "0x80049700",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.6FENode": "0x802e11e0",
+    "_vt.9FEMinNode": "0x802e11c8",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

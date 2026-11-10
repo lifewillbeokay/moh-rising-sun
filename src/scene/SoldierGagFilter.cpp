@@ -9,7 +9,7 @@
 #include "EAGLTransform.h"
 #include "../game-containers/TargetTypes.h"
 void DebugMsg(const char *, ...);
-void *LUAEvaluateState(void *, const char *, int, const char *);
+int LUAEvaluateState(void *, const char *, int, const char *);
 
 extern WeakPtr<CSoldierObject, 8> g_lipSyncSoldier[32];
 extern int g_nextLipSyncSoldier;
@@ -60,7 +60,7 @@ int CSoldierObject::IsInAnyOtherCompartment(int current) {
 }
 
 int CSoldierObject::EvaluateScript(const char *name, unsigned int value, const char *arg) {
-    return (int)LUAEvaluateState(this, name, value, arg);
+    return LUAEvaluateState(this, name, value, arg);
 }
 
 void CSoldierObject::LipSyncFilterInit(void *filter, int soldier, int channel) {

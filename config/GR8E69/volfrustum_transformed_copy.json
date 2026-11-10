@@ -1,0 +1,56 @@
+{
+  "id": "volfrustum_transformed_copy",
+  "source": "src/camera/volfrustum_transformed_copy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013f6ec",
+      "size": 224
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a82f4",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "TransformedCopy__11CVolFrustumRC7IVolumeRC7CMatrix",
+      "address": "0x8013f6ec",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC7IVolumeR10CCollisionb",
+      "address": "0x8013f79c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "Transform__6CPlaneRC7CMatrix": "0x8007be5c",
+    "_._11CVolFrustum": "0x8013ef38",
+    "__11CVolFrustumRC11CVolFrustum": "0x8013ee90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "frustum.cpp",
+  "original_file_index": 1327
+}

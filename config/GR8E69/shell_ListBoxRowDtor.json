@@ -1,0 +1,43 @@
+{
+  "id": "shell_ListBoxRowDtor",
+  "source": "src/shell/ListBoxRowDtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80186fb0",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q27ListBox3Row",
+      "address": "0x80186fb0",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "dListBox.cpp",
+  "original_file_index": 1601
+}

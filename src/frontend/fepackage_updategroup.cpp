@@ -4,7 +4,7 @@
 #include <string.h>
 
 void FEPackage::UpdateGroup(FEGroup *group, long time) {
-    for (FEObject *object = group->children; object; object = (FEObject *)object->next) {
+    for (FEObject *object = (FEObject *)group->childList.head; object; object = (FEObject *)object->next) {
         UpdateObject(object, time);
         object->flags |= group->flags & 0x03c00000;
     }

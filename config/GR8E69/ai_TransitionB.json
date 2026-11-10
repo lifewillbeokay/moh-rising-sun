@@ -1,0 +1,87 @@
+{
+  "id": "ai_TransitionB",
+  "source": "src/eala/TransitionB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008ee90",
+      "size": 960
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029cdac",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Dump__Q34EALA9Character10TransitionUi",
+      "address": "0x8008ee90",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "HandleMessage__Q34EALA9Character10Transition",
+      "address": "0x8008ef84",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "HandlePose__Q34EALA9Character10TransitionUi",
+      "address": "0x8008efd8",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "HandleRotation__Q34EALA9Character10Transitionf",
+      "address": "0x8008f044",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "HandleCycleEnd__Q34EALA9Character10Transition",
+      "address": "0x8008f098",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "HandleAnimDuration__Q34EALA9Character10Transitionf",
+      "address": "0x8008f0ec",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "Promote__Q34EALA9Character10TransitionRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
+      "address": "0x8008f140",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "DumpPrefix__Q34EALA9Character4TaskUi": "0x8008fd24",
+    "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task": "0x8008fac0",
+    "SetCorePose__Q34EALA9Character4TaskUi": "0x8008fc70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Transition.cpp",
+  "original_file_index": 656
+}

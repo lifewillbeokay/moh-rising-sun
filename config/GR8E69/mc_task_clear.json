@@ -1,0 +1,86 @@
+{
+  "id": "mc_task_clear",
+  "source": "src/memorycard/task_clear.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80294f2c",
+      "size": 648
+    }
+  ],
+  "functions": [
+    {
+      "name": "Clear__Q26Realmc14FindInfoStruct",
+      "address": "0x80294f2c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "Init__Q26Realmc6GcTaskb",
+      "address": "0x80294f88",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc7TaskTrc",
+      "address": "0x80294fa8",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc16TaskTrcStartGame",
+      "address": "0x80294fbc",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc18TaskTrcGetCardInfo",
+      "address": "0x80295008",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc15TaskTrcSaveFile",
+      "address": "0x80295048",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc16TaskTrcListFiles",
+      "address": "0x802950b8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc15TaskTrcLoadFile",
+      "address": "0x80295104",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc17TaskTrcDeleteFile",
+      "address": "0x8029515c",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

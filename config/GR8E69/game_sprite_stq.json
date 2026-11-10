@@ -1,0 +1,47 @@
+{
+  "id": "game_sprite_stq",
+  "source": "src/game/sprite_stq.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005d4f8",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299ad8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "STQ__C7CSpriteff",
+      "address": "0x8005d4f8",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "STQ__C7CSpriteRC15_spritepolyvert",
+      "address": "0x8005d554",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

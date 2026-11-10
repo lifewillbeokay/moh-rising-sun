@@ -1,0 +1,49 @@
+{
+  "id": "handler_loadslotselect_accept",
+  "source": "src/frontend/handler_loadslotselect_accept.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019ac7c",
+      "size": 308
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnAccept__21HandlerLoadSlotSelect",
+      "address": "0x8019ac7c",
+      "size": 308,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSaveData__C13CGameSettingsUiUi": "0x801710f0",
+    "GetSelection__C19HandlerSaveSlotBase": "0x8019a028",
+    "RestoreSaveData__13CGameSettingsUiUi": "0x80170054",
+    "SetNextMissionAndLevel__13CGameSettingsUiUii": "0x8016d8d4",
+    "UnpauseGame__10CPauseMenu": "0x8017e27c",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_PauseScreen": "0x802f8040",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerLoadSlotSelect.cpp",
+  "original_file_index": 1981
+}

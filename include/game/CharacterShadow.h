@@ -16,11 +16,13 @@ public:
     void InitData();
     void Release();
     void AttachProjector();
+    void InitProjector();
+    void SetShadowCaster(CAnimObject *);
     void Update(float);
 
     int enabled;
-    void *field04;
-    unsigned char unknown08[8];
+    CAnimObject *caster;   // +4
+    int hipJoints[2];      // +8: left and right joint indices.
     void *field10;
     float scale;
     float field18;

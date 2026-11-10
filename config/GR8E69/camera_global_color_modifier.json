@@ -1,0 +1,60 @@
+{
+  "id": "camera_global_color_modifier",
+  "source": "src/camera/global_color_modifier.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012d26c",
+      "size": 160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a779c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__19GlobalColorModifierv",
+      "address": "0x8012d26c",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SetScale__19GlobalColorModifierRC10CNormColor",
+      "address": "0x8012d2b4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SetOffset__19GlobalColorModifierRC10CNormColor",
+      "address": "0x8012d2e0",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RegisterVar__Q24EAGL13DynamicLoaderPCcPv": "0x801eb030",
+    "SetDefaults__19GlobalColorModifierv": "0x8012d3cc",
+    "_19GlobalColorModifier.offset": "0x8032d0b0",
+    "_19GlobalColorModifier.scale": "0x8032d0a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "draw_context.cpp",
+  "original_file_index": 1271
+}

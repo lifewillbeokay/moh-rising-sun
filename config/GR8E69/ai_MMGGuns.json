@@ -1,0 +1,75 @@
+{
+  "id": "ai_MMGGuns",
+  "source": "src/ai/MMGGuns.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e3ad4",
+      "size": 860
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a352c",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterGun__26CMountedMachineGunBehavioriP13CStaticObject",
+      "address": "0x800e3ad4",
+      "size": 372,
+      "binding": 1
+    },
+    {
+      "name": "DeregisterGun__26CMountedMachineGunBehaviori",
+      "address": "0x800e3c48",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "DeregisterAllGuns__26CMountedMachineGunBehavior",
+      "address": "0x800e3d34",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetGunByLinkCode__26CMountedMachineGunBehaviori",
+      "address": "0x800e3d9c",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_getallocid": "0x801a8664",
+    "DWI_setallocid": "0x801a8658",
+    "_M_erase__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP13CStaticObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP13CStaticObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP13CStaticObjectPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCiZP13CStaticObject": "0x80284004",
+    "_Rebalance_for_erase__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_baseRPQ24_STL18_Rb_tree_node_baseN22": "0x8027de58",
+    "__builtin_delete": "0x801a8990",
+    "g_guns": "0x8031cf5c",
+    "insert_unique__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP13CStaticObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP13CStaticObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP13CStaticObjectGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCiZP13CStaticObjectZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCiZP13CStaticObjectRCQ24_STLt4pair2ZCiZP13CStaticObject": "0x80283d9c"
+  },
+  "local_externals": [
+    "g_guns"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

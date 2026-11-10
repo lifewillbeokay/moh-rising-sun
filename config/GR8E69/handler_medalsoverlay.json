@@ -1,0 +1,50 @@
+{
+  "id": "handler_medalsoverlay",
+  "source": "src/frontend/handler_medalsoverlay.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80196694",
+      "size": 272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b4428",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__20HandlerMedalsOverlayUiP8FEObjectUl",
+      "address": "0x80196694",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "HasMedal__C13CGameSettingsi": "0x801715b8",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "g_GameSettings": "0x802f80c8",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMedalsOverlay.cpp",
+  "original_file_index": 1860
+}

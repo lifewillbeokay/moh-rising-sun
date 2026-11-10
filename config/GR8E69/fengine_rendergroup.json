@@ -1,0 +1,48 @@
+{
+  "id": "fengine_rendergroup",
+  "source": "src/frontend/fengine_rendergroup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004eadc",
+      "size": 464
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297c10",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "RenderGroup__7FEngineP7FEGroupR9FEMatrix4T2Us",
+      "address": "0x8004eadc",
+      "size": 464,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEMultMatrix__FP9FEMatrix4PC9FEMatrix4T1": "0x8004bb80",
+    "FEMultMatrix__FP9FEVector3PC9FEMatrix4PC9FEVector3": "0x8004be00",
+    "GetMatrix__12FEQuaternionP9FEMatrix4": "0x8004ba68",
+    "RenderObject__7FEngineP8FEObjectR9FEMatrix4Us": "0x8004ecac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

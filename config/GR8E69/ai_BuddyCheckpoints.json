@@ -1,0 +1,73 @@
+{
+  "id": "ai_BuddyCheckpoints",
+  "source": "src/ai/BuddyCheckpoints.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e4bf4",
+      "size": 1264
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a368c",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleCheckpointReachedByBuddy__18CBuddyLeadBehaviori",
+      "address": "0x800e4bf4",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "HandleCheckpointReachedByPlayer__18CBuddyLeadBehaviori",
+      "address": "0x800e4d48",
+      "size": 344,
+      "binding": 1
+    },
+    {
+      "name": "GetBuddyLeadCheckpointFromID__18CBuddyLeadBehaviori",
+      "address": "0x800e4ea0",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "GetNextCheckpoint__FP12Checkpoint_t",
+      "address": "0x800e4f70",
+      "size": 372,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "GetBool__C13TriggerObjectPCc": "0x8012298c",
+    "GetInt__C13TriggerObjectPCc": "0x80122844",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "g_checkpointMap": "0x8031cf6c",
+    "insert_unique__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP12Checkpoint_tZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP12Checkpoint_tZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP12Checkpoint_tGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCiZP12Checkpoint_tZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCiZP12Checkpoint_tRCQ24_STLt4pair2ZCiZP12Checkpoint_t": "0x80284c94"
+  },
+  "local_externals": [
+    "g_checkpointMap"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BuddyLeadBehavior.cpp",
+  "original_file_index": 1029
+}

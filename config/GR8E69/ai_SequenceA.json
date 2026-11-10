@@ -1,0 +1,45 @@
+{
+  "id": "ai_SequenceA",
+  "source": "src/eala/SequenceA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008db78",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q34EALA9Character8SequenceRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008db78",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "_vt.Q34EALA9Character8Sequence": "0x802e3c18",
+    "_vt.Q34EALA9Character8Sequence.8ISubject": "0x802e3bf0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Sequence.cpp",
+  "original_file_index": 644
+}

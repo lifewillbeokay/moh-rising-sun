@@ -1,0 +1,61 @@
+{
+  "id": "ai_AnimationPose",
+  "source": "src/eala/AnimationPose.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007f108",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b260",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetRootTransform__Q34EALA9Character9AnimationPfPQ34EALA9Character8SkeletonR6COORD3R6COORD4",
+      "address": "0x8007f108",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "SetRootTransform__Q34EALA9Character9AnimationPfPQ34EALA9Character8SkeletonRC6COORD3RC6COORD4",
+      "address": "0x8007f144",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "EvalSQT__Q34EALA9Character9AnimationPQ34EALA9Character8SkeletonfPfPCQ28EAGLAnim8BoneMask",
+      "address": "0x8007f180",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_Q34EALA9Character9Animation.ms_fPlaybackRate": "0x802fbf80",
+    "min__H1Zf_X01X01_X01": "0x8027c900"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Animation.cpp",
+  "original_file_index": 560
+}

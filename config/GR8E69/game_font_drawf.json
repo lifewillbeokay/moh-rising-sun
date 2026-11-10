@@ -1,6 +1,6 @@
 {
-  "id": "ai_BotStrafe",
-  "source": "src/ai/BotStrafe.cpp",
+  "id": "game_font_drawf",
+  "source": "src/game/font_drawf.cpp",
   "category": "reconstructed_game",
   "compiler_version": "3.8.1",
   "compiler_flags": [
@@ -18,27 +18,22 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x80098324",
-      "size": 148
-    },
-    {
-      "name": ".rodata",
-      "address": "0x8029dc30",
-      "size": 12
+      "address": "0x80067420",
+      "size": 216
     }
   ],
   "functions": [
     {
-      "name": "WantToStrafe__10CBotObject",
-      "address": "0x80098324",
-      "size": 148,
+      "name": "DrawTextF__5CFontffPCce",
+      "address": "0x80067420",
+      "size": 216,
       "binding": 1
     }
   ],
   "externals": {
-    "GetIdealRange__10CBotWeaponP13CBotCharacter": "0x800927c0",
-    "MathFunRandomReal__Fff": "0x80133a54",
-    "WithinGrenadeBlastRadius__10CBotObject": "0x800993b4"
+    "ComputeJustification__5CFontRfT1PCc": "0x80067628",
+    "DrawText__5CFontffPCc": "0x80067338",
+    "vsprintf": "0x80264dfc"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": []

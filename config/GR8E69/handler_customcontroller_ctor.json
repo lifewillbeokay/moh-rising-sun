@@ -1,0 +1,40 @@
+{
+  "id": "handler_customcontroller_ctor",
+  "source": "src/frontend/handler_customcontroller_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019124c",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__23HandlerCustomController",
+      "address": "0x8019124c",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.23HandlerCustomController": "0x802eb4e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCustomController.cpp",
+  "original_file_index": 1766
+}

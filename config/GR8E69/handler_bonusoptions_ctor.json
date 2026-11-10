@@ -1,0 +1,47 @@
+{
+  "id": "handler_bonusoptions_ctor",
+  "source": "src/frontend/handler_bonusoptions_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80194f50",
+      "size": 116
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3d1c",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19HandlerBonusOptions",
+      "address": "0x80194f50",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "_vt.19HandlerBonusOptions": "0x802eb808",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerBonusOptions.cpp",
+  "original_file_index": 1845
+}

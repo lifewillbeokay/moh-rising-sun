@@ -1,0 +1,75 @@
+{
+  "id": "ai_BotChase",
+  "source": "src/ai/BotChase.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80098324",
+      "size": 1280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dc30",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "WantToStrafe__10CBotObject",
+      "address": "0x80098324",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "ChaseDecision__10CBotObjectb",
+      "address": "0x800983b8",
+      "size": 568,
+      "binding": 1
+    },
+    {
+      "name": "DirectChase__10CBotObjectR8CVector3",
+      "address": "0x800985f0",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "CoverPointChase__10CBotObjectR8CVector3ff",
+      "address": "0x800986f0",
+      "size": 308,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CalcAStarPath__10CBotObjectRC8CVector3P13CAreaPathNode": "0x80095d94",
+    "ChangeState__10CBotObject9eBotStatePc": "0x80092c84",
+    "DistanceXY__C8CVector3RC8CVector3": "0x8007bd44",
+    "EstimateEnemyPosition__10CBotObject": "0x80098840",
+    "FindCover2__FiRC8CVector3P10CBotObjectR10sCoverData": "0x800a0e94",
+    "GetClock__10CBotObject": "0x800991dc",
+    "GetCurrentPathNode__10CBotObject": "0x800993e8",
+    "GetHealth__10CBotObject": "0x80099248",
+    "GetIdealRange__10CBotWeaponP13CBotCharacter": "0x800927c0",
+    "GetIndexByPathNode__13AIPathFindingP13CAreaPathNode": "0x800e7640",
+    "GetPathNodeByIndex__13AIPathFindingUs": "0x800e762c",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "PathDistance__C18CAIAreaPathFinding": "0x800ea264",
+    "WithinGrenadeBlastRadius__10CBotObject": "0x800993b4",
+    "rand": "0x80265c98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

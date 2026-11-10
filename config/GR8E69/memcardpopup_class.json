@@ -1,0 +1,77 @@
+{
+  "id": "memcardpopup_class",
+  "source": "src/frontend/memcardpopup_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3de8",
+      "size": 480
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6810",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__16CMemoryCardPopup",
+      "address": "0x801a3de8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__16CMemoryCardPopup",
+      "address": "0x801a3e2c",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Instance__16CMemoryCardPopup",
+      "address": "0x801a3e84",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__16CMemoryCardPopup",
+      "address": "0x801a3e90",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "_._16CMemoryCardPopup",
+      "address": "0x801a3f98",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "FindObject__C7FEnginePCcT1": "0x8004d430",
+    "HideSelections__16CMemoryCardPopup": "0x801a4664",
+    "_._14CSaveGamePopup": "0x801a22e8",
+    "_16CMemoryCardPopup.s_pInstance": "0x802c5d78",
+    "__14CSaveGamePopupPCc": "0x801a219c",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "_vt.16CMemoryCardPopup": "0x802ebeb0",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardPopup.cpp",
+  "original_file_index": 2094
+}

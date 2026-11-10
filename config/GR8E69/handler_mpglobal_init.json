@@ -1,0 +1,50 @@
+{
+  "id": "handler_mpglobal_init",
+  "source": "src/frontend/handler_mpglobal_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018ca84",
+      "size": 180
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b1b9c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__26HandlerMPGameGlobalOptionsPCc",
+      "address": "0x8018ca84",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetProfile__13CGameSettingsUi": "0x801719cc",
+    "Init__20HandlerMPGameOptionsPCc": "0x8018bb04",
+    "SetObjectListIndex__14PackageHandlerPcUi": "0x8018798c",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPGameOptions.cpp",
+  "original_file_index": 1707
+}

@@ -1,0 +1,66 @@
+{
+  "id": "sound_emitter_scene_node_tail",
+  "source": "src/sound/SceneNodeSoundEmitterTail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801682ac",
+      "size": 112
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.21SceneNodeSoundEmitter",
+      "address": "0x802eadf0",
+      "size": 72,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._21SceneNodeSoundEmitter",
+      "address": "0x801682ac",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetObjRef__C21SceneNodeSoundEmitter",
+      "address": "0x8016830c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__21SceneNodeSoundEmitter",
+      "address": "0x80168314",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Clone__C21SceneNodeSoundEmitterP12SoundEmitter": "0x80167c00",
+    "GetAzimuth__C21SceneNodeSoundEmitter": "0x80167db8",
+    "GetDistance__C21SceneNodeSoundEmitter": "0x80167c84",
+    "GetFilterDef__C21SceneNodeSoundEmitter": "0x80167e7c",
+    "_._9IObserver": "0x8014ad64",
+    "__builtin_delete": "0x801a8990",
+    "_vt.12SoundEmitter": "0x802e4ca0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSoundEmitter.cpp",
+  "original_file_index": 1460
+}

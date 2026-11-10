@@ -1,0 +1,132 @@
+{
+  "id": "ea_maddec",
+  "source": "src/ea/maddec.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802739e0",
+      "size": 2844
+    }
+  ],
+  "functions": [
+    {
+      "name": "madinit__Fv",
+      "address": "0x802739e0",
+      "size": 784,
+      "binding": 0
+    },
+    {
+      "name": "discardbits__Fi",
+      "address": "0x80273cf0",
+      "size": 88,
+      "binding": 0
+    },
+    {
+      "name": "getdelta__Fv",
+      "address": "0x80273d48",
+      "size": 68,
+      "binding": 0
+    },
+    {
+      "name": "dcblock__FPii",
+      "address": "0x80273d8c",
+      "size": 96,
+      "binding": 0
+    },
+    {
+      "name": "getluma__FPCUciPii",
+      "address": "0x80273dec",
+      "size": 156,
+      "binding": 0
+    },
+    {
+      "name": "getchroma__FPCUciPii",
+      "address": "0x80273e88",
+      "size": 156,
+      "binding": 0
+    },
+    {
+      "name": "setluma__FPCiPUci",
+      "address": "0x80273f24",
+      "size": 292,
+      "binding": 0
+    },
+    {
+      "name": "setchroma__FPCiPUci",
+      "address": "0x80274048",
+      "size": 164,
+      "binding": 0
+    },
+    {
+      "name": "MAD_initdecode__FPCUsii",
+      "address": "0x802740ec",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "MAD_decodemacroblock__FPCUcN20PUcN23i",
+      "address": "0x802741c4",
+      "size": 824,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "chroma": "0x80448aac",
+    "clipbiastbl": "0x80448cac",
+    "encodetbl1": "0x802c0640",
+    "encodetbl2": "0x802c0c30",
+    "fixedmult": "0x80274afc",
+    "idctcompute": "0x80274998",
+    "idctinput": "0x80448eac",
+    "idctprescale": "0x802e0f58",
+    "initflag": "0x8045250c",
+    "luma": "0x804486ac",
+    "madbitcount": "0x80452508",
+    "maddataptr": "0x80452500",
+    "madquant": "0x804485ac",
+    "madshiftreg": "0x80452504",
+    "madvlcdecode": "0x80274554",
+    "madvlctbl1": "0x804474ac",
+    "madvlctbl2": "0x80447cac",
+    "madvlctbl3": "0x804480ac",
+    "madvlctbl4": "0x804484ac",
+    "motionframe": "0x80452510",
+    "quanttbl": "0x802c1430"
+  },
+  "local_externals": [
+    "chroma",
+    "clipbiastbl",
+    "encodetbl1",
+    "encodetbl2",
+    "initflag",
+    "luma",
+    "motionframe",
+    "quanttbl"
+  ],
+  "sda_externals": [
+    "initflag",
+    "madbitcount",
+    "maddataptr",
+    "madshiftreg",
+    "motionframe"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "maddec.cpp",
+  "original_file_index": 5043
+}

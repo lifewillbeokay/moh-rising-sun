@@ -1,0 +1,40 @@
+{
+  "id": "handler_customcontroller_equal",
+  "source": "src/frontend/handler_customcontroller_equal.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80192144",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "AreButtonsEqual__23HandlerCustomControllerP14SFunctionNamesT1",
+      "address": "0x80192144",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "analogEquivalence": "0x802c5c50"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCustomController.cpp",
+  "original_file_index": 1766
+}

@@ -1,0 +1,53 @@
+{
+  "id": "fengine_fengine",
+  "source": "src/frontend/fengine_fengine.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004c8c0",
+      "size": 512
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7FEngine",
+      "address": "0x8004c8c0",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "_._7FEngine",
+      "address": "0x8004ca1c",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Purge__9FEMinList": "0x802780a4",
+    "ReleaseAll__7FEngine": "0x8004cac0",
+    "Startup__9FETypeLib": "0x800561f8",
+    "__7FEMouse": "0x8004c6e4",
+    "__builtin_delete": "0x801a8990",
+    "_vt.6FEList": "0x802e1218",
+    "_vt.9FEMinList": "0x802e1180",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

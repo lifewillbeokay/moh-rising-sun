@@ -1,0 +1,147 @@
+{
+  "id": "ai_OperationStreams",
+  "source": "src/eala/OperationStreams.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008bc34",
+      "size": 5352
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029cac0",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "Serialize__Q34EALA9Character19MatrixBlendOperatorRQ29Serialize3Any",
+      "address": "0x8008bc34",
+      "size": 724,
+      "binding": 1
+    },
+    {
+      "name": "size_of__Q34EALA9Character19LinearBlendOperatori",
+      "address": "0x8008bf08",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character19LinearBlendOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008bf14",
+      "size": 1228,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character19LinearBlendOperatorRQ29Serialize3Any",
+      "address": "0x8008c3e0",
+      "size": 444,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character12TurnOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008c59c",
+      "size": 752,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character12TurnOperatorRQ29Serialize3Any",
+      "address": "0x8008c88c",
+      "size": 288,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character14ScriptOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008c9ac",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character14ScriptOperatorRQ29Serialize3Any",
+      "address": "0x8008ca74",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character26AuthoredTransitionOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008cb7c",
+      "size": 776,
+      "binding": 1
+    },
+    {
+      "name": "IsAuthoredTransition__Q34EALA9Character26AuthoredTransitionOperatorUiUi",
+      "address": "0x8008ce84",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character26AuthoredTransitionOperatorRQ29Serialize3Any",
+      "address": "0x8008cea4",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q44EALA9Character9Operation7OperandRQ29Serialize3Any",
+      "address": "0x8008cf18",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character13SimpleOperandRQ29Serialize3Any",
+      "address": "0x8008cf44",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character15WeightedOperandRQ29Serialize3Any",
+      "address": "0x8008cf64",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character18MatrixBlendOperandRQ29Serialize3Any",
+      "address": "0x8008cfb8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "GetTaskAngle__Q34EALA9Character11TurnOperandRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008d030",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Assign__Q34EALA9Character4TurnRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Taskfff": "0x8008f798",
+    "Create__Q34EALA9Character11LinearBlendRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskPCciPQ44EALA9Character11LinearBlend11SubTaskInfo": "0x800868a0",
+    "Create__Q34EALA9Character4TurnRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f5dc",
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "EvalSubstate__Q34EALA9Character5StateUiPQ34EALA9Character4Task": "0x80084d18",
+    "GetTaskDuration__Q34EALA9Character11TurnOperandRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008d11c",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "__ls__FRQ29Serialize3AnyRP12Serializable": "0x801ac6c8",
+    "reserve__Q24_STLt6vector2ZQ44EALA9Character11LinearBlend11SubTaskInfoZQ24_STLt9allocator1ZQ44EALA9Character11LinearBlend11SubTaskInfoUi": "0x802809bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Operations.cpp",
+  "original_file_index": 640
+}

@@ -15,7 +15,10 @@ class FEStringObject : public FEObject {
 class PackageHandler {
   public:
     virtual ~PackageHandler();
-    int Init(const char *);
+    virtual int Init(const char *);
+    virtual void HandleTick();
+    virtual int HandleEvent(unsigned int, FEObject *, unsigned long) = 0;
+    virtual int HandleSoundEvent(unsigned int, FEObject *);
     int SetScript(FEPackage *, const char *, const char *);
     int SetScript(FEPackage *, unsigned long, const char *);
     int GetCurrentLanguage();
@@ -32,7 +35,10 @@ class PackageHandler {
     int SetGroupShowOnly(FEGroup *, const char *);
     int SetGroupShowOnly(unsigned long, unsigned long);
     void QueueMessage(unsigned int);
-    void HandleTick();
+    int HandleMovieEvent(unsigned int, FEObject *);
+    int HandleCoopLevelStartEvent(unsigned int, FEObject *);
+    int HandleFEngQueries(unsigned int, FEObject *);
+    int HandleSaveGameEvent(unsigned int, FEObject *);
     class ShellManager *shell; // +0x00
     class FEngine *engine;     // +0x04
     FEPackage *package;        // +0x08

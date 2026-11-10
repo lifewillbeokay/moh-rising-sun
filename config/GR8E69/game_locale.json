@@ -1,0 +1,70 @@
+{
+  "id": "game_locale",
+  "source": "src/game/locale.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802171e0",
+      "size": 996
+    }
+  ],
+  "functions": [
+    {
+      "name": "LOCALE_getstate",
+      "address": "0x802171e0",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "LOCALE_setstate",
+      "address": "0x802172b8",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "compare__FPCvT0",
+      "address": "0x802172d4",
+      "size": 28,
+      "binding": 0
+    },
+    {
+      "name": "getstringidbyindex__FUsPC12LOCALE_INDEX",
+      "address": "0x802172f0",
+      "size": 136,
+      "binding": 0
+    },
+    {
+      "name": "LOCALE_getstr",
+      "address": "0x80217378",
+      "size": 312,
+      "binding": 1
+    },
+    {
+      "name": "LOCALE_create",
+      "address": "0x802174b0",
+      "size": 276,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "bsearch": "0x80264f3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "locale.cpp",
+  "original_file_index": 2962
+}

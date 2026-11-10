@@ -1,0 +1,61 @@
+{
+  "id": "volfrustum_copy",
+  "source": "src/camera/volfrustum_copy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013ee90",
+      "size": 368
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a82cc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__11CVolFrustumRC11CVolFrustum",
+      "address": "0x8013ee90",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "_._11CVolFrustum",
+      "address": "0x8013ef38",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "__as__11CVolFrustumRC11CVolFrustum",
+      "address": "0x8013ef98",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "_vt.11CVolFrustum": "0x802e9730",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "frustum.cpp",
+  "original_file_index": 1327
+}

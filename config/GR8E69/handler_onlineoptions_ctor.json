@@ -1,0 +1,47 @@
+{
+  "id": "handler_onlineoptions_ctor",
+  "source": "src/frontend/handler_onlineoptions_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019bd6c",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b57d8",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "__20HandlerOnlineOptions",
+      "address": "0x8019bd6c",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "_vt.20HandlerOnlineOptions": "0x802ebbf8",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerOnlineOptions.cpp",
+  "original_file_index": 2009
+}

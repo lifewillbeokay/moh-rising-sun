@@ -1,0 +1,48 @@
+{
+  "id": "fereader_readheaderchunk",
+  "source": "src/frontend/fereader_readheaderchunk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80052574",
+      "size": 380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802980b4",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadHeaderChunk__15FEPackageReader",
+      "address": "0x80052574",
+      "size": 380,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "SetFilename__9FEPackagePCc": "0x80050fac",
+    "SetName__6FENodePCc": "0x80049700",
+    "__9FEPackage": "0x80050d38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

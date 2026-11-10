@@ -79,6 +79,15 @@ file. A missing compartment big file or entry makes the size queries return -1.
 `TLT_Async_Load` runs one of 20 state functions from `g_ToiletLoadStates` and adds its result to
 the state. Its progress denominator is 21 for missions 2 through 4 and 22 for the others.
 
+The local symbols of the load states name the file `toilet.cpp`. The load states read the relocation file, the level big file, the pause big file, the animation
+bank and the optional MVD file through the asynchronous file calls. The animation bank and MVD are
+copied up to `VMStartLoc`; the bank then advances it by the size rounded past the next 32-byte
+boundary. `+0x194` indexes the sound banks while they load and also feeds the progress percentage.
+`TLT_Sound_GetCurrentAbk` returns null past the second bank. `TLT_Load_InitContent` checks version 2
+and checksum 0xa5658, then rebases the entries and name tables of resource types 0 and 4; the types'
+meanings are inferred. `TLT_Load_StartPause`, `TLT_Load_StartAnimation` and `TLT_Load_InitRepository`
+share strings with code outside these units and remain unreconstructed.
+
 Not reconstructed: the class constructor and language and system-file setup,
 `TLT_FindNextResourceByTypeAndVal` (6 differences, all parameter registers), and the two functions
 that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormalLocked`,
@@ -98,6 +107,89 @@ Verified: the code. Inferred: the member names and the flags' meanings. Not reco
 
 `BitBuffer` is a 2048-byte store written least significant bit first. The reader and writer are
 file statics; `Load` sign-extends results of 2 to 31 bits.
+
+## Background thread
+
+`Thread`, from the allocation labels' `thread.cpp`, runs jobs on one worker. `Init` allocates the job
+records and a stack filled with 0xbad4c0de, queues every record as free and starts the worker at
+priority -3. The worker pops a pending job, runs its priority, then its `begin`, `run` and `end`
+callbacks in that order, restores the priority and returns the record to the free queue. A mutex
+at the object's start guards both queues. The queues are `_STL::queue<ThreadJob *>`; that header is
+not in this tree, so the fragment declares the adapter. Verified: the code. Inferred: member names.
+
+## Lua state scripts
+
+The original `mohlua.cpp` opens one Lua state and registers nine functions the state scripts call:
+`SetStateChoice` and queries on the current object. `LUAEvaluateState` sets that object, clears the
+choice, runs a buffer and returns the choice. `GetStateVariable` calls `GetValue` through the
+object's table at `+0x38`. `BeginHurtling` reports `StartScriptDeath`'s argument message, as in the
+image. Verified: the code. Inferred: the script data's member names at `+0x8c` to `+0x9c`, and the
+meanings of the event numbers `StartScriptDeath` sends.
+
+## Locale files
+
+The original `locale.cpp` reads little-endian string files: a table of per-language offsets at
+`+0x10`, each language holding offsets to its strings at `+0x10` with a count at `+0xc`. With bit 0 of
+the flags at `+8`, `LOCALE_getstr` first turns the id into an index through a sorted id table found at
+the offset at `+4`. `LOCALE_create` byte-swaps each string's 16-bit characters when asked. Verified:
+the code. Inferred: all member names.
+
+## Disc drive checks
+
+`drivecheck.cpp` maps `DVDGetDriveStatus` to a state, 0 for no message and 1 for busy, and shows the
+message for any higher state from a table per language, with English as the fallback. Disk number 1
+in `CheckDiscDriveStatus` and 0 in `CheckDiscChangeStatus` distinguish the two door states; a busy
+drive keeps the last of those states. Status -1 spins forever. Verified: the code. Inferred: the
+state names.
+
+`DVDSafeRead` waits for a clean drive, reads asynchronously at priority 2, and cancels and repeats the read if the
+drive reported an error during it. The error messages are drawn with the ROM font through `InitRomFont`, `DrawFontChar`,
+`RFPuts`, `GetRFTextWidth` and `DrawMessage`, the SDK's `DEMOPuts` code with the z coordinate dropped. Not reconstructed
+yet: `LoadSheet`, whose `.rodata` is 20 bytes with a double in it and runs into the strings of
+`LevelExistsOnCurrentDisc`, and `SwapDiscs` (saved registers only).
+
+## File device reads
+
+`filedev.cpp` reads a disc file through a bounce buffer on its read thread. The request record holds the destination
+and file positions with their 32-byte aligned bounds, and a state: 1 for a short read, 2 for a misaligned head, 3 for a
+run read in place, 4 for a chunk of at most 16 KB, 5 for finished. Verified: `QEndOp` and `AyncDVDRead`. Inferred: the
+record's member names and the state meanings. Not reconstructed yet: `StartNonAlignedAyncRead`, `AyncDVDCallback`,
+`ReadFileThreadFunc`, `readfile`, `initfiledev`.
+
+## Movie subtitles
+
+`RCMP::AV_SUBTITLE_ARRAY` holds the parsed subtitles, 52 bytes each, and `RCMP::VD_SUBTITLE` draws them with one `TAR` per
+shape in the subtitle shape file. The display's loops are unreduced, so its fragments build with `-fno-strength-reduce`;
+that describes the code, not necessarily the original setting. Verified: the array's construction, destruction and lookup, a subtitle's defaults and setters, and the display's `Init`,
+`DeleteTars`, `CreateTars` and accessors. Inferred: member names. Not reconstructed: `FindSubtitle` (four instructions of
+order), the subtitle script parser (`AV_SUBTITLE_ARRAY::Init` and its helpers), `CreateWrappedStrings`, `Draw`.
+
+## MAD movie codec
+
+`rcmp_mad_codec.cpp` is whole: one unit, in the original's order, with the codec's table. It hands out frames from a free
+list to a used list, through a link inside each frame; `DecodeChunk` reads a chunk's header on the first chunk, makes the
+decoder's frames and then decodes each 16x16 macroblock against the held frame. `rcmp_mad_codec_chunk_types.cpp` holds the
+three chunk tags and the test for them. Both files' `.rodata` start with the empty allocation label of the codec's
+`operator new`. Verified: all of both files' code. Inferred: member, local and helper names, and what the chunk tags mean.
+`CODEC` is declared with plain virtuals so that its table stays outside these units; the original's slots are pure.
+
+## MAD macroblock decoder
+
+`maddec.cpp` builds its code tables on first use and decodes a macroblock at a time: six blocks (four luma and two chroma)
+each come from the previous frame (`mode` set), a DC value, or the inverse transform. `maddeca.cpp` reads one block's
+coefficients through the run-length tables, and `madidct.cpp` holds the transform, with `fixedmult` the 16.16 multiply. These
+units use small data for the bit reader's three words, so they build with `-G8 -fno-strength-reduce`; their loops are
+unreduced. Verified: all of `maddec.cpp` and `maddeca.cpp`, `idctcompute` and `fixedmult`. Inferred: parameter, local and
+helper names, and the mode bit meanings. The tables are referenced, not defined, by these units. Not reconstructed:
+`IdctColumn` and `IdctRow`, whose final statements are not in the original's order yet.
+
+## RCMP flags
+
+`-fno-strength-reduce` holds for the RCMP library's code: `GetFrame` and `DecodeChunk` here and the subtitle display show
+unreduced loops, and every other RCMP unit (`audioplayer`, the `AV_PLAYER` fragments, `DECODER`, `GCHW_VD`, `rcmp2real`)
+compiles identically with or without it, so they all pass it. `rcmpplayer.cpp` is the game's `CMoviePlayer`, not part of the
+library, and keeps the game's flags; its fragments also compile identically with the flag. The flag describes the code,
+not necessarily the original setting.
 
 ## MohLoader
 

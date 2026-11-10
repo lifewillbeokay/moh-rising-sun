@@ -18,7 +18,7 @@ class FENode : public FEMinNode {
     unsigned long hash; // +0x10
     FENode();
     virtual ~FENode();
-    void SetName(const char *);
+    int SetName(const char *);
 };
 
 class FEMinList {
@@ -65,6 +65,7 @@ enum FEKeyTrack_Indices { FEKeyTrackIndex0 = 0 };
 class FEScript;
 class FEMessageResponse;
 class FEObject;
+class FEGameInterface;
 // Called with an object that is being destroyed; slot one of its table.
 class FEObjectDestructorCallback {
   public:
@@ -79,11 +80,12 @@ class FEObject : public FEMinNode {
     FEObject(const FEObject &, bool);
     virtual ~FEObject();
     void SetName(const char *);
-    FEObject *Clone(bool);
+    virtual FEObject *Clone(bool);
     long GetDataOffset(FEKeyTrack_Indices);
     FEScript *FindScript(unsigned long) const;
     void SetCurrentScript(FEScript *);
     void SetupMoveToTracks();
+    void SetPosition(const struct FEVector3 &, bool);
     void SetDataSize(unsigned long);
     FEMessageResponse *FindResponse(unsigned long) const;
     void SetScript(unsigned long, bool);
@@ -101,7 +103,7 @@ class FEObject : public FEMinNode {
             unsigned int changed : 1;     // Set whenever text or script is replaced.
         };
     };
-    unsigned short unknown_20;    // +0x20
+    unsigned short renderContext; // +0x20; the render context this object draws into.
     unsigned short resourceIndex; // +0x22; 0xffff when the object uses no resource.
     void *resourceData;           // +0x24
     void *resourceHandle;         // +0x28
@@ -116,8 +118,10 @@ class FEGroup : public FEObject {
   public:
     FEObject *FindChild(unsigned long) const;
     FEObject *FindChild(const char *) const;
-    unsigned char unknown_58[0x5c - 0x58];
-    FEObject *children; // +0x5c
+    FEGroup(unsigned long objectType) { type = objectType; }
+    FEGroup(const FEGroup &, bool, bool);
+    virtual ~FEGroup();
+    FEMinList childList; // +0x58
 };
 
 // A growable array of the objects that receive one message.
@@ -127,6 +131,8 @@ class FEMsgTargetList {
     unsigned long allocated; // +0x4
     unsigned long count;     // +0x8
     FEObject **targets;      // +0xc
+    FEMsgTargetList() : message(0), allocated(0), count(0), targets(0) {}
+    ~FEMsgTargetList() { delete[] targets; }
     void Allocate(unsigned long);
     void AppendTarget(FEObject *);
 };
@@ -163,7 +169,10 @@ class PackageInitStateCB : public FEObjectCallback {
 class FEPackage;
 // 24 bytes each, per ResourceConnector.
 struct FEResourceRequest {
-    unsigned char unknown_0[0x10];
+    unsigned long id;       // +0x0
+    char *name;             // +0x4; an offset into the names block in the file.
+    unsigned long type;     // +0x8; 1 texture, 2 font, 3 model, 4 movie, 5 effect, by the loaders.
+    unsigned long unknown_c; // +0xc
     void *handle; // +0x10; stored at +0x24 of the object.
     void *data;   // +0x14; stored at +0x28 of the object.
     unsigned char unknown_18[0x18 - 0x18];
@@ -186,8 +195,19 @@ struct FELibraryReference {
     long unknown_8;    // +0x8
     FELibraryReference() : id(0), unknown_4(-1), unknown_8(0) {}
 };
+// The package's button table.
+class FEButtonMap {
+  public:
+    FEObject **buttons;   // +0x0
+    unsigned long count;  // +0x4
+    FEButtonMap() : buttons(0), count(0) {}
+    ~FEButtonMap() { delete[] buttons; }
+    void SetCount(unsigned long);
+};
 class FEPackage : public FENode {
   public:
+    FEPackage();
+    virtual ~FEPackage();
     FEMsgTargetList *GetMessageTargets(unsigned long);
     FEObject *FindObjectByName(const char *);
     FEObject *FindObjectByHash(unsigned long);
@@ -206,28 +226,30 @@ class FEPackage : public FENode {
     void SetNumLibraryRefs(unsigned long);
     const FELibraryReference *FindLibraryReference(unsigned long) const;
     int executing;                    // +0x14
-    unsigned char unknown_18[0x24 - 0x18];
+    int unknown_18;                   // +0x18; UnloadPackage idles a package while it is set.
+    int unknown_1c;                   // +0x1c; FEPackageReader::Load stores its last flag.
+    int unknown_20;                   // +0x20
     int priority;                     // +0x24
     int controlMask;                  // +0x28
-    unsigned char unknown_2c[0x30 - 0x2c];
+    int unknown_2c;                   // +0x2c
     FEngine *engine;                  // +0x30; set by Update.
     long lastDeltaTime;               // +0x34; set by Update.
     char *fileName;                   // +0x38
     const FEPackage *parent;          // +0x3c
-    unsigned char unknown_40[0x48 - 0x40];
-    FEObject *firstObject;            // +0x48
-    unsigned char unknown_4c[0x58 - 0x4c];
-    FEMessageResponse *firstResponse; // +0x58
-    unsigned char unknown_5c[0x64 - 0x5c];
+    unsigned long unknown_40;         // +0x40
+    FEMinList objectList;             // +0x44
+    FEMinList responseList;           // +0x54
     unsigned long resourceCount;      // +0x64
     struct FEResourceRequest *resourceRequests; // +0x68
     unsigned long messageTargetCount; // +0x6c
     FEMsgTargetList *messageTargets;  // +0x70
-    unsigned char unknown_74[0x84 - 0x74];
+    FEList referencedPackages;        // +0x74
     unsigned long libraryRefCount;    // +0x84
     FELibraryReference *libraryRefs;  // +0x88
     FEObject *currentButton;          // +0x8c
-    unsigned char unknown_90[0xac - 0x90];
+    FEButtonMap buttonMap;            // +0x90
+    char *resourceNames;              // +0x98
+    FEMinList pendingList;            // +0x9c; holds nodes the destructor frees with their string at +0x10.
     signed char groupId;              // +0xac
 };
 

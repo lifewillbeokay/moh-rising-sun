@@ -10,7 +10,7 @@ enum AIFILTER_WEAPON_AIM_MODE {
 };
 class CAIObjectParameters;
 // Original enum tag; its members are unknown.
-enum ETeam { TeamUnknown = 0 };
+#include "LocationTargetInfo.h"
 class ISceneNode;
 class CAIObject;
 struct aistatus_match;
@@ -36,9 +36,15 @@ typedef char CAITargetStorageSizeCheck[sizeof(CAITarget) == 12 ? 1 : -1];
 
 // Observed prefix through the weapon aim mode at +0x104. This view
 // does not establish the complete class allocation or virtual interface.
-class CAITargeting {
+// The base of the AI object's modules; only its table pointer and virtual destructor are known.
+class CAIModule {
 public:
-    unsigned char unknown00[4];
+    virtual ~CAIModule();
+};
+class CAITargeting : public CAIModule {
+public:
+    CAITargeting(CAIPhysics *, CAIObjectParameters *, ISceneNode *);
+    virtual ~CAITargeting();
     CAIPhysics *physics;
     CAIObjectParameters *parameters;
     ISceneNode *sceneNode;
@@ -49,9 +55,17 @@ public:
     int lastSeenSet, visionVisible;
     unsigned char unknown3c[4];
     CVector3 targetPosition; // +0x40; scene query output.
-    unsigned char unknown50[0x20];
+    CVector3 unknownVector50;
+    unsigned char unknown60[0x10];
     CVector3 modifiedPosition;
-    unsigned char unknown80[0x74];
+    CVector3 unknownVector80;
+    CVector3 unknownVector90;
+    unsigned char unknownA0[0x10];
+    CVector3 positionOffsetMin; // +0xb0; a random offset scaled from the parameters. The misspelled method names it.
+    CVector3 unknownVectorC0;
+    CVector3 unknownVectorD0;
+    unsigned char unknownE0[0x10];
+    int unknownF0;
     int alerted; // +0xf4; set to 1 by BIFunc_AISendFlag flag 1.
     float targetUpdateTime; // +0xf8; written after the script-target update.
     int blindFireMode; // +0xfc; observed selectors 0, 1 and 2.
@@ -65,12 +79,16 @@ public:
     int IsLastSeenTargetPositionSet();
     int CouldVisionSeeTarget();
     void Update();
+    void UpdatePostionOffsetMin();
+    void CalculateTargetPosition();
     bool UpdateReactionTime();
     void UpdateTargetPosition();
     void UpdateNonAITargetPosition();
     void SetNonAITarget(BSObject *);
     CAIObject *SetTarget(CAIObject *); // Returns the current target (its body loads it last).
     void AdjustAimPosition(CVector3 *, int, AIFILTER_WEAPON_AIM_MODE *);
+    void AdjustForSniperAimMode(CVector3 *, AIFILTER_WEAPON_AIM_MODE);
+    void AdjustForBazookaAimMode(CVector3 *, AIFILTER_WEAPON_AIM_MODE);
     void ChooseSniperAimMode(AIFILTER_WEAPON_AIM_MODE *);
     void ChooseBazookaAimMode(AIFILTER_WEAPON_AIM_MODE *);
     void GetAdjustedAimTargetPosition(CVector3 &);
@@ -80,7 +98,7 @@ public:
     static void RegisterLocationTarget(int, bool, ETeam, BSObject *);
     static void DeRegisterLocationTarget(int);
     static void ResetLocationTargets();
-    static CAITarget GetLocationTarget(int);
+    static _LocationTargetInfo GetLocationTarget(int);
     bool IsNonAITarget() const;
     bool HasValidTarget() const;
     bool GetTargetGuessPosition(CVector3 &);
@@ -122,9 +140,20 @@ public:
     int Update(int, bool);
 };
 // Method-only view of the embedded tactics module.
-class CAITactics {
+class CAIObject;
+class CAITargeting;
+class CAITactics : public CAIModule {
 public:
+    CAITactics(CAIPhysics *, CAITargeting *, CAIObject *);
+    virtual ~CAITactics();
     int FindTacticalPoint(CVector3 *, float);
+    float GetTacticalPositionScore(const CVector3 &, float);
+    float AggressionScore(const CVector3 &, float);
+    float AlliesScore(const CVector3 &, float);
+    float AngleFromTargetScore(const CVector3 &, float);
+    CAIPhysics *physics;     // +0x04
+    CAITargeting *targeting; // +0x08
+    CAIObject *owner;        // +0x0c
 };
 // Original enum tag; selector names are descriptive.
 enum aistatus_var { aistatus_var_team = 4 };
@@ -216,7 +245,7 @@ public:
     unsigned int previousStatusFlags2; // +0x5e4
     unsigned int statusFlags;  // +0x5e8; set and cleared by BIFunc_AISendFlag.
     CAIStatus status;    // +0x5ec
-    unsigned char unknown61c[0x620 - 0x61c];
+    int targeterCount;   // +0x61c; objects targeting this one, per CAITargeting::SetTarget.
     float reactionDelay; // +0x620; the trigger's "ReactionDelay" times 0.1.
     float accuracyNear;  // +0x624; set per accuracy level by BIFunc_SetAccuracy.
     float trackingDelay; // +0x628; from the trigger's "TrackingDelay" selector.

@@ -1,0 +1,81 @@
+{
+  "id": "fenginterface_render",
+  "source": "src/frontend/fenginterface_render.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017cb0c",
+      "size": 1176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad660",
+      "size": 304
+    }
+  ],
+  "functions": [
+    {
+      "name": "GenerateRenderContext__14CFengInterfaceUsP8FEObject",
+      "address": "0x8017cb0c",
+      "size": 376,
+      "binding": 1
+    },
+    {
+      "name": "GetContextTransform__14CFengInterfaceUsR9FEMatrix4",
+      "address": "0x8017cc84",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "GetViewTransformation__14CFengInterfaceP9FEMatrix4",
+      "address": "0x8017ccfc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "RenderObject__14CFengInterfaceP8FEObject",
+      "address": "0x8017cd20",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "GetJoyPadMask__14CFengInterfaceUc",
+      "address": "0x8017ce5c",
+      "size": 328,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GenerateXformMatrix__14CFengInterfacePQ24EAGL9TransformP9FEObjDataUs": "0x8017d2c8",
+    "GetValue__C13CInputManagerUcUs": "0x800d6f08",
+    "Identify__9FEMatrix4": "0x8004bb2c",
+    "IsReady__C13CInputManagerSc": "0x800d6ff8",
+    "RenderImage__14CFengInterfaceP7FEImage": "0x8017d488",
+    "RenderString__14CFengInterfaceP8FEString": "0x8017d8c4",
+    "Render__14CFengInterfaceP13FESimpleImage": "0x8017d348",
+    "g_inputMgr": "0x803077c4",
+    "padFlags": "0x802c59a8",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563
+}

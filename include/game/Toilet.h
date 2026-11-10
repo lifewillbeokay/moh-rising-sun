@@ -16,7 +16,7 @@ struct TLTResourceEntry {
 // A level-contents entry: 12 bytes, a type and a table of value records.
 struct LevelFileContentsStruct_ {
     TLTResourceID type;
-    int unknown04;
+    int count;              // +0x04: records in the table.
     TLTResourceEntry **data; // +0x08
 };
 
@@ -65,14 +65,20 @@ public:
     char *pauseBigFile;                    // +0x128
     int pauseBigFileSize;                  // +0x12c
     void *compartmentBigFile;              // +0x130
-    unsigned char unknown134[0x14c - 0x134];
+    unsigned char unknown134[0x144 - 0x134];
+    char *animationBank;                   // +0x144
+    int animationBankSize;                 // +0x148
     void *mvdBigFile;                      // +0x14c
-    unsigned char unknown150[0x160 - 0x150];
+    int mvdBigFileSize;                    // +0x150
+    char *relocationBuffer;                // +0x154
+    int relocationBufferSize;              // +0x158
+    unsigned char unknown15c[0x160 - 0x15c];
     LevelFileContentsStruct_ *contents;    // +0x160
     LevelFileContentsStruct_ *contentsEnd; // +0x164
-    unsigned char unknown168[0x184 - 0x168];
+    int contentCount;                      // +0x168
+    unsigned char unknown16c[0x184 - 0x16c];
     CRtcFile rtcFile;                      // +0x184
-    int asyncStateBase;                    // +0x194
+    int soundBankIndex;                    // +0x194; also added to the state for the progress percentage.
 };
 extern Toilet g_toilet;
 

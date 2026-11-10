@@ -1,0 +1,85 @@
+{
+  "id": "ai_MessageA",
+  "source": "src/eala/MessageA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80088838",
+      "size": 720
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c608",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x80088838",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x800888a0",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "Assign__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
+      "address": "0x80088904",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character7Message",
+      "address": "0x80088980",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "EvalPose__Q34EALA9Character7MessagefPf",
+      "address": "0x80088988",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "Dump__Q34EALA9Character7MessageUi",
+      "address": "0x80088a90",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "DebugMsg__FPCce": "0x80279094",
+    "DumpPrefix__Q34EALA9Character4TaskUi": "0x8008fd24",
+    "GetStillPose__Q34EALA9Character8SkeletonPf": "0x80082a3c",
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "__nw__Q34EALA9Character7MessageUi": "0x800887e0",
+    "_vt.Q34EALA9Character7Message": "0x802e33b8",
+    "_vt.Q34EALA9Character7Message.8ISubject": "0x802e3390"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Message.cpp",
+  "original_file_index": 621
+}

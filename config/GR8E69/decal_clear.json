@@ -1,0 +1,59 @@
+{
+  "id": "decal_clear",
+  "source": "src/scene/decal_clear.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80069234",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "ClearDecals__13CDecalManager",
+      "address": "0x80069234",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "Reset__13CDecalManager",
+      "address": "0x80069298",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "AddBulletDecal__13CDecalManagerRC10CCollisionb",
+      "address": "0x800692d0",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AcquireDecal__13CDecalManageri": "0x80069354",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "GetDecalCRC__12CSurfaceTypeUsb": "0x8005cca8",
+    "GetSingleton__13CDecalManager": "0x80068ce4",
+    "InitDecalFromCollision__13CDecalManagerR5DecalPC12SClsnContactb": "0x80069594",
+    "clear__Q24_STLt10_List_base2Z5DecalZQ24_STLt9allocator1Z5Decal": "0x8027a3d0",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

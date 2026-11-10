@@ -1,0 +1,70 @@
+{
+  "id": "shell_ListBoxScroll",
+  "source": "src/shell/ListBoxScroll.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80186494",
+      "size": 644
+    }
+  ],
+  "functions": [
+    {
+      "name": "Clear__7ListBox",
+      "address": "0x80186494",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "ScrollUp__7ListBox",
+      "address": "0x80186540",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "ScrollDown__7ListBox",
+      "address": "0x801865a0",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "GetSelectedRow__7ListBox",
+      "address": "0x80186658",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetSelectedRowById__7ListBoxl",
+      "address": "0x801866bc",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetNumScreenRows__7ListBox": "0x80186c80",
+    "GetRowIndexById__7ListBoxl": "0x80186c0c",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "_._Q27ListBox3Row": "0x80186fb0",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "dListBox.cpp",
+  "original_file_index": 1601
+}

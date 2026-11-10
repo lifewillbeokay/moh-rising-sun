@@ -1,0 +1,74 @@
+{
+  "id": "projector_class",
+  "source": "src/camera/projector_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801325f4",
+      "size": 740
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7ba4",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__10CProjectorP6CScene",
+      "address": "0x801325f4",
+      "size": 592,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__10CProjector",
+      "address": "0x80132844",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "_._19CProjectorSystemDef": "0x80131e5c",
+    "_10CProjector.g_MOH3ProjectionTexture": "0x802c4d38",
+    "_10CProjector.m_pScene": "0x80452588",
+    "_M_erase__Q24_STLt8_Rb_tree5ZUiZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt4less1ZUiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDef": "0x80289398",
+    "__19CProjectorSystemDef": "0x80131e44",
+    "__19CProjectorSystemDefP24LevelFileContentsStruct_": "0x80131ed8",
+    "__19CProjectorSystemDefRC19CProjectorSystemDef": "0x80131eb8",
+    "g_MOH3TextureProjector": "0x8032d250",
+    "g_ProjectorList": "0x8032d290",
+    "g_ProjectorSystemsDefs": "0x8032d2a4",
+    "g_bReady": "0x802c4d3c",
+    "insert_unique__Q24_STLt8_Rb_tree5ZUiZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt4less1ZUiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCUiZ19CProjectorSystemDefRCQ24_STLt4pair2ZCUiZ19CProjectorSystemDef": "0x8028912c"
+  },
+  "local_externals": [
+    "g_MOH3TextureProjector",
+    "g_ProjectorSystemsDefs",
+    "g_bReady"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

@@ -1,0 +1,44 @@
+{
+  "id": "ea_rcmp_mad_chunk_types",
+  "source": "src/ea/rcmp_mad_codec_chunk_types.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802739a8",
+      "size": 56
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802c0630",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "MAD_CODEC_is_chunk_for_codec__4RCMPUi",
+      "address": "0x802739a8",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmp_mad_codec_chunk_types.cpp",
+  "original_file_index": 5040
+}

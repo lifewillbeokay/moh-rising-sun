@@ -1,0 +1,144 @@
+{
+  "id": "toilet_load_states",
+  "source": "src/game/toilet_load_states.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801aa5fc",
+      "size": 2040
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7bc8",
+      "size": 452
+    },
+    {
+      "name": ".data",
+      "address": "0x802c7e58",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_Load_WaitAnimation__Fv",
+      "address": "0x801aa5fc",
+      "size": 168,
+      "binding": 0
+    },
+    {
+      "name": "TLT_GetAnimationBank__Fv",
+      "address": "0x801aa6a4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "TLT_GetAnimationBankSize__Fv",
+      "address": "0x801aa6b0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "TLT_Load_StartMVD__Fv",
+      "address": "0x801aa6bc",
+      "size": 136,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_WaitMVD__Fv",
+      "address": "0x801aa744",
+      "size": 144,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Sound_GetCurrentPath__Fv",
+      "address": "0x801aa7d4",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "TLT_Sound_GetCurrentAbk__Fv",
+      "address": "0x801aa880",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "TLT_Load_StartSound__Fv",
+      "address": "0x801aa9a4",
+      "size": 60,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_StartSoundBank__Fv",
+      "address": "0x801aa9e0",
+      "size": 104,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_WaitSoundBank__Fv",
+      "address": "0x801aaa48",
+      "size": 284,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_SoundModules__Fv",
+      "address": "0x801aab64",
+      "size": 152,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_InitContent__Fv",
+      "address": "0x801aabfc",
+      "size": 504,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "DVDConvertPathToEntrynum": "0x802395b8",
+    "DebugMsg__FPCce": "0x80279094",
+    "GetCurrentOneShotBankID__13CGameSettings": "0x80171150",
+    "GetCurrentSavePointID__C13CGameSettings": "0x80171160",
+    "InitLevelSoundModules__Fii": "0x80156708",
+    "IsSoundDisabled__Fv": "0x80156654",
+    "LoadLevelSoundModules__Fii": "0x801567dc",
+    "LoadOneShotSoundMem__FiPc": "0x80156d30",
+    "MVDExists": "0x802c7e54",
+    "SoundLoadBank__FPUc": "0x80156910",
+    "TLT_CloseFile__FPv": "0x801a9764",
+    "TLT_LoadFileFromLevelBigFile__FPCcPi": "0x801a9634",
+    "TLT_LoadFile_Async_Load__FPPcPi": "0x801a94b4",
+    "TLT_LoadFile_Async_Start__FPCci": "0x801a9464",
+    "VMStartLoc": "0x802cc020",
+    "__builtin_delete": "0x801a8990",
+    "g_GameSettings": "0x802f80c8",
+    "g_SoundMan": "0x80330c60",
+    "g_bAudioIsDone": "0x803e7578",
+    "g_toilet": "0x803f5360",
+    "memcpy": "0x802665e8",
+    "sprintf": "0x80263a3c",
+    "strcpy": "0x80266a7c",
+    "szTLT_LevelContentsFileName": "0x802c7e20",
+    "szTLT_MVDBigFileName": "0x802c7e48"
+  },
+  "local_externals": [
+    "szTLT_LevelContentsFileName",
+    "szTLT_MVDBigFileName"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "toilet.cpp",
+  "original_file_index": 2188
+}

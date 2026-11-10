@@ -1,0 +1,42 @@
+{
+  "id": "handler_coopprofile_scan",
+  "source": "src/frontend/handler_coopprofile_scan.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801948fc",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "Execute__18HandlerCoopProfilePCcUi",
+      "address": "0x801948fc",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_18HandlerCoopProfile.m_numProfiles": "0x802c5c88",
+    "_18HandlerCoopProfile.m_profiles": "0x8044ae14",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopProfile.cpp",
+  "original_file_index": 1839
+}

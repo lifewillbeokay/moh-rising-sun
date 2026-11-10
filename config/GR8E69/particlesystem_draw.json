@@ -1,0 +1,48 @@
+{
+  "id": "particlesystem_draw",
+  "source": "src/particles/particlesystem_draw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80061c78",
+      "size": 240
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299cf4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__15CParticleSystemR12CDrawContext",
+      "address": "0x80061c78",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "ExecuteDraw__15CParticleSystemR12CDrawContextPPv": "0x800616d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

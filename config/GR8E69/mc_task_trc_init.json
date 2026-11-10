@@ -1,0 +1,48 @@
+{
+  "id": "mc_task_trc_init",
+  "source": "src/memorycard/task_trc_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8029534c",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateCurrentTask__Q26Realmc11TaskManager",
+      "address": "0x8029534c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Init__Q26Realmc7TaskTrcb",
+      "address": "0x80295350",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "IsPublicTrcTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
+      "address": "0x802953b0",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

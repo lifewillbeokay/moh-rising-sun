@@ -1,0 +1,50 @@
+{
+  "id": "gc_interface_create",
+  "source": "src/memorycard/gc_interface_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020d7d4",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateInstance__Q26Realmc9InterfaceRCQ26Realmc14ConfigSettings",
+      "address": "0x8020d7d4",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AllocateMemSize__6RealmcPCciiii": "0x80216764",
+    "SetMemVectors__6RealmcPFPCciiii_PvPFPv_v": "0x802166d4",
+    "SetSizeMemVectors__6RealmcPFPCciiii_PvPFPvi_v": "0x802166e0",
+    "_6Realmc.gInterface": "0x804512ac",
+    "__Q26Realmc11GCInterfaceRCQ26Realmc14ConfigSettings": "0x8020d874"
+  },
+  "sda_externals": [
+    "_6Realmc.gInterface"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916
+}

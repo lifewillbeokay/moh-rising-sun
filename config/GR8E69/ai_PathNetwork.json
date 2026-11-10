@@ -1,0 +1,76 @@
+{
+  "id": "ai_PathNetwork",
+  "source": "src/pathfinding/PathNetwork.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e8d88",
+      "size": 1740
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a42c4",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterLinkTo__18PathFindingNetworkP13TriggerObjectiii",
+      "address": "0x800e8d88",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "RegisterLinkFrom__18PathFindingNetworkP13TriggerObjectiii",
+      "address": "0x800e8eb8",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "GetLinkGoingTo__18PathFindingNetworkRC8CVector3UcPUcPP13TriggerObjectT4",
+      "address": "0x800e8fe8",
+      "size": 640,
+      "binding": 1
+    },
+    {
+      "name": "GetNextNetworkLink__FRC8CVector3UcUcPP13TriggerObjectT3",
+      "address": "0x800e9268",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "NetworksAreLinked__FUcUc",
+      "address": "0x800e9354",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquaredXY__C8CVector3RC8CVector3": "0x8007be08",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "__builtin_new": "0x801a8910",
+    "g_networks": "0x8031cfac",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

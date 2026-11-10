@@ -1,0 +1,43 @@
+{
+  "id": "projector_update_projection",
+  "source": "src/camera/projector_update_projection.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80132108",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateProjection__10CProjector",
+      "address": "0x80132108",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Perspective__7CMatrixffff": "0x8007afe0",
+    "Set__11CVolFrustumffff": "0x8013f000"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

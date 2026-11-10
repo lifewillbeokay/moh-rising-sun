@@ -1,0 +1,41 @@
+{
+  "id": "ai_JumpAs",
+  "source": "src/eala/JumpAs.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80087624",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "AsJump__Q34EALA9Character4Jump",
+      "address": "0x80087624",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Jump.cpp",
+  "original_file_index": 608
+}

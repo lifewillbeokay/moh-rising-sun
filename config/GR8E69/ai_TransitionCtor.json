@@ -1,0 +1,58 @@
+{
+  "id": "ai_TransitionCtor",
+  "source": "src/eala/TransitionCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008e84c",
+      "size": 368
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029cd94",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q34EALA9Character10TransitionPQ34EALA9Character4TaskGQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4TaskT2f",
+      "address": "0x8008e84c",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character10Transition",
+      "address": "0x8008e9a0",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetState__CQ34EALA9Character4Task": "0x8008fa2c",
+    "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task": "0x8008fac0",
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "_vt.Q34EALA9Character10Transition": "0x802e3da8",
+    "_vt.Q34EALA9Character10Transition.8ISubject": "0x802e3d80"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Transition.cpp",
+  "original_file_index": 656
+}

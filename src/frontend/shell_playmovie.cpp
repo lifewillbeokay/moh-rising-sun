@@ -22,6 +22,6 @@ void ShellManager::SetNumberJoyPads(unsigned char count) {
     }
 }
 int ShellManager::LocalizePackage(FEPackage *package) {
-    LocalizeObjects(package->firstObject);
+    LocalizeObjects((FEObject *)package->objectList.head);
     return 0;
 }

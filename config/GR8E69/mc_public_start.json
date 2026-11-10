@@ -1,0 +1,43 @@
+{
+  "id": "mc_public_start",
+  "source": "src/memorycard/public_start.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020ea8c",
+      "size": 276
+    }
+  ],
+  "functions": [
+    {
+      "name": "TrcStartGame__Q26Realmc11GCInterfaceRCQ26Realmc13StartGameInfo",
+      "address": "0x8020ea8c",
+      "size": 276,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mTaskTrcStartGame": "0x80409ba4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "public.cpp",
+  "original_file_index": 2923
+}

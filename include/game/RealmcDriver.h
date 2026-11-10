@@ -125,13 +125,17 @@ struct FindInfoStruct;
 // Only the type names are recovered; the code passes these values through.
 enum SeekFrom { SeekFrom_Start = 0, SeekFrom_Current = 1, SeekFrom_End = 2 };
 enum FileAttribute { FileAttribute_None = 0 };
+struct ConfigSettings;
+void *AllocateMemSize(const char *, int, int, int, int);
 class DeviceDriver {
   public:
-    void *table;
+    static void *operator new(unsigned int size) { return AllocateMemSize(0, size, 0, 0, 0); }
+    virtual ~DeviceDriver();
 };
-class GCDriver {
+class GCDriver : public DeviceDriver {
   public:
-    void *table;
+    GCDriver(const ConfigSettings *);
+    virtual ~GCDriver();
     unsigned char unknown_04[4];
     GcFileDescriptor files[3]; // +8
     int sectorSize; // +0x2b4

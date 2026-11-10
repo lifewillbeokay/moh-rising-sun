@@ -1,0 +1,54 @@
+{
+  "id": "fenginterface_debug",
+  "source": "src/frontend/fenginterface_debug.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017da5c",
+      "size": 112
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad8ac",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "DebugMessageQueued__14CFengInterfaceUlP8FEObjectP9FEPackageT2Ul",
+      "address": "0x8017da5c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "DebugMessageProcessed__14CFengInterfaceUlP8FEObjectT2P9FEPackageUl",
+      "address": "0x8017da90",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563
+}

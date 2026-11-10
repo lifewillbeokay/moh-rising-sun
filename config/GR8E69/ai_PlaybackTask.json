@@ -1,0 +1,76 @@
+{
+  "id": "ai_PlaybackTask",
+  "source": "src/eala/PlaybackTask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800890a8",
+      "size": 612
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c714",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q34EALA9Character8Playback",
+      "address": "0x800890a8",
+      "size": 268,
+      "binding": 1
+    },
+    {
+      "name": "Create__Q34EALA9Character8PlaybackRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiPCcfUi",
+      "address": "0x800891b4",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "AssignOpcodes__Q34EALA9Character8PlaybackUiPQ34EALA9Character6Opcode",
+      "address": "0x80089244",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character8Playback",
+      "address": "0x800892cc",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckForPoseChange__Q34EALA9Character8PlaybackRQ34EALA9Character6Opcode": "0x8008a294",
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__Q34EALA9Character8PlaybackRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiPCcfUi": "0x80088cec",
+    "__dl__Q34EALA9Character8PlaybackPvUi": "0x80088cc0",
+    "__nw__Q34EALA9Character8PlaybackUi": "0x80088c94",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10",
+    "_vt.Q34EALA9Character8Playback": "0x802e3480",
+    "_vt.Q34EALA9Character8Playback.8ISubject": "0x802e3458"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Playback.cpp",
+  "original_file_index": 627
+}

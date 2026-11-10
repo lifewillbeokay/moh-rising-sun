@@ -1,0 +1,63 @@
+{
+  "id": "ea_maddeca",
+  "source": "src/ea/maddeca.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802744fc",
+      "size": 456
+    }
+  ],
+  "functions": [
+    {
+      "name": "discardbits__Fi",
+      "address": "0x802744fc",
+      "size": 88,
+      "binding": 0
+    },
+    {
+      "name": "madvlcdecode",
+      "address": "0x80274554",
+      "size": 368,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "idctinput": "0x80448eac",
+    "madbitcount": "0x80452508",
+    "maddataptr": "0x80452500",
+    "madquant": "0x804485ac",
+    "madshiftreg": "0x80452504",
+    "madvlctbl1": "0x804474ac",
+    "madvlctbl2": "0x80447cac",
+    "madvlctbl3": "0x804480ac",
+    "zigzag": "0x802c1530"
+  },
+  "local_externals": [
+    "zigzag"
+  ],
+  "sda_externals": [
+    "madbitcount",
+    "maddataptr",
+    "madshiftreg"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "maddeca.cpp",
+  "original_file_index": 5061
+}

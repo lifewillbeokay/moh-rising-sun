@@ -1,0 +1,50 @@
+{
+  "id": "handler_quadrantgroup",
+  "source": "src/frontend/handler_quadrantgroup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018a0a0",
+      "size": 404
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b1418",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__20HandlerQuadrantGroupPCc",
+      "address": "0x8018a0a0",
+      "size": 404,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "Init__14PackageHandlerPCc": "0x80187084",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerQuadrantGroup.cpp",
+  "original_file_index": 1663
+}

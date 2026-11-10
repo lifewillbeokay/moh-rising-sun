@@ -1,0 +1,176 @@
+{
+  "id": "ai_OperationEval",
+  "source": "src/eala/OperationEval.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008a7e8",
+      "size": 3912
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029cabc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "size_of__Q34EALA9Character18AnimationOperationi",
+      "address": "0x8008a7e8",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character18AnimationOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008a824",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "__ls__FRQ29Serialize3AnyRQ34EALA9Character6Opcode",
+      "address": "0x8008a918",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character18AnimationOperationRQ29Serialize3Any",
+      "address": "0x8008a9d4",
+      "size": 484,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character16MessageOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008abb8",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character16MessageOperationRQ29Serialize3Any",
+      "address": "0x8008ac50",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character19TransitionOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008ac54",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character19TransitionOperationRQ29Serialize3Any",
+      "address": "0x8008acf8",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "_._Q34EALA9Character17CompoundOperation",
+      "address": "0x8008ae60",
+      "size": 220,
+      "binding": 1
+    },
+    {
+      "name": "size_of__Q34EALA9Character17CompoundOperationi",
+      "address": "0x8008af3c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character17CompoundOperationRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008af48",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "IsAuthoredTransition__Q34EALA9Character17CompoundOperationUiUi",
+      "address": "0x8008af98",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character17CompoundOperationRQ29Serialize3Any",
+      "address": "0x8008afd0",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character16SequenceOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008b060",
+      "size": 904,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character16SequenceOperatorRQ29Serialize3Any",
+      "address": "0x8008b3e8",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character14RandomOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008b3ec",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character14RandomOperatorRQ29Serialize3Any",
+      "address": "0x8008b538",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Eval__Q34EALA9Character17SelectionOperatorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskiPPQ44EALA9Character9Operation7Operand",
+      "address": "0x8008b53c",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "Serialize__Q34EALA9Character17SelectionOperatorRQ29Serialize3Any",
+      "address": "0x8008b604",
+      "size": 288,
+      "binding": 1
+    },
+    {
+      "name": "size_of__Q34EALA9Character19MatrixBlendOperatori",
+      "address": "0x8008b724",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddTask__Q34EALA9Character8SequenceGQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task": "0x8008ddc0",
+    "AssignOpcodes__Q34EALA9Character8PlaybackUiPQ34EALA9Character6Opcode": "0x80089244",
+    "Assign__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task": "0x8008729c",
+    "Assign__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task": "0x80088904",
+    "Create__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiUi": "0x800871b4",
+    "Create__Q34EALA9Character7MessageRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x80088838",
+    "Create__Q34EALA9Character8PlaybackRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiPCcfUi": "0x800891b4",
+    "Create__Q34EALA9Character8SequenceRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008dd58",
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task": "0x8008fac0",
+    "__dl__12SerializablePv": "0x801ac458",
+    "__ls__FRQ29Serialize3AnyRP12Serializable": "0x801ac6c8",
+    "_vt.Q34EALA9Character17CompoundOperation": "0x802e3878",
+    "_vt.Q34EALA9Character9Operation": "0x802e3998",
+    "rand": "0x80265c98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Operations.cpp",
+  "original_file_index": 640
+}

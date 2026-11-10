@@ -1,0 +1,70 @@
+{
+  "id": "ai_AITactics",
+  "source": "src/ai/AITactics.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f3294",
+      "size": 1484
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4dac",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTacticalPositionScore__10CAITacticsRC8CVector3f",
+      "address": "0x800f3294",
+      "size": 488,
+      "binding": 1
+    },
+    {
+      "name": "AggressionScore__10CAITacticsRC8CVector3f",
+      "address": "0x800f347c",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "AlliesScore__10CAITacticsRC8CVector3f",
+      "address": "0x800f3590",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "AngleFromTargetScore__10CAITacticsRC8CVector3f",
+      "address": "0x800f3690",
+      "size": 464,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DistanceSquared__C8CVector3RC8CVector3": "0x8007bdac",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetForward__C9CAITarget": "0x800eeb98",
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "GetPosition__C9CAITarget": "0x800eea68",
+    "IsObjectInFieldOfView__9CAIObjectRC8CVector3N21ffbP10ISceneNode": "0x800db918",
+    "IsPointOnNetwork__13AIPathFindingRC8CVector3": "0x800e7654",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITactics.cpp",
+  "original_file_index": 1091
+}

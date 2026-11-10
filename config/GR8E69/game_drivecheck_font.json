@@ -1,0 +1,81 @@
+{
+  "id": "game_drivecheck_font",
+  "source": "src/game/drivecheck_font.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80058d20",
+      "size": 1040
+    }
+  ],
+  "functions": [
+    {
+      "name": "DrawFontChar__Fiiii",
+      "address": "0x80058d20",
+      "size": 260,
+      "binding": 0
+    },
+    {
+      "name": "RFPuts__FssPCc",
+      "address": "0x80058e24",
+      "size": 380,
+      "binding": 0
+    },
+    {
+      "name": "GetRFTextWidth__FPCc",
+      "address": "0x80058fa0",
+      "size": 200,
+      "binding": 0
+    },
+    {
+      "name": "DrawMessage__FiiPCc",
+      "address": "0x80059068",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GXBegin": "0x8024504c",
+    "GXClearVtxDesc": "0x80243bf8",
+    "GXSetBlendMode": "0x80248690",
+    "GXSetNumTevStages": "0x80248170",
+    "GXSetTevOp": "0x80247b2c",
+    "GXSetTevOrder": "0x80247fd4",
+    "GXSetVtxAttrFmt": "0x80243c30",
+    "GXSetVtxDesc": "0x80243370",
+    "LoadSheet__FPv11_GXTexMapID": "0x80058be0",
+    "OSGetFontTexture": "0x802574b0",
+    "OSGetFontWidth": "0x80257658",
+    "g_fontSize": "0x802c1afc",
+    "g_fontSpace": "0x802c1afe",
+    "g_pFontData": "0x802c1af4",
+    "g_pLastSheet": "0x802c1af8"
+  },
+  "local_externals": [
+    "LoadSheet__FPv11_GXTexMapID",
+    "g_fontSize",
+    "g_fontSpace",
+    "g_pFontData",
+    "g_pLastSheet"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "drivecheck.cpp",
+  "original_file_index": 372
+}

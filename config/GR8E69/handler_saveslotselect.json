@@ -1,0 +1,60 @@
+{
+  "id": "handler_saveslotselect",
+  "source": "src/frontend/handler_saveslotselect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019aa5c",
+      "size": 148
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5424",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__21HandlerSaveSlotSelect",
+      "address": "0x8019aa5c",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._21HandlerSaveSlotSelect",
+      "address": "0x8019aa98",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Push__21HandlerSaveSlotSelect",
+      "address": "0x8019aac8",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Push__19HandlerSaveSlotBasePCc": "0x80199864",
+    "_._19HandlerSaveSlotBase": "0x801998d4",
+    "__19HandlerSaveSlotBase": "0x801998c0",
+    "_vt.21HandlerSaveSlotSelect": "0x802ebac8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerSaveSlotSelect.cpp",
+  "original_file_index": 1979
+}

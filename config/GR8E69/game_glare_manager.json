@@ -1,0 +1,89 @@
+{
+  "id": "game_glare_manager",
+  "source": "src/game/glare_manager.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006ce28",
+      "size": 992
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a82c",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "__13CGlareManager",
+      "address": "0x8006ce28",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Init__13CGlareManager",
+      "address": "0x8006ce60",
+      "size": 384,
+      "binding": 1
+    },
+    {
+      "name": "Reset__13CGlareManager",
+      "address": "0x8006cfe0",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__13CGlareManager",
+      "address": "0x8006d058",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "Create__13CGlareManageri",
+      "address": "0x8006d0cc",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "Find__13CGlareManageri",
+      "address": "0x8006d158",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "__14CGlareResource",
+      "address": "0x8006d1d0",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "Init__14CGlareResourceP24LevelFileContentsStruct_": "0x8006d208",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "__6CGlareR14CGlareResource": "0x8006cbc4",
+    "__Q24EAGL3TAR": "0x801e0998",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_new": "0x801a8950"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

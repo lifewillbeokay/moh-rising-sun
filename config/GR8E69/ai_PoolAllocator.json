@@ -1,0 +1,79 @@
+{
+  "id": "ai_PoolAllocator",
+  "source": "src/eala/PoolAllocator.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008a394",
+      "size": 928
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c750",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q34EALA9Character13PoolAllocatorPCcUi",
+      "address": "0x8008a394",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "_._Q34EALA9Character13PoolAllocator",
+      "address": "0x8008a454",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "Alloc__Q34EALA9Character13PoolAllocatorUi",
+      "address": "0x8008a4e4",
+      "size": 396,
+      "binding": 1
+    },
+    {
+      "name": "Free__Q34EALA9Character13PoolAllocatorPv",
+      "address": "0x8008a670",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Dump__Q34EALA9Character13PoolAllocator",
+      "address": "0x8008a6ec",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "DebugMsg__FPCce": "0x80279094",
+    "MEM_alloc": "0x8020d248",
+    "MEM_free": "0x8020d2a8",
+    "_Q34EALA9Character13PoolAllocator.m_pHead": "0x802c21a8",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q34EALA9Character13PoolAllocator": "0x802e3520"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "PoolAllocator.cpp",
+  "original_file_index": 633
+}

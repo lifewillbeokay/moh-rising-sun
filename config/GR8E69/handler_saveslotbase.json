@@ -1,0 +1,62 @@
+{
+  "id": "handler_saveslotbase",
+  "source": "src/frontend/handler_saveslotbase.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80199864",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "Push__19HandlerSaveSlotBasePCc",
+      "address": "0x80199864",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Swap__19HandlerSaveSlotBasePCcP9FEPackage",
+      "address": "0x80199890",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "__19HandlerSaveSlotBase",
+      "address": "0x801998c0",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "_._19HandlerSaveSlotBase",
+      "address": "0x801998d4",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Push__12ShellManagerPCc": "0x80181c8c",
+    "Swap__12ShellManagerPCcP9FEPackage": "0x80181cc0",
+    "_._14PackageHandler": "0x80187050",
+    "_vt.19HandlerSaveSlotBase": "0x802eba70",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerSaveSlotBase.cpp",
+  "original_file_index": 1924
+}

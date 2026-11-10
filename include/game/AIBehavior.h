@@ -14,7 +14,7 @@ class CCoverPoint;
 // A buddy-lead checkpoint record: only its prefix is observed. The tag is original.
 struct Checkpoint_t {
     TriggerObject *trigger; // +0x0
-    int value;              // +0x4; returned by BIFunc_GetBuddyLeadCheckpointFromID.
+    unsigned int order;     // +0x4; the player reaching a checkpoint marks every one of lower or equal order.
     int reached;            // +0x8
 };
 typedef Checkpoint_t BuddyLeadCheckpoint;
@@ -29,7 +29,7 @@ class CBuddyLeadBehavior : public CBehavior { // Type 1.
     virtual void StopBehavior(bool);
     virtual int GetCapabilities(ECapability);
     virtual int GetType();
-    static BuddyLeadCheckpoint *GetBuddyLeadCheckpointFromID(int);
+    static TriggerObject *GetBuddyLeadCheckpointFromID(int);
     void HandleCheckpointReachedByBuddy(int);
     static void HandleCheckpointReachedByPlayer(int);
     static void CacheBuddyLeadTriggers();
@@ -230,7 +230,7 @@ class CCoverpointBehavior : public CBehavior { // Type 4.
     void EndCoverpoint();
     void ForceToCoverPoint();
     static void InvalidateCoverPointByID(int);
-    static void RegisterCoverpoint(TriggerObject *);
+    static int RegisterCoverpoint(TriggerObject *);
     static void ResetCoverpoints();
     float heuristicScore;      // +0x10
     unsigned char unknown14[4];

@@ -1,0 +1,40 @@
+{
+  "id": "felocalizer_readnextstring",
+  "source": "src/frontend/felocalizer_readnextstring.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004b9cc",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadNextString__11FELocalizerPsPcRUlUl",
+      "address": "0x8004b9cc",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ReadString__11FELocalizerPsPcRUlUl": "0x8004b8ac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FELocalizer.cpp",
+  "original_file_index": 295
+}

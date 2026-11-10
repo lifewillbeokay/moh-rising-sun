@@ -1,0 +1,58 @@
+{
+  "id": "handler_gameoptions",
+  "source": "src/frontend/handler_gameoptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80192230",
+      "size": 724
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b2e3c",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__18HandlerGameOptionsUiP8FEObjectUl",
+      "address": "0x80192230",
+      "size": 724,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "GetProfilesCRCValue__13CGameSettings": "0x8017180c",
+    "HandleFEngQueries__14PackageHandlerUiP8FEObject": "0x80188698",
+    "HandleSaveGameEvent__14PackageHandlerUiP8FEObject": "0x8018882c",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "QueuePackageSwitch__7FEnginePCcP9FEPackage": "0x8004eebc",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerGameOptions.cpp",
+  "original_file_index": 1786
+}

@@ -1,8 +1,10 @@
 // FEngine: FEng's root object. Scoped view; see docs/Frontend.md.
 #ifndef GAME_FENGINE_H
 #define GAME_FENGINE_H
+#include "FEMouse.h"
 #pragma interface
 #include "FEngLists.h"
+#include "FEngMath.h"
 
 class FEGameInterface;
 class FEMessageResponse;
@@ -28,6 +30,15 @@ class FEPackageCommand : public FENode {
     virtual ~FEPackageCommand();
 };
 
+// Object types by hash, built by Startup.
+class FETypeLib {
+  public:
+    FEList types;    // +0x0
+    long unknown_10; // +0x10
+    FETypeLib() : unknown_10(0) {}
+    void Startup();
+};
+
 class FEngine {
   public:
     static unsigned long SysGUID;
@@ -36,9 +47,18 @@ class FEngine {
     void SetNumJoyPads(unsigned char);
     void ResetJoyPad();
     void SetExecution(bool);
+    FEngine();
+    void RenderGroup(FEGroup *, FEMatrix4 &, FEMatrix4 &, unsigned short);
+    void RenderObject(FEObject *, FEMatrix4 &, unsigned short);
+    ~FEngine();
+    void Update(long);
+    void ReleaseAll();
+    FEPackage *PushPackage(const char *, unsigned char, unsigned long);
     void AddToIdleList(FEPackage *);
     FEPackage *FindIdlePackage(const char *) const;
     FEPackage *GetFirstLibrary() const;
+    FEPackage *LoadPackage(const void *, bool);
+    int UnloadPackage(FEPackage *);
     void AddToLibraryList(FEPackage *);
     void RemoveFromLibraryList(FEPackage *);
     FEPackage *FindLibraryPackage(unsigned long) const;
@@ -57,6 +77,7 @@ class FEngine {
     int ProcessCodeListBoxResponses(FEObject *, FEPackage *, unsigned long);
     void ProcessObjectMessage(FEObject *, FEPackage *, unsigned long, unsigned long);
     void ProcessGlobalMessage(FEPackage *, unsigned long, unsigned long);
+    void ProcessMessageQueue();
     void ProcessResponses(FEMessageResponse *, FEObject *, FEPackage *, unsigned long);
     void RecordLastPackageButton(unsigned long, unsigned long);
     unsigned long RecallLastPackageButton(unsigned long);
@@ -67,27 +88,33 @@ class FEngine {
     int checkMovieDemoScreen;    // +0x0000
     int executing;               // +0x0004
     int resetRequested;          // +0x0008; set by ShellManager::Reset. Name inferred.
-    unsigned char unknown_c[0x18 - 0xc];
+    int unknown_c;               // +0x000c
+    bool unknown_10;             // +0x0010; passed to FEPackageReader::Load as its first flag.
+    bool unknown_14;             // +0x0014; and its second.
     FEJoyPad *joyPads;           // +0x0018
-    unsigned char unknown_1c[0x4c - 0x1c];
+    FEMouse mouse;               // +0x001c
+    int unknown_40;              // +0x0040
+    int unknown_44;              // +0x0044
+    unsigned char unknown_48[0x4c - 0x48];
     unsigned char joyPadState[76]; // +0x004c; cleared as a block by ResetJoyPad.
-    unsigned char unknown_98[0xe8 - 0x98];
+    unsigned char unknown_98[0xe4 - 0x98];
+    int unknown_e4;              // +0x00e4
     int joyPadCount;             // +0x00e8
     unsigned short activeMask;   // +0x00ec
-    unsigned char unknown_ee[0xf0 - 0xee];
+    unsigned short renderContextCount; // +0x00ee
     FEList packages;             // +0x00f0
     FEList idlePackages;         // +0x0100
     FEList libraries;            // +0x0110
     FEGameInterface *game;       // +0x0120
-    unsigned char unknown_124[0x4128 - 0x124];
+    FEObjectSorter<1024> sorter; // +0x0124
     FEMinList messageQueue;      // +0x4128
-    FEMinList commandQueue;      // +0x4138
-    unsigned char unknown_4148[0x415c - 0x4148];
+    FEList commandQueue;         // +0x4138
+    FETypeLib typeLib;           // +0x4148
     int markerCount;             // +0x415c
     char markers[16][256];       // +0x4160
     int lastButtonIndex;         // +0x5160
     struct { unsigned long package; unsigned long button; } lastButtons[32]; // +0x5164
-    unsigned char unknown_5264[4];
+    int unknown_5264;            // +0x5264
     int debugMessages;           // +0x5268; passes queued messages to the game interface.
     signed char lastAcceptPad;   // +0x526c; read by ShellManager::GetIndexPadLastPressedAccept.
 };

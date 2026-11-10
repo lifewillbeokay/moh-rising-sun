@@ -1,0 +1,62 @@
+{
+  "id": "handler_mpprofile_init",
+  "source": "src/frontend/handler_mpprofile_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018a254",
+      "size": 596
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b14f4",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "__16HandlerMPProfile",
+      "address": "0x8018a254",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "Init__16HandlerMPProfilePCc",
+      "address": "0x8018a270",
+      "size": 568,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "Init__14PackageHandlerPCc": "0x80187084",
+    "IsCoopOnTop__12ShellManagerUc": "0x80182600",
+    "RemoveMPViewPorts__12ShellManager": "0x8018217c",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "_vt.16HandlerMPProfile": "0x802eb218",
+    "_vt.16HandlerMPProfile.Q211CMemoryCard8ScanTask": "0x802eb1f8",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPProfile.cpp",
+  "original_file_index": 1665
+}

@@ -1,0 +1,72 @@
+{
+  "id": "game_glare_static",
+  "source": "src/game/glare_static.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006cc68",
+      "size": 280
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__6CGlare",
+      "address": "0x8006cc68",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "ResetClass__6CGlare",
+      "address": "0x8006cc90",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownClass__6CGlare",
+      "address": "0x8006ccb8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Create__6CGlareib",
+      "address": "0x8006cce0",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "Draw__6CGlareR12CDrawContext",
+      "address": "0x8006cd44",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand": "0x8012ea14",
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "Create__13CGlareManageri": "0x8006d0cc",
+    "ExecuteDraw__13CGlareManagerR12CDrawContextPPv": "0x8006d394",
+    "Init__13CGlareManager": "0x8006ce60",
+    "Reset__13CGlareManager": "0x8006cfe0",
+    "Shutdown__13CGlareManager": "0x8006d058",
+    "g_manager": "0x802fb230",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

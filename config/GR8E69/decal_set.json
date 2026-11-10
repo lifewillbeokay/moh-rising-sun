@@ -1,0 +1,47 @@
+{
+  "id": "decal_set",
+  "source": "src/scene/decal_set.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80068b60",
+      "size": 388
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8DecalSetRQ24_STLt9allocator1Z5Decal",
+      "address": "0x80068b60",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "__8DecalSetRC8DecalSet",
+      "address": "0x80068bb4",
+      "size": 304,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_new": "0x801a8910"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

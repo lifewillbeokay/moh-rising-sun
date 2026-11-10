@@ -1,0 +1,46 @@
+{
+  "id": "ea_subtitle_display_init",
+  "source": "src/ea/subtitle_display_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b3894",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__Q24RCMP11VD_SUBTITLEPvbP4FONTT1PQ24RCMP17AV_SUBTITLE_ARRAY",
+      "address": "0x801b3894",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateTars__Q24RCMP11VD_SUBTITLE": "0x801b357c",
+    "CreateWrappedStrings__Q24RCMP11VD_SUBTITLE": "0x801b36a4",
+    "DeleteTars__Q24RCMP11VD_SUBTITLE": "0x801b34f0",
+    "DeleteWrappedStrings__Q24RCMP11VD_SUBTITLE": "0x801b361c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "subtitlevd.cpp",
+  "original_file_index": 2342
+}

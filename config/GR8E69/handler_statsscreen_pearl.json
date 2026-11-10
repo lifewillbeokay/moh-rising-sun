@@ -1,0 +1,41 @@
+{
+  "id": "handler_statsscreen_pearl",
+  "source": "src/frontend/handler_statsscreen_pearl.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80195638",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckToSeeIfSpecialPearlStatsAreNeeded__18HandlerStatsScreenb",
+      "address": "0x80195638",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerStatsScreen.cpp",
+  "original_file_index": 1847
+}

@@ -1,0 +1,54 @@
+{
+  "id": "shell_ListBoxCtor",
+  "source": "src/shell/ListBoxCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80186078",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7ListBoxP7FEngine",
+      "address": "0x80186078",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "_._7ListBox",
+      "address": "0x80186108",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Clear__7ListBox": "0x80186494",
+    "__builtin_delete": "0x801a8990",
+    "s_DefaultPrefix": "0x802b06f0",
+    "strncpy": "0x80266dd4"
+  },
+  "local_externals": [
+    "s_DefaultPrefix"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "dListBox.cpp",
+  "original_file_index": 1601
+}

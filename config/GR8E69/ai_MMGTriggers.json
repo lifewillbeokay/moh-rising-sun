@@ -1,0 +1,98 @@
+{
+  "id": "ai_MMGTriggers",
+  "source": "src/ai/MMGTriggers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e3f88",
+      "size": 1468
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3548",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterMMGTriggers__26CMountedMachineGunBehavior",
+      "address": "0x800e3f88",
+      "size": 392,
+      "binding": 1
+    },
+    {
+      "name": "DeregisterMMGTriggers__26CMountedMachineGunBehavior",
+      "address": "0x800e4110",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "RegisterFeeder__26CMountedMachineGunBehavioriP8BSObject",
+      "address": "0x800e41c8",
+      "size": 372,
+      "binding": 1
+    },
+    {
+      "name": "DeregisterAllFeeders__26CMountedMachineGunBehavior",
+      "address": "0x800e433c",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetFeederByLinkCode__26CMountedMachineGunBehaviori",
+      "address": "0x800e43a4",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "ForceToMMGFeeder__26CMountedMachineGunBehavior",
+      "address": "0x800e4438",
+      "size": 268,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "DWI_alloc": "0x801a8670",
+    "DWI_getallocid": "0x801a8664",
+    "DWI_setallocid": "0x801a8658",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetPosition__C13TriggerObjectR8CVector3": "0x80122c4c",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "_M_erase__Q24_STLt8_Rb_tree5ZP13TriggerObjectZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoZQ24_STLt4less1ZP13TriggerObjectZQ24_STLt9allocator1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfo": "0x80284504",
+    "_M_erase__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP8BSObjectPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCiZP8BSObject": "0x80284a00",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__builtin_delete": "0x801a8990",
+    "g_MMGBidInfoMap": "0x8031cf3c",
+    "g_MMGFeederMap": "0x8031cf4c",
+    "g_pNumTriggers": "0x80326d64",
+    "g_pTriggerObjects": "0x80326d68",
+    "insert_unique__Q24_STLt8_Rb_tree5ZP13TriggerObjectZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoZQ24_STLt4less1ZP13TriggerObjectZQ24_STLt9allocator1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfoRCQ24_STLt4pair2ZCP13TriggerObjectZP10MMGBidInfo": "0x80284298",
+    "insert_unique__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP8BSObjectGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCiZP8BSObjectRCQ24_STLt4pair2ZCiZP8BSObject": "0x80284798"
+  },
+  "local_externals": [
+    "g_MMGBidInfoMap",
+    "g_MMGFeederMap"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

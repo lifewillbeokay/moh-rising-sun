@@ -1,0 +1,59 @@
+{
+  "id": "skeletondata_lookup",
+  "source": "src/eagl_anim/skeletondata_lookup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800838d8",
+      "size": 884
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindJoint__CQ34EALA9Character12SkeletonDataUi",
+      "address": "0x800838d8",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "FindJoint__CQ34EALA9Character12SkeletonDataPCc",
+      "address": "0x8008396c",
+      "size": 368,
+      "binding": 1
+    },
+    {
+      "name": "FindAttachPoint__CQ34EALA9Character12SkeletonDataPCc",
+      "address": "0x80083adc",
+      "size": 368,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetStringCRC__FPCc": "0x801acb98",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "__builtin_delete": "0x801a8990",
+    "memcmp": "0x80266558"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SkeletonData.cpp",
+  "original_file_index": 585
+}

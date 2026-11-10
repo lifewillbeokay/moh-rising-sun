@@ -1,0 +1,84 @@
+{
+  "id": "handler_onlinekeyboard",
+  "source": "src/frontend/handler_onlinekeyboard.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019c4a0",
+      "size": 596
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b5934",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindNextUnlockedSkin__20HandlerOnlineOptionscccc",
+      "address": "0x8019c4a0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__21HandlerOnlineKeyboardUiP8FEObjectUl",
+      "address": "0x8019c528",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "GetMyString__21HandlerOnlineKeyboard",
+      "address": "0x8019c664",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetStringLength__21HandlerOnlineKeyboard",
+      "address": "0x8019c66c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__22HandlerOnlineFavorites",
+      "address": "0x8019c674",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "_._22HandlerOnlineFavorites",
+      "address": "0x8019c694",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "HandleEvent__22HandlerVirtualKeyboardUiP8FEObjectUl": "0x801967a4",
+    "IsSkinUnlocked__20HandlerOnlineOptionsi": "0x8019c414",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetKeyboardString__12ShellManagerPCc": "0x80182870",
+    "_._14PackageHandler": "0x80187050",
+    "_._7ListBox": "0x80186108",
+    "_vt.22HandlerOnlineFavorites": "0x802ebc78",
+    "g_Shell": "0x802f4420",
+    "strlen": "0x80266b70",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

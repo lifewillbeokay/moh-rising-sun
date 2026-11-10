@@ -1,0 +1,55 @@
+{
+  "id": "handler_virtualkeyboard_string",
+  "source": "src/frontend/handler_virtualkeyboard_string.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801969f0",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "ClearStringField__22HandlerVirtualKeyboard",
+      "address": "0x801969f0",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "AddLetterToString__22HandlerVirtualKeyboardPcc",
+      "address": "0x80196a5c",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "RemovePreviousLetter__22HandlerVirtualKeyboardPc",
+      "address": "0x80196adc",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "g_Shell": "0x802f4420",
+    "memset": "0x80266778",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerVirtualKeyboard.cpp",
+  "original_file_index": 1862
+}

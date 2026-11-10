@@ -96,6 +96,14 @@ struct SPlayerLevelData {
     float health;                  // +4
 };
 
+// The controller options screen's settings. The field names follow the buttons the handler ties them to.
+struct SControllerPrefs {
+    float analogSensitivity; // +0x0
+    float turnSpeed;         // +0x4
+    unsigned char invertY;   // +0x8
+    unsigned char crosshairs; // +0x9
+    unsigned char vibrate;   // +0xa
+};
 struct SPlayerProfile {
     char name[12];                   // +0x0000
     int device;                      // +0x000c; saved by RememberProfileDevices.
@@ -106,12 +114,17 @@ struct SPlayerProfile {
     float volumeB;                   // +0x0018; second SoundSetVolumes argument.
     unsigned char soundMode;         // +0x001c
     unsigned char unknown_1d[3];
-    float unknown_20;                // +0x0020; set to 0.3 by TotalReset.
-    float unknown_24;                // +0x0024; set to 0.5 by TotalReset.
-    unsigned char unknown_28;        // +0x0028; copied to g_inputMgr as a flag by InitControllerFromOptions.
-    unsigned char unknown_29;        // +0x0029
-    unsigned char noVibration;       // +0x002a; SetMasterBlockVibrations gets its inverse.
-    unsigned char unknown_2b;
+    union {
+        SControllerPrefs controllerPrefs; // +0x0020; copied whole by HandlerControllerOptions.
+        struct {
+            float unknown_20;                // +0x0020; set to 0.3 by TotalReset.
+            float unknown_24;                // +0x0024; set to 0.5 by TotalReset.
+            unsigned char unknown_28;        // +0x0028; copied to g_inputMgr as a flag by InitControllerFromOptions.
+            unsigned char unknown_29;        // +0x0029
+            unsigned char noVibration;       // +0x002a; SetMasterBlockVibrations gets its inverse.
+            unsigned char unknown_2b;
+        };
+    };
     unsigned int languageSelected : 1; // +0x002c; the upper half of this word holds option bits.
     unsigned int unknownBit1 : 1;
     unsigned int unknownBit2 : 1;
@@ -390,21 +403,22 @@ class CGameSettings {
 extern CGameSettings g_GameSettings;
 
 // Scoped view of the cheat state; only the replay-item unlock at +0x34 is named.
+// bool is a word on this target; HandlerBonusOptions shows these are bools.
 struct CheatsView {
-    int invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
-    int infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
-    int unknown_8;
-    int unknown_c;
+    bool invincible; // Tested by CPlayerObject::IsInvincible; name inferred.
+    bool infiniteAmmo; // +4; CWeapon::Update refills an empty reserve. Name from Frontline.
+    bool unknown_8;
+    bool unknown_c;
     float unknown_10;
-    int unknown_14;
-    int unknown_18;
-    int keepGrenadeSpeed; // +0x1c; name from Frontline.
-    int oneShotKillsEnemies; // +0x20; a soldier's bullet damage becomes 1000. Descriptive.
-    int headShotsOnly;       // +0x24; name from Frontline.
-    int oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
-    int unknown_2c;
-    int hugeArms; // +0x30; set by ActivateCheatNamed_HugeArms.
-    int allReplayItems;
+    bool unknown_14;
+    bool unknown_18;
+    bool keepGrenadeSpeed; // +0x1c; name from Frontline.
+    bool oneShotKillsEnemies; // +0x20; a soldier's bullet damage becomes 1000. Descriptive.
+    bool headShotsOnly;       // +0x24; name from Frontline.
+    bool oneHitKills; // +0x28; damage becomes 1000 in CExplosion::Visit. Name from Frontline.
+    bool unknown_2c;
+    bool hugeArms; // +0x30; set by ActivateCheatNamed_HugeArms.
+    bool allReplayItems;
 };
 extern CheatsView g_cheats;
 
@@ -419,7 +433,7 @@ struct GameFlowView {
     int levelIsShell; // +0x4; Init stores CurrentLevelIsShell.
     int levelEnding; // +0x8; set by BIFunc_EndLevel and CPauseMenu::RestartLevel.
     int startingMP; // +0xc; set by SetStartMPDataFromShell and by the pause menu when quitting to the shell. Name inferred and doubtful.
-    unsigned char unknown_10[0x14 - 0x10];
+    int unknown_10; // +0x10; set by HandlerLoadGame::OnAccept when the level is unchanged.
 };
 extern GameFlowView g_GameFlow;
 

@@ -1,0 +1,147 @@
+{
+  "id": "system_thread",
+  "source": "src/game/thread.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a7cc0",
+      "size": 1804
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7360",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__9ThreadJobPFR9ThreadJob_vN21P6ThreadPvi",
+      "address": "0x801a7cc0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Reset__9ThreadJob",
+      "address": "0x801a7ce8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "__6Thread",
+      "address": "0x801a7d08",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "_._6Thread",
+      "address": "0x801a7dc0",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Init__6Threadii",
+      "address": "0x801a7e18",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "DeInit__6Thread",
+      "address": "0x801a7f74",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "Add__6ThreadPFR9ThreadJob_vPviT1T1",
+      "address": "0x801a8008",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "AbortAll__6Thread",
+      "address": "0x801a8084",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "HasJobs__6Thread",
+      "address": "0x801a80c0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "ThreadCallback__6ThreadPv",
+      "address": "0x801a80f0",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "PopPending__6Thread",
+      "address": "0x801a81f0",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "PopFree__6Thread",
+      "address": "0x801a8254",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "PushFree__6ThreadP9ThreadJob",
+      "address": "0x801a82b8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "PushPending__6ThreadP9ThreadJob",
+      "address": "0x801a8330",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "Reset__6Thread",
+      "address": "0x801a83a8",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "DWI_intfill": "0x801a88f4",
+    "MUTEX_create": "0x80217f28",
+    "MUTEX_destroy": "0x80217f50",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "THREAD_createparam": "0x80217b7c",
+    "THREAD_destroy": "0x80217bf8",
+    "THREAD_exit": "0x80217f04",
+    "THREAD_getpriority": "0x80217dd0",
+    "THREAD_setpriority": "0x80217e10",
+    "THREAD_waitexit": "0x80217ebc",
+    "THREAD_yieldticks": "0x80217d48",
+    "_._Q24_STLt5queue2ZP9ThreadJobZQ24_STLt5deque2ZP9ThreadJobZQ24_STLt9allocator1ZP9ThreadJob": "0x80290288",
+    "_M_initialize_map__Q24_STLt11_Deque_base2ZP9ThreadJobZQ24_STLt9allocator1ZP9ThreadJobUi": "0x80278eec",
+    "_M_pop_front_aux__Q24_STLt5deque2ZP9ThreadJobZQ24_STLt9allocator1ZP9ThreadJob": "0x80290230",
+    "_M_push_back_aux_v__Q24_STLt5deque2ZP9ThreadJobZQ24_STLt9allocator1ZP9ThreadJobRCP9ThreadJob": "0x80290190",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

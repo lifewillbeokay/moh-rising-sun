@@ -1,0 +1,50 @@
+{
+  "id": "skeletondata_attachpoints",
+  "source": "src/eagl_anim/skeletondata_attachpoints.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800830b8",
+      "size": 412
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b5a8",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "GatherAttachPoints__Q34EALA9Character12SkeletonData",
+      "address": "0x800830b8",
+      "size": 412,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemapAttachPoint__Q34EALA9Character12SkeletonDataRCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcT1": "0x80083254",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SkeletonData.cpp",
+  "original_file_index": 585
+}

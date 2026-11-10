@@ -3,6 +3,13 @@
 // AI-assisted scoped view of EALA::Character::Skeleton; see docs/Animation.md. The first word is the
 // resource pointer the symbol Bind__...Pointer1Z...SkeletonData takes. Member names are inferred.
 #include "EAGLTransform.h"
+namespace _STL {
+template <class T> class allocator;
+template <class T> class char_traits;
+template <class C, class T, class A> class basic_string;
+}
+typedef _STL::basic_string<char, _STL::char_traits<char>, _STL::allocator<char> > CharacterString;
+namespace EAGL { class DynamicLoader; }
 namespace EAGLAnim {
 class Skeleton;
 }
@@ -10,12 +17,22 @@ namespace EALA {
 namespace Character {
 class SkeletonData {
   public:
-    unsigned char unknown_0[12];
+    unsigned char unknown_0[8];
+    // The loaded resource: its dynamic loader at +8. Inferred from GatherJoints.
+    struct LoadedFile {
+        unsigned char unknown_0[8];
+        EAGL::DynamicLoader *loader;
+    } *file;                      // +8
     EAGLAnim::Skeleton *skeleton; // +12
     unsigned char unknown_10[80 - 16];
     int *excludedBegin; // +80; joints left out of the bounding volume, a vector's storage.
     int *excludedEnd;   // +84
     int GetBoneCount() const;
+    int FindAttachPoint(const char *) const;
+    void GatherAttachPoints();
+    void GatherJoints();
+    void GatherBvExcludedJoints();
+    void RemapAttachPoint(const CharacterString &, const CharacterString &);
     int FindJoint(const char *) const;
     int FindJoint(unsigned int) const;
     bool IsJointBvExcluded(int);

@@ -1,0 +1,49 @@
+{
+  "id": "ai_JumpDump",
+  "source": "src/eala/JumpDump.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80087538",
+      "size": 156
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c0b0",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "Dump__Q34EALA9Character4JumpUi",
+      "address": "0x80087538",
+      "size": 156,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "DumpPrefix__Q34EALA9Character4TaskUi": "0x8008fd24"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Jump.cpp",
+  "original_file_index": 608
+}

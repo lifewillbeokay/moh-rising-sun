@@ -476,12 +476,21 @@ Projectors live in a pool, `g_ProjectorList`, with the same five-word shape as t
 pool, linked through `+608`. [`Projector.h`](../include/game/Projector.h) holds the frustum at `+64`,
 the local-to-world matrix at `+368`, the projection matrix at `+432`, the radius at `+564` and four
 frustum parameters at `+568`. Names are inferred from use. `SetTMLocalToWorld` rebuilds the frustum
-from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach`, `BeginUpdate` and the constructors
-are not reconstructed.
+from those parameters. `StateSetup`, `Attach` and the constructors are not reconstructed.
 
-`CVolFrustum` is 304 bytes (`Create` allocates that size). Ten collision tests, `TestVisibility` and
+`InitClass` allocates the pool of 16 and fills a private `_STL::map` from each type 16 level resource, keyed by the
+definition's first value; `Create` looks an id up there. `Create` constructs 608 bytes while the pool's stride is 624 with
+the link at `+608`, so the header places the link in a pool node outside the class. That node's shape is inferred; the
+allocation tag `source/system/freepool.h:38` suggests a pool template.
+
+`BeginUpdate` composes the attached node's transform with the attach matrix at `+560` and the offset at `+496`.
+
+`CVolFrustum` is 304 bytes (`Create` allocates that size). Its copy constructor, `operator=` and `TransformedCopy` copy only the six planes at `+80`. Ten collision tests, `TestVisibility` and
 `GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
 through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).
+`Transform` moves the six planes, then recomputes two points from `(0,0,0)` and `(0,1,0)` and the bounding center from
+the point at `+48`. The box and sphere tests walk the planes: a box compares the center's distance with its half
+extents projected on the normal, and a sphere reports contact as soon as it straddles one plane.
 
 ## Viewport
 
@@ -530,3 +539,28 @@ ramp to an amount; `Update` runs state 1 (ramp up), 2 (hold) and 3 (ramp down). 
 `case 0` gives the decision tree its root and is inferred. The state numbers' meanings are
 inferred from the code. An unreferenced zero word at `0x8029a5c8` sits between `Update`'s and
 `Pause`'s literals; no source for it is known, so `Pause` is its own fragment.
+
+## Glare
+
+`CGlareManager` keeps a table of `CGlareResource` built from the level's type 15 and 16 resources, and a free-list pool
+of 64 glares tagged `source/system/freepool.h:38`. Verified: the manager's setup, reset, lookup and creation, and
+`CGlare`'s static calls and `Draw`. Inferred: member names and the record order of a glare's level resource. Not
+reconstructed: `CGlare`'s constructor and destructor, `CGlare::IsVisible` and `CGlareResource::Init` (one float register
+for a zero).
+
+## Decal manager
+
+`CDecalManager` is a scene node with a private singleton. It holds an `_STL::vector<DecalSet>` at `+64`, one set per type 34
+level resource, and a live decal count at `+60`. A `DecalSet` is 16 bytes: an `_STL::list<Decal>` and, at `+12`, its level
+resource. `ClearDecals` empties every set, `Reset` also puts the manager back in the scene, and `AddBulletDecal` finds the
+surface's decal CRC from the collision's first contact. `Draw` submits `ExecuteDraw` to render bin 7. The contact's word at
+`+36` is read as a surface record here; that reading, and the record's two names, are inferred.
+
+Not reconstructed: the singleton's accessors (the static has no recorded file name), the constructor and destructor (they
+need `ISceneNode`'s members), `Init`, `AcquireDecal`, `InitDecalFromCollision` and `ExecuteDraw`.
+
+## Character shadow
+
+`CCharacterShadow::InitProjector` creates the `npcshadow` projector once and clears its word at `+592`; on failure it
+clears the fields at `+16` and `+32`. `SetShadowCaster` stores the object and looks up its `JO_hip_L` and `JO_hip_R` joints.
+`AttachProjector` and `Draw` are not reconstructed.

@@ -1,0 +1,101 @@
+{
+  "id": "sound_BankMan",
+  "source": "src/sound/BankMan.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015fc7c",
+      "size": 1020
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa6d8",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7BankMan",
+      "address": "0x8015fc7c",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "AddSoundBank__7BankManPUc",
+      "address": "0x8015fcf0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "RemoveSoundBanks__7BankMan",
+      "address": "0x8015fd78",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "RemoveSoundBank__7BankMani",
+      "address": "0x8015fdc8",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetBankHandle__7BankManR14SoundEntryBank",
+      "address": "0x8015fe4c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "GetAsyncLoadStatus__7BankMan",
+      "address": "0x8015febc",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "LoadAsyncSoundBank__7BankManiPcPviPFi_Pv",
+      "address": "0x8015ff28",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetAsyncIsLoaded__7BankMan14EUberBankTypes",
+      "address": "0x8015ffb4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "LoadAsyncSoundBank__7BankManiPcPFi_Pv",
+      "address": "0x8015ffe4",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "SNDBANK_asyncdone": "0x8021a3f0",
+    "SNDBANK_asyncload": "0x8021a3cc",
+    "SNDbankadd": "0x80219610",
+    "SNDbankheadercopy": "0x8021a54c",
+    "SNDbankheadersize": "0x8021a5c0",
+    "SNDbankremove": "0x8021a748",
+    "__builtin_vec_delete": "0x801a89b0",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BankMan.cpp",
+  "original_file_index": 1424
+}

@@ -1,0 +1,52 @@
+{
+  "id": "handler_coopprofile_init",
+  "source": "src/frontend/handler_coopprofile_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80194364",
+      "size": 256
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3920",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__18HandlerCoopProfilePCc",
+      "address": "0x80194364",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "Init__14PackageHandlerPCc": "0x80187084",
+    "SetPosition__8FEObjectRC9FEVector3b": "0x80050968",
+    "_18HandlerCoopProfile.m_create_player1": "0x80452594",
+    "_18HandlerCoopProfile.m_create_player2": "0x80452598",
+    "_18HandlerCoopProfile.m_player1_profile_index": "0x8045258c",
+    "_18HandlerCoopProfile.m_player2_profile_index": "0x80452590",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopProfile.cpp",
+  "original_file_index": 1839
+}

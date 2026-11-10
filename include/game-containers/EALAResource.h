@@ -27,6 +27,10 @@ class Resource {
             if (value)
                 ++reinterpret_cast<Resource *>(value)->field_00;
         }
+        template <class U> Pointer(const Pointer<U> &other) : value(other) {
+            if (value)
+                ++reinterpret_cast<Resource *>(value)->field_00;
+        }
         ~Pointer() {
             if (value)
                 reinterpret_cast<Resource *>(value)->Release();

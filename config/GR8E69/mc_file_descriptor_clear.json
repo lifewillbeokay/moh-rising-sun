@@ -1,0 +1,50 @@
+{
+  "id": "mc_file_descriptor_clear",
+  "source": "src/memorycard/file_descriptor_clear.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80295760",
+      "size": 284
+    }
+  ],
+  "functions": [
+    {
+      "name": "Clear__Q26Realmc17CmnFileDescriptor",
+      "address": "0x80295760",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Init__Q26Realmc17CmnFileDescriptorRCQ26Realmc6CardIDRCQ26Realmc8FileInfoQ26Realmc12FileOpenMode",
+      "address": "0x802957a8",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc16GcFileDescriptor",
+      "address": "0x80295804",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

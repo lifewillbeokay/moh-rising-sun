@@ -1,0 +1,66 @@
+{
+  "id": "mohlua_calls",
+  "source": "src/game/mohlua_calls.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a7a98",
+      "size": 544
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7248",
+      "size": 216
+    }
+  ],
+  "functions": [
+    {
+      "name": "LUAGetStateVariable__FP9lua_State",
+      "address": "0x801a7a98",
+      "size": 168,
+      "binding": 0
+    },
+    {
+      "name": "LUAStartScriptDeath__FP9lua_State",
+      "address": "0x801a7b40",
+      "size": 296,
+      "binding": 0
+    },
+    {
+      "name": "LUABeginHurtling__FP9lua_State",
+      "address": "0x801a7c68",
+      "size": 80,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "BeginHurtling__11CAnimObject": "0x800a4de8",
+    "CreateBSObject__FPCcPP8BSObjectP10BSGO_BasicP13TriggerObjectPPv": "0x800f6b5c",
+    "LUAGetCurrentObject__Fv": "0x801a76c4",
+    "lua_error": "0x8003bb9c",
+    "lua_gettop": "0x80038b34",
+    "lua_isstring": "0x80038c04",
+    "lua_pushnumber": "0x80038d4c",
+    "lua_tostring": "0x80038c90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mohlua.cpp",
+  "original_file_index": 2149
+}

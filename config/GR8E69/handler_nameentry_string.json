@@ -1,0 +1,44 @@
+{
+  "id": "handler_nameentry_string",
+  "source": "src/frontend/handler_nameentry_string.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019123c",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetMyString__16HandlerNameEntry",
+      "address": "0x8019123c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetStringLength__16HandlerNameEntry",
+      "address": "0x80191244",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerNameEntry.cpp",
+  "original_file_index": 1764
+}

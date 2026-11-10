@@ -1,0 +1,74 @@
+{
+  "id": "mohlua_queries",
+  "source": "src/game/mohlua_queries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a76d0",
+      "size": 968
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7128",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "LUAGetWeaponType__FP9lua_State",
+      "address": "0x801a76d0",
+      "size": 200,
+      "binding": 0
+    },
+    {
+      "name": "LUAGetPosture__FP9lua_State",
+      "address": "0x801a7798",
+      "size": 172,
+      "binding": 0
+    },
+    {
+      "name": "LUAGetBulletType__FP9lua_State",
+      "address": "0x801a7844",
+      "size": 252,
+      "binding": 0
+    },
+    {
+      "name": "LUAGetHitLocation__FP9lua_State",
+      "address": "0x801a7940",
+      "size": 172,
+      "binding": 0
+    },
+    {
+      "name": "LUAGetHitIntensity__FP9lua_State",
+      "address": "0x801a79ec",
+      "size": 172,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "GetCurrentWeaponType__C14CSoldierObject": "0x800c2f38",
+    "LUAGetCurrentObject__Fv": "0x801a76c4",
+    "lua_error": "0x8003bb9c",
+    "lua_gettop": "0x80038b34",
+    "lua_pushnumber": "0x80038d4c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mohlua.cpp",
+  "original_file_index": 2149
+}

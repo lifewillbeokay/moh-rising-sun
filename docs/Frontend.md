@@ -100,3 +100,92 @@ pool `ObjDataPool`.
 Not yet exact: `Close` (FEObject.cpp, a float range test), `GetStringLength` (register allocation), `FEColor::operator-` (load order),
 `ShellManager::RenderObjectList`, `RecallPackageMarker`, `RecordPackageMarker` and the
 `PackageHandler` object-list index functions.
+
+### FELocalizer
+
+`FELocalizer` and `FELocalString` hold localized strings as a table of 28-byte records keyed by the upper-case
+label hash, each with one `FEWideString` per language. Class and method names are symbols; member names are
+inferred from use. Verified: `ReadLocaleData` parses `[HEADER]`, a `Languages` line, `[LABEL]`, `[PLATFORM]`,
+`[COMMENT]`, `[FLAGS]` and `[MAX_SIZE]` records; `SetSize` ignores its argument. Inferred: `storeLabels`.
+
+The unit's helpers `FECopyString`, `ItoA` and the rest are private symbols of the original file `FELocalizer.cpp`,
+which the symbol table names beside them and which the DWI labels in `SetNumLanguages`, `AllocStrings` and
+`SetString` repeat as `source/FEngine/FELocalizer.cpp`. The fragments that call them record that file. The helpers
+themselves, `ReadLocaleData` and `ReadString` are not reconstructed yet: their other callers are not in this unit.
+
+### FEPackageReader
+
+`FEPackageReader` builds an `FEPackage` from a package file whose values are little-endian. Verified: the chunk
+identifiers tested in `ReadHeaderChunk`, `ReadResourceChunk` and `ReadObjectChunk`, the header version check, the
+DWI labels, and the sizes `CreateObject` allocates for each object type. Inferred: reader member names, and the
+`FEngElements.h` constructors that take a type, from the store to `FEObject::type` repeated before the reader's own
+store. `FEngine::LoadPackage`, `FENode` and the object tag readers use the same classes. `FECodeListBox` derives from `FEObject`, not `FEListBox`: its constructor calls `FEObject`'s directly.
+
+### FECodeListBox and rendering
+
+`FECodeListBox` is a 196-byte `FEObject`, per `CreateObject` and `Clone`; member names come from use and are inferred.
+`FEngine::RenderGroup` walks children with a world and combined matrix; `FEObjectSorter<1024>` is a symbol, its second
+array is inferred from the size of the space before `messageQueue`.
+
+### Package handlers
+
+Each shell screen is a `PackageHandler` subclass; class names, tables and method names are symbols, and `PackageHandlers.h`
+declares only the members their reconstructed methods touch. The base table's slots are the destructor, `Init`, `HandleTick`,
+the pure `HandleEvent` and `HandleSoundEvent`, as dumped from `_vt.14PackageHandler`. A handler's `HandleEvent` compares the
+event against upper-case hashes of the script's message names. `PackageHandlers.h` uses `#pragma interface` so that the tables
+and implicit destructors, which sit elsewhere in the image, stay external to these units.
+
+Verified: the message and object names and the control flow of the reconstructed handlers. Inferred: `buttonHashes`,
+`unknown_18c0`, the language table layout
+and `quadrantUsed` are named from use, and `quadrantUsed` is only tested for being clear.
+
+`ShellFactory::CreatePackageHandler` compares the package name against one line per screen; the DWI label on each
+allocation gives that line's number in `source/UserInterface/shellFactory.cpp`, which is why the macro takes it as an argument.
+Allocation sizes there are the evidence for the handler sizes in `PackageHandlers.h`; members with no reader stay `unknown_`.
+`VolumeKnobs.h`'s `CSliderVector` is a descriptive name for the twelve-byte vectors the factory's inline constructors zero.
+Not reconstructed: handlers whose methods use function-local statics with `.bss` guards, such as `HandleSoundEvent`.
+
+`SMPSetup` in `GameSettingsViews.h` views the multiplayer setup block at `+0x3201c`: screens update its flag word through an
+address register pointing at the block, which a direct member access does not produce, so the block is one object in the
+original. `SCoreGameSettings` keeps naming its members separately until it is restructured. `SControllerPrefs` is the
+twelve bytes `HandlerControllerOptions` copies whole, with fields named for the buttons tied to them; `g_cheats`' words are
+`bool`s, as the unnormalized returns and `xori` in `HandlerBonusOptions` show.
+
+Not yet exact: `HandlerPauseBriefingOverlay::HandleEvent` and `HandlerPauseOutro::HandleEvent` (address registers),
+`HandlerLoadGame::OnAccept` (register allocation), `HandlerNameEntry::HandleEvent` (two copies) and
+`HandlerBonusOptions::HandleEvent`.
+
+The handlers' smaller methods follow the same layout. `HandlerVirtualKeyboard`'s two extra table slots return its string and
+its length, which is why `ClearStringField` and `AddLetterToString` call through the table. `HandlerStatsScreen`'s
+`specialPearlStats` is named after `CheckToSeeIfSpecialPearlStatsAreNeeded`, the only method that sets it.
+
+The handlers that scan memory cards derive from `CMemoryCard::ScanTask` as well, so `+0x50` holds its table and their members start
+at `+0x54`. Each `Execute` copies a file's name and size into a table of `SProfileScanEntry`, whose name is inferred;
+`HandlerCoopProfile`'s copy leaves the terminator to the zeroed table. `HandlerProfileSelect` keeps its table in the object, the others
+in a static. `keyboardAllowsEmpty` in `ShellManager` is inferred from `HandlerOnlineKeyboard`, which rejects an empty string only while it
+is clear.
+
+`HandlerCustomController`'s `controllerFunctionNames`, `controllerKeyNames`, `analogKeyNames`, `analogStickNames` and
+`analogEquivalence` are symbols; the members of their entries (`SFunctionNames`, `SKeyName`, `SAnalogEquivalence`) are named from
+the lookups. `HandlerMPGameGlobalOptions` derives from `HandlerMPGameOptions`, since its `Init` calls that class's directly and its
+own member follows the base's 92 bytes.
+
+`CFengInterface` is the plain FEng game interface: its virtual table in the image names every `FEGameInterface` slot, so the base class
+in `ShellManager.h` now carries those names. `SFengRenderContext`, `SFengColor` and their members are inferred from
+`GenerateRenderContext` and `GetContextTransform`; the object's color bytes come in blue, green, red, alpha order. `uiObjects` is the
+tree its symbols name, wrapped in `CUIObjectSet` because the project has no `<set>`. `FEObjectKind` names the object types by what
+`RenderObject` does with each, and its range comes from that switch: the tree omits the test for the top value, which the compiler only
+does when an enum's range ends there. `FEObjData::pivot` and `position` were the wrong way round: `FEngine::RenderGroup` rotates about
+the first, and `GenerateXformMatrix` translates by the second.
+
+Not yet exact: `CFengInterface::NotificationMessage` and `NotifySoundMessage`, where the iterator's end stays in a register.
+
+`CSaveGamePopup` screens are `CUIObject`s run from inside the save and load flow; the virtual tables name `Update`, `Draw` and the event slots.
+`CMemoryCardPopup`'s and the other popups' member names are inferred from their methods. `SoundAliasEvent`'s `SetAlias` helper in these units is
+local to them: the alias store goes through a reference, as its inline body shows. `CMemoryCardPopup::OnPush` shares its empty string with the
+constructor across `OnUIEvent`, which needs a guarded static, and `Display` and `SetString` take a pointer the source spelling for which
+is unknown (`PCUw`), so they stay out.
+
+`ShellManager::handlers` maps packages to their handlers. Only the units that touch it include `ShellHandlerMap.h` first, which gives the member
+its real type; the rest see sixteen bytes, so they build without the container headers. `updateOnce` is named from `Process`, which runs one engine
+update and returns to the factory and loader while it is set.

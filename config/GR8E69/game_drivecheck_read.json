@@ -1,0 +1,65 @@
+{
+  "id": "game_drivecheck_read",
+  "source": "src/game/drivecheck_read.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80058a04",
+      "size": 476
+    }
+  ],
+  "functions": [
+    {
+      "name": "DVDSafeRead__FP11DVDFileInfoPvii",
+      "address": "0x80058a04",
+      "size": 380,
+      "binding": 1
+    },
+    {
+      "name": "InitRomFont__Fv",
+      "address": "0x80058b80",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckDiscDriveStatus__Fv": "0x80058820",
+    "DVDCancelAsync": "0x8023bcd8",
+    "DVDGetCommandBlockStatus": "0x8023bb80",
+    "DVDReadAsyncPrio": "0x80239944",
+    "DiscErrorCleared__Fv": "0x8005a45c",
+    "InstanceGc__11MohLoaderGc": "0x80059480",
+    "IsResetConsoleRequested__11MohLoaderGc": "0x8005960c",
+    "OSInitFont": "0x802573d0",
+    "ResetConsole__11MohLoaderGc": "0x800596c4",
+    "__builtin_vec_new": "0x801a8950",
+    "g_fontSize": "0x802c1afc",
+    "g_fontSpace": "0x802c1afe",
+    "g_pFontData": "0x802c1af4"
+  },
+  "local_externals": [
+    "g_fontSize",
+    "g_fontSpace",
+    "g_pFontData"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "drivecheck.cpp",
+  "original_file_index": 372
+}

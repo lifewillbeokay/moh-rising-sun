@@ -500,3 +500,11 @@ clock and spline evaluators provide evidence for these larger routines.
 visited bitmap and counts. Method names come from the symbol table; member names are inferred.
 `AddConnectedAreas` is not reconstructed: its loop keeps the increment at the top and no form
 tried reproduces it.
+
+## Path networks and volumes
+
+`PathFindingNetwork` keeps a list of links to other networks, each with the two triggers of its link point. `GetLinkGoingTo`
+first looks for a direct link and picks the one closest to the position, then marks its own network visited and recurses
+through the other links, where it keeps the farthest match instead. That difference, and the second loop's unchecked map
+lookup, are the target's behavior. `g_astar_volumes` lists volumes per network; `WhichNetwork` returns the network of the first
+volume containing the point. Link and volume member names are inferred from these methods.

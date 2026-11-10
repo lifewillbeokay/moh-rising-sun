@@ -1,0 +1,60 @@
+{
+  "id": "handler_bonusoptions_cheats",
+  "source": "src/frontend/handler_bonusoptions_cheats.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80195374",
+      "size": 708
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3da8",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCheatByIndex__19HandlerBonusOptionsi",
+      "address": "0x80195374",
+      "size": 312,
+      "binding": 1
+    },
+    {
+      "name": "SetCheatByIndex__19HandlerBonusOptionsib",
+      "address": "0x801954ac",
+      "size": 324,
+      "binding": 1
+    },
+    {
+      "name": "ToggleCheatByIndex__19HandlerBonusOptionsi",
+      "address": "0x801955f0",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ActivateCheat__13CGameSettingsib": "0x801716f8",
+    "DebugMsg__FPCce": "0x80279094",
+    "g_GameSettings": "0x802f80c8",
+    "g_cheats": "0x802f98e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerBonusOptions.cpp",
+  "original_file_index": 1845
+}

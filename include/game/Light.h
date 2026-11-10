@@ -82,6 +82,7 @@ class CPropertyAnimLight : public CLight {
     unsigned int reverse : 1; // Set while a back-and-forth light runs backward.
     unsigned char unknown_e8[8];
     CPropertyAnimLight *next; // Pool list link used by CAnimLightManager::Destroy.
+    unsigned char unknown_f4[12]; // The pool element is 256 bytes in InitClass and ResetClass.
 
     CPropertyAnimLight(MOH_animatedLight_Struct *);
     ~CPropertyAnimLight();
@@ -107,14 +108,14 @@ struct AnimLightPool {
     int count;
 };
 
-// Scoped view: registered patterns at +0x38/+0x3c, and pools at +0x44
+// Scoped view: registered patterns at +0x38/+0x3c, the scene at +0x40, and pools at +0x44
 // (instanced lights) and +0x58 (property lights). Base classes remain unknown.
 class CAnimLightManager {
   public:
     unsigned char unknown_0[0x38];
     void *patterns;
     int patternCount;
-    unsigned char unknown_40[4];
+    CScene *scene; // +0x40
     AnimLightPool instancedLights;
     AnimLightPool propertyLights;
     void Destroy(CInstancedAnimLight *);

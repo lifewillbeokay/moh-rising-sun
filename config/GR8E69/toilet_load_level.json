@@ -1,0 +1,93 @@
+{
+  "id": "toilet_load_level",
+  "source": "src/game/toilet_load_level.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801aa310",
+      "size": 424
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b7bb4",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "TLT_Load_Begin__Fv",
+      "address": "0x801aa310",
+      "size": 8,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_StartRelo__Fv",
+      "address": "0x801aa318",
+      "size": 92,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_WaitRelo__Fv",
+      "address": "0x801aa374",
+      "size": 132,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_StartDebug__Fv",
+      "address": "0x801aa3f8",
+      "size": 8,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_WaitDebug__Fv",
+      "address": "0x801aa400",
+      "size": 8,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_StartLevel__Fv",
+      "address": "0x801aa408",
+      "size": 92,
+      "binding": 0
+    },
+    {
+      "name": "TLT_Load_WaitLevel__Fv",
+      "address": "0x801aa464",
+      "size": 84,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "Dearchive__8CRtcFile": "0x8005d088",
+    "SetArchiveBuffer__8CRtcFilePcPFPv_v": "0x8005cebc",
+    "TLT_LoadFile_Async_Load__FPPcPi": "0x801a94b4",
+    "TLT_LoadFile_Async_Start__FPCci": "0x801a9464",
+    "__builtin_delete": "0x801a8990",
+    "g_toilet": "0x803f5360",
+    "sprintf": "0x80263a3c",
+    "szTLT_LevelBigFileName": "0x802c7e3c",
+    "szTLT_LevelRtcFileName": "0x802c7e4c"
+  },
+  "local_externals": [
+    "szTLT_LevelBigFileName",
+    "szTLT_LevelRtcFileName"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "toilet.cpp",
+  "original_file_index": 2188
+}

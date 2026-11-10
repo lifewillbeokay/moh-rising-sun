@@ -1,0 +1,40 @@
+{
+  "id": "fecode_dtor",
+  "source": "src/frontend/fecode_dtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004608c",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._13FECodeListBox",
+      "address": "0x8004608c",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._8FEObject": "0x80050280",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.13FECodeListBox": "0x802e1140"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,50 @@
+{
+  "id": "handler_profileselect_ctor",
+  "source": "src/frontend/handler_profileselect_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018f3e0",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b20c8",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__20HandlerProfileSelect",
+      "address": "0x8018f3e0",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "OnEnterInteractiveMode__11CMemoryCard": "0x801a3420",
+    "_vt.20HandlerProfileSelect": "0x802eb3f8",
+    "_vt.20HandlerProfileSelect.Q211CMemoryCard8ScanTask": "0x802eb3d8",
+    "g_hMemoryCard": "0x802f9884",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerProfileSelect.cpp",
+  "original_file_index": 1725
+}

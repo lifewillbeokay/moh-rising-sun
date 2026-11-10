@@ -5,7 +5,7 @@ CCharacterShadow::CCharacterShadow() {
     enabled = 1;
     scale = 1.0f;
     field18 = 0.0f;
-    field04 = 0;
+    caster = 0;
     field10 = 0;
     projector = 0;
     field20 = 0;

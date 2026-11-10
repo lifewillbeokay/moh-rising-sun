@@ -38,6 +38,7 @@ public:
     void SetJustification(unsigned int value);
     unsigned int GetJustification();
     void DrawText(float x, float y, const char *text);
+    void DrawTextF(float x, float y, const char *format, ...);
     void GetRenderedSize(const char *text, float &width, float &height);
     void ComputeJustification(float &x, float &y, const char *text);
 

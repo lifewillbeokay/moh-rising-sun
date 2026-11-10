@@ -1,0 +1,43 @@
+{
+  "id": "shell_postdraw",
+  "source": "src/frontend/shell_postdraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017fd44",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "PerformPostDrawUpdates__12ShellManager",
+      "address": "0x8017fd44",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

@@ -1,0 +1,48 @@
+{
+  "id": "handler_coopgameoptions_init",
+  "source": "src/frontend/handler_coopgameoptions_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80193c78",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3700",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__22HandlerCoopGameOptionsPCc",
+      "address": "0x80193c78",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "SetOptionsProperties__22HandlerCoopGameOptions": "0x801940e4",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopGameOptions.cpp",
+  "original_file_index": 1834
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ai_SentinelA",
+  "source": "src/eala/SentinelA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008e3f0",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__Q34EALA9Character8SentinelRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008e3f0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character8SentinelRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008e458",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "__nw__Q34EALA9Character8SentinelUi": "0x8008e398",
+    "_vt.Q34EALA9Character8Sentinel": "0x802e3ce0",
+    "_vt.Q34EALA9Character8Sentinel.8ISubject": "0x802e3cb8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Sentinel.cpp",
+  "original_file_index": 650
+}

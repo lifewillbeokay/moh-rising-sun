@@ -1,0 +1,60 @@
+{
+  "id": "particlesystem_init",
+  "source": "src/particles/particlesystem_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80063e84",
+      "size": 728
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299d38",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__15CParticleSystemP12CParticleDef",
+      "address": "0x80063e84",
+      "size": 368,
+      "binding": 1
+    },
+    {
+      "name": "Reload__15CParticleSystem",
+      "address": "0x80063ff4",
+      "size": 360,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "GetCurrentTicks__10CPSManager": "0x80066a64",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "MathFunRandomUI32Raw__Fv": "0x80133958",
+    "SetupAlphaFade__15CParticleSystem": "0x8005f830",
+    "_7CMatrix.s_ClassInit": "0x802c2100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

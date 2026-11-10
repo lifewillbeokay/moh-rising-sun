@@ -1,0 +1,63 @@
+{
+  "id": "fereader_readobjecttags",
+  "source": "src/frontend/fereader_readobjecttags.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005344c",
+      "size": 1780
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadObjectTags__15FEPackageReaderP5FETagUl",
+      "address": "0x8005344c",
+      "size": 1224,
+      "binding": 1
+    },
+    {
+      "name": "ProcessStringTag__15FEPackageReaderP5FETag",
+      "address": "0x80053914",
+      "size": 488,
+      "binding": 1
+    },
+    {
+      "name": "ProcessImageTag__15FEPackageReaderP5FETag",
+      "address": "0x80053afc",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateObject__15FEPackageReaderUl": "0x80053180",
+    "FindObjectByGUID__9FEPackageUl": "0x800512c8",
+    "FindReferencedObject__15FEPackageReaderUlPP8FEObjectPP9FEPackage": "0x80054f88",
+    "ProcessCodeListBoxTag__15FEPackageReaderP5FETag": "0x8005405c",
+    "ProcessListBoxTag__15FEPackageReaderP5FETag": "0x80053b40",
+    "SetLabel__8FEStringPCc": "0x80055ea0",
+    "SetLength__12FEWideStringUl": "0x80056b64",
+    "SetName__8FEObjectPCc": "0x8005039c",
+    "_8FEString.pLabelCallback": "0x802c1810",
+    "__7FEGroupRC7FEGroupbT2": "0x80047a7c",
+    "__as__12FEWideStringPCs": "0x80056a60",
+    "__builtin_new": "0x801a8910"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

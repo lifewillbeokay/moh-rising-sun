@@ -1,0 +1,61 @@
+{
+  "id": "handler_numplayers",
+  "source": "src/frontend/handler_numplayers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80189398",
+      "size": 1296
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b116c",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__17HandlerNumPlayersPCc",
+      "address": "0x80189398",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__17HandlerNumPlayersUiP8FEObjectUl",
+      "address": "0x80189460",
+      "size": 1096,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
+    "Init__14PackageHandlerPCc": "0x80187084",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerNumPlayers.cpp",
+  "original_file_index": 1659
+}

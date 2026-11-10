@@ -1,0 +1,46 @@
+{
+  "id": "ai_AITargetCtor",
+  "source": "src/ai/AITargetCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ecde0",
+      "size": 168
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a479c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__12CAITargetingP10CAIPhysicsP19CAIObjectParametersP10ISceneNode",
+      "address": "0x800ecde0",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__9CAITarget": "0x800eed9c",
+    "_vt.12CAITargeting": "0x802e80d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AITargeting.cpp",
+  "original_file_index": 1071
+}

@@ -1,0 +1,48 @@
+{
+  "id": "shadow_projector",
+  "source": "src/game/shadow_projector.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80067964",
+      "size": 132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a154",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitProjector__16CCharacterShadow",
+      "address": "0x80067964",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AssetCRC__FPc": "0x800f8d80",
+    "Create__10CProjectorUib": "0x801322cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shadow.cpp",
+  "original_file_index": 461
+}

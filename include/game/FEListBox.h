@@ -60,6 +60,7 @@ class FEListBox : public FEObject {
     FEListBox();
     virtual ~FEListBox();
     void Terminate();
+    void SetNumColumns(unsigned long);
     void SetNumRows(unsigned long);
     void SetCellType(unsigned long);
     void SetCellString(const short *);

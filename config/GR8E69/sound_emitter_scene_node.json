@@ -1,0 +1,94 @@
+{
+  "id": "sound_emitter_scene_node",
+  "source": "src/sound/SceneNodeSoundEmitter.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80167b90",
+      "size": 1300
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ab8d4",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSceneNode__21SceneNodeSoundEmitterP10ISceneNode",
+      "address": "0x80167b90",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "Clone__C21SceneNodeSoundEmitterP12SoundEmitter",
+      "address": "0x80167c00",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetDistance__C21SceneNodeSoundEmitter",
+      "address": "0x80167c84",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "GetAzimuth__C21SceneNodeSoundEmitter",
+      "address": "0x80167db8",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "GetFilterDef__C21SceneNodeSoundEmitter",
+      "address": "0x80167e7c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetDistance__C20PositionSoundEmitter",
+      "address": "0x80167f08",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "GetAzimuth__C20PositionSoundEmitter",
+      "address": "0x8016800c",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "CalculateAzimuth__FRC8CVector3PC13CPlayerObject": "0x801680f0",
+    "FindClosestPlayer__6CSceneRC8CVector3": "0x80148914",
+    "GetLipSyncFilterDef__14CSoldierObject": "0x800c2c24",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "_vt.21SceneNodeSoundEmitter": "0x802eadf0",
+    "_vt.8ISubject": "0x802e9ad0",
+    "_vt.9IObserver": "0x802e9aa0",
+    "_vt.t7WeakPtr2Z10ISceneNodei8": "0x802e48b0",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_scene": "0x803e6d90",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSoundEmitter.cpp",
+  "original_file_index": 1460
+}

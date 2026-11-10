@@ -19,7 +19,7 @@
     {
       "name": ".text",
       "address": "0x80182178",
-      "size": 212
+      "size": 356
     },
     {
       "name": ".rodata",
@@ -45,10 +45,17 @@
       "address": "0x8018222c",
       "size": 32,
       "binding": 1
+    },
+    {
+      "name": "SetActiveControllerIndicies__12ShellManager",
+      "address": "0x8018224c",
+      "size": 144,
+      "binding": 1
     }
   ],
   "externals": {
     "FEHashUpper__FPCc": "0x800499a4",
+    "FindPackage__C13FEPackageListPCcUc": "0x8005209c",
     "FindPackage__C13FEPackageListUc": "0x8005212c",
     "GetNumPorts__C14CDeviceManager": "0x800d66c0",
     "QueuePackagePop__7FEngineP9FEPackage": "0x8004eff8",

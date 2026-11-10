@@ -12,6 +12,7 @@ class AnimBank {
   public:
     int GetNumAnims() const { return mNumAnims; }
     AnimMemoryMap *GetAnim(int i) const { return mAnims[i]; }
+    const char *GetAnimName(int i) const { return mAnimNames[i]; } // Name inferred: "S_0x%08x" hashes per Animation.
     static FnAnimMemoryMap *NewFnAnim(AnimMemoryMap *);
     FnAnimMemoryMap *NewFnAnim(int) const;
     static void Constructor(void *, EAGL::DynamicLoader *, const char *);
@@ -23,6 +24,7 @@ class AnimBank {
     unsigned int unknown_8;
     unsigned int unknown_c;
     AnimMemoryMap **mAnims;
+    const char **mAnimNames;
 };
 } // namespace EAGLAnim
 #endif

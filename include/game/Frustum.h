@@ -12,6 +12,14 @@ struct CPlane {
     float distance;
     unsigned char unknown14[12];
     CPlane() {}
+    ~CPlane() {}
+    CPlane &operator=(const CPlane &other) {
+        if (&other != this) {
+            normal = other.normal;
+            distance = other.distance;
+        }
+        return *this;
+    }
     CPlane(const CVector3 &n, float d) : normal(n), distance(d) {}
     void Transform(const CMatrix &); // Original external body.
     int GetIntersection(const CLine3 &, float &, CVector3 *) const;

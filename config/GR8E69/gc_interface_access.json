@@ -1,0 +1,61 @@
+{
+  "id": "gc_interface_access",
+  "source": "src/memorycard/gc_interface_access.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020ea14",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsBusy__Q26Realmc11GCInterface",
+      "address": "0x8020ea14",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetBlockSize__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020ea30",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetBlockCalculator__Q26Realmc11GCInterface",
+      "address": "0x8020ea54",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSectorSize__Q26Realmc8GCDriverRCQ26Realmc6CardID": "0x80214c24",
+    "_Q26Realmc11GCInterface.mBlockCalculator": "0x80409a74",
+    "_Q26Realmc11GCInterface.mTaskManager": "0x80409a9c",
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c"
+  },
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mpDriver"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916
+}

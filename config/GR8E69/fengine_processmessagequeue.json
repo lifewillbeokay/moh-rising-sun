@@ -1,0 +1,43 @@
+{
+  "id": "fengine_processmessagequeue",
+  "source": "src/frontend/fengine_processmessagequeue.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004f10c",
+      "size": 868
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessMessageQueue__7FEngine",
+      "address": "0x8004f10c",
+      "size": 868,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetMessageTargets__9FEPackageUl": "0x8004c69c",
+    "ProcessGlobalMessage__7FEngineP9FEPackageUlUl": "0x8004f668",
+    "ProcessObjectMessage__7FEngineP8FEObjectP9FEPackageUlUl": "0x8004f5c8",
+    "RemHead__9FEMinList": "0x80049878"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

@@ -1,0 +1,405 @@
+{
+  "id": "ai_OperationInlines",
+  "source": "src/eala/OperationInlines.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008d75c",
+      "size": 920
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c87c",
+      "size": 576
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q44EALA9Character9Operation7Operand",
+      "address": "0x8008d75c",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "AsSimpleOperand__Q44EALA9Character9Operation7Operand",
+      "address": "0x8008d7d4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsWeightedOperand__Q44EALA9Character9Operation7Operand",
+      "address": "0x8008d7dc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsMatrixBlendOperand__Q44EALA9Character9Operation7Operand",
+      "address": "0x8008d7e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsTurnOperand__Q44EALA9Character9Operation7Operand",
+      "address": "0x8008d7ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character18AnimationOperationRCQ212Serializable6NoInit",
+      "address": "0x8008d7f4",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character18AnimationOperation",
+      "address": "0x8008d808",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character18AnimationOperation",
+      "address": "0x8008d82c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character16MessageOperationRCQ212Serializable6NoInit",
+      "address": "0x8008d838",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character16MessageOperation",
+      "address": "0x8008d84c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character16MessageOperation",
+      "address": "0x8008d854",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character19TransitionOperationRCQ212Serializable6NoInit",
+      "address": "0x8008d860",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character19TransitionOperation",
+      "address": "0x8008d874",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character19TransitionOperation",
+      "address": "0x8008d87c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character17CompoundOperationRCQ212Serializable6NoInit",
+      "address": "0x8008d888",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character17CompoundOperation",
+      "address": "0x8008d89c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character17CompoundOperation",
+      "address": "0x8008d8c0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character16SequenceOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d8cc",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character16SequenceOperator",
+      "address": "0x8008d8e0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character16SequenceOperator",
+      "address": "0x8008d8e8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character14RandomOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d8f4",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character14RandomOperator",
+      "address": "0x8008d908",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character14RandomOperator",
+      "address": "0x8008d910",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character17SelectionOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d91c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character17SelectionOperator",
+      "address": "0x8008d930",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character17SelectionOperator",
+      "address": "0x8008d938",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character19MatrixBlendOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d944",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character19MatrixBlendOperator",
+      "address": "0x8008d958",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character19MatrixBlendOperator",
+      "address": "0x8008d97c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character19LinearBlendOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d988",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character19LinearBlendOperator",
+      "address": "0x8008d99c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character19LinearBlendOperator",
+      "address": "0x8008d9c0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character12TurnOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d9cc",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character12TurnOperator",
+      "address": "0x8008d9e0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character12TurnOperator",
+      "address": "0x8008d9e8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character14ScriptOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008d9f4",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character14ScriptOperator",
+      "address": "0x8008da08",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character14ScriptOperator",
+      "address": "0x8008da10",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character26AuthoredTransitionOperatorRCQ212Serializable6NoInit",
+      "address": "0x8008da1c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character26AuthoredTransitionOperator",
+      "address": "0x8008da30",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character26AuthoredTransitionOperator",
+      "address": "0x8008da38",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character13SimpleOperandRCQ212Serializable6NoInit",
+      "address": "0x8008da44",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character13SimpleOperand",
+      "address": "0x8008da58",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character13SimpleOperand",
+      "address": "0x8008da60",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "AsSimpleOperand__Q34EALA9Character13SimpleOperand",
+      "address": "0x8008da6c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character15WeightedOperandRCQ212Serializable6NoInit",
+      "address": "0x8008da70",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character15WeightedOperand",
+      "address": "0x8008da84",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character15WeightedOperand",
+      "address": "0x8008da8c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "AsWeightedOperand__Q34EALA9Character15WeightedOperand",
+      "address": "0x8008da98",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character18MatrixBlendOperandRCQ212Serializable6NoInit",
+      "address": "0x8008da9c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character18MatrixBlendOperand",
+      "address": "0x8008dab0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character18MatrixBlendOperand",
+      "address": "0x8008dab8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "AsMatrixBlendOperand__Q34EALA9Character18MatrixBlendOperand",
+      "address": "0x8008dac4",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character11TurnOperandRCQ212Serializable6NoInit",
+      "address": "0x8008dac8",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__CQ34EALA9Character11TurnOperand",
+      "address": "0x8008dadc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ClassName__CQ34EALA9Character11TurnOperand",
+      "address": "0x8008dae4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "AsTurnOperand__Q34EALA9Character11TurnOperand",
+      "address": "0x8008daf0",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__dl__12SerializablePv": "0x801ac458",
+    "_vt.Q34EALA9Character11TurnOperand": "0x802e3538",
+    "_vt.Q34EALA9Character12TurnOperator": "0x802e36f8",
+    "_vt.Q34EALA9Character13SimpleOperand": "0x802e3628",
+    "_vt.Q34EALA9Character14RandomOperator": "0x802e37f8",
+    "_vt.Q34EALA9Character14ScriptOperator": "0x802e36b8",
+    "_vt.Q34EALA9Character15WeightedOperand": "0x802e35d8",
+    "_vt.Q34EALA9Character16MessageOperation": "0x802e3908",
+    "_vt.Q34EALA9Character16SequenceOperator": "0x802e3838",
+    "_vt.Q34EALA9Character17CompoundOperation": "0x802e3878",
+    "_vt.Q34EALA9Character17SelectionOperator": "0x802e37b8",
+    "_vt.Q34EALA9Character18AnimationOperation": "0x802e3950",
+    "_vt.Q34EALA9Character18MatrixBlendOperand": "0x802e3588",
+    "_vt.Q34EALA9Character19LinearBlendOperator": "0x802e3738",
+    "_vt.Q34EALA9Character19MatrixBlendOperator": "0x802e3778",
+    "_vt.Q34EALA9Character19TransitionOperation": "0x802e38c0",
+    "_vt.Q34EALA9Character26AuthoredTransitionOperator": "0x802e3678",
+    "_vt.Q44EALA9Character9Operation7Operand": "0x802e39e0",
+    "size_of__Q34EALA9Character17CompoundOperationi": "0x8008af3c",
+    "size_of__Q34EALA9Character18AnimationOperationi": "0x8008a7e8",
+    "size_of__Q34EALA9Character19LinearBlendOperatori": "0x8008bf08",
+    "size_of__Q34EALA9Character19MatrixBlendOperatori": "0x8008b724"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Operations.cpp",
+  "original_file_index": 640
+}

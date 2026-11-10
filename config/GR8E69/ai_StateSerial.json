@@ -1,0 +1,51 @@
+{
+  "id": "ai_StateSerial",
+  "source": "src/eala/StateSerial.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800852d8",
+      "size": 1036
+    }
+  ],
+  "functions": [
+    {
+      "name": "__ls__FRQ29Serialize3AnyRQ34EALA9Character8Substate",
+      "address": "0x800852d8",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "__ls__FRQ29Serialize3AnyRQ34EALA9Character5State",
+      "address": "0x8008542c",
+      "size": 696,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__Q34EALA9Character5State": "0x80084250",
+    "__ls__FRQ29Serialize3AnyRP12Serializable": "0x801ac6c8",
+    "__nw__Q34EALA9Character5StateUiPv": "0x800845b8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "State.cpp",
+  "original_file_index": 592
+}

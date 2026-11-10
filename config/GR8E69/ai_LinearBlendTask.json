@@ -1,0 +1,79 @@
+{
+  "id": "ai_LinearBlendTask",
+  "source": "src/eala/LinearBlendTask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800868a0",
+      "size": 1128
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__Q34EALA9Character11LinearBlendRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskPCciPQ44EALA9Character11LinearBlend11SubTaskInfo",
+      "address": "0x800868a0",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character11LinearBlendRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskPCciPQ44EALA9Character11LinearBlend11SubTaskInfo",
+      "address": "0x80086920",
+      "size": 296,
+      "binding": 1
+    },
+    {
+      "name": "_._Q34EALA9Character11LinearBlend",
+      "address": "0x80086a48",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character11LinearBlend",
+      "address": "0x80086b78",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "EvalPose__Q34EALA9Character11LinearBlendfPf",
+      "address": "0x80086bc4",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "PerformBlend__Q34EALA9Character11LinearBlendffPf": "0x80086d08",
+    "SetStillPose__Q34EALA9Character8SkeletonPCQ44EALA9Character8Skeleton9Partition": "0x800829a0",
+    "_._8ISubject": "0x8014acd0",
+    "_._9IObserver": "0x8014ad64",
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "__dl__Q34EALA9Character11LinearBlendPvUi": "0x80086874",
+    "__nw__Q34EALA9Character11LinearBlendUi": "0x80086848",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "_vt.Q34EALA9Character11LinearBlend": "0x802e3160",
+    "_vt.Q34EALA9Character11LinearBlend.8ISubject": "0x802e3138",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "LinearBlend.cpp",
+  "original_file_index": 602
+}

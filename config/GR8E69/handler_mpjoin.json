@@ -1,0 +1,51 @@
+{
+  "id": "handler_mpjoin",
+  "source": "src/frontend/handler_mpjoin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018b138",
+      "size": 460
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b1714",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__13HandlerMPJoinUiP8FEObjectUl",
+      "address": "0x8018b138",
+      "size": 460,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetCoopJoinInfo__12ShellManagerP9FEPackageUl": "0x80182524",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMPJoin.cpp",
+  "original_file_index": 1703
+}

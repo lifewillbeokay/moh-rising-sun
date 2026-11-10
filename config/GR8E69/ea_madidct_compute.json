@@ -1,0 +1,50 @@
+{
+  "id": "ea_madidct_compute",
+  "source": "src/ea/madidct_compute.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80274998",
+      "size": 356
+    }
+  ],
+  "functions": [
+    {
+      "name": "idctcompute",
+      "address": "0x80274998",
+      "size": 356,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IdctColumn": "0x802746c4",
+    "IdctRow": "0x80274864",
+    "idctinput": "0x80448eac",
+    "work": "0x80448fac"
+  },
+  "local_externals": [
+    "IdctColumn",
+    "IdctRow",
+    "work"
+  ],
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "madidct.cpp",
+  "original_file_index": 5065
+}

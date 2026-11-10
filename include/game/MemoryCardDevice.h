@@ -8,6 +8,9 @@ class Interface;
 struct CMemoryCard::Device {
     static int ChangeOfState();
     static void Update(bool);
+    virtual const wchar_t *GetName() const = 0;
+    virtual int GetIndex() const = 0;
+    virtual int IsAvailable() const = 0;
 };
 class CMCDevice {
   public:

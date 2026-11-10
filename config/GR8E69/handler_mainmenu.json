@@ -1,0 +1,59 @@
+{
+  "id": "handler_mainmenu",
+  "source": "src/frontend/handler_mainmenu.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801938a4",
+      "size": 452
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b34e8",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__15HandlerMainMenuUiP8FEObjectUl",
+      "address": "0x801938a4",
+      "size": 452,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckControllers__13CInputManagerb": "0x800d7190",
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "HandleFEngQueries__14PackageHandlerUiP8FEObject": "0x80188698",
+    "HandleMovieEvent__14PackageHandlerUiP8FEObject": "0x80187e44",
+    "HandleSaveGameEvent__14PackageHandlerUiP8FEObject": "0x8018882c",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "g_GameSettings": "0x802f80c8",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_bTeamDM": "0x802c1b34",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerMainMenu.cpp",
+  "original_file_index": 1824
+}

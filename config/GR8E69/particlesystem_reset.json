@@ -1,0 +1,42 @@
+{
+  "id": "particlesystem_reset",
+  "source": "src/particles/particlesystem_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005e81c",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetSystem__15CParticleSystem",
+      "address": "0x8005e81c",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_particleSystemList": "0x802fae7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

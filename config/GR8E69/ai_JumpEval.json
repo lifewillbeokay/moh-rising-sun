@@ -1,0 +1,58 @@
+{
+  "id": "ai_JumpEval",
+  "source": "src/eala/JumpEval.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80087318",
+      "size": 544
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029c0a8",
+      "size": 8
+    },
+    {
+      "name": ".data",
+      "address": "0x802c218c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "EvalPose__Q34EALA9Character4JumpfPf",
+      "address": "0x80087318",
+      "size": 544,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EvalSubstate__Q34EALA9Character5StateUiPQ34EALA9Character4Task": "0x80084d18",
+    "GetCorePose__CQ34EALA9Character4Task": "0x8008fc78",
+    "GetState__CQ34EALA9Character4Task": "0x8008fa2c",
+    "ParentIterator__Q34EALA9Character4Task": "0x8008fc80",
+    "SetCorePose__Q34EALA9Character4TaskUi": "0x8008fc70",
+    "Set__Q34EALA9Character13StateIteratorUif": "0x80085aa8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Jump.cpp",
+  "original_file_index": 608
+}

@@ -1,0 +1,64 @@
+{
+  "id": "ai_JumpA",
+  "source": "src/eala/JumpA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800871b4",
+      "size": 356
+    }
+  ],
+  "functions": [
+    {
+      "name": "Create__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiUi",
+      "address": "0x800871b4",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4TaskUiUi",
+      "address": "0x8008722c",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character4Jump",
+      "address": "0x80087294",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Assign__Q34EALA9Character4JumpRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
+      "address": "0x8008729c",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008f934",
+    "__nw__Q34EALA9Character4JumpUi": "0x8008715c",
+    "_vt.Q34EALA9Character4Jump": "0x802e3228",
+    "_vt.Q34EALA9Character4Jump.8ISubject": "0x802e3200"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Jump.cpp",
+  "original_file_index": 608
+}

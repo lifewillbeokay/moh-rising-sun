@@ -1,0 +1,49 @@
+{
+  "id": "fereader_load",
+  "source": "src/frontend/fereader_load.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80052264",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "Load__15FEPackageReaderPCvP15FEGameInterfaceP7FEnginebN24",
+      "address": "0x80052264",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ReadHeaderChunk__15FEPackageReader": "0x80052574",
+    "ReadLibraryRefsChunk__15FEPackageReader": "0x800528ac",
+    "ReadMessageTargetListChunk__15FEPackageReader": "0x80054d84",
+    "ReadObjectChunk__15FEPackageReader": "0x80052d68",
+    "ReadPackageResponseChunk__15FEPackageReader": "0x80052cf4",
+    "ReadReferencedPackagesChunk__15FEPackageReader": "0x800526f0",
+    "ReadResourceChunk__15FEPackageReader": "0x800529e8",
+    "ReadTypeSizes__15FEPackageReader": "0x800524f8",
+    "Reset__15FEPackageReader": "0x80052230",
+    "Startup__9FEPackageP15FEGameInterface": "0x80051020"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

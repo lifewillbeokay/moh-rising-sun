@@ -1,0 +1,80 @@
+{
+  "id": "ea_subtitle_display",
+  "source": "src/ea/subtitle_display.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sn",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801b3460",
+      "size": 580
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b85d0",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24RCMP11VD_SUBTITLE",
+      "address": "0x801b3460",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24RCMP11VD_SUBTITLE",
+      "address": "0x801b34a8",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "DeleteTars__Q24RCMP11VD_SUBTITLE",
+      "address": "0x801b34f0",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "CreateTars__Q24RCMP11VD_SUBTITLE",
+      "address": "0x801b357c",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "DeleteWrappedStrings__Q24RCMP11VD_SUBTITLE",
+      "address": "0x801b361c",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetNumberOfSubtitle__Q24RCMP17AV_SUBTITLE_ARRAY": "0x801b13e4",
+    "GetSubtitle__Q24RCMP17AV_SUBTITLE_ARRAYUi": "0x801b132c",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "_12EAGLInternal.EAGLMalloc": "0x802d2e08",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "__Q24EAGL3TARPC5SHAPE": "0x801e09cc",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0",
+    "__builtin_vec_new": "0x801a8950"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "subtitlevd.cpp",
+  "original_file_index": 2342
+}

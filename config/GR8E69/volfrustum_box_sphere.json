@@ -1,0 +1,51 @@
+{
+  "id": "volfrustum_box_sphere",
+  "source": "src/camera/volfrustum_box_sphere.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013f7cc",
+      "size": 680
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8360",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C11CVolFrustumRC7CVolBoxR10CCollisionb",
+      "address": "0x8013f7cc",
+      "size": 464,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC10CVolSphereR10CCollisionb",
+      "address": "0x8013f99c",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "frustum.cpp",
+  "original_file_index": 1327
+}

@@ -9,6 +9,23 @@
 struct FEKeyValue { unsigned long word[4]; };
 struct FEVector3 {
     float x, y, z;
+    FEVector3() {}
+    FEVector3(float px, float py, float pz) {
+        z = pz;
+        y = py;
+        x = px;
+    }
+    FEVector3 &operator=(const FEVector3 &);
+    FEVector3 operator-() const {
+        FEVector3 r(-x, -y, -z);
+        return r;
+    }
+    FEVector3 &operator+=(const FEVector3 &o) {
+        x += o.x;
+        y += o.y;
+        z += o.z;
+        return *this;
+    }
     FEVector3 operator-(const FEVector3 &o) const {
         FEVector3 r;
         r.x = x - o.x;

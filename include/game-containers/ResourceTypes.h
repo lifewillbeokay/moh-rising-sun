@@ -1,16 +1,22 @@
 // Scoped resource-prefix and container-operation models. See docs/GameAlgorithms.md.
 // Pointees remain incomplete. Pointer operations view only the observed Resource prefix.
-// Pointer<Resource> models an unknown managed pointee in Context/SubTaskInfo;
+// Pointer<Resource> models an unknown managed pointee in Context;
 // it does not assert the original member specialization or the full pointee layout.
 #ifndef MOH_RESOURCE_CONTAINER_TYPES_H
 #define MOH_RESOURCE_CONTAINER_TYPES_H
 #include <string>
 #include <map>
 #include "EALAResource.h"
+#include "TargetTypes.h"
+#include "CharacterTaskBase.h"
 extern "C" int strcasecmp(const char *, const char *);
 struct COORD3;
 namespace EAGLAnim {
 class BoneMask;
+class Skeleton {
+  public:
+    void GetStillPose(float *pose, const BoneMask *mask) const;
+};
 }
 namespace EALA {
 class EAGLLoader;
@@ -23,6 +29,11 @@ class State;
 class Skeleton;
 class Opcode {
   public:
+    unsigned short frame;     // +0x00; compared with the frames a playback passes.
+    unsigned short kind;      // +0x02; 51217 sets the core pose.
+    unsigned short argument;  // +0x04
+    unsigned short field_06;  // +0x06
+    unsigned char unknown_08[4];
     class Handler {
       public:
         virtual int Execute(Opcode &) = 0;
@@ -38,13 +49,22 @@ class Skeleton {
         int operator==(const Partition &other) const;
         const EAGLAnim::BoneMask *GetMask() const;
     };
-    unsigned char unresolved_00[4] __attribute__((aligned(4)));
+    struct Data {
+        unsigned char unknown_00[12];
+        EAGLAnim::Skeleton *skeleton; // +0x0c
+    };
+    Resource::Pointer<Data> data; // +0x00
+    void GetStillPose(float *pose);
+    void SetStillPose(const Partition *partition);
     Partition wholeBody; // +0x04; name inferred, GetBoneMask has no mask for it.
+    EAGLAnim::Skeleton *GetAnimSkeleton() const { // Name inferred; the body is inlined in its callers.
+        return data.IsValid() ? data->skeleton : 0;
+    }
 };
 class ChoreographerClient {
   public:
     virtual void MoveTo(const COORD3 &position, float time);
-    virtual const Skeleton *GetSkeleton();
+    virtual Skeleton *GetSkeleton();
     virtual COORD3 GetPosition();
     virtual float GetRotation();
     virtual void SetPosition(const COORD3 &position);
@@ -118,22 +138,9 @@ class Choreographer : public Resource {
     ContextMap contexts;                     // +0x20
     Resource::Pointer<Resource> current;     // +0x30; compared with each context's task.
 };
-class MatrixBlend {
-  public:
-    struct SubTaskInfo {
-        float field_00, field_04;
-        Resource::Pointer<Resource> field_08;
-    };
-};
-class LinearBlend {
-  public:
-    struct SubTaskInfo {
-        float field_00, field_04;
-        Resource::Pointer<Resource> field_08;
-    };
-};
 } // namespace Character
 } // namespace EALA
+#include "CharacterBlends.h"
 struct StringCompare {
     bool operator()(const _STL::string &a, const _STL::string &b) const {
         return strcasecmp(a.c_str(), b.c_str()) < 0;
