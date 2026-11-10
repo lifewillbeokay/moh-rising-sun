@@ -79,6 +79,7 @@ public:
     BSObject *GetTargetScript() const;
     static void RegisterLocationTarget(int, bool, ETeam, BSObject *);
     static void DeRegisterLocationTarget(int);
+    static void ResetLocationTargets();
     static CAITarget GetLocationTarget(int);
     bool IsNonAITarget() const;
     bool HasValidTarget() const;
@@ -93,28 +94,31 @@ enum EBehaviorType {
     BehaviorTypeGrenadeResponse = 10
 };
 enum EAIHighLevelState { AIHighLevelStateUnknown = 0 };
-enum ECapability { CapabilityUnknown = 0 };
+// Selector names are descriptive: only their values are known.
+enum ECapability { Capability0 = 0, Capability1, Capability2, Capability3, Capability4, Capability5, Capability6, Capability7 };
 enum ECollisionTestDirection { CollisionTestDirectionUnknown = 0 };
 class CAIBehavior;
-// The behavior base class: enable word at +8, then its table pointer at +0xc. Slot
-// names come from the original table where it names them; the pure slots are descriptive.
+// The behavior base class: its table pointer follows its data, at +0xc. Method names
+// come from the symbol table; member names and the pure slots' return types are inferred.
 class CBehavior {
 public:
-    unsigned char unknown00[8];
+    CAIObject *aiObject; // +0x00; cleared here and set by the owner.
+    int framesSinceUpdate; // +0x04; accumulated by Update.
     int enabled; // +0x08
+    CBehavior();
     virtual ~CBehavior();
-    virtual float PureSlot2() = 0; // Compared to pick the best behavior; name descriptive.
-    virtual void PureSlot3() = 0;
-    virtual void PureSlot4() = 0;
-    virtual int Start() = 0;
-    virtual void Stop(bool) = 0;
+    virtual float GetCurrentHeuristicScore() = 0;
+    virtual int GetHeuristicUpdateFrequency() = 0;
+    virtual int UpdateHeuristicScore() = 0;
+    virtual int StartBehavior() = 0;
+    virtual void StopBehavior(bool) = 0;
     virtual void ReleaseResources();
-    virtual int GetCapability(ECapability) = 0;
+    virtual int GetCapabilities(ECapability) = 0;
     virtual int GetType();
-    virtual int GetCRC();
+    virtual unsigned int GetCRC();
     virtual void Enable();
     virtual void Disable();
-    virtual int GetScriptObject();
+    virtual BSObject *GetScriptObject();
     int Update(int, bool);
 };
 // Method-only view of the embedded tactics module.
@@ -311,7 +315,7 @@ public:
     void RemovePointersTo(CAIObject *);
     int GetPreviousBehaviorType();
     int GetNextBehaviorType();
-    int GetNextBehaviorScript();
+    BSObject *GetNextBehaviorScript();
     void SetHighLevelState(EAIHighLevelState);
     int IsNearbyPositionOnAStarMesh(ECollisionTestDirection, float);
     void SetupFieldOfViewCorpse(float, float);
@@ -349,13 +353,69 @@ public:
     void Init();
     CAIFilterObject *filter;
 };
-// Member view of the soldier AI object returned by CAIObject slot 2.
+// A stimulus reported to a soldier. Method, class and enum names are original; member
+// names and the enumerators' meanings are inferred (see docs/Behaviors.md). The 16-byte
+// alignment is inferred too: it gives the observed gaps before and after the embedded
+// threat in ThreatInfo (+0x4 to +0x10, +0x2c to +0x30) and the slot address forms.
+// The zone a soldier's behaviors stay inside; only its methods are declared here.
+class CAIActivityZone {
+public:
+    void Disable();
+    void UseMovingTarget(ISceneNode *, float);
+    int IsPointUsable(const CVector3 &);
+    unsigned char unknown00[4];
+    int mode;           // +0x04; 0 anywhere, 1 around the node, 2 around the point.
+    unsigned char unknown08[8];
+    CVector3 point;     // +0x10
+    ISceneNode *node;   // +0x20
+    float radius;       // +0x24
+};
+class CAIThreat {
+public:
+    enum ThreatType { ThreatNone = 0 };
+    CAIThreat();
+    CAIThreat(ThreatType, const CVector3 &, BSObject *, bool);
+    CVector3 position;
+    ThreatType type;   // +0x10
+    BSObject *source;  // +0x14
+    bool directed;     // +0x18; a directed threat's score is not capped when scored.
+} __attribute__((aligned(16)));
+// Member view of the soldier AI object returned by CAIObject slot 2: the table pointer at
+// +0 and the fifteen threat slots. The class's complete extent is not established.
 class CAIThreatEvaluation {
 public:
+    struct ThreatInfo {
+        int used;
+        CAIThreat threat;   // +0x10
+        int rank;           // +0x30; position after RankThreats.
+        int reacted;        // +0x34; set once the owner has been told.
+        float initialTime;  // +0x38; cleared with the slot and never read in these functions.
+        float score;        // +0x3c
+    };
+    void AddThreat(const CAIThreat &);
+    void Reevaluate();
+    void AIDied(BSObject *);
+    int HaveThreat();
+    CVector3 &GetPositionOfMostImportantThreat();
     void PropagateSoundToMe(int, float, const CVector3 &, CAIObject *, bool);
     void Update(float);
     void FinishedInvestigation();
     void AddCorpseThreat(BSObject *);
+    void OnStateChange(EAIHighLevelState, EAIHighLevelState);
+    int InsertThreat(const CAIThreat &);
+    void InitializeSlot(int, const CAIThreat &);
+    void RankThreats();
+    void ScoreInitialThreat(int);
+    void ReactToThreat(ThreatInfo *);
+    void ClearSlot(int);
+    void DebugDraw();
+    unsigned char unknown00[4];
+    CAIObject *aiObject;     // +0x04
+    CAIPhysics *physics;     // +0x08
+    BSObject *scriptObject;  // +0x0c
+    ThreatInfo slots[15];    // +0x10
+    int count;               // +0x3d0
+    ThreatInfo *mostImportant; // +0x3d4
 };
 class CSoldierObject;
 class CAISoldierObject {
@@ -372,9 +432,17 @@ public:
     void SetInitialStatus();
     void UpdateStatus();
     void SetupTargetMatchList(aistatus_match *, int);
+    ISceneNode *GetSceneNode();
+    void OverrideLOSPosition(const CVector3 &);
+    void StopOverrideLOSPosition();
+    void OnStateChange(EAIHighLevelState, EAIHighLevelState);
+    void OnDeath();
+    CAISoldierObject *AsAISoldierObject();
     unsigned char unknown_0[0x190];
     int aimDirty; // +0x190; set when an aim modifier changes. Descriptive.
-    unsigned char unknown_194[0x730 - 0x194];
+    unsigned char unknown_194[0x340 - 0x194];
+    CAIActivityZone activityZone; // +0x340
+    unsigned char unknown_after_zone[0x730 - 0x340 - sizeof(CAIActivityZone)];
     float health;    // +0x730
     float maxHealth; // +0x734
     aistatus_match targetMatchList[4]; // +0x738
@@ -383,8 +451,11 @@ public:
     CAISnap snap; // +0x770
     unsigned char unknown_79c[0x7b0 - 0x79c];
     CAIThreatEvaluation threatEvaluation; // +0x7b0
-    unsigned char unknown_7b1[0xd10 - 0x7b1];
-    unsigned char coverpointStorage[3536 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
+    unsigned char unknown_after_threats[0xd10 - 0x7b0 - sizeof(CAIThreatEvaluation)];
+    unsigned char coverpointStorage[0xdb8 - 0xd10]; // +0xd10; a CCoverpointBehavior. The allocation is 3536 bytes.
+    int losOverride;               // +0xdb8
+    unsigned char unknown_dbc[4];
+    CVector3 losOverridePosition;  // +0xdc0
 };
 class IMovingSceneNode;
 // Virtual-interface view of CAIObject: its table pointer follows the data at

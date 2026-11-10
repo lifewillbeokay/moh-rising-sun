@@ -1,0 +1,92 @@
+{
+  "id": "fengine_addtoidlelist",
+  "source": "src/frontend/fengine_addtoidlelist.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d2a8",
+      "size": 472
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddToIdleList__7FEngineP9FEPackage",
+      "address": "0x8004d2a8",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "FindIdlePackage__C7FEnginePCc",
+      "address": "0x8004d2d4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetFirstLibrary__C7FEngine",
+      "address": "0x8004d2f8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AddToLibraryList__7FEngineP9FEPackage",
+      "address": "0x8004d300",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "RemoveFromLibraryList__7FEngineP9FEPackage",
+      "address": "0x8004d32c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "FindLibraryPackage__C7FEngineUl",
+      "address": "0x8004d350",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "FindObject__C7FEngineUlPCc",
+      "address": "0x8004d3b0",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "FindObject__C7FEnginePCcT1",
+      "address": "0x8004d430",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "StartCheckMovieDemoScreen__7FEngine",
+      "address": "0x8004d474",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindNode__C6FEListPCc": "0x80049980",
+    "FindObjectByHash__9FEPackageUl": "0x80051274",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

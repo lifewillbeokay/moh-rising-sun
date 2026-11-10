@@ -1,0 +1,101 @@
+{
+  "id": "fepackage_setfilename",
+  "source": "src/frontend/fepackage_setfilename.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050fac",
+      "size": 880
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297e68",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetFilename__9FEPackagePCc",
+      "address": "0x80050fac",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "Startup__9FEPackageP15FEGameInterface",
+      "address": "0x80051020",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__9FEPackageP15FEGameInterface",
+      "address": "0x8005108c",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "FindResponse__9FEPackageUl",
+      "address": "0x800510d4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "ForAllChildren__9FEPackageP7FEGroupR16FEObjectCallback",
+      "address": "0x80051108",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "ForAllObjects__9FEPackageR16FEObjectCallback",
+      "address": "0x800511a0",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "FindObjectByName__9FEPackagePCc",
+      "address": "0x80051238",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "FindObjectByHash__9FEPackageUl",
+      "address": "0x80051274",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "FindObjectByGUID__9FEPackageUl",
+      "address": "0x800512c8",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ConnectObjectResources__9FEPackage": "0x80051ed0",
+    "DWI_alloc": "0x801a8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.12FEFindByGUID": "0x802e12d0",
+    "_vt.12FEFindByHash": "0x802e12f0",
+    "_vt.16FEObjectCallback": "0x802e1120",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326
+}

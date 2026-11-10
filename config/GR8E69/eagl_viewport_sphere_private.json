@@ -1,0 +1,64 @@
+{
+  "id": "eagl_viewport_sphere_private",
+  "source": "src/eagl/eagl_viewport_sphere_private.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801e37e4",
+      "size": 748
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bd8d4",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsSphereInView__Q24EAGL8ViewPortRC6COORD3f",
+      "address": "0x801e37e4",
+      "size": 316,
+      "binding": 1
+    },
+    {
+      "name": "__Q212EAGLInternal15ViewPortPrivatePQ24EAGL8ViewPort",
+      "address": "0x801e3920",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "EnactFogSettings__Q212EAGLInternal15ViewPortPrivate",
+      "address": "0x801e39d0",
+      "size": 256,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BuildMatrix__Q24EAGL9TransformPC7MATRIX4": "0x801e21dc",
+    "GXInitFogAdjTable": "0x802483bc",
+    "GXSetFog": "0x80248198",
+    "GXSetFogRangeAdj": "0x8024856c",
+    "TransformPoint__CQ24EAGL9TransformRC6COORD3R6COORD3": "0x801e1ad0",
+    "_12EAGLInternal.gGlobalViewMatrix": "0x803ff1f4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "viewport.cpp",
+  "original_file_index": 2647
+}

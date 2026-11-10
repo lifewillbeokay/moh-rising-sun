@@ -1,0 +1,40 @@
+{
+  "id": "scene_SoldierAttachPoint",
+  "source": "src/scene/SoldierAttachPoint.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c0584",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetAttachPoint__14CSoldierObjectPCc",
+      "address": "0x800c0584",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

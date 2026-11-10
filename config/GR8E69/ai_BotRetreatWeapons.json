@@ -1,0 +1,50 @@
+{
+  "id": "ai_BotRetreatWeapons",
+  "source": "src/ai/BotRetreatWeapons.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80098adc",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dcd4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "RetreatForWeapons__10CBotObject",
+      "address": "0x80098adc",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "DropMPDumpObject__10CBotObject",
+      "address": "0x80098b3c",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateDumpObject__FRC7CMatrixibP8BSObjecti12EPowerupType": "0x80127638",
+    "GetCurrentWeapon__C14CSoldierObject": "0x800c2f6c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

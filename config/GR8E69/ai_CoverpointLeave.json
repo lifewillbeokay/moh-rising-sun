@@ -1,0 +1,41 @@
+{
+  "id": "ai_CoverpointLeave",
+  "source": "src/ai/CoverpointLeave.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f1a4c",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "LeaveCoverPoint__19CCoverpointBehavior",
+      "address": "0x800f1a4c",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FlagAsUnoccupied__11CCoverPoint": "0x800e1e54",
+    "StopOverrideLOSPosition__16CAISoldierObject": "0x800de14c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

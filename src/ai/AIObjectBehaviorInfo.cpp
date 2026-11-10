@@ -20,8 +20,8 @@ int CAIObject::GetNextBehaviorType() {
     return result;
 }
 
-int CAIObject::GetNextBehaviorScript() {
-    int result;
+BSObject *CAIObject::GetNextBehaviorScript() {
+    BSObject *result;
     if (!nextBehavior)
         result = 0;
     else

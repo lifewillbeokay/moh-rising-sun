@@ -49,6 +49,7 @@ class RCMP_SYSTEM {
 public:
     RCMP_SYSTEM();
     virtual ~RCMP_SYSTEM();
+    void SetREALDefaults();
 
     void *(*allocate)(const char *, int, int, int, int);
     int (*release)(void *);

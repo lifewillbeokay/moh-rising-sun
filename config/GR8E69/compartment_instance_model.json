@@ -1,0 +1,39 @@
+{
+  "id": "compartment_instance_model",
+  "source": "src/geometry/compartment_instance_model.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80072400",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetInstanceModel__12CCompartmentii",
+      "address": "0x80072400",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetInstanceType__12CCompartmenti": "0x800722f4",
+    "GetVariation__Q212CCompartment14CInstanceModeli": "0x80072310"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -5,6 +5,8 @@
 #include "Color.h"
 #include "SceneNode.h"
 class CSprite;
+class CWeapon;
+enum _LetterboxTransitionStyle { LetterboxTransitionStyleUnknown = 0 }; // Original tag; members unknown.
 enum InterfaceState { InterfaceStateUnknown = 0, InterfaceStateOn = 1 };
 
 class CFont;
@@ -25,6 +27,11 @@ public:
     void AddHitDirection(unsigned int direction);
     void SetTarget(const char *name);
     void DrawViewportEdge();
+    void Update(float);
+    void UpdateCompass(float);
+    void UpdateWeaponName(float);
+    void UpdateAmmo(float);
+    void LetterboxTransition(float, _LetterboxTransitionStyle);
     void DrawSprite(float, float, float, float, CSprite &, CColor, bool, float);
     static CSprite *healthSprite;
     static CSprite *compassSprite;
@@ -62,19 +69,22 @@ public:
     float unknown7ec;            // +0x7ec
     float targetTime;            // +0x7f0
     char targetName[11];         // +0x7f4
-    unsigned char unknown7ff[0x804 - 0x7ff];
+    unsigned char unknown7ff;
+    float pulsePhase;            // +0x800; advances each update and wraps at two pi.
     float unknown804;            // +0x804
     int unknown808;              // +0x808
     float unknown80c;            // +0x80c
     float compassVelocity;       // +0x810
     float compassAngle;          // +0x814
-    int unknown818;              // +0x818
-    unsigned char unknown81c[0x828 - 0x81c];
-    int unknown828;
-    int unknown82c;
-    int unknown830;
-    int unknown834;
-    float unknown838;
+    int letterboxState;          // +0x818
+    int letterboxStyle;          // +0x81c; a _LetterboxTransitionStyle.
+    float letterboxPosition;     // +0x820
+    float letterboxRate;         // +0x824
+    int lastReserveAmmo;         // +0x828
+    int lastClipAmmo;            // +0x82c
+    int lastGrenades;            // +0x830
+    CWeapon *lastWeapon;         // +0x834
+    float lastHealth;            // +0x838; first word of the player's script data. Name inferred.
     int unknown83c;
     IMovingSceneNode *player;    // +0x840
 };

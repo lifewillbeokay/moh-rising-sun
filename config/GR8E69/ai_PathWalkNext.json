@@ -1,0 +1,53 @@
+{
+  "id": "ai_PathWalkNext",
+  "source": "src/ai/PathWalkNext.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ec5f8",
+      "size": 268
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4534",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TeleportToNextPositionOnPath__18CAIAreaPathFinding",
+      "address": "0x800ec5f8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetNextWalkToPos__18CAIAreaPathFindingR8CVector3",
+      "address": "0x800ec684",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentObjectivePosition__13CAILocomotion": "0x800ef088",
+    "GetNextElement__18CLinkedListElement": "0x800e0cd8",
+    "TeleportTo__13CAILocomotionRC8CVector3": "0x800ef34c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

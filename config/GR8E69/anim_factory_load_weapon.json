@@ -1,0 +1,45 @@
+{
+  "id": "anim_factory_load_weapon",
+  "source": "src/scene/AnimObjFactoryLoadWeapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cb4b8",
+      "size": 424
+    }
+  ],
+  "functions": [
+    {
+      "name": "LoadPlayerWeapon__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef",
+      "address": "0x800cb4b8",
+      "size": 424,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Alloc__Q34EALA9Character12SkeletonDataPCc": "0x80083d7c",
+    "Alloc__Q34EALA9Character4MeshPCcb": "0x80081568",
+    "LoadTextures__18CAnimObjectFactoryP24LevelFileContentsStruct_UiRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Mesh": "0x800cb1e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AnimObjFactory.cpp",
+  "original_file_index": 920
+}

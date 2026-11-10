@@ -1,0 +1,62 @@
+{
+  "id": "gamesettings_getsavedata",
+  "source": "src/shell/gamesettings_getsavedata.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801710f0",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetSaveData__C13CGameSettingsUiUi",
+      "address": "0x801710f0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentCompartmentID__13CGameSettingsUii",
+      "address": "0x80171128",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentCompartmentID__C13CGameSettingsUi",
+      "address": "0x8017113c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentOneShotBankID__13CGameSettings",
+      "address": "0x80171150",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentSavePointID__C13CGameSettings",
+      "address": "0x80171160",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

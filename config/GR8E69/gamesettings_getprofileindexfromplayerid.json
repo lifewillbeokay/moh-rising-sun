@@ -1,0 +1,60 @@
+{
+  "id": "gamesettings_getprofileindexfromplayerid",
+  "source": "src/shell/gamesettings_getprofileindexfromplayerid.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801718e4",
+      "size": 276
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetProfileIndexFromPlayerID__13CGameSettingsi",
+      "address": "0x801718e4",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetPlayerIDFromProfileIndex__13CGameSettingsi",
+      "address": "0x80171944",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "WasLastGameSinglePlayer__13CGameSettings",
+      "address": "0x801719bc",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetProfile__13CGameSettingsUi",
+      "address": "0x801719cc",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

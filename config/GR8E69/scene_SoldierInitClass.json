@@ -1,0 +1,54 @@
+{
+  "id": "scene_SoldierInitClass",
+  "source": "src/scene/SoldierInitClass.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bb260",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__14CSoldierObject",
+      "address": "0x800bb260",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetState__Q24EAGL12DrawTextured": "0x801e84fc",
+    "Init__Q24EAGL12DrawTextured": "0x801e6fec",
+    "SetAlphaBlendMode__Q24EAGL12GeoPrimStateQ24EAGL14AlphaBlendMode": "0x801df1f8",
+    "SetAlphaCompareValue__Q24EAGL12GeoPrimStatei": "0x801df210",
+    "SetCullEnable__Q24EAGL12GeoPrimStateb": "0x801df1e0",
+    "SetDepthTestMethod__Q24EAGL12GeoPrimStateQ24EAGL15DepthTestMethod": "0x801df1ec",
+    "SetPrimitiveType__Q24EAGL12GeoPrimStateQ24EAGL13PrimitiveType": "0x801df198",
+    "SetShading__Q24EAGL12GeoPrimStateQ24EAGL7Shading": "0x801df1d8",
+    "SetTextureEnable__Q24EAGL12GeoPrimStateb": "0x801df228",
+    "SetTransparencyMethod__Q24EAGL12GeoPrimStateQ24EAGL18TransparencyMethod": "0x801df238",
+    "SetZWritesEnable__Q24EAGL21GeoPrimStateExtensionb": "0x801df2d0",
+    "eagl_draw_tex": "0x80306d14"
+  },
+  "local_externals": [
+    "eagl_draw_tex"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

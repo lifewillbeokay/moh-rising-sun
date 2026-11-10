@@ -15,13 +15,12 @@ shake at `+0xd58`, the background shake at `+0xd7c` and three motion-shake float
 
 | Manifest | Functions | Code bytes | Generated data |
 | --- | --- | ---: | --- |
-| `camera_shake_init` | `CCameraShake` constructor | 56 | 4 bytes at `0x8029f478` |
-| `camera_shake_evaluate` | `SetShake(intensity, rampTime)`, `Evaluate` | 240 | 16 bytes at `0x8029f4d4` |
+| `camera_shake` | `CCameraShake` constructor, both `SetShake` forms, `Evaluate`, `Update` | 800 | 116 bytes at `0x8029f478` |
 | `player_camera_shake` | `SetCameraShake`, `StartCameraShake`, `StopCameraShake`, `StartBackgroundCameraShake`, `StopBackgroundCameraShake`, `DoMotionShake` | 268 | 12 bytes at `0x8029f1f8` |
 
 ## Behavior
 
-- **`SetShake(intensity, rampTime, fadeTime, duration)`** (not accepted, see below):
+- **`SetShake(intensity, rampTime, fadeTime, duration)`**:
   a duration outside 0-100000 prints "Specified duration must be between 0 and %f"
   into a local buffer and becomes 0. The target is **twice** the intensity. The
   duration is raised to at least the ramp time; the ramp time and fade time to at
@@ -33,7 +32,7 @@ shake at `+0xd58`, the background shake at `+0xd7c` and three motion-shake float
 - **`Evaluate(x, y)`** adds a random value in `±0.25 * current` to `y` and then to
   `x` (`MathFunRandomReal`); while fading (`rate < 0`) both are multiplied by
   `scale * current`.
-- **`Update(step)`** (not accepted): while the rate is non-zero it adds
+- **`Update(step)`**: while the rate is non-zero it adds
   `rate * step` and settles on the target when it passes it. Settled, and unless the
   duration is 100000, it counts elapsed time and, once past the duration, starts
   `SetShake(0, fadeTime)`.
@@ -41,11 +40,9 @@ shake at `+0xd58`, the background shake at `+0xd7c` and three motion-shake float
   forms ramp to 0 over the given time. `DoMotionShake(amount, rate)` stores both,
   clears a timer, and sets bit 25 of the flag word for a positive amount.
 
-`SetShake`'s four-argument form and `Update` compile to the original instructions
-except for register and block-order details (`Update`) and constant-pool alignment:
-the four-argument form uses an eight-byte conversion constant, and the original pool
-continues into `Update`'s constants, so it can be accepted only together with
-`Update`.
+These functions share one unit because of their literals. The four-argument `SetShake` holds an
+eight-byte conversion constant, and its pool only falls on the right boundary when it follows the
+constructor's single word and runs on into `Evaluate`'s and `Update`'s constants.
 
 ## Verification
 

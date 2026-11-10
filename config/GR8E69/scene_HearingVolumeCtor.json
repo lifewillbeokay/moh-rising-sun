@@ -1,0 +1,49 @@
+{
+  "id": "scene_HearingVolumeCtor",
+  "source": "src/scene/HearingVolumeCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c7128",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a06bc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CHearingVolume",
+      "address": "0x800c7128",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_vt.10CVolSphere": "0x802e9520",
+    "_vt.14CHearingVolume": "0x802e6080",
+    "_vt.9IObserver": "0x802e9aa0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hearingvolume.cpp",
+  "original_file_index": 908
+}

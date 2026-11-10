@@ -6,17 +6,11 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x801a71b4",
-      "size": 72
+      "address": "0x801a71cc",
+      "size": 48
     }
   ],
   "functions": [
-    {
-      "name": "Invalidate__9CMCDeviceb",
-      "address": "0x801a71b4",
-      "size": 24,
-      "binding": 1
-    },
     {
       "name": "Cache__9CMCDeviceb",
       "address": "0x801a71cc",
@@ -35,7 +29,6 @@
   "profile_from": "mc_a.json",
   "evidence": "docs/research/broad-source-sweep.md",
   "comparison_functions": [
-    "Invalidate__9CMCDeviceb",
     "Cache__9CMCDeviceb"
   ],
   "context_units": []

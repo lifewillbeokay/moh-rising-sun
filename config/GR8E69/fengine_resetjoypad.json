@@ -1,0 +1,52 @@
+{
+  "id": "fengine_resetjoypad",
+  "source": "src/frontend/fengine_resetjoypad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004cd48",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetJoyPad__7FEngine",
+      "address": "0x8004cd48",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetCombinedJoyPadActiveMask__C7FEngine",
+      "address": "0x8004cd8c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SetExecution__7FEngineb",
+      "address": "0x8004cdcc",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

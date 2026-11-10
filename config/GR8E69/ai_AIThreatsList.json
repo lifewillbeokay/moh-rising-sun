@@ -1,0 +1,128 @@
+{
+  "id": "ai_AIThreatsList",
+  "source": "src/ai/AIThreatsList.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f3980",
+      "size": 1272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4ec0",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddThreat__19CAIThreatEvaluationRC9CAIThreat",
+      "address": "0x800f3980",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Reevaluate__19CAIThreatEvaluation",
+      "address": "0x800f39c0",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "AIDied__19CAIThreatEvaluationP8BSObject",
+      "address": "0x800f3a0c",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "HaveThreat__19CAIThreatEvaluation",
+      "address": "0x800f3ab0",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "GetPositionOfMostImportantThreat__19CAIThreatEvaluation",
+      "address": "0x800f3ac8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Update__19CAIThreatEvaluationf",
+      "address": "0x800f3ad4",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "FinishedInvestigation__19CAIThreatEvaluation",
+      "address": "0x800f3b60",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "AddCorpseThreat__19CAIThreatEvaluationP8BSObject",
+      "address": "0x800f3bc0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "OnStateChange__19CAIThreatEvaluation17EAIHighLevelStateT1",
+      "address": "0x800f3bc4",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "InsertThreat__19CAIThreatEvaluationRC9CAIThreat",
+      "address": "0x800f3c18",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "InitializeSlot__19CAIThreatEvaluationiRC9CAIThreat",
+      "address": "0x800f3cbc",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "CompareThreats__FPCvT0",
+      "address": "0x800f3d4c",
+      "size": 44,
+      "binding": 0
+    },
+    {
+      "name": "RankThreats__19CAIThreatEvaluation",
+      "address": "0x800f3d78",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "GetScoreStartByType__FQ29CAIThreat10ThreatType",
+      "address": "0x800f3df0",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "ClearSlot__19CAIThreatEvaluationi": "0x800f4464",
+    "DebugDraw__19CAIThreatEvaluation": "0x800f44b8",
+    "ReactToThreat__19CAIThreatEvaluationPQ219CAIThreatEvaluation10ThreatInfo": "0x800f3f88",
+    "ScoreInitialThreat__19CAIThreatEvaluationi": "0x800f3e78",
+    "qsort": "0x80265300"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIThreats.cpp",
+  "original_file_index": 1094
+}

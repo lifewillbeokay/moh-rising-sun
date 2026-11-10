@@ -1,0 +1,99 @@
+{
+  "id": "ai_BotAreaA",
+  "source": "src/ai/BotAreaA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009f320",
+      "size": 544
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e3cc",
+      "size": 72
+    },
+    {
+      "name": ".data",
+      "address": "0x802c2554",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitBotAreaData__Fv",
+      "address": "0x8009f320",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "CleanBotAreaData__Fv",
+      "address": "0x8009f3c4",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GetBotArea__Fs",
+      "address": "0x8009f420",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetBotArea__FP13CAreaPathNode",
+      "address": "0x8009f434",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetAreaEdge__Fi",
+      "address": "0x8009f464",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetCoverEdge__Fi",
+      "address": "0x8009f478",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetCoverEdge__Fii",
+      "address": "0x8009f4ac",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetEdgePoints__9CAreaEdgeR8CVector3T1",
+      "address": "0x8009f4ec",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894",
+    "DWI_getallocid": "0x801a8664",
+    "DWI_setallocid": "0x801a8658",
+    "GetIndexByPathNode__13AIPathFindingP13CAreaPathNode": "0x800e7640",
+    "g_iNumAreaVertices": "0x802c3474",
+    "g_iNumPathFindingAreas": "0x802c347c",
+    "g_pAreaVertices": "0x802c3470"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotArea.cpp",
+  "original_file_index": 797
+}

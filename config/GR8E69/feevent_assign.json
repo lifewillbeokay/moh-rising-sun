@@ -1,0 +1,41 @@
+{
+  "id": "feevent_assign",
+  "source": "src/frontend/feevent_assign.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004795c",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "__as__11FEEventListR11FEEventList",
+      "address": "0x8004795c",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetCount__11FEEventListl": "0x800479a4",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEEvent.cpp",
+  "original_file_index": 270
+}

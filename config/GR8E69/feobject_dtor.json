@@ -1,0 +1,51 @@
+{
+  "id": "feobject_dtor",
+  "source": "src/frontend/feobject_dtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050280",
+      "size": 196
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._8FEObject",
+      "address": "0x80050280",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Free__11FEMultiPoolPUc": "0x80055d78",
+    "ObjDataPool": "0x802ee608",
+    "Purge__9FEMinList": "0x802780a4",
+    "_8FEObject.pDestructorCallback": "0x802c1800",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.8FEObject": "0x802e1290",
+    "_vt.9FEMinList": "0x802e1180",
+    "_vt.9FEMinNode": "0x802e11c8"
+  },
+  "local_externals": [
+    "ObjDataPool"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319
+}

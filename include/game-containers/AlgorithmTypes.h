@@ -29,7 +29,9 @@ class SortByTeamAndScore {
 #include "../game/CMatrix.h"
 struct DrawCommand {
     unsigned int field_00, field_04;
-    unsigned char unresolved_08[24];
+    unsigned char unresolved_08[4];
+    unsigned char arguments[16]; // +0x0c, passed by address to the function; extent inferred.
+    void (*function)(class CDrawContext *, void *); // +0x1c
     bool operator<(const DrawCommand &other) const {
         if (field_00 < other.field_00)
             return true;
@@ -41,6 +43,7 @@ struct DrawCommand {
 struct DrawCommandData {
     CMatrix field_00;
     DrawCommand field_40;
+    DrawCommandData() {}
     DrawCommandData(const DrawCommandData &other) {
         field_00 = other.field_00;
         field_40 = other.field_40;

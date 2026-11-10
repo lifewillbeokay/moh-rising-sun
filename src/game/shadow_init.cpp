@@ -3,7 +3,7 @@
 
 class CProjector {
 public:
-    static void Destroy(CProjector *);
+    static int Destroy(CProjector *);
     unsigned char unknown000[592];
     int owner;
 };

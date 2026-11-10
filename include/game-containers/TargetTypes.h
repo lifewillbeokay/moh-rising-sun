@@ -8,14 +8,20 @@ class ISceneNode;
 template <class T, int N> class WeakPtr : public IObserver {
   public:
     WeakPtr() {}
+    WeakPtr(T *other) { Assign(other); }
     WeakPtr(const WeakPtr &other) { Assign(other.subject); }
     WeakPtr &operator=(const WeakPtr &other) {
         Assign(other.subject);
         return *this;
     }
+    WeakPtr &operator=(T *other) {
+        Assign(other);
+        return *this;
+    }
     // Descriptive inline accessors; script spatial callers corroborate these operations.
     operator bool() const { return subject != 0; }
     ISubject *GetSubject() const { return subject; }
+    T *Get() const { return static_cast<T *>(subject); }
     T *operator->() const { return static_cast<T *>(subject); }
     virtual void HandleEvent(ISubject *, ESubjectEvent event) {
         if (event & N)

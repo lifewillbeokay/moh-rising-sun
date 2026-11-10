@@ -1,0 +1,57 @@
+{
+  "id": "ssys_options",
+  "source": "src/sound/ea/ssys_options.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80220eb4",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMaxBanks__Q23Snd6Systemi",
+      "address": "0x80220eb4",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "CapOutputMode__Q23Snd6SystemQ23Snd10OutputModePb",
+      "address": "0x80220ef8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SetOutputMode__Q23Snd6SystemQ23Snd10OutputMode",
+      "address": "0x80220f84",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_getopts": "0x802211a0",
+    "SNDSYS_setopts": "0x80221300",
+    "_3Snd.outputmode": "0x802d54b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssys.cpp",
+  "original_file_index": 3121
+}

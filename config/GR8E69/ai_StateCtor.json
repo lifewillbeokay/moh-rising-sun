@@ -1,0 +1,43 @@
+{
+  "id": "ai_StateCtor",
+  "source": "src/eala/StateCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80084250",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q34EALA9Character5State",
+      "address": "0x80084250",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.Q34EALA9Character5State": "0x802e3058"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "State.cpp",
+  "original_file_index": 592
+}

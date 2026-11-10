@@ -1,0 +1,54 @@
+{
+  "id": "flood_search_expand",
+  "source": "src/ai/FloodSearchExpand.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009f1e8",
+      "size": 312
+    }
+  ],
+  "functions": [
+    {
+      "name": "ExpandList__12CFloodSearch",
+      "address": "0x8009f1e8",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "BeginSearch__12CFloodSearchsf",
+      "address": "0x8009f250",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetNextArea__12CFloodSearchRs",
+      "address": "0x8009f2bc",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddArea__12CFloodSearchs": "0x8009f0d4",
+    "AddConnectedAreas__12CFloodSearchs": "0x8009f16c",
+    "RemoveArea__12CFloodSearch": "0x8009f144"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FloodSearch.cpp",
+  "original_file_index": 795
+}

@@ -17,7 +17,7 @@ public:
     void operator delete(void*);
     int Decode(float**, int);
     void SetState(XAFSTATE*);
-    void Feed(void*, int, int);
+    int Feed(void*, int, int);
 
 private:
     char m_state[168];

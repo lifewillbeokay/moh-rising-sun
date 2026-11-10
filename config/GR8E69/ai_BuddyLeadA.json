@@ -1,0 +1,89 @@
+{
+  "id": "ai_BuddyLeadA",
+  "source": "src/ai/BuddyLeadA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e4658",
+      "size": 336
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3678",
+      "size": 12
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.18CBuddyLeadBehavior",
+      "address": "0x802e7cb0",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__18CBuddyLeadBehavior",
+      "address": "0x800e4658",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "_._18CBuddyLeadBehavior",
+      "address": "0x800e46b4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__18CBuddyLeadBehavior",
+      "address": "0x800e46e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__18CBuddyLeadBehavior",
+      "address": "0x800e46ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__18CBuddyLeadBehavior",
+      "address": "0x800e46f4",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetCRC__9CBehavior": "0x800e28ec",
+    "GetCapabilities__18CBuddyLeadBehavior11ECapability": "0x800e4be8",
+    "GetNextCheckpoint__FP12Checkpoint_t": "0x800e4f70",
+    "GetScriptObject__9CBehavior": "0x800e290c",
+    "GetType__18CBuddyLeadBehavior": "0x800e5154",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "StartBehavior__18CBuddyLeadBehavior": "0x800e4ad4",
+    "StopBehavior__18CBuddyLeadBehaviorb": "0x800e4b64",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "local_externals": [
+    "GetNextCheckpoint__FP12Checkpoint_t"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BuddyLeadBehavior.cpp",
+  "original_file_index": 1029
+}

@@ -493,3 +493,10 @@ also remain original. The [targeting reconstruction](Targeting.md) now supplies
 matching target-value, last-seen and visibility helpers for the locomotion path;
 its selector branches still need work. The verified controls, dispatch contract,
 clock and spline evaluators provide evidence for these larger routines.
+
+## Flood search
+
+`CFloodSearch` walks area path nodes outward from a start area, keeping a 32-entry queue, a
+visited bitmap and counts. Method names come from the symbol table; member names are inferred.
+`AddConnectedAreas` is not reconstructed: its loop keeps the increment at the top and no form
+tried reproduces it.

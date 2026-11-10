@@ -1,0 +1,122 @@
+{
+  "id": "bullet_factory_helper",
+  "source": "src/bullets/BulletFactoryHelper.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8028b218",
+      "size": 1680
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a9230",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
+      "address": "0x8028b218",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
+      "address": "0x8028b25c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "Init__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP33ProjectileBulletProperties_struct",
+      "address": "0x8028b2a0",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "Init__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP29ThrownBulletProperties_struct",
+      "address": "0x8028b2f4",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "Reset__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
+      "address": "0x8028b348",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Reset__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
+      "address": "0x8028b374",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes",
+      "address": "0x8028b3a0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes",
+      "address": "0x8028b3dc",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "CreateBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypes22EProjectileBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode",
+      "address": "0x8028b418",
+      "size": 472,
+      "binding": 1
+    },
+    {
+      "name": "CreateBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypes18EThrownBulletTypesRC8CVector3T2f7EClsnIdfP10ISceneNode",
+      "address": "0x8028b5f0",
+      "size": 472,
+      "binding": 1
+    },
+    {
+      "name": "DestroyBullet__t20CBulletFactoryHelper3Z17CProjectileBulletZ33ProjectileBulletProperties_structZ22EProjectileBulletTypesP17CProjectileBullet",
+      "address": "0x8028b7c8",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "DestroyBullet__t20CBulletFactoryHelper3Z13CThrownBulletZ29ThrownBulletProperties_structZ18EThrownBulletTypesP13CThrownBullet",
+      "address": "0x8028b838",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BUFEND_PADSIZE": "0x802a0c2c",
+    "BUFSTART_PADSIZE": "0x802a0c28",
+    "CheckRecycleThreshold__18CGameObjectFactory": "0x800ca664",
+    "DebugMsg__FPCce": "0x80279094",
+    "IGO_Destroy__11IGameObject": "0x800ca358",
+    "Init__13CThrownBullet18EThrownBulletTypesP29ThrownBulletProperties_structRC8CVector3T3f7EClsnIdfP10ISceneNodeb": "0x80150b24",
+    "Init__17CProjectileBullet22EProjectileBulletTypesP33ProjectileBulletProperties_structRC8CVector3T3f7EClsnIdfP10ISceneNodeb": "0x8014d604",
+    "Init__18CGameObjectFactoryiif": "0x800ca3b0",
+    "Reset__18CGameObjectFactory": "0x800ca460",
+    "Shutdown__18CGameObjectFactory": "0x800ca494",
+    "__13CThrownBullet": "0x80150924",
+    "__17CProjectileBullet": "0x8014d31c",
+    "__18CGameObjectFactory": "0x800ca384",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

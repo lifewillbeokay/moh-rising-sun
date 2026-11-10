@@ -96,3 +96,17 @@ sections and unchanged prior units are verified separately. Integrated host
 checks exercise construction, buffer deletion, null buffer results and startup
 stack replacement with host-sized allocation fixtures; they do not validate
 target pointer sizes, destructor flags or game runtime.
+
+## Memory-card driver
+
+`Realmc::GCDriver` (`gc_driver.cpp`) wraps the Dolphin card library: each card call repeats while it
+returns busy, with `THREAD_yield(1)` between tries, and `ConvertCardResult` maps card results to the
+library's result codes. `Realmc::MEMCARD_SECTOR_SIZE`, `mMounted` and `mIsCardPresent` are small-data
+statics, so these units use `-G8 -fno-strength-reduce`. The driver holds three 228-byte file descriptors
+from `+8`, the sector size at `+0x2b4`, the config at `+0x2b8`, the card's work area at `+0x2bc` and a sector
+buffer at `+0x2c0`. A written file starts with a 4-byte size, a 32-byte title and comment, banner and icon
+images and a trailing additive checksum over the signed bytes, which `WriteHeaderData` writes. Member
+names, including those of `FileInfo` and `GcFileDescriptor`, are inferred from use; `CARDStatView` and the
+`CARDSetIcon*` macros follow the SDK's `card.h`, whose headers do not build under ProDG here. Not reconstructed:
+the constructor and destructor, `OpenFile`, `WriteFile` (two saved registers rotated), `FindFirst`, `FindNext`,
+`NGCSportsBioCreate` (register rotation only) and `VerifyHeaderChecksum`.

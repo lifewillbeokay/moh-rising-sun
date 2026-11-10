@@ -1,0 +1,49 @@
+{
+  "id": "ai_PathSearchTrim",
+  "source": "src/ai/PathSearchTrim.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800eb34c",
+      "size": 268
+    }
+  ],
+  "functions": [
+    {
+      "name": "TrimSolutionNodeQueue__18CAIAreaPathFindingP15CAreaSearchNodeR19CAreaSearchNodeList",
+      "address": "0x800eb34c",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "CleanupAStarPathWalk__18CAIAreaPathFinding",
+      "address": "0x800eb40c",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddElementAtBeginning__11CLinkedListP18CLinkedListElement": "0x800e0d20",
+    "DeleteNode__15CAreaSearchNodeP15CAreaSearchNode": "0x800e12f4",
+    "GetNextElement__18CLinkedListElement": "0x800e0cd8",
+    "RemoveElement__11CLinkedListP18CLinkedListElement": "0x800e0da0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

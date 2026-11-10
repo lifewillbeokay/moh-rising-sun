@@ -1,0 +1,81 @@
+{
+  "id": "motion_blur",
+  "source": "src/game/MotionBlur.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006afe4",
+      "size": 700
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a5b8",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetFrameBlur__10MotionBlurffff",
+      "address": "0x8006afe4",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "StopFrameBlur__10MotionBlurv",
+      "address": "0x8006b0c4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Update__10MotionBlurf",
+      "address": "0x8006b0e4",
+      "size": 444,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnableMotionBlur__Q24EAGL22RenderContextExtensionfb": "0x801dc370",
+    "GetCurrentRenderContext__CQ24EAGL6Device": "0x801db43c",
+    "Get__Q24EAGL6Device": "0x801db480",
+    "_10MotionBlur.gAmount": "0x802c1c98",
+    "_10MotionBlur.gCurrentAmount": "0x802c1c8c",
+    "_10MotionBlur.gDeltaAmount": "0x802c1c94",
+    "_10MotionBlur.gDuration": "0x802c1ca4",
+    "_10MotionBlur.gPaused": "0x802c1cac",
+    "_10MotionBlur.gPrevAmount": "0x802c1c88",
+    "_10MotionBlur.gRampIn": "0x802c1c9c",
+    "_10MotionBlur.gRampOut": "0x802c1ca0",
+    "_10MotionBlur.gState": "0x802c1ca8",
+    "_10MotionBlur.gTransitionTimer": "0x802c1c90"
+  },
+  "local_externals": [
+    "_10MotionBlur.gAmount",
+    "_10MotionBlur.gCurrentAmount",
+    "_10MotionBlur.gDeltaAmount",
+    "_10MotionBlur.gDuration",
+    "_10MotionBlur.gPaused",
+    "_10MotionBlur.gPrevAmount",
+    "_10MotionBlur.gRampIn",
+    "_10MotionBlur.gRampOut",
+    "_10MotionBlur.gState",
+    "_10MotionBlur.gTransitionTimer"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "motionblur.cpp",
+  "original_file_index": 492
+}

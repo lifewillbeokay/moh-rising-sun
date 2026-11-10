@@ -1,0 +1,73 @@
+{
+  "id": "projector_frustum",
+  "source": "src/camera/projector_frustum.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80133504",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetFrustum__10CProjectorR11CVolFrustum",
+      "address": "0x80133504",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetMatrix__10CProjectorR7CMatrix",
+      "address": "0x80133528",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetRadius__10CProjectorf",
+      "address": "0x8013354c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetFrustum__C10CProjector",
+      "address": "0x80133554",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsProjector__10CProjector",
+      "address": "0x8013355c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsProjector__C10CProjector",
+      "address": "0x80133560",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__11CVolFrustumRC11CVolFrustum": "0x8013ef98",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

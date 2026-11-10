@@ -1,0 +1,46 @@
+{
+  "id": "febuttonmap_setcount",
+  "source": "src/frontend/febuttonmap_setcount.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80045808",
+      "size": 104
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297124",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCount__11FEButtonMapUl",
+      "address": "0x80045808",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEButtonMap.cpp",
+  "original_file_index": 260
+}

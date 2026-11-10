@@ -1,0 +1,53 @@
+{
+  "id": "ai_GrenadeResponseStop",
+  "source": "src/ai/GrenadeResponseStop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f0324",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopBehavior__24CGrenadeResponseBehaviorb",
+      "address": "0x800f0324",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__24CGrenadeResponseBehavior11ECapability",
+      "address": "0x800f0390",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseResources__24CGrenadeResponseBehavior",
+      "address": "0x800f03a0",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "DestroyBSObject__FP8BSObject": "0x800f6cec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GrenadeResponseBehavior.cpp",
+  "original_file_index": 1079
+}

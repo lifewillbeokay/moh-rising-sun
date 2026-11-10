@@ -1,0 +1,67 @@
+{
+  "id": "eagl_viewport_accessors",
+  "source": "src/eagl/eagl_viewport_accessors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801e40ec",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetEnableModelSphereCull__Q24EAGL8ViewPorti",
+      "address": "0x801e40ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetEnableModelSphereCull__Q24EAGL8ViewPort",
+      "address": "0x801e40f4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24EAGL8ViewPort",
+      "address": "0x801e40fc",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetProjectionType__CQ24EAGL8ViewPort",
+      "address": "0x801e4150",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetBackgroundColour__Q24EAGL8ViewPortGQ24EAGL6Colour",
+      "address": "0x801e4158",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._Q24EAGL17ViewPortExtension": "0x801e3e58",
+    "_12EAGLInternal.EAGLFree": "0x802d2e0c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "viewport_cmn.cpp",
+  "original_file_index": 2651
+}

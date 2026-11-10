@@ -1,0 +1,43 @@
+{
+  "id": "ai_BotAreaContain",
+  "source": "src/ai/BotAreaContain.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a01d0",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindContainingArea__FR8CVector3",
+      "address": "0x800a01d0",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ContainsPoint__C13CAreaPathNodeRC8CVector3": "0x800e7890",
+    "GetPathNodeByIndex__13AIPathFindingUs": "0x800e762c",
+    "WhichNetwork__18CAIAreaPathFindingRC8CVector3": "0x800ec3f4",
+    "g_iNumPathFindingAreas": "0x802c347c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotArea.cpp",
+  "original_file_index": 797
+}

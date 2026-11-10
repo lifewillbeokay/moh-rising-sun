@@ -1,0 +1,82 @@
+{
+  "id": "gamesettings_setplayersfinishedlevelsuccessfu",
+  "source": "src/shell/gamesettings_setplayersfinishedlevelsuccessfu.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016dee0",
+      "size": 532
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetPlayersFinishedLevelSuccessfully__13CGameSettingsii",
+      "address": "0x8016dee0",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetPlayersFinishedLevelHealth__13CGameSettingsiif",
+      "address": "0x8016df44",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentHealth__13CGameSettingsfi",
+      "address": "0x8016dfac",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHealth__C13CGameSettingsi",
+      "address": "0x8016dfc4",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentAmmo__13CGameSettingsiUiUii",
+      "address": "0x8016dfdc",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentWeapon__13CGameSettingsP7CWeaponi",
+      "address": "0x8016e03c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentWeapon__13CGameSettingsRii",
+      "address": "0x8016e064",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentAmmo__C13CGameSettingsiRUiT2i",
+      "address": "0x8016e090",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PlayerLevelDataIndex__13CGameSettingsii": "0x8016fff0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

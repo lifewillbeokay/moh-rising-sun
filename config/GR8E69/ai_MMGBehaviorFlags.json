@@ -1,0 +1,70 @@
+{
+  "id": "ai_MMGBehaviorFlags",
+  "source": "src/ai/MMGBehaviorFlags.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e3e30",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3538",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCapabilities__26CMountedMachineGunBehavior11ECapability",
+      "address": "0x800e3e30",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "Arrived__26CMountedMachineGunBehavior",
+      "address": "0x800e3ea8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "CantReachMMG__26CMountedMachineGunBehavior",
+      "address": "0x800e3eb4",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "HitFromBehind__26CMountedMachineGunBehavior",
+      "address": "0x800e3f18",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "ForceToMMG__26CMountedMachineGunBehavior",
+      "address": "0x800e3f7c",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "g_aigAIFilterGlobalObject": "0x80309bfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

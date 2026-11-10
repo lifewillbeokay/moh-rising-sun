@@ -1,0 +1,42 @@
+{
+  "id": "meshparticle_alloc",
+  "source": "src/particles/meshparticle_alloc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80064594",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocSystem__18MeshParticleSystemi",
+      "address": "0x80064594",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_meshParticleSystemList": "0x802fb1c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

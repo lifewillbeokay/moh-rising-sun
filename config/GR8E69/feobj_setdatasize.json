@@ -1,0 +1,45 @@
+{
+  "id": "feobj_setdatasize",
+  "source": "src/frontend/feobj_setdatasize.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050344",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetDataSize__8FEObjectUl",
+      "address": "0x80050344",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Alloc__11FEMultiPoolUl": "0x80055ca4",
+    "Free__11FEMultiPoolPUc": "0x80055d78",
+    "ObjDataPool": "0x802ee608"
+  },
+  "local_externals": [
+    "ObjDataPool"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319
+}

@@ -1,0 +1,52 @@
+{
+  "id": "ai_BotThreatDirections",
+  "source": "src/ai/BotThreatDirections.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80097900",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dbf4",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateThreatDirections__10CBotObject",
+      "address": "0x80097900",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "BoredOfWaiting__10CBotObject",
+      "address": "0x80097950",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindThreatPoints2__FifP10CBotObject": "0x800a15b8",
+    "GetClock__10CBotObject": "0x800991dc",
+    "GetCurrentPathNode__10CBotObject": "0x800993e8",
+    "GetIndexByPathNode__13AIPathFindingP13CAreaPathNode": "0x800e7640"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

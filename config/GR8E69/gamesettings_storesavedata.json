@@ -1,0 +1,69 @@
+{
+  "id": "gamesettings_storesavedata",
+  "source": "src/shell/gamesettings_storesavedata.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801707ec",
+      "size": 940
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ac3ec",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "StoreSaveData__13CGameSettingsUiUi",
+      "address": "0x801707ec",
+      "size": 428,
+      "binding": 1
+    },
+    {
+      "name": "StoreSaveData__13CGameSettingsb",
+      "address": "0x80170998",
+      "size": 512,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "Now__9Timestamp": "0x801accc8",
+    "SaveBegin__9BitBuffer": "0x80172020",
+    "SaveEnd__9BitBuffer": "0x80172068",
+    "Save__13TriggerObject": "0x80121210",
+    "SerializeValue__13CGameSettingsRUc": "0x80170c34",
+    "SerializeValue__13CGameSettingsRf": "0x80170d04",
+    "SerializeValue__13CGameSettingsRiUi": "0x80170c14",
+    "Serialize__17CPlayerObjectives": "0x8017c4b4",
+    "SoundGetAmbientTrackEvent__FRi": "0x80156a8c",
+    "SoundGetMusicEventID__FRi": "0x80156a9c",
+    "SoundGetOneShotBankID__FRi": "0x80156a7c",
+    "StoreSaveData__13CPlayerObject": "0x800b6848",
+    "Used__C9BitBuffer": "0x80172258",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_Objectives": "0x803e81a4",
+    "g_fog": "0x802fad40",
+    "g_scene": "0x803e6d90",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

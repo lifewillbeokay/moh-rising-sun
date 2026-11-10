@@ -1,0 +1,74 @@
+{
+  "id": "fe_femouse",
+  "source": "src/frontend/fe_femouse.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004c6e4",
+      "size": 476
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7FEMouse",
+      "address": "0x8004c6e4",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Reset__7FEMouse",
+      "address": "0x8004c714",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Update__7FEMouseR11FEMouseInfoUl",
+      "address": "0x8004c744",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "WasPressed__7FEMouseUs",
+      "address": "0x8004c7e4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "WasHeld__7FEMouseUs",
+      "address": "0x8004c818",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "HeldFor__7FEMouseUs",
+      "address": "0x8004c848",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "WasReleased__7FEMouseUs",
+      "address": "0x8004c890",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEMouse.cpp",
+  "original_file_index": 311
+}

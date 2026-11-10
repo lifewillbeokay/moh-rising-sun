@@ -1,0 +1,152 @@
+{
+  "id": "particledef_inlines",
+  "source": "src/particles/particledef_inlines.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006c170",
+      "size": 176
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.16CMeshParticleDef",
+      "address": "0x802e2600",
+      "size": 96,
+      "target_name": ".data"
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.16CProcParticleDef",
+      "address": "0x802e2660",
+      "size": 96,
+      "target_name": ".data"
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.12CParticleDef",
+      "address": "0x802e26c0",
+      "size": 96,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "Crc__12CParticleDef",
+      "address": "0x8006c170",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsProcDef__12CParticleDef",
+      "address": "0x8006c178",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsProcDef__C12CParticleDef",
+      "address": "0x8006c180",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshDef__12CParticleDef",
+      "address": "0x8006c188",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshDef__C12CParticleDef",
+      "address": "0x8006c190",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsEaglDef__12CParticleDef",
+      "address": "0x8006c198",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsEaglDef__C12CParticleDef",
+      "address": "0x8006c1a0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Crc__16CProcParticleDef",
+      "address": "0x8006c1a8",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "AsProcDef__16CProcParticleDef",
+      "address": "0x8006c1c8",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsProcDef__C16CProcParticleDef",
+      "address": "0x8006c1cc",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "ObjectType__16CProcParticleDef",
+      "address": "0x8006c1d0",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Crc__16CMeshParticleDef",
+      "address": "0x8006c1e4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshDef__16CMeshParticleDef",
+      "address": "0x8006c204",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshDef__C16CMeshParticleDef",
+      "address": "0x8006c208",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "ObjectType__16CMeshParticleDef",
+      "address": "0x8006c20c",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Init__12CParticleDefP24LevelFileContentsStruct_": "0x8006b334",
+    "Init__16CMeshParticleDefP24LevelFileContentsStruct_": "0x8006b8d4",
+    "Init__16CProcParticleDefP24LevelFileContentsStruct_": "0x8006b3f0",
+    "IsValid__12CParticleDef": "0x8006b33c",
+    "IsValid__16CMeshParticleDef": "0x8006bba0",
+    "IsValid__16CProcParticleDef": "0x8006b550",
+    "_._12CParticleDef": "0x8006b300",
+    "_._16CMeshParticleDef": "0x8006b860",
+    "_._16CProcParticleDef": "0x8006b390"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particledef.cpp",
+  "original_file_index": 504
+}

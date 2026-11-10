@@ -1,0 +1,52 @@
+{
+  "id": "compartment_update",
+  "source": "src/geometry/compartment_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80070acc",
+      "size": 344
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoTextureSwap__12CCompartmenti",
+      "address": "0x80070acc",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "HandleExplosion__12CCompartmentRC10CExplosion",
+      "address": "0x80070b64",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__12CCompartmentf",
+      "address": "0x80070b68",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "StepToNextFrame__9AnimShape": "0x8006ad0c",
+    "Update__12MaterialAnimf": "0x8006c3cc",
+    "Update__9AnimShapef": "0x8006a8d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

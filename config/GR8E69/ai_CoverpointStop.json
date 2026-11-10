@@ -1,0 +1,47 @@
+{
+  "id": "ai_CoverpointStop",
+  "source": "src/ai/CoverpointStop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f14d0",
+      "size": 248
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopBehavior__19CCoverpointBehaviorb",
+      "address": "0x800f14d0",
+      "size": 184,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseResources__19CCoverpointBehavior",
+      "address": "0x800f1588",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "LeaveCoverPoint__19CCoverpointBehavior": "0x800f1a4c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

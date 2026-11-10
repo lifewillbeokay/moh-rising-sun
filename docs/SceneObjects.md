@@ -27,9 +27,7 @@ names are descriptive.
 `GetLocation` (both overloads) and the two `GetDistance*Real` functions, the behavior
 selection group from `ChooseBehavior` to `GetBehaviorCapability`, the previous and next
 behavior accessors, the `As*` casts through `SetAIStatusVar`, and the global-list add and
-remove all match. `CBehavior` is a view added for them: the enable word is at `+8`, its
-table pointer at `+0xc`; slot names come from the original table where it names them, and
-the pure slots are descriptive only. `CAIObject` holds the previous, next and current
+remove all match. `CBehavior` itself is described in [Behaviors.md](Behaviors.md). `CAIObject` holds the previous, next and current
 behaviors at `+0x370`, `+0x378` and `+0x37c`.
 
 The AI object constructors and destructors are deliberately absent. Matching them would
@@ -152,6 +150,47 @@ angle at `+0x288`, doubles its scale and turns about Z. It then queues the mesh'
 frame 0 and the saved model-view pointer. `ExecuteDraw` sets the fade as a global colour scale and
 the light block around `CStaticMesh::DrawMesh`.
 
+## Soldier accessors with no Frontline counterpart
+
+`CSoldierObject`'s partition, blink, expression and upper-body accessors exist only in this
+game, so the code decides their names. The `m_partitionLower` and `m_partitionUpper` symbols name
+the two partitions; `Partition3` selects the lower and `Partition2` the upper. Everything else
+named in those fragments is descriptive and inferred, including the upper-body angle pairs at
+`+0xb70`, the two state-done records at `+0x15ac` and the attach-slot name at `+0x50`.
+
+`SetBlink`'s literal pool starts with 0 and 86400, the values of the state 0 and state 8 arm.
+State 0 is written first in the source so that the pool comes out in that order; the compiler
+then merges its identical body into state 8's. `SetUpperTranslation` is only an assignment:
+`CVector3::operator=` returns by value, which is the unused four-word copy on its stack.
+
+`CStaticObject::ModifyMotionData` and `TranslateFromScript` share one unit because their literals
+are neighbors: the first ends four bytes short of an eight-byte boundary after its double.
+
+## Heads-up display updates
+
+`CHeadsUpDisplay::Update`, `UpdateCompass`, `UpdateAmmo`, `UpdateWeaponName` and
+`LetterboxTransition` share a unit because the last one's double closes a pool that starts at
+`UpdateCompass`. They take the file group's `-ffast-math` profile. Member names are inferred:
+the "last" counters hold the values `Update` saw on the previous frame, and any change restarts a
+panel's 4.5-tick timer. `lastHealth` is the first word of the player's script data; that this word
+is health is inferred. `case 1` in the letterbox switch has no body, which is what leaves the
+comparison tree's left side empty.
+
+`CPlayerObject::TargetFind`'s methods use more of the object than the player header's view
+declares. An eight-entry `TargetInfo` array at `+0x30` with its count at `+0x1b0` follows a
+`WeakPtr<CPlayerObject, 8>` prefix and a second weak pointer at `+0x18`, which holds the chosen
+target; the source models them in the unit. The view's placement inside `CPlayerObject` and
+the array's relation to that view's `+0x40` fields are not settled here.
+
+## Hearing volume
+
+`CHearingVolume` is a moving scene node with two spheres, which `Init` places at a given height
+above an owner it then follows each update. Its table is original; field names are descriptive.
+`CCheckedMatrix` in `HearingVolume.h` is a project name: the original `CMatrix` default constructor
+checks that the class is initialized, which the shared header writes out at each local, and a
+member needs the check to run in member order. `HandleBulletCollision`, `PlayBulletWhizBys` and
+the destructor are not reconstructed; the destructor differs only in `r10` and `r11`.
+
 ## Parked
 
 These still differ, with instruction differences in brackets; drafts are kept outside the
@@ -204,3 +243,11 @@ bits, motion gates, bounds, weapon allocation and sentinel handling.
 `pathScale` is now named `pathTurnSlowdown` in the scoped view; its offset remains
 `+0x110`. The historical partial measurements remain in Git history and the
 [batch notes](research/shortlist-partials.md). None is counted twice.
+
+## Animated object factory loaders
+
+`CAnimObjectFactory`'s loaders read tables from a `LevelFileContentsStruct_`: table 0 names the
+skeleton, 1 the body mesh, 3 the head mesh, and 21 the mesh parts to hide; `LoadTextures` binds a
+table of texture files to a mesh. A `CAnimObjDef` holds counted pointers to the skeleton, body and
+head at `+0x48`, `+0x4c` and `+0x50`. Verified: the loaders' code. Inferred: member names and what
+the table indices mean. `LoadCollisionData` is not reconstructed.

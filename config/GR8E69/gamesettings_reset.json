@@ -1,0 +1,61 @@
+{
+  "id": "gamesettings_reset",
+  "source": "src/shell/gamesettings_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016caa4",
+      "size": 620
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ac0e8",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reset__12SPlayerStats",
+      "address": "0x8016caa4",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "__9SSaveData",
+      "address": "0x8016cb10",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "TotalReset__9SSaveData",
+      "address": "0x8016cc34",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "LevelReset__9SSaveData",
+      "address": "0x8016cc64",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__9SCRC_Ammo": "0x8028b974"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,47 @@
+{
+  "id": "ai_PathWalkStop",
+  "source": "src/ai/PathWalkStop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800eb780",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopAStarPathWalk__18CAIAreaPathFinding",
+      "address": "0x800eb780",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "RemovePointersTo__18CAIAreaPathFindingP9CAIObject",
+      "address": "0x800eb7d0",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "CleanupAStarPathWalk__18CAIAreaPathFinding": "0x800eb40c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

@@ -1,0 +1,59 @@
+{
+  "id": "ssys_heap",
+  "source": "src/sound/ea/ssys_heap.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802210e8",
+      "size": 184
+    }
+  ],
+  "functions": [
+    {
+      "name": "Restore__Q23Snd6System",
+      "address": "0x802210e8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SetHeap__Q23Snd6MemoryQ23Snd6DevicePvi",
+      "address": "0x80221118",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "SetHeapFastRam__Q23Snd6MemoryPvi",
+      "address": "0x80221198",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_getopts": "0x802211a0",
+    "SNDSYS_restore": "0x802215f4",
+    "SNDSYS_setopts": "0x80221300",
+    "_3Snd.heapsize": "0x8041d104",
+    "_3Snd.pheap": "0x802d54ac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ssys.cpp",
+  "original_file_index": 3121
+}

@@ -1,0 +1,42 @@
+{
+  "id": "objectives_serialize",
+  "source": "src/objectives/ObjectivesSerialize.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017c4b4",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "Serialize__17CPlayerObjectives",
+      "address": "0x8017c4b4",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SerializeValue__13CGameSettingsRb": "0x80170c7c",
+    "SerializeValue__13CGameSettingsRiUi": "0x80170c14",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Objectives.cpp",
+  "original_file_index": 1555
+}

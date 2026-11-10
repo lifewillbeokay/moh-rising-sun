@@ -1,0 +1,62 @@
+{
+  "id": "fepackage_connectobjectresources",
+  "source": "src/frontend/fepackage_connectobjectresources.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80051ed0",
+      "size": 372
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297f24",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "ConnectObjectResources__9FEPackage",
+      "address": "0x80051ed0",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "SetNumLibraryRefs__9FEPackageUl",
+      "address": "0x80051f24",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "FindLibraryReference__C9FEPackageUl",
+      "address": "0x80051ffc",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "ForAllObjects__9FEPackageR16FEObjectCallback": "0x800511a0",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.16FEObjectCallback": "0x802e1120",
+    "_vt.17ResourceConnector": "0x802e12b0",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326
+}

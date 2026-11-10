@@ -1,0 +1,46 @@
+{
+  "id": "feobj_setcurrentscript",
+  "source": "src/frontend/feobj_setcurrentscript.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800507b4",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCurrentScript__8FEObjectP8FEScript",
+      "address": "0x800507b4",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "FindResponse__C8FEObjectUl",
+      "address": "0x800507e0",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetupMoveToTracks__8FEObject": "0x8005045c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319
+}

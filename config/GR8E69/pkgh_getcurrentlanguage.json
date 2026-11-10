@@ -1,0 +1,82 @@
+{
+  "id": "pkgh_getcurrentlanguage",
+  "source": "src/frontend/pkgh_getcurrentlanguage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80188c8c",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b0f54",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCurrentLanguage__14PackageHandler",
+      "address": "0x80188c8c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetProfileNameOnScreen__14PackageHandleri",
+      "address": "0x80188c94",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Set2ProfileNamesOnScreen__14PackageHandler",
+      "address": "0x80188ce4",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "SetGroupString__14PackageHandlerP7FEGroupPCcPc",
+      "address": "0x80188d60",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "SetGroupString__14PackageHandlerUiUiP12FEWideString",
+      "address": "0x80188dc0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "SetGroupString__14PackageHandlerUiUiPCc",
+      "address": "0x80188e48",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindChild__C7FEGroupPCc": "0x80047b6c",
+    "FindChild__C7FEGroupUl": "0x80047b38",
+    "FindObjectByHash__9FEPackageUl": "0x80051274",
+    "GetNameFromSettings__13CGameSettingsi": "0x8016f5ac",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcT2": "0x8018769c",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "__as__12FEWideStringPCs": "0x80056a60",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605
+}

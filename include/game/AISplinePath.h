@@ -3,6 +3,7 @@
 #include "AIFilterGlobal.h"
 #include "BPD.h"
 #include "AIMovement.h"
+#include "LinkedList.h"
 // AI-assisted reconstruction from GR8E69; see docs/Paths.md.
 class CAISplinePathManager;
 class CAISplinePathModule;
@@ -63,22 +64,110 @@ public:
 // Observed prefix through the locomotion pointer at +0x20. Constructor and
 // traversal accesses agree; this is not the complete navigation class.
 class CAIObject;
-// Method-only view of an A* area node.
+#include "CLine2.h"
+#include "BPD.h"
+// One link from an area node to a neighbor (four bytes, from the stride of the link walks).
+struct BPDLinkEdge {
+    unsigned short nodeAndType; // The low 14 bits are the neighbor's node index.
+    unsigned char vertex0;      // +0x02; index into the owner's vertex indices.
+    unsigned char vertex1;      // +0x03
+    int NodeIndex() const { return nodeAndType & 0x3fff; }
+};
+// One splitting plane of an area BSP (24 bytes, from the stride).
+struct BPDPathFindingBSPBranch {
+    float a, b, c, d;
+    int front; // +0x10
+    int back;  // +0x14
+};
+// One BSP per network (twelve bytes, from the stride).
+struct BPDPathFindingBSP {
+    BPDPathFindingBSPBranch *branches;
+    int branchCount;
+    unsigned char network; // +0x08
+};
+extern PropVec3 *g_pAreaVertices;
+// A* area node. Sixteen bytes; the member names are inferred from the geometry functions.
 class CAreaPathNode {
 public:
-    void GetFurthestVertex(const CVector3 &, const CVector3 &, CVector3 *, bool) const;
+    float GetFurthestVertex(const CVector3 &, const CVector3 &, CVector3 *, bool) const;
     void BiasTowardCentroid(CVector3 *, float) const;
+    bool ContainsPoint(const CVector3 &) const;
+    void UpdateOutOfArea();
+    void ResetOutOfArea();
+    void MarkAsOutOfArea();
+    void MarkAsInArea();
+    bool GetEdgeVertices(CAreaPathNode *, CVector3 &, CVector3 &) const;
+    bool IsEdgeConnected(int) const;
+    CAreaPathNode *GetCloserLink(const CVector3 &) const;
+    CVector3 GetCentroid() const;
+    float GetClosestPointSquared(const CVector3 &, CVector3 *) const;
+    float GetClosestPosition(const CVector3 &, CVector3 &) const;
+    CAreaPathNode *LineIntersectsLinkEdges(const CLine2 &, CVector2 *, CAreaPathNode *) const;
+    int GetNextNode(CLine2 &, int) const;
+    bool LineEndsAtLinkEdge(const CLine2 &, CAreaPathNode *) const;
+    bool GetClosestPointOnBorder(const CVector3 &, CVector3 &) const;
+    bool LineIntersectsBorderEdges(const CLine2 &, CVector2 *) const;
+    class CAreaSearchNode *searchNode; // +0x00
+    unsigned char borderVertexCount; // +0x04
+    unsigned char linkCount;         // +0x05
+    unsigned char inArea;            // +0x06
+    unsigned char network;           // +0x07
+    unsigned short *vertexIndices;   // +0x08; borderVertexCount + linkCount entries.
+    BPDLinkEdge *links;                // +0x0c
 };
+class CAreaSearchNodeQueue;
+class CAreaSearchNode;
+class CAreaSearchNodeList;
+// Member offsets come from the path walk functions; the names are inferred.
 class CAIAreaPathFinding {
 public:
-    unsigned char unknown00[0x20];
-    CAILocomotion *locomotion;
+    static void ResetAStarVolumes();
+    unsigned char unknown00[4];
+    int positionValid;        // +0x04; set with onNetwork by Update.
+    int walkActive;           // +0x08
+    unsigned char unknown0c[0x14 - 0x0c];
+    CAreaPathNode *currentNode; // +0x14
+    unsigned char unknown18[0x1c - 0x18];
+    CAIPhysics *physics;      // +0x1c
+    CAILocomotion *locomotion; // +0x20
+    BSObject *scriptObject;   // +0x24
+    int onNetwork;            // +0x28
+    int currentVolume;        // +0x2c
+    int volumeCount;          // +0x30
+    unsigned char unknown34[0x40 - 0x34];
+    CVector3 closestPosition; // +0x40
+    CAIObject *targetObject;  // +0x50
+    unsigned char unknown54[0x70 - 0x54];
+    CVector3 destination;     // +0x70
+    int field80;              // +0x80
+    CLinkedListElement *currentPathNode; // +0x84
+    CLinkedList solutionPath; // +0x88
+    float commitTime;         // +0x94
+    int pathFinished;         // +0x98
+    unsigned char unknown9c[0xa4 - 0x9c];
+    int fieldA4;              // +0xa4
+    int fieldA8;              // +0xa8
+    int fieldAC;              // +0xac
+    unsigned char unknownb0[0xb4 - 0xb0];
+    int walkPhase;            // +0xb4
+    void SetupAStarPathWalkCommit();
+    void TrimSolutionNodeQueue(CAreaSearchNode *, CAreaSearchNodeList &);
+    void TeleportToNextPositionOnPath();
+    int GetNextWalkToPos(CVector3 &);
+    void ClearSearchNodeQueue(CAreaSearchNodeQueue &);
+    void ClearSearchNodeList(CAreaSearchNodeList &);
+    void CleanupAStarPathWalk();
     void StopAStarPathWalk();
+    float PathDistance() const;
     void UpdateOffAStarPosition();
     int StartAStarPathWalk(BSObject *, EAStarDestinationInfo);
     int StartAStarPathWalk(EAStarDestinationInfo);
     void EnterAStarVolume(int);
     void GetClosestPositionOnAStar(CVector3 *) const;
+    void FinishPath();
+    int GetWalkType();
+    void StopWalk();
+    static int WhichNetwork(const CVector3 &);
     static void RegisterAStarVolume(TriggerObject *, int);
     static void RegisterAStarLinkPoint(TriggerObject *, int, int, int);
     void ExitAStarVolume(int);
@@ -94,9 +183,24 @@ public:
 // no-argument class static without one (`f__1A`), and `_13AIPathFinding.g_iLastPathNodeUpdatedOutOfArea`
 // has local binding, which a class static data member cannot have.
 namespace AIPathFinding {
+void ResetAreaPathNodes();
+    BPDPathFindingBSPBranch *GetBSP(int);
+    void ImportAreaPathNodeNetwork(BPDHeader *);
+    CAreaPathNode *GetClosestPathNode(const CVector3 &, int);
+    CAreaPathNode *GetPathNodeByIndex(unsigned short);
+    unsigned short GetIndexByPathNode(CAreaPathNode *);
     bool IsPointOnNetwork(const CVector3 &);
     void UpdateAStarNodesOutOfArea();
 }
+namespace AreaPathBSP {
+    int GetCurrentNode(const CVector3 &, int);
+}
+extern CLine2 g_BorderLine;
+extern CAreaPathNode *g_pPathFindingAreas;
+extern int g_iNumPathFindingAreas;
+extern int g_iNumAreaVertices;
+extern BPDPathFindingBSP *g_pPathFindingBSPs;
+extern int g_iNumPathFindingBSP;
 // Prefix through the next-point vector at +0x20. The untouched bytes at
 // +0x18 and the complete allocation size remain unestablished.
 class CAISplinePathTraversal {

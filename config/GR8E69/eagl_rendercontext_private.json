@@ -1,0 +1,77 @@
+{
+  "id": "eagl_rendercontext_private",
+  "source": "src/eagl/eagl_rendercontext_private.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dcdf8",
+      "size": 380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bc8d0",
+      "size": 12
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q212EAGLInternal20RenderContextPrivate",
+      "address": "0x802ec220",
+      "size": 24,
+      "target_name": ".data"
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q24EAGL26RenderContextExtensionBase",
+      "address": "0x802ec268",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q212EAGLInternal20RenderContextPrivatePQ24EAGL13RenderContext",
+      "address": "0x801dcdf8",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "_._Q212EAGLInternal20RenderContextPrivate",
+      "address": "0x801dcea4",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24EAGL26RenderContextExtensionBase",
+      "address": "0x801dcf40",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetShape__CQ24EAGL3TAR": "0x801e0b64",
+    "MEM_free": "0x8020d2a8",
+    "VISetPostRetraceCallback": "0x8025f048",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "_Q212EAGLInternal20RenderContextPrivate.gVSyncCallbackRefCount": "0x802cdb3c",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q212EAGLInternal24RenderContextPrivateBase": "0x802ec250"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

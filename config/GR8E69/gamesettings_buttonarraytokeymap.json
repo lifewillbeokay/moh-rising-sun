@@ -1,0 +1,40 @@
+{
+  "id": "gamesettings_buttonarraytokeymap",
+  "source": "src/shell/gamesettings_buttonarraytokeymap.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016fd3c",
+      "size": 324
+    }
+  ],
+  "functions": [
+    {
+      "name": "ButtonArrayToKeymap__13CGameSettingsPsP6KEYMAP",
+      "address": "0x8016fd3c",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BindKeyToEvent__13CGameSettingsP6KEYMAPUsUs": "0x8016fcec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

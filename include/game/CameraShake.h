@@ -39,6 +39,7 @@ class CHeadsUpDisplay {
     unsigned char unknown_0[0x7cc];
     float field_7cc; // Reset from 0 to 1 by BIFunc_DetachPlayerFromProp.
     void AddHitDirection(unsigned int);
+    void SetTarget(const char *);
     void LetterboxTransition(float, _LetterboxTransitionStyle);
 };
 
@@ -236,11 +237,17 @@ struct BS_STRUCT_HitByBulletInfo_struct;
 struct SMPPlayerData;
 class CPlayerObject {
   public:
+    static void *operator new(unsigned int);
+    static void operator delete(void *);
     void SetPlayersMountedMGPositions(CMatrix *);
     // Member-only view of the target search at +0x1ca0; the class name is original,
     // member names and the inline's name are descriptive.
     class TargetFind {
       public:
+        void Enable(CPlayerObject *);
+        int AddTarget(ISceneNode *, CVector3 &, float, unsigned char);
+        void ChooseTarget();
+        void ClearTargets();
         unsigned char unknown_0[8];
         ObserverLinkBase link;   // +0x08
         unsigned char unknown_10[4];

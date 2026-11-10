@@ -1,0 +1,56 @@
+{
+  "id": "fekeynode_pool",
+  "source": "src/frontend/fekeynode_pool.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80048f5c",
+      "size": 528
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802974a4",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__9FEKeyNodeUi",
+      "address": "0x80048f5c",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "__dl__9FEKeyNodePv",
+      "address": "0x80049088",
+      "size": 228,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "RemHead__9FEMinList": "0x80049878",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "_9FEKeyNode.NodePool": "0x802ee5e8",
+    "_vt.9FEKeyNode": "0x802e11b0",
+    "_vt.9FEMinList": "0x802e1180",
+    "_vt.t10FEPoolNode2Z9FEKeyNodei256": "0x802e1198"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

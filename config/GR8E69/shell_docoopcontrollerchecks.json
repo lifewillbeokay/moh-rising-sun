@@ -1,0 +1,42 @@
+{
+  "id": "shell_docoopcontrollerchecks",
+  "source": "src/frontend/shell_docoopcontrollerchecks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018243c",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoCoopControllerChecks__12ShellManager",
+      "address": "0x8018243c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "ResetCoopJoinInfo__12ShellManagerSc",
+      "address": "0x80182440",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

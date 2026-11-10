@@ -1,0 +1,81 @@
+{
+  "id": "feslotpool",
+  "source": "src/frontend/feslotpool.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055a24",
+      "size": 1012
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802983e4",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocBlock__10FESlotNode",
+      "address": "0x80055a24",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "FreeBlock__10FESlotNodePUc",
+      "address": "0x80055ad0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Alloc__10FESlotPool",
+      "address": "0x80055b10",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "Free__10FESlotPoolPUc",
+      "address": "0x80055bf0",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "Alloc__11FEMultiPoolUl",
+      "address": "0x80055ca4",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "Free__11FEMultiPoolPUc",
+      "address": "0x80055d78",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "_vt.10FESlotNode": "0x802e1468",
+    "_vt.10FESlotPool": "0x802e1450",
+    "_vt.9FEMinList": "0x802e1180",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FESlotPool.cpp",
+  "original_file_index": 339
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ai_AreaPathVolumes",
+  "source": "src/ai/AreaPathVolumes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ebde0",
+      "size": 112
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a447c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetClosestPositionOnAStar__C18CAIAreaPathFindingP8CVector3",
+      "address": "0x800ebde0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "EnterAStarVolume__18CAIAreaPathFindingi",
+      "address": "0x800ebe20",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "ExitAStarVolume__18CAIAreaPathFindingi",
+      "address": "0x800ebe34",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

@@ -1,0 +1,50 @@
+{
+  "id": "gamesettings_restoreslotbackup",
+  "source": "src/shell/gamesettings_restoreslotbackup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801703b4",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "RestoreSlotBackup__13CGameSettings",
+      "address": "0x801703b4",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "RememberProfileDevices__13CGameSettings",
+      "address": "0x8017045c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "RestoreProfileDevices__13CGameSettings",
+      "address": "0x80170490",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

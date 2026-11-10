@@ -1,0 +1,56 @@
+{
+  "id": "ai_AreaPathDirect",
+  "source": "src/ai/AreaPathDirect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e8b58",
+      "size": 512
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a41f8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "DirectPath__FP13CAreaPathNodeR6CLine2",
+      "address": "0x800e8b58",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "ClipLineToBorderEdge__FP13CAreaPathNodeR8CVector3T1PP13CAreaPathNode",
+      "address": "0x800e8c14",
+      "size": 324,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ContainsPoint__C13CAreaPathNodeRC8CVector3": "0x800e7890",
+    "GetIndexByPathNode__13AIPathFindingP13CAreaPathNode": "0x800e7640",
+    "GetNextNode__C13CAreaPathNodeR6CLine2i": "0x800e8a28",
+    "GetPathNodeByIndex__13AIPathFindingUs": "0x800e762c",
+    "LineIntersectsBorderEdges__C13CAreaPathNodeRC6CLine2P8CVector2": "0x800e7ab8",
+    "LineIntersectsLinkEdges__C13CAreaPathNodeRC6CLine2P8CVector2P13CAreaPathNode": "0x800e7c20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

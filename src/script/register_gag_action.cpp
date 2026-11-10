@@ -2,6 +2,7 @@
 #include "ScriptBuiltins.h"
 #include "ScriptRuntime.h"
 #include "AIBehavior.h"
+#include "ScriptedGag.h"
 
 void BIFunc_RegisterGagAction(int **stack, void *) {
     int count = g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;

@@ -1,0 +1,54 @@
+{
+  "id": "fepackage_update",
+  "source": "src/frontend/fepackage_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80051be8",
+      "size": 428
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__9FEPackageP7FEnginel",
+      "address": "0x80051be8",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb",
+      "address": "0x80051c44",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "Callback__17ResourceConnectorP8FEObject",
+      "address": "0x80051d10",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ConnectListBoxResources__17ResourceConnectorP9FEListBox": "0x80051d94",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "UpdateObject__9FEPackageP8FEObjectl": "0x8005158c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326
+}

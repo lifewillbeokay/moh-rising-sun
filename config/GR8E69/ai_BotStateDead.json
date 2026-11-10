@@ -1,0 +1,68 @@
+{
+  "id": "ai_BotStateDead",
+  "source": "src/ai/BotStateDead.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80093188",
+      "size": 360
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029d870",
+      "size": 12
+    },
+    {
+      "name": ".data",
+      "address": "0x802c22b8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BS_Enter_Dead__10CBotObject",
+      "address": "0x80093188",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "BS_Dead__10CBotObject",
+      "address": "0x80093208",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "BS_Enter_Goto__10CBotObject",
+      "address": "0x800932b0",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ChangeState__10CBotObject9eBotStatePc": "0x80092c84",
+    "ClearBotData__10CBotObject": "0x8009733c",
+    "DropMPDumpObject__10CBotObject": "0x80098b3c",
+    "GetClock__10CBotObject": "0x800991dc",
+    "Respawn__10CBotObject": "0x8009631c",
+    "SetAIStatusVar__9CAIObject12aistatus_vari": "0x800dcc8c",
+    "SetMoveState__10CBotObject13eBotMoveState": "0x8009cff8",
+    "SetNewObjectivePos__10CBotObject": "0x8009586c",
+    "StopAStar__10CBotObject": "0x800993a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

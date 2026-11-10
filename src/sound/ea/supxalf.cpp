@@ -19,7 +19,7 @@ public:
     int Decode(float**, int);
     XAFSTATE GetState();
     void SetState(XAFSTATE*);
-    void Feed(void*, int, int);
+    int Feed(void*, int, int);
 
 private:
     char m_state[168];

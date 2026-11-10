@@ -18,16 +18,22 @@
   "sections": [
     {
       "name": ".text",
-      "address": "0x800a9574",
-      "size": 280
+      "address": "0x800a93a4",
+      "size": 744
     },
     {
       "name": ".rodata",
-      "address": "0x8029ec7c",
-      "size": 12
+      "address": "0x8029ec68",
+      "size": 32
     }
   ],
   "functions": [
+    {
+      "name": "ModifyMotionData__13CStaticObjectP10MotionData",
+      "address": "0x800a93a4",
+      "size": 464,
+      "binding": 1
+    },
     {
       "name": "TranslateFromScript__13CStaticObjectRC8CVector3T112EBSEventEnum",
       "address": "0x800a9574",
@@ -36,7 +42,8 @@
     }
   ],
   "externals": {
-    "CalculateMovementTime__13CStaticObjectRC8CVector3T1": "0x800a900c"
+    "CalculateMovementTime__13CStaticObjectRC8CVector3T1": "0x800a900c",
+    "sqrtf": "0x80270538"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],

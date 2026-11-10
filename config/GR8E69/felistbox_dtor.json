@@ -1,0 +1,48 @@
+{
+  "id": "felistbox_dtor",
+  "source": "src/frontend/felistbox_dtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049ab8",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._9FEListBox",
+      "address": "0x80049ab8",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Terminate__9FEListBox",
+      "address": "0x80049b00",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanupCells__9FEListBox": "0x8004a740",
+    "CleanupColumns__9FEListBox": "0x8004a6a0",
+    "CleanupRows__9FEListBox": "0x8004a6f0",
+    "_._8FEObject": "0x80050280",
+    "_vt.9FEListBox": "0x802e11f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

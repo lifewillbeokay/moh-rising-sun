@@ -1,0 +1,38 @@
+{
+  "id": "fengine_clearpackagemarkers",
+  "source": "src/frontend/fengine_clearpackagemarkers.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004ff4c",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "ClearPackageMarkers__7FEngine",
+      "address": "0x8004ff4c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

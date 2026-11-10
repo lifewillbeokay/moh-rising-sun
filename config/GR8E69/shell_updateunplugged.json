@@ -1,0 +1,76 @@
+{
+  "id": "shell_updateunplugged",
+  "source": "src/frontend/shell_updateunplugged.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017f8e4",
+      "size": 344
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateUnplugged__12ShellManager",
+      "address": "0x8017f8e4",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "Draw__12ShellManager",
+      "address": "0x8017f994",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "DrawUnplugged__12ShellManager",
+      "address": "0x8017f9cc",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetPackageData__12ShellManagerPCcPPUcRb",
+      "address": "0x8017f9d0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "LoadResources__12ShellManagerP9FEPackagelP17FEResourceRequest",
+      "address": "0x8017f9f4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "UnloadResources__12ShellManagerP9FEPackagelP17FEResourceRequest",
+      "address": "0x8017fa18",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DoCoopControllerChecks__12ShellManager": "0x8018243c",
+    "DoMPControllerChecks__12ShellManager": "0x80182178",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
+    "LoadPackage__11ShellLoaderPCcPPUcRb": "0x801831b4",
+    "LoadResources__11ShellLoaderP9FEPackagelP17FEResourceRequest": "0x8018307c",
+    "Render__7FEngine": "0x8004e990",
+    "SetBadControllerPort__13CInputManagerUc": "0x800d7348",
+    "UnloadResources__11ShellLoaderP9FEPackagelP17FEResourceRequest": "0x801831ac",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

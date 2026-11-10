@@ -1,0 +1,80 @@
+{
+  "id": "mtdecf_class",
+  "source": "src/sound/ea/mtdecf_class.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022baa8",
+      "size": 836
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfd70",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q23Snd10CMTBLKDecf",
+      "address": "0x8022baa8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Feed__Q23Snd10CMTBLKDecfPvii",
+      "address": "0x8022bad8",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "Decode__Q23Snd10CMTBLKDecfPPfi",
+      "address": "0x8022bb68",
+      "size": 544,
+      "binding": 1
+    },
+    {
+      "name": "GetState__Q23Snd10CMTBLKDecf",
+      "address": "0x8022bd88",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SetState__Q23Snd10CMTBLKDecfPQ23Snd8MTFSTATEi",
+      "address": "0x8022bdc8",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SetCodecVersion__Q23Snd10CMTBLKDecfi",
+      "address": "0x8022bde4",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "decodemut__3SndPQ23Snd15UTALKSTATE_CODA": "0x8022b680",
+    "initmut__Q23Snd10CMTBLKDecfPUcPQ23Snd15UTALKSTATE_CODAi": "0x8022b510",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mtdecf.cpp",
+  "original_file_index": 3292
+}

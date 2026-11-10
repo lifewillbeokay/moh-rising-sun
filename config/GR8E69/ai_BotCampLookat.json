@@ -1,0 +1,53 @@
+{
+  "id": "ai_BotCampLookat",
+  "source": "src/ai/BotCampLookat.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800957a8",
+      "size": 196
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dae8",
+      "size": 8
+    },
+    {
+      "name": ".data",
+      "address": "0x802c2360",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCampingLookat__10CBotObject",
+      "address": "0x800957a8",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetClock__10CBotObject": "0x800991dc",
+    "GetCurrentCampingPoint__10CBotObject": "0x800993f4",
+    "GetLookat__12CampingPointUc": "0x80091670",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "SetLookTarget__10CBotObjectRC8CVector3": "0x80099290",
+    "rand": "0x80265c98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

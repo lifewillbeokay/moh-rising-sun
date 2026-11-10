@@ -1,0 +1,50 @@
+{
+  "id": "pkgh_setscript",
+  "source": "src/frontend/pkgh_setscript.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80187d54",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetScript__14PackageHandlerP9FEPackagePCcT2",
+      "address": "0x80187d54",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetScript__14PackageHandlerP9FEPackageUlPCc",
+      "address": "0x80187dcc",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByHash__9FEPackageUl": "0x80051274",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605
+}

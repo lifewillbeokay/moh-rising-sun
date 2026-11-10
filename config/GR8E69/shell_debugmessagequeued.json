@@ -1,0 +1,51 @@
+{
+  "id": "shell_debugmessagequeued",
+  "source": "src/frontend/shell_debugmessagequeued.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018187c",
+      "size": 112
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae2ac",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "DebugMessageQueued__12ShellManagerUlP8FEObjectP9FEPackageT2Ul",
+      "address": "0x8018187c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "DebugMessageProcessed__12ShellManagerUlP8FEObjectT2P9FEPackageUl",
+      "address": "0x801818b0",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

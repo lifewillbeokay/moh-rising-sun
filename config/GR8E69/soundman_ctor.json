@@ -1,0 +1,76 @@
+{
+  "id": "soundman_ctor",
+  "source": "src/sound/SoundManLevel.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015c65c",
+      "size": 492
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa2dc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9cSoundMan",
+      "address": "0x8015c65c",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "InitLevel__9cSoundManPUcT1ii",
+      "address": "0x8015c720",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "LoadLevelStreamFile__9cSoundManPCc",
+      "address": "0x8015c790",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "RemoveLevelStreamFile__9cSoundMan",
+      "address": "0x8015c7fc",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_free": "0x801a8894",
+    "FILESYS_addbigsync": "0x80208c28",
+    "FILESYS_delbigsync": "0x80208c98",
+    "FILE_loadbigheader": "0x8020b810",
+    "LoadLevelBus__9cSoundManP14UberFileHeader": "0x8015c938",
+    "LoadLevelUbr__9cSoundManP14UberFileHeader": "0x8015c848",
+    "TLT_FileExists__FPCc": "0x801a9560",
+    "VerifyLevelBanks__9cSoundMan": "0x8015e100",
+    "__13SoundSchedule": "0x801595bc",
+    "__7BankMan": "0x8015fc7c",
+    "memset": "0x80266778",
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundMan.cpp",
+  "original_file_index": 1414
+}

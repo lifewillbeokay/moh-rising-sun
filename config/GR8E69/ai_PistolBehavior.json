@@ -1,0 +1,125 @@
+{
+  "id": "ai_PistolBehavior",
+  "source": "src/ai/PistolBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e5b20",
+      "size": 664
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a39e0",
+      "size": 20
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.15CPistolBehavior",
+      "address": "0x802e7e20",
+      "size": 128,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CPistolBehavior",
+      "address": "0x800e5b20",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "_._15CPistolBehavior",
+      "address": "0x800e5b78",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__15CPistolBehavior",
+      "address": "0x800e5ba8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__15CPistolBehavior",
+      "address": "0x800e5bb0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__15CPistolBehavior",
+      "address": "0x800e5bb8",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__15CPistolBehavior",
+      "address": "0x800e5c28",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__15CPistolBehaviorb",
+      "address": "0x800e5c94",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__15CPistolBehavior11ECapability",
+      "address": "0x800e5d20",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__15CPistolBehavior",
+      "address": "0x800e5d78",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponScript__15CPistolBehaviorP8BSObject",
+      "address": "0x800e5da0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__15CPistolBehavior",
+      "address": "0x800e5da8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__15CPistolBehavior",
+      "address": "0x800e5db0",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "ChooseSwordOrPistol__FP9CAIObject": "0x800e59c4",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "PistolBehavior.cpp",
+  "original_file_index": 1039
+}

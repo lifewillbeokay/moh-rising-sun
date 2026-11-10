@@ -1,0 +1,52 @@
+{
+  "id": "ai_CoverpointStopWalk",
+  "source": "src/ai/CoverpointStopWalk.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f2634",
+      "size": 196
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4ca0",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopCoverPointWalk__19CCoverpointBehavior",
+      "address": "0x800f2634",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ForceMoveTargetUpdate__19CCoverpointBehavior",
+      "address": "0x800f2644",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentObjectivePosition__13CAILocomotion": "0x800ef088",
+    "GetModifiedPosition__C11CCoverPointR8CVector3": "0x800e1c18"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

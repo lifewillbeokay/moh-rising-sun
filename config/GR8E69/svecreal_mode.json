@@ -1,0 +1,43 @@
+{
+  "id": "svecreal_mode",
+  "source": "src/sound/ea/svecreal_mode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802227e0",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "VectorToReal__Q23Snd6System",
+      "address": "0x802227e0",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDSYS_vectortoreal": "0x80226d28"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "svecreal.cpp",
+  "original_file_index": 3138
+}

@@ -1,0 +1,118 @@
+{
+  "id": "game_sys_memory_dwi",
+  "source": "src/game/sys_memory_dwi.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a85b0",
+      "size": 864
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b774c",
+      "size": 156
+    }
+  ],
+  "functions": [
+    {
+      "name": "sizeSmall__FPv",
+      "address": "0x801a85b0",
+      "size": 148,
+      "binding": 0
+    },
+    {
+      "name": "DWI_setclassid",
+      "address": "0x801a8644",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "DWI_setallocid",
+      "address": "0x801a8658",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "DWI_getallocid",
+      "address": "0x801a8664",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "DWI_alloc",
+      "address": "0x801a8670",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "DWI_allocalign",
+      "address": "0x801a8744",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "DWI_realloc",
+      "address": "0x801a87e4",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "DWI_free",
+      "address": "0x801a8894",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "DWI_charfill",
+      "address": "0x801a88d4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "DWI_intfill",
+      "address": "0x801a88f4",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MEM_allocalign": "0x8020d224",
+    "MEM_free": "0x8020d2a8",
+    "MEM_size": "0x8020d7c4",
+    "allocSmall__FPCcii": "0x801a83cc",
+    "freeSmall__FPv": "0x801a84e4",
+    "g_bMemInitialized": "0x802c7dc4",
+    "g_classid": "0x802c7dc8",
+    "g_memLabel": "0x802c7dc0",
+    "g_numSmallPools": "0x802cc024",
+    "g_smallPool": "0x803f557c",
+    "mallocinit": "0x801acddc",
+    "memcpy": "0x802665e8",
+    "memset": "0x80266778",
+    "printf": "0x8026374c"
+  },
+  "local_externals": [
+    "allocSmall__FPCcii",
+    "freeSmall__FPv",
+    "g_bMemInitialized",
+    "g_classid"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sys_memory.cpp",
+  "original_file_index": 2177
+}

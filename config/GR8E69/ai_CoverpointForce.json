@@ -1,0 +1,38 @@
+{
+  "id": "ai_CoverpointForce",
+  "source": "src/ai/CoverpointForce.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f1764",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "ForceToCoverPoint__19CCoverpointBehavior",
+      "address": "0x800f1764",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

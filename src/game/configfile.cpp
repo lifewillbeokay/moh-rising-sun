@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include "ConfigFile.h"
 
 extern "C" int strcasecmp(const char *, const char *);
 extern "C" int strncasecmp(const char *, const char *, size_t);
@@ -10,29 +11,6 @@ extern "C" int strncasecmp(const char *, const char *, size_t);
 void *TLT_LoadFileNormal(const char *, int *, int);
 void TLT_CloseFile(void *);
 void DebugMsg(const char *, ...);
-
-struct CConfigSection {
-    CConfigSection() : name(0), start(0), end(0) {}
-    char *name;
-    char *start;
-    char *end;
-};
-
-class CConfigFile {
-public:
-    CConfigFile(const char *fileName);
-    ~CConfigFile();
-    int SetSection(const char *name);
-    char *GetVar(const char *key);
-    int AsInt(const char *key, int &value);
-    int AsBool(const char *key, bool &value);
-    int AsString(const char *key, char *buffer, int size);
-
-    CConfigSection sections[64];
-    int count;
-    CConfigSection *current;
-    char *data;
-};
 
 static char *SkipToEOL(char *p) {
     if (p) {

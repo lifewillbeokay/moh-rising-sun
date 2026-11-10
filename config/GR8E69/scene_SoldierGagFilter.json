@@ -1,0 +1,77 @@
+{
+  "id": "scene_SoldierGagFilter",
+  "source": "src/scene/SoldierGagFilter.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c2788",
+      "size": 744
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ff24",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SaveGagState__14CSoldierObject",
+      "address": "0x800c2788",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "IsInAnyOtherCompartment__14CSoldierObjecti",
+      "address": "0x800c2854",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "EvaluateScript__14CSoldierObjectPCcUiT1",
+      "address": "0x800c2928",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "LipSyncFilterInit__14CSoldierObjectPvii",
+      "address": "0x800c2948",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "LipSyncFilterRestore__14CSoldierObjectPv",
+      "address": "0x800c2a0c",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "DebugMsg__FPCce": "0x80279094",
+    "LUAEvaluateState__FPvPCciT1": "0x801a764c",
+    "Test__10CCollision": "0x80134084",
+    "_._10CCollision": "0x80133d10",
+    "__10CCollision": "0x80133bd4",
+    "g_lipSyncSoldier": "0x80306df0",
+    "g_nextLipSyncSoldier": "0x802c2644",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

@@ -1,0 +1,45 @@
+{
+  "id": "ai_PathWalkCommit",
+  "source": "src/ai/PathWalkCommit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e9ecc",
+      "size": 56
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4420",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetupAStarPathWalkCommit__18CAIAreaPathFinding",
+      "address": "0x800e9ecc",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_aigAIFilterGlobalObject": "0x80309bfc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

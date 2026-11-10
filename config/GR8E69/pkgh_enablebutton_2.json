@@ -1,0 +1,54 @@
+{
+  "id": "pkgh_enablebutton_2",
+  "source": "src/frontend/pkgh_enablebutton_2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801878cc",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b08ec",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableButton__14PackageHandlerP9FEPackageUl",
+      "address": "0x801878cc",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "DisableButton__14PackageHandlerP9FEPackageUl",
+      "address": "0x8018792c",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "DisableButton__14PackageHandlerP8FEObject": "0x801877fc",
+    "EnableButton__14PackageHandlerP8FEObject": "0x801877ec",
+    "FindObjectByHash__9FEPackageUl": "0x80051274"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605
+}

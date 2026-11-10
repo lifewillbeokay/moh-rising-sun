@@ -1,0 +1,43 @@
+{
+  "id": "gamesettings_initcheatsfromoptions",
+  "source": "src/shell/gamesettings_initcheatsfromoptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016f804",
+      "size": 856
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitCheatsFromOptions__13CGameSettings",
+      "address": "0x8016f804",
+      "size": 856,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "HasCheat__C13CGameSettingsi": "0x80171640",
+    "IsCheatActive__C13CGameSettingsi": "0x8017169c",
+    "g_GameSettings": "0x802f80c8",
+    "g_cheats": "0x802f98e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

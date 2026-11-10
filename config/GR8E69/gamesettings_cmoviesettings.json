@@ -1,0 +1,190 @@
+{
+  "id": "gamesettings_cmoviesettings",
+  "source": "src/shell/gamesettings_cmoviesettings.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016cec0",
+      "size": 3076
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ac0f8",
+      "size": 664
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CMovieSettings",
+      "address": "0x8016cec0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Reset__14CMovieSettings",
+      "address": "0x8016cec4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "Load__14CMovieSettingsR11CConfigFileii",
+      "address": "0x8016cf00",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "LoadSection__14CMovieSettingsR11CConfigFilePCc",
+      "address": "0x8016cfb4",
+      "size": 592,
+      "binding": 1
+    },
+    {
+      "name": "__13CGameSettings",
+      "address": "0x8016d204",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "PerformTotalReset__13CGameSettingsPCc",
+      "address": "0x8016d29c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "PerformTotalReset__13CGameSettings",
+      "address": "0x8016d2dc",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "Init__13CGameSettings",
+      "address": "0x8016d3c8",
+      "size": 912,
+      "binding": 1
+    },
+    {
+      "name": "InvalidateSlotBackup__13CGameSettings",
+      "address": "0x8016d758",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "PerformLevelReset__13CGameSettings",
+      "address": "0x8016d764",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "SetPrevMissionAndLevel__13CGameSettingsUiUi",
+      "address": "0x8016d82c",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "SetNextMissionAndLevel__13CGameSettingsUiUii",
+      "address": "0x8016d8d4",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetCurrentMissionAndLevel__13CGameSettingsUiUi",
+      "address": "0x8016d8f4",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "Set_Language__13CGameSettings10ELanguages",
+      "address": "0x8016d910",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "ResetCurrentLevelStats__13CGameSettings",
+      "address": "0x8016d9ac",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Set_shotsFired__13CGameSettingsUib",
+      "address": "0x8016d9f4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_hits__13CGameSettingsUib",
+      "address": "0x8016da1c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_hitsTaken__13CGameSettingsUib",
+      "address": "0x8016da44",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_enemiesKilled__13CGameSettingsUib",
+      "address": "0x8016da6c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Set_shotLocation__13CGameSettingsUi14EShotLocationsb",
+      "address": "0x8016da94",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AsBool__11CConfigFilePCcRb": "0x801a8e04",
+    "AsInt__11CConfigFilePCcRi": "0x801a8dbc",
+    "AsString__11CConfigFilePCcPci": "0x801a8e6c",
+    "CopyNameIntoSettings__13CGameSettingsPCci": "0x8016f560",
+    "CurrentLevelIsShell__C13CGameSettings": "0x8016fcc0",
+    "GameData__9MohLoader": "0x80059434",
+    "GameSettingReserve": "0x321f8",
+    "GetCurrentSavePointID__C13CGameSettings": "0x80171160",
+    "InitControllerFromOptions__13CGameSettingsi": "0x8016f61c",
+    "InitMovies__12ShellManager": "0x801819e8",
+    "InitializeFinishedLevelData__13CGameSettingsi": "0x8016dda4",
+    "Instance__9MohLoader": "0x80059414",
+    "LevelReset__9SSaveData": "0x8016cc64",
+    "LoadData__13CGameSettings": "0x8016f47c",
+    "OSGetLanguage": "0x802598dc",
+    "ResetLevelTimer__13CGameSettings": "0x8016ea6c",
+    "Reset__12SPlayerStats": "0x8016caa4",
+    "SetSection__11CConfigFilePCc": "0x801a8c98",
+    "SetSkuType__13CGameSettingsR11CConfigFile": "0x80171174",
+    "SetUpButtonConfig__13CGameSettingsiPs": "0x8016fe80",
+    "TotalReset__17SCoreGameSettings": "0x8016cd10",
+    "UnlockLevel__13CGameSettingsib": "0x80171440",
+    "_._11CConfigFile": "0x801a8c4c",
+    "__11CConfigFilePCc": "0x801a8aac",
+    "__9SSaveData": "0x8016cb10",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_bTeamDM": "0x802c1b34",
+    "printf": "0x8026374c",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

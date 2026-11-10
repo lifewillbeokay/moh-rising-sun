@@ -1,0 +1,71 @@
+{
+  "id": "gba_object_list",
+  "source": "src/game/gba_object_list.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800583f4",
+      "size": 216
+    }
+  ],
+  "functions": [
+    {
+      "name": "CalcCrc__FUlUl",
+      "address": "0x800583f4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "ApplyXScaling__Fi",
+      "address": "0x80058444",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ApplyYScaling__Fi",
+      "address": "0x8005844c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AddObjectToList__Fiiiii",
+      "address": "0x80058454",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "InitObjectList__Fv",
+      "address": "0x80058494",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "ObjectList_SetCurrentGBAMap__Fi",
+      "address": "0x800584bc",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GameObjects": "0x802f3fe8",
+    "gCurrentMapNumber": "0x802f43ec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ObjectList.cpp",
+  "original_file_index": 367
+}

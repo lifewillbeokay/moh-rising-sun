@@ -1,0 +1,155 @@
+{
+  "id": "particledef_mesh",
+  "source": "src/particles/particledef_mesh.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006b824",
+      "size": 2380
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a708",
+      "size": 84
+    }
+  ],
+  "functions": [
+    {
+      "name": "__16CMeshParticleDef",
+      "address": "0x8006b824",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._16CMeshParticleDef",
+      "address": "0x8006b860",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CMeshParticleDefP24LevelFileContentsStruct_",
+      "address": "0x8006b8d4",
+      "size": 716,
+      "binding": 1
+    },
+    {
+      "name": "IsValid__16CMeshParticleDef",
+      "address": "0x8006bba0",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetSystemLife__16CMeshParticleDefff",
+      "address": "0x8006bbb8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "SetParticleLife__16CMeshParticleDefff",
+      "address": "0x8006bc18",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "SetEmission__16CMeshParticleDefff",
+      "address": "0x8006bc78",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "SetStartPos__16CMeshParticleDeffff",
+      "address": "0x8006bccc",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetStartBox__16CMeshParticleDeffff",
+      "address": "0x8006bd00",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "SetStartDir__16CMeshParticleDefffff",
+      "address": "0x8006bd6c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetStartSpeed__16CMeshParticleDefff",
+      "address": "0x8006bdb0",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetAccel__16CMeshParticleDefffff",
+      "address": "0x8006bdd4",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "SetYaw__16CMeshParticleDefffff",
+      "address": "0x8006be48",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetPitch__16CMeshParticleDefffff",
+      "address": "0x8006be8c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetRoll__16CMeshParticleDefffff",
+      "address": "0x8006bed0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetScale__16CMeshParticleDefffff",
+      "address": "0x8006bf14",
+      "size": 180,
+      "binding": 1
+    },
+    {
+      "name": "SetStartColor__16CMeshParticleDefffff",
+      "address": "0x8006bfc8",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "SetEndColor__16CMeshParticleDefffff",
+      "address": "0x8006c09c",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Init__12CParticleDefP24LevelFileContentsStruct_": "0x8006b334",
+    "TLT_LoadFromRepository__FPCcPiPb": "0x801a9c88",
+    "_._12CParticleDef": "0x8006b300",
+    "__11CStaticMeshP10StaticMeshb": "0x8019ed98",
+    "__12CParticleDef": "0x8006b2ec",
+    "_vt.16CMeshParticleDef": "0x802e2600"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particledef.cpp",
+  "original_file_index": 504
+}

@@ -1,0 +1,58 @@
+{
+  "id": "scene_SoldierAimClients",
+  "source": "src/scene/SoldierAimClients.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bb104",
+      "size": 348
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f7a4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetTMLocalToWorld__CQ214CSoldierObject17AimModifierClientRQ24EAGL9Transform",
+      "address": "0x800bb104",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetTarget__CQ214CSoldierObject9AimClientR6COORD3",
+      "address": "0x800bb13c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "GetTarget__CQ214CSoldierObject12LookAtClientR6COORD3",
+      "address": "0x800bb1ac",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

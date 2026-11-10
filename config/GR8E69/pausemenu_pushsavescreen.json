@@ -1,0 +1,48 @@
+{
+  "id": "pausemenu_pushsavescreen",
+  "source": "src/ui/pausemenu_pushsavescreen.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017ee94",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "PushSaveScreen__10CPauseMenu",
+      "address": "0x8017ee94",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "BeginSaving__10CPauseMenu",
+      "address": "0x8017ef30",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Push__21HandlerSaveSlotSelect": "0x8019aac8",
+    "Reset__10CPauseMenuPCcb": "0x8017e090",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_pTriggeringPlayer": "0x802c4760"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

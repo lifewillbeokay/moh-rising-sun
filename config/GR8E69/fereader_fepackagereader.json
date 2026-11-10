@@ -1,0 +1,52 @@
+{
+  "id": "fereader_fepackagereader",
+  "source": "src/frontend/fereader_fepackagereader.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800521d8",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15FEPackageReader",
+      "address": "0x800521d8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "_._15FEPackageReader",
+      "address": "0x80052208",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Reset__15FEPackageReader",
+      "address": "0x80052230",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331
+}

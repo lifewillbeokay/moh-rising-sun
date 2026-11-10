@@ -1,0 +1,87 @@
+{
+  "id": "soundman_streams",
+  "source": "src/sound/SoundManStreams.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015d550",
+      "size": 940
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa2ec",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "SelectGroupEntry__9cSoundManPii",
+      "address": "0x8015d550",
+      "size": 200,
+      "binding": 1
+    },
+    {
+      "name": "GetSound__9cSoundManR14SoundEntryBankUi",
+      "address": "0x8015d618",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "InitStreams__9cSoundManPUcii",
+      "address": "0x8015d6b8",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownStreams__9cSoundMan",
+      "address": "0x8015d774",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "PurgeStreams__9cSoundMan",
+      "address": "0x8015d7f8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeStream__9cSoundMan",
+      "address": "0x8015d858",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetBankHandle__7BankManR14SoundEntryBank": "0x8015fe4c",
+    "MathFunRandomI64__Fxx": "0x801339dc",
+    "ResolveSlotNum__14SoundEntryBank": "0x8015be98",
+    "SNDSTRM_create": "0x80220674",
+    "SNDSTRM_destroy": "0x8022069c",
+    "SNDSTRM_purge": "0x8022075c",
+    "SNDSTRM_status": "0x80220d84",
+    "SNDplaysetdef": "0x8021f44c",
+    "SearchForAlias__9cSoundManUi": "0x8015cfc0",
+    "SetSoundEntry__10SoundEntryPUcP9ColumnMapi": "0x8015b45c",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundMan.cpp",
+  "original_file_index": 1414
+}

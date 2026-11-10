@@ -20,6 +20,7 @@ enum EScriptCollisionType { ScriptCollisionTypeUnknown = 0 };
 EClsnId GetCollisionIDFromScriptCollisionType(EScriptCollisionType, ETeam);
 // Original enum tag; its members are unknown.
 enum EFireMethod { FireMethodUnknown = 0 };
+enum EExpressionType { ExpressionNone = -1 }; // Named by CSoldierObject::SetExpression's symbol; members inferred.
 
 // Member-only views of scene-object classes reached through the ISceneNode
 // casts. Each view starts at the ISceneNode subobject (the casts return it
@@ -66,12 +67,19 @@ struct MotionFrame {
 // Method-only view; the storage it occupies in an object is not established.
 class CObjectFadeManager {
   public:
+    CObjectFadeManager();
     void StartFadeOut(float, float);
     void StartFadeIn(float, float);
     float FadeValue() const;
     int AreFading();
     void Update(float);
     int HalfDone();
+    float GetShadowAlphaScale();
+
+    int state;   // 0 idle, 1 fading in, 2 fading out.
+    float time;  // +0x04
+    float duration;
+    float delay; // +0x0c: fraction of the duration before the fade starts.
 };
 class CStaticObject {
   public:
@@ -251,8 +259,7 @@ class CStaticObject {
     unsigned char unknown_2ac[0x2b0 - 0x2ac];
     CVector3 attachedLightOffset; // +0x2b0
     CLightVolumeManager lightVolumes; // +0x2c0
-    CObjectFadeManager fade; // +0x2dc; sixteen bytes up to the next member.
-    unsigned char unknown_2dd[0x2ec - 0x2dd];
+    CObjectFadeManager fade; // +0x2dc
     float destructionTimer; // +0x2ec; meaning inferred from the MarkForDestruction call.
 };
 
@@ -472,6 +479,7 @@ class CAnimObject {
 class CAISoldierObject;
 class CSoldierObject {
   public:
+    static void InitClass();
     // A short list reset by clearing the count at +8; the name is descriptive.
     struct VolumeList {
         unsigned char unknown_0[8];
@@ -519,6 +527,25 @@ class CSoldierObject {
     const CSoldierObject *AsSoldierObject() const;
     void Draw(CDrawContext &);
     void RemoveWeapons();
+    // Each client holds its soldier at +4; only the symbols' methods are declared.
+    class AimModifierClient {
+      public:
+        void GetTMLocalToWorld(EAGL::Transform &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
+    class AimClient {
+      public:
+        void GetTarget(COORD3 &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
+    class LookAtClient {
+      public:
+        void GetTarget(COORD3 &) const;
+        unsigned char unknown_0[4];
+        CSoldierObject *soldier; // +4
+    };
     // Original nested enum tag; members are descriptive.
     enum Partition { PartitionNone = 0, Partition1 = 1, Partition2 = 2, Partition3 = 3 };
     unsigned char unknown_0[0x120];
@@ -544,7 +571,11 @@ class CSoldierObject {
     int canBePushed;        // +0xb14
     unsigned char unknown_b18[8];
     CMatrix defaultEmitterMatrix; // +0xb20
-    unsigned char unknown_b60[0xb80 - 0xb60];
+    CVector3 upperTranslation; // +0xb60; set by SetUpperTranslation.
+    float upperXAngleMin;   // +0xb70; the second argument of SetUpperXAngleDifference goes to +0xb74; descriptive.
+    float upperXAngleMax;   // +0xb74
+    float upperZAngleMin;   // +0xb78; descriptive.
+    float upperZAngleMax;   // +0xb7c
     float moveBlend;        // +0xb80; descriptive.
     CWeapon *weapons[1];    // +0xb84; slot table, indexed by slot number (extent unknown).
     unsigned char unknown_b88[0xba0 - 0xb88];
@@ -554,7 +585,8 @@ class CSoldierObject {
         const CMatrix *matrix;
         unsigned char unknown_8[8];
         CMatrix inverse; // +0x10
-        unsigned char unknown_50[8];
+        const char *name; // +0x50; set by GetAttachPoint.
+        unsigned char unknown_54[4];
         int active;      // +0x58
         int keepObject;  // +0x5c
         int hasInverse;  // +0x60
@@ -588,7 +620,8 @@ class CSoldierObject {
     float blinkCloseTime;   // +0xfa8
     float blinkHoldTime;    // +0xfac
     float blinkOpenTime;    // +0xfb0
-    unsigned char unknown_fb4[0xfc4 - 0xfb4];
+    unsigned char unknown_fb4[4];
+    float blinkPhaseEnd[3]; // +0xfb8; running totals of the open, close and hold times.
     int faceAnimationPending; // +0xfc4
     unsigned short faceAnimationState; // +0xfc8
     unsigned char unknown_fca[0xfd0 - 0xfca];
@@ -621,25 +654,53 @@ class CSoldierObject {
     unsigned char headTrackModifier[0x157c - 0x1410]; // +0x1410; first bytes an AimModifier. Extent bounded.
     int turnAnglePending;   // +0x157c
     float turnAngle;        // +0x1580
-    unsigned char unknown_1584[0x1594 - 0x1584];
+    int savedGagState[3];   // +0x1584; filled by SaveGagState from the choreographer client.
+    float savedGagTime;     // +0x1590
     int currentGag;         // +0x1594
     int currentGagType;     // +0x1598
-    unsigned char unknown_159c[0x15a8 - 0x159c];
+    float lipSyncSum;       // +0x159c; absolute sample values since the last update.
+    float lipSyncSamples;   // +0x15a0; samples since the last update.
+    int flagTeam;           // +0x15a4; -1 when the soldier carries no flag.
     CAISoldierObject *aiObject; // +0x15a8
-    unsigned char unknown_15ac[0x15c4 - 0x15ac];
+    // Two state-done records like CAnimObject's stateTask/stateValue/stateOwner: one for the
+    // lower partition and one for the upper.
+    struct PartitionState {
+        int task;     // passed to SetState by address
+        int value;
+        CSoldierObject *owner;
+    };
+    PartitionState lowerState; // +0x15ac
+    PartitionState upperState; // +0x15b8
     unsigned char lipsyncMutex[0x15e0 - 0x15c4]; // +0x15c4; passed to MUTEX_lock.
     float lipsyncBlendWeight; // +0x15e0
     unsigned char unknown_15e4[0x15e8 - 0x15e4];
     int japanese;           // +0x15e8; set by BIFunc_SetJapanese.
-    unsigned char unknown_15ec[0x1c54 - 0x15ec];
+    unsigned char lipSyncFilterDef[0x1c54 - 0x15ec]; // +0x15ec; returned by address. Extent bounded.
     float reloadTimer;      // +0x1c54; reset to -1 by BIFunc_BotDoneReloading.
     void SetHeadTrans(bool);
     CWeapon *GetCurrentWeapon() const;
+    CWeapon *GetWeapon(int) const;
+    int GetCurrentWeaponType() const;
+    bool IsCurrentWeaponReloading() const;
+    void SetExpression(EExpressionType, float);
+    void SetBlink(int);
     void SetUpperTranslation(const CVector3 &);
     void SetUpperXAngleDifference(float, float);
     void SetUpperZAngleDifference(float, float);
     int SetFaceAnimationState(unsigned short, int);
     static unsigned char m_partitionLower[0x30], m_partitionUpper[0x30];
+    void SetLipsynchBlendWeight(float);
+    int ShouldDrawFlag(CDrawContext &);
+    void *GetLipSyncFilterDef();
+    static int LipSyncFilterUpdate(void *, int, void *, void *, int);
+    static void LipSyncFilterInit(void *, int, int);
+    static void LipSyncFilterRestore(void *);
+    int EvaluateScript(const char *, unsigned int, const char *);
+    void UpdateCollisionVolumes();
+    int Constrain(float);
+    void UpdateAnimation(float);
+    int SetAnimationState(const char *, int);
+    int SetAnimationState(const char *, EALA::Task *);
     void SetHeadTrackPlayer(bool);
     void EnableSkeletalPartition(Partition);
     void DisableSkeletalPartition(Partition);
@@ -655,6 +716,7 @@ class CSoldierObject {
     void EjectHelmet(CVector3 &);
     int IsInAnyOtherCompartment(int);
     void FireCurrentWeapon(float, EFireMethod);
+    int FireWeapon(int, const CVector3 &, const CVector3 &, float, bool);
 };
 
 // Method-only view of a hierarchy object.
@@ -751,8 +813,13 @@ class CHierObject : public CStaticObject {
 // Forwards to an owned animated object; the pointer is at +0xb40. Original class, member-only view.
 class CHierAnimObject : public CHierObject {
   public:
+    class StateDone;
     void Init(CHierObject *, int, int, int, CVector3 &, CAnimObject *);
-    void AttachAnimatedObject();
+    int AttachAnimatedObject();
+    int SetAnimationState(const char *, int);
+    int FindAttachNode(int, CMatrix *);
+    CAnimObject *AsAnimObject();
+    const CAnimObject *AsAnimObject() const;
     void CleanUp();
     void Draw(CDrawContext &);
     IVolume *GetWorldBoundingVolume(ISceneNode::EVolumeType) const;
@@ -761,6 +828,9 @@ class CHierAnimObject : public CHierObject {
     void OnCollision(const CCollision &);
     CVector3 GetWorldLinearVelocity() const;
     CAnimObject *animObject; // +0xb40
+    unsigned char unknown_b44[0xb50 - 0xb44];
+    CMatrix localTransform; // +0xb50
+    unsigned char doneState[12]; // +0xb90: a StateDone.
 };
 
 class TriggerObject;
@@ -805,10 +875,22 @@ class CFader {
 };
 
 // Static motion-blur control.
-class MotionBlur {
-  public:
-    static void SetFrameBlur(float, float, float, float);
-};
+namespace MotionBlur {
+void SetFrameBlur(float, float, float, float);
+void StopFrameBlur();
+void Update(float);
+void Pause();
+extern float gPrevAmount;
+extern float gCurrentAmount;
+extern float gTransitionTimer;
+extern float gDeltaAmount;
+extern float gAmount;
+extern float gRampIn;
+extern float gRampOut;
+extern float gDuration;
+extern int gState;
+extern int gPaused;
+}
 
 // Virtual-interface view of the animated-object tables (slots 89-113 after the
 // IMovingSceneNode slots), in the order of the original CSoldierObject table.
@@ -901,6 +983,7 @@ class CAITankObject;
 class CAIDoodad;
 class CTankObject : public CHierObject {
   public:
+    void CommonInit();
     void InitAI();
     void CleanUp();
     void BeginUpdate(float);

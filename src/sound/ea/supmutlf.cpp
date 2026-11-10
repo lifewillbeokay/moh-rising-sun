@@ -20,7 +20,7 @@ public:
     MTFSTATE GetState();
     void SetState(MTFSTATE*, int);
     void SetCodecVersion(int);
-    void Feed(void*, int, int);
+    int Feed(void*, int, int);
 
 private:
     char m_state[3432];

@@ -1,0 +1,62 @@
+{
+  "id": "fengine_processlistboxresponses",
+  "source": "src/frontend/fengine_processlistboxresponses.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004f470",
+      "size": 592
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessListBoxResponses__7FEngineP8FEObjectP9FEPackageUl",
+      "address": "0x8004f470",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "ProcessCodeListBoxResponses__7FEngineP8FEObjectP9FEPackageUl",
+      "address": "0x8004f51c",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "ProcessObjectMessage__7FEngineP8FEObjectP9FEPackageUlUl",
+      "address": "0x8004f5c8",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "ProcessGlobalMessage__7FEngineP9FEPackageUlUl",
+      "address": "0x8004f668",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindResponse__9FEPackageUl": "0x800510d4",
+    "FindResponse__C8FEObjectUl": "0x800507e0",
+    "ProcessResponses__7FEngineP17FEMessageResponseP8FEObjectP9FEPackageUl": "0x8004f6c0",
+    "ScrollSelection__13FECodeListBoxll": "0x80046830",
+    "ScrollSelection__9FEListBoxll": "0x80049ff4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

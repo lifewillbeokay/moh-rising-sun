@@ -1,0 +1,121 @@
+{
+  "id": "fe_fewidestring",
+  "source": "src/frontend/fe_fewidestring.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800568ec",
+      "size": 1208
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80298960",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "__12FEWideString",
+      "address": "0x800568ec",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "__12FEWideStringPCs",
+      "address": "0x8005692c",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "__12FEWideStringRC12FEWideString",
+      "address": "0x80056974",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "_._12FEWideString",
+      "address": "0x800569bc",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "__as__12FEWideStringRC12FEWideString",
+      "address": "0x80056a08",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "__as__12FEWideStringPCs",
+      "address": "0x80056a60",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "__as__12FEWideStringPCc",
+      "address": "0x80056ab8",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "Length__C12FEWideString",
+      "address": "0x80056b40",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetLength__12FEWideStringUl",
+      "address": "0x80056b64",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "Convert__C12FEWideStringPc",
+      "address": "0x80056bd8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "AllocateString__12FEWideStringUl",
+      "address": "0x80056c50",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "ConvertFromSpecial__12FEWideStringPc",
+      "address": "0x80056c8c",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CopyString__H1Zs_PsPCX01_v": "0x80277f18",
+    "DWI_alloc": "0x801a8670",
+    "GenerateEscapeSequence__FPcPCcUl": "0x8005682c",
+    "GetStringLength__FPCs": "0x800568b8",
+    "SpecialColorCharacters": "0x802c1830",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0",
+    "strlen": "0x80266b70"
+  },
+  "local_externals": [
+    "GenerateEscapeSequence__FPcPCcUl"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEWideString.cpp",
+  "original_file_index": 354
+}

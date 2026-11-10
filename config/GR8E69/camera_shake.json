@@ -1,0 +1,71 @@
+{
+  "id": "camera_shake",
+  "source": "src/player/CameraShake.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b8c7c",
+      "size": 800
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f478",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q213CPlayerObject12CCameraShake",
+      "address": "0x800b8c7c",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetShake__Q213CPlayerObject12CCameraShakeffff",
+      "address": "0x800b8cb4",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "SetShake__Q213CPlayerObject12CCameraShakeff",
+      "address": "0x800b8de8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Evaluate__Q213CPlayerObject12CCameraShakeRfT1",
+      "address": "0x800b8e18",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "Update__Q213CPlayerObject12CCameraShakef",
+      "address": "0x800b8ed8",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "_vt.Q213CPlayerObject12CCameraShake": "0x802e5030",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

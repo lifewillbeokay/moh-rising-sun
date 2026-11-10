@@ -1,0 +1,45 @@
+{
+  "id": "fengine_checkmoviedemoscreen",
+  "source": "src/frontend/fengine_checkmoviedemoscreen.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d480",
+      "size": 108
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297bd0",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckMovieDemoScreen__7FEnginePc",
+      "address": "0x8004d480",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "strcmp": "0x802669b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

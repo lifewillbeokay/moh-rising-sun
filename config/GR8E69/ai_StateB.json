@@ -1,0 +1,72 @@
+{
+  "id": "ai_StateB",
+  "source": "src/eala/StateB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80084c80",
+      "size": 1624
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029b92c",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "Cache__Q34EALA9Character5StateUi",
+      "address": "0x80084c80",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "EvalSubstate__Q34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x80084d18",
+      "size": 648,
+      "binding": 1
+    },
+    {
+      "name": "GetSubstateIndex__Q34EALA9Character5StatePCc",
+      "address": "0x80084fa0",
+      "size": 524,
+      "binding": 1
+    },
+    {
+      "name": "FindAuthoredTransition__Q34EALA9Character5StatePQ34EALA9Character4TaskUiUi",
+      "address": "0x800851ac",
+      "size": 300,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Alloc__Q34EALA9Character9AnimationUiPQ28EAGLAnim8AnimBank": "0x8007eccc",
+    "DebugMsg__FPCce": "0x80279094",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__Q24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcPCcRCQ24_STLt9allocator1Zc": "0x8027e2bc",
+    "__builtin_delete": "0x801a8990",
+    "memcmp": "0x80266558",
+    "printf": "0x8026374c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "State.cpp",
+  "original_file_index": 592
+}

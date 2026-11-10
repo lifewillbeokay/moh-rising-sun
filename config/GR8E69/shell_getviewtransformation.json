@@ -1,0 +1,40 @@
+{
+  "id": "shell_getviewtransformation",
+  "source": "src/frontend/shell_getviewtransformation.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018114c",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetViewTransformation__12ShellManagerP9FEMatrix4",
+      "address": "0x8018114c",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Identify__9FEMatrix4": "0x8004bb2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

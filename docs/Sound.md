@@ -484,3 +484,57 @@ with it. The name also belongs to a different function near `0x801b1448`.
 reconstructed here: `Init`, `GetFirstFrame` and `GetRCMPChunk`, which have small differences, and `GetFrame`, whose code
 matches but whose `.rodata` holds a second, unreferenced copy of the 2^31 literal at `0x802b8560`. `CHUNK` has an empty
 inline destructor: `delete chunk` tests for null, which it does not for a class without one.
+
+## Sound busses and event destructors
+
+`cSoundBuss` records are 216 bytes: the free list threads `g_AllBusses` (32 records) through `+0`,
+with eight 24-byte events from `+4`. The clock at `+208` advances on each update, and when it passes
+the current event's time the buss moves on or stops and takes that event's level as its volume. Member
+names in [`SoundBuss.h`](../include/game/SoundBuss.h) are inferred from use. `InsertSoundBus`,
+`SetSoundBuss`, `UpdateBussEntry` and `RetroFit` are not reconstructed.
+
+`cSoundBussMan` is 76 bytes, bounded by `soundZone` after the schedule in `g_SoundMan`: an active count at `+4`,
+a buss list linked through `next` at `+8`, and the `dwi::list`s of inactive (`+0xc`) and active (`+0x2c`) busses.
+A new sound takes the inactive busses it names by CRC in `bussCRCs` and then each active buss's retrofit.
+Member names are inferred. `Update`, `FindBuss`, `RetroFitNewSound` and `ApplyActiveBusses` are reconstructed;
+the constructor, `Init`, `Shutdown`, `AddBuss`, `ActivateBuss`, `AddInactiveRetroFit`, `ApplyInactiveBusses` and
+`AddActiveBusses` are not.
+
+## Sound manager
+
+`g_SoundMan` (`cSoundMan`, 0x8700 bytes) loads the level's sound table and bus table and owns the
+stream pool. The table offsets come from `LoadLevelUbr` and `LoadLevelBus`. A file is a 32-byte
+`UberFileHeader`, an array of 12-byte `ColumnMap` records, and fixed-size rows; the sound table is then
+followed by the slot map and, when the header word at `+0xc` is set, a 132-byte bank table.
+`GetUbrCRC` and `GetBussCRC` find the column of type 6 and read each row's alias CRC from it, which fills
+the two sorted row tables. Their extents are inferred from their neighbors: 4096 sound rows at `+0xb0`,
+50 bus rows at `+0x80d4`. Names of members, header fields and `ESoundUberTask` enumerators are inferred
+from use; `UberFileHeader`, `ColumnMap`, `ESoundUberTask` and `BankMan` are symbol-table names.
+
+Observed quirks, kept as they are: `RemoveLevelStreamFile` passes the stream handle word where
+`FILESYS_delbigsync` takes a name, and `VerifyLevelBanks` builds its bank file names and never uses them.
+Not reconstructed: `SetSfxVol`, `ServiceStreams` and `PauseBankSounds` (they own the
+`source/tl/dwi_memory.h:56` literal in this file's shared header strings), `GetMultSettings` and
+`GetSoundEntries` (inlined `SoundEntryBank` destructor), `LoadLevelBus` and `SearchForAlias`.
+
+## Sound system front end and block decoders
+
+`Snd::System` and `Snd::Memory` (`ssys.cpp`) wrap the `SNDSYS_getopts` and `SNDSYS_setopts` record:
+each setter copies the 212-byte record out, changes one field and writes it back. `SetHeap` keeps the
+main heap in `Snd::pheap` and `Snd::heapsize` and the fast heap in the record. The record's field names
+are inferred from these setters. `SetVoices` and `System::Init` are not reconstructed: both set `r3` for
+`SNDSYS_setopts` before their switch, which no plain form tried reproduces.
+
+`Snd::CMTBLKDecf` (`mtdecf.cpp`) derives from `UTALKSTATE_CODA`, whose layout is verified: bit reader
+at `+0`, a first-bit flag at `+0xc`, shift at `+0x10`, a 64-entry gain table at `+0x14`, reflection and
+filter state at `+0x114` and `+0x144`, 324 history samples at `+0x174` and 432 output samples at `+0x684`;
+the decoder's own members follow at `+0xd44`. When the first-bit flag is clear `decodemut` reads no grid
+fields and takes samples one apart instead of two. Codec version 1 streams carry a run of raw 16-bit
+samples, introduced by the marker byte `0xEE`, that `Decode` copies over the output between frames.
+Member names are inferred. `readsamples` and `decodemut` are not reconstructed; `Snd::CEAXABLKDecf`'s
+`process_raw_block`, `decodexac` and `Decode` are not either. All of these units use `-G0
+-fno-strength-reduce`, like the other new units in this library.
+
+`Moh3SoundEvent::Pause` stores its argument in the static `s_paused` and in `g_npcVocalMan` at `+0x44`;
+`EndEvent` removes the event's sound from the schedule. The class is a method-only view so far: its table
+and its data members are not reconstructed, and the `+0x44` member name is inferred.

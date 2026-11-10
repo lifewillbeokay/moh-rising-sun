@@ -1,0 +1,52 @@
+{
+  "id": "shell_getcombinedjoypadactivemask",
+  "source": "src/frontend/shell_getcombinedjoypadactivemask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801812d8",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetCombinedJoyPadActiveMask__C12ShellManager",
+      "address": "0x801812d8",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetMouseInfo__12ShellManagerR11FEMouseInfo",
+      "address": "0x80181310",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetMovieName__12ShellManageriPc",
+      "address": "0x80181314",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCombinedJoyPadActiveMask__C7FEngine": "0x8004cd8c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

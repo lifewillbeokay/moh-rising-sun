@@ -2,5 +2,5 @@
 #include "HeadsUpDisplay.h"
 
 void CHeadsUpDisplay::Reset() {
-    unknown818 = 0;
+    letterboxState = 0;
 }

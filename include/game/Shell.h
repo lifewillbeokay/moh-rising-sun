@@ -31,6 +31,7 @@ class CGcDevice {
 // The device manager at the start of the input manager.
 class CDeviceManager {
   public:
+    CDeviceManager();
     void SetPort(unsigned char, signed char);
     int GetNumDevices() const;
     int GetNumPorts() const;
@@ -53,8 +54,10 @@ class CDeviceManager {
 // The input manager singleton; members are named by what these methods do with them.
 class CInputManager : public CDeviceManager {
   public:
+    CInputManager();
     void Init();
     void Shutdown();
+    int CheckControllers(bool);
     void SetController(unsigned char, signed char);
     void SetKeymap(unsigned char, KEYMAP *);
     int GetValue(unsigned char, unsigned short) const;
@@ -73,10 +76,14 @@ class CInputManager : public CDeviceManager {
     KEYMAP *portKeymaps[4];
     int blockVibrations[4];
     int masterBlockVibrations[4];
-    unsigned char unknown23f4[8];
-    signed char controllers[16];
+    int padOption;              // +0x23f4; the profile's byte at +0x28 sets it. Meaning unknown.
+    int controllerChecksEnabled; // +0x23f8
+    signed char controllers[4];  // +0x23fc
+    signed char field2400;
+    int field2404;
+    signed char field2408;
     int badControllerSet;
-    unsigned char badControllerPort;
+    signed char badControllerPort;
 };
 extern CInputManager g_inputMgr;
 

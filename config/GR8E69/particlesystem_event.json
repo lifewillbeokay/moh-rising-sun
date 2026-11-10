@@ -1,0 +1,43 @@
+{
+  "id": "particlesystem_event",
+  "source": "src/particles/particlesystem_event.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006192c",
+      "size": 220
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__15CParticleSystemP8ISubject13ESubjectEvent",
+      "address": "0x8006192c",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "_7CMatrix.s_ClassInit": "0x802c2100"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

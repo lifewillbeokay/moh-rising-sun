@@ -1,0 +1,51 @@
+{
+  "id": "gamesettings_activatecheatnamed_beatthelevel",
+  "source": "src/shell/gamesettings_activatecheatnamed_beatthelevel.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016e32c",
+      "size": 1344
+    }
+  ],
+  "functions": [
+    {
+      "name": "ActivateCheatNamed_BeatTheLevel__13CGameSettings",
+      "address": "0x8016e32c",
+      "size": 864,
+      "binding": 1
+    },
+    {
+      "name": "DoBeatTheLevelDuties__13CGameSettingsi",
+      "address": "0x8016e68c",
+      "size": 480,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddMedal__13CGameSettingsi": "0x8016e87c",
+    "CalculatePerformanceRating__13CGameSettingsR16PerformanceStarsN21": "0x8016f190",
+    "SetNextMissionAndLevel__13CGameSettingsUiUii": "0x8016d8d4",
+    "UnlockLevel__13CGameSettingsib": "0x80171440",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

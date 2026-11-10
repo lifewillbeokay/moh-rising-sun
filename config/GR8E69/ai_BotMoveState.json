@@ -1,0 +1,36 @@
+{
+  "id": "ai_BotMoveState",
+  "source": "src/ai/BotMoveState.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009cff8",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMoveState__10CBotObject13eBotMoveState",
+      "address": "0x8009cff8",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

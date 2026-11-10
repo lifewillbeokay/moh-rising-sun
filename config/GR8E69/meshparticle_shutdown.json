@@ -1,0 +1,54 @@
+{
+  "id": "meshparticle_shutdown",
+  "source": "src/particles/meshparticle_shutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80066290",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reload__18MeshParticleSystem",
+      "address": "0x80066290",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "DeActivate__18MeshParticleSystem",
+      "address": "0x80066294",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Terminate__18MeshParticleSystem",
+      "address": "0x800662cc",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ReleaseParticles__18MeshParticleSystem": "0x80065788"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

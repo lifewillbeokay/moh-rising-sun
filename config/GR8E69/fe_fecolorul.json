@@ -1,0 +1,50 @@
+{
+  "id": "fe_fecolorul",
+  "source": "src/frontend/fe_fecolorul.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800566b4",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "__7FEColorUl",
+      "address": "0x800566b4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "__opUl__C7FEColor",
+      "address": "0x800566dc",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "__as__7FEColorRC7FEColor",
+      "address": "0x8005678c",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FETypes.cpp",
+  "original_file_index": 352
+}

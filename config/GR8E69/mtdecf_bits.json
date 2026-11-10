@@ -1,0 +1,67 @@
+{
+  "id": "mtdecf_bits",
+  "source": "src/sound/ea/mtdecf_bits.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022aafc",
+      "size": 256
+    },
+    {
+      "name": ".data",
+      "address": "0x802d6a18",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__Q23Snd10CMTBLKDecfUi",
+      "address": "0x8022aafc",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__Q23Snd10CMTBLKDecfPv",
+      "address": "0x8022ab28",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "getbits__3SndPQ23Snd15UTALKSTATE_CODAi",
+      "address": "0x8022ab54",
+      "size": 96,
+      "binding": 0
+    },
+    {
+      "name": "discardbits__3SndPQ23Snd15UTALKSTATE_CODAi",
+      "address": "0x8022abb4",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_3Snd.CODADelete": "0x8041ee38",
+    "_3Snd.CODANew": "0x8041ee34"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "mtdecf.cpp",
+  "original_file_index": 3292
+}

@@ -1,0 +1,124 @@
+{
+  "id": "ai_NullWeaponBehavior",
+  "source": "src/ai/NullWeaponBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e5fec",
+      "size": 532
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3c50",
+      "size": 24
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.19CNullWeaponBehavior",
+      "address": "0x802e7f20",
+      "size": 128,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19CNullWeaponBehavior",
+      "address": "0x800e5fec",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "_._19CNullWeaponBehavior",
+      "address": "0x800e6044",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__19CNullWeaponBehavior",
+      "address": "0x800e6074",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__19CNullWeaponBehavior",
+      "address": "0x800e607c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__19CNullWeaponBehavior",
+      "address": "0x800e6084",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__19CNullWeaponBehavior",
+      "address": "0x800e60c0",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__19CNullWeaponBehaviorb",
+      "address": "0x800e612c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__19CNullWeaponBehavior11ECapability",
+      "address": "0x800e61b8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__19CNullWeaponBehavior",
+      "address": "0x800e61c0",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponScript__19CNullWeaponBehaviorP8BSObject",
+      "address": "0x800e61e8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__19CNullWeaponBehavior",
+      "address": "0x800e61f0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__19CNullWeaponBehavior",
+      "address": "0x800e61f8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "NullWeaponBehavior.cpp",
+  "original_file_index": 1043
+}

@@ -1,0 +1,42 @@
+{
+  "id": "input_any_device",
+  "source": "src/game/input_any_device.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d6f50",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetInputAnyDevice__C13CInputManager",
+      "address": "0x800d6f50",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetEventTable__C14CDeviceManagerUc": "0x800d67e8",
+    "GetNumDevices__C14CDeviceManager": "0x800d66b8",
+    "PAD_scan": "0x80216ec4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "input.cpp",
+  "original_file_index": 951
+}

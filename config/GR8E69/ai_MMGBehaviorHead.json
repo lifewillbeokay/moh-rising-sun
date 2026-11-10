@@ -1,0 +1,81 @@
+{
+  "id": "ai_MMGBehaviorHead",
+  "source": "src/ai/MMGBehaviorHead.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e2914",
+      "size": 260
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a349c",
+      "size": 8
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.26CMountedMachineGunBehavior",
+      "address": "0x802e7c38",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__26CMountedMachineGunBehavior",
+      "address": "0x800e2914",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "_._26CMountedMachineGunBehavior",
+      "address": "0x800e2990",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__26CMountedMachineGunBehavior",
+      "address": "0x800e29f8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__26CMountedMachineGunBehavior",
+      "address": "0x800e2a00",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BidOnMMG__FP13TriggerObjectP9CAIObjectf": "0x800e30a8",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetCRC__9CBehavior": "0x800e28ec",
+    "GetCapabilities__26CMountedMachineGunBehavior11ECapability": "0x800e3e30",
+    "GetScriptObject__26CMountedMachineGunBehavior": "0x800e4624",
+    "GetType__26CMountedMachineGunBehavior": "0x800e461c",
+    "ReleaseResources__26CMountedMachineGunBehavior": "0x800e2ea8",
+    "StartBehavior__26CMountedMachineGunBehavior": "0x800e2c8c",
+    "StopBehavior__26CMountedMachineGunBehaviorb": "0x800e2e10",
+    "UpdateHeuristicScore__26CMountedMachineGunBehavior": "0x800e2a18",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

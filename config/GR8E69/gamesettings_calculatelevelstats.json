@@ -1,0 +1,77 @@
+{
+  "id": "gamesettings_calculatelevelstats",
+  "source": "src/shell/gamesettings_calculatelevelstats.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016eaa4",
+      "size": 2464
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ac3b0",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "CalculateLevelStats__13CGameSettings",
+      "address": "0x8016eaa4",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "GetLevelStats__C13CGameSettings",
+      "address": "0x8016eb54",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "GetTotalStatsForLevel__C13CGameSettings",
+      "address": "0x8016ec88",
+      "size": 392,
+      "binding": 1
+    },
+    {
+      "name": "CalculateCumulativeStats__13CGameSettings",
+      "address": "0x8016ee10",
+      "size": 896,
+      "binding": 1
+    },
+    {
+      "name": "CalculatePerformanceRating__13CGameSettingsR16PerformanceStarsN21",
+      "address": "0x8016f190",
+      "size": 692,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetNumBonusObjectives__17CPlayerObjectives": "0x8017c15c",
+    "GetNumCompletedBonusObjectives__17CPlayerObjectives": "0x8017c164",
+    "GetNumCompletedObjectives__17CPlayerObjectives": "0x8017c0e4",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690",
+    "g_Objectives": "0x803e81a4",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "iDebugMsg__FPCce": "0x8028b928",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

@@ -3,7 +3,7 @@
 #include "GameSettings.h"
 
 void BIFunc_EndLevel(int **stack, void *) {
-    ((GameProfileLevelFlags *)&g_GameSettings.profile->mission)->levelWon = *(*stack - (g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount - 1));
+    g_GameSettings.profile->saveData.levelWon = *(*stack - (g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount - 1));
     g_GameFlow.levelEnding = 1;
     *stack -= g_pBuiltInFunctions[g_iCurrentBIFIndex].stackAdjustment;
 }

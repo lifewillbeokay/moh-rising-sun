@@ -4,30 +4,18 @@
 #include "EAGLGeoPrimState.h"
 #include "TARExtension.h"
 #include "TevStage.h"
+#include "EAGLRenderContext.h"
 #include <dolphin/gx/GXGeometry.h>
 #include <dolphin/gx/GXLighting.h>
 #include <dolphin/gx/GXTransform.h>
 #include <dolphin/gx/GXDispList.h>
 #include <dolphin/os/OSCache.h>
 namespace EAGL {
-enum MipMapModeOverride {MMMO_INHERIT=-1};
-enum FilterModeOverride {FMO_INHERIT=-1};
-enum AnisotropyOverride {AO_INHERIT=-1};
-
 class GeoPrim;
-class RenderContext;
-class RenderContextExtensionBase {
-public:
-    void GetFogEnable(bool&) const;
-    void SetFogEnable(bool);
-    static void GetAlphaWritesOverride(AlphaWritesOverride&);
-    static void GetMipMapModeOverride(MipMapModeOverride&);
-    static void GetFilterModeOverride(FilterModeOverride&);
-    static void GetMipmapLODBiasOverride(float&);
-    static void GetMaxAnisotropyOverride(AnisotropyOverride&);
-};
 class Device {
 public:
+    unsigned int unknown_0;
+    EAGLInternal::DevicePrivate privateData; // +4
     static Device* Get();
     RenderContext* GetCurrentRenderContext() const;
 };

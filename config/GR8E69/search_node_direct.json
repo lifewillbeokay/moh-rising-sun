@@ -1,0 +1,48 @@
+{
+  "id": "search_node_direct",
+  "source": "src/ai/SearchNodeDirect.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e1480",
+      "size": 384
+    }
+  ],
+  "functions": [
+    {
+      "name": "DirectPathToSearchNodeOk__15CAreaSearchNodeP15CAreaSearchNode",
+      "address": "0x800e1480",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "DirectPathToPositionOk__15CAreaSearchNodeRC8CVector3P15CAreaSearchNode",
+      "address": "0x800e1518",
+      "size": 232,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DirectPathOk__15CAreaSearchNodeRC6CLine2P15CAreaSearchNode": "0x800e13b0",
+    "IsDegenerate__C6CLine2": "0x8007c4c0",
+    "LineIntersectsLinkEdges__C13CAreaPathNodeRC6CLine2P8CVector2P13CAreaPathNode": "0x800e7c20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SearchNode.cpp",
+  "original_file_index": 996
+}

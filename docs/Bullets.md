@@ -220,3 +220,12 @@ accepted: only two loop registers are swapped.
 `CWeaponFactory::LoadWeaponGUISprites` builds `data\<name>` in a stack buffer and then
 loads the sprite from the bare name, so the built path goes unused in this build. The
 source keeps that as it stands; the icon field names at +0x38 and +0x58 are inferred.
+
+## Factory helper instantiations
+
+`CBulletFactoryHelper`'s twelve instantiated methods are explicit instantiations, written per method
+because the original image interleaves the two types' functions. `AllocateGameObject` is an inline
+template of `CGameObjectFactory` here: the allocator's record is inferred from its two callers. The
+pooled sizes of 448 and 640 bytes are the arguments `Init` passes; the bullet views stop short of them,
+so `PooledSize` states them. Each bullet's `IGameObject` base at `+0x38` is written as an explicit
+conversion because the headers do not model that base yet.

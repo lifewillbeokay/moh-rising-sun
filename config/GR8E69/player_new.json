@@ -1,0 +1,52 @@
+{
+  "id": "player_new",
+  "source": "src/player/PlayerNew.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800aac6c",
+      "size": 80
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ee64",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__13CPlayerObjectUi",
+      "address": "0x800aac6c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "__dl__13CPlayerObjectPv",
+      "address": "0x800aac9c",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "DWI_free": "0x801a8894"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

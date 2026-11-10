@@ -1,0 +1,142 @@
+{
+  "id": "ai_ScriptedBehavior",
+  "source": "src/ai/ScriptedBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e6fa8",
+      "size": 808
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4098",
+      "size": 8
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.17CScriptedBehavior",
+      "address": "0x802e8020",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__17CScriptedBehavior",
+      "address": "0x800e6fa8",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "_._17CScriptedBehavior",
+      "address": "0x800e7018",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__17CScriptedBehavior",
+      "address": "0x800e7048",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__17CScriptedBehavior",
+      "address": "0x800e7090",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__17CScriptedBehavior",
+      "address": "0x800e7098",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__17CScriptedBehavior",
+      "address": "0x800e70c0",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__17CScriptedBehaviorb",
+      "address": "0x800e7138",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__17CScriptedBehavior11ECapability",
+      "address": "0x800e71e0",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseResources__17CScriptedBehavior",
+      "address": "0x800e71f0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "StartScript__17CScriptedBehaviorP8BSObject",
+      "address": "0x800e71f4",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "StopScript__17CScriptedBehavior",
+      "address": "0x800e725c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetCapability__17CScriptedBehavior11ECapabilityb",
+      "address": "0x800e727c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SetAllowedHighLevelState__17CScriptedBehavior17EAIHighLevelState",
+      "address": "0x800e728c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetType__17CScriptedBehavior",
+      "address": "0x800e72c0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__17CScriptedBehavior",
+      "address": "0x800e72c8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetCRC__9CBehavior": "0x800e28ec",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ScriptedBehavior.cpp",
+  "original_file_index": 1054
+}

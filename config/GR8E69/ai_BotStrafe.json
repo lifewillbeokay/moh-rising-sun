@@ -1,0 +1,45 @@
+{
+  "id": "ai_BotStrafe",
+  "source": "src/ai/BotStrafe.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80098324",
+      "size": 148
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dc30",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "WantToStrafe__10CBotObject",
+      "address": "0x80098324",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetIdealRange__10CBotWeaponP13CBotCharacter": "0x800927c0",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "WithinGrenadeBlastRadius__10CBotObject": "0x800993b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

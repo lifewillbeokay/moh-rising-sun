@@ -1,0 +1,85 @@
+{
+  "id": "fescript_pool",
+  "source": "src/frontend/fescript_pool.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055550",
+      "size": 1128
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029832c",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__8FEScriptUi",
+      "address": "0x80055550",
+      "size": 344,
+      "binding": 1
+    },
+    {
+      "name": "__dl__8FEScriptPv",
+      "address": "0x800556a8",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "SetName__8FEScriptPCc",
+      "address": "0x8005578c",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "SetTrackCount__8FEScriptl",
+      "address": "0x80055818",
+      "size": 336,
+      "binding": 1
+    },
+    {
+      "name": "FindTrack__C8FEScript18FEKeyTrack_Indices",
+      "address": "0x80055968",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "Init__8FEScript": "0x80055208",
+    "Purge__9FERefList": "0x8027872c",
+    "RemHead__9FEMinList": "0x80049878",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "_8FEScript.NodePool": "0x802ee6ac",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.8FEScript": "0x802e1438",
+    "_vt.9FEKeyNode": "0x802e11b0",
+    "_vt.9FEMinList": "0x802e1180",
+    "_vt.9FEMinNode": "0x802e11c8",
+    "_vt.9FERefList": "0x802e1408",
+    "_vt.t10FEPoolNode2Z8FEScripti32": "0x802e1420",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEScript.cpp",
+  "original_file_index": 335
+}

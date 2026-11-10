@@ -1,0 +1,124 @@
+{
+  "id": "ai_RifleBehavior",
+  "source": "src/ai/RifleBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e5db8",
+      "size": 564
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3b18",
+      "size": 20
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.14CRifleBehavior",
+      "address": "0x802e7ea0",
+      "size": 128,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CRifleBehavior",
+      "address": "0x800e5db8",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "_._14CRifleBehavior",
+      "address": "0x800e5e10",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__14CRifleBehavior",
+      "address": "0x800e5e40",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__14CRifleBehavior",
+      "address": "0x800e5e48",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__14CRifleBehavior",
+      "address": "0x800e5e50",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__14CRifleBehavior",
+      "address": "0x800e5e8c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__14CRifleBehaviorb",
+      "address": "0x800e5ef8",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__14CRifleBehavior11ECapability",
+      "address": "0x800e5f84",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__14CRifleBehavior",
+      "address": "0x800e5fac",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponScript__14CRifleBehaviorP8BSObject",
+      "address": "0x800e5fd4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__14CRifleBehavior",
+      "address": "0x800e5fdc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__14CRifleBehavior",
+      "address": "0x800e5fe4",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "RifleBehavior.cpp",
+  "original_file_index": 1041
+}

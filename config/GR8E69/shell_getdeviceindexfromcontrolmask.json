@@ -1,0 +1,54 @@
+{
+  "id": "shell_getdeviceindexfromcontrolmask",
+  "source": "src/frontend/shell_getdeviceindexfromcontrolmask.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80182824",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetDeviceIndexFromControlMask__12ShellManagerUl",
+      "address": "0x80182824",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "GetPortNumFromControlMask__12ShellManagerUl",
+      "address": "0x8018283c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetKeyboardString__12ShellManagerPCc",
+      "address": "0x80182870",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "g_inputMgr": "0x803077c4",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

@@ -8,8 +8,8 @@ extern int g_CurrentMission;
 void LoadOneShotSound(int, int, int);
 
 void BIFunc_LoadOneShotSoundBank(int **stack, void *) {
-    int mission = g_GameSettings.profile->mission;
-    int level = g_GameSettings.profile->level;
+    int mission = g_GameSettings.profile->saveData.mission;
+    int level = g_GameSettings.profile->saveData.level;
     int *args = *stack - g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;
     int bank = args[1];
     g_CurrentMission = mission;

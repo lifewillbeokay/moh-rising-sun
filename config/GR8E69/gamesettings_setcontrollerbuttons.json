@@ -1,0 +1,65 @@
+{
+  "id": "gamesettings_setcontrollerbuttons",
+  "source": "src/shell/gamesettings_setcontrollerbuttons.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016f4b0",
+      "size": 364
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetControllerButtons__13CGameSettingsiiPsi",
+      "address": "0x8016f4b0",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "GetControllerButtons__13CGameSettingsiiPsi",
+      "address": "0x8016f508",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "CopyNameIntoSettings__13CGameSettingsPCci",
+      "address": "0x8016f560",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetNameFromSettings__13CGameSettingsi",
+      "address": "0x8016f5ac",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "Get_PlayerControllerSetting__13CGameSettingsi",
+      "address": "0x8016f5d8",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetProfileIndexFromPlayerID__13CGameSettingsi": "0x801718e4",
+    "strncpy": "0x80266dd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

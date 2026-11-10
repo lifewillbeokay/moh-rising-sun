@@ -29,7 +29,7 @@ int CAIObject::ChooseNewBehavior() {
 }
 
 int CAIObject::StartBehavior() {
-    int started = nextBehavior->Start();
+    int started = nextBehavior->StartBehavior();
     if (started)
         currentBehavior = nextBehavior;
     nextBehavior = 0;
@@ -38,7 +38,7 @@ int CAIObject::StartBehavior() {
 
 void CAIObject::StopBehavior(bool immediate) {
     if (currentBehavior)
-        currentBehavior->Stop(immediate);
+        currentBehavior->StopBehavior(immediate);
 }
 
 void CAIObject::ClearBehavior() {
@@ -52,6 +52,6 @@ int CAIObject::GetBehaviorCapability(ECapability capability) {
     if (!currentBehavior)
         result = 0;
     else
-        result = currentBehavior->GetCapability(capability);
+        result = currentBehavior->GetCapabilities(capability);
     return result;
 }

@@ -1,0 +1,52 @@
+{
+  "id": "projector_destroy",
+  "source": "src/camera/projector_destroy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801324b0",
+      "size": 324
+    }
+  ],
+  "functions": [
+    {
+      "name": "Destroy__10CProjectorP10CProjector",
+      "address": "0x801324b0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__10CProjectorP8ISubject13ESubjectEvent",
+      "address": "0x80132518",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Release__10CProjectorP10CProjector": "0x80132268",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

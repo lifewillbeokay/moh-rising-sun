@@ -1,0 +1,80 @@
+{
+  "id": "fengine_queuemessage",
+  "source": "src/frontend/fengine_queuemessage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004eda8",
+      "size": 868
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297c18",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul",
+      "address": "0x8004eda8",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "SendMessageToGame__7FEngineUlP8FEObjectP9FEPackageUl",
+      "address": "0x8004ee78",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "QueuePackageSwitch__7FEnginePCcP9FEPackage",
+      "address": "0x8004eebc",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "QueuePackagePush__7FEnginePCcP9FEPackageUl",
+      "address": "0x8004ef58",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "QueuePackagePop__7FEngineP9FEPackage",
+      "address": "0x8004eff8",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "QueuePackageUserTransfer__7FEngineP9FEPackagebUl",
+      "address": "0x8004f07c",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "SetName__6FENodePCc": "0x80049700",
+    "__6FENode": "0x8004966c",
+    "_vt.13FEMessageNode": "0x802e1260",
+    "_vt.16FEPackageCommand": "0x802e1278"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

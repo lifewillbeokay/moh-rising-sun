@@ -1,0 +1,54 @@
+{
+  "id": "gamesettings_add_mpplayerkilled",
+  "source": "src/shell/gamesettings_add_mpplayerkilled.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016dac4",
+      "size": 1052
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ac390",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "Add_MPPlayerKilled__13CGameSettingsP16IMovingSceneNodeT1",
+      "address": "0x8016dac4",
+      "size": 736,
+      "binding": 1
+    },
+    {
+      "name": "InitializeFinishedLevelData__13CGameSettingsi",
+      "address": "0x8016dda4",
+      "size": 316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "g_bMPEndLevel": "0x803e7570",
+    "g_bTeamDM": "0x802c1b34",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

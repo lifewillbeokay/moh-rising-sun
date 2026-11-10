@@ -1,0 +1,67 @@
+{
+  "id": "fe_addpackage",
+  "source": "src/frontend/fe_addpackage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80052044",
+      "size": 404
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddPackage__13FEPackageListP9FEPackage",
+      "address": "0x80052044",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "FindPackage__C13FEPackageListPCcUc",
+      "address": "0x8005209c",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "FindPackage__C13FEPackageListUc",
+      "address": "0x8005212c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "RemovePackage__13FEPackageListP9FEPackage",
+      "address": "0x8005215c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "ReplaceParentLinks__13FEPackageListPC9FEPackageT1",
+      "address": "0x800521ac",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageList.cpp",
+  "original_file_index": 328
+}

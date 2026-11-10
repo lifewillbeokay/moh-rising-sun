@@ -1,0 +1,77 @@
+{
+  "id": "ai_StateA",
+  "source": "src/eala/StateA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800845b8",
+      "size": 376
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q34EALA9Character5State",
+      "address": "0x802e3058",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__Q34EALA9Character5StateUiPv",
+      "address": "0x800845b8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "__dl__Q34EALA9Character5StatePv",
+      "address": "0x800845c0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "_._Q34EALA9Character5State",
+      "address": "0x800845c4",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "SizeOf__Q34EALA9Character5StateUi",
+      "address": "0x800846bc",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "UnloadAll__Q34EALA9Character5State",
+      "address": "0x800846c8",
+      "size": 104,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_erase__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateZ13StringCompareZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StatePQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5State": "0x80280280",
+    "_M_erase__Q24_STLt8_Rb_tree5ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiZQ24_STLt4less1ZQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZQ24_STLt9allocator1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUiPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCQ24_STLt12basic_string3ZcZQ24_STLt11char_traits1ZcZQ24_STLt9allocator1ZcZUi": "0x8027f984",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q24EALA8Resource": "0x802e2ed8",
+    "g_mapStates": "0x802ff120"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "State.cpp",
+  "original_file_index": 592
+}

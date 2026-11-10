@@ -1,0 +1,193 @@
+{
+  "id": "ai_BuddyFollowBehavior",
+  "source": "src/ai/BuddyFollowBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e5188",
+      "size": 1492
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3764",
+      "size": 28
+    },
+    {
+      "name": ".data",
+      "address": "0x802c3458",
+      "size": 20
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.20CBuddyFollowBehavior",
+      "address": "0x802e7d28",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__20CBuddyFollowBehaviorP15CAIActivityZone",
+      "address": "0x800e5188",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "_._20CBuddyFollowBehavior",
+      "address": "0x800e5200",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Enable__20CBuddyFollowBehavior",
+      "address": "0x800e5230",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Disable__20CBuddyFollowBehavior",
+      "address": "0x800e5278",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__20CBuddyFollowBehavior",
+      "address": "0x800e52a8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__20CBuddyFollowBehavior",
+      "address": "0x800e52b0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__20CBuddyFollowBehavior",
+      "address": "0x800e52b8",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__20CBuddyFollowBehavior",
+      "address": "0x800e5414",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__20CBuddyFollowBehaviorb",
+      "address": "0x800e5480",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__20CBuddyFollowBehavior11ECapability",
+      "address": "0x800e54e8",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "CantReachTarget__20CBuddyFollowBehavior",
+      "address": "0x800e54f8",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "RegisterBuddyFollowObject__20CBuddyFollowBehaviorP8BSObjectffff",
+      "address": "0x800e5564",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SetDistances__20CBuddyFollowBehaviorffff",
+      "address": "0x800e5590",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "UpdateDistanceToPlayer__20CBuddyFollowBehavior",
+      "address": "0x800e55ac",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "EnterBuddyTeleportArea__20CBuddyFollowBehaviori",
+      "address": "0x800e5608",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "ExitBuddyTeleportArea__20CBuddyFollowBehaviori",
+      "address": "0x800e561c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "IsBuddyInArea__20CBuddyFollowBehaviori",
+      "address": "0x800e5644",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetStopDistance__20CBuddyFollowBehavior",
+      "address": "0x800e5658",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetStartDistance__20CBuddyFollowBehavior",
+      "address": "0x800e5678",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "BumpPlayer__20CBuddyFollowBehavior",
+      "address": "0x800e5698",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "FinishedMovingAway__20CBuddyFollowBehavior",
+      "address": "0x800e5708",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "GetType__20CBuddyFollowBehavior",
+      "address": "0x800e5754",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__15CAIActivityZone": "0x800ecdd0",
+    "GetCRC__9CBehavior": "0x800e28ec",
+    "GetDistanceXYReal__9CAIObjectP9CAIObject": "0x800dabac",
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "GetScriptObject__9CBehavior": "0x800e290c",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "UseMovingTarget__15CAIActivityZoneP10ISceneNodef": "0x800ecdbc",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc",
+    "g_aigAIFilterGlobalObject": "0x80309bfc",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BuddyFollowBehavior.cpp",
+  "original_file_index": 1035
+}

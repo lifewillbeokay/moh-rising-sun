@@ -1,0 +1,88 @@
+{
+  "id": "movie_player_tail",
+  "source": "src/shell/MoviePlayerTail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a1fa0",
+      "size": 464
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b61fc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSpeed__12CMoviePlayerf",
+      "address": "0x801a1fa0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "InitClass__12CMoviePlayer",
+      "address": "0x801a1fa4",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "__12CMoviePlayer",
+      "address": "0x801a1fcc",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "_._12CMoviePlayer",
+      "address": "0x801a1fe8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetupSubtitle__12CMoviePlayerbPcN32i",
+      "address": "0x801a201c",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "PlayMovie__12CMoviePlayerPviPcPFP12CMoviePlayer_b",
+      "address": "0x801a20f4",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanMemory__12CMoviePlayer": "0x801a1674",
+    "ClearTimer__Fv": "0x8016c6e0",
+    "Play__12CMoviePlayerPcPFP12CMoviePlayer_b": "0x801a1a68",
+    "SetMemory__12CMoviePlayerPvi": "0x801a15e0",
+    "SetREALDefaults__Q24RCMP11RCMP_SYSTEM": "0x801b1254",
+    "SetupSubtitle__12CMoviePlayer": "0x801a1808",
+    "TLT_ForceLoadFileNormalLocked__Fb": "0x801a9ab0",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "__builtin_delete": "0x801a8990",
+    "__udivdi3": "0x8026c82c",
+    "g_pMoviePlayer": "0x802c5d38",
+    "sprintf": "0x80263a3c",
+    "strcpy": "0x80266a7c",
+    "strrchr": "0x80266f20"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmpplayer.cpp",
+  "original_file_index": 2067
+}

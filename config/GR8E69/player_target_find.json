@@ -1,0 +1,64 @@
+{
+  "id": "player_target_find",
+  "source": "src/player/PlayerTargetFind.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800b9cfc",
+      "size": 876
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029f518",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "Enable__Q213CPlayerObject10TargetFindP13CPlayerObject",
+      "address": "0x800b9cfc",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "AddTarget__Q213CPlayerObject10TargetFindP10ISceneNodeR8CVector3fUc",
+      "address": "0x800b9d74",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "ChooseTarget__Q213CPlayerObject10TargetFind",
+      "address": "0x800b9e84",
+      "size": 364,
+      "binding": 1
+    },
+    {
+      "name": "ClearTargets__Q213CPlayerObject10TargetFind",
+      "address": "0x800b9ff0",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "SetTarget__15CHeadsUpDisplayPCc": "0x8017817c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "player.cpp",
+  "original_file_index": 835
+}

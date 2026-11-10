@@ -1,0 +1,50 @@
+{
+  "id": "snd_mutex_hooks",
+  "source": "src/sound/ea/sserver_hooks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021f908",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "DefaultMutexLockFn__3Sndv",
+      "address": "0x8021f908",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "DefaultMutexUnlockFn__3Sndv",
+      "address": "0x8021f928",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SNDI_mutexlock__Fv": "0x8021e2f0",
+    "SNDI_mutexunlock__Fv": "0x8021e318"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "sserver.c",
+  "original_file_index": 3088
+}

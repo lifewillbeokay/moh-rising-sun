@@ -1,0 +1,54 @@
+{
+  "id": "shell_hasscreen",
+  "source": "src/frontend/shell_hasscreen.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80181984",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae310",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "HasScreen__12ShellManagerPCc",
+      "address": "0x80181984",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "InitMovies__12ShellManager",
+      "address": "0x801819e8",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Load__19CShellMovieSettingsR11CConfigFile": "0x80182a2c",
+    "_._11CConfigFile": "0x801a8c4c",
+    "__11CConfigFilePCc": "0x801a8aac",
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

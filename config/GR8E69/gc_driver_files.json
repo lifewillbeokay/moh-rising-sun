@@ -1,0 +1,116 @@
+{
+  "id": "gc_driver_files",
+  "source": "src/memorycard/gc_driver_files.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80215628",
+      "size": 1976
+    }
+  ],
+  "functions": [
+    {
+      "name": "FlushWriteBuffer__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
+      "address": "0x80215628",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "SetHeaderInfo__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+      "address": "0x80215718",
+      "size": 548,
+      "binding": 1
+    },
+    {
+      "name": "ReadFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi",
+      "address": "0x8021593c",
+      "size": 440,
+      "binding": 1
+    },
+    {
+      "name": "CloseFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
+      "address": "0x80215af4",
+      "size": 244,
+      "binding": 1
+    },
+    {
+      "name": "GetOpenFileSize__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor",
+      "address": "0x80215be8",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeCardSpace__Q26Realmc8GCDriverRCQ26Realmc6CardIDPiT2",
+      "address": "0x80215c0c",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "DeleteFile__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfo",
+      "address": "0x80215c84",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "RenameFile__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfoPCc",
+      "address": "0x80215d20",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "FormatCard__Q26Realmc8GCDriverRCQ26Realmc6CardID",
+      "address": "0x80215d84",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "IsCardPresent__Q26Realmc8GCDriver",
+      "address": "0x80215dd8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CARDClose": "0x80235984",
+    "CARDDelete": "0x80236890",
+    "CARDFastDelete": "0x80236738",
+    "CARDFormat": "0x8023529c",
+    "CARDFreeBlocks": "0x802327b4",
+    "CARDRead": "0x802361a4",
+    "CARDRename": "0x80236f9c",
+    "CARDSetStatus": "0x80236d58",
+    "CARDWrite": "0x80236520",
+    "ConvertCardResult__Q26Realmc8GCDriveri": "0x802149e4",
+    "ConvertFileHandleToDescriptor__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor": "0x80214b10",
+    "FindFileNumber__Q26Realmc8GCDriverPcPi": "0x802160cc",
+    "NGCSportsBioClose__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor": "0x80216350",
+    "NGCSportsBioRead__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi": "0x802161dc",
+    "THREAD_yield": "0x80217ce8",
+    "_Q26Realmc8GCDriver.mIsCardPresent": "0x80451298",
+    "memset": "0x80266778"
+  },
+  "sda_externals": [
+    "_Q26Realmc8GCDriver.mIsCardPresent"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_driver.cpp",
+  "original_file_index": 2935
+}

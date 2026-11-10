@@ -12,8 +12,8 @@ static inline void SetSum(CVector3 &r, const CVector3 &a, const CVector3 &b) {
     r.z = a.z + b.z;
 }
 
-static inline int Mission() { return g_GameSettings.profile->mission; }
-static inline int Level() { return g_GameSettings.profile->level; }
+static inline int Mission() { return g_GameSettings.profile->saveData.mission; }
+static inline int Level() { return g_GameSettings.profile->saveData.level; }
 
 static inline void SetSub(CVector3 &r, const CVector3 &a, const CVector3 &b) {
     r.x = a.x - b.x;

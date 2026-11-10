@@ -1,0 +1,106 @@
+{
+  "id": "meshparticle_state",
+  "source": "src/particles/meshparticle_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80066384",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "Stop__18MeshParticleSystem",
+      "address": "0x80066384",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "Start__18MeshParticleSystem",
+      "address": "0x80066394",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "IsEternal__C18MeshParticleSystem",
+      "address": "0x800663ac",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "IsActive__C18MeshParticleSystem",
+      "address": "0x800663b8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "IsDying__C18MeshParticleSystem",
+      "address": "0x800663c4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "IsMoving__C18MeshParticleSystem",
+      "address": "0x800663d0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsRotating__C18MeshParticleSystem",
+      "address": "0x800663d8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsDestroyable__C18MeshParticleSystem",
+      "address": "0x800663e0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetDestroyable__18MeshParticleSystemb",
+      "address": "0x800663ec",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetDef__C18MeshParticleSystem",
+      "address": "0x800663fc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshParticleSystem__18MeshParticleSystem",
+      "address": "0x80066404",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsMeshParticleSystem__C18MeshParticleSystem",
+      "address": "0x80066408",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

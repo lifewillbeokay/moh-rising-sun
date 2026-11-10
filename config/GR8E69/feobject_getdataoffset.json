@@ -1,0 +1,52 @@
+{
+  "id": "feobject_getdataoffset",
+  "source": "src/frontend/feobject_getdataoffset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050b28",
+      "size": 288
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297d7c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetDataOffset__8FEObject18FEKeyTrack_Indices",
+      "address": "0x80050b28",
+      "size": 212,
+      "binding": 1
+    },
+    {
+      "name": "Clone__8FEObjectb",
+      "address": "0x80050bfc",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__8FEObjectRC8FEObjectb": "0x8005002c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319
+}

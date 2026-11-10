@@ -1,0 +1,47 @@
+{
+  "id": "ai_BotManMMG",
+  "source": "src/ai/BotManMMG.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80091ea4",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsInUse__8MMG_Info",
+      "address": "0x80091ea4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetInUse__8MMG_Infob",
+      "address": "0x80091ed8",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsMGUsed__FP13TriggerObject": "0x80122298",
+    "MarkMGAsUsed__FP13TriggerObjectb": "0x80122270"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotMan.cpp",
+  "original_file_index": 670
+}

@@ -1,0 +1,46 @@
+{
+  "id": "gamesettings_getifcurrentweaponselectable",
+  "source": "src/shell/gamesettings_getifcurrentweaponselectable.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016e144",
+      "size": 192
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetIfCurrentWeaponSelectable__C13CGameSettingsii",
+      "address": "0x8016e144",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetPlayersFinishedLevelSuccessfully__13CGameSettingsii",
+      "address": "0x8016e194",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PlayerLevelDataIndex__13CGameSettingsii": "0x8016fff0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

@@ -1,0 +1,56 @@
+{
+  "id": "soundbuss_freelist",
+  "source": "src/sound/soundbuss_freelist.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015e7a0",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitSoundBussFreeList__13cSoundBussMan",
+      "address": "0x8015e7a0",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "ShutdownSoundBussMan__Fv",
+      "address": "0x8015e7d4",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeSoundBuss__Fv",
+      "address": "0x8015e7e4",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__10cSoundBuss": "0x8015e1d8",
+    "g_AllBusses": "0x803e1300",
+    "g_pFreeBussList": "0x802c4e00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cSoundBussMan.cpp",
+  "original_file_index": 1420
+}

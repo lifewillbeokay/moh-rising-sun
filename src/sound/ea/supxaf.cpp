@@ -10,7 +10,7 @@ public:
     void* operator new(unsigned int);
     void operator delete(void*);
     int Decode(float**, int);
-    void Feed(void*, int, int);
+    int Feed(void*, int, int);
 
 private:
     char m_state[168];

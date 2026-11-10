@@ -1,0 +1,65 @@
+{
+  "id": "gamesettings_hasmedal",
+  "source": "src/shell/gamesettings_hasmedal.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801715b8",
+      "size": 596
+    }
+  ],
+  "functions": [
+    {
+      "name": "HasMedal__C13CGameSettingsi",
+      "address": "0x801715b8",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "HasCheat__C13CGameSettingsi",
+      "address": "0x80171640",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "IsCheatActive__C13CGameSettingsi",
+      "address": "0x8017169c",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "ActivateCheat__13CGameSettingsib",
+      "address": "0x801716f8",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "Get_currentDifficulty__C13CGameSettings",
+      "address": "0x80171798",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

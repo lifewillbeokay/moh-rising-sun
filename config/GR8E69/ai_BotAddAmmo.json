@@ -1,0 +1,38 @@
+{
+  "id": "ai_BotAddAmmo",
+  "source": "src/ai/BotAddAmmo.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009d0ec",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddAmmo__10CBotObjectP7CWeaponi",
+      "address": "0x8009d0ec",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddAmo__7CWeapons": "0x8014ba40"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

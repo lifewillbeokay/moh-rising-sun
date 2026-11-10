@@ -1,0 +1,75 @@
+{
+  "id": "ai_AreaPathImport",
+  "source": "src/ai/AreaPathImport.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e72d0",
+      "size": 860
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetBSP__13AIPathFindingi",
+      "address": "0x800e72d0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "ImportAreaPathNodeNetwork__13AIPathFindingP9BPDHeader",
+      "address": "0x800e7320",
+      "size": 652,
+      "binding": 1
+    },
+    {
+      "name": "GetClosestPathNode__13AIPathFindingRC8CVector3i",
+      "address": "0x800e75ac",
+      "size": 128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ChangeEndian__FRUs": "0x8005863c",
+    "ChangeEndian__FRf": "0x800585fc",
+    "ChangeEndian__FRi": "0x8005861c",
+    "ChangeEndian__H1ZP11BPDLinkEdge_RX01_v": "0x80285444",
+    "ChangeEndian__H1ZP23BPDPathFindingBSPBranch_RX01_v": "0x802854cc",
+    "ChangeEndian__H1ZPUs_RX01_v": "0x80285470",
+    "GetCurrentNode__11AreaPathBSPRC8CVector3i": "0x800e8208",
+    "WhichNetwork__18CAIAreaPathFindingRC8CVector3": "0x800ec3f4",
+    "g_iNumAreaVertices": "0x802c3474",
+    "g_iNumPathFindingAreas": "0x802c347c",
+    "g_iNumPathFindingBSP": "0x802c3484",
+    "g_pAreaVertices": "0x802c3470",
+    "g_pPathFindingAreas": "0x802c3478",
+    "g_pPathFindingBSPs": "0x802c3480",
+    "offsetPtr__H1Z11BPDLinkEdge_RPX01i_v": "0x802854b4",
+    "offsetPtr__H1Z17BPDPathFindingBSP_RPX01i_v": "0x8028542c",
+    "offsetPtr__H1Z18BPDPathFindingArea_RPX01i_v": "0x802853fc",
+    "offsetPtr__H1Z23BPDPathFindingBSPBranch_RPX01i_v": "0x802854f8",
+    "offsetPtr__H1Z8PropVec3_RPX01i_v": "0x80285414",
+    "offsetPtr__H1ZUs_RPX01i_v": "0x8028549c"
+  },
+  "local_externals": [
+    "g_iNumPathFindingBSP",
+    "g_pPathFindingBSPs"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

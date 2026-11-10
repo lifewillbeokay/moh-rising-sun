@@ -1,0 +1,61 @@
+{
+  "id": "eagl_rendercontext_begin",
+  "source": "src/eagl/eagl_rendercontext_begin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dc58c",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24EAGL13RenderContextPQ24EAGL6Device",
+      "address": "0x801dc58c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "BeginFrame__Q24EAGL13RenderContext",
+      "address": "0x801dc5fc",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GXInvalidateTexAll": "0x8024705c",
+    "GXInvalidateVtxCache": "0x802444b4",
+    "GXSetDither": "0x80248878",
+    "Get__Q24EAGL6Device": "0x801db480",
+    "SetCurrentRenderContext__Q212EAGLInternal13DevicePrivatePQ24EAGL13RenderContext": "0x801db454",
+    "SetRenderContextStates__Q24EAGL21GeoPrimStateExtension": "0x801de99c",
+    "_Q212EAGLInternal20RenderContextPrivate.gBeginEndNestLevel": "0x802cdb20",
+    "_Q24EAGL17ViewPortExtension.gpFirstViewPort": "0x802d2a4c",
+    "_Q24EAGL21GeoPrimStateExtension.gCullClockwise": "0x802ce2d0",
+    "_Q24EAGL21GeoPrimStateExtension.gZWritesEnable": "0x802ce2d4",
+    "_Q24EAGL26RenderContextExtensionBase.gEnableDestinationAlpha": "0x802cdb74",
+    "__Q212EAGLInternal20RenderContextPrivatePQ24EAGL13RenderContext": "0x801dcdf8",
+    "__Q24EAGL22RenderContextExtensionPQ24EAGL13RenderContext": "0x801dcf74",
+    "_vt.Q24EAGL13RenderContext": "0x802ec1c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

@@ -1,0 +1,46 @@
+{
+  "id": "fe_findchild",
+  "source": "src/frontend/fe_findchild.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80047b38",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindChild__C7FEGroupUl",
+      "address": "0x80047b38",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "FindChild__C7FEGroupPCc",
+      "address": "0x80047b6c",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEGroup.cpp",
+  "original_file_index": 272
+}

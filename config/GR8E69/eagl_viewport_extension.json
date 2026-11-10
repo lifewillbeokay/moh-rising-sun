@@ -1,0 +1,62 @@
+{
+  "id": "eagl_viewport_extension",
+  "source": "src/eagl/eagl_viewport_extension.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801e3e4c",
+      "size": 148
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetGuardBandScale__Q24EAGL8ViewPortf",
+      "address": "0x801e3e4c",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "__Q24EAGL17ViewPortExtensionPQ24EAGL8ViewPort",
+      "address": "0x801e3e50",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24EAGL17ViewPortExtension",
+      "address": "0x801e3e58",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "ReBegin__Q212EAGLInternal15ViewPortPrivate",
+      "address": "0x801e3e80",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BeginView__Q24EAGL8ViewPort": "0x801e2de0",
+    "SetCurrentViewPort__Q212EAGLInternal24RenderContextPrivateBasePQ24EAGL8ViewPort": "0x801dd5b0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "viewport.cpp",
+  "original_file_index": 2647
+}

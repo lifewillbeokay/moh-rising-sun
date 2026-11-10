@@ -1,0 +1,42 @@
+{
+  "id": "shell_reset",
+  "source": "src/frontend/shell_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801818ec",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reset__12ShellManagerPCc",
+      "address": "0x801818ec",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Process__12ShellManagerUi": "0x8017f7bc",
+    "QueuePackagePop__7FEngineP9FEPackage": "0x8004eff8",
+    "QueuePackagePush__7FEnginePCcP9FEPackageUl": "0x8004ef58"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

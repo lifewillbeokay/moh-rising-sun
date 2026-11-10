@@ -20,7 +20,7 @@ CBehavior *CAIObject::FindBestBehavior() {
     CBehavior *best = 0;
     for (int i = 0; i < count; i++) {
         if (list[i]->enabled) {
-            float value = list[i]->PureSlot2();
+            float value = list[i]->GetCurrentHeuristicScore();
             if (!(value <= bestValue)) {
                 best = list[i];
                 bestValue = value;

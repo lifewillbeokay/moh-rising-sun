@@ -1,0 +1,84 @@
+{
+  "id": "movie_player_heap",
+  "source": "src/shell/MoviePlayerHeap.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a1524",
+      "size": 740
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b619c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetupSpecificHeap__FPvi",
+      "address": "0x801a1524",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseSpecificHeap__Fv",
+      "address": "0x801a15a0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SetMemory__12CMoviePlayerPvi",
+      "address": "0x801a15e0",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "CleanMemory__12CMoviePlayer",
+      "address": "0x801a1674",
+      "size": 268,
+      "binding": 1
+    },
+    {
+      "name": "WhichLanguageColumn__12CMoviePlayeri",
+      "address": "0x801a1780",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_free": "0x801a8894",
+    "FONT_destroy": "0x802060fc",
+    "MEMCLASS_create": "0x8020cbc0",
+    "MEMCLASS_getfree": "0x8020ce00",
+    "MEMCLASS_remove": "0x8020cd90",
+    "RCMPAlloc__FPCciiii": "0x801a1488",
+    "RCMPFree__FPv": "0x801a14e4",
+    "_._Q24RCMP11VD_SUBTITLE": "0x801b34a8",
+    "_._Q24RCMP17AV_SUBTITLE_ARRAY": "0x801b128c",
+    "_._Q24RCMP9AV_PLAYER": "0x801b2774",
+    "_4RCMP.rcmp_sys": "0x803fef20",
+    "__udivdi3": "0x8026c82c",
+    "s_iMemClass": "0x803e8a30"
+  },
+  "local_externals": [
+    "s_iMemClass"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rcmpplayer.cpp",
+  "original_file_index": 2067
+}

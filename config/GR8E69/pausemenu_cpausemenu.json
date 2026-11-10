@@ -1,0 +1,53 @@
+{
+  "id": "pausemenu_cpausemenu",
+  "source": "src/ui/pausemenu_cpausemenu.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017deb0",
+      "size": 236
+    }
+  ],
+  "functions": [
+    {
+      "name": "__10CPauseMenu",
+      "address": "0x8017deb0",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "_._10CPauseMenu",
+      "address": "0x8017defc",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__10CPauseMenu",
+      "address": "0x8017df54",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._10CUnplugged": "0x8017c5b4",
+    "__builtin_delete": "0x801a8990",
+    "_vt.10CPauseMenu": "0x802eaf98",
+    "_vt.9CUIObject": "0x802eafd0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

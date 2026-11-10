@@ -1,0 +1,144 @@
+{
+  "id": "ai_SwordBehavior",
+  "source": "src/ai/SwordBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e575c",
+      "size": 964
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a38a4",
+      "size": 24
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.14CSwordBehavior",
+      "address": "0x802e7da0",
+      "size": 128,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CSwordBehavior",
+      "address": "0x800e575c",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "_._14CSwordBehavior",
+      "address": "0x800e57b0",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__14CSwordBehavior",
+      "address": "0x800e57e0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__14CSwordBehavior",
+      "address": "0x800e57e8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__14CSwordBehavior",
+      "address": "0x800e57f0",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__14CSwordBehavior",
+      "address": "0x800e5860",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__14CSwordBehaviorb",
+      "address": "0x800e58d0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__14CSwordBehavior11ECapability",
+      "address": "0x800e5958",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__14CSwordBehavior",
+      "address": "0x800e5984",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponScript__14CSwordBehaviorP8BSObject",
+      "address": "0x800e59ac",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsSwordDrawn__14CSwordBehavior",
+      "address": "0x800e59b4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetSwordDrawn__14CSwordBehaviorb",
+      "address": "0x800e59bc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ChooseSwordOrPistol__FP9CAIObject",
+      "address": "0x800e59c4",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "GetType__14CSwordBehavior",
+      "address": "0x800e5b10",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__14CSwordBehavior",
+      "address": "0x800e5b18",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "FindMatchingBehavior__9CAIObject13EBehaviorType": "0x800dc8b4",
+    "GetDistanceToTargetSquaredXYZReal__12CAITargeting": "0x800ed948",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SwordBehavior.cpp",
+  "original_file_index": 1037
+}

@@ -1,0 +1,77 @@
+{
+  "id": "projector_accessors",
+  "source": "src/camera/projector_accessors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801331a4",
+      "size": 372
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7bcc",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsDrawEnabled__C10CProjector",
+      "address": "0x801331a4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C10CProjectorR7CMatrix",
+      "address": "0x801331ac",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C10CProjectorR8CVector3",
+      "address": "0x801331d8",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C10CProjectorR8CVector3",
+      "address": "0x80133228",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C10CProjectorR8CVector3",
+      "address": "0x80133278",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C10CProjectorR8CVector3",
+      "address": "0x801332c8",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "projector.cpp",
+  "original_file_index": 1298
+}

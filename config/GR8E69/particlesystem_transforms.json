@@ -1,0 +1,115 @@
+{
+  "id": "particlesystem_transforms",
+  "source": "src/particles/particlesystem_transforms.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80062558",
+      "size": 6408
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80299d10",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetTMLocalToWorld__15CParticleSystemRC7CMatrix",
+      "address": "0x80062558",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "PreTransform__15CParticleSystemRC7CMatrix",
+      "address": "0x800627d0",
+      "size": 660,
+      "binding": 1
+    },
+    {
+      "name": "Transform__15CParticleSystemRC7CMatrix",
+      "address": "0x80062a64",
+      "size": 660,
+      "binding": 1
+    },
+    {
+      "name": "Move__15CParticleSystemRC8CVector3",
+      "address": "0x80062cf8",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "Rotate__15CParticleSystemRC8CVector3f",
+      "address": "0x80062f70",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "Pitch__15CParticleSystemf",
+      "address": "0x800631e8",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "Roll__15CParticleSystemf",
+      "address": "0x80063460",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "Yaw__15CParticleSystemf",
+      "address": "0x800636d8",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "SetPosition__15CParticleSystemRC8CVector3",
+      "address": "0x80063950",
+      "size": 632,
+      "binding": 1
+    },
+    {
+      "name": "SetBasis__15CParticleSystemRC8CVector3N21",
+      "address": "0x80063bc8",
+      "size": 664,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BuildRotX__7CMatrixf": "0x8007ac80",
+    "BuildRotY__7CMatrixf": "0x8007acf8",
+    "BuildRotZ__7CMatrixf": "0x8007ad70",
+    "BuildRot__7CMatrixRC8CVector3f": "0x8007ab7c",
+    "FastInverse__7CMatrixRC7CMatrix": "0x8007b164",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "SetFront__7CMatrixRC8CVector3": "0x8007ae44",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "SetRight__7CMatrixRC8CVector3": "0x8007ae28",
+    "SetUp__7CMatrixRC8CVector3": "0x8007ae60",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

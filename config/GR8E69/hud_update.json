@@ -1,0 +1,80 @@
+{
+  "id": "hud_update",
+  "source": "src/ui/hud_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-ffast-math"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801765c0",
+      "size": 1688
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802acdd0",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateCompass__15CHeadsUpDisplayf",
+      "address": "0x801765c0",
+      "size": 396,
+      "binding": 1
+    },
+    {
+      "name": "UpdateWeaponName__15CHeadsUpDisplayf",
+      "address": "0x8017674c",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "UpdateAmmo__15CHeadsUpDisplayf",
+      "address": "0x801767c8",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "Update__15CHeadsUpDisplayf",
+      "address": "0x801768a0",
+      "size": 772,
+      "binding": 1
+    },
+    {
+      "name": "LetterboxTransition__15CHeadsUpDisplayf25_LetterboxTransitionStyle",
+      "address": "0x80176ba4",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentWeaponClipAmoCount__C13CPlayerObject": "0x800b42f4",
+    "GetCurrentWeaponReserveAmoCount__C13CPlayerObject": "0x800b432c",
+    "GetCurrentWeapon__C13CPlayerObject": "0x800b41a8",
+    "GetNumGrenades__C13CPlayerObject": "0x800b4ee4",
+    "MathFunClamp__H1Zf_X01X01X01_X01": "0x8027aa30",
+    "SetFeedback__13CInputManagerUcUcUcff": "0x800d704c",
+    "UpdateCompassRotation__15CHeadsUpDisplayP13CPlayerObjectf": "0x80175524",
+    "UpdateHitStatus__15CHeadsUpDisplayf": "0x80176548",
+    "cosf": "0x80270840",
+    "g_PauseScreen": "0x802f8040",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "HeadsUpDisplay.cpp",
+  "original_file_index": 1509
+}

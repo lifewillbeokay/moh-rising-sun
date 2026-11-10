@@ -1,0 +1,64 @@
+{
+  "id": "fe_referencelist",
+  "source": "src/frontend/fe_referencelist.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055018",
+      "size": 496
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReferenceList__9FERefListP9FERefList",
+      "address": "0x80055018",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "AddNode__9FERefListP9FEMinNodeT1",
+      "address": "0x800550a0",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "RemNode__9FERefListP9FEMinNode",
+      "address": "0x80055100",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "RemHead__9FERefList",
+      "address": "0x80055170",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetNumElements__9FERefList",
+      "address": "0x800551ac",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetHead__C9FERefList": "0x802780fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FERefList.cpp",
+  "original_file_index": 333
+}

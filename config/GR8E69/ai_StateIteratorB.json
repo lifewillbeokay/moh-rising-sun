@@ -1,0 +1,108 @@
+{
+  "id": "ai_StateIteratorB",
+  "source": "src/eala/StateIteratorB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008615c",
+      "size": 1644
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029bbb8",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "EvalPose__Q34EALA9Character13StateIteratorfPf",
+      "address": "0x8008615c",
+      "size": 700,
+      "binding": 1
+    },
+    {
+      "name": "HandleMessage__Q34EALA9Character13StateIterator",
+      "address": "0x80086418",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "HandleOpcode__Q34EALA9Character13StateIteratorRQ34EALA9Character6Opcode",
+      "address": "0x80086480",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "HandlePose__Q34EALA9Character13StateIteratorUi",
+      "address": "0x800864fc",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "HandleRotation__Q34EALA9Character13StateIteratorf",
+      "address": "0x80086570",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "HandleCycleEnd__Q34EALA9Character13StateIterator",
+      "address": "0x800865ec",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "HandleAnimDuration__Q34EALA9Character13StateIteratorf",
+      "address": "0x80086654",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "Promote__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
+      "address": "0x800866d0",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "Dump__Q34EALA9Character13StateIteratorUi",
+      "address": "0x80086768",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Create__Q34EALA9Character8SentinelRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUiPQ34EALA9Character4Task": "0x8008e3f0",
+    "Current__Q34EALA9Character13Choreographer": "0x8007fd10",
+    "DebugMsg__FPCce": "0x80279094",
+    "DumpPrefix__Q34EALA9Character4TaskUi": "0x8008fd24",
+    "EvalSubstate__Q34EALA9Character5StateUiPQ34EALA9Character4Task": "0x80084d18",
+    "GetState__CQ34EALA9Character4Task": "0x8008fa2c",
+    "HandleAnimDuration__Q34EALA9Character13Choreographerf": "0x8008150c",
+    "HandleCycleEnd__Q34EALA9Character13Choreographer": "0x800814c0",
+    "HandleMessage__Q34EALA9Character13Choreographer": "0x80081384",
+    "HandleOpcode__Q34EALA9Character13ChoreographerRQ34EALA9Character6Opcode": "0x8008142c",
+    "HandleRotation__Q34EALA9Character13Choreographerf": "0x8008146c",
+    "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task": "0x8008fac0",
+    "SetCorePose__Q34EALA9Character4TaskUi": "0x8008fc70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StateIterator.cpp",
+  "original_file_index": 596
+}

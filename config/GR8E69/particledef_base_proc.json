@@ -1,0 +1,91 @@
+{
+  "id": "particledef_base_proc",
+  "source": "src/particles/particledef_base_proc.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006b2ec",
+      "size": 612
+    }
+  ],
+  "functions": [
+    {
+      "name": "__12CParticleDef",
+      "address": "0x8006b2ec",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "_._12CParticleDef",
+      "address": "0x8006b300",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "Init__12CParticleDefP24LevelFileContentsStruct_",
+      "address": "0x8006b334",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "IsValid__12CParticleDef",
+      "address": "0x8006b33c",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "__16CProcParticleDef",
+      "address": "0x8006b354",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "_._16CProcParticleDef",
+      "address": "0x8006b390",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "Init__16CProcParticleDefP24LevelFileContentsStruct_",
+      "address": "0x8006b3f0",
+      "size": 352,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetClampMode__Q24EAGL3TARQ24EAGL9ClampMode": "0x801e0b6c",
+    "SetEmitDelay__16CProcParticleDefi": "0x8006b568",
+    "SetEmitRate__16CProcParticleDefi": "0x8006b588",
+    "SetLocMax__16CProcParticleDeffff": "0x8006b668",
+    "SetLocMin__16CProcParticleDeffff": "0x8006b5d4",
+    "SetVelMax__16CProcParticleDeffff": "0x8006b790",
+    "SetVelMin__16CProcParticleDeffff": "0x8006b6fc",
+    "TLT_LoadFromRepository__FPCcPiPb": "0x801a9c88",
+    "_._Q24EAGL3TAR": "0x801e0ae0",
+    "_12EAGLInternal.EAGLMalloc": "0x802d2e08",
+    "__Q24EAGL3TARPC5SHAPE": "0x801e09cc",
+    "__builtin_delete": "0x801a8990",
+    "_vt.12CParticleDef": "0x802e26c0",
+    "_vt.16CProcParticleDef": "0x802e2660"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particledef.cpp",
+  "original_file_index": 504
+}

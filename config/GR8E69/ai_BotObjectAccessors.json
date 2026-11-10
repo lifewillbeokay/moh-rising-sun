@@ -1,0 +1,158 @@
+{
+  "id": "ai_BotObjectAccessors",
+  "source": "src/ai/BotObjectAccessors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800991dc",
+      "size": 604
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029de34",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetClock__10CBotObject",
+      "address": "0x800991dc",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetEnemyAI__10CBotObjectUi",
+      "address": "0x800991e8",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetEnemyInfo__10CBotObjectUi",
+      "address": "0x800991fc",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetpEnemyInfo__10CBotObjectUi",
+      "address": "0x8009920c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "EnemyInView__10CBotObject",
+      "address": "0x8009921c",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetHealth__10CBotObject",
+      "address": "0x80099248",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetName__10CBotObject",
+      "address": "0x80099254",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetPlayerIndex__10CBotObject",
+      "address": "0x8009925c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetTeam__10CBotObject",
+      "address": "0x80099264",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetHealthPercent__10CBotObject",
+      "address": "0x80099270",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SetLookTarget__10CBotObjectRC8CVector3",
+      "address": "0x80099290",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "SetMoveTarget__10CBotObjectRC8CVector3",
+      "address": "0x80099334",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "LookAlongPath__10CBotObject",
+      "address": "0x80099380",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "FollowingAStar__10CBotObject",
+      "address": "0x8009938c",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "StopAStar__10CBotObject",
+      "address": "0x800993a4",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "WithinGrenadeBlastRadius__10CBotObject",
+      "address": "0x800993b4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentPathNode__10CBotObject",
+      "address": "0x800993e8",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentCampingPoint__10CBotObject",
+      "address": "0x800993f4",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetPlayerIndex__10CBotObjectUc",
+      "address": "0x8009940c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetName__10CBotObjectPCc",
+      "address": "0x80099414",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_BotMan": "0x803032f0",
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -617,3 +617,42 @@ its existing `AnimUtil.h` attribution; rotation expressions reuse this project's
 checked transform reconstruction with target operand order. ProDG 3.8.1 and the
 normal animation flags match every accepted generated allocated byte. Complete
 local image verification is required before publication; runtime remains untested.
+
+## Character skeleton lookups
+
+`EALA::Character::Skeleton`'s joint lookups forward to its `SkeletonData` when the pointer at `+0` is
+set. The view is in [`CharacterSkeleton.h`](../include/game/CharacterSkeleton.h). The test as a
+`HasData` inline is inferred from the materialized boolean in each body; that name is descriptive.
+
+`GetStillPose` and `StorePose` go through the word at `+12` of `SkeletonData`, an `EAGLAnim::Skeleton`; the
+member name is inferred. `GetJointIndex` maps the two `TYPE_JOINT` values it tests to themselves and anything
+else to -1; only the type name is recovered.
+
+## Character task tree
+
+`EALA::Character::Task` ([`CharacterTask.h`](../include/game/CharacterTask.h)) is a reference-counted
+`Resource` that is also an `ISubject`, with a weak pointer to its parent task, a counted pointer to its
+`State`, a substate index and a core pose. The virtual table order, member offsets and every method name come
+from the image; member names are inferred from use. The constant 99 stored as the initial core pose acts as
+"no pose": `StateIterator::Set` will not look for an authored transition when either side has it.
+
+A parent-less task's messages go to the current `Choreographer`. `StateIterator` keeps one child task and,
+when the child stops being busy, asks the state for the next substate; after eleven attempts it installs a
+`Sentinel`. `DumpPrefix` writes its indent spaces after the four-character `<!> ` tag but puts the terminator
+at the unshifted index, so the printed prefix is shorter than the indent it wrote: that is the target's
+behavior and is kept.
+
+`EALA::Resource`'s destructor is inline in its class because every derived destructor inlines it, while its
+out-of-line copy is a separate weak function; `ResourceTypes.h` is a `#pragma interface` header so that users
+do not emit that copy. `StateIterator`'s pool allocator and its size live in the file's anonymous namespace,
+whose compiler-generated symbol names cannot be spelled in source, so `operator new`, `operator delete` and the
+static initializer are not reconstructed yet. Both classes' destructors are also out: defining them emits their
+secondary `_vt.X.8ISubject` tables, which the unit manifests cannot own yet. `StateIterator::Set(unsigned int,
+float)` stays out too: the source form has its argument address loads one block later than the image.
+
+`Choreographer` runs a map from skeleton partition to context (a counted task pointer, the `EALA::Task` to run
+when that task sends a message, an enabled word and a float) and passes rotation, duration and cycle-end events to its
+`ChoreographerClient`. Its context stack is in an anonymous namespace, so `Current`, `EvalPose`, `SetState` and
+the string form of `SetAuthoredTransitionState` wait for the same reason as the pool allocators. `State` keeps a
+`Substate` pointer per index after a 40-byte header, a name map, and a counted loader pointer; the `State`
+methods here come from the image and member names are inferred. `Operation`'s virtual order comes from its table.

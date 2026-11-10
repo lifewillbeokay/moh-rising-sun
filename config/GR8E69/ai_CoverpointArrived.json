@@ -1,0 +1,44 @@
+{
+  "id": "ai_CoverpointArrived",
+  "source": "src/ai/CoverpointArrived.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f1828",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Arrived__19CCoverpointBehavior",
+      "address": "0x800f1828",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "EndCoverpoint__19CCoverpointBehavior",
+      "address": "0x800f1834",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

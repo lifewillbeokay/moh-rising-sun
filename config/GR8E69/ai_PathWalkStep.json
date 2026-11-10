@@ -1,0 +1,64 @@
+{
+  "id": "ai_PathWalkStep",
+  "source": "src/ai/PathWalkStep.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800eaee4",
+      "size": 328
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a445c",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "WalkAStarPath__18CAIAreaPathFinding",
+      "address": "0x800eaee4",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "ClearSearchNodeQueue__18CAIAreaPathFindingR20CAreaSearchNodeQueue",
+      "address": "0x800eafb4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "ClearSearchNodeList__18CAIAreaPathFindingR19CAreaSearchNodeList",
+      "address": "0x800eafd8",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Clear__20CAreaSearchNodeQueue": "0x800e19d8",
+    "DeleteNode__15CAreaSearchNodeP15CAreaSearchNode": "0x800e12f4",
+    "DistanceXY__C8CVector3RC8CVector3": "0x8007bd44",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "IsEmpty__11CLinkedList": "0x800e0e60",
+    "RemoveElement__11CLinkedListP18CLinkedListElement": "0x800e0da0",
+    "UpdateAStarPathWalk__18CAIAreaPathFinding": "0x800ea2e0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

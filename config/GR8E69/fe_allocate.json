@@ -1,0 +1,59 @@
+{
+  "id": "fe_allocate",
+  "source": "src/frontend/fe_allocate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004c584",
+      "size": 352
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297ad4",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Allocate__15FEMsgTargetListUl",
+      "address": "0x8004c584",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "AppendTarget__15FEMsgTargetListP8FEObject",
+      "address": "0x8004c640",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "GetMessageTargets__9FEPackageUl",
+      "address": "0x8004c69c",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "__builtin_vec_delete": "0x801a89b0",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEMsgTargetList.cpp",
+  "original_file_index": 309
+}

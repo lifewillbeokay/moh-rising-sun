@@ -449,3 +449,84 @@ original; the last four reach file-local port state tables in a file with no rec
 The [animated-texture sweep](research/broad-source-sweep.md#animated-textures)
 reconstructs `AnimShape` lookup, CRC controls, list operations and frame-selection
 helpers. Frame advancement and TAR rebinding remain measured partial source.
+
+## Render context
+
+`EAGL::RenderContext` and its helpers come from one original file: a `gcc2_compiled.`
+marker opens it at `0x801db4b8` and the next closes it at `0x801dd444`. Class, method and
+static-member names come from the symbol table. Instance member names are inferred from
+use; [`EAGLRenderContext.h`](../include/game/EAGLRenderContext.h) establishes only the
+offsets the code touches, so it is a view and not a complete layout.
+
+Verified by the constructors and tables: `RenderContext` holds its extension at `+16` and
+its private data at `+56`, with `RenderContextBase`'s table pointer at `+12` and the device
+at `+236`. Table pointers follow each class's own fields. `RenderContextPrivate` defaults to
+640 by 448 and a `0x40000` FIFO. `GetEFBAsTAR` uses a seven-byte soft vertical filter.
+
+Inferred: the two base classes' destructors are the only virtuals of their tables, and each
+is both inlined into the derived destructor and present out of line, so their headers give
+inline bodies. Those headers use `#pragma interface`, and the fragments that hold the
+out-of-line copies use `#pragma implementation`. That pairing is a project arrangement, as
+for `IVolume`. The `GetEFBAsTAR` parameter names, `gDoScreenClear`'s meaning and the private
+members named `unknown_*` are not established.
+
+## CProjector
+
+Projectors live in a pool, `g_ProjectorList`, with the same five-word shape as the particle system
+pool, linked through `+608`. [`Projector.h`](../include/game/Projector.h) holds the frustum at `+64`,
+the local-to-world matrix at `+368`, the projection matrix at `+432`, the radius at `+564` and four
+frustum parameters at `+568`. Names are inferred from use. `SetTMLocalToWorld` rebuilds the frustum
+from those parameters. `Create`, `InitClass`, `StateSetup`, `Attach`, `BeginUpdate` and the constructors
+are not reconstructed.
+
+`CVolFrustum` is 304 bytes (`Create` allocates that size). Ten collision tests, `TestVisibility` and
+`GetExtents` build a `CVolSphere` from its bounding centre at `+64` and radius at `+272`, set the radius
+through the table, and delegate to the sphere. See [`VolFrustum.h`](../include/game/VolFrustum.h).
+
+## Viewport
+
+`EAGL::ViewPort` occupies 428 bytes: `NewViewPort` allocates that size and the destructor frees
+it. Its private data sits at `+12`, viewports link through `+420`, and `RenderContextBase` keeps
+the list head and the current viewport in its private base. Class, method and static names come
+from the symbol table. Member names in
+[`EAGLViewPort.h`](../include/game/EAGLViewPort.h) are inferred from use.
+
+`IsSphereInView` tests a transformed centre against the near and far clips, then, for a
+perspective view, against four side planes stored as a tangent and a sine. `EnactFogSettings`
+copies the render context's fog state to GX and optionally builds a range-adjust table from the
+projection and the viewport centre. `EndView` also appears inline in `ReBegin`, so its header
+gives an inline body, emitted through the same `#pragma interface` and `#pragma implementation`
+arrangement as the render context bases.
+
+Not reconstructed here: `SetShape`, `SetPerspective`, `BeginView`, `ClearViewPort`,
+`SetOrthographicScreenSpace`, `DeleteViewPort` and the file's static initializer.
+`SetOrthographicScreenSpace` compiles to the original instructions, but its literals start at an
+address that is not 8-aligned ahead of a double, so it cannot stand as its own section.
+
+## Movie player
+
+`CMoviePlayer` lives in the original `rcmpplayer.cpp`, alongside the `RCMPAlloc`
+hooks. Its heap setup and teardown, language column table, constructor, and `PlayMovie`
+are reconstructed. Member names are inferred from the code. `Play`, the no-argument
+`SetupSubtitle` and `GetSubtitle` are not yet: they share `.rodata` that starts with an
+empty string and the unreferenced `bad_alloc` string, and a double literal behind that.
+
+## Draw context
+
+`CDrawContext` holds thirteen render bins at `+0x120`, each a queue of `DrawCommandData`. Each
+bin has the shape of STLport's `priority_queue`, shown by the `push_heap` and `pop_heap`
+instances; the project's STLport headers lack that class, so the source names a small local
+queue with the same members. `ExecCommands` swaps bins 8 and 9 when
+`b_ReverseParticleVsTranslucentSorting` is set. `CDrawContextEAGL` keeps its viewport at
+`+0x234`. Verified: command queuing, the EAGL constructor, `BeginDraw`, `EndDraw`, class
+setup and shutdown. Inferred: member names and the small `Rebuild` helper. Not reconstructed:
+the two destructors, whose base body is emitted weak, `GetFogValue` (one `fmr` of a known
+zero not reproduced), `SetCamera` and `SetViewport`.
+
+## Motion blur
+
+`MotionBlur` is a namespace, shown by its function and static symbols. `SetFrameBlur` starts a
+ramp to an amount; `Update` runs state 1 (ramp up), 2 (hold) and 3 (ramp down). `Update`'s empty
+`case 0` gives the decision tree its root and is inferred. The state numbers' meanings are
+inferred from the code. An unreferenced zero word at `0x8029a5c8` sits between `Update`'s and
+`Pause`'s literals; no source for it is known, so `Pause` is its own fragment.

@@ -1,0 +1,132 @@
+{
+  "id": "eagl_rendercontext_accessors",
+  "source": "src/eagl/eagl_rendercontext_accessors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dcbf0",
+      "size": 520
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q212EAGLInternal24RenderContextPrivateBase",
+      "address": "0x802ec250",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetSize__Q24EAGL13RenderContextff",
+      "address": "0x801dcbf0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetSize__CQ24EAGL13RenderContextRfT1",
+      "address": "0x801dcbfc",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetZBufferDepth__Q24EAGL13RenderContexti",
+      "address": "0x801dcc10",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SetDepthBufferType__Q24EAGL13RenderContextQ24EAGL15DepthBufferType",
+      "address": "0x801dcc14",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetSyncToVBL__Q24EAGL13RenderContextb",
+      "address": "0x801dcc1c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SetZWritesEnable__Q24EAGL13RenderContextb",
+      "address": "0x801dcc2c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "WaitForDrawsToComplete__Q24EAGL22RenderContextExtension",
+      "address": "0x801dcc5c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SetVolatileBufferSize__Q24EAGL22RenderContextExtensionUi",
+      "address": "0x801dcc8c",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentVolatileBuffer__Q24EAGL22RenderContextExtension",
+      "address": "0x801dcca8",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "StartDataStuffing__Q24EAGL22RenderContextExtensionPvUi",
+      "address": "0x801dccc4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "StuffData__Q24EAGL22RenderContextExtensionPCvUi",
+      "address": "0x801dcd14",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "StopDataStuffing__Q24EAGL22RenderContextExtension",
+      "address": "0x801dcd98",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "_._Q212EAGLInternal24RenderContextPrivateBase",
+      "address": "0x801dcdc4",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DCInvalidateRange": "0x802545a8",
+    "GXDrawDone": "0x80244c00",
+    "GXRedirectWriteGatherPipe": "0x802430c8",
+    "GXRestoreWriteGatherPipe": "0x802431d0",
+    "SetRenderContextStates__Q24EAGL21GeoPrimStateExtension": "0x801de99c",
+    "_Q212EAGLInternal20RenderContextPrivate.gUseVSyncCallback": "0x802cdb38",
+    "_Q24EAGL13RenderContext.gCurrentFrameNumber": "0x802ce208",
+    "_Q24EAGL21GeoPrimStateExtension.gZWritesEnable": "0x802ce2d4",
+    "_Q24EAGL22RenderContextExtension.gCurrentVolatileBuffer": "0x802cdb6c",
+    "_Q24EAGL22RenderContextExtension.gDataStuffing": "0x802cdb70",
+    "_Q24EAGL22RenderContextExtension.gVolatileBufferSize": "0x802cdb68",
+    "_Q24EAGL22RenderContextExtension.gVolatileBuffers": "0x802cdb60",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

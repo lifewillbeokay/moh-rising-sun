@@ -1,0 +1,50 @@
+{
+  "id": "animshape_copy",
+  "source": "src/animshape/copy.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006a79c",
+      "size": 316
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._9AnimShape",
+      "address": "0x8006a79c",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "__as__9AnimShapeRC9AnimShape",
+      "address": "0x8006a820",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemoveFromGlobalList__9AnimShape": "0x8006a51c",
+    "__as__Q24_STLt6vector2ZPQ24EAGL3TARZQ24_STLt9allocator1ZPQ24EAGL3TARRCQ24_STLt6vector2ZPQ24EAGL3TARZQ24_STLt9allocator1ZPQ24EAGL3TAR": "0x8027a8ec",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

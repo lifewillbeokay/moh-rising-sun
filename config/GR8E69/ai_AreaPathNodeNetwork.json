@@ -1,0 +1,74 @@
+{
+  "id": "ai_AreaPathNodeNetwork",
+  "source": "src/ai/AreaPathNodeNetwork.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e762c",
+      "size": 344
+    },
+    {
+      "name": ".data",
+      "address": "0x802c3488",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetPathNodeByIndex__13AIPathFindingUs",
+      "address": "0x800e762c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetIndexByPathNode__13AIPathFindingP13CAreaPathNode",
+      "address": "0x800e7640",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "IsPointOnNetwork__13AIPathFindingRC8CVector3",
+      "address": "0x800e7654",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "UpdateAStarNodesOutOfArea__13AIPathFindingv",
+      "address": "0x800e769c",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "ResetAreaPathNodes__13AIPathFindingv",
+      "address": "0x800e7714",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ContainsPoint__C13CAreaPathNodeRC8CVector3": "0x800e7890",
+    "GetClosestPathNode__13AIPathFindingRC8CVector3i": "0x800e75ac",
+    "ResetOutOfArea__13CAreaPathNode": "0x800e89f0",
+    "UpdateOutOfArea__13CAreaPathNode": "0x800e8868",
+    "g_iNumPathFindingAreas": "0x802c347c",
+    "g_pPathFindingAreas": "0x802c3478"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

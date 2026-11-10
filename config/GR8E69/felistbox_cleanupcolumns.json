@@ -1,0 +1,73 @@
+{
+  "id": "felistbox_cleanupcolumns",
+  "source": "src/frontend/felistbox_cleanupcolumns.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004a6a0",
+      "size": 580
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029781c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CleanupColumns__9FEListBox",
+      "address": "0x8004a6a0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "CleanupRows__9FEListBox",
+      "address": "0x8004a6f0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "CleanupCells__9FEListBox",
+      "address": "0x8004a740",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "RecalculateCummulative__9FEListBox",
+      "address": "0x8004a7e4",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "CompleteScroll__9FEListBox",
+      "address": "0x8004a860",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetPCellData__9FEListBoxUlUl",
+      "address": "0x8004a8c8",
+      "size": 28,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

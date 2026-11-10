@@ -8,8 +8,9 @@ enum TLTResourceID { TLTResourceUnknown = 0 };
 
 struct TLTResourceEntry {
     int unknown00;
-    int unknown04;
-    int value; // +0x08
+    int count;  // +0x04: value records, for a table of names.
+    int values[0]; // +0x08: `count` records; extent is not established here.
+    int value;
 };
 
 // A level-contents entry: 12 bytes, a type and a table of value records.

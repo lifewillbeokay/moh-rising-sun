@@ -1,0 +1,49 @@
+{
+  "id": "gamesettings_getprofilescrcvalue",
+  "source": "src/shell/gamesettings_getprofilescrcvalue.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017180c",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802abf94",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetProfilesCRCValue__13CGameSettings",
+      "address": "0x8017180c",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Reset__4CCRC": "0x802868f8",
+    "__apl__4CCRCUc": "0x80286904",
+    "__builtin_delete": "0x801a8990",
+    "u4Reflect__4CCRCUiUi": "0x802869b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

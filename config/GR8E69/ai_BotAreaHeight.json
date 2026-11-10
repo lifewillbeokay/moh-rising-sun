@@ -1,0 +1,43 @@
+{
+  "id": "ai_BotAreaHeight",
+  "source": "src/ai/BotAreaHeight.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009fff8",
+      "size": 44
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e568",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetHeightDiff__FR8CVector3N30",
+      "address": "0x8009fff8",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotArea.cpp",
+  "original_file_index": 797
+}

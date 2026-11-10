@@ -1,0 +1,49 @@
+{
+  "id": "scene_SoldierPartition",
+  "source": "src/scene/SoldierPartition.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c1110",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableSkeletalPartition__14CSoldierObjectQ214CSoldierObject9Partition",
+      "address": "0x800c1110",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "DisableSkeletalPartition__14CSoldierObjectQ214CSoldierObject9Partition",
+      "address": "0x800c1160",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Disable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition": "0x80080e48",
+    "Enable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition": "0x80080d1c",
+    "_14CSoldierObject.m_partitionLower": "0x80306c84",
+    "_14CSoldierObject.m_partitionUpper": "0x80306cb4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

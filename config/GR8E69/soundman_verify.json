@@ -1,0 +1,47 @@
+{
+  "id": "soundman_verify",
+  "source": "src/sound/SoundManVerify.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015e100",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802aa320",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "VerifyLevelBanks__9cSoundMan",
+      "address": "0x8015e100",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundMan.cpp",
+  "original_file_index": 1414
+}

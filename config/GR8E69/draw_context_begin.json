@@ -1,0 +1,74 @@
+{
+  "id": "draw_context_begin",
+  "source": "src/camera/DrawContextBegin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012efd0",
+      "size": 648
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7810",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "BeginDraw__16CDrawContextEAGLb",
+      "address": "0x8012efd0",
+      "size": 612,
+      "binding": 1
+    },
+    {
+      "name": "EndDraw__16CDrawContextEAGL",
+      "address": "0x8012f234",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BeginView__Q24EAGL8ViewPort": "0x801e2de0",
+    "BuildScale__7CMatrixRC8CVector3": "0x8007ab30",
+    "ClearViewPort__Q24EAGL8ViewPortQ24EAGL10ClearFlags": "0x801e33b0",
+    "EndView__Q24EAGL8ViewPort": "0x801e3df8",
+    "GXGetViewportv": "0x80248de8",
+    "GXSetViewport": "0x80248da0",
+    "GetHFOV__C7CCamera": "0x8012c560",
+    "GetScreenshotViewportOffsets": "0x800454cc",
+    "GetVFOV__C7CCamera": "0x8012c588",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "Multiply__7CMatrixRC7CMatrixT1": "0x802794b8",
+    "ScreenshotIsActive": "0x800454ac",
+    "SetOrthographicScreenSpace__Q24EAGL8ViewPortff": "0x801e3ce0",
+    "SetPerspective__Q24EAGL8ViewPortffff": "0x801e2c14",
+    "SetShape__Q24EAGL8ViewPortffffff": "0x801e28d4",
+    "SetViewMatrix__Q24EAGL8ViewPortRC7MATRIX4": "0x801e3c48",
+    "SetZWritesEnable__Q24EAGL13RenderContextb": "0x801dcc2c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "_7CMatrix.s_TempMat": "0x802fbf00",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_screen": "0x802f9920"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "draw_context.cpp",
+  "original_file_index": 1271
+}

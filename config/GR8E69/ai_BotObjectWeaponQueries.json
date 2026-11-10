@@ -1,0 +1,70 @@
+{
+  "id": "ai_BotObjectWeaponQueries",
+  "source": "src/ai/BotObjectWeaponQueries.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80099ad0",
+      "size": 220
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029de74",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CanFireWeapon__10CBotObject",
+      "address": "0x80099ad0",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "StartReload__10CBotObject",
+      "address": "0x80099b2c",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "FireAtEnemy__10CBotObject",
+      "address": "0x80099b8c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Jump__10CBotObject",
+      "address": "0x80099b98",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetGrenade__10CBotObject",
+      "address": "0x80099ba4",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetClock__10CBotObject": "0x800991dc",
+    "GetCurrentWeapon__C14CSoldierObject": "0x800c2f6c",
+    "StartReloading__7CWeapon": "0x8014bad0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

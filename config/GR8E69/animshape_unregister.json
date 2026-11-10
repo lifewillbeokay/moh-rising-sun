@@ -1,0 +1,43 @@
+{
+  "id": "animshape_unregister",
+  "source": "src/animshape/unregister.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006aed4",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "UnRegisterTAR__9AnimShapeRQ24EAGL3TAR",
+      "address": "0x8006aed4",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "find__H2ZPPQ24EAGL3TARZPQ24EAGL3TAR_4_STLX01X01RCX11_X01": "0x8027aa58",
+    "memmove": "0x8026668c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

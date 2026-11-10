@@ -19,12 +19,18 @@
     {
       "name": ".text",
       "address": "0x800d3160",
-      "size": 584
+      "size": 1064
     },
     {
       "name": ".rodata",
       "address": "0x802a170c",
       "size": 12
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q215CHierAnimObject9StateDone",
+      "address": "0x802e7360",
+      "size": 24,
+      "target_name": ".data"
     }
   ],
   "functions": [
@@ -51,18 +57,66 @@
       "address": "0x800d3304",
       "size": 164,
       "binding": 1
+    },
+    {
+      "name": "__Q215CHierAnimObject9StateDone",
+      "address": "0x800d33a8",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Execute__Q215CHierAnimObject9StateDone",
+      "address": "0x800d33cc",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetAnimationState__15CHierAnimObjectPCci",
+      "address": "0x800d3430",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "FindAttachNode__15CHierAnimObjectiP7CMatrix",
+      "address": "0x800d348c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "AttachAnimatedObject__15CHierAnimObject",
+      "address": "0x800d34f0",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "AsAnimObject__15CHierAnimObject",
+      "address": "0x800d3578",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsAnimObject__C15CHierAnimObject",
+      "address": "0x800d3580",
+      "size": 8,
+      "binding": 1
     }
   ],
   "externals": {
     "AttemptUpdateFromMotion__11CHierObjectf": "0x800d0cac",
     "AttemptUpdateOfAttachedObjects__11CHierObject": "0x800d0da0",
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
     "CommitUpdate__11CHierObject": "0x800d0e50",
+    "ExcludeCollision__6CSceneRC10ISceneNodeT1i": "0x801476b0",
     "FindAttachPoint__Q34EALA9Character8SkeletonPCc": "0x80082630",
+    "GetSlot__7CMatrixUi": "0x802790e0",
     "GetWorldLinearVelocity__C11CHierObject": "0x800d0b84",
     "OnCollision__11CHierObjectRC10CCollision": "0x800d1ea4",
+    "ReOrder__6CSceneP10ISceneNodeT1": "0x8014ac88",
     "SetAttachPointMatrix__11CHierObjectR7CMatrix": "0x800d24e8",
+    "SetAttached__11CAnimObjectb": "0x800a54cc",
     "SetInheritedMatrix__11CHierObjectR7CMatrix": "0x800d24c4",
-    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_scene": "0x803e6d90"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],

@@ -1,0 +1,46 @@
+{
+  "id": "gamesettings_initcontrollerfromoptions",
+  "source": "src/shell/gamesettings_initcontrollerfromoptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016f61c",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitControllerFromOptions__13CGameSettingsi",
+      "address": "0x8016f61c",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ButtonArrayToKeymap__13CGameSettingsPsP6KEYMAP": "0x8016fd3c",
+    "GetProfileIndexFromPlayerID__13CGameSettingsi": "0x801718e4",
+    "SetMasterBlockVibrations__13CInputManagerbUc": "0x800d7118",
+    "SetUpButtonConfig__13CGameSettingsiPs": "0x8016fe80",
+    "g_config_keymap": "0x802c302c",
+    "g_inputMgr": "0x803077c4",
+    "g_keymap": "0x802c2f2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

@@ -1,0 +1,67 @@
+{
+  "id": "ai_ChoreoA",
+  "source": "src/eala/ChoreoA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8007fdc4",
+      "size": 300
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q34EALA9Character13Choreographer",
+      "address": "0x802e2f88",
+      "size": 112,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._Q34EALA9Character13Choreographer",
+      "address": "0x8007fdc4",
+      "size": 284,
+      "binding": 1
+    },
+    {
+      "name": "AddPoseModifier__Q34EALA9Character13ChoreographerPQ44EALA9Character13Choreographer12PoseModifier",
+      "address": "0x8007fee0",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Disable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition": "0x80080e48",
+    "Enable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition": "0x80080d1c",
+    "EvalPose__Q34EALA9Character13Choreographerf": "0x8007fef0",
+    "GetAuthoredTransitionState__Q34EALA9Character13Choreographer": "0x80080cfc",
+    "GetBoneMask__Q34EALA9Character13Choreographer": "0x80080f7c",
+    "GetClient__Q34EALA9Character13Choreographer": "0x80081560",
+    "SetAuthoredTransitionState__Q34EALA9Character13ChoreographerPCc": "0x80080ae8",
+    "SetAuthoredTransitionState__Q34EALA9Character13ChoreographerRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5State": "0x80080c80",
+    "SetOpcodeHandler__Q34EALA9Character13ChoreographerPQ44EALA9Character6Opcode7Handler": "0x80080f74",
+    "SetState__Q34EALA9Character13ChoreographerPCcPQ24EALA4TaskfPCQ44EALA9Character8Skeleton9Partition": "0x8008055c",
+    "_M_erase__Q24_STLt8_Rb_tree5ZPCQ44EALA9Character8Skeleton9PartitionZQ24_STLt4pair2ZCPCQ44EALA9Character8Skeleton9PartitionZQ44EALA9Character13Choreographer7ContextZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCPCQ44EALA9Character8Skeleton9PartitionZQ44EALA9Character13Choreographer7ContextZQ44EALA9Character13Choreographer16PartitionCompareZQ24_STLt9allocator1ZQ24_STLt4pair2ZCPCQ44EALA9Character8Skeleton9PartitionZQ44EALA9Character13Choreographer7ContextPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCPCQ44EALA9Character8Skeleton9PartitionZQ44EALA9Character13Choreographer7Context": "0x8027c96c",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q24EALA8Resource": "0x802e2ed8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Choreographer.cpp",
+  "original_file_index": 577
+}

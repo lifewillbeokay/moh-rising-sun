@@ -1,0 +1,57 @@
+{
+  "id": "ai_AIActivityZone",
+  "source": "src/ai/AIActivityZone.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800ecd14",
+      "size": 204
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a46cc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsPointUsable__15CAIActivityZoneRC8CVector3",
+      "address": "0x800ecd14",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "UseMovingTarget__15CAIActivityZoneP10ISceneNodef",
+      "address": "0x800ecdbc",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "Disable__15CAIActivityZone",
+      "address": "0x800ecdd0",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIActivityZone.cpp",
+  "original_file_index": 1069
+}

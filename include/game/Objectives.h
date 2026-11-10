@@ -90,6 +90,8 @@ class CPlayerObjectives {
     int CheckIfAllMainObjectivsAreCompleted();
     int GetNumBonusObjectives();
     int GetNumCompletedBonusObjectives();
+    void UpdateUI(class FEPackage *);
+    void Serialize();
 };
 
 // Original shared storage; this declaration does not allocate a new object.

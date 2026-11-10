@@ -1,0 +1,70 @@
+{
+  "id": "pausemenu_reset",
+  "source": "src/ui/pausemenu_reset.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017e090",
+      "size": 536
+    }
+  ],
+  "functions": [
+    {
+      "name": "Reset__10CPauseMenuPCcb",
+      "address": "0x8017e090",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "QuitToShell__10CPauseMenub",
+      "address": "0x8017e174",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "RestartLevel__10CPauseMenu",
+      "address": "0x8017e1f4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "MPRestartLevel__10CPauseMenu",
+      "address": "0x8017e230",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "UnpauseGame__10CPauseMenu",
+      "address": "0x8017e27c",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__12ShellManagerPCc": "0x801818ec",
+    "RestoreLevelStartData__13CGameSettings": "0x80170248",
+    "SOUND_PauseAll__Fb": "0x80156660",
+    "SetNextMissionAndLevel__13CGameSettingsUiUii": "0x8016d8d4",
+    "SetPrevMissionAndLevel__13CGameSettingsUiUi": "0x8016d82c",
+    "g_GameFlow": "0x802f9ce0",
+    "g_GameSettings": "0x802f80c8",
+    "g_NumPlayers": "0x802c1b3c",
+    "g_Shell": "0x802f4420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

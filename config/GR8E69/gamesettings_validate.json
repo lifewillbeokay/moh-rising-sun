@@ -1,0 +1,83 @@
+{
+  "id": "gamesettings_validate",
+  "source": "src/shell/gamesettings_validate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80170b98",
+      "size": 560
+    }
+  ],
+  "functions": [
+    {
+      "name": "Validate__13CGameSettings",
+      "address": "0x80170b98",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsRUiUi",
+      "address": "0x80170b9c",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsRiUi",
+      "address": "0x80170c14",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsRUc",
+      "address": "0x80170c34",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsRb",
+      "address": "0x80170c7c",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsRf",
+      "address": "0x80170d04",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsR8CVector3",
+      "address": "0x80170d28",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SerializeValue__13CGameSettingsR11CQuaternion",
+      "address": "0x80170d70",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Load__9BitBufferUi": "0x801720ac",
+    "Save__9BitBufferUiUi": "0x8017219c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

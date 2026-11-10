@@ -1,0 +1,40 @@
+{
+  "id": "gamesettings_savedata",
+  "source": "src/shell/gamesettings_savedata.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016f444",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "SaveData__13CGameSettings",
+      "address": "0x8016f444",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__9MohLoader": "0x80059414"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

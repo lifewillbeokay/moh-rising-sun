@@ -1,0 +1,80 @@
+{
+  "id": "ai_BotManA",
+  "source": "src/ai/BotManA.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800907b4",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029d1e4",
+      "size": 4
+    },
+    {
+      "name": ".bss",
+      "address": "0x803054a0",
+      "size": 4,
+      "type": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BotSetup__Fv",
+      "address": "0x800907b4",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "BotClean__Fv",
+      "address": "0x80090810",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "BotRestart__Fv",
+      "address": "0x80090858",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetBotMem__Fv",
+      "address": "0x80090894",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanBotAreaData__Fv": "0x8009f3c4",
+    "DWI_free": "0x801a8894",
+    "DestroyBots__Fv": "0x8009071c",
+    "FindJumpConnections2__Fv": "0x8009fc90",
+    "InitAreaEdges__Fv": "0x800a0654",
+    "InitBotAreaData__Fv": "0x8009f320",
+    "SetupCampingPoints__7CBotMan": "0x8009168c",
+    "ShrinkAreaMesh__Fv": "0x8009fc84",
+    "g_BotMan": "0x803032f0",
+    "g_NumBotsCreated": "0x802c21d0",
+    "g_pBotMem": "0x802c21d4",
+    "g_pBots": "0x80305484"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotMan.cpp",
+  "original_file_index": 670
+}

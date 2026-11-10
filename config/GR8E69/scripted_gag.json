@@ -1,0 +1,128 @@
+{
+  "id": "scripted_gag",
+  "source": "src/ai/ScriptedGag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e6408",
+      "size": 2768
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3ec8",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterNavPoint__FiP8BSObject",
+      "address": "0x800e6408",
+      "size": 396,
+      "binding": 1
+    },
+    {
+      "name": "UnregisterAllNavPoints__Fv",
+      "address": "0x800e6594",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "GetNavPoint__Fi",
+      "address": "0x800e65fc",
+      "size": 148,
+      "binding": 1
+    },
+    {
+      "name": "RegisterGagAction__12CScriptedGagP8BSObjectPCci",
+      "address": "0x800e6690",
+      "size": 428,
+      "binding": 1
+    },
+    {
+      "name": "UnregisterAllGagActions__12CScriptedGag",
+      "address": "0x800e683c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "StartGag__12CScriptedGagP8BSObjectPCci",
+      "address": "0x800e68f8",
+      "size": 308,
+      "binding": 1
+    },
+    {
+      "name": "StartGag__12CScriptedGagP8BSObjectUii",
+      "address": "0x800e6a2c",
+      "size": 388,
+      "binding": 1
+    },
+    {
+      "name": "__12CScriptedGag",
+      "address": "0x800e6bb0",
+      "size": 92,
+      "binding": 1
+    },
+    {
+      "name": "_._12CScriptedGag",
+      "address": "0x800e6c0c",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "RegisterAction__12CScriptedGagP8BSObjecti",
+      "address": "0x800e6c90",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "StartAction__12CScriptedGagP8BSObjecti",
+      "address": "0x800e6dec",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "DWI_alloc": "0x801a8670",
+    "DWI_getallocid": "0x801a8664",
+    "DWI_setallocid": "0x801a8658",
+    "Disable__15CAIActivityZone": "0x800ecdd0",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "Log__2AIP9CAIObjectPce": "0x8028391c",
+    "SetCurrentGag__14CSoldierObjectii": "0x800c2758",
+    "_M_erase__Q24_STLt8_Rb_tree5ZUiZQ24_STLt4pair2ZCUiZP12CScriptedGagZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUiZP12CScriptedGagZQ24_STLt4less1ZUiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUiZP12CScriptedGagPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCUiZP12CScriptedGag": "0x802853a4",
+    "_M_erase__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP8BSObjectPQ24_STLt13_Rb_tree_node1ZQ24_STLt4pair2ZCiZP8BSObject": "0x80284a00",
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "g_NavPoints": "0x8031cf7c",
+    "g_mapGags": "0x8031cf8c",
+    "insert_unique__Q24_STLt8_Rb_tree5ZUiZQ24_STLt4pair2ZCUiZP12CScriptedGagZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCUiZP12CScriptedGagZQ24_STLt4less1ZUiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCUiZP12CScriptedGagGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCUiZP12CScriptedGagZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCUiZP12CScriptedGagRCQ24_STLt4pair2ZCUiZP12CScriptedGag": "0x80285138",
+    "insert_unique__Q24_STLt8_Rb_tree5ZiZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt10_Select1st1ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt4less1ZiZQ24_STLt9allocator1ZQ24_STLt4pair2ZCiZP8BSObjectGQ24_STLt17_Rb_tree_iterator2ZQ24_STLt4pair2ZCiZP8BSObjectZQ24_STLt16_Nonconst_traits1ZQ24_STLt4pair2ZCiZP8BSObjectRCQ24_STLt4pair2ZCiZP8BSObject": "0x80284798",
+    "sprintf": "0x80263a3c"
+  },
+  "local_externals": [
+    "g_NavPoints",
+    "g_mapGags"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "ScriptedGag.cpp",
+  "original_file_index": 1047
+}

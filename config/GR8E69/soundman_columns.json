@@ -1,0 +1,58 @@
+{
+  "id": "soundman_columns",
+  "source": "src/sound/SoundManColumns.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015c9e0",
+      "size": 512
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateRowCRCMap__9cSoundMan",
+      "address": "0x8015c9e0",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "CreateBusRowCRCMap__9cSoundMan",
+      "address": "0x8015ca58",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetUbrCRC__9cSoundManPUc14ESoundUberTask",
+      "address": "0x8015cadc",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "GetBussCRC__9cSoundManPUc14ESoundUberTask",
+      "address": "0x8015cb58",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SoundMan.cpp",
+  "original_file_index": 1414
+}

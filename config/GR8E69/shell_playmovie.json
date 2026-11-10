@@ -1,0 +1,68 @@
+{
+  "id": "shell_playmovie",
+  "source": "src/frontend/shell_playmovie.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80181520",
+      "size": 232
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae114",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "PlayMovie__12ShellManager10EMovieTypeib",
+      "address": "0x80181520",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "GetPauseScreen__12ShellManager",
+      "address": "0x80181564",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "SetNumberJoyPads__12ShellManagerUc",
+      "address": "0x801815a4",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "LocalizePackage__12ShellManagerP9FEPackage",
+      "address": "0x801815e0",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindNode__C6FEListPCc": "0x80049980",
+    "GetMoviePathsStruct__19CShellMovieSettings10EMovieTypei": "0x80182d38",
+    "LocalizeObjects__12ShellManagerP8FEObject": "0x80181608",
+    "PlayMovie__12ShellManagerP16_ShellMoviePathsb": "0x801813b8",
+    "ResetJoyPad__7FEngine": "0x8004cd48",
+    "SetNumJoyPads__7FEngineUc": "0x8004cc64"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

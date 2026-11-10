@@ -1,0 +1,50 @@
+{
+  "id": "mc_getname",
+  "source": "src/frontend/mc_getname.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a718c",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetName__C9CMCDevice",
+      "address": "0x801a718c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetIndex__C9CMCDevice",
+      "address": "0x801a7194",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Invalidate__9CMCDeviceb",
+      "address": "0x801a71b4",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "gs_cards": "0x803f520c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

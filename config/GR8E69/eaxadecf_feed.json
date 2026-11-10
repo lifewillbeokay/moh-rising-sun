@@ -1,0 +1,67 @@
+{
+  "id": "eaxadecf_feed",
+  "source": "src/sound/ea/eaxadecf_feed.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022a844",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bfd08",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__nw__Q23Snd12CEAXABLKDecfUi",
+      "address": "0x8022a844",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__dl__Q23Snd12CEAXABLKDecfPv",
+      "address": "0x8022a870",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "__Q23Snd12CEAXABLKDecf",
+      "address": "0x8022a89c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Feed__Q23Snd12CEAXABLKDecfPvii",
+      "address": "0x8022a8c4",
+      "size": 60,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_3Snd.CODADelete": "0x8041ee38",
+    "_3Snd.CODANew": "0x8041ee34"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "eaxadecf.cpp",
+  "original_file_index": 3290
+}

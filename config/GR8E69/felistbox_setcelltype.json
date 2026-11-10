@@ -1,0 +1,58 @@
+{
+  "id": "felistbox_setcelltype",
+  "source": "src/frontend/felistbox_setcelltype.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049ea0",
+      "size": 340
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802977d0",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCellType__9FEListBoxUl",
+      "address": "0x80049ea0",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetCellString__9FEListBoxPCs",
+      "address": "0x80049f18",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "IncrementCellByColumn__9FEListBox",
+      "address": "0x80049fb4",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "GetStringLength__FPCs": "0x800568b8",
+    "__builtin_vec_delete": "0x801a89b0",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

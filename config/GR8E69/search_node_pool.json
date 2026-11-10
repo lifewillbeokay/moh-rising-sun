@@ -1,0 +1,95 @@
+{
+  "id": "search_node_pool",
+  "source": "src/ai/SearchNodePool.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e1188",
+      "size": 552
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3030",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetHeuristicValue__15CAreaSearchNodeRC8CVector3",
+      "address": "0x800e1188",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "GetCostValue__15CAreaSearchNodePC15CAreaSearchNode",
+      "address": "0x800e11c0",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "ResetSearchNodePool__Fv",
+      "address": "0x800e1234",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "GetFreeNode__15CAreaSearchNode",
+      "address": "0x800e12a4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "DeleteNode__15CAreaSearchNodeP15CAreaSearchNode",
+      "address": "0x800e12f4",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "Reset__15CAreaSearchNode",
+      "address": "0x800e1334",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetNextNonOptimizedNode__15CAreaSearchNode",
+      "address": "0x800e1370",
+      "size": 64,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DebugMsg__FPCce": "0x80279094",
+    "Distance__C8CVector3RC8CVector3": "0x8007bcd4",
+    "GetClosestPosition__C13CAreaPathNodeRC8CVector3R8CVector3": "0x800e7784",
+    "GetNextElement__18CLinkedListElement": "0x800e0cd8",
+    "Init__23CAreaSearchNodePoolInit": "0x80283af8",
+    "_._15CAreaSearchNode": "0x800e0ec4",
+    "__15CAreaSearchNode": "0x800e0e70",
+    "s_AStarSearchNodePoolInit": "0x8031cf10",
+    "s_rsnAreaAStarSearchNodeFreeList": "0x8031cf18",
+    "s_rsnAreaAStarSearchNodePool": "0x80309c10"
+  },
+  "local_externals": [
+    "s_AStarSearchNodePoolInit",
+    "s_rsnAreaAStarSearchNodeFreeList",
+    "s_rsnAreaAStarSearchNodePool"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SearchNode.cpp",
+  "original_file_index": 996
+}

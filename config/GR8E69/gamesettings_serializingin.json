@@ -1,0 +1,70 @@
+{
+  "id": "gamesettings_serializingin",
+  "source": "src/shell/gamesettings_serializingin.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80170ee0",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "SerializingIn__C13CGameSettings",
+      "address": "0x80170ee0",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SerializingOut__C13CGameSettings",
+      "address": "0x80170ef4",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "findSavePointSlot__Fi",
+      "address": "0x80170f08",
+      "size": 100,
+      "binding": 0
+    },
+    {
+      "name": "RegisterSavePoint__13CGameSettingsib",
+      "address": "0x80170f6c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "TriggerSavePointResponse__13CGameSettingsib",
+      "address": "0x80170fbc",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "APlayerStartExistsForSavePoint__Fi": "0x80121720",
+    "g_bSavePointSoft": "0x803e7584",
+    "g_uSavePointID": "0x803e7604"
+  },
+  "local_externals": [
+    "g_bSavePointSoft",
+    "g_uSavePointID"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

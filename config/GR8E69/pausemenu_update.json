@@ -1,0 +1,67 @@
+{
+  "id": "pausemenu_update",
+  "source": "src/ui/pausemenu_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017e800",
+      "size": 696
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802adbd0",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__10CPauseMenuf",
+      "address": "0x8017e800",
+      "size": 348,
+      "binding": 1
+    },
+    {
+      "name": "DrawUnplugged__10CPauseMenu",
+      "address": "0x8017e95c",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "Draw__10CPauseMenu",
+      "address": "0x8017e9f8",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckCheatCodes__10CPauseMenu": "0x8017eab8",
+    "Display__10CUnpluggediQ210CUnplugged7ePrompt": "0x8017c5e0",
+    "Draw__12ShellManager": "0x8017f994",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetCurrentState__14CDeviceManagerUc": "0x800d684c",
+    "GetPauseScreen__12ShellManager": "0x80181564",
+    "Process__12ShellManagerUi": "0x8017f7bc",
+    "Reset__10CPauseMenuPCcb": "0x8017e090",
+    "SOUND_PauseAll__Fb": "0x80156660",
+    "UpdateUnplugged__10CPauseMenu": "0x8017e5bc",
+    "__as__12FEWideStringPCs": "0x80056a60",
+    "g_Shell": "0x802f4420",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

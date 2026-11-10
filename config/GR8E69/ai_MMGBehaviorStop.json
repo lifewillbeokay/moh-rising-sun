@@ -1,0 +1,61 @@
+{
+  "id": "ai_MMGBehaviorStop",
+  "source": "src/ai/MMGBehaviorStop.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e2e10",
+      "size": 296
+    }
+  ],
+  "functions": [
+    {
+      "name": "StopBehavior__26CMountedMachineGunBehaviorb",
+      "address": "0x800e2e10",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseResources__26CMountedMachineGunBehavior",
+      "address": "0x800e2ea8",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "SetBehaviorStyle__26CMountedMachineGunBehavior17EAIHighLevelState",
+      "address": "0x800e2f0c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "DoIOwnMMG__26CMountedMachineGunBehaviorP13TriggerObject",
+      "address": "0x800e2f14",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetNextBehaviorType__9CAIObject": "0x800dc718",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "MarkMGAsUsed__FP13TriggerObjectb": "0x80122270"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MountedMachineGunBehavior.cpp",
+  "original_file_index": 1022
+}

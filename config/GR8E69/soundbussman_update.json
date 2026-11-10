@@ -1,0 +1,49 @@
+{
+  "id": "soundbussman_update",
+  "source": "src/sound/soundbussman_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8015f6f8",
+      "size": 248
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__13cSoundBussManf",
+      "address": "0x8015f6f8",
+      "size": 204,
+      "binding": 1
+    },
+    {
+      "name": "FindBuss__13cSoundBussManUi",
+      "address": "0x8015f7c4",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddInactiveRetroFit__13cSoundBussManP10cSoundBuss": "0x8015f8f4",
+    "IncrementClock__10cSoundBussf": "0x8015e6c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "cSoundBussMan.cpp",
+  "original_file_index": 1420
+}

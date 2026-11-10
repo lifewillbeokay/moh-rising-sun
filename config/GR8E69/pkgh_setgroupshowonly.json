@@ -1,0 +1,61 @@
+{
+  "id": "pkgh_setgroupshowonly",
+  "source": "src/frontend/pkgh_setgroupshowonly.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80188fb0",
+      "size": 204
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetGroupShowOnly__14PackageHandlerP7FEGroupPCc",
+      "address": "0x80188fb0",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "SetGroupShowOnly__14PackageHandlerUlUl",
+      "address": "0x80188ff4",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "QueueMessage__14PackageHandlerUi",
+      "address": "0x80189044",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "HandleTick__14PackageHandler",
+      "address": "0x80189078",
+      "size": 4,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindObjectByHash__9FEPackageUl": "0x80051274",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetGroupShowOnly__14PackageHandlerP7FEGroupUl": "0x80188ed8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605
+}

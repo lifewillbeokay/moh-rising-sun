@@ -1,0 +1,48 @@
+{
+  "id": "ai_AISoldierDeath",
+  "source": "src/ai/AISoldierDeath.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800de2ac",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnStateChange__16CAISoldierObject17EAIHighLevelStateT1",
+      "address": "0x800de2ac",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "OnDeath__16CAISoldierObject",
+      "address": "0x800de2d0",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AIDied__19CAIThreatEvaluationP8BSObject": "0x800f3a0c",
+    "GetGlobalListStart__9CAIObject": "0x800d9e48",
+    "OnStateChange__19CAIThreatEvaluation17EAIHighLevelStateT1": "0x800f3bc4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AISoldierObject.cpp",
+  "original_file_index": 982
+}

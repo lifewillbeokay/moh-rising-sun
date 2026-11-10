@@ -1,0 +1,43 @@
+{
+  "id": "scene_StaticFactoryMeshData",
+  "source": "src/scene/StaticFactoryMeshData.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cdf08",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitMeshData__FR14CAnyStaticMeshPC16LevelFileFields_i",
+      "address": "0x800cdf08",
+      "size": 180,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "InitAnim__14CAnyStaticMeshii": "0x800cc7c8",
+    "InitFrame__14CAnyStaticMeshiPvb": "0x800cc834",
+    "InitMesh__14CAnyStaticMeshPvb": "0x800cc768",
+    "TLT_LoadFromRepository__FPCcPiPb": "0x801a9c88"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticobjfactory.cpp",
+  "original_file_index": 924
+}

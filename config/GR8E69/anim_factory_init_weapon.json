@@ -1,0 +1,40 @@
+{
+  "id": "anim_factory_init_weapon",
+  "source": "src/scene/AnimObjFactoryInitWeapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cbc68",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitPlayerWeapon__18CAnimObjectFactoryP24LevelFileContentsStruct_i",
+      "address": "0x800cbc68",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LoadPlayerWeapon__18CAnimObjectFactoryP24LevelFileContentsStruct_P11CAnimObjDef": "0x800cb4b8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AnimObjFactory.cpp",
+  "original_file_index": 920
+}

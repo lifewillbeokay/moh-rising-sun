@@ -1,0 +1,69 @@
+{
+  "id": "fe_addnode",
+  "source": "src/frontend/fe_addnode.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049790",
+      "size": 532
+    }
+  ],
+  "functions": [
+    {
+      "name": "AddNode__9FEMinListP9FEMinNodeT1",
+      "address": "0x80049790",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "RemNode__9FEMinListP9FEMinNode",
+      "address": "0x800497fc",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "RemHead__9FEMinList",
+      "address": "0x80049878",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "FindNode__C9FEMinListUl",
+      "address": "0x800498b4",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "FindNode__C6FEListPCcP6FENode",
+      "address": "0x800498e8",
+      "size": 152,
+      "binding": 1
+    },
+    {
+      "name": "FindNode__C6FEListPCc",
+      "address": "0x80049980",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FEStricmp__FPCcT0": "0x80049608"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

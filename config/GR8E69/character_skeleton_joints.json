@@ -1,0 +1,63 @@
+{
+  "id": "character_skeleton_joints",
+  "source": "src/eagl_anim/character_skeleton_joints.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800826a4",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindJoint__CQ34EALA9Character8SkeletonPCc",
+      "address": "0x800826a4",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "FindJoint__CQ34EALA9Character8SkeletonUi",
+      "address": "0x800826e8",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "IsJointBvExcluded__CQ34EALA9Character8Skeletoni",
+      "address": "0x8008272c",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "PrepForSkinning__Q34EALA9Character8Skeleton",
+      "address": "0x80082770",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindJoint__CQ34EALA9Character12SkeletonDataPCc": "0x8008396c",
+    "FindJoint__CQ34EALA9Character12SkeletonDataUi": "0x800838d8",
+    "IsJointBvExcluded__Q34EALA9Character12SkeletonDatai": "0x80084168",
+    "PrepForSkinning__Q34EALA9Character12SkeletonDataPQ24EAGL9Transform": "0x80083c4c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Skeleton.cpp",
+  "original_file_index": 583
+}

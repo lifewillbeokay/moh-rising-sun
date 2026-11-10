@@ -1,0 +1,49 @@
+{
+  "id": "scene_SoldierExpression",
+  "source": "src/scene/SoldierExpression.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c2f90",
+      "size": 560
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ffb0",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetExpression__14CSoldierObject15EExpressionTypef",
+      "address": "0x800c2f90",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "SetBlink__14CSoldierObjecti",
+      "address": "0x800c3040",
+      "size": 384,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

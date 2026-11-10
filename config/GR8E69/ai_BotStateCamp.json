@@ -1,0 +1,52 @@
+{
+  "id": "ai_BotStateCamp",
+  "source": "src/ai/BotStateCamp.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80095188",
+      "size": 148
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029daac",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "BS_Enter_Camp__10CBotObject",
+      "address": "0x80095188",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "BS_Exit_Camp__10CBotObject",
+      "address": "0x80095210",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentCampingPoint__10CBotObject": "0x800993f4",
+    "MathFunRandomReal__Fff": "0x80133a54",
+    "SetCampingLookat__10CBotObject": "0x800957a8",
+    "SetMoveState__10CBotObject13eBotMoveState": "0x8009cff8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

@@ -1,0 +1,55 @@
+{
+  "id": "scene_SoldierConstrain",
+  "source": "src/scene/SoldierConstrain.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800be488",
+      "size": 476
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029fbbc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateCollisionVolumes__14CSoldierObject",
+      "address": "0x800be488",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "Constrain__14CSoldierObjectf",
+      "address": "0x800be4d4",
+      "size": 400,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "LARGEST_MOVE_PER_TICK": "0x802c4d48",
+    "SatisfyConstraints__20CClsnConstraintsBaseR7CMatrixfff": "0x80134628",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "TransformedCopy__10CVolSphereRC7IVolumeRC7CMatrix": "0x80136a58",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

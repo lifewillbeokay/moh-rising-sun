@@ -1,0 +1,112 @@
+{
+  "id": "scene_HearingVolume",
+  "source": "src/scene/HearingVolume.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c7224",
+      "size": 1148
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a06c0",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__14CHearingVolumeP16IMovingSceneNode7EClsnIdffPFP16IMovingSceneNodeP7CBullet_v",
+      "address": "0x800c7224",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "GetTMLocalToWorld__C14CHearingVolumeR7CMatrix",
+      "address": "0x800c7304",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetPosition__C14CHearingVolumeR8CVector3",
+      "address": "0x800c7330",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetRightward__C14CHearingVolumeR8CVector3",
+      "address": "0x800c7380",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetForward__C14CHearingVolumeR8CVector3",
+      "address": "0x800c73d0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetUpward__C14CHearingVolumeR8CVector3",
+      "address": "0x800c7420",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "GetLocalBoundingVolume__C14CHearingVolumeQ210ISceneNode11EVolumeType",
+      "address": "0x800c7470",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetWorldBoundingVolume__C14CHearingVolumeQ210ISceneNode11EVolumeType",
+      "address": "0x800c7478",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "BeginUpdate__14CHearingVolumef",
+      "address": "0x800c7480",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "AttemptUpdate__14CHearingVolumef",
+      "address": "0x800c7528",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "CommitUpdate__14CHearingVolume",
+      "address": "0x800c763c",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Add__6CSceneR10ISceneNodeP10ISceneNode": "0x80146e08",
+    "GetExtents__C10CVolSphereR8CVector3T1": "0x80137cf4",
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "SetPos__7CMatrixRC8CVector3": "0x8007ae7c",
+    "TransformedCopy__10CVolSphereRC7IVolumeRC7CMatrix": "0x80136a58",
+    "Translate__7CMatrixRC8CVector3": "0x8007af2c",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "hearingvolume.cpp",
+  "original_file_index": 908
+}

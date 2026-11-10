@@ -1,0 +1,75 @@
+{
+  "id": "draw_context_init",
+  "source": "src/camera/DrawContextInit.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012f258",
+      "size": 320
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a785c",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitClass__16CDrawContextEAGL",
+      "address": "0x8012f258",
+      "size": 320,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetAlphaBlendMode__Q24EAGL12GeoPrimStateQ24EAGL14AlphaBlendMode": "0x801df1f8",
+    "SetAlphaTestEnable__Q24EAGL12GeoPrimStateb": "0x801df204",
+    "SetDepthTestMethod__Q24EAGL12GeoPrimStateQ24EAGL15DepthTestMethod": "0x801df1ec",
+    "SetGeoPrim__Q24EAGL9DrawArrayPQ24EAGL7GeoPrim": "0x801e7e88",
+    "SetParamName__Q24EAGL9DrawArrayPCc": "0x801e8038",
+    "SetPrimitiveType__Q24EAGL12GeoPrimStateQ24EAGL13PrimitiveType": "0x801df198",
+    "SetPrimitiveType__Q24EAGL9DrawArrayQ24EAGL13PrimitiveType": "0x801e7f98",
+    "SetShading__Q24EAGL12GeoPrimStateQ24EAGL7Shading": "0x801df1d8",
+    "SetTextureEnable__Q24EAGL12GeoPrimStateb": "0x801df228",
+    "SetTransparencyMethod__Q24EAGL12GeoPrimStateQ24EAGL18TransparencyMethod": "0x801df238",
+    "SetVar__Q24EAGL9DrawArrayPCcPvii": "0x801e80c0",
+    "_Q24EAGL8ViewPort.gpModelViewProjectionMatrix": "0x802d2a44",
+    "initialized": "0x802c4b40",
+    "sDrawArray": "0x8032d134",
+    "sGeoPrim": "0x8032d0c8",
+    "sGeoPrimState": "0x8032d0f8",
+    "sParamBlock": "0x802c4b10",
+    "sVertColors": "0x8032d0c0",
+    "sVertices": "0x802c4b20"
+  },
+  "local_externals": [
+    "initialized",
+    "sDrawArray",
+    "sGeoPrim",
+    "sGeoPrimState",
+    "sParamBlock",
+    "sVertColors",
+    "sVertices"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "draw_context.cpp",
+  "original_file_index": 1271
+}

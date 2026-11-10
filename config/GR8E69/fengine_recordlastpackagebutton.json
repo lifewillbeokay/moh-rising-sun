@@ -1,0 +1,44 @@
+{
+  "id": "fengine_recordlastpackagebutton",
+  "source": "src/frontend/fengine_recordlastpackagebutton.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004fe2c",
+      "size": 160
+    }
+  ],
+  "functions": [
+    {
+      "name": "RecordLastPackageButton__7FEngineUlUl",
+      "address": "0x8004fe2c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "RecallLastPackageButton__7FEngineUl",
+      "address": "0x8004fe9c",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313
+}

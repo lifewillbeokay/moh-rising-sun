@@ -1,0 +1,55 @@
+{
+  "id": "scene_StaticFactoryShutdown",
+  "source": "src/scene/StaticFactoryShutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800cea08",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "Shutdown__20CStaticObjectFactory",
+      "address": "0x800cea08",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Shutdown__18CGameObjectFactory": "0x800ca494",
+    "_20CStaticObjectFactory.m_AttachObjectFactory": "0x80307720",
+    "_20CStaticObjectFactory.m_HierAnimObjectFactory": "0x80307760",
+    "_20CStaticObjectFactory.m_HierObjectFactory": "0x80307740",
+    "_20CStaticObjectFactory.m_RecycledThrownObjectFactory": "0x80307700",
+    "_20CStaticObjectFactory.m_StaticObjectFactory": "0x803076c0",
+    "_20CStaticObjectFactory.m_TankObjectFactory": "0x80307780",
+    "_20CStaticObjectFactory.m_ThrownObjectFactory": "0x803076e0",
+    "__builtin_vec_delete": "0x801a89b0",
+    "g_numTemplates": "0x802c26a0",
+    "g_pStaticObjectTemplates": "0x802c269c",
+    "ptr__14CAnyStaticMesh": "0x80283808"
+  },
+  "local_externals": [
+    "g_numTemplates",
+    "g_pStaticObjectTemplates"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "staticobjfactory.cpp",
+  "original_file_index": 924
+}

@@ -1,0 +1,44 @@
+{
+  "id": "ai_StateIteratorSet",
+  "source": "src/eala/StateIteratorSet.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80085a58",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "Set__Q34EALA9Character13StateIteratorRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5StateUif",
+      "address": "0x80085a58",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetState__Q34EALA9Character4TaskPQ34EALA9Character5State": "0x8008fb98",
+    "Set__Q34EALA9Character13StateIteratorUif": "0x80085aa8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "StateIterator.cpp",
+  "original_file_index": 596
+}

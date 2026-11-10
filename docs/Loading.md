@@ -85,6 +85,20 @@ that use the file-local `s_ignoreLoadFileNormalLocked` (`TLT_ForceLoadFileNormal
 `TLT_LoadFileNormal`), plus the repository functions after them. The extension search walks the
 level big file with `BIG_locateentry` and compares each entry name's tail case-insensitively.
 
+## Small-object pools and the DWI allocator
+
+The original `sys_memory.cpp` puts pools of fixed-size elements in front of the general allocator:
+`g_smallPool` has `g_numSmallPools` 24-byte records, each with its memory, a word per 32 elements of
+free bits, its element count, the free-word count, a used count and the element size in words.
+`DWI_alloc` tries the pools for sizes up to `g_maxSmallSize` before `MEM_allocalign` with 64-byte
+alignment and fills the result with zero. Sizes above 256 add flag 0x100 unless the caller's flag
+0x80 is set; that bit is removed before the call. `DWI_realloc` copies the smaller of the two sizes.
+Verified: the code. Inferred: the member names and the flags' meanings. Not reconstructed:
+`allocSmall` and `freeSmall`.
+
+`BitBuffer` is a 2048-byte store written least significant bit first. The reader and writer are
+file statics; `Load` sign-extends results of 2 to 31 bits.
+
 ## MohLoader
 
 `MohLoader` and `MohLoaderGc` hold the console-side start-up state. `g_pPersistent` points to a

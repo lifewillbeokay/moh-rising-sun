@@ -1,0 +1,50 @@
+{
+  "id": "ai_AreaPathNodeFlags",
+  "source": "src/ai/AreaPathNodeFlags.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e89f0",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetOutOfArea__13CAreaPathNode",
+      "address": "0x800e89f0",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "MarkAsOutOfArea__13CAreaPathNode",
+      "address": "0x800e8a10",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "MarkAsInArea__13CAreaPathNode",
+      "address": "0x800e8a1c",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

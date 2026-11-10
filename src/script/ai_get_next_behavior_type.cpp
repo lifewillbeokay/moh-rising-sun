@@ -19,7 +19,7 @@ void BIFunc_AIGetNextBehaviorScript(int **stack, void *) {
     BSObject *soldier = (BSObject *)args[1];
     int result = 0;
     if (soldier)
-        result = soldier->gameObject->GetSceneNode()->GetAIObject()->GetNextBehaviorScript();
+        result = (int)soldier->gameObject->GetSceneNode()->GetAIObject()->GetNextBehaviorScript();
     *stack -= g_pBuiltInFunctions[g_iCurrentBIFIndex].stackAdjustment;
     **stack = result;
 }

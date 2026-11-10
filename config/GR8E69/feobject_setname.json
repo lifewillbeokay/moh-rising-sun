@@ -1,0 +1,49 @@
+{
+  "id": "feobject_setname",
+  "source": "src/frontend/feobject_setname.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005039c",
+      "size": 140
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297d3c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetName__8FEObjectPCc",
+      "address": "0x8005039c",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "__builtin_vec_delete": "0x801a89b0",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319
+}

@@ -1,0 +1,54 @@
+{
+  "id": "meshparticle_visible",
+  "source": "src/particles/meshparticle_visible.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800660fc",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsVisible__C18MeshParticleSystemR12CDrawContext",
+      "address": "0x800660fc",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "IsDrawEnabled__C18MeshParticleSystem",
+      "address": "0x8006613c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetTMLocalToWorld__18MeshParticleSystemRC7CMatrix",
+      "address": "0x80066144",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

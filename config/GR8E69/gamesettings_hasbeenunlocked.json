@@ -1,0 +1,53 @@
+{
+  "id": "gamesettings_hasbeenunlocked",
+  "source": "src/shell/gamesettings_hasbeenunlocked.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801712fc",
+      "size": 560
+    }
+  ],
+  "functions": [
+    {
+      "name": "HasBeenUnlocked__C13CGameSettingsi",
+      "address": "0x801712fc",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "AddCheat__13CGameSettingsi",
+      "address": "0x80171380",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "UnlockLevel__13CGameSettingsib",
+      "address": "0x80171440",
+      "size": 236,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

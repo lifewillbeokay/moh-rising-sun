@@ -116,6 +116,17 @@ The long vector tests still outside the verified image are listed by
 visibility, the fiber's extents, `CCDBObject`'s line test and branch
 node tests, the CDB box and triangle tests, `CCompartment`'s constructor and loading, and the segment distance.
 
+## Compartment update and instance models
+
+`CCompartment::BeginUpdate` updates the compartment's animated shapes and then its primer table's
+material animations; `DoTextureSwap` steps one shape chosen through the primer table's texture entries.
+The compartment's vectors are read through a small begin-and-end view here, because `Compartment.h`
+is included by fragments that must not emit the STL headers' `.rodata`. Verified: offsets and control
+flow. Inferred: the member names and the meaning of the primer table's words.
+
+`CCompartment::CInstanceModel` has two vectors, of `EAGL::Model *` and of loader resource pointers;
+their `reserve` instantiations in the symbol table establish the element types.
+
 ## Point tests and code shape
 
 The point and sphere tests of spheres, capsules and fibers match with `void` helpers that

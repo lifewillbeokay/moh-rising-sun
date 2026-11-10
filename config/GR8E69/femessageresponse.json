@@ -1,0 +1,111 @@
+{
+  "id": "femessageresponse",
+  "source": "src/frontend/femessageresponse.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004be7c",
+      "size": 1548
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297a3c",
+      "size": 116
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._10FEResponse",
+      "address": "0x8004be7c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "__as__10FEResponseR10FEResponse",
+      "address": "0x8004bebc",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "SetParam__10FEResponsePCc",
+      "address": "0x8004bf3c",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseParam__10FEResponse",
+      "address": "0x8004bfa0",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "_._17FEMessageResponse",
+      "address": "0x8004c008",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "__nw__17FEMessageResponseUi",
+      "address": "0x8004c060",
+      "size": 340,
+      "binding": 1
+    },
+    {
+      "name": "__dl__17FEMessageResponsePv",
+      "address": "0x8004c1b4",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "PurgeResponses__17FEMessageResponse",
+      "address": "0x8004c298",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "SetCount__17FEMessageResponseUl",
+      "address": "0x8004c314",
+      "size": 304,
+      "binding": 1
+    },
+    {
+      "name": "FindResponse__C17FEMessageResponseUl",
+      "address": "0x8004c444",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "DWI_alloc": "0x801a8670",
+    "RemHead__9FEMinList": "0x80049878",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "_17FEMessageResponse.NodePool": "0x802ee5f8",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_vec_delete": "0x801a89b0",
+    "_vt.17FEMessageResponse": "0x802e1248",
+    "_vt.9FEMinList": "0x802e1180",
+    "_vt.9FEMinNode": "0x802e11c8",
+    "_vt.t10FEPoolNode2Z17FEMessageResponsei64": "0x802e1230",
+    "strcpy": "0x80266a7c",
+    "strlen": "0x80266b70"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEMessageResponse.cpp",
+  "original_file_index": 305
+}

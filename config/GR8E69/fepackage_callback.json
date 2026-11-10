@@ -1,0 +1,41 @@
+{
+  "id": "fepackage_callback",
+  "source": "src/frontend/fepackage_callback.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050cd8",
+      "size": 96
+    }
+  ],
+  "functions": [
+    {
+      "name": "Callback__18PackageInitStateCBP8FEObject",
+      "address": "0x80050cd8",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326
+}

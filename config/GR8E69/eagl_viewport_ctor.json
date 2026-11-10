@@ -1,0 +1,47 @@
+{
+  "id": "eagl_viewport_ctor",
+  "source": "src/eagl/eagl_viewport_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801e3f0c",
+      "size": 424
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24EAGL8ViewPortPQ24EAGL17RenderContextBase",
+      "address": "0x801e3f0c",
+      "size": 424,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__Q212EAGLInternal15ViewPortPrivatePQ24EAGL8ViewPort": "0x801e3920",
+    "__Q24EAGL17ViewPortExtensionPQ24EAGL8ViewPort": "0x801e3e50",
+    "identity": "0x802d2aa8"
+  },
+  "local_externals": [
+    "identity"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "viewport_cmn.cpp",
+  "original_file_index": 2651
+}

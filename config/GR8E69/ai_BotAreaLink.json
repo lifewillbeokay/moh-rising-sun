@@ -1,0 +1,50 @@
+{
+  "id": "ai_BotAreaLink",
+  "source": "src/ai/BotAreaLink.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800a0024",
+      "size": 108
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e574",
+      "size": 4
+    },
+    {
+      "name": ".data",
+      "address": "0x802c2584",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetJumpConnections2__FfP13CAreaPathNodeT1i",
+      "address": "0x800a0024",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddLink__FP13CAreaPathNodeiT0i": "0x800a0090"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BotArea.cpp",
+  "original_file_index": 797
+}

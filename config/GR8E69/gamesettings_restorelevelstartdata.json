@@ -1,0 +1,42 @@
+{
+  "id": "gamesettings_restorelevelstartdata",
+  "source": "src/shell/gamesettings_restorelevelstartdata.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80170248",
+      "size": 364
+    }
+  ],
+  "functions": [
+    {
+      "name": "RestoreLevelStartData__13CGameSettings",
+      "address": "0x80170248",
+      "size": 364,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Reset__12SPlayerStats": "0x8016caa4",
+    "SetCurrentCompartmentID__13CGameSettingsUii": "0x80171128",
+    "TLT_FindNextResourceByType__F13TLTResourceIDP24LevelFileContentsStruct_": "0x801a9690"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

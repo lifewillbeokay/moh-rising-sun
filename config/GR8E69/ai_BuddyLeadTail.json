@@ -1,0 +1,38 @@
+{
+  "id": "ai_BuddyLeadTail",
+  "source": "src/ai/BuddyLeadTail.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e5154",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetType__18CBuddyLeadBehavior",
+      "address": "0x800e5154",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BuddyLeadBehavior.cpp",
+  "original_file_index": 1029
+}

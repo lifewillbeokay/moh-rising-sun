@@ -1,0 +1,89 @@
+{
+  "id": "gc_driver_bio",
+  "source": "src/memorycard/gc_driver_bio.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80215f3c",
+      "size": 1140
+    }
+  ],
+  "functions": [
+    {
+      "name": "Seek__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptoriQ26Realmc8SeekFrom",
+      "address": "0x80215f3c",
+      "size": 288,
+      "binding": 1
+    },
+    {
+      "name": "SetAttributes__Q26Realmc8GCDriverGQ26Realmc6CardIDPcQ26Realmc13FileAttribute",
+      "address": "0x8021605c",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "FindFileNumber__Q26Realmc8GCDriverPcPi",
+      "address": "0x802160cc",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "NGCSportsBioSeek__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptoriQ26Realmc8SeekFrom",
+      "address": "0x8021618c",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "NGCSportsBioRead__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi",
+      "address": "0x802161dc",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "NGCSportsBioWrite__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi",
+      "address": "0x8021628c",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "NGCSportsBioClose__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+      "address": "0x80216350",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CARDClose": "0x80235984",
+    "CARDGetStatus": "0x80236ad0",
+    "CARDRead": "0x802361a4",
+    "CARDSetAttributes": "0x802370c8",
+    "CARDWrite": "0x80236520",
+    "ConvertCardResult__Q26Realmc8GCDriveri": "0x802149e4",
+    "ConvertFileHandleToDescriptor__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor": "0x80214b10",
+    "FlushWriteBuffer__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor": "0x80215628",
+    "THREAD_yield": "0x80217ce8",
+    "strcmp": "0x802669b4"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_driver.cpp",
+  "original_file_index": 2935
+}

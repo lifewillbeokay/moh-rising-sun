@@ -1,0 +1,45 @@
+{
+  "id": "ai_BotChooseWeapon",
+  "source": "src/ai/BotChooseWeapon.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8009c950",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029e040",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "ChooseWeapon__10CBotObject",
+      "address": "0x8009c950",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CanFireWeapon__10CBotObject": "0x80099ad0",
+    "ChangeWeapon__10CBotObjecti": "0x8009c9e8",
+    "RateWeapons__10CBotObject": "0x8009ca84"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

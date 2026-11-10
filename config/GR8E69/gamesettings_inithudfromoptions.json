@@ -1,0 +1,49 @@
+{
+  "id": "gamesettings_inithudfromoptions",
+  "source": "src/shell/gamesettings_inithudfromoptions.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016f75c",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitHUDFromOptions__13CGameSettingsi",
+      "address": "0x8016f75c",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "InitAudioFromOptions__13CGameSettingsib",
+      "address": "0x8016f7b4",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "SoundSetVolumes__Fff": "0x801569ac",
+    "g_GameSettings": "0x802f80c8",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479
+}

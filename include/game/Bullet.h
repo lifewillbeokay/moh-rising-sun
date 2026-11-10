@@ -98,6 +98,7 @@ struct ThrownBulletProperties_struct {
 };
 
 enum EProjectileBulletTypes { ProjectileBulletTypeUnknown = 0 };
+enum EThrownBulletTypes { ThrownBulletTypeUnknown = 0 };
 // Bit 28 (counting from the least significant bit) of the word at +0x10c.
 struct ProjectileBulletFlags {
     unsigned int hitPending : 1; // Bit 31: set around HandleBulletCollision; names descriptive.
@@ -109,7 +110,9 @@ struct ProjectileBulletFlags {
 
 class CProjectileBullet : public CBullet {
   public:
-    unsigned char unknown_b8[0xc4 - 0xb8];
+    CProjectileBullet();
+    unsigned char unknown_b8[8];
+    CProjectileBullet *nextBullet;                  // +0xc0; the factory helper's list. Descriptive.
     int type;                                       // +0xc4
     ProjectileBulletProperties_struct *properties; // Stored by Init.
     unsigned char ownedStorage[0xe0 - 0xcc];        // +0xcc; a WeakPtr<ISceneNode, 8> whose pointer is firedBy.
@@ -161,9 +164,12 @@ class CThrownBullet : public CBullet {
     void BeginUpdate(float);
     void OnCollision(const CCollision &);
     void Penetrate(const CCollision &);
-    unsigned char unknown_b8[0xc4 - 0xb8];
+    CThrownBullet();
+    unsigned char unknown_b8[8];
+    CThrownBullet *nextBullet;                      // +0xc0; the factory helper's list. Descriptive.
     int type;                                       // +0xc4
     ThrownBulletProperties_struct *properties;     // Stored by Init.
+    void Init(EThrownBulletTypes, ThrownBulletProperties_struct *, const CVector3 &, const CVector3 &, float, EClsnId, float, ISceneNode *, bool);
     unsigned char unknown_cc[0xe0 - 0xcc];
     ISceneNode *firedBy;                            // Returned by GetFiredBy.
     unsigned char scriptNode[0x120 - 0xe4];         // +0xe4; a BSGO_Basic.

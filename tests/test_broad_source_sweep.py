@@ -95,7 +95,8 @@ class PartialSweepTests(unittest.TestCase):
                     "animshape_rebind",
                     "card_device_invalidation",
                 )
-            )
+            ),
+            native("mc_getname"),
         )
 
     def test_advance_modes_and_boundaries(self):
@@ -117,8 +118,9 @@ class PartialSweepTests(unittest.TestCase):
             compare_case("animshape_rebind", case, rebind, True)
 
     def test_device_invalidation_and_cache(self):
-        for case in itertools.product(("Invalidate", "Cache"), (0, 1)):
-            compare_case("card_device_invalidation", case, invalidate, True)
+        for value in (0, 1):
+            compare_case("mc_getname", ("Invalidate", value), invalidate)
+            compare_case("card_device_invalidation", ("Cache", value), invalidate, True)
 
 
 def card_update(r, case):

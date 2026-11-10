@@ -1,0 +1,54 @@
+{
+  "id": "ai_AreaPathGeometryA2",
+  "source": "src/ai/AreaPathGeometryA2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e7ab8",
+      "size": 672
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a419c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "LineIntersectsBorderEdges__C13CAreaPathNodeRC6CLine2P8CVector2",
+      "address": "0x800e7ab8",
+      "size": 360,
+      "binding": 1
+    },
+    {
+      "name": "LineIntersectsLinkEdges__C13CAreaPathNodeRC6CLine2P8CVector2P13CAreaPathNode",
+      "address": "0x800e7c20",
+      "size": 312,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPathNodeByIndex__13AIPathFindingUs": "0x800e762c",
+    "Intersect__C6CLine2RC6CLine2fP8CVector2": "0x8007c21c",
+    "g_BorderLine": "0x8031cf9c",
+    "g_pAreaVertices": "0x802c3470"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

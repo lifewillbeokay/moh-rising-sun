@@ -1,0 +1,49 @@
+{
+  "id": "ai_BotLookDir",
+  "source": "src/ai/BotLookDir.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800975b8",
+      "size": 200
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029dbe0",
+      "size": 8
+    },
+    {
+      "name": ".data",
+      "address": "0x802c236c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateLookDir__10CBotObject",
+      "address": "0x800975b8",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetClock__10CBotObject": "0x800991dc",
+    "SetLookTarget__10CBotObjectRC8CVector3": "0x80099290"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

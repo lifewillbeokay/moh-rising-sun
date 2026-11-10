@@ -1,0 +1,79 @@
+{
+  "id": "scene_SoldierUpper",
+  "source": "src/scene/SoldierUpper.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800c2ea8",
+      "size": 232
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029ff74",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetUpperTranslation__14CSoldierObjectRC8CVector3",
+      "address": "0x800c2ea8",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "SetUpperXAngleDifference__14CSoldierObjectff",
+      "address": "0x800c2ef4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetUpperZAngleDifference__14CSoldierObjectff",
+      "address": "0x800c2f00",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "IsCurrentWeaponReloading__C14CSoldierObject",
+      "address": "0x800c2f0c",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentWeaponType__C14CSoldierObject",
+      "address": "0x800c2f38",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentWeapon__C14CSoldierObject",
+      "address": "0x800c2f6c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetWeapon__C14CSoldierObjecti",
+      "address": "0x800c2f80",
+      "size": 16,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

@@ -1,0 +1,52 @@
+{
+  "id": "search_node_lifetime",
+  "source": "src/ai/SearchNodeLifetime.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e0e70",
+      "size": 180
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3020",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "__15CAreaSearchNode",
+      "address": "0x800e0e70",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "_._15CAreaSearchNode",
+      "address": "0x800e0ec4",
+      "size": 96,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_._18CLinkedListElement": "0x800e0ca0",
+    "__18CLinkedListElement": "0x800e0c94"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SearchNode.cpp",
+  "original_file_index": 996
+}

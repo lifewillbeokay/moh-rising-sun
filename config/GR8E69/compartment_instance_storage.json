@@ -1,0 +1,54 @@
+{
+  "id": "compartment_instance_storage",
+  "source": "src/geometry/compartment_instance_storage.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80072310",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetVariation__Q212CCompartment14CInstanceModeli",
+      "address": "0x80072310",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "ReserveModelSpace__Q212CCompartment14CInstanceModeli",
+      "address": "0x8007233c",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "DeleteLoaders__Q212CCompartment14CInstanceModel",
+      "address": "0x80072378",
+      "size": 136,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "reserve__Q24_STLt6vector2ZPQ24EAGL5ModelZQ24_STLt9allocator1ZPQ24EAGL5ModelUi": "0x8027aca4",
+    "reserve__Q24_STLt6vector2ZQ34EALA8Resourcet7Pointer1ZQ24EALA10EAGLLoaderZQ24_STLt9allocator1ZQ34EALA8Resourcet7Pointer1ZQ24EALA10EAGLLoaderUi": "0x8027ad8c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

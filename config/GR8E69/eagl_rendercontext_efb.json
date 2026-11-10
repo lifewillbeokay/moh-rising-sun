@@ -1,0 +1,50 @@
+{
+  "id": "eagl_rendercontext_efb",
+  "source": "src/eagl/eagl_rendercontext_efb.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dd328",
+      "size": 240
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bc8a4",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetEFBAsTAR__Q24EAGL22RenderContextExtensionPQ24EAGL3TARbN22",
+      "address": "0x801dd328",
+      "size": 240,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GXCopyTex": "0x80245e00",
+    "GXPixModeSync": "0x80244c80",
+    "GXSetCopyFilter": "0x80245a7c",
+    "GetShape__CQ24EAGL3TAR": "0x801e0b64"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

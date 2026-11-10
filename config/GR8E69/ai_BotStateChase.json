@@ -1,0 +1,39 @@
+{
+  "id": "ai_BotStateChase",
+  "source": "src/ai/BotStateChase.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800945e0",
+      "size": 56
+    }
+  ],
+  "functions": [
+    {
+      "name": "BS_Chase__10CBotObject",
+      "address": "0x800945e0",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BS_Goto__10CBotObject": "0x800932f0",
+    "LookAlongPath__10CBotObject": "0x80099380"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

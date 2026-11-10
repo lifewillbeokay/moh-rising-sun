@@ -1,0 +1,78 @@
+{
+  "id": "shell_cshellmoviesettings",
+  "source": "src/frontend/shell_cshellmoviesettings.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80182964",
+      "size": 1016
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae444",
+      "size": 312
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19CShellMovieSettings",
+      "address": "0x80182964",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "_._19CShellMovieSettings",
+      "address": "0x80182994",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Reset__19CShellMovieSettings",
+      "address": "0x801829bc",
+      "size": 112,
+      "binding": 1
+    },
+    {
+      "name": "Load__19CShellMovieSettingsR11CConfigFile",
+      "address": "0x80182a2c",
+      "size": 252,
+      "binding": 1
+    },
+    {
+      "name": "LoadSection__19CShellMovieSettingsR11CConfigFilei",
+      "address": "0x80182b28",
+      "size": 528,
+      "binding": 1
+    },
+    {
+      "name": "GetMoviePathsStruct__19CShellMovieSettings10EMovieTypei",
+      "address": "0x80182d38",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AsString__11CConfigFilePCcPci": "0x801a8e6c",
+    "SetSection__11CConfigFilePCc": "0x801a8c98",
+    "__builtin_delete": "0x801a8990",
+    "sprintf": "0x80263a3c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580
+}

@@ -1,0 +1,85 @@
+{
+  "id": "object_fade",
+  "source": "src/scene/ObjectFade.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006c220",
+      "size": 428
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a75c",
+      "size": 28
+    }
+  ],
+  "functions": [
+    {
+      "name": "__18CObjectFadeManager",
+      "address": "0x8006c220",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "StartFadeOut__18CObjectFadeManagerff",
+      "address": "0x8006c22c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "StartFadeIn__18CObjectFadeManagerff",
+      "address": "0x8006c24c",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "AreFading__18CObjectFadeManager",
+      "address": "0x8006c26c",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "HalfDone__18CObjectFadeManager",
+      "address": "0x8006c2a0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "Update__18CObjectFadeManagerf",
+      "address": "0x8006c2d8",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "GetShadowAlphaScale__18CObjectFadeManager",
+      "address": "0x8006c314",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "FadeValue__C18CObjectFadeManager",
+      "address": "0x8006c348",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "objectfade.cpp",
+  "original_file_index": 506
+}

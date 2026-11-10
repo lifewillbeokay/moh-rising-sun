@@ -1,0 +1,73 @@
+{
+  "id": "ai_ChoreoB2",
+  "source": "src/eala/ChoreoB2.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80081384",
+      "size": 484
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleMessage__Q34EALA9Character13Choreographer",
+      "address": "0x80081384",
+      "size": 168,
+      "binding": 1
+    },
+    {
+      "name": "HandleOpcode__Q34EALA9Character13ChoreographerRQ34EALA9Character6Opcode",
+      "address": "0x8008142c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "HandleRotation__Q34EALA9Character13Choreographerf",
+      "address": "0x8008146c",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "HandleCycleEnd__Q34EALA9Character13Choreographer",
+      "address": "0x800814c0",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "HandleAnimDuration__Q34EALA9Character13Choreographerf",
+      "address": "0x8008150c",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "GetClient__Q34EALA9Character13Choreographer",
+      "address": "0x80081560",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Choreographer.cpp",
+  "original_file_index": 577
+}

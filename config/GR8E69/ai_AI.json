@@ -1,0 +1,65 @@
+{
+  "id": "ai_AI",
+  "source": "src/ai/AI.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800d98b8",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "Initialize__2AIv",
+      "address": "0x800d98b8",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "Restart__2AIv",
+      "address": "0x800d98dc",
+      "size": 68,
+      "binding": 1
+    },
+    {
+      "name": "Shutdown__2AIv",
+      "address": "0x800d9920",
+      "size": 68,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DeregisterAllFeeders__26CMountedMachineGunBehavior": "0x800e433c",
+    "DeregisterAllGuns__26CMountedMachineGunBehavior": "0x800e3d34",
+    "DeregisterMMGTriggers__26CMountedMachineGunBehavior": "0x800e4110",
+    "Initialize__24CGrenadeResponseBehavior": "0x800ef508",
+    "ResetAStarVolumes__18CAIAreaPathFinding": "0x800ec2d0",
+    "ResetAreaPathNodes__13AIPathFindingv": "0x800e7714",
+    "ResetCoverpoints__19CCoverpointBehavior": "0x800f26f8",
+    "ResetLocationTargets__12CAITargeting": "0x800ee660",
+    "ResetSearchNodePool__Fv": "0x800e1234",
+    "Shutdown__24CGrenadeResponseBehavior": "0x800efb70",
+    "UnregisterAllGagActions__12CScriptedGag": "0x800e683c",
+    "UnregisterAllNavPoints__Fv": "0x800e6594"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AI.cpp",
+  "original_file_index": 974
+}

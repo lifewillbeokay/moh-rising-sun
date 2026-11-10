@@ -1,0 +1,51 @@
+{
+  "id": "motion_blur_pause",
+  "source": "src/game/MotionBlurPause.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006b2a0",
+      "size": 76
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029a5cc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Pause__10MotionBlurv",
+      "address": "0x8006b2a0",
+      "size": 76,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnableMotionBlur__Q24EAGL22RenderContextExtensionfb": "0x801dc370",
+    "GetCurrentRenderContext__CQ24EAGL6Device": "0x801db43c",
+    "Get__Q24EAGL6Device": "0x801db480",
+    "_10MotionBlur.gPaused": "0x802c1cac"
+  },
+  "local_externals": [
+    "_10MotionBlur.gPaused"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "motionblur.cpp",
+  "original_file_index": 492
+}

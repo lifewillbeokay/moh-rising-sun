@@ -1,0 +1,93 @@
+{
+  "id": "ai_AreaPathGeometryB",
+  "source": "src/ai/AreaPathGeometryB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e7ed0",
+      "size": 2456
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a41a8",
+      "size": 64
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetClosestPointOnBorder__C13CAreaPathNodeRC8CVector3R8CVector3",
+      "address": "0x800e7ed0",
+      "size": 416,
+      "binding": 1
+    },
+    {
+      "name": "GetFurthestVertex__C13CAreaPathNodeRC8CVector3T1P8CVector3b",
+      "address": "0x800e8070",
+      "size": 336,
+      "binding": 1
+    },
+    {
+      "name": "IsEdgeConnected__C13CAreaPathNodei",
+      "address": "0x800e81c0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentNode__11AreaPathBSPRC8CVector3i",
+      "address": "0x800e8208",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "GetCentroid__C13CAreaPathNode",
+      "address": "0x800e82ac",
+      "size": 320,
+      "binding": 1
+    },
+    {
+      "name": "BiasTowardCentroid__C13CAreaPathNodeP8CVector3f",
+      "address": "0x800e83ec",
+      "size": 364,
+      "binding": 1
+    },
+    {
+      "name": "GetClosestPointSquared__C13CAreaPathNodeRC8CVector3P8CVector3",
+      "address": "0x800e8558",
+      "size": 620,
+      "binding": 1
+    },
+    {
+      "name": "GetCloserLink__C13CAreaPathNodeRC8CVector3",
+      "address": "0x800e87c4",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ContainsPoint__C13CAreaPathNodeRC8CVector3": "0x800e7890",
+    "DistanceSquared__C8CVector3RC8CVector3": "0x8007bdac",
+    "GetBSP__13AIPathFindingi": "0x800e72d0",
+    "GetClosestPointSquared__C6CLine2RC8CVector2P8CVector2": "0x8007c358",
+    "GetPathNodeByIndex__13AIPathFindingUs": "0x800e762c",
+    "g_pAreaVertices": "0x802c3470",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AreaPathNode.cpp",
+  "original_file_index": 1056
+}

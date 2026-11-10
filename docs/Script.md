@@ -2123,3 +2123,14 @@ system state. They execute the real file cleanup, MemStack destructor and deleti
 wrappers; subsystem callbacks and heap operations are stubbed. These checks do
 not validate game/Dolphin runtime. Complete-image rebuilding, repository tests
 and the refreshed public snapshot provide separate byte-verification evidence.
+
+## Scripted gags and navigation points
+
+`ScriptedGag.cpp` (file name from an allocation label) holds two tables: the navigation
+points, keyed by ID, and the gags, keyed by the CRC of the gag's name. A `CScriptedGag` is
+a map from action index to script object. Verified: all function bodies, and the event
+numbers 316 (no such action), 317 and 336 sent by `StartAction`. Inferred: member names,
+and the small scope object that saves and restores the allocation id. The file statics'
+initialization and the unreferenced "Trying to unregister" string are not reconstructed:
+the original's initializer registers no destructor for the two maps, while a file-scope map
+here does.

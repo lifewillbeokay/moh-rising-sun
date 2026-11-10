@@ -1,0 +1,59 @@
+{
+  "id": "shell_dompcontrollerchecks",
+  "source": "src/frontend/shell_dompcontrollerchecks.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80182178",
+      "size": 212
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae410",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoMPControllerChecks__12ShellManager",
+      "address": "0x80182178",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "RemoveMPViewPorts__12ShellManager",
+      "address": "0x8018217c",
+      "size": 176,
+      "binding": 1
+    },
+    {
+      "name": "ResetActiveControllerIndicies__12ShellManager",
+      "address": "0x8018222c",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindPackage__C13FEPackageListUc": "0x8005212c",
+    "GetNumPorts__C14CDeviceManager": "0x800d66c0",
+    "QueuePackagePop__7FEngineP9FEPackage": "0x8004eff8",
+    "g_inputMgr": "0x803077c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

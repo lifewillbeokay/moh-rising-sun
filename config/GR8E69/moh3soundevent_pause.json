@@ -1,0 +1,51 @@
+{
+  "id": "moh3soundevent_pause",
+  "source": "src/sound/Moh3SoundEventPause.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80160224",
+      "size": 72
+    }
+  ],
+  "functions": [
+    {
+      "name": "Pause__14Moh3SoundEventb",
+      "address": "0x80160224",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "EndEvent__14Moh3SoundEventUi",
+      "address": "0x80160238",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemoveSound__13SoundScheduleUi": "0x8015a508",
+    "_14Moh3SoundEvent.s_paused": "0x802c5188",
+    "g_SoundMan": "0x80330c60",
+    "g_npcVocalMan": "0x803e2e00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Moh3SoundEvent.cpp",
+  "original_file_index": 1427
+}

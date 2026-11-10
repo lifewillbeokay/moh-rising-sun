@@ -1,0 +1,58 @@
+{
+  "id": "gc_driver_header",
+  "source": "src/memorycard/gc_driver_header.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8021514c",
+      "size": 776
+    }
+  ],
+  "functions": [
+    {
+      "name": "WriteHeaderData__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+      "address": "0x8021514c",
+      "size": 700,
+      "binding": 1
+    },
+    {
+      "name": "GetBannerSize__Q26Realmc8GCDriverPCQ26Realmc8FileInfo",
+      "address": "0x80215408",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "GetIconSize__Q26Realmc8GCDriverPCQ26Realmc8FileInfo",
+      "address": "0x80215424",
+      "size": 48,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "WriteFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi": "0x80215454",
+    "memcpy": "0x802665e8",
+    "memset": "0x80266778"
+  },
+  "sda_externals": [],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_driver.cpp",
+  "original_file_index": 2935
+}

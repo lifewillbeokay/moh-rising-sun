@@ -1,0 +1,82 @@
+{
+  "id": "eagl_rendercontext_gpbreak",
+  "source": "src/eagl/eagl_rendercontext_gpbreak.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dc9b0",
+      "size": 576
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessGPBreakPoint__Q212EAGLInternal20RenderContextPrivate",
+      "address": "0x801dc9b0",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "SetGPBreakPoint__Q212EAGLInternal20RenderContextPrivateUiPFUi_v",
+      "address": "0x801dc9e8",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseGPBreakPoint__Q212EAGLInternal20RenderContextPrivate",
+      "address": "0x801dca50",
+      "size": 104,
+      "binding": 1
+    },
+    {
+      "name": "ProcessGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreak",
+      "address": "0x801dcab8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreakRQ312EAGLInternal20RenderContextPrivate7GPBreak",
+      "address": "0x801dcae8",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetGPBreak__Q312EAGLInternal20RenderContextPrivate7GPBreakUiPFUi_v",
+      "address": "0x801dcb60",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GXDisableBreakPt": "0x80242e3c",
+    "GXEnableBreakPt": "0x80242db0",
+    "GXFlush": "0x80244814",
+    "GXGetCPUFifo": "0x802430b8",
+    "GXGetFifoPtrs": "0x80242cd4",
+    "OSDisableInterrupts": "0x80257798",
+    "OSRestoreInterrupts": "0x802577c0",
+    "_Q212EAGLInternal20RenderContextPrivate.gGPBreakPointHead": "0x802cdb98",
+    "_Q212EAGLInternal20RenderContextPrivate.gGPBreakPointTail": "0x802cdb9c",
+    "_Q212EAGLInternal20RenderContextPrivate.gGPBreaklist": "0x802cdc04",
+    "_Q312EAGLInternal20RenderContextPrivate7GPBreak.gBreakSet": "0x802cdba0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

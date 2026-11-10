@@ -1,0 +1,124 @@
+{
+  "id": "ai_PolemineBehavior",
+  "source": "src/ai/PolemineBehavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e6200",
+      "size": 520
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a3d8c",
+      "size": 24
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.17CPolemineBehavior",
+      "address": "0x802e7fa0",
+      "size": 128,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__17CPolemineBehavior",
+      "address": "0x800e6200",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "_._17CPolemineBehavior",
+      "address": "0x800e6250",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__17CPolemineBehavior",
+      "address": "0x800e6280",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__17CPolemineBehavior",
+      "address": "0x800e6288",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "UpdateHeuristicScore__17CPolemineBehavior",
+      "address": "0x800e6290",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "StartBehavior__17CPolemineBehavior",
+      "address": "0x800e62cc",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__17CPolemineBehaviorb",
+      "address": "0x800e6338",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__17CPolemineBehavior11ECapability",
+      "address": "0x800e63b8",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__17CPolemineBehavior",
+      "address": "0x800e63c8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "SetWeaponScript__17CPolemineBehaviorP8BSObject",
+      "address": "0x800e63f0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetType__17CPolemineBehavior",
+      "address": "0x800e63f8",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__17CPolemineBehavior",
+      "address": "0x800e6400",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "ReleaseResources__9CBehavior": "0x800e28e0",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "PolemineBehavior.cpp",
+  "original_file_index": 1045
+}

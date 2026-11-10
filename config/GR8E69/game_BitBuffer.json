@@ -1,0 +1,90 @@
+{
+  "id": "game_BitBuffer",
+  "source": "src/game/BitBuffer.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80172020",
+      "size": 600
+    }
+  ],
+  "functions": [
+    {
+      "name": "SaveBegin__9BitBuffer",
+      "address": "0x80172020",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "SaveEnd__9BitBuffer",
+      "address": "0x80172068",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "LoadBegin__9BitBuffer",
+      "address": "0x80172078",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "LoadEnd__9BitBuffer",
+      "address": "0x8017209c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "Load__9BitBufferUi",
+      "address": "0x801720ac",
+      "size": 240,
+      "binding": 1
+    },
+    {
+      "name": "Save__9BitBufferUiUi",
+      "address": "0x8017219c",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "Used__C9BitBuffer",
+      "address": "0x80172258",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_pCurrentReader": "0x802c52d0",
+    "g_pCurrentWriter": "0x802c52d4",
+    "g_uRBitsLeft": "0x802c52e0",
+    "g_uRByte": "0x802c52d8",
+    "g_uWBitsLeft": "0x802c52e1",
+    "g_uWByte": "0x802c52dc",
+    "memset": "0x80266778"
+  },
+  "local_externals": [
+    "g_pCurrentReader",
+    "g_pCurrentWriter",
+    "g_uRBitsLeft",
+    "g_uRByte",
+    "g_uWBitsLeft",
+    "g_uWByte"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BitBuffer.cpp",
+  "original_file_index": 1497
+}

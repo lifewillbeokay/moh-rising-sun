@@ -10,7 +10,7 @@ void BIFunc_HasPistol(int **stack, void *) {
     CPistolBehavior *pistol = (CPistolBehavior *)soldier->gameObject->GetSceneNode()->GetAIObject()->FindMatchingBehavior(BehaviorTypePistol);
     BSObject *script = pistol->GetScriptObject();
     int result = 0;
-    if (pistol->field_08 && script)
+    if (pistol->enabled && script)
         result = 1;
     *stack -= g_pBuiltInFunctions[g_iCurrentBIFIndex].stackAdjustment;
     **stack = result;

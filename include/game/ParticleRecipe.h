@@ -9,30 +9,7 @@
 // Names of data members and helper types are descriptive. These are prefixes,
 // not complete class declarations or allocation sizes; see docs/ParticleRecipes.md.
 // A recipe-entry prefix: the value at +8 is accessed as an int or float.
-struct ParticleRecipeValue {
-    unsigned int unknown_0, unknown_4;
-    union {
-        int integer;
-        float scalar;
-    } value;
-};
-struct LevelFileContentsStruct_ {
-    unsigned int unknown_0, unknown_4;
-    ParticleRecipeValue **entries;
-};
-class CProcParticleDef {
-  public:
-    unsigned int unknown_0;
-    LevelFileContentsStruct_ *contents;
-    bool IsValid();
-    void SetEmitDelay(int);
-    void SetEmitRate(int);
-    void SetPartLifetime(float);
-    void SetLocMin(float, float, float);
-    void SetLocMax(float, float, float);
-    void SetVelMin(float, float, float);
-    void SetVelMax(float, float, float);
-};
+#include "ParticleDef.h"
 // Bit positions are established by the matching accessors; names are descriptive.
 // This view relies on the target compiler's big-endian bitfield layout.
 struct ParticleFlags {
@@ -50,7 +27,6 @@ struct ParticleFlags {
 };
 // Only a packed four-byte color prefix is accessed; full CColor remains opaque.
 class CColor;
-class CParticleDef;
 class CParticleSystem;
 class MeshParticleSystem;
 // Virtual slots 89-107, in the order of the original IParticleSystem table at
@@ -71,7 +47,7 @@ class IParticleSystem : public IMovingSceneNode {
     virtual unsigned int IsRotating() const;
     virtual unsigned int IsDestroyable() const;
     virtual void SetDestroyable(bool);
-    virtual CProcParticleDef *GetDef() const;
+    virtual CParticleDef *GetDef() const;
     virtual void Profile(bool);
     virtual CParticleSystem *AsProceduralParticleSystem();
     virtual const CParticleSystem *AsProceduralParticleSystem() const;
@@ -94,7 +70,7 @@ class CParticleSystem : public IParticleSystem {
     float deactivationTicks;
     unsigned char unknown_154[12];
     unsigned int seed;
-    unsigned char unknown_164[12];
+    float fadeInScale, fadeOutScale, fadeOutOffset; // +0x164: inferred from SetupAlphaFade.
     ParticleFlags flags;
     unsigned char unknown_174[12];
     CParticleSystem *next;
@@ -123,6 +99,15 @@ class CParticleSystem : public IParticleSystem {
     void SetLocalToWorld(const CMatrix &);
     void GetTMLocalToWorld(CMatrix &) const;
     void SetTMLocalToWorld(const CMatrix &);
+    void PreTransform(const CMatrix &);
+    void Transform(const CMatrix &);
+    void Move(const CVector3 &);
+    void Rotate(const CVector3 &, float);
+    void Pitch(float);
+    void Roll(float);
+    void Yaw(float);
+    void SetPosition(const CVector3 &);
+    void SetBasis(const CVector3 &, const CVector3 &, const CVector3 &);
     void Orthonormalize();
     void GetParticleAlpha(float &, float &, float &) const;
     void GetParticleColor(CColor &, CColor &, CColor &, CColor &) const;
@@ -135,6 +120,10 @@ class CParticleSystem : public IParticleSystem {
     float GetParticleLifetime() const;
     void GetParticleRotation(float &, float &) const;
     void GetParticleFade(float &, float &) const;
+    void SetupAlphaFade();
+    void Render(CDrawContext &);
+    static void ExecuteDraw(CDrawContext &, void **);
+    void HandleEvent(ISubject *, ESubjectEvent);
     void GetParticlePosition(CVector3 &, CVector3 &) const;
     void GetParticleVelocity(CVector3 &, CVector3 &) const;
     void GetSystemInitialVelocity(CVector3 &) const;
@@ -156,11 +145,60 @@ class CParticleSystem : public IParticleSystem {
     void Reset();
     void Halt();
 };
-// Member-only view; MeshParticleSystem storage and inheritance remain unknown.
-class MeshParticleSystem {
+// Scoped view: offsets are those the reconstructed methods touch. Bases are inferred from the table.
+struct MeshParticleFlags {
+    unsigned int destroyable : 1;
+    unsigned int eternal : 1;
+    unsigned int active : 1;
+    unsigned int dying : 1;
+    unsigned int running : 1; // Inferred: Terminate clears it.
+    unsigned int unknown_low27 : 27;
+};
+class CMeshParticleDef;
+class MeshParticleSystem : public IParticleSystem {
   public:
+    unsigned char unknown_18[0x40 - 0x18];
+    CMatrix localToWorld;       // +64
+    unsigned char unknown_80[192 - 128];
+    float center[3];            // +192
+    unsigned char unknown_cc[216 - 204];
+    CMeshParticleDef *definition; // +216
+    unsigned char unknown_dc[4];
+    float radius;               // +224
+    unsigned char unknown_e4[8];
+    float deactivationTicks;    // +236
+    MeshParticleFlags flags;    // +240
+    unsigned char unknown_f4[12];
+    MeshParticleSystem *next;   // +256
+    static MeshParticleSystem *AllocSystem(int);
+    static void ReleaseSystem(MeshParticleSystem *);
+    void Destroy();
+    void HandleEvent(ISubject *, ESubjectEvent);
+    static MeshParticleSystem *Create(CParticleDef *);
+    MeshParticleSystem();
+    virtual ~MeshParticleSystem();
     void *operator new(unsigned int, void *);
     void operator delete(void *);
+    int IsVisible(CDrawContext &) const;
+    unsigned int IsDrawEnabled() const;
+    void SetTMLocalToWorld(const CMatrix &);
+    void Reload();
+    void DeActivate();
+    void Terminate();
+    void ReleaseParticles();
+    void Stop();
+    void Start();
+    unsigned int IsEternal() const;
+    unsigned int IsActive() const;
+    unsigned int IsDying() const;
+    unsigned int IsMoving() const;
+    unsigned int IsRotating() const;
+    unsigned int IsDestroyable() const;
+    void SetDestroyable(bool);
+    CMeshParticleDef *GetDef() const;
+    MeshParticleSystem *AsMeshParticleSystem();
+    const MeshParticleSystem *AsMeshParticleSystem() const;
+    void MarkForDestruction(int);
 };
 // The original 20-byte global particle-system pool: a storage block threaded
 // through the link at +0x180 into used and free lists. Member names are descriptive.
@@ -172,6 +210,15 @@ struct ParticleSystemList {
     int count;
 };
 extern ParticleSystemList g_particleSystemList;
+// The same five words for mesh particle systems; the links run through +256.
+struct MeshParticleSystemList {
+    MeshParticleSystem *storage;
+    MeshParticleSystem *active;
+    MeshParticleSystem *free;
+    int capacity;
+    int count;
+};
+extern MeshParticleSystemList g_meshParticleSystemList;
 // Free function; the shared seed it advances is original external storage.
 unsigned int IncrementSeed(unsigned int, int);
 // Write only the independently established three-float CVector3 prefix.

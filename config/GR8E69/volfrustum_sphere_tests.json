@@ -1,0 +1,125 @@
+{
+  "id": "volfrustum_sphere_tests",
+  "source": "src/camera/volfrustum_sphere_tests.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8013fa74",
+      "size": 2384
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a8368",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "TestCollision__C11CVolFrustumRC15CAnimatedVolumeR10CCollisionb",
+      "address": "0x8013fa74",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC10CCSGVolumeR10CCollisionb",
+      "address": "0x8013fb38",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC12CWorldVolumeR10CCollisionb",
+      "address": "0x8013fbfc",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC11CVolCapsuleR10CCollisionb",
+      "address": "0x8013fcc0",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC9CVolFiberR10CCollisionb",
+      "address": "0x8013fd84",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC10CCDBObjectR10CCollisionb",
+      "address": "0x8013fe48",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC8CVector3R10CCollisionb",
+      "address": "0x8013ff0c",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC6CLine3R10CCollisionb",
+      "address": "0x8013ffd0",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC6CPlaneR10CCollisionb",
+      "address": "0x80140094",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestCollision__C11CVolFrustumRC9CTriangleR10CCollisionb",
+      "address": "0x80140158",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "TestVisibility__C11CVolFrustumR12CDrawContext",
+      "address": "0x8014021c",
+      "size": 236,
+      "binding": 1
+    },
+    {
+      "name": "GetExtents__C11CVolFrustumR8CVector3T1",
+      "address": "0x80140308",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetExtents__C10CVolSphereR8CVector3T1": "0x80137cf4",
+    "TestCollision__C10CVolSphereRC10CCDBObjectR10CCollisionb": "0x80136fa8",
+    "TestCollision__C10CVolSphereRC10CCSGVolumeR10CCollisionb": "0x80136e18",
+    "TestCollision__C10CVolSphereRC11CVolCapsuleR10CCollisionb": "0x80136ed8",
+    "TestCollision__C10CVolSphereRC12CWorldVolumeR10CCollisionb": "0x80136e78",
+    "TestCollision__C10CVolSphereRC15CAnimatedVolumeR10CCollisionb": "0x80136de4",
+    "TestCollision__C10CVolSphereRC6CLine3R10CCollisionb": "0x801371a8",
+    "TestCollision__C10CVolSphereRC6CPlaneR10CCollisionb": "0x801376cc",
+    "TestCollision__C10CVolSphereRC8CVector3R10CCollisionb": "0x80137008",
+    "TestCollision__C10CVolSphereRC9CTriangleR10CCollisionb": "0x801377e8",
+    "TestCollision__C10CVolSphereRC9CVolFiberR10CCollisionb": "0x80136f38",
+    "_vt.10CVolSphere": "0x802e9520",
+    "_vt.7IVolume": "0x802e1c38"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "frustum.cpp",
+  "original_file_index": 1327
+}

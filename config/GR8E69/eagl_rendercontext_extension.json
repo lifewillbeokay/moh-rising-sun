@@ -1,0 +1,208 @@
+{
+  "id": "eagl_rendercontext_extension",
+  "source": "src/eagl/eagl_rendercontext_extension.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801dcf74",
+      "size": 948
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802bc8e0",
+      "size": 4
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q24EAGL22RenderContextExtension",
+      "address": "0x802ec238",
+      "size": 24,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q24EAGL22RenderContextExtensionPQ24EAGL13RenderContext",
+      "address": "0x801dcf74",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "_._Q24EAGL22RenderContextExtension",
+      "address": "0x801dcfc8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "SetFogEnable__Q24EAGL26RenderContextExtensionBaseb",
+      "address": "0x801dcffc",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "GetFogEnable__CQ24EAGL26RenderContextExtensionBaseRb",
+      "address": "0x801dd020",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetFogTableMode__Q24EAGL26RenderContextExtensionBaseQ24EAGL12FogTableMode",
+      "address": "0x801dd02c",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetFogStart__Q24EAGL26RenderContextExtensionBasef",
+      "address": "0x801dd050",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetFogEnd__Q24EAGL26RenderContextExtensionBasef",
+      "address": "0x801dd074",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "SetFogColour__Q24EAGL26RenderContextExtensionBaseGQ24EAGL6Colour",
+      "address": "0x801dd098",
+      "size": 44,
+      "binding": 1
+    },
+    {
+      "name": "SetFogRangeAdjustEnable__Q24EAGL26RenderContextExtensionBaseb",
+      "address": "0x801dd0c4",
+      "size": 36,
+      "binding": 1
+    },
+    {
+      "name": "EnactFogSettings__CQ24EAGL26RenderContextExtensionBase",
+      "address": "0x801dd0e8",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "GetMipmapLODBiasOverride__Q24EAGL26RenderContextExtensionBaseRf",
+      "address": "0x801dd11c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetFilterModeOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18FilterModeOverride",
+      "address": "0x801dd130",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetAlphaWritesOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL19AlphaWritesOverride",
+      "address": "0x801dd144",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetMipMapModeOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18MipMapModeOverride",
+      "address": "0x801dd158",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetMaxAnisotropyOverride__Q24EAGL26RenderContextExtensionBaseRQ24EAGL18AnisotropyOverride",
+      "address": "0x801dd16c",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "SetRenderMode__Q24EAGL22RenderContextExtensionR16_GXRenderModeObjUs",
+      "address": "0x801dd17c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "GetDebugTokenEnable__Q24EAGL22RenderContextExtension",
+      "address": "0x801dd190",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetVISize__Q24EAGL22RenderContextExtensionii",
+      "address": "0x801dd19c",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetVideoOrigin__Q24EAGL22RenderContextExtensionii",
+      "address": "0x801dd1b0",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "GetXFBInformation__CQ24EAGL22RenderContextExtensionRPvRP16_GXRenderModeObj",
+      "address": "0x801dd25c",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SetScreenClearOptimization__Q24EAGL22RenderContextExtensionb",
+      "address": "0x801dd278",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "GetScreenClearOptimization__Q24EAGL22RenderContextExtension",
+      "address": "0x801dd298",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "SetFifoSize__Q24EAGL22RenderContextExtensionUi",
+      "address": "0x801dd2b0",
+      "size": 28,
+      "binding": 1
+    },
+    {
+      "name": "SetEFBCopy__Q24EAGL22RenderContextExtensioniiiiii9_GXTexFmtUc",
+      "address": "0x801dd2cc",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "EnactFogSettings__Q212EAGLInternal15ViewPortPrivate": "0x801e39d0",
+    "GXSetTexCopyDst": "0x80245554",
+    "GXSetTexCopySrc": "0x802454a4",
+    "GetCurrentViewPort__CQ24EAGL17RenderContextBase": "0x801dd5a4",
+    "VIConfigure": "0x8025fca4",
+    "VIFlush": "0x80260860",
+    "_Q212EAGLInternal20RenderContextPrivate.gFrameBuffersInitialized": "0x802cdb50",
+    "_Q212EAGLInternal20RenderContextPrivate.gOverScanYAdjust": "0x802cdb4c",
+    "_Q212EAGLInternal20RenderContextPrivate.gRenderMode": "0x802cdb48",
+    "_Q24EAGL22RenderContextExtension.gDoScreenClear": "0x802cdb58",
+    "_Q24EAGL22RenderContextExtension.gIsDebugTokenEnabled": "0x802cdb5c",
+    "_Q24EAGL26RenderContextExtensionBase.gOverrideAlphaWrites": "0x802cdb84",
+    "_Q24EAGL26RenderContextExtensionBase.gOverrideFilterMode": "0x802cdb80",
+    "_Q24EAGL26RenderContextExtensionBase.gOverrideMaxAniso": "0x802cdb94",
+    "_Q24EAGL26RenderContextExtensionBase.gOverrideMipMapMode": "0x802cdb90",
+    "_Q24EAGL26RenderContextExtensionBase.gOverrideMipmapLODBias": "0x802cdb7c",
+    "__builtin_delete": "0x801a8990",
+    "_vt.Q24EAGL26RenderContextExtensionBase": "0x802ec268"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "rendercontext.cpp",
+  "original_file_index": 2616
+}

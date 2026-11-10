@@ -1,0 +1,41 @@
+{
+  "id": "fekey_createkeyat",
+  "source": "src/frontend/fekey_createkeyat.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049338",
+      "size": 192
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateKeyAt__10FEKeyTrackl",
+      "address": "0x80049338",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetHead__C9FERefList": "0x802780fc",
+    "InsertKey__10FEKeyTrackP9FEKeyNode": "0x8004928c",
+    "__nw__9FEKeyNodeUi": "0x80048f5c",
+    "_vt.9FEKeyNode": "0x802e11b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

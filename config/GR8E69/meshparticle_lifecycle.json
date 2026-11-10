@@ -1,0 +1,60 @@
+{
+  "id": "meshparticle_lifecycle",
+  "source": "src/particles/meshparticle_lifecycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800659e0",
+      "size": 392
+    }
+  ],
+  "functions": [
+    {
+      "name": "MarkForDestruction__18MeshParticleSystemi",
+      "address": "0x800659e0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Destroy__18MeshParticleSystem",
+      "address": "0x80065a28",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__18MeshParticleSystemP8ISubject13ESubjectEvent",
+      "address": "0x80065a8c",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "MarkForDestruction__8ISubjecti": "0x8014ad2c",
+    "ReleaseParticles__18MeshParticleSystem": "0x80065788",
+    "ReleaseSystem__18MeshParticleSystemP18MeshParticleSystem": "0x80064624",
+    "Remove__6CSceneR10ISceneNode": "0x80146e9c",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "meshparticlesystem.cpp",
+  "original_file_index": 443
+}

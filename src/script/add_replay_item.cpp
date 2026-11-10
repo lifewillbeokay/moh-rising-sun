@@ -4,6 +4,6 @@
 
 void BIFunc_AddReplayItem(int **stack, void *) {
     int *args = *stack - g_pBuiltInFunctions[g_iCurrentBIFIndex].argumentCount;
-    g_GameSettings.profile->records[g_GameSettings.profile->currentRecord].replayItems |= 1 << args[1];
+    g_GameSettings.profile->profiles[g_GameSettings.profile->profileIndex[0]].replayItems |= 1 << args[1];
     *stack -= g_pBuiltInFunctions[g_iCurrentBIFIndex].stackAdjustment;
 }

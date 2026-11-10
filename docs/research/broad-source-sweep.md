@@ -107,11 +107,12 @@ IDs and passes total/free counts in their observed order. Missing or unsupported
 messages leave the single-space result. The existing fixed buffer and formatting
 contracts are preserved, not made safe for arbitrary localized format strings.
 
-`Invalidate` and `Cache` remain partial: **24/24** and **48/52** target/native bytes,
-with **97.000000%** and **81.666664%** objdiff similarity. Store scheduling and an
-extra temporary register move remain different. Both use the ordinary shared
-ProDG profile; no instructions are patched. Their bodies are guarded by
-`DECOMP_COMPARE` and their original bytes remain in the verified image.
+`Cache` remains partial: **48/52** target/native bytes, with **81.666664%** objdiff
+similarity from an extra temporary register move. It uses the ordinary shared
+ProDG profile; no instructions are patched. Its body is guarded by
+`DECOMP_COMPARE` and its original bytes remain in the verified image. `Invalidate`
+was partial here (**24/24** bytes, **97.000000%**) and is now exact in the
+`mc_getname` unit, with the store order that matches.
 
 ## Verification
 

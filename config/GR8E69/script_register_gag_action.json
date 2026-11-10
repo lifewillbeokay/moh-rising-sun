@@ -11,8 +11,10 @@
   ],
   "include_dirs": [
     "include/game",
+    "include/stlport-runtime",
     "include/newlib-compiler",
-    "include/newlib"
+    "include/newlib",
+    "include/stlport-containers"
   ],
   "strip_unused": false,
   "sections": [

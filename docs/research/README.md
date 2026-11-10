@@ -90,3 +90,7 @@ The [collision distances and database traversal batch](collision-distance-traver
 adds eleven measured partial functions, with shared distance helpers, box queries,
 projected visibility bounds and collision-tree traversal. It records target
 differences and the unresolved box/capsule intersection contact behavior.
+
+The [frontend, AI, audio and rendering batch](rising-sun-only-batch.md) adds exact
+linked functions recovered mostly from the executable itself, and records which few
+used Frontline as a semantic reference.

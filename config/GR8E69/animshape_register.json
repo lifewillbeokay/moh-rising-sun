@@ -1,0 +1,45 @@
+{
+  "id": "animshape_register",
+  "source": "src/animshape/register.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8006adb4",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "RegisterTAR__9AnimShapeRQ24EAGL3TAR",
+      "address": "0x8006adb4",
+      "size": 288,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "memmove": "0x8026668c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "anim_texture.cpp",
+  "original_file_index": 485
+}

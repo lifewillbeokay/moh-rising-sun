@@ -1,0 +1,38 @@
+{
+  "id": "compartment_instance_loaders",
+  "source": "src/geometry/compartment_instance_loaders.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80072014",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "DeleteInstanceLoaders__12CCompartment",
+      "address": "0x80072014",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DeleteLoaders__Q212CCompartment14CInstanceModel": "0x80072378"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

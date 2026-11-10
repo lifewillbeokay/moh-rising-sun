@@ -1,0 +1,49 @@
+{
+  "id": "pausemenu_processuievent",
+  "source": "src/ui/pausemenu_processuievent.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017e570",
+      "size": 76
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802adbc4",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessUIEvent__10CPauseMenuUiUiP8FEObjectP9FEPackage",
+      "address": "0x8017e570",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "ProcessSoundEvent__10CPauseMenuUiUiP8FEObjectP9FEPackage",
+      "address": "0x8017e574",
+      "size": 72,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PlayScriptedSoundFromCode__FPc": "0x80156f9c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

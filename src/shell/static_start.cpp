@@ -4,7 +4,6 @@
 #include "GameSettings.h"
 extern "C" int sprintf(char *, const char *, ...);
 extern "C" void *DWI_alloc(const char *, int, int);
-enum ELanguages { LanguageUnknown0 = 0 };
 inline void *operator new(unsigned int size, const char *label) { return DWI_alloc(label, size, 1024); }
 class CStaticScreen {
   public:
@@ -18,7 +17,7 @@ class CStaticScreen {
 };
 
 void CStaticScreen::StartLoading(int level, int mission, ELanguages language, bool flag) {
-    if (g_GameSettings.unknown_b0 == 1) {
+    if (g_GameSettings.skuType == 1) {
         switch (*(int *)g_GameSettings.profile) {
         case 2:
             if (level == 1 && mission == 16 && !flag)

@@ -6,6 +6,10 @@
 struct CVector2 {
     float x, y;
 
+    void Set(float ax, float ay) {
+        x = ax;
+        y = ay;
+    }
     CVector2& operator-=(const CVector2& other) {
         x -= other.x;
         y -= other.y;
@@ -33,7 +37,18 @@ typedef char CVector2StorageSizeCheck[sizeof(CVector2) == 8 ? 1 : -1];
 class CLine2 {
 public:
     CVector2 start, end;
+    CLine2() {}
+    CLine2(const CVector2& a, const CVector2& b) : start(a), end(b) {}
+    CLine2& operator=(const CLine2& other) {
+        if (&other != this) {
+            start = other.start;
+            end = other.end;
+        }
+        return *this;
+    }
     float GetClosestPointSquared(const CVector2&, CVector2*) const;
+    int Intersect(const CLine2&, float, CVector2*) const;
+    int IsDegenerate() const;
 };
 
 #endif

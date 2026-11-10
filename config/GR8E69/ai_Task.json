@@ -1,0 +1,196 @@
+{
+  "id": "ai_Task",
+  "source": "src/eala/Task.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8008f934",
+      "size": 1660
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029d074",
+      "size": 20
+    }
+  ],
+  "functions": [
+    {
+      "name": "__Q34EALA9Character4TaskPQ34EALA9Character5StateUiPQ34EALA9Character4Task",
+      "address": "0x8008f934",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "GetState__CQ34EALA9Character4Task",
+      "address": "0x8008fa2c",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Evaluate__Q34EALA9Character4TaskfPf",
+      "address": "0x8008fa34",
+      "size": 140,
+      "binding": 1
+    },
+    {
+      "name": "Reparent__Q34EALA9Character4TaskPQ34EALA9Character4Task",
+      "address": "0x8008fac0",
+      "size": 128,
+      "binding": 1
+    },
+    {
+      "name": "GetAnimDuration__Q34EALA9Character4Task",
+      "address": "0x8008fb40",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetAnimTranslation__Q34EALA9Character4Task",
+      "address": "0x8008fb4c",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "GetTotalRootZAxisRotation__Q34EALA9Character4Task",
+      "address": "0x8008fb8c",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetState__Q34EALA9Character4TaskPQ34EALA9Character5State",
+      "address": "0x8008fb98",
+      "size": 208,
+      "binding": 1
+    },
+    {
+      "name": "SetSubstate__Q34EALA9Character4TaskUi",
+      "address": "0x8008fc68",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "SetCorePose__Q34EALA9Character4TaskUi",
+      "address": "0x8008fc70",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetCorePose__CQ34EALA9Character4Task",
+      "address": "0x8008fc78",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "ParentIterator__Q34EALA9Character4Task",
+      "address": "0x8008fc80",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "DumpPrefix__Q34EALA9Character4TaskUi",
+      "address": "0x8008fd24",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "HandleMessage__Q34EALA9Character4Task",
+      "address": "0x8008fdc0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "HandleOpcode__Q34EALA9Character4TaskRQ34EALA9Character6Opcode",
+      "address": "0x8008fe08",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "HandlePose__Q34EALA9Character4TaskUi",
+      "address": "0x8008fe50",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "HandleRotation__Q34EALA9Character4Taskf",
+      "address": "0x8008feb0",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "HandleCycleEnd__Q34EALA9Character4Task",
+      "address": "0x8008fef8",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "HandleAnimDuration__Q34EALA9Character4Taskf",
+      "address": "0x8008ff40",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "Busy__Q34EALA9Character4Task",
+      "address": "0x8008ff88",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "EvalPose__Q34EALA9Character4TaskfPf",
+      "address": "0x8008ff90",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "Promote__Q34EALA9Character4TaskRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character4Task",
+      "address": "0x8008ff94",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "AsIterator__Q34EALA9Character4Task",
+      "address": "0x8008ff98",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsMessage__Q34EALA9Character4Task",
+      "address": "0x8008ffa0",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "AsJump__Q34EALA9Character4Task",
+      "address": "0x8008ffa8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "AddObserver__8ISubjectP9IObserver": "0x8014ae44",
+    "DebugMsg__FPCce": "0x80279094",
+    "_vt.9IObserver": "0x802e9aa0",
+    "_vt.Q34EALA9Character4Task": "0x802e3f38",
+    "_vt.Q34EALA9Character4Task.8ISubject": "0x802e3f10",
+    "_vt.t7WeakPtr2ZQ34EALA9Character4Taski8": "0x802e3fd8",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": []
+}

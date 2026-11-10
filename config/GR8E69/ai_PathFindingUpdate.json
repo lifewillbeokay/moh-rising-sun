@@ -1,0 +1,46 @@
+{
+  "id": "ai_PathFindingUpdate",
+  "source": "src/ai/PathFindingUpdate.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800eb9fc",
+      "size": 188
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4470",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__18CAIAreaPathFinding",
+      "address": "0x800eb9fc",
+      "size": 188,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ContainsPoint__C13CAreaPathNodeRC8CVector3": "0x800e7890",
+    "GetClosestPathNode__13AIPathFindingRC8CVector3i": "0x800e75ac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "AIAreaPathFinding.cpp",
+  "original_file_index": 1063
+}

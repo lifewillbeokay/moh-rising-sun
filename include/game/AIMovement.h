@@ -69,6 +69,7 @@ public:
     unsigned char unknown5c[4];
     CVector3 teleportPosition;
     int teleportPending;
+    void ClearWalkType() { walkType = 0; } // Inline name inferred from the address form.
     void StartWalkToArbitraryPoint(CVector3 &);
     void RegisterWalkType(IAILocomotionMethod *);
     void StopWalkByType(AIOBJECT_PATH_WALK_TYPE);

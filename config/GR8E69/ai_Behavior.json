@@ -1,0 +1,95 @@
+{
+  "id": "ai_Behavior",
+  "source": "src/ai/Behavior.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e27fc",
+      "size": 280
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.9CBehavior",
+      "address": "0x802e7bc0",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9CBehavior",
+      "address": "0x800e27fc",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "_._9CBehavior",
+      "address": "0x800e2824",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "Update__9CBehaviorib",
+      "address": "0x800e2858",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "ReleaseResources__9CBehavior",
+      "address": "0x800e28e0",
+      "size": 4,
+      "binding": 1
+    },
+    {
+      "name": "GetType__9CBehavior",
+      "address": "0x800e28e4",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetCRC__9CBehavior",
+      "address": "0x800e28ec",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "Enable__9CBehavior",
+      "address": "0x800e28f4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "Disable__9CBehavior",
+      "address": "0x800e2900",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "GetScriptObject__9CBehavior",
+      "address": "0x800e290c",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "__pure_virtual": "0x8026c80c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Behavior.cpp",
+  "original_file_index": 1020
+}

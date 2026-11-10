@@ -1,0 +1,80 @@
+{
+  "id": "ai_CoverpointCtor",
+  "source": "src/ai/CoverpointCtor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800f1134",
+      "size": 200
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a4bc0",
+      "size": 8
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.19CCoverpointBehavior",
+      "address": "0x802e8180",
+      "size": 120,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19CCoverpointBehavior",
+      "address": "0x800f1134",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "_._19CCoverpointBehavior",
+      "address": "0x800f11ac",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "GetCurrentHeuristicScore__19CCoverpointBehavior",
+      "address": "0x800f11dc",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetHeuristicUpdateFrequency__19CCoverpointBehavior",
+      "address": "0x800f11e4",
+      "size": 24,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Disable__9CBehavior": "0x800e2900",
+    "Enable__9CBehavior": "0x800e28f4",
+    "GetCRC__9CBehavior": "0x800e28ec",
+    "GetCapabilities__19CCoverpointBehavior11ECapability": "0x800f1770",
+    "GetScriptObject__19CCoverpointBehavior": "0x800f3040",
+    "GetType__19CCoverpointBehavior": "0x800f3038",
+    "ReleaseResources__19CCoverpointBehavior": "0x800f1588",
+    "StartBehavior__19CCoverpointBehavior": "0x800f1378",
+    "StopBehavior__19CCoverpointBehaviorb": "0x800f14d0",
+    "UpdateHeuristicScore__19CCoverpointBehavior": "0x800f11fc",
+    "_._9CBehavior": "0x800e2824",
+    "__9CBehavior": "0x800e27fc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "CoverpointBehavior.cpp",
+  "original_file_index": 1087
+}

@@ -1,0 +1,57 @@
+{
+  "id": "ai_BuddyLeadB",
+  "source": "src/ai/BuddyLeadB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800e4ad4",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "StartBehavior__18CBuddyLeadBehavior",
+      "address": "0x800e4ad4",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "StopBehavior__18CBuddyLeadBehaviorb",
+      "address": "0x800e4b64",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "GetCapabilities__18CBuddyLeadBehavior11ECapability",
+      "address": "0x800e4be8",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "BSObjectTriggerEvent__FP8BSObjectUsPvT0b": "0x800f6d90",
+    "GetNextCheckpoint__FP12Checkpoint_t": "0x800e4f70",
+    "GetScriptObject__C15CAIFilterObject": "0x800d980c"
+  },
+  "local_externals": [
+    "GetNextCheckpoint__FP12Checkpoint_t"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "BuddyLeadBehavior.cpp",
+  "original_file_index": 1029
+}

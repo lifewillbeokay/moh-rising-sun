@@ -1,0 +1,42 @@
+{
+  "id": "particlesystem_executedraw",
+  "source": "src/particles/particlesystem_executedraw.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800616d8",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "ExecuteDraw__15CParticleSystemR12CDrawContextPPv",
+      "address": "0x800616d8",
+      "size": 44,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Render__15CParticleSystemR12CDrawContext": "0x8005f8d8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "particlesystem.cpp",
+  "original_file_index": 426
+}

@@ -1,0 +1,80 @@
+{
+  "id": "fe_fejoypad",
+  "source": "src/frontend/fe_fejoypad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80047ba8",
+      "size": 484
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8FEJoyPad",
+      "address": "0x80047ba8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Reset__8FEJoyPad",
+      "address": "0x80047bd8",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "Update__8FEJoyPadUlUl",
+      "address": "0x80047c00",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "WasPressed__8FEJoyPadUl",
+      "address": "0x80047c58",
+      "size": 52,
+      "binding": 1
+    },
+    {
+      "name": "WasHeld__8FEJoyPadUl",
+      "address": "0x80047c8c",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "HeldFor__8FEJoyPadUl",
+      "address": "0x80047cbc",
+      "size": 76,
+      "binding": 1
+    },
+    {
+      "name": "WasReleased__8FEJoyPadUl",
+      "address": "0x80047d08",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "DecrementHold__8FEJoyPadUlUl",
+      "address": "0x80047d38",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEJoyPad.cpp",
+  "original_file_index": 274
+}

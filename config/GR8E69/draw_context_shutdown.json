@@ -1,0 +1,77 @@
+{
+  "id": "draw_context_shutdown",
+  "source": "src/camera/DrawContextShutdown.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012f398",
+      "size": 232
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802a7838",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShutdownClass__16CDrawContextEAGL",
+      "address": "0x8012f398",
+      "size": 156,
+      "binding": 1
+    },
+    {
+      "name": "ClearZBuffer__16CDrawContextEAGL",
+      "address": "0x8012f434",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "IsSphereInView__16CDrawContextEAGLRC8CVector3f",
+      "address": "0x8012f45c",
+      "size": 36,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ClearViewPort__Q24EAGL8ViewPortQ24EAGL10ClearFlags": "0x801e33b0",
+    "GetRegisteredVar__Q24EAGL13DynamicLoaderPCcRb": "0x801eb08c",
+    "IsSphereInView__Q24EAGL8ViewPortRC6COORD3f": "0x801e37e4",
+    "_._Q24EAGL12GeoPrimState": "0x801df144",
+    "_._Q24EAGL9DrawArray": "0x801e7df0",
+    "__Q24EAGL12GeoPrimState": "0x801df114",
+    "__Q24EAGL9DrawArray": "0x801e7d48",
+    "initialized": "0x802c4b40",
+    "rm_SingleDrawGouraud": "0x803ff0e8",
+    "sDrawArray": "0x8032d134",
+    "sGeoPrim": "0x8032d0c8",
+    "sGeoPrimState": "0x8032d0f8"
+  },
+  "local_externals": [
+    "initialized",
+    "sDrawArray",
+    "sGeoPrim",
+    "sGeoPrimState"
+  ],
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "draw_context.cpp",
+  "original_file_index": 1271
+}

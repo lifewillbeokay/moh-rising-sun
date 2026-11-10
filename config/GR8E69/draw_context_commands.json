@@ -1,0 +1,71 @@
+{
+  "id": "draw_context_commands",
+  "source": "src/camera/DrawContextCommands.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/stlport-runtime",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8012e954",
+      "size": 1500
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitCommands__12CDrawContext",
+      "address": "0x8012e954",
+      "size": 192,
+      "binding": 1
+    },
+    {
+      "name": "AddCommand__12CDrawContext11ERenderBinsRC11DrawCommand",
+      "address": "0x8012ea14",
+      "size": 976,
+      "binding": 1
+    },
+    {
+      "name": "ExecCommands__12CDrawContext",
+      "address": "0x8012ede4",
+      "size": 248,
+      "binding": 1
+    },
+    {
+      "name": "__16CDrawContextEAGLRC7CCameraRC9CViewportRC7CScreenPQ24EAGL8ViewPortf",
+      "address": "0x8012eedc",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetSlot__7CMatrixUi": "0x802790e0",
+    "InitClass__7CMatrix": "0x8007a9b4",
+    "_12CDrawContext.b_ReverseParticleVsTranslucentSorting": "0x802c4b00",
+    "_7CMatrix.s_ClassInit": "0x802c2100",
+    "__12CDrawContextRC7CCameraRC9CViewportRC7CScreen": "0x8012d400",
+    "__as__7CMatrixRC7CMatrix": "0x8007aa38",
+    "__builtin_delete": "0x801a8990",
+    "__builtin_new": "0x801a8910",
+    "_vt.16CDrawContextEAGL": "0x802e86e0",
+    "pop_heap__H2ZP15DrawCommandDataZQ24_STLt4less1Z15DrawCommandData_4_STLX01X01X11_v": "0x80288974",
+    "push_heap__H2ZP15DrawCommandDataZQ24_STLt4less1Z15DrawCommandData_4_STLX01X01X11_v": "0x80288b18"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "draw_context.cpp",
+  "original_file_index": 1271
+}

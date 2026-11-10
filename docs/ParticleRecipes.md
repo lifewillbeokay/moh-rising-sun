@@ -143,3 +143,27 @@ comparisons are spelled as the original branch forms require. `GetPosition`,
 fourth, first, second and third rows through `CMatrix`'s inline row reads.
 
 Construction, simulation and rendering remain outside this batch. The contributor’s [PS2 particle recipe notes](research/ps2/particle-recipes.md) are now available to help interpret additional fields and names, but each cross-platform claim still needs a separate GR8E69 check. These matched accessors provide concrete locations for those checks.
+
+## Particle definitions
+
+[`ParticleDef.h`](../include/game/ParticleDef.h) declares `CParticleDef`, `CProcParticleDef` and
+`CMeshParticleDef`. Slot order and method names come from the tables at `0x802e26c0`, `0x802e2660`
+and `0x802e2600`. `Crc` and the `As*Def` slots are inline virtuals. A small fragment emits them with
+all three tables through `#pragma implementation`, and that reproduces both the order of the bodies
+and the order of the tables in the image. The pragma pairing itself is a project arrangement.
+
+`Init` reads the asset name from entry 2. The procedural form stores 1 at `+0`, loads the texture
+into a `TAR` at `+16` and keeps the file at `+12`. The mesh form stores 2 at `+0` and keeps a
+`CStaticMesh` at `+12`. Mesh definitions use entries 4-49: system and particle life (4-7), emission
+(8, 9), start position (10-12), box (13-15, with Y at 15), direction (16-19), speed (20, 21),
+acceleration (22-25), rotation (26-37), scale (38-41) and start and end colours (42-49). The meaning
+of each rotation entry and of the second value in each pair is inferred from the setters' clamps.
+
+Ten `CParticleSystem` transform setters change `localToWorld`, then share one inline step: invert the
+matrix and rotate entries 19-21 of the definition, the acceleration and the velocity into local space.
+The helpers `RotateVector` and `UpdateLocalVectors` are descriptive names; the original's inline is unnamed.
+
+`MeshParticleSystem` keeps its flags at `+240`, the definition at `+216`, a bounding centre and radius
+at `+192` and `+224`, and pool links at `+256` in `g_meshParticleSystemList`, which has the same five
+words as the procedural pool. Flag names are inferred from the accessors; `running` is inferred only
+from `Terminate` clearing it.

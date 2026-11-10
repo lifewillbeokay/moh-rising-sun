@@ -1,0 +1,44 @@
+{
+  "id": "scene_SoldierShouldDrawFlag",
+  "source": "src/scene/SoldierShouldDrawFlag.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800bcf04",
+      "size": 224
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShouldDrawFlag__14CSoldierObjectR12CDrawContext",
+      "address": "0x800bcf04",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPlayer__C6CScenei": "0x8014ac08",
+    "g_bInMultiplayerMode": "0x802c1b30",
+    "g_bMPEndLevel": "0x803e7570",
+    "g_bTeamDM": "0x802c1b34",
+    "g_scene": "0x803e6d90"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Soldier_object.cpp",
+  "original_file_index": 875
+}

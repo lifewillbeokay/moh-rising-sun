@@ -1,0 +1,75 @@
+{
+  "id": "ai_ChoreoB",
+  "source": "src/eala/ChoreoB.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80080c80",
+      "size": 904
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetAuthoredTransitionState__Q34EALA9Character13ChoreographerRQ34EALA8Resourcet7Pointer1ZQ34EALA9Character5State",
+      "address": "0x80080c80",
+      "size": 124,
+      "binding": 1
+    },
+    {
+      "name": "GetAuthoredTransitionState__Q34EALA9Character13Choreographer",
+      "address": "0x80080cfc",
+      "size": 32,
+      "binding": 1
+    },
+    {
+      "name": "Enable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition",
+      "address": "0x80080d1c",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "Disable__Q34EALA9Character13ChoreographerPQ44EALA9Character8Skeleton9Partition",
+      "address": "0x80080e48",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "SetOpcodeHandler__Q34EALA9Character13ChoreographerPQ44EALA9Character6Opcode7Handler",
+      "address": "0x80080f74",
+      "size": 8,
+      "binding": 1
+    },
+    {
+      "name": "GetBoneMask__Q34EALA9Character13Choreographer",
+      "address": "0x80080f7c",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrent__Q44EALA9Character8Skeleton9Partition": "0x800822e8",
+    "GetMask__CQ44EALA9Character8Skeleton9Partition": "0x8008235c",
+    "__eq__CQ44EALA9Character8Skeleton9PartitionRCQ44EALA9Character8Skeleton9Partition": "0x800822c0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "Choreographer.cpp",
+  "original_file_index": 577
+}

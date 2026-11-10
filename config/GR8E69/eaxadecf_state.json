@@ -1,0 +1,47 @@
+{
+  "id": "eaxadecf_state",
+  "source": "src/sound/ea/eaxadecf_state.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8022aab8",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetState__Q23Snd12CEAXABLKDecf",
+      "address": "0x8022aab8",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "SetState__Q23Snd12CEAXABLKDecfPQ23Snd8XAFSTATE",
+      "address": "0x8022aae8",
+      "size": 20,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "eaxadecf.cpp",
+  "original_file_index": 3290
+}
