@@ -50,6 +50,10 @@ fragment owns, so they wait until the fragments can be combined into one unit.
 
 ## FEng library
 
+The [animation and list-box follow-up](research/feng-animation-lists.md) documents
+the exact and measured partial bodies built on these interfaces, including
+original wrap, resize, callback and floating-point edge cases.
+
 Rising Sun's front end runs on EA's FEng library. Source paths in allocation labels name its
 files (`source/FEngine/FEWideString.cpp`), and symbols give the classes and methods. Verified by
 matching code: `FEMinNode` holds two links and its table at `+8`; unlinking writes `0xabadcafe`

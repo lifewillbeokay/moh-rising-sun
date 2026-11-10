@@ -1,0 +1,35 @@
+{
+  "id": "compare_fecode_scroll_selection",
+  "source": "src/frontend/fecode_scroll_selection.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046d94",
+      "size": 2404
+    }
+  ],
+  "functions": [
+    {
+      "name": "ScrollSelection__13FECodeListBoxlRUlT2UlUlb",
+      "address": "0x80046d94",
+      "size": 2404,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CheckMovement__13FECodeListBoxlllll": "0x80046ac0",
+    "MakeMove__13FECodeListBoxlRUlT2UlUl": "0x80046be4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "ScrollSelection__13FECodeListBoxlRUlT2UlUlb"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

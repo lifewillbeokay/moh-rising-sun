@@ -76,7 +76,11 @@ class FECodeListBox : public FEObject {
     void SetTotalNumColumns(unsigned long);
     void SetTotalNumRows(unsigned long);
     void ScrollSelection(long, long);
-    void ScrollSelection(long, unsigned long &, unsigned long &, unsigned long, unsigned long, bool);
+    int ScrollSelection(long, unsigned long &, unsigned long &, unsigned long, unsigned long, bool);
+    int CheckMovement(long, long, long, long, long);
+    int MakeMove(long, unsigned long &, unsigned long &, unsigned long, unsigned long);
+    void Initialize(unsigned long, unsigned long);
+    void AllocateStrings(unsigned long, unsigned long);
     void Update(float);
     static void DefaultSelectCallback(FECodeListBox *);
     short *AllocateString();

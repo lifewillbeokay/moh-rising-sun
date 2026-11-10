@@ -1,0 +1,46 @@
+{
+  "id": "compare_fecode_movement",
+  "source": "src/frontend/fecode_movement.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046ac0",
+      "size": 724
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802972cc",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckMovement__13FECodeListBoxlllll",
+      "address": "0x80046ac0",
+      "size": 292,
+      "binding": 1
+    },
+    {
+      "name": "MakeMove__13FECodeListBoxlRUlT2UlUl",
+      "address": "0x80046be4",
+      "size": 432,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "CheckMovement__13FECodeListBoxlllll",
+    "MakeMove__13FECodeListBoxlRUlT2UlUl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

@@ -19,6 +19,9 @@ struct FEListEntryData {
 
 // One cell; 48 bytes per the allocations and InitializeCell.
 struct FEListBoxCell {
+    // The array constructors in both list-box classes initialize this subset.
+    FEListBoxCell() : resourceIndex(0), unknown_4(1.0f, 1.0f), unknown_c(0),
+        unknown_10(0), unknown_14(0), type(0), text(0), unknown_24_bits(-1) {}
     long resourceIndex;  // +0x00
     FEPoint unknown_4;   // +0x04
     long unknown_c;      // +0x0c
@@ -30,7 +33,10 @@ struct FEListBoxCell {
         short *text;     // +0x20; SetCellString allocates it.
         float unknown_20;
     };
-    float unknown_24;    // +0x24
+    union {
+        float unknown_24; // +0x24
+        long unknown_24_bits; // Constructor's all-ones sentinel; meaning unknown.
+    };
     float unknown_28;    // +0x28
     float unknown_2c;    // +0x2c
 };
@@ -73,6 +79,8 @@ class FEListBox : public FEObject {
     void CleanupCells();
     void RecalculateCummulative();
     void CompleteScroll();
+    void ScrollSelection(long, long);
+    void Update(float);
     FEListBoxCell *GetPCellData(unsigned long, unsigned long);
 };
 #endif

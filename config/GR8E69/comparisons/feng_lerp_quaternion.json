@@ -1,0 +1,67 @@
+{
+  "id": "compare_feng_lerp_quaternion",
+  "source": "src/frontend/feng_lerp_values.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80048544",
+      "size": 1612
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297408",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "FELerpInteger__FllfPlT3",
+      "address": "0x80048544",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "FELerpFloat__FfffPfT3",
+      "address": "0x800485a8",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "FELerpVector2__FR9FEVector2T0fP9FEVector2T3",
+      "address": "0x800485c0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "FELerpVector3__FR9FEVector3T0fP9FEVector3T3",
+      "address": "0x800485fc",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "FELerpQuaternion__FR12FEQuaternionT0fP12FEQuaternionT3",
+      "address": "0x80048654",
+      "size": 1340,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "acosf": "0x8026f5e4",
+    "sinf": "0x80270a08",
+    "sqrtf": "0x80270538"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyInterpLinear.cpp",
+  "original_file_index": 279,
+  "comparison_functions": [
+    "FELerpQuaternion__FR12FEQuaternionT0fP12FEQuaternionT3"
+  ],
+  "context_units": [
+    "feng_lerp_values"
+  ],
+  "evidence": "docs/research/feng-animation-lists.md",
+  "profile_from": "fecode_setcellcolor.json"
+}

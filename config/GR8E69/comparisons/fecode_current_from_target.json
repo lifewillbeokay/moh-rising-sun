@@ -1,0 +1,32 @@
+{
+  "id": "compare_fecode_current_from_target",
+  "source": "src/frontend/fecode_current_from_target.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800476f8",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "CalculateCurrentFromTarget__13FECodeListBoxUlUlUl",
+      "address": "0x800476f8",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "CalculateCurrentFromTarget__13FECodeListBoxUlUlUl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

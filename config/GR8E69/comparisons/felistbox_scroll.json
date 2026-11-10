@@ -1,0 +1,40 @@
+{
+  "id": "compare_felistbox_scroll",
+  "source": "src/frontend/felistbox_scroll.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049ff4",
+      "size": 1160
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297800",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "ScrollSelection__9FEListBoxll",
+      "address": "0x80049ff4",
+      "size": 1160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sqrtf": "0x80270538",
+    "CompleteScroll__9FEListBox": "0x8004a860"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEListBox.cpp",
+  "original_file_index": 294,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "ScrollSelection__9FEListBoxll"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

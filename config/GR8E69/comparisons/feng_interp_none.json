@@ -1,0 +1,42 @@
+{
+  "id": "compare_feng_interp_none",
+  "source": "src/frontend/feng_interp_none.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80048cf0",
+      "size": 256
+    }
+  ],
+  "functions": [
+    {
+      "name": "FEInterpNone__FP8FEScriptUclPv",
+      "address": "0x80048cf0",
+      "size": 64,
+      "binding": 1
+    },
+    {
+      "name": "FEInterpNone__FP10FEKeyTracklPv",
+      "address": "0x80048d30",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetKeyAt__10FEKeyTrackl": "0x8004916c",
+    "memcpy": "0x802665e8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyInterpNone.cpp",
+  "original_file_index": 282,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "FEInterpNone__FP8FEScriptUclPv",
+    "FEInterpNone__FP10FEKeyTracklPv"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

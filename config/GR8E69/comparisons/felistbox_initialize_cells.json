@@ -1,0 +1,37 @@
+{
+  "id": "compare_felistbox_initialize_cells",
+  "source": "src/frontend/felistbox_initialize_cells.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004a61c",
+      "size": 132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297814",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "InitializeCell__9FEListBoxP13FEListBoxCellUl",
+      "address": "0x8004a61c",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEListBox.cpp",
+  "original_file_index": 294,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "InitializeCell__9FEListBoxP13FEListBoxCellUl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

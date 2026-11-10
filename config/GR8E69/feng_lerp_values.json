@@ -1,0 +1,62 @@
+{
+  "id": "feng_lerp_values",
+  "source": "src/frontend/feng_lerp_values.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80048544",
+      "size": 272
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297408",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "FELerpInteger__FllfPlT3",
+      "address": "0x80048544",
+      "size": 100,
+      "binding": 1
+    },
+    {
+      "name": "FELerpFloat__FfffPfT3",
+      "address": "0x800485a8",
+      "size": 24,
+      "binding": 1
+    },
+    {
+      "name": "FELerpVector2__FR9FEVector2T0fP9FEVector2T3",
+      "address": "0x800485c0",
+      "size": 60,
+      "binding": 1
+    },
+    {
+      "name": "FELerpVector3__FR9FEVector3T0fP9FEVector3T3",
+      "address": "0x800485fc",
+      "size": 88,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyInterpLinear.cpp",
+  "original_file_index": 279,
+  "evidence": "docs/research/feng-animation-lists.md"
+}

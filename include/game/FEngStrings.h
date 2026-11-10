@@ -7,6 +7,7 @@ inline void *operator new[](unsigned int size, const char *label) { return DWI_a
 
 unsigned long GetStringLength(const short *);
 template <class T> void CopyString(short *, const T *);
+template <class T> void CopyString(short *, const T *, unsigned long);
 
 class FEWideString {
   public:

@@ -1,0 +1,41 @@
+{
+  "id": "fecode_scroll_axes",
+  "source": "src/frontend/fecode_scroll_axes.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046830",
+      "size": 100
+    }
+  ],
+  "functions": [
+    {
+      "name": "ScrollSelection__13FECodeListBoxll",
+      "address": "0x80046830",
+      "size": 100,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ScrollSelection__13FECodeListBoxlRUlT2UlUlb": "0x80046d94"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md"
+}
