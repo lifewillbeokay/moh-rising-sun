@@ -1,0 +1,39 @@
+{
+  "id": "compare_fecode_indices",
+  "source": "src/frontend/fecode_indices.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800469d0",
+      "size": 240
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetRealColumn__C13FECodeListBoxl",
+      "address": "0x800469d0",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "GetRealRow__C13FECodeListBoxl",
+      "address": "0x80046a48",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "GetRealColumn__C13FECodeListBoxl",
+    "GetRealRow__C13FECodeListBoxl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

@@ -1,0 +1,38 @@
+{
+  "id": "compare_fekeytrack_assign",
+  "source": "src/frontend/fekeytrack_assign.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80048df0",
+      "size": 364
+    }
+  ],
+  "functions": [
+    {
+      "name": "__as__10FEKeyTrackR10FEKeyTrack",
+      "address": "0x80048df0",
+      "size": 364,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemHead__9FERefList": "0x80055170",
+    "ReferenceList__9FERefListP9FERefList": "0x80055018",
+    "_vt.9FEKeyNode": "0x802e11b0",
+    "__nw__9FEKeyNodeUi": "0x80048f5c",
+    "AddNode__9FERefListP9FEMinNodeT1": "0x800550a0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyTrack.cpp",
+  "original_file_index": 287,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "__as__10FEKeyTrackR10FEKeyTrack"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

@@ -49,6 +49,26 @@
     "comparisons/line_segment_distance.json",
     "comparisons/sphere_visibility.json",
     "comparisons/box_sphere.json",
-    "comparisons/capsule_visibility.json"
+    "comparisons/capsule_visibility.json",
+    "comparisons/fecode_allocate_strings.json",
+    "comparisons/fecode_copy.json",
+    "comparisons/fecode_current_from_target.json",
+    "comparisons/fecode_fill_cells.json",
+    "comparisons/fecode_indices.json",
+    "comparisons/fecode_initialize.json",
+    "comparisons/fecode_movement.json",
+    "comparisons/fecode_scroll_selection.json",
+    "comparisons/fecode_select_callback.json",
+    "comparisons/fekeytrack_assign.json",
+    "comparisons/fekeytrack_lookup.json",
+    "comparisons/fekeytrack_set_values.json",
+    "comparisons/felistbox_initialize_cells.json",
+    "comparisons/felistbox_resize.json",
+    "comparisons/felistbox_scroll.json",
+    "comparisons/felistbox_update.json",
+    "comparisons/feng_interp_dispatch.json",
+    "comparisons/feng_interp_none.json",
+    "comparisons/feng_lerp_quaternion.json",
+    "comparisons/feng_matrix.json"
   ]
 }

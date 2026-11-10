@@ -1,0 +1,47 @@
+{
+  "id": "felistbox_ctor",
+  "source": "src/frontend/felistbox_ctor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049a08",
+      "size": 176
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029768c",
+      "size": 12
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9FEListBox",
+      "address": "0x80049a08",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__8FEObject": "0x8004ff9c",
+    "_vt.9FEListBox": "0x802e11f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEListBox.cpp",
+  "original_file_index": 294,
+  "evidence": "docs/research/feng-animation-lists.md"
+}

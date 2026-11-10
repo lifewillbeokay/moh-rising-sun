@@ -1,0 +1,53 @@
+{
+  "id": "compare_fecode_copy",
+  "source": "src/frontend/fecode_copy.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80045d80",
+      "size": 780
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297200",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "__13FECodeListBoxRC13FECodeListBoxb",
+      "address": "0x80045d80",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "CopyProperties__13FECodeListBoxRC13FECodeListBox",
+      "address": "0x80045e68",
+      "size": 548,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__8FEObjectRC8FEObjectb": "0x8005002c",
+    "_vt.13FECodeListBox": "0x802e1140",
+    "__7FEColorUl": "0x800566b4",
+    "Initialize__13FECodeListBoxUlUl": "0x80046100",
+    "__builtin_vec_delete": "0x801a89b0",
+    "AllocateStrings__13FECodeListBoxUlUl": "0x80046648",
+    "AllocateString__13FECodeListBox": "0x8004698c",
+    "CopyString__H1Zs_PsPCX01_v": "0x80277f18"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "__13FECodeListBoxRC13FECodeListBoxb",
+    "CopyProperties__13FECodeListBoxRC13FECodeListBox"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

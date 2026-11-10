@@ -1,0 +1,58 @@
+{
+  "id": "compare_feng_matrix",
+  "source": "src/frontend/feng_matrix.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004ba68",
+      "size": 1044
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802979e4",
+      "size": 16
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetMatrix__12FEQuaternionP9FEMatrix4",
+      "address": "0x8004ba68",
+      "size": 196,
+      "binding": 1
+    },
+    {
+      "name": "Identify__9FEMatrix4",
+      "address": "0x8004bb2c",
+      "size": 84,
+      "binding": 1
+    },
+    {
+      "name": "FEMultMatrix__FP9FEMatrix4PC9FEMatrix4T1",
+      "address": "0x8004bb80",
+      "size": 640,
+      "binding": 1
+    },
+    {
+      "name": "FEMultMatrix__FP9FEVector3PC9FEMatrix4PC9FEVector3",
+      "address": "0x8004be00",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEMath.cpp",
+  "original_file_index": 303,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "GetMatrix__12FEQuaternionP9FEMatrix4",
+    "Identify__9FEMatrix4",
+    "FEMultMatrix__FP9FEMatrix4PC9FEMatrix4T1",
+    "FEMultMatrix__FP9FEVector3PC9FEMatrix4PC9FEVector3"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

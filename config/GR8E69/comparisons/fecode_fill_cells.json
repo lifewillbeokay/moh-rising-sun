@@ -1,0 +1,32 @@
+{
+  "id": "compare_fecode_fill_cells",
+  "source": "src/frontend/fecode_fill_cells.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046378",
+      "size": 584
+    }
+  ],
+  "functions": [
+    {
+      "name": "FillAllCells__13FECodeListBox",
+      "address": "0x80046378",
+      "size": 584,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "FillAllCells__13FECodeListBox"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

@@ -1,0 +1,43 @@
+{
+  "id": "compare_fecode_allocate_strings",
+  "source": "src/frontend/fecode_allocate_strings.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80046648",
+      "size": 488
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029725c",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "AllocateStrings__13FECodeListBoxUlUl",
+      "address": "0x80046648",
+      "size": 488,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "memset": "0x80266778",
+    "AllocateString__13FECodeListBox": "0x8004698c",
+    "CopyString__H1Zs_PsPCX01Ul_v": "0x80277f54",
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FECodeListBox.cpp",
+  "original_file_index": 267,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "AllocateStrings__13FECodeListBoxUlUl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

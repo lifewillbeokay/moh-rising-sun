@@ -94,3 +94,7 @@ differences and the unresolved box/capsule intersection contact behavior.
 The [frontend, AI, audio and rendering batch](rising-sun-only-batch.md) adds exact
 linked functions recovered mostly from the executable itself, and records which few
 used Frontline as a semantic reference.
+
+The [FEng animation and list-box follow-up](feng-animation-lists.md) uses the
+interfaces contributed in PRs #64 and #65 for 41 more functions, including
+measured partial interpolation, key-track, matrix and list-box bodies.

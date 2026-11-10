@@ -1,0 +1,52 @@
+{
+  "id": "compare_feng_interp_dispatch",
+  "source": "src/frontend/feng_interp_dispatch.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80047d8c",
+      "size": 344
+    }
+  ],
+  "functions": [
+    {
+      "name": "FEKeyInterp__FP8FEScriptUclP8FEObject",
+      "address": "0x80047d8c",
+      "size": 108,
+      "binding": 1
+    },
+    {
+      "name": "FEKeyInterp__FP10FEKeyTracklPv",
+      "address": "0x80047df8",
+      "size": 88,
+      "binding": 1
+    },
+    {
+      "name": "FEKeyInterpFast__FP10FEKeyTracklPv",
+      "address": "0x80047e50",
+      "size": 148,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEInterpNone__FP8FEScriptUclPv": "0x80048cf0",
+    "FEInterpLinear__FP8FEScriptUclPv": "0x80047ee4",
+    "FEInterpNone__FP10FEKeyTracklPv": "0x80048d30",
+    "FEInterpLinear__FP10FEKeyTracklPv": "0x80047f24",
+    "GetNumElements__9FERefList": "0x800551ac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyInterp.cpp",
+  "original_file_index": 276,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "FEKeyInterp__FP8FEScriptUclP8FEObject",
+    "FEKeyInterp__FP10FEKeyTracklPv",
+    "FEKeyInterpFast__FP10FEKeyTracklPv"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

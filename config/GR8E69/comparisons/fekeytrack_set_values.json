@@ -1,0 +1,44 @@
+{
+  "id": "compare_fekeytrack_set_values",
+  "source": "src/frontend/fekeytrack_set_values.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800493f8",
+      "size": 396
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetKeyValueAt__10FEKeyTracklR9FEVector3",
+      "address": "0x800493f8",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "SetKeyValueAt__10FEKeyTracklR7FEColor",
+      "address": "0x800494dc",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetKeyAt__10FEKeyTrackl": "0x8004916c",
+    "CreateKeyAt__10FEKeyTrackl": "0x80049338",
+    "__as__7FEColorRC7FEColor": "0x8005678c",
+    "__mi__C7FEColorRC7FEColor": "0x800567b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEKeyTrack.cpp",
+  "original_file_index": 287,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "SetKeyValueAt__10FEKeyTracklR9FEVector3",
+    "SetKeyValueAt__10FEKeyTracklR7FEColor"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

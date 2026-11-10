@@ -1,0 +1,53 @@
+{
+  "id": "compare_felistbox_resize",
+  "source": "src/frontend/felistbox_resize.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80049b54",
+      "size": 844
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297738",
+      "size": 152
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetNumColumns__9FEListBoxUl",
+      "address": "0x80049b54",
+      "size": 456,
+      "binding": 1
+    },
+    {
+      "name": "SetNumRows__9FEListBoxUl",
+      "address": "0x80049d1c",
+      "size": 388,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CleanupColumns__9FEListBox": "0x8004a6a0",
+    "CleanupCells__9FEListBox": "0x8004a740",
+    "DWI_alloc": "0x801a8670",
+    "memcpy": "0x802665e8",
+    "__builtin_vec_delete": "0x801a89b0",
+    "InitializeListEntry__9FEListBoxP15FEListEntryDataUl": "0x8004a5f4",
+    "InitializeCell__9FEListBoxP13FEListBoxCellUl": "0x8004a61c",
+    "CleanupRows__9FEListBox": "0x8004a6f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEListBox.cpp",
+  "original_file_index": 294,
+  "evidence": "docs/research/feng-animation-lists.md",
+  "comparison_functions": [
+    "SetNumColumns__9FEListBoxUl",
+    "SetNumRows__9FEListBoxUl"
+  ],
+  "context_units": [],
+  "profile_from": "fecode_setcellcolor.json"
+}

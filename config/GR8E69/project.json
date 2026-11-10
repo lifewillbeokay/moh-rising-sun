@@ -2593,7 +2593,12 @@
     "memcardpopup_events.json",
     "shell_shutdown_process.json",
     "shell_package_events.json",
-    "shell_postdraw.json"
+    "shell_postdraw.json",
+    "fecode_scroll_axes.json",
+    "felistbox_ctor.json",
+    "feng_interp_linear_wrapper.json",
+    "feng_lerp_color.json",
+    "feng_lerp_values.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
