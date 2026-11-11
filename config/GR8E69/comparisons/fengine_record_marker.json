@@ -1,0 +1,34 @@
+{
+  "id": "compare_fengine_record_marker",
+  "source": "src/frontend/fengine_record_marker.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004fecc",
+      "size": 80
+    }
+  ],
+  "functions": [
+    {
+      "name": "RecordPackageMarker__7FEnginePCc",
+      "address": "0x8004fecc",
+      "size": 80,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "RecordPackageMarker__7FEnginePCc"
+  ],
+  "context_units": []
+}

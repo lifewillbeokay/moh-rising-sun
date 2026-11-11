@@ -86,6 +86,7 @@ class FEObject : public FEMinNode {
     void SetCurrentScript(FEScript *);
     void SetupMoveToTracks();
     void SetPosition(const struct FEVector3 &, bool);
+    void SetTrackValue(FEKeyTrack_Indices, const struct FEVector3 &, bool);
     void SetDataSize(unsigned long);
     FEMessageResponse *FindResponse(unsigned long) const;
     void SetScript(unsigned long, bool);
@@ -206,6 +207,7 @@ class FEButtonMap {
 };
 class FEPackage : public FENode {
   public:
+    static unsigned long uHoldDirtyFlags;
     FEPackage();
     virtual ~FEPackage();
     FEMsgTargetList *GetMessageTargets(unsigned long);
@@ -214,6 +216,8 @@ class FEPackage : public FENode {
     FEObject *FindObjectByGUID(unsigned long);
     void SetFilename(const char *);
     void UpdateObject(FEObject *, long);
+    void UpdateObjectTracks(FEObject *, FEScript *);
+    void IssueScriptMessages(FEngine *, FEObject *, FEScript *, long, long);
     void UpdateGroup(FEGroup *, long);
     void Update(FEngine *, long);
     void SetCurrentButton(FEngine *, FEObject *, bool);
@@ -229,7 +233,10 @@ class FEPackage : public FENode {
     int unknown_18;                   // +0x18; UnloadPackage idles a package while it is set.
     int unknown_1c;                   // +0x1c; FEPackageReader::Load stores its last flag.
     int unknown_20;                   // +0x20
-    int priority;                     // +0x24
+    union {
+        int priority;
+        int libraryUseCount; // The library loader uses this storage as a reference count.
+    };                                // +0x24
     int controlMask;                  // +0x28
     int unknown_2c;                   // +0x2c
     FEngine *engine;                  // +0x30; set by Update.

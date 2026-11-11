@@ -1,0 +1,43 @@
+{
+  "id": "compare_feevent_setcount",
+  "source": "src/frontend/feevent_setcount.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800479a4",
+      "size": 216
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029734c",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetCount__11FEEventListl",
+      "address": "0x800479a4",
+      "size": 216,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__builtin_delete": "0x801a8990",
+    "DWI_alloc": "0x801a8670",
+    "memcpy": "0x802665e8",
+    "memset": "0x80266778",
+    "__builtin_vec_delete": "0x801a89b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEEvent.cpp",
+  "original_file_index": 270,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetCount__11FEEventListl"
+  ],
+  "context_units": []
+}

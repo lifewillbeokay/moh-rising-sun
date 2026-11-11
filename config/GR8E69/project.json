@@ -2598,7 +2598,11 @@
     "felistbox_ctor.json",
     "feng_interp_linear_wrapper.json",
     "feng_lerp_color.json",
-    "feng_lerp_values.json"
+    "feng_lerp_values.json",
+    "fe_stricmp.json",
+    "felocale_copy_string.json",
+    "fengine_unload_library.json",
+    "fetype_find.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

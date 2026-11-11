@@ -1,0 +1,32 @@
+{
+  "id": "compare_fe_wide_length",
+  "source": "src/frontend/fe_wide_length.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800568b8",
+      "size": 52
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetStringLength__FPCs",
+      "address": "0x800568b8",
+      "size": 52,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEWideString.cpp",
+  "original_file_index": 354,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GetStringLength__FPCs"
+  ],
+  "context_units": []
+}

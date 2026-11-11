@@ -8,6 +8,7 @@
 
 class FEGameInterface;
 class FEMessageResponse;
+class FETypeNode;
 class FEJoyPad;
 class FEMessageNode : public FEMinNode {
   public:
@@ -36,7 +37,10 @@ class FETypeLib {
     FEList types;    // +0x0
     long unknown_10; // +0x10
     FETypeLib() : unknown_10(0) {}
-    void Startup();
+    int Startup();
+    FETypeNode *CreateBaseObjectType(const char *);
+    FETypeNode *CreateImageObjectType(const char *);
+    FETypeNode *FindType(unsigned long);
 };
 
 class FEngine {

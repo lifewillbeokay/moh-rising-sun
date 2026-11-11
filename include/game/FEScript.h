@@ -4,6 +4,7 @@
 #define GAME_FE_SCRIPT_H
 #pragma interface
 #include "FEObjectPool.h"
+#include "FEEvent.h"
 
 // Sixteen bytes that a track reads as a vector, a colour or similar.
 struct FEKeyValue { unsigned long word[4]; };
@@ -68,18 +69,6 @@ class FEKeyTrack {
     bool SetKeyValueAt(long, FEColor &);
 };
 
-// A list of two words at +0x24: its count and an array that is released with delete[].
-class FEScriptEventList {
-  public:
-    unsigned long count;
-    char *events;
-    FEScriptEventList() : count(0), events(0) {}
-    ~FEScriptEventList() {
-        if (events) delete[] events;
-        events = 0;
-    }
-};
-
 class FEScript : public FEMinNode {
   public:
     unsigned long unknown_c;  // +0xc
@@ -88,11 +77,12 @@ class FEScript : public FEMinNode {
     unsigned long unknown_18; // +0x18
     long trackCount;          // +0x1c
     FEKeyTrack *tracks;       // +0x20
-    FEScriptEventList events; // +0x24
+    FEEventList events; // +0x24
     char *name;               // +0x2c
     unsigned long hash;       // +0x30
     static FEMinList NodePool;
     FEScript() { Init(); }
+    FEScript(FEScript &, bool);
     virtual ~FEScript();
     void *operator new(unsigned int);
     void operator delete(void *);

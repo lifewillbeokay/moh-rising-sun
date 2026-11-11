@@ -1,0 +1,55 @@
+{
+  "id": "compare_feobject_constructors",
+  "source": "src/frontend/feobject_constructors.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004ff9c",
+      "size": 740
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8FEObject",
+      "address": "0x8004ff9c",
+      "size": 144,
+      "binding": 1
+    },
+    {
+      "name": "__8FEObjectRC8FEObjectb",
+      "address": "0x8005002c",
+      "size": 596,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.8FEObject": "0x802e1290",
+    "_vt.9FEMinList": "0x802e1180",
+    "_7FEngine.SysGUID": "0x802c1738",
+    "SetDataSize__8FEObjectUl": "0x80050344",
+    "memset": "0x80266778",
+    "SetName__8FEObjectPCc": "0x8005039c",
+    "_vt.17FEMessageResponse": "0x802e1248",
+    "__nw__17FEMessageResponseUi": "0x8004c060",
+    "SetCount__17FEMessageResponseUl": "0x8004c314",
+    "__as__10FEResponseR10FEResponse": "0x8004bebc",
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "__nw__8FEScriptUi": "0x80055550",
+    "__8FEScriptR8FEScriptb": "0x80055324",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "__8FEObject",
+    "__8FEObjectRC8FEObjectb"
+  ],
+  "context_units": []
+}

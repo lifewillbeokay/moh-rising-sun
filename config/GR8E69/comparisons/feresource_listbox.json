@@ -1,0 +1,35 @@
+{
+  "id": "compare_feresource_listbox",
+  "source": "src/frontend/feresource_listbox.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80051d94",
+      "size": 316
+    }
+  ],
+  "functions": [
+    {
+      "name": "ConnectListBoxResources__17ResourceConnectorP9FEListBox",
+      "address": "0x80051d94",
+      "size": 316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetPCellData__9FEListBoxUlUl": "0x8004a8c8",
+    "IncrementCellByColumn__9FEListBox": "0x80049fb4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ConnectListBoxResources__17ResourceConnectorP9FEListBox"
+  ],
+  "context_units": []
+}

@@ -1,0 +1,43 @@
+{
+  "id": "compare_feobject_position",
+  "source": "src/frontend/feobject_position.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050968",
+      "size": 304
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297d6c",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetPosition__8FEObjectRC9FEVector3b",
+      "address": "0x80050968",
+      "size": 304,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Close__Ffff": "0x8004ff74",
+    "SetTrackValue__8FEObject18FEKeyTrack_IndicesRC9FEVector3b": "0x80050814"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319,
+  "local_externals": [
+    "Close__Ffff"
+  ],
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetPosition__8FEObjectRC9FEVector3b"
+  ],
+  "context_units": []
+}

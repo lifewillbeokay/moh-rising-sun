@@ -1,0 +1,42 @@
+{
+  "id": "compare_fereader_referenced_packages",
+  "source": "src/frontend/fereader_referenced_packages.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800526f0",
+      "size": 444
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadReferencedPackagesChunk__15FEPackageReader",
+      "address": "0x800526f0",
+      "size": 444,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindChild__15FEPackageReaderP7FEChunkUl": "0x800523a4",
+    "__builtin_new": "0x801a8910",
+    "__6FENode": "0x8004966c",
+    "SetName__6FENodePCc": "0x80049700",
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "FindLibraryPackage__C7FEngineUl": "0x8004d350",
+    "LoadPackage__7FEnginePCvb": "0x8004cdf4",
+    "__builtin_vec_delete": "0x801a89b0",
+    "AddToLibraryList__7FEngineP9FEPackage": "0x8004d300"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadReferencedPackagesChunk__15FEPackageReader"
+  ],
+  "context_units": []
+}

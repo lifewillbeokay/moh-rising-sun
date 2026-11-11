@@ -1,0 +1,38 @@
+{
+  "id": "compare_fengine_release",
+  "source": "src/frontend/fengine_release.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004cac0",
+      "size": 420
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReleaseAll__7FEngine",
+      "address": "0x8004cac0",
+      "size": 420,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Shutdown__9FEPackageP15FEGameInterface": "0x8005108c",
+    "RemovePackage__13FEPackageListP9FEPackage": "0x8005215c",
+    "RemHead__9FEMinList": "0x80049878",
+    "__builtin_vec_delete": "0x801a89b0",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReleaseAll__7FEngine"
+  ],
+  "context_units": []
+}
