@@ -1,0 +1,40 @@
+{
+  "id": "compare_fescript_copy",
+  "source": "src/frontend/fescript_copy.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055324",
+      "size": 556
+    }
+  ],
+  "functions": [
+    {
+      "name": "__8FEScriptR8FEScriptb",
+      "address": "0x80055324",
+      "size": 556,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.8FEScript": "0x802e1438",
+    "Init__8FEScript": "0x80055208",
+    "SetName__8FEScriptPCc": "0x8005578c",
+    "SetTrackCount__8FEScriptl": "0x80055818",
+    "ReferenceList__9FERefListP9FERefList": "0x80055018",
+    "__as__10FEKeyTrackR10FEKeyTrack": "0x80048df0",
+    "__as__11FEEventListR11FEEventList": "0x8004795c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEScript.cpp",
+  "original_file_index": 335,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "__8FEScriptR8FEScriptb"
+  ],
+  "context_units": []
+}

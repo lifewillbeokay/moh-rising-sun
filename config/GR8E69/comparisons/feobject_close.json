@@ -1,0 +1,32 @@
+{
+  "id": "compare_feobject_close",
+  "source": "src/frontend/feobject_close.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004ff74",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "Close__Ffff",
+      "address": "0x8004ff74",
+      "size": 40,
+      "binding": 0
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Close__Ffff"
+  ],
+  "context_units": []
+}

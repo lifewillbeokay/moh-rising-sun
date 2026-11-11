@@ -1,0 +1,40 @@
+{
+  "id": "compare_fengine_render_object",
+  "source": "src/frontend/fengine_render_object.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004ecac",
+      "size": 252
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297c14",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "RenderObject__7FEngineP8FEObjectR9FEMatrix4Us",
+      "address": "0x8004ecac",
+      "size": 252,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__as__9FEVector3RC9FEVector3": "0x802782c8",
+    "FEMultMatrix__FP9FEVector3PC9FEMatrix4PC9FEVector3": "0x8004be00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "RenderObject__7FEngineP8FEObjectR9FEMatrix4Us"
+  ],
+  "context_units": []
+}

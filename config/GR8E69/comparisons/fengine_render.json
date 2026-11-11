@@ -1,0 +1,37 @@
+{
+  "id": "compare_fengine_render",
+  "source": "src/frontend/fengine_render.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004e990",
+      "size": 332
+    }
+  ],
+  "functions": [
+    {
+      "name": "Render__7FEngine",
+      "address": "0x8004e990",
+      "size": 332,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Identify__9FEMatrix4": "0x8004bb2c",
+    "RenderGroup__7FEngineP7FEGroupR9FEMatrix4T2Us": "0x8004eadc",
+    "RenderObject__7FEngineP8FEObjectR9FEMatrix4Us": "0x8004ecac",
+    "SortObjects__t14FEObjectSorter1i1024": "0x802783b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Render__7FEngine"
+  ],
+  "context_units": []
+}

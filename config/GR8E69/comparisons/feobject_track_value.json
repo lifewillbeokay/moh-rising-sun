@@ -1,0 +1,35 @@
+{
+  "id": "compare_feobject_track_value",
+  "source": "src/frontend/feobject_track_value.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050814",
+      "size": 340
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetTrackValue__8FEObject18FEKeyTrack_IndicesRC9FEVector3b",
+      "address": "0x80050814",
+      "size": 340,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindTrack__C8FEScript18FEKeyTrack_Indices": "0x80055968",
+    "GetDataOffset__8FEObject18FEKeyTrack_Indices": "0x80050b28"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetTrackValue__8FEObject18FEKeyTrack_IndicesRC9FEVector3b"
+  ],
+  "context_units": []
+}

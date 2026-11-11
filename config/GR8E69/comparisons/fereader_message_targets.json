@@ -1,0 +1,43 @@
+{
+  "id": "compare_fereader_message_targets",
+  "source": "src/frontend/fereader_message_targets.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80054d84",
+      "size": 516
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802982bc",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadMessageTargetListChunk__15FEPackageReader",
+      "address": "0x80054d84",
+      "size": 516,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindChild__15FEPackageReaderP7FEChunkUl": "0x800523a4",
+    "DWI_alloc": "0x801a8670",
+    "Allocate__15FEMsgTargetListUl": "0x8004c584",
+    "FindObjectByGUID__9FEPackageUl": "0x800512c8",
+    "AppendTarget__15FEMsgTargetListP8FEObject": "0x8004c640"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadMessageTargetListChunk__15FEPackageReader"
+  ],
+  "context_units": []
+}

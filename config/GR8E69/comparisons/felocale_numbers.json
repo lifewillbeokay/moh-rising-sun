@@ -1,0 +1,39 @@
+{
+  "id": "compare_felocale_numbers",
+  "source": "src/frontend/felocale_numbers.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004a958",
+      "size": 200
+    }
+  ],
+  "functions": [
+    {
+      "name": "AtoI__FPCc",
+      "address": "0x8004a958",
+      "size": 92,
+      "binding": 0
+    },
+    {
+      "name": "ItoA__FPcUl",
+      "address": "0x8004a9b4",
+      "size": 108,
+      "binding": 0
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FELocalizer.cpp",
+  "original_file_index": 295,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "AtoI__FPCc",
+    "ItoA__FPcUl"
+  ],
+  "context_units": []
+}

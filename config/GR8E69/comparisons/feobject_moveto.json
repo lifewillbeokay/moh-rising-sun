@@ -1,0 +1,37 @@
+{
+  "id": "compare_feobject_moveto",
+  "source": "src/frontend/feobject_moveto.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005045c",
+      "size": 856
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetupMoveToTracks__8FEObject",
+      "address": "0x8005045c",
+      "size": 856,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetHead__C9FERefList": "0x802780fc",
+    "memset": "0x80266778",
+    "__mi__C7FEColorRC7FEColor": "0x800567b4",
+    "__as__7FEColorRC7FEColor": "0x8005678c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEObject.cpp",
+  "original_file_index": 319,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetupMoveToTracks__8FEObject"
+  ],
+  "context_units": []
+}

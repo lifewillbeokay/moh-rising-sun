@@ -1,0 +1,32 @@
+{
+  "id": "compare_feresponse_branch_target",
+  "source": "src/frontend/feresponse_branch_target.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004c488",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "FindConditionBranchTarget__C17FEMessageResponseUl",
+      "address": "0x8004c488",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEMessageResponse.cpp",
+  "original_file_index": 305,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "FindConditionBranchTarget__C17FEMessageResponseUl"
+  ],
+  "context_units": []
+}

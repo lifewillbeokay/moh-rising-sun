@@ -1,0 +1,32 @@
+{
+  "id": "compare_felocale_readstring",
+  "source": "src/frontend/felocale_readstring.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004b8ac",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadString__11FELocalizerPsPcRUlUl",
+      "address": "0x8004b8ac",
+      "size": 288,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FELocalizer.cpp",
+  "original_file_index": 295,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadString__11FELocalizerPsPcRUlUl"
+  ],
+  "context_units": []
+}

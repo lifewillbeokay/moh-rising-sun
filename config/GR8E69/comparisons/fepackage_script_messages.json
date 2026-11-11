@@ -1,0 +1,37 @@
+{
+  "id": "compare_fepackage_script_messages",
+  "source": "src/frontend/fepackage_script_messages.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005131c",
+      "size": 516
+    }
+  ],
+  "functions": [
+    {
+      "name": "IssueScriptMessages__9FEPackageP7FEngineP8FEObjectP8FEScriptll",
+      "address": "0x8005131c",
+      "size": 516,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SendMessageToGame__7FEngineUlP8FEObjectP9FEPackageUl": "0x8004ee78",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "FindObjectByGUID__9FEPackageUl": "0x800512c8",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "IssueScriptMessages__9FEPackageP7FEngineP8FEObjectP8FEScriptll"
+  ],
+  "context_units": []
+}

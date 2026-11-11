@@ -1,0 +1,49 @@
+{
+  "id": "felocale_copy_string",
+  "source": "src/frontend/felocale_copy_string.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004a8e4",
+      "size": 116
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297848",
+      "size": 36
+    }
+  ],
+  "functions": [
+    {
+      "name": "FECopyString__FRPcPCc",
+      "address": "0x8004a8e4",
+      "size": 116,
+      "binding": 0
+    }
+  ],
+  "externals": {
+    "__builtin_vec_delete": "0x801a89b0",
+    "strlen": "0x80266b70",
+    "DWI_alloc": "0x801a8670",
+    "strcpy": "0x80266a7c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FELocalizer.cpp",
+  "original_file_index": 295,
+  "evidence": "docs/research/feng-packages.md"
+}

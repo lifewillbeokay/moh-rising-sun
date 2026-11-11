@@ -1,0 +1,32 @@
+{
+  "id": "compare_fecolor_subtract",
+  "source": "src/frontend/fecolor_subtract.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800567b4",
+      "size": 120
+    }
+  ],
+  "functions": [
+    {
+      "name": "__mi__C7FEColorRC7FEColor",
+      "address": "0x800567b4",
+      "size": 120,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FETypes.cpp",
+  "original_file_index": 352,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "__mi__C7FEColorRC7FEColor"
+  ],
+  "context_units": []
+}

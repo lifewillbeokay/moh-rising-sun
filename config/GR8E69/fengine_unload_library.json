@@ -1,0 +1,42 @@
+{
+  "id": "fengine_unload_library",
+  "source": "src/frontend/fengine_unload_library.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d014",
+      "size": 200
+    }
+  ],
+  "functions": [
+    {
+      "name": "UnloadLibraryPackage__7FEngineP9FEPackage",
+      "address": "0x8004d014",
+      "size": 200,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "RemoveFromLibraryList__7FEngineP9FEPackage": "0x8004d32c",
+    "Shutdown__9FEPackageP15FEGameInterface": "0x8005108c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-packages.md"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "compare_fereader_readtypes",
+  "source": "src/frontend/fereader_readtypes.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800524f8",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadTypeSizes__15FEPackageReader",
+      "address": "0x800524f8",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindChild__15FEPackageReaderP7FEChunkUl": "0x800523a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadTypeSizes__15FEPackageReader"
+  ],
+  "context_units": []
+}

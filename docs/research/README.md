@@ -98,3 +98,7 @@ used Frontline as a semantic reference.
 The [FEng animation and list-box follow-up](feng-animation-lists.md) uses the
 interfaces contributed in PRs #64 and #65 for 41 more functions, including
 measured partial interpolation, key-track, matrix and list-box bodies.
+
+The [FEng package, object and localization batch](feng-packages.md) extends the
+PR #64/#65 interfaces with 39 functions covering package parsing, object/script
+copying, event dispatch, localization, render traversal and cleanup.

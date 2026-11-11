@@ -1,0 +1,54 @@
+{
+  "id": "compare_fereader_list_tags",
+  "source": "src/frontend/fereader_list_tags.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80053b40",
+      "size": 1952
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessListBoxTag__15FEPackageReaderP5FETag",
+      "address": "0x80053b40",
+      "size": 1308,
+      "binding": 1
+    },
+    {
+      "name": "ProcessCodeListBoxTag__15FEPackageReaderP5FETag",
+      "address": "0x8005405c",
+      "size": 644,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetNumColumns__9FEListBoxUl": "0x80049b54",
+    "SetNumRows__9FEListBoxUl": "0x80049d1c",
+    "IncrementCellByColumn__9FEListBox": "0x80049fb4",
+    "__7FEColorUl": "0x800566b4",
+    "GetPCellData__9FEListBoxUlUl": "0x8004a8c8",
+    "__opUl__C7FEColor": "0x800566dc",
+    "SetCellType__9FEListBoxUl": "0x80049ea0",
+    "SetCellString__9FEListBoxPCs": "0x80049f18",
+    "SetAutoWrap__9FEListBoxb": "0x8004a5cc",
+    "Initialize__13FECodeListBoxUlUl": "0x80046100",
+    "AllocateStrings__13FECodeListBoxUlUl": "0x80046648",
+    "SetCellColor__13FECodeListBoxUlUlUlUlUl": "0x80047768",
+    "SetCellJustification__13FECodeListBoxUlUlUlUlUl": "0x800478b8",
+    "SetCellScale__13FECodeListBoxUlUlRC7FEPointUlUl": "0x80047808"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331,
+  "evidence": "docs/research/feng-packages.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ProcessListBoxTag__15FEPackageReaderP5FETag",
+    "ProcessCodeListBoxTag__15FEPackageReaderP5FETag"
+  ],
+  "context_units": []
+}

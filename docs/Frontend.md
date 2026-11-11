@@ -52,7 +52,9 @@ fragment owns, so they wait until the fragments can be combined into one unit.
 
 The [animation and list-box follow-up](research/feng-animation-lists.md) documents
 the exact and measured partial bodies built on these interfaces, including
-original wrap, resize, callback and floating-point edge cases.
+original wrap, resize, callback and floating-point edge cases. The
+[package, object and localization batch](research/feng-packages.md) extends those
+interfaces to package parsing, object copying, script events and rendering.
 
 Rising Sun's front end runs on EA's FEng library. Source paths in allocation labels name its
 files (`source/FEngine/FEWideString.cpp`), and symbols give the classes and methods. Verified by
@@ -84,13 +86,17 @@ static initializers have no destructor arm, and defining the object here gives o
 each pool a list of `FESlotNode`s of 32 blocks tracked in a 4-byte mask. `FEScript.h` holds
 `FEScript` (pooled like `FEMessageResponse`), `FEKeyTrack` and `FEKeyNode`, whose sizes come from their
 pools and allocations. `FEKeyTrack`'s members are inferred from `FEScript`'s track array construction.
-`FEScriptEventList` is a descriptive name for the two words at `FEScript+0x24` that its destructor releases.
+`FEEventList` is the symbol-backed class of the count and pointer at `FEScript+0x24`;
+`FEEvent.h` models its twelve-byte entries as message, target and time, inferred
+from `IssueScriptMessages`. This replaces the earlier descriptive `FEScriptEventList` view.
 `FERefList::GetHead` is inline, recursive through a reference, which is why it has an out-of-line copy.
 
 `CPauseMenu` derives from `CUIObject` (tables at `_vt.10CPauseMenu` and `_vt.9CUIObject`); `PauseMenu.h` holds the
 members its methods touch. `FEListBox` holds rows and columns of 48-byte cells; the meanings of most cell
-members are not known. `FEPackageReader` reads little-endian chunk files; only its reset fields and type-size
-table are modeled so far.
+members are not known. `FEPackageReader` reads little-endian chunk files; its shared view now includes
+object-reading state, list-box indices, type sizes, referenced libraries and message targets.
+The package batch records sentinel reads and other format assumptions that remain unchecked
+by the original routines.
 
 `FEObject` derives from `FEMinNode`, not `FENode`: its constructor stores the minimal node's table directly,
 and its name and hash sit at `+0x14` and `+0x10`, with a GUID from `FEngine::SysGUID` at `+0xc`. Its flag
