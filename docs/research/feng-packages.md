@@ -127,10 +127,10 @@ Snapshot capture recompiles the comparisons and records the verified inputs.
 
 ## Follow-up
 
-The existing shortlist still contains the larger script-tag reader, object
-update, package push and locale-table reader, plus button navigation and type
-library construction. Their exports are research leads only and receive no
-source credit in this batch. The four exact-unlinked functions above are also
+The larger script-tag reader, object update, package push, locale-table reader,
+button navigation and type-library construction are now maintained in the
+[input/lifecycle follow-up](feng-lifecycle.md). They received no source credit
+in this earlier batch. The four exact-unlinked functions above are also
 candidates for independent promotion with full data/ownership verification.
 
 ## Recorded comparison measurements

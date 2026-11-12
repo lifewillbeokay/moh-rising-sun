@@ -54,7 +54,10 @@ The [animation and list-box follow-up](research/feng-animation-lists.md) documen
 the exact and measured partial bodies built on these interfaces, including
 original wrap, resize, callback and floating-point edge cases. The
 [package, object and localization batch](research/feng-packages.md) extends those
-interfaces to package parsing, object copying, script events and rendering.
+interfaces to package parsing, object copying, script events and rendering. The
+[input, lifecycle and reader follow-up](research/feng-lifecycle.md) adds controller
+and mouse processing, engine/object updates, package commands and the remaining
+large locale/script readers, with exact and partial accounting kept separate.
 
 Rising Sun's front end runs on EA's FEng library. Source paths in allocation labels name its
 files (`source/FEngine/FEWideString.cpp`), and symbols give the classes and methods. Verified by
@@ -121,7 +124,8 @@ inferred from use. Verified: `ReadLocaleData` parses `[HEADER]`, a `Languages` l
 The unit's helpers `FECopyString`, `ItoA` and the rest are private symbols of the original file `FELocalizer.cpp`,
 which the symbol table names beside them and which the DWI labels in `SetNumLanguages`, `AllocStrings` and
 `SetString` repeat as `source/FEngine/FELocalizer.cpp`. The fragments that call them record that file. The helpers
-themselves, `ReadLocaleData` and `ReadString` are not reconstructed yet: their other callers are not in this unit.
+now have exact or measured partial source, including `ReadLocaleData` and `ReadString`;
+see the package/localization and lifecycle notes above for their verification and limits.
 
 ### FEPackageReader
 

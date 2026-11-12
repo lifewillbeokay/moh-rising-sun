@@ -1,0 +1,46 @@
+{
+  "id": "compare_fepackage_update_object",
+  "source": "src/frontend/fepackage_update_object.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8005158c",
+      "size": 1144
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297e90",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateObject__9FEPackageP8FEObjectl",
+      "address": "0x8005158c",
+      "size": 1144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_9FEPackage.uHoldDirtyFlags": "0x802c1808",
+    "UpdateObjectTracks__9FEPackageP8FEObjectP8FEScript": "0x80051a04",
+    "IssueScriptMessages__9FEPackageP7FEngineP8FEObjectP8FEScriptll": "0x8005131c",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4",
+    "SetupMoveToTracks__8FEObject": "0x8005045c",
+    "Update__9FEListBoxf": "0x8004a47c",
+    "UpdateGroup__9FEPackageP7FEGroupl": "0x80051520",
+    "Update__13FECodeListBoxf": "0x80046894"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "UpdateObject__9FEPackageP8FEObjectl"
+  ],
+  "context_units": []
+}

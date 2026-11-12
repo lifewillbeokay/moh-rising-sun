@@ -1,0 +1,44 @@
+{
+  "id": "compare_fengine_update",
+  "source": "src/frontend/fengine_update.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d4ec",
+      "size": 752
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__7FEnginel",
+      "address": "0x8004d4ec",
+      "size": 752,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Update__7FEMouseR11FEMouseInfoUl": "0x8004c744",
+    "Update__8FEJoyPadUlUl": "0x80047c00",
+    "StartCheckMovieDemoScreen__7FEngine": "0x8004d474",
+    "CheckMovieDemoScreen__7FEnginePc": "0x8004d480",
+    "ProcessPadsForPackage__7FEngineP9FEPackage": "0x8004d7dc",
+    "ProcessMouseForPackage__7FEngineP9FEPackage": "0x8004e3f0",
+    "DecrementHold__8FEJoyPadUlUl": "0x80047d38",
+    "_9FEPackage.uHoldDirtyFlags": "0x802c1808",
+    "Update__9FEPackageP7FEnginel": "0x80051be8",
+    "ProcessMessageQueue__7FEngine": "0x8004f10c",
+    "ProcessPackageCommands__7FEngine": "0x8004fb54"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Update__7FEnginel"
+  ],
+  "context_units": []
+}

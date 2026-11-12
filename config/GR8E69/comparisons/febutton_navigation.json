@@ -1,0 +1,55 @@
+{
+  "id": "compare_febutton_navigation",
+  "source": "src/frontend/febutton_navigation.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80045870",
+      "size": 820
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297148",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetButtonFrom__11FEButtonMapP8FEObjectlP15FEGameInterface16FEButtonWrapMode",
+      "address": "0x80045870",
+      "size": 624,
+      "binding": 1
+    },
+    {
+      "name": "ComputeButtonLocation__11FEButtonMapP8FEObjectP15FEGameInterfaceR9FEVector2",
+      "address": "0x80045ae0",
+      "size": 196,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "PassWrapMode": "0x802c1718",
+    "PassOffsets": "0x802ee5c0",
+    "DirectionVectors": "0x802ee580",
+    "sqrtf": "0x80270538",
+    "FEMultMatrix__FP9FEVector3PC9FEMatrix4PC9FEVector3": "0x8004be00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEButtonMap.cpp",
+  "original_file_index": 260,
+  "local_externals": [
+    "PassWrapMode",
+    "PassOffsets",
+    "DirectionVectors"
+  ],
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GetButtonFrom__11FEButtonMapP8FEObjectlP15FEGameInterface16FEButtonWrapMode",
+    "ComputeButtonLocation__11FEButtonMapP8FEObjectP15FEGameInterfaceR9FEVector2"
+  ],
+  "context_units": []
+}

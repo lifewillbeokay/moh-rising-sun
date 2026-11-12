@@ -1,0 +1,56 @@
+{
+  "id": "compare_fengine_pads",
+  "source": "src/frontend/fengine_pads.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d7dc",
+      "size": 3092
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessPadsForPackage__7FEngineP9FEPackage",
+      "address": "0x8004d7dc",
+      "size": 3092,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778",
+    "WasPressed__8FEJoyPadUl": "0x80047c58",
+    "WasReleased__8FEJoyPadUl": "0x80047d08",
+    "WasHeld__8FEJoyPadUl": "0x80047c8c",
+    "HeldFor__8FEJoyPadUl": "0x80047cbc",
+    "PadButtonHeldHash": "0x802c17a8",
+    "FindResponse__C8FEObjectUl": "0x800507e0",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "FindResponse__9FEPackageUl": "0x800510d4",
+    "PadButtonHash": "0x802c175c",
+    "PadReleasedHash": "0x802c17b0",
+    "ProcessMessageQueue__7FEngine": "0x8004f10c",
+    "ImpulseDir": "0x802c173c",
+    "FEDirection_Message": "0x802c16f8",
+    "FindResponse__C17FEMessageResponseUl": "0x8004c444",
+    "GetButtonFrom__11FEButtonMapP8FEObjectlP15FEGameInterface16FEButtonWrapMode": "0x80045870",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "local_externals": [
+    "PadButtonHeldHash",
+    "PadButtonHash",
+    "PadReleasedHash",
+    "ImpulseDir"
+  ],
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ProcessPadsForPackage__7FEngineP9FEPackage"
+  ],
+  "context_units": []
+}

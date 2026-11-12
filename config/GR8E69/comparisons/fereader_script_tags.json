@@ -1,0 +1,54 @@
+{
+  "id": "compare_fereader_script_tags",
+  "source": "src/frontend/fereader_script_tags.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800542e0",
+      "size": 2132
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadScriptTags__15FEPackageReaderP5FETagUl",
+      "address": "0x800542e0",
+      "size": 2132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.9FEMinNode": "0x802e11c8",
+    "__nw__8FEScriptUi": "0x80055550",
+    "_vt.8FEScript": "0x802e1438",
+    "Init__8FEScript": "0x80055208",
+    "SetName__8FEScriptPCc": "0x8005578c",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "SetTrackCount__8FEScriptl": "0x80055818",
+    "ReferenceList__9FERefListP9FERefList": "0x80055018",
+    "_vt.9FEKeyNode": "0x802e11b0",
+    "__nw__9FEKeyNodeUi": "0x80048f5c",
+    "AddNode__9FERefListP9FEMinNodeT1": "0x800550a0",
+    "SetCount__11FEEventListl": "0x800479a4",
+    "FindTrack__C8FEScript18FEKeyTrack_Indices": "0x80055968",
+    "__builtin_vec_new": "0x801a8950",
+    "_vt.9FERefList": "0x802e1408",
+    "FindType__9FETypeLibUl": "0x800564e8",
+    "FindNode__C9FEMinListUl": "0x800498b4",
+    "__as__10FEKeyTrackR10FEKeyTrack": "0x80048df0",
+    "Purge__9FERefList": "0x8027872c",
+    "__builtin_vec_delete": "0x801a89b0",
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackageReader.cpp",
+  "original_file_index": 331,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadScriptTags__15FEPackageReaderP5FETagUl"
+  ],
+  "context_units": []
+}

@@ -1,0 +1,40 @@
+{
+  "id": "compare_fengine_package_commands",
+  "source": "src/frontend/fengine_package_commands.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004fb54",
+      "size": 728
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessPackageCommands__7FEngine",
+      "address": "0x8004fb54",
+      "size": 728,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ReplaceParentLinks__13FEPackageListPC9FEPackageT1": "0x800521ac",
+    "UnloadPackage__7FEngineP9FEPackage": "0x8004ce78",
+    "PushPackage__7FEnginePCcUcUl": "0x8004d0dc",
+    "g_inputMgr": "0x803077c4",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "RemHead__9FEMinList": "0x80049878"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ProcessPackageCommands__7FEngine"
+  ],
+  "context_units": []
+}

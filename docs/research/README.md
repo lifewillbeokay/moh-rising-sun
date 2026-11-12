@@ -102,3 +102,7 @@ measured partial interpolation, key-track, matrix and list-box bodies.
 The [FEng package, object and localization batch](feng-packages.md) extends the
 PR #64/#65 interfaces with 39 functions covering package parsing, object/script
 copying, event dispatch, localization, render traversal and cleanup.
+
+The [FEng input, lifecycle and reader follow-up](feng-lifecycle.md) adds 16 functions
+covering controller/mouse processing, package commands, update loops, script tags,
+locale tables and type construction, with two exact functions and 14 partials.

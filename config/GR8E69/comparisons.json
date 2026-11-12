@@ -96,6 +96,18 @@
     "comparisons/feresource_listbox.json",
     "comparisons/feresponse_branch_target.json",
     "comparisons/fescript_copy.json",
-    "comparisons/fetypenode_fields.json"
+    "comparisons/fetypenode_fields.json",
+    "comparisons/febutton_navigation.json",
+    "comparisons/felocale_read_data.json",
+    "comparisons/fengine_mouse.json",
+    "comparisons/fengine_package_commands.json",
+    "comparisons/fengine_pads.json",
+    "comparisons/fengine_responses.json",
+    "comparisons/fengine_update.json",
+    "comparisons/fepackage_lifetime.json",
+    "comparisons/fepackage_update_object.json",
+    "comparisons/fereader_script_tags.json",
+    "comparisons/fetype_create_base.json",
+    "comparisons/fetype_create_image.json"
   ]
 }
