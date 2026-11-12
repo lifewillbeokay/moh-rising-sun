@@ -1,0 +1,64 @@
+{
+  "id": "compare_felocale_read_data",
+  "source": "src/frontend/felocale_read_data.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004b458",
+      "size": 960
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802978d8",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "ReadLocaleData__11FELocalizerPvUl",
+      "address": "0x8004b458",
+      "size": 960,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__12FEWideString": "0x800568ec",
+    "ReadNextString__11FELocalizerPsPcRUlUl": "0x8004b9cc",
+    "CompareUpper__FPCsPCc": "0x8004b2a0",
+    "_._12FEWideString": "0x800569bc",
+    "CompareUpperSubst__FPCsPCc": "0x8004b344",
+    "WideToCharString__FPcPCs": "0x8004b3f8",
+    "AtoI__FPCc": "0x8004a958",
+    "SetNumLanguages__11FELocalizerUl": "0x8004ac88",
+    "SetLanguageName__11FELocalizerPCcUl": "0x8004acfc",
+    "WideToEscapeString__11FELocalizerPcPCs": "0x8004b818",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "SetString__11FELocalizerPCcUlR12FEWideString": "0x8004b0f0",
+    "GetLabelIndex__C11FELocalizerPCc": "0x8004b06c",
+    "SetPlatform__13FELocalStringPCc": "0x8004aa58",
+    "SetComment__13FELocalStringPCc": "0x8004aa7c",
+    "SetFlags__13FELocalStringPCc": "0x8004aaa0",
+    "SetSize__13FELocalStringPCc": "0x8004aac4",
+    "strlen": "0x80266b70",
+    "__as__12FEWideStringPCs": "0x80056a60",
+    "__as__12FEWideStringRC12FEWideString": "0x80056a08"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FELocalizer.cpp",
+  "original_file_index": 295,
+  "local_externals": [
+    "CompareUpper__FPCsPCc",
+    "CompareUpperSubst__FPCsPCc",
+    "WideToCharString__FPcPCs",
+    "AtoI__FPCc"
+  ],
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ReadLocaleData__11FELocalizerPvUl"
+  ],
+  "context_units": []
+}

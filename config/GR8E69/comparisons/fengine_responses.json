@@ -1,0 +1,48 @@
+{
+  "id": "compare_fengine_responses",
+  "source": "src/frontend/fengine_responses.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004f6c0",
+      "size": 1172
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessResponses__7FEngineP17FEMessageResponseP8FEObjectP9FEPackageUl",
+      "address": "0x8004f6c0",
+      "size": 1172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "SetCurrentScript__8FEObjectP8FEScript": "0x800507b4",
+    "FindObjectByGUID__9FEPackageUl": "0x800512c8",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44",
+    "RecordLastPackageButton__7FEngineUlUl": "0x8004fe2c",
+    "RecallLastPackageButton__7FEngineUl": "0x8004fe9c",
+    "QueuePackageUserTransfer__7FEngineP9FEPackagebUl": "0x8004f07c",
+    "QueuePackageSwitch__7FEnginePCcP9FEPackage": "0x8004eebc",
+    "QueuePackagePush__7FEnginePCcP9FEPackageUl": "0x8004ef58",
+    "QueuePackagePop__7FEngineP9FEPackage": "0x8004eff8",
+    "RecordPackageMarker__7FEnginePCc": "0x8004fecc",
+    "RecallPackageMarker__7FEngine": "0x8004ff1c",
+    "ClearPackageMarkers__7FEngine": "0x8004ff4c",
+    "FindConditionBranchTarget__C17FEMessageResponseUl": "0x8004c488"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ProcessResponses__7FEngineP17FEMessageResponseP8FEObjectP9FEPackageUl"
+  ],
+  "context_units": []
+}

@@ -2602,7 +2602,9 @@
     "fe_stricmp.json",
     "felocale_copy_string.json",
     "fengine_unload_library.json",
-    "fetype_find.json"
+    "fetype_find.json",
+    "fengine_push_package.json",
+    "fetype_startup.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

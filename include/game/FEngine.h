@@ -56,6 +56,9 @@ class FEngine {
     void RenderObject(FEObject *, FEMatrix4 &, unsigned short);
     ~FEngine();
     void Update(long);
+    void ProcessPadsForPackage(FEPackage *);
+    void ProcessMouseForPackage(FEPackage *);
+    void ProcessPackageCommands();
     void ReleaseAll();
     FEPackage *PushPackage(const char *, unsigned char, unsigned long);
     void AddToIdleList(FEPackage *);
@@ -99,9 +102,9 @@ class FEngine {
     FEMouse mouse;               // +0x001c
     int unknown_40;              // +0x0040
     int unknown_44;              // +0x0044
-    unsigned char unknown_48[0x4c - 0x48];
-    unsigned char joyPadState[76]; // +0x004c; cleared as a block by ResetJoyPad.
-    unsigned char unknown_98[0xe4 - 0x98];
+    union { unsigned char unknown_48[4]; unsigned long consumedDirections; }; // +0x48; inferred input-repeat mask.
+    union { unsigned char joyPadState[76]; unsigned long repeatAmounts[19]; }; // +0x4c
+    union { unsigned char unknown_98[0xe4 - 0x98]; FEObject *pressedObjects[19]; }; // +0x98
     int unknown_e4;              // +0x00e4
     int joyPadCount;             // +0x00e8
     unsigned short activeMask;   // +0x00ec

@@ -1,0 +1,48 @@
+{
+  "id": "compare_fetype_create_base",
+  "source": "src/frontend/fetype_create_base.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80055f5c",
+      "size": 452
+    },
+    {
+      "name": ".rodata",
+      "address": "0x8029860c",
+      "size": 88
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateBaseObjectType__9FETypeLibPCc",
+      "address": "0x80055f5c",
+      "size": 452,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778",
+    "DWI_alloc": "0x801a8670",
+    "__6FENode": "0x8004966c",
+    "_vt.10FETypeNode": "0x802e1480",
+    "_vt.9FEMinList": "0x802e1180",
+    "SetName__6FENodePCc": "0x80049700",
+    "AddField__10FETypeNodePCcl": "0x80056590",
+    "__7FEColorUl": "0x800566b4",
+    "__as__7FEColorRC7FEColor": "0x8005678c",
+    "SetDefault__11FEFieldNodePv": "0x8005651c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FETypeLib.cpp",
+  "original_file_index": 343,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "CreateBaseObjectType__9FETypeLibPCc"
+  ],
+  "context_units": []
+}

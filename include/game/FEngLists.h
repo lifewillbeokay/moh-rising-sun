@@ -197,12 +197,17 @@ struct FELibraryReference {
     FELibraryReference() : id(0), unknown_4(-1), unknown_8(0) {}
 };
 // The package's button table.
+// Symbol-backed enum tag; the individual mask values are still unnamed.
+enum FEButtonWrapMode { FEButtonWrapNone = 0 };
+struct FEVector2;
 class FEButtonMap {
   public:
     FEObject **buttons;   // +0x0
     unsigned long count;  // +0x4
     FEButtonMap() : buttons(0), count(0) {}
     ~FEButtonMap() { delete[] buttons; }
+    FEObject *GetButtonFrom(FEObject *, long, FEGameInterface *, FEButtonWrapMode);
+    void ComputeButtonLocation(FEObject *, FEGameInterface *, FEVector2 &);
     void SetCount(unsigned long);
 };
 class FEPackage : public FENode {

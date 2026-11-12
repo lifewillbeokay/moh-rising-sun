@@ -1,0 +1,49 @@
+{
+  "id": "fengine_push_package",
+  "source": "src/frontend/fengine_push_package.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004d0dc",
+      "size": 460
+    }
+  ],
+  "functions": [
+    {
+      "name": "PushPackage__7FEnginePCcUcUl",
+      "address": "0x8004d0dc",
+      "size": 460,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindIdlePackage__C7FEnginePCc": "0x8004d2d4",
+    "strlen": "0x80266b70",
+    "_vt.18PackageInitStateCB": "0x802e1328",
+    "_vt.16FEObjectCallback": "0x802e1120",
+    "ForAllObjects__9FEPackageR16FEObjectCallback": "0x800511a0",
+    "RemNode__9FEMinListP9FEMinNode": "0x800497fc",
+    "LoadPackage__7FEnginePCvb": "0x8004cdf4",
+    "__builtin_vec_delete": "0x801a89b0",
+    "AddPackage__13FEPackageListP9FEPackage": "0x80052044"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "evidence": "docs/research/feng-lifecycle.md"
+}

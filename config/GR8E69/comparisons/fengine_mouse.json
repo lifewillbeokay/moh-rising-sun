@@ -1,0 +1,51 @@
+{
+  "id": "compare_fengine_mouse",
+  "source": "src/frontend/fengine_mouse.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8004e3f0",
+      "size": 1440
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80297c08",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessMouseForPackage__7FEngineP9FEPackage",
+      "address": "0x8004e3f0",
+      "size": 1440,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "WasPressed__7FEMouseUs": "0x8004c7e4",
+    "WasReleased__7FEMouseUs": "0x8004c890",
+    "WasHeld__7FEMouseUs": "0x8004c818",
+    "HeldFor__7FEMouseUs": "0x8004c848",
+    "FindResponse__C8FEObjectUl": "0x800507e0",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "FindResponse__9FEPackageUl": "0x800510d4",
+    "ProcessMessageQueue__7FEngine": "0x8004f10c",
+    "PadReleasedHash": "0x802c17b0",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEngine.cpp",
+  "original_file_index": 313,
+  "local_externals": [
+    "PadReleasedHash"
+  ],
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ProcessMouseForPackage__7FEngineP9FEPackage"
+  ],
+  "context_units": []
+}

@@ -1,0 +1,65 @@
+{
+  "id": "fetype_startup",
+  "source": "src/frontend/fetype_startup.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x800561f8",
+      "size": 752
+    },
+    {
+      "name": ".rodata",
+      "address": "0x80298684",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "Startup__9FETypeLib",
+      "address": "0x800561f8",
+      "size": 752,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CreateImageObjectType__9FETypeLibPCc": "0x80056120",
+    "FEColor1Name": "0x802c1818",
+    "FEColor2Name": "0x802c181c",
+    "FEColor3Name": "0x802c1820",
+    "FEColor4Name": "0x802c1824",
+    "AddNode__9FEMinListP9FEMinNodeT1": "0x80049790",
+    "FEFrameNumName": "0x802c1828",
+    "AddField__10FETypeNodePCcl": "0x80056590",
+    "__7FEColorUl": "0x800566b4",
+    "__as__7FEColorRC7FEColor": "0x8005678c",
+    "GetField__10FETypeNodePCc": "0x80056660",
+    "SetDefault__11FEFieldNodePv": "0x8005651c",
+    "CreateBaseObjectType__9FETypeLibPCc": "0x80055f5c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FETypeLib.cpp",
+  "original_file_index": 343,
+  "local_externals": [
+    "FEColor1Name",
+    "FEColor2Name",
+    "FEColor3Name",
+    "FEColor4Name",
+    "FEFrameNumName"
+  ],
+  "evidence": "docs/research/feng-lifecycle.md"
+}

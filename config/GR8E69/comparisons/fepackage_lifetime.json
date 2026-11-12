@@ -1,0 +1,48 @@
+{
+  "id": "compare_fepackage_lifetime",
+  "source": "src/frontend/fepackage_lifetime.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80050d38",
+      "size": 628
+    }
+  ],
+  "functions": [
+    {
+      "name": "__9FEPackage",
+      "address": "0x80050d38",
+      "size": 256,
+      "binding": 1
+    },
+    {
+      "name": "_._9FEPackage",
+      "address": "0x80050e38",
+      "size": 372,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "__6FENode": "0x8004966c",
+    "_vt.9FEPackage": "0x802e1310",
+    "_vt.9FEMinList": "0x802e1180",
+    "_vt.6FEList": "0x802e1218",
+    "__builtin_vec_delete": "0x801a89b0",
+    "RemHead__9FEMinList": "0x80049878",
+    "Purge__9FEMinList": "0x802780a4",
+    "_._6FENode": "0x8004969c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FEPackage.cpp",
+  "original_file_index": 326,
+  "evidence": "docs/research/feng-lifecycle.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "__9FEPackage",
+    "_._9FEPackage"
+  ],
+  "context_units": []
+}
