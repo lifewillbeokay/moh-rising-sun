@@ -1,0 +1,39 @@
+{
+  "id": "shell_accept_pad",
+  "source": "src/frontend/shell_accept_pad.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80182944",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetIndexPadLastPressedAccept__12ShellManager",
+      "address": "0x80182944",
+      "size": 32,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "evidence": "docs/research/frontend-screens.md"
+}

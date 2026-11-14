@@ -1,0 +1,62 @@
+{
+  "id": "compare_handler_virtual_keyboard_events",
+  "source": "src/frontend/handler_virtual_keyboard_events.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801967a4",
+      "size": 588
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b44dc",
+      "size": 104
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__22HandlerVirtualKeyboardUiP8FEObjectUl",
+      "address": "0x801967a4",
+      "size": 588,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_0.3280": "0x803e86a4",
+    "sKeyPressed.3279": "0x803e86a0",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "_.tmp_1.3282": "0x803e86ac",
+    "sSend.3281": "0x803e86a8",
+    "_.tmp_2.3284": "0x803e86b4",
+    "sBack.3283": "0x803e86b0",
+    "_.tmp_3.3286": "0x803e86bc",
+    "sSetup.3285": "0x803e86b8",
+    "ClearStringField__22HandlerVirtualKeyboard": "0x801969f0",
+    "RemovePreviousLetter__22HandlerVirtualKeyboardPc": "0x80196adc",
+    "AddLetterToString__22HandlerVirtualKeyboardPcc": "0x80196a5c",
+    "sprintf": "0x80263a3c",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcT2": "0x8018769c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerVirtualKeyboard.cpp",
+  "original_file_index": 1862,
+  "local_externals": [
+    "_.tmp_0.3280",
+    "sKeyPressed.3279",
+    "_.tmp_1.3282",
+    "sSend.3281",
+    "_.tmp_2.3284",
+    "sBack.3283",
+    "_.tmp_3.3286",
+    "sSetup.3285"
+  ],
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "HandleEvent__22HandlerVirtualKeyboardUiP8FEObjectUl"
+  ],
+  "context_units": []
+}

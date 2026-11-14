@@ -1,0 +1,36 @@
+{
+  "id": "compare_shell_coop_join_update",
+  "source": "src/frontend/shell_coop_join_update.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80181fb8",
+      "size": 168
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoCoopJoinInfoUpdating__12ShellManager",
+      "address": "0x80181fb8",
+      "size": 168,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_inputMgr": "0x803077c4",
+    "g_GameSettings": "0x802f80c8",
+    "FindDeviceIDFromPortNum__C13CInputManagerUc": "0x800d72e0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "DoCoopJoinInfoUpdating__12ShellManager"
+  ],
+  "context_units": []
+}

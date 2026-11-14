@@ -1,0 +1,32 @@
+{
+  "id": "compare_handler_coop_sequence",
+  "source": "src/frontend/handler_coop_sequence.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801942d4",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetNextEntryInSequence__22HandlerCoopGameOptionsPiUiii",
+      "address": "0x801942d4",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopGameOptions.cpp",
+  "original_file_index": 1834,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GetNextEntryInSequence__22HandlerCoopGameOptionsPiUiii"
+  ],
+  "context_units": []
+}

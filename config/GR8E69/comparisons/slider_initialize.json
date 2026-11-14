@@ -1,0 +1,42 @@
+{
+  "id": "compare_slider_initialize",
+  "source": "src/frontend/slider_initialize.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017db70",
+      "size": 152
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ad934",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "Initialize__7CSliderP8FEObject",
+      "address": "0x8017db70",
+      "size": 152,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "FindScript__C8FEObjectUl": "0x80050428",
+    "FindTrack__C8FEScript18FEKeyTrack_Indices": "0x80055968",
+    "GetKeyAt__10FEKeyTrackl": "0x8004916c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "slider.cpp",
+  "original_file_index": 1565,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Initialize__7CSliderP8FEObject"
+  ],
+  "context_units": []
+}

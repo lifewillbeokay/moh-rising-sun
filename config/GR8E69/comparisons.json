@@ -108,6 +108,21 @@
     "comparisons/fepackage_update_object.json",
     "comparisons/fereader_script_tags.json",
     "comparisons/fetype_create_base.json",
-    "comparisons/fetype_create_image.json"
+    "comparisons/fetype_create_image.json",
+    "comparisons/handler_briefing_events.json",
+    "comparisons/handler_coop_level_start.json",
+    "comparisons/handler_coop_options_events.json",
+    "comparisons/handler_coop_sequence.json",
+    "comparisons/handler_coop_split.json",
+    "comparisons/handler_loadgame_accept.json",
+    "comparisons/handler_object_lists.json",
+    "comparisons/handler_online_skin.json",
+    "comparisons/handler_two_player_events.json",
+    "comparisons/handler_virtual_keyboard_events.json",
+    "comparisons/shell_control_masks.json",
+    "comparisons/shell_coop_join_records.json",
+    "comparisons/shell_coop_join_update.json",
+    "comparisons/shell_start_mp.json",
+    "comparisons/slider_initialize.json"
   ]
 }

@@ -1,0 +1,78 @@
+{
+  "id": "compare_shell_control_masks",
+  "source": "src/frontend/shell_control_masks.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80181ce4",
+      "size": 724
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802ae3ec",
+      "size": 68
+    }
+  ],
+  "functions": [
+    {
+      "name": "DoPackageControlMaskUpdating__12ShellManager",
+      "address": "0x80181ce4",
+      "size": 460,
+      "binding": 1
+    },
+    {
+      "name": "DoCoopPackageControlMaskUpdating__12ShellManager",
+      "address": "0x80181eb0",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindNode__C6FEListPCc": "0x80049980",
+    "_.tmp_0.8830": "0x803e8280",
+    "szMPJoinNameHash.8829": "0x803e827c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "_.tmp_1.8832": "0x803e8288",
+    "szMPWaitingNameHash.8831": "0x803e8284",
+    "_.tmp_2.8834": "0x803e8290",
+    "szMPFourWaySplitNameHash.8833": "0x803e828c",
+    "_.tmp_3.8836": "0x803e8298",
+    "szMPCoopFourWaySplitNameHash.8835": "0x803e8294",
+    "g_inputMgr": "0x803077c4",
+    "FindDeviceIDFromPortNum__C13CInputManagerUc": "0x800d72e0",
+    "GetNumCoopPlayers__12ShellManager": "0x80182914",
+    "_.tmp_4.8841": "0x803e82a0",
+    "szMPJoinNameHash.8840": "0x803e829c",
+    "_.tmp_5.8843": "0x803e82a8",
+    "szMPWaitingJoinNameHash.8842": "0x803e82a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "local_externals": [
+    "_.tmp_0.8830",
+    "szMPJoinNameHash.8829",
+    "_.tmp_1.8832",
+    "szMPWaitingNameHash.8831",
+    "_.tmp_2.8834",
+    "szMPFourWaySplitNameHash.8833",
+    "_.tmp_3.8836",
+    "szMPCoopFourWaySplitNameHash.8835",
+    "_.tmp_4.8841",
+    "szMPJoinNameHash.8840",
+    "_.tmp_5.8843",
+    "szMPWaitingJoinNameHash.8842"
+  ],
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "DoPackageControlMaskUpdating__12ShellManager",
+    "DoCoopPackageControlMaskUpdating__12ShellManager"
+  ],
+  "context_units": [
+    "shell_dompcontrollerchecks"
+  ]
+}

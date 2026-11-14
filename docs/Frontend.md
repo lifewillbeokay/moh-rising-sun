@@ -203,3 +203,8 @@ is unknown (`PCUw`), so they stay out.
 `ShellManager::handlers` maps packages to their handlers. Only the units that touch it include `ShellHandlerMap.h` first, which gives the member
 its real type; the rest see sixteen bytes, so they build without the container headers. `updateOnce` is named from `Process`, which runs one engine
 update and returns to the factory and loader while it is set.
+
+The [screen-event and co-op helper follow-up](research/frontend-screens.md)
+maintains 24 more functions, including partial screen handlers and three exact
+fragments. It documents private cache/guard symbols, complete string-pool
+ownership, controller masks, keyboard cursor access and isolated behavior tests.

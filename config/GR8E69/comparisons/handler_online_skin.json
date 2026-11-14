@@ -1,0 +1,41 @@
+{
+  "id": "compare_handler_online_skin",
+  "source": "src/frontend/handler_online_skin.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019c414",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "IsSkinUnlocked__20HandlerOnlineOptionsi",
+      "address": "0x8019c414",
+      "size": 140,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "NumLockSkins": "0x802c5d14",
+    "skinLock": "0x802c5ca8",
+    "g_GameSettings": "0x802f80c8",
+    "HasCheat__C13CGameSettingsi": "0x80171640"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerOnlineOptions.cpp",
+  "original_file_index": 2009,
+  "local_externals": [
+    "NumLockSkins",
+    "skinLock"
+  ],
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "IsSkinUnlocked__20HandlerOnlineOptionsi"
+  ],
+  "context_units": []
+}

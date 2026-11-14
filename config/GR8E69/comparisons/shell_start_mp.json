@@ -1,0 +1,35 @@
+{
+  "id": "compare_shell_start_mp",
+  "source": "src/frontend/shell_start_mp.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80182898",
+      "size": 124
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetStartMPDataFromShell__12ShellManager",
+      "address": "0x80182898",
+      "size": 124,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_GameSettings": "0x802f80c8",
+    "g_GameFlow": "0x802f9ce0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetStartMPDataFromShell__12ShellManager"
+  ],
+  "context_units": []
+}

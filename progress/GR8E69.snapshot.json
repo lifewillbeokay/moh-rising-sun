@@ -966,7 +966,12 @@
       "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
       "src/frontend/handler_bonusoptions_cheats.cpp": "c37efa4c43f97b1ccd5543663a8879ccb26d9b4f8d7ee0871e11bd94e41c66f0",
       "src/frontend/handler_bonusoptions_ctor.cpp": "1f58aa88ca497a902081a35d4500cbf2e42e51064ee72abfdbaef71dfb68be3e",
+      "src/frontend/handler_briefing_events.cpp": "922aa681db74f5a0203c1ebc42784dd4450ebc561476e501470422dd37dd4ff9",
       "src/frontend/handler_controlleroptions.cpp": "5af09a841eecd3350a324736b2a5e45ad0f91ba8706b13e8420cd3d963c2bedd",
+      "src/frontend/handler_coop_level_start.cpp": "7cfe7c87e7fb508bac44c55584b2a586cd71bdfec7cbaf0ac0bb7c1e94d2bd01",
+      "src/frontend/handler_coop_options_events.cpp": "10b0cf3a4ffc3b41d6592b9c4a373c7f96749d49c3bebc6640bf73f017365ee8",
+      "src/frontend/handler_coop_sequence.cpp": "8131ba828e52677c7f2c4cc398dfc7f4e3a90cf7d7f556d47fe8ece6b9e7c26e",
+      "src/frontend/handler_coop_split.cpp": "a35d9e2c53614fb8a0457660e664de208ba22ebd36c195957c4e5ff2a6d99b0f",
       "src/frontend/handler_coopgameoptions_init.cpp": "f026699b4a4887236e209514ba9f47be759fe7a6c2c1d1f624b750442a830272",
       "src/frontend/handler_coopprofile_dtor.cpp": "43c8d7920c9eeb87bdcc63b003a82d1da82dbdb530b7f0d99d0bb5f7b9d73868",
       "src/frontend/handler_coopprofile_init.cpp": "56512344e99ebfabd50b25c0b6a1ce93d95378fd1c4856ae4e2ef4bfebaf7ad0",
@@ -981,12 +986,14 @@
       "src/frontend/handler_leaderboard_fill.cpp": "14cbc03582f7eb8066c6785114478d2ef4838e7653b5023f2e85086f94cb0440",
       "src/frontend/handler_levelmenu_ctor.cpp": "11bc178f8b0dd710f440a98ae9beb801e7999aa8345fa34591802e7d977e49cd",
       "src/frontend/handler_loadgame.cpp": "d1edb124c0b755d05d6f0b5134db5f5dd56f6b8decd73838f45c2b2061116d86",
+      "src/frontend/handler_loadgame_accept.cpp": "6d6d9c968607524ddf1a56f6252eb8c3912647e51e1dede40a8c675fe6a0901c",
       "src/frontend/handler_loadslotselect_accept.cpp": "69b9ea0069e4e1b4c9b3aaf427ad5edfe119b48165d1538e489b099173ef818c",
       "src/frontend/handler_loadslotselect_cancel.cpp": "b60f0dafb3e34901badc235803c3dd5a77f63c6f1f8b1c46db7ef481f8d96f8f",
       "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
       "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
       "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
       "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
+      "src/frontend/handler_mp_skin.cpp": "cd19a56185db25a277ddc39a3a835cf35c8d38f1fe0a38fe300ee0adb4535d51",
       "src/frontend/handler_mpbots_validateskin.cpp": "06937815b8984dc2529b8ecfccb09d442e912bdfb998fc9349766d909b509422",
       "src/frontend/handler_mpglobal_init.cpp": "99bbc912f44d556327d186de9eb3cf65b08f9be2e54649568975d5f9b3d50734",
       "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
@@ -997,6 +1004,8 @@
       "src/frontend/handler_nameentry_string.cpp": "b0290b40dc05e1a3f718883c12e0659168f7ebe106c54309fc584e92280762f0",
       "src/frontend/handler_netconfwarning.cpp": "e97e70c746241cd3bbe079540d46dd358b56796d07b278325ed9cb934dc8db25",
       "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+      "src/frontend/handler_object_lists.cpp": "dd1b81285baccdaa75e243cde35ef5fbac2426af8362589393b10115033eb5fe",
+      "src/frontend/handler_online_skin.cpp": "d9c3dacd9dbcb8de186f10f382fd192fcb3048e564f6dde59b1af6f8897ac6e0",
       "src/frontend/handler_onlinefavorites_add.cpp": "b8a82ebf551baa0675ceef1bd1f1a1ea72553e1a7ed7a7cab4b62ac573b07f17",
       "src/frontend/handler_onlinefavorites_buttons.cpp": "edd549b6440c1c872867e8e04c58d81c009beaa751697165be8489cc9cda4e7d",
       "src/frontend/handler_onlinekeyboard.cpp": "80cdc3670d6aa0e2ddf348246a3fda973e163a67dfce8ef7e31d5a4b4033a344",
@@ -1011,7 +1020,10 @@
       "src/frontend/handler_saveslotbase_valid.cpp": "d4177bc924d5b13c766ab665c88ad504b2ad698e3f2ef0d156b317652c17f7d4",
       "src/frontend/handler_saveslotselect.cpp": "e2da92acef7e81763eefabfb8d8551181ab22264a03fd92a41d9da6f80aeffd5",
       "src/frontend/handler_saveslotselect_pop.cpp": "106d924e6793afb6c8cf540f4e2e8a7fcc849fd9f8f500336130e261e3c43772",
+      "src/frontend/handler_special_features_events.cpp": "c87ff5b0205b4d3b0297a6c1bb3303a0dacd98c9e04575721e9e4ebe4be37027",
       "src/frontend/handler_statsscreen_pearl.cpp": "be52bb0036abbc3d111ebec3827d2c7dc9e1c7e490d6e63d171df26d16c2e1e9",
+      "src/frontend/handler_two_player_events.cpp": "15b6f5db273012ba3926db37f549977de023ce1d49b66a662c70e06212dbc51a",
+      "src/frontend/handler_virtual_keyboard_events.cpp": "496b4ad322156731863d293b2c8f1163315600deb4f80456a8f426b73312593d",
       "src/frontend/handler_virtualkeyboard_string.cpp": "8b301cfd9e4f86ec74565de222bc3b88b491487b041940c5b47685f4df60ca07",
       "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
       "src/frontend/keyboardpopup_class.cpp": "76228f81af804104824f1aefeb717e01ab658a5018a293228793b8c5488a2876",
@@ -1029,7 +1041,11 @@
       "src/frontend/pkgh_setscript.cpp": "88b5768a96496a652aa542ae793c709feed49327fc4ac7a724322f20414116b2",
       "src/frontend/popup_message.cpp": "6b62ed9879ae5d79a68fa9fbbe750817b3d737f27ccc04be2c671d1fc1eb39af",
       "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
+      "src/frontend/shell_accept_pad.cpp": "3d66b397cb4ba5698a0388a607eb5d5c127c51092e8cafd42d912505f89a0508",
       "src/frontend/shell_beginpackagerendering.cpp": "c22a7a2acfc1cc0fa8d4263951398625495d55a845cc332c987d244c40b5fb85",
+      "src/frontend/shell_control_masks.cpp": "5dcf398a3bfdf2a71de529ec7c559a43cb27824433630c4ebf4c4bc1b68cc3b3",
+      "src/frontend/shell_coop_join_records.cpp": "f7e56507d18f84221f7b846c16a92e5cfbf08d1b6da3d0f44e240c756d86328a",
+      "src/frontend/shell_coop_join_update.cpp": "d8bdf675a7c8dcb481c2fa26018266d1be1f55fb1b9e89507bae007a1041ef4a",
       "src/frontend/shell_cshellmoviesettings.cpp": "74f0dde849ea20168a6870b97aaef26a8330146cb8766e745a66360246fdc2cc",
       "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
       "src/frontend/shell_docoopcontrollerchecks.cpp": "a8a57e1a585a4a0223edaed05749842d0a28b3065763edcaa44e533683d9c7d9",
@@ -1047,8 +1063,10 @@
       "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
       "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
       "src/frontend/shell_shutdown_process.cpp": "0de20affc701d424ba3b80aa144fe0a3972d95f601c59cd99bb3a5b79b248750",
+      "src/frontend/shell_start_mp.cpp": "37d2e7f98b7a5a6cf4a2b060f98ad892b0c9d6d24bd25214b847d9872dd5941c",
       "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
       "src/frontend/shellfactory.cpp": "f4c69038da0135cd00e71ab28a1eaaecb63fba1e11d2a961dab071278e4d5b9d",
+      "src/frontend/slider_initialize.cpp": "a0e00dbb1b0ea77ea3dab9c76e4ba9bb3110de9f51db350ede5c3924bb7e88a4",
       "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
       "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
       "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -3848,6 +3866,16 @@
       "config/GR8E69/comparisons/fetype_create_base.json": "c278a7200c4a5085e583c858b33a0a9a0f849f1239f3673e4ea7c2fd54eb2f5f",
       "config/GR8E69/comparisons/fetype_create_image.json": "4f64e9c0de96ed79a7c78d743991ffbaf7ee970b6007e1b765686456d24ffc5e",
       "config/GR8E69/comparisons/fetypenode_fields.json": "dd410b7d49216725c8d1a6d8a5e7458df8a6924d206d4e437e69931eb1f3afb1",
+      "config/GR8E69/comparisons/handler_briefing_events.json": "e075943b1f975637f4bc35611a604aaa3ddf13890531df8fefafd7b46ee87643",
+      "config/GR8E69/comparisons/handler_coop_level_start.json": "fe2ca438be07862876886558fec1cbaff1dcd4125a3a92d5813b56733ae9ae1e",
+      "config/GR8E69/comparisons/handler_coop_options_events.json": "59db11b07a482d5f4a680cd569db99f8873564d2f803e17c3e12878ea0d0ad16",
+      "config/GR8E69/comparisons/handler_coop_sequence.json": "3a42c077a54da387c6e22cb580f30703defb97eade084e70467e342833467834",
+      "config/GR8E69/comparisons/handler_coop_split.json": "d58c0a3cb0c051ba1f215ae643323d8652d809f45c732c60f0e0eab5b68a7c6e",
+      "config/GR8E69/comparisons/handler_loadgame_accept.json": "752de1400b80764d60340bd7d761471ab22e0dbb0cddf3cf1bb008fa5b440f20",
+      "config/GR8E69/comparisons/handler_object_lists.json": "db3cc12d023e9086da2c8066eee791a3cf0482dc69df34171f45d85a069aa549",
+      "config/GR8E69/comparisons/handler_online_skin.json": "136ae645b1ff5546cfb78e8c0a28f0bfe54cd1f501d5c236728582b0f01fd6b4",
+      "config/GR8E69/comparisons/handler_two_player_events.json": "fc8b24f78056b432e71cf4e1775ec5e21c962af25591e0f4d61556dc722f1b5a",
+      "config/GR8E69/comparisons/handler_virtual_keyboard_events.json": "5b30c0625282de7324af39be970ff2ead987c0c502ae27847ab2badd089f6b78",
       "config/GR8E69/comparisons/line_segment_distance.json": "3f7c0231353874362ceb04fcc117070d2d1942932f3d2bbfe27d87c30eae4112",
       "config/GR8E69/comparisons/loading_DynamicLoaderGetAddr.json": "ccfd822dc2e450c54947352533fad3b894f3e65a13cb02e3dc06b2e0ab806795",
       "config/GR8E69/comparisons/loading_DynamicLoaderInitialize.json": "09ba22038ae1c060bea682e1f15ee9be4f9069ec9b554ce82b9625df2634d8cd",
@@ -3856,10 +3884,15 @@
       "config/GR8E69/comparisons/script_set_expression.json": "97fd308b7df015ce312fd7dfe1efd94500afe8884437180db10f8e6c78847a70",
       "config/GR8E69/comparisons/script_soldier_obj_info.json": "e31311cf4c9cd6891e88509449b080cd5e38e68e580d90e336ab5a528a140c43",
       "config/GR8E69/comparisons/script_vibration.json": "e8f702a260a6c106891e1e8e81e6ad3561f0ba647fde6e778f1f8b5a56769feb",
+      "config/GR8E69/comparisons/shell_control_masks.json": "3317f7deb684bd2b45347bf0edefc601cfab01b3e81405998838a09a4363e254",
+      "config/GR8E69/comparisons/shell_coop_join_records.json": "9b6e53d6fd941745711390c1d4975c1387ecee9b823d28589855fba02aae12b9",
+      "config/GR8E69/comparisons/shell_coop_join_update.json": "41313380a10e9ca8d98b91f8646682d4637db33f3d713eeb635f1e9ce0c9488f",
+      "config/GR8E69/comparisons/shell_start_mp.json": "48ba33971b08796cfb4f3cfeab5c1f5183361c48bf8354b9477b4c54c68ff3ec",
+      "config/GR8E69/comparisons/slider_initialize.json": "6fa1b33fab4f14ce0bf4a50f1f1f4fd7e22c16d0e7f796fd6f4c9434ec99f1f9",
       "config/GR8E69/comparisons/sphere_visibility.json": "2293c09db6d2ed5ef7b02055a6ae53de114dc74a2e9d1c26c35e5ae332c2367e",
       "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
       "config/GR8E69/comparisons/triangle_nearest.json": "1db65edb247e6e751b7dbe2d2e1d1945077ce757d9eaf20f4c8353f3b1eb8c51",
-      "config/GR8E69/comparisons.json": "6ec355336badd2c64c8f551dc72f637e22d8f24ed543337df7ac19b07bccdbf1",
+      "config/GR8E69/comparisons.json": "497edbc8524cfc4b26d05ec961197672c9af530bb213af6c8bdbb34f45ed6d25",
       "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
       "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
       "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
@@ -4396,6 +4429,7 @@
       "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
       "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
       "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
+      "config/GR8E69/handler_mp_skin.json": "6529a853373691bf02f08cd5ff97b3cd35c164032052918af5f0cce51289af24",
       "config/GR8E69/handler_mpbots_validateskin.json": "645f118a3a0f71ffb9e94b8a4ef4a13327e9d1a5f73a5d135f4e8564a7573e78",
       "config/GR8E69/handler_mpglobal_init.json": "a30dffd6d73682c5556fbf1a5c5cf3df8b53ec5b1289e9e9af55d8872697b058",
       "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
@@ -4420,6 +4454,7 @@
       "config/GR8E69/handler_saveslotbase_valid.json": "120edc634855bab77f224ab81128eec966ed2be54a7f7cda2b8eecd2ae49240c",
       "config/GR8E69/handler_saveslotselect.json": "16584fee15b2513de3fc76f47fcd53fc1831eb806aa1c0ecee227379b534dfab",
       "config/GR8E69/handler_saveslotselect_pop.json": "23b87939e4d87a5d3fd116dfa66f03c24fc906e7593fa38e5f8234b3be72f55d",
+      "config/GR8E69/handler_special_features_events.json": "a505ff87657c1179d4378b3ba543b632f6863ac67f1b647ffa5601f11b34f00d",
       "config/GR8E69/handler_statsscreen_pearl.json": "076976f53763c7ac0781bccc1b66aec809fff528588185b5fdd5075c35298243",
       "config/GR8E69/handler_virtualkeyboard_string.json": "820f39545c5ffcf87660b4e3b21f953832bbe784dc7ff26e99e13ae92eb0f606",
       "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
@@ -4829,7 +4864,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "7a0f267c6d9a76f8f5afe06e40ef284abc2b930558c5b34993f9f9ba84405f31",
+      "config/GR8E69/project.json": "36ee988c9b6f8d9104ef41c4f09f7b7ad3183b682c75d4b5b3bebc4eee3390d8",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -5499,6 +5534,7 @@
       "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
       "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
       "config/GR8E69/shell_VolumeKnobs.json": "07e5c928b50f14d34f6c7799651d1eb90a34eaba2ec4acb403cf75d2baf51708",
+      "config/GR8E69/shell_accept_pad.json": "f824d901f703fcc1dbca69fb35280bde41a6c3de94b0568334725ea4db407857",
       "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
       "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
       "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -9353,6 +9389,450 @@
         "target_object_sha256": "99db6bfbe9d4e3cc003b222e1c6f84a1e8ab2523f2af3bac1f3caebc96c5f65c",
         "diff_object_sha256": "b29add2fbddc11f32cee03c900d99210c5a5d27927dc5a9c9a464c395bf7efdc",
         "diff_sha256": "32e2d4e6b13ba2d76da2cf3b5847c3157489fdd5ff2124b7456c6c75b5f367ed"
+      },
+      {
+        "id": "compare_handler_briefing_events",
+        "functions": [
+          {
+            "name": "HandleEvent__27HandlerPauseBriefingOverlayUiP8FEObjectUl",
+            "address": "0x80199080",
+            "size": 424,
+            "binding": 1,
+            "compiled_address": "0x80199080",
+            "compiled_size": 412,
+            "target_sha256": "260e4ad0eb1f1f21e06b4aa71ccad6285c9fb88d622f03f59336cc61bf4a4a45",
+            "compiled_sha256": "8b1bd44089cd6272025682e76baa7a560310dd234684c8fbead2b79f87eae221",
+            "differing_bytes": 250,
+            "status": "partial",
+            "objdiff_percent": 74.64151,
+            "fuzzy_match_percent": 74.64151
+          }
+        ],
+        "object_sha256": "9bf876dde496f1573401c38e9ddb92e20fe1d75b9b8f83e797429ff21d139085",
+        "linked_sha256": "84a1c0fc523972c643d7d4ce92490c10e3f7f2c08f68ed0a5a7942a891b539ee",
+        "target_object_sha256": "87a5db36f4e653041f69204cbafabad31d7f54a5ba2d7c19fc472631a744e597",
+        "diff_object_sha256": "084379aa429948c38ee5ce6922d7d65f88226aac236ff9e8bec4dac8bf2b01f4",
+        "diff_sha256": "3729dcb00f9e339af9563980cf561d694d209ba76f6a21c03b0e6eb1ec61ba7f"
+      },
+      {
+        "id": "compare_handler_coop_level_start",
+        "functions": [
+          {
+            "name": "HandleCoopLevelStartEvent__14PackageHandlerUiP8FEObject",
+            "address": "0x801884bc",
+            "size": 476,
+            "binding": 1,
+            "compiled_address": "0x801884bc",
+            "compiled_size": 468,
+            "target_sha256": "b6c85c49bb2d5dcfa84d67077656c37298c770f331cbc47bd0a891ab8b97efd0",
+            "compiled_sha256": "c856d388e37c49f4a2a1349947fa82f72a64aede9280c025329c29d1970d882a",
+            "differing_bytes": 87,
+            "status": "partial",
+            "objdiff_percent": 98.28571,
+            "fuzzy_match_percent": 98.28571
+          }
+        ],
+        "object_sha256": "10679eb1a7f4e3b56fd3033048465d5b493b375d9c595c12a0c883cad9c1f612",
+        "linked_sha256": "953efb9eca38e1e70ba7e8d15933ca7cdc9f8e6ff12dc1160ccdd2b79891f3c1",
+        "target_object_sha256": "91f86dc782c35c0db88b6e103446cab6bc287c2df436f1cb91366347eb82bbcb",
+        "diff_object_sha256": "0deeb71de24a4ccc6f3bc1b96089fbf66a112bd67b4c37962f798038b779158a",
+        "diff_sha256": "28948499d807ce55566308486479a163360705687835de3b01da623def74b8e7"
+      },
+      {
+        "id": "compare_handler_coop_options_events",
+        "functions": [
+          {
+            "name": "HandleEvent__22HandlerCoopGameOptionsUiP8FEObjectUl",
+            "address": "0x80193d50",
+            "size": 916,
+            "binding": 1,
+            "compiled_address": "0x80193d50",
+            "compiled_size": 864,
+            "target_sha256": "c81356518c600369751cc3ea85aed64702883725199987f5a6fe86c434280168",
+            "compiled_sha256": "9cf43a3e47e13d40965a8a20768942606fa776ca6924839a5c02d8a46dd5b8cc",
+            "differing_bytes": 456,
+            "status": "partial",
+            "objdiff_percent": 85.72053,
+            "fuzzy_match_percent": 85.72053
+          }
+        ],
+        "object_sha256": "faa9eaa9ccf3b2877edfd02e32e605a485e8d205869aea9f82357d1490451fb5",
+        "linked_sha256": "2f8567769d64ab7d8023984c5ba323c6a1016b96fbffc1e74bf28d0046c67495",
+        "target_object_sha256": "ca6db65fdd900255f6b7693b9bc7e90bd3b97c24de5d5dbb328bd2455f23a8fb",
+        "diff_object_sha256": "1ab9447caed251d9ecac1b634409e5829a23864cfdd4473e644fb14481b4345a",
+        "diff_sha256": "3ef7966068bc785bb4221183911711e33c2b7cff5d5e686f0d21f9d9ad93f4f9"
+      },
+      {
+        "id": "compare_handler_coop_sequence",
+        "functions": [
+          {
+            "name": "GetNextEntryInSequence__22HandlerCoopGameOptionsPiUiii",
+            "address": "0x801942d4",
+            "size": 144,
+            "binding": 1,
+            "compiled_address": "0x801942d4",
+            "compiled_size": 132,
+            "target_sha256": "d90f5cb76c7390ecedd7000621b26da889df7846e61ca9de1351c643f42c31f5",
+            "compiled_sha256": "916357d48b99f22412fcef268bed07fb8df2ee28469715475a6b400bd9247013",
+            "differing_bytes": 90,
+            "status": "partial",
+            "objdiff_percent": 52.305557,
+            "fuzzy_match_percent": 52.305557
+          }
+        ],
+        "object_sha256": "ff9121e33f69e06bc6432fe5b0ecdae27cc69ff77f8a4b9ad89456b25bab80e4",
+        "linked_sha256": "f24da1dcf6dda58eb774b790a0ffbb7dd42769246c7054d3c2517976c76345ba",
+        "target_object_sha256": "3c0030d77c4a1346a115bef5672458968df1033b2aeae8d90839f1b682c4df2b",
+        "diff_object_sha256": "a98646b1ae51d96a98d71b9f02e906f360d6217f8d71390fd227e7d1e6046f71",
+        "diff_sha256": "f8fcefdee406636bd64798dbff48db1a19cac7e472f4fd2bc1d463e36ad72133"
+      },
+      {
+        "id": "compare_handler_coop_split",
+        "functions": [
+          {
+            "name": "GotoNextScreen__20HandlerCoop4WaySplit",
+            "address": "0x80193b20",
+            "size": 48,
+            "binding": 1,
+            "compiled_address": "0x80193b20",
+            "compiled_size": 48,
+            "target_sha256": "e72d29596c2cf723455526424209559db852be60f117e2c9ab25e1dac48a6bc6",
+            "compiled_sha256": "e72d29596c2cf723455526424209559db852be60f117e2c9ab25e1dac48a6bc6",
+            "differing_bytes": 0,
+            "status": "exact_unlinked",
+            "objdiff_percent": 100.0,
+            "fuzzy_match_percent": 100
+          },
+          {
+            "name": "Init__20HandlerCoop4WaySplitPCc",
+            "address": "0x80193b50",
+            "size": 296,
+            "binding": 1,
+            "compiled_address": "0x80193b50",
+            "compiled_size": 284,
+            "target_sha256": "05abc8431a3fef63c4df1ff566147162d21dc8521e036bf15eb233bd1c985ea2",
+            "compiled_sha256": "58a6cbf5181c8d5241f47b21c1b1f287023d603e9c105372306e18fa3f943138",
+            "differing_bytes": 59,
+            "status": "partial",
+            "objdiff_percent": 88.824326,
+            "fuzzy_match_percent": 88.824326
+          }
+        ],
+        "object_sha256": "bb85668a3ffce3e2b6e05079d02105cecb2165d72dba64a1f324114dbc189a7f",
+        "linked_sha256": "88194d5d05647fcd426a10d0ca397e27c8a0b7ed0362be5cbf32cf6158b72e70",
+        "target_object_sha256": "4cf045b73b0f918cf03c960457cb40166841718be0cc00b3514185512c603cbf",
+        "diff_object_sha256": "d4de1d647e56b27fb26da43059f243860751930ac2eda706aa58c61523ba83e7",
+        "diff_sha256": "bd9b45e3253ba4e93bef06b50b56482fd75b171e90efd509e0966c74850a5424"
+      },
+      {
+        "id": "compare_handler_loadgame_accept",
+        "functions": [
+          {
+            "name": "OnAccept__15HandlerLoadGame",
+            "address": "0x80194cf8",
+            "size": 600,
+            "binding": 1,
+            "compiled_address": "0x80194cf8",
+            "compiled_size": 592,
+            "target_sha256": "d6d17bf0191ce2407b888f17c96ee5c789653da6e24340a1fcfe734f1530e7b8",
+            "compiled_sha256": "ef7bc42b8324f88cde62082220be736a42aeeda047eb5ade78dc17cc934b4b00",
+            "differing_bytes": 526,
+            "status": "partial",
+            "objdiff_percent": 86.78667,
+            "fuzzy_match_percent": 86.78667
+          }
+        ],
+        "object_sha256": "9178c60c12e2dd11350736393e3710c2986eba1f693fe135fc046019ca864dc8",
+        "linked_sha256": "b1ebde0b48b91951bdd81b082832a24a03573f2d2dd8f552942dd35439a42454",
+        "target_object_sha256": "9c6e4cc29deadd2075a1baea2c1583706790d9ff03e8dc8214bc1f1e3bdf85df",
+        "diff_object_sha256": "7e4628143951fe84824efa041d7f4c48a2a58a429db2e917f60e32e481ec7294",
+        "diff_sha256": "f8d66b9b0037b0bc3e7bd368c375caca7079b7e8d577910953c23bbdd5ece09d"
+      },
+      {
+        "id": "compare_handler_object_lists",
+        "functions": [
+          {
+            "name": "SetObjectListIndex__14PackageHandlerPcUi",
+            "address": "0x8018798c",
+            "size": 224,
+            "binding": 1,
+            "compiled_address": "0x8018798c",
+            "compiled_size": 228,
+            "target_sha256": "d5d016a1d0e2d61e81d3b31d023805115d06853dc1cc04f72b89617c62f12cda",
+            "compiled_sha256": "ba92cf67f374607c4823886da8fea1c3cbaff14e7510d935ac67387602d55807",
+            "differing_bytes": 168,
+            "status": "partial",
+            "objdiff_percent": 75.58929,
+            "fuzzy_match_percent": 75.58929
+          },
+          {
+            "name": "SetNextObjectListIndex__14PackageHandlerPc",
+            "address": "0x80187a6c",
+            "size": 272,
+            "binding": 1,
+            "compiled_address": "0x80187a70",
+            "compiled_size": 268,
+            "target_sha256": "30700547f3f43ff20acadb6f52bdb3689b41b6029e5ad833b2bda7d07c2afe40",
+            "compiled_sha256": "4089fa24ffd50d045cbc09f238f287da65357cdd7fabd8f82fbb11ed6a06c31a",
+            "differing_bytes": 218,
+            "status": "partial",
+            "objdiff_percent": 77.911766,
+            "fuzzy_match_percent": 77.911766
+          },
+          {
+            "name": "SetPrevObjectListIndex__14PackageHandlerPc",
+            "address": "0x80187b7c",
+            "size": 328,
+            "binding": 1,
+            "compiled_address": "0x80187b7c",
+            "compiled_size": 320,
+            "target_sha256": "1cbfb9c4a76fab5694c2366da3f5dbd9c22ff91b877ff0cec8964148a99a38eb",
+            "compiled_sha256": "48ab190163dadfb807d1e0a7efaf89abe6ae66a51bd5bae54735ac89888f2cb8",
+            "differing_bytes": 273,
+            "status": "partial",
+            "objdiff_percent": 71.28049,
+            "fuzzy_match_percent": 71.28049
+          },
+          {
+            "name": "GetObjectListIndex__14PackageHandlerPc",
+            "address": "0x80187cc4",
+            "size": 144,
+            "binding": 1,
+            "compiled_address": "0x80187cbc",
+            "compiled_size": 148,
+            "target_sha256": "6faf068fb2d2d5d4c31170563681c8e017c6c273b4a43dc0553a98f07973a587",
+            "compiled_sha256": "96989779e1cdd1e2dec86b62912595f738c6584e8cade9f3c1226c3d37717f30",
+            "differing_bytes": 40,
+            "status": "partial",
+            "objdiff_percent": 91.388885,
+            "fuzzy_match_percent": 91.388885
+          }
+        ],
+        "object_sha256": "91d87b8df8effab55e65767c1aa71e90dcb8ebeda6437de7e81b55d1d6bb0dd8",
+        "linked_sha256": "b6b3beedef88ef3758305993fc6c56ecc163211d9471f93b5cc7f3b5ccb1f209",
+        "target_object_sha256": "f5c89499e65a77cd6177834d7a94bb17ef59bc473646d1d8edc03dd16e50d316",
+        "diff_object_sha256": "794ab3801d9964f1ec97e4bb99351971ec0ea798ba937ae1e10e80202f065544",
+        "diff_sha256": "5c692d1892d8ec771a6fb010005d95d5a30f3c379b83f13fe36201edab2b53e1"
+      },
+      {
+        "id": "compare_handler_online_skin",
+        "functions": [
+          {
+            "name": "IsSkinUnlocked__20HandlerOnlineOptionsi",
+            "address": "0x8019c414",
+            "size": 140,
+            "binding": 1,
+            "compiled_address": "0x8019c414",
+            "compiled_size": 152,
+            "target_sha256": "9cf01ec07a6b8fe92312c193f2ec6e700e17af8bd29af6536ef1e36fe8601ba6",
+            "compiled_sha256": "a203ace3cf7d337ef93229af4ddb94b34f7b3d4c0fb5dab188b7c1651fff5130",
+            "differing_bytes": 128,
+            "status": "partial",
+            "objdiff_percent": 32.142857,
+            "fuzzy_match_percent": 32.142857
+          }
+        ],
+        "object_sha256": "c7f2d235f7777fb712105b1ffdd7e6c32de41465920cfb6745c03bcd0dbbc5b6",
+        "linked_sha256": "54bb5019ca281639b6e501ea3fa590186958e38599e7b0ca3891baba32afee02",
+        "target_object_sha256": "0a0748dbce68e3ba5fc6e57eb795da00c64c3328ea74a107bb24a9429ec19231",
+        "diff_object_sha256": "94a0f10e082cd69f11c84705ecd4247345a588db8411188321f5e0269cc2ffc1",
+        "diff_sha256": "3e16b3c3676edc80e31dd0f9a1f3f5f729b681fca258eb6e97fcea1d871d55f1"
+      },
+      {
+        "id": "compare_handler_two_player_events",
+        "functions": [
+          {
+            "name": "HandleEvent__15Handler_2P_MenuUiP8FEObjectUl",
+            "address": "0x80194960",
+            "size": 628,
+            "binding": 1,
+            "compiled_address": "0x80194960",
+            "compiled_size": 624,
+            "target_sha256": "ada1679509f178b71b7bfb2859e57f39a2bcb996fa173e15cb6438bf23fb4d33",
+            "compiled_sha256": "6798739e219ccc92aa23797dc36882693bf4fd6e74741d3f58b92fc5db17ead0",
+            "differing_bytes": 241,
+            "status": "partial",
+            "objdiff_percent": 91.36306,
+            "fuzzy_match_percent": 91.36306
+          }
+        ],
+        "object_sha256": "06bd74c1ddb6b94a3ff4bf778d9b25b27014b8cd4e848493343b75eecf2a066c",
+        "linked_sha256": "61b4ce9aa0e96f098ec3d8735747cb7afc33d1d42a19e692d54cdd4752f70f0f",
+        "target_object_sha256": "97f923d7bf45b92193093ffcf9f62bfa9309d7aaa76d8470942908aa5f3f0536",
+        "diff_object_sha256": "3d80f7e034152c392d52b676c3f1635a6445fe1c6721d48c5a2be6aa27367113",
+        "diff_sha256": "bdf049d1cade506f230dbffbe8371d124c792b8d9ec6cd9cada6f442dd46bdc1"
+      },
+      {
+        "id": "compare_handler_virtual_keyboard_events",
+        "functions": [
+          {
+            "name": "HandleEvent__22HandlerVirtualKeyboardUiP8FEObjectUl",
+            "address": "0x801967a4",
+            "size": 588,
+            "binding": 1,
+            "compiled_address": "0x801967a4",
+            "compiled_size": 596,
+            "target_sha256": "fd12bd97338e642d4af461dbdff275c0535bfba3cb8b602572a894332096d18d",
+            "compiled_sha256": "35e7ab4f3da25f4500e69ef71351d401547e97d37155141a831f79d38ba937eb",
+            "differing_bytes": 200,
+            "status": "partial",
+            "objdiff_percent": 86.76871,
+            "fuzzy_match_percent": 86.76871
+          }
+        ],
+        "object_sha256": "e038e31b3bd44c65120d3c34484ea00d97c07b362a0f05c9e3b61c618b8cd9f5",
+        "linked_sha256": "b6a36885d1e5286fec54f31854412ae43b38f6c9c1bcd3649a787aeb7bb230fa",
+        "target_object_sha256": "c743c4caa62bf5aba597a4adaf5233cdc6c8112ac74622e2bb9b4c87305e9cc7",
+        "diff_object_sha256": "d87aa37495951e252cfe1259b43102bfc81e662deb72070f3ed7064246d408b6",
+        "diff_sha256": "63d7b0c4caf19ef3aa010cb2a17e640db3496b4b7e78763501bba8f3443da795"
+      },
+      {
+        "id": "compare_shell_control_masks",
+        "functions": [
+          {
+            "name": "DoPackageControlMaskUpdating__12ShellManager",
+            "address": "0x80181ce4",
+            "size": 460,
+            "binding": 1,
+            "compiled_address": "0x80181ce4",
+            "compiled_size": 464,
+            "target_sha256": "925b3bf703dae2ea458c3d677296a688eb525072f1f0da7d1b875453786cadfd",
+            "compiled_sha256": "a8361ce6fa912927acbc42728799bf1c91f0317cc940919725dbf2dfa4e27feb",
+            "differing_bytes": 377,
+            "status": "partial",
+            "objdiff_percent": 85.53913,
+            "fuzzy_match_percent": 85.53913
+          },
+          {
+            "name": "DoCoopPackageControlMaskUpdating__12ShellManager",
+            "address": "0x80181eb0",
+            "size": 264,
+            "binding": 1,
+            "compiled_address": "0x80181eb4",
+            "compiled_size": 276,
+            "target_sha256": "4c7fd93a80b9fa73db00476312d7f7dd6824705512ce16ef62fbc7df4e24ec51",
+            "compiled_sha256": "9e01434a26a01fa7a43640441ab9379d20d2ba86fd5961c59de14e69cede02b3",
+            "differing_bytes": 179,
+            "status": "partial",
+            "objdiff_percent": 64.59091,
+            "fuzzy_match_percent": 64.59091
+          }
+        ],
+        "object_sha256": "af1d53311fc2766f05d3a71e1762d3593873d7002711ca113c56f0c1676c52bf",
+        "linked_sha256": "aabff7a5aea6d4ff5b4ec28bf52e26502ce5bbcec06351cdcf8b938f9608b795",
+        "target_object_sha256": "02f1b4653a55387bdc1f8f83c05c5a8399bcb44a935d311b92ae5229995b62b6",
+        "diff_object_sha256": "6eb6e52330b3ae286fb741f3729ca34079d9b6262b7bdc27eb23d24c0b7cfce6",
+        "diff_sha256": "49f918fd687730bb0b7f8f6890700f0e17539fe4e6104e8b85ef2b17ce1cb24b"
+      },
+      {
+        "id": "compare_shell_coop_join_records",
+        "functions": [
+          {
+            "name": "ResetCoopJoinInfoFromPortNum__12ShellManagerUc",
+            "address": "0x801824ac",
+            "size": 120,
+            "binding": 1,
+            "compiled_address": "0x801824ac",
+            "compiled_size": 80,
+            "target_sha256": "e4484ae0c8bcdbfe69280b0e683419c0f156f2b16d733c663b5a1eba18ea68c6",
+            "compiled_sha256": "ccef04872ca151721eb230d0639fc9e088e0df8e8ae25c4343d4f539b33e53f4",
+            "differing_bytes": 114,
+            "status": "partial",
+            "objdiff_percent": 15.833333,
+            "fuzzy_match_percent": 15.833333
+          },
+          {
+            "name": "SetCoopJoinInfo__12ShellManagerP9FEPackageUl",
+            "address": "0x80182524",
+            "size": 220,
+            "binding": 1,
+            "compiled_address": "0x801824fc",
+            "compiled_size": 196,
+            "target_sha256": "f1b7db538f0d33ee901fbb56b6a656b42309897035eb33f1e4ab5bea4115f48b",
+            "compiled_sha256": "bc3ee14a967ceba516ef0d32ea1ed94232c9e22053f0c40f08891085afe6a3dc",
+            "differing_bytes": 185,
+            "status": "partial",
+            "objdiff_percent": 79.58182,
+            "fuzzy_match_percent": 79.58182
+          }
+        ],
+        "object_sha256": "8a82ac442a127ee530d744b15afc6c4cc607d5342f022e2bc8a909d71e08df43",
+        "linked_sha256": "c977b5891621d0e2c5c52f511db7a511d7b6757c8ed3186e15613d1f662f6f61",
+        "target_object_sha256": "705b15a2e61f6eec571169d9d9198a85fb16eedc68611dec1af07699561fc7ab",
+        "diff_object_sha256": "07f0c1290a3d15ed654b1e94189bc03c41840fb5392c7c50d03c1918c3e5aff8",
+        "diff_sha256": "ff7062fada0f83b5bb390cdbf7042aae5be85b98c564f7c461d9f4056ce0040f"
+      },
+      {
+        "id": "compare_shell_coop_join_update",
+        "functions": [
+          {
+            "name": "DoCoopJoinInfoUpdating__12ShellManager",
+            "address": "0x80181fb8",
+            "size": 168,
+            "binding": 1,
+            "compiled_address": "0x80181fb8",
+            "compiled_size": 148,
+            "target_sha256": "0e4611db01b1f114e39980f2bb9d288b57145a2df36cb547a99358ec2c5ca6c6",
+            "compiled_sha256": "31cf5097217a0a78a097eeccde29549beb2b5442fa91f0780fde69635a6e4a92",
+            "differing_bytes": 98,
+            "status": "partial",
+            "objdiff_percent": 82.2381,
+            "fuzzy_match_percent": 82.2381
+          }
+        ],
+        "object_sha256": "9ba5f8b0964e2824a4ad2dfc0af228d4a1d42de1a04da56a283aadef07b61b2d",
+        "linked_sha256": "a086fed731f0b241cfd10767b9d3d21ca24d6676b4169eb34bf28d6749d9f620",
+        "target_object_sha256": "3c7065786f14870c1b31590b059c33215495c2f7ae04d67c8635372fa4135663",
+        "diff_object_sha256": "f1298292acd6128e231ad4a4af1d971f341fb7aa9903d5937dd084e84526e7e3",
+        "diff_sha256": "5b9f34003c1029f9d6e3bd8e8d5f0e08283b04c8b3840c6829b9b7a97f820ef3"
+      },
+      {
+        "id": "compare_shell_start_mp",
+        "functions": [
+          {
+            "name": "SetStartMPDataFromShell__12ShellManager",
+            "address": "0x80182898",
+            "size": 124,
+            "binding": 1,
+            "compiled_address": "0x80182898",
+            "compiled_size": 116,
+            "target_sha256": "e30f4431776fee3fb347a1655f344cba516014863736200c2b3328e6dda23eee",
+            "compiled_sha256": "b69f7264a4d3053558a494f6302e40bcbbbab3cb384507eedb622c1e7372d5cc",
+            "differing_bytes": 90,
+            "status": "partial",
+            "objdiff_percent": 93.41936,
+            "fuzzy_match_percent": 93.41936
+          }
+        ],
+        "object_sha256": "9c50264d82f04f67272cadcb705baca00428269bbb998ffab115bfd0ec6fdde3",
+        "linked_sha256": "107fa744317fba09ccd6f0174bae78b8be76665d8eb33e171eaedd0e63f2b80d",
+        "target_object_sha256": "399a0073dbfc732560ba3474a329b5ee8d6f69402358157fdb3162a62f669947",
+        "diff_object_sha256": "af876b4150605489f14854ca66538a7b2df6b8d95391d06da58dd687e97ac0a5",
+        "diff_sha256": "0e31eafc245220021d088a69c7e61870bce4b037b68238c169e7c1b631990a7a"
+      },
+      {
+        "id": "compare_slider_initialize",
+        "functions": [
+          {
+            "name": "Initialize__7CSliderP8FEObject",
+            "address": "0x8017db70",
+            "size": 152,
+            "binding": 1,
+            "compiled_address": "0x8017db70",
+            "compiled_size": 152,
+            "target_sha256": "8b3f1af4383e5f60e3c9a074a5da26386a36c42f4581428dc44035dd29b8f4a1",
+            "compiled_sha256": "ef28a01c417fa30ead8efb799217115e4cf36e1d89e048fdce5d41e32af8e448",
+            "differing_bytes": 36,
+            "status": "partial",
+            "objdiff_percent": 73.42105,
+            "fuzzy_match_percent": 73.42105
+          }
+        ],
+        "object_sha256": "bb85346acf85c2a1c72a3b53705d4c80a1bdd252f972005ca81cc6278af87a75",
+        "linked_sha256": "5e60938a16e44f6d5cdbc505e8e3285c59a5c0652a6c4203ffab3065d0fea120",
+        "target_object_sha256": "e4a3cccf9adce696feb678b0df23e4dae2afd88a56262a4790601865d1e1974a",
+        "diff_object_sha256": "cc4a37203ad86476a51663ababf86aca69aed29eb168a7393f5fc9fdda229b51",
+        "diff_sha256": "49c6cd9b40025f74143277a5e742772069c63bcdbe57135fc9c8d8df74f5f8cf"
       }
     ]
   },
@@ -9362,14 +9842,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1341048,
+    "matching_code_bytes": 1341464,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.813434177410244,
+    "percent": 53.830127381991886,
     "categories": {
-      "reconstructed_game": 948832,
+      "reconstructed_game": 949248,
       "restored_library": 392216
     },
-    "matching_functions": 7049
+    "matching_functions": 7052
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -9898,6 +10378,16 @@
     "config/GR8E69/comparisons/fetype_create_base.json": "c278a7200c4a5085e583c858b33a0a9a0f849f1239f3673e4ea7c2fd54eb2f5f",
     "config/GR8E69/comparisons/fetype_create_image.json": "4f64e9c0de96ed79a7c78d743991ffbaf7ee970b6007e1b765686456d24ffc5e",
     "config/GR8E69/comparisons/fetypenode_fields.json": "dd410b7d49216725c8d1a6d8a5e7458df8a6924d206d4e437e69931eb1f3afb1",
+    "config/GR8E69/comparisons/handler_briefing_events.json": "e075943b1f975637f4bc35611a604aaa3ddf13890531df8fefafd7b46ee87643",
+    "config/GR8E69/comparisons/handler_coop_level_start.json": "fe2ca438be07862876886558fec1cbaff1dcd4125a3a92d5813b56733ae9ae1e",
+    "config/GR8E69/comparisons/handler_coop_options_events.json": "59db11b07a482d5f4a680cd569db99f8873564d2f803e17c3e12878ea0d0ad16",
+    "config/GR8E69/comparisons/handler_coop_sequence.json": "3a42c077a54da387c6e22cb580f30703defb97eade084e70467e342833467834",
+    "config/GR8E69/comparisons/handler_coop_split.json": "d58c0a3cb0c051ba1f215ae643323d8652d809f45c732c60f0e0eab5b68a7c6e",
+    "config/GR8E69/comparisons/handler_loadgame_accept.json": "752de1400b80764d60340bd7d761471ab22e0dbb0cddf3cf1bb008fa5b440f20",
+    "config/GR8E69/comparisons/handler_object_lists.json": "db3cc12d023e9086da2c8066eee791a3cf0482dc69df34171f45d85a069aa549",
+    "config/GR8E69/comparisons/handler_online_skin.json": "136ae645b1ff5546cfb78e8c0a28f0bfe54cd1f501d5c236728582b0f01fd6b4",
+    "config/GR8E69/comparisons/handler_two_player_events.json": "fc8b24f78056b432e71cf4e1775ec5e21c962af25591e0f4d61556dc722f1b5a",
+    "config/GR8E69/comparisons/handler_virtual_keyboard_events.json": "5b30c0625282de7324af39be970ff2ead987c0c502ae27847ab2badd089f6b78",
     "config/GR8E69/comparisons/line_segment_distance.json": "3f7c0231353874362ceb04fcc117070d2d1942932f3d2bbfe27d87c30eae4112",
     "config/GR8E69/comparisons/loading_DynamicLoaderGetAddr.json": "ccfd822dc2e450c54947352533fad3b894f3e65a13cb02e3dc06b2e0ab806795",
     "config/GR8E69/comparisons/loading_DynamicLoaderInitialize.json": "09ba22038ae1c060bea682e1f15ee9be4f9069ec9b554ce82b9625df2634d8cd",
@@ -9906,10 +10396,15 @@
     "config/GR8E69/comparisons/script_set_expression.json": "97fd308b7df015ce312fd7dfe1efd94500afe8884437180db10f8e6c78847a70",
     "config/GR8E69/comparisons/script_soldier_obj_info.json": "e31311cf4c9cd6891e88509449b080cd5e38e68e580d90e336ab5a528a140c43",
     "config/GR8E69/comparisons/script_vibration.json": "e8f702a260a6c106891e1e8e81e6ad3561f0ba647fde6e778f1f8b5a56769feb",
+    "config/GR8E69/comparisons/shell_control_masks.json": "3317f7deb684bd2b45347bf0edefc601cfab01b3e81405998838a09a4363e254",
+    "config/GR8E69/comparisons/shell_coop_join_records.json": "9b6e53d6fd941745711390c1d4975c1387ecee9b823d28589855fba02aae12b9",
+    "config/GR8E69/comparisons/shell_coop_join_update.json": "41313380a10e9ca8d98b91f8646682d4637db33f3d713eeb635f1e9ce0c9488f",
+    "config/GR8E69/comparisons/shell_start_mp.json": "48ba33971b08796cfb4f3cfeab5c1f5183361c48bf8354b9477b4c54c68ff3ec",
+    "config/GR8E69/comparisons/slider_initialize.json": "6fa1b33fab4f14ce0bf4a50f1f1f4fd7e22c16d0e7f796fd6f4c9434ec99f1f9",
     "config/GR8E69/comparisons/sphere_visibility.json": "2293c09db6d2ed5ef7b02055a6ae53de114dc74a2e9d1c26c35e5ae332c2367e",
     "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
     "config/GR8E69/comparisons/triangle_nearest.json": "1db65edb247e6e751b7dbe2d2e1d1945077ce757d9eaf20f4c8353f3b1eb8c51",
-    "config/GR8E69/comparisons.json": "6ec355336badd2c64c8f551dc72f637e22d8f24ed543337df7ac19b07bccdbf1",
+    "config/GR8E69/comparisons.json": "497edbc8524cfc4b26d05ec961197672c9af530bb213af6c8bdbb34f45ed6d25",
     "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
     "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
     "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
@@ -10446,6 +10941,7 @@
     "config/GR8E69/handler_mainmenu.json": "19721ad26b0ea36abea9cda9e915130bafd20d4c579a462018bfbc7352c89c4e",
     "config/GR8E69/handler_medalsoverlay.json": "d9d67384cfcc7ecb385cae1f0a498d2401e3af72a0abc0a672b7e70f8fd992a0",
     "config/GR8E69/handler_moviemenu_ctor.json": "287634b7c151715fc350839084be9032ffd058bc1a126651af05b92d9b706fe2",
+    "config/GR8E69/handler_mp_skin.json": "6529a853373691bf02f08cd5ff97b3cd35c164032052918af5f0cce51289af24",
     "config/GR8E69/handler_mpbots_validateskin.json": "645f118a3a0f71ffb9e94b8a4ef4a13327e9d1a5f73a5d135f4e8564a7573e78",
     "config/GR8E69/handler_mpglobal_init.json": "a30dffd6d73682c5556fbf1a5c5cf3df8b53ec5b1289e9e9af55d8872697b058",
     "config/GR8E69/handler_mpjoin.json": "1d82e2341a5f4475dc0835cb9c26dd64ac0c95551bc1479ef1db9740bc4283ea",
@@ -10470,6 +10966,7 @@
     "config/GR8E69/handler_saveslotbase_valid.json": "120edc634855bab77f224ab81128eec966ed2be54a7f7cda2b8eecd2ae49240c",
     "config/GR8E69/handler_saveslotselect.json": "16584fee15b2513de3fc76f47fcd53fc1831eb806aa1c0ecee227379b534dfab",
     "config/GR8E69/handler_saveslotselect_pop.json": "23b87939e4d87a5d3fd116dfa66f03c24fc906e7593fa38e5f8234b3be72f55d",
+    "config/GR8E69/handler_special_features_events.json": "a505ff87657c1179d4378b3ba543b632f6863ac67f1b647ffa5601f11b34f00d",
     "config/GR8E69/handler_statsscreen_pearl.json": "076976f53763c7ac0781bccc1b66aec809fff528588185b5fdd5075c35298243",
     "config/GR8E69/handler_virtualkeyboard_string.json": "820f39545c5ffcf87660b4e3b21f953832bbe784dc7ff26e99e13ae92eb0f606",
     "config/GR8E69/hud_compass.json": "230bb48fb8e54f510b0920d41d8908fce954e3f35ce7aabab7606e82e83b90ae",
@@ -10879,7 +11376,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "7a0f267c6d9a76f8f5afe06e40ef284abc2b930558c5b34993f9f9ba84405f31",
+    "config/GR8E69/project.json": "36ee988c9b6f8d9104ef41c4f09f7b7ad3183b682c75d4b5b3bebc4eee3390d8",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -11549,6 +12046,7 @@
     "config/GR8E69/shell_ListBoxRows.json": "8108ddb5541370a85ad8b4a9161f3338d04b200f8609b6c17e2474f58ea13277",
     "config/GR8E69/shell_ListBoxScroll.json": "7c535fe7782cfa3ff0ea47beab0ff7d3b94705dae8cb3b4ae767df0f732c2cda",
     "config/GR8E69/shell_VolumeKnobs.json": "07e5c928b50f14d34f6c7799651d1eb90a34eaba2ec4acb403cf75d2baf51708",
+    "config/GR8E69/shell_accept_pad.json": "f824d901f703fcc1dbca69fb35280bde41a6c3de94b0568334725ea4db407857",
     "config/GR8E69/shell_beginpackagerendering.json": "5c081296524e22206a3748f0fe0e85c3ac83b9919c5f50916d73b15950025a58",
     "config/GR8E69/shell_cshellmoviesettings.json": "1051d2a404082bd7515b6e9efcd3e5b515fa0fcc5e359442dc2adb395bb7fadc",
     "config/GR8E69/shell_debugmessagequeued.json": "fc9aa9c0ad0bb0d61e15f858f602c6381f8ce78e08f87b5ccf1232d54c69c173",
@@ -13591,7 +14089,12 @@
     "src/frontend/handler_audioconfig.cpp": "8c8c6b912e79ff562c4982bf1e7c3521c373aec47e4e6cb1597b156837a62a74",
     "src/frontend/handler_bonusoptions_cheats.cpp": "c37efa4c43f97b1ccd5543663a8879ccb26d9b4f8d7ee0871e11bd94e41c66f0",
     "src/frontend/handler_bonusoptions_ctor.cpp": "1f58aa88ca497a902081a35d4500cbf2e42e51064ee72abfdbaef71dfb68be3e",
+    "src/frontend/handler_briefing_events.cpp": "922aa681db74f5a0203c1ebc42784dd4450ebc561476e501470422dd37dd4ff9",
     "src/frontend/handler_controlleroptions.cpp": "5af09a841eecd3350a324736b2a5e45ad0f91ba8706b13e8420cd3d963c2bedd",
+    "src/frontend/handler_coop_level_start.cpp": "7cfe7c87e7fb508bac44c55584b2a586cd71bdfec7cbaf0ac0bb7c1e94d2bd01",
+    "src/frontend/handler_coop_options_events.cpp": "10b0cf3a4ffc3b41d6592b9c4a373c7f96749d49c3bebc6640bf73f017365ee8",
+    "src/frontend/handler_coop_sequence.cpp": "8131ba828e52677c7f2c4cc398dfc7f4e3a90cf7d7f556d47fe8ece6b9e7c26e",
+    "src/frontend/handler_coop_split.cpp": "a35d9e2c53614fb8a0457660e664de208ba22ebd36c195957c4e5ff2a6d99b0f",
     "src/frontend/handler_coopgameoptions_init.cpp": "f026699b4a4887236e209514ba9f47be759fe7a6c2c1d1f624b750442a830272",
     "src/frontend/handler_coopprofile_dtor.cpp": "43c8d7920c9eeb87bdcc63b003a82d1da82dbdb530b7f0d99d0bb5f7b9d73868",
     "src/frontend/handler_coopprofile_init.cpp": "56512344e99ebfabd50b25c0b6a1ce93d95378fd1c4856ae4e2ef4bfebaf7ad0",
@@ -13606,12 +14109,14 @@
     "src/frontend/handler_leaderboard_fill.cpp": "14cbc03582f7eb8066c6785114478d2ef4838e7653b5023f2e85086f94cb0440",
     "src/frontend/handler_levelmenu_ctor.cpp": "11bc178f8b0dd710f440a98ae9beb801e7999aa8345fa34591802e7d977e49cd",
     "src/frontend/handler_loadgame.cpp": "d1edb124c0b755d05d6f0b5134db5f5dd56f6b8decd73838f45c2b2061116d86",
+    "src/frontend/handler_loadgame_accept.cpp": "6d6d9c968607524ddf1a56f6252eb8c3912647e51e1dede40a8c675fe6a0901c",
     "src/frontend/handler_loadslotselect_accept.cpp": "69b9ea0069e4e1b4c9b3aaf427ad5edfe119b48165d1538e489b099173ef818c",
     "src/frontend/handler_loadslotselect_cancel.cpp": "b60f0dafb3e34901badc235803c3dd5a77f63c6f1f8b1c46db7ef481f8d96f8f",
     "src/frontend/handler_main.cpp": "a55baddde44cdbe6bc3f2267b93f2a14cb904843fca01b3a0b1e0a297735a42a",
     "src/frontend/handler_mainmenu.cpp": "56c2062e52b033cbc906a982e7743b9f44a4d655d5e176908a50f33f1da1b66c",
     "src/frontend/handler_medalsoverlay.cpp": "41ab623d49a9fcc73ee8fb234c2f55aefed2863042c7a3193822c4cc058b29e1",
     "src/frontend/handler_moviemenu_ctor.cpp": "c0fccb63d8d0df7593cab56ce6ca7f47f2d2462341be8bc757f6cc4180a47781",
+    "src/frontend/handler_mp_skin.cpp": "cd19a56185db25a277ddc39a3a835cf35c8d38f1fe0a38fe300ee0adb4535d51",
     "src/frontend/handler_mpbots_validateskin.cpp": "06937815b8984dc2529b8ecfccb09d442e912bdfb998fc9349766d909b509422",
     "src/frontend/handler_mpglobal_init.cpp": "99bbc912f44d556327d186de9eb3cf65b08f9be2e54649568975d5f9b3d50734",
     "src/frontend/handler_mpjoin.cpp": "c17a9021899000dc1788ee8ce2692df91684ab4223656c9cbe9296f716b72a32",
@@ -13622,6 +14127,8 @@
     "src/frontend/handler_nameentry_string.cpp": "b0290b40dc05e1a3f718883c12e0659168f7ebe106c54309fc584e92280762f0",
     "src/frontend/handler_netconfwarning.cpp": "e97e70c746241cd3bbe079540d46dd358b56796d07b278325ed9cb934dc8db25",
     "src/frontend/handler_numplayers.cpp": "74f10a3a4faae4832e0243415fc36e37e357d648b0957a06ef735a61d910e7db",
+    "src/frontend/handler_object_lists.cpp": "dd1b81285baccdaa75e243cde35ef5fbac2426af8362589393b10115033eb5fe",
+    "src/frontend/handler_online_skin.cpp": "d9c3dacd9dbcb8de186f10f382fd192fcb3048e564f6dde59b1af6f8897ac6e0",
     "src/frontend/handler_onlinefavorites_add.cpp": "b8a82ebf551baa0675ceef1bd1f1a1ea72553e1a7ed7a7cab4b62ac573b07f17",
     "src/frontend/handler_onlinefavorites_buttons.cpp": "edd549b6440c1c872867e8e04c58d81c009beaa751697165be8489cc9cda4e7d",
     "src/frontend/handler_onlinekeyboard.cpp": "80cdc3670d6aa0e2ddf348246a3fda973e163a67dfce8ef7e31d5a4b4033a344",
@@ -13636,7 +14143,10 @@
     "src/frontend/handler_saveslotbase_valid.cpp": "d4177bc924d5b13c766ab665c88ad504b2ad698e3f2ef0d156b317652c17f7d4",
     "src/frontend/handler_saveslotselect.cpp": "e2da92acef7e81763eefabfb8d8551181ab22264a03fd92a41d9da6f80aeffd5",
     "src/frontend/handler_saveslotselect_pop.cpp": "106d924e6793afb6c8cf540f4e2e8a7fcc849fd9f8f500336130e261e3c43772",
+    "src/frontend/handler_special_features_events.cpp": "c87ff5b0205b4d3b0297a6c1bb3303a0dacd98c9e04575721e9e4ebe4be37027",
     "src/frontend/handler_statsscreen_pearl.cpp": "be52bb0036abbc3d111ebec3827d2c7dc9e1c7e490d6e63d171df26d16c2e1e9",
+    "src/frontend/handler_two_player_events.cpp": "15b6f5db273012ba3926db37f549977de023ce1d49b66a662c70e06212dbc51a",
+    "src/frontend/handler_virtual_keyboard_events.cpp": "496b4ad322156731863d293b2c8f1163315600deb4f80456a8f426b73312593d",
     "src/frontend/handler_virtualkeyboard_string.cpp": "8b301cfd9e4f86ec74565de222bc3b88b491487b041940c5b47685f4df60ca07",
     "src/frontend/hash.cpp": "6d1834f84056ea091ae722973283ab6edc0b53f73938a4866d969db56d62d55b",
     "src/frontend/keyboardpopup_class.cpp": "76228f81af804104824f1aefeb717e01ab658a5018a293228793b8c5488a2876",
@@ -13654,7 +14164,11 @@
     "src/frontend/pkgh_setscript.cpp": "88b5768a96496a652aa542ae793c709feed49327fc4ac7a724322f20414116b2",
     "src/frontend/popup_message.cpp": "6b62ed9879ae5d79a68fa9fbbe750817b3d737f27ccc04be2c671d1fc1eb39af",
     "src/frontend/popup_message_dtor.cpp": "b0fa8b929b9341635239ac8359ca62485761cb69af3ae611c660b69221771b0f",
+    "src/frontend/shell_accept_pad.cpp": "3d66b397cb4ba5698a0388a607eb5d5c127c51092e8cafd42d912505f89a0508",
     "src/frontend/shell_beginpackagerendering.cpp": "c22a7a2acfc1cc0fa8d4263951398625495d55a845cc332c987d244c40b5fb85",
+    "src/frontend/shell_control_masks.cpp": "5dcf398a3bfdf2a71de529ec7c559a43cb27824433630c4ebf4c4bc1b68cc3b3",
+    "src/frontend/shell_coop_join_records.cpp": "f7e56507d18f84221f7b846c16a92e5cfbf08d1b6da3d0f44e240c756d86328a",
+    "src/frontend/shell_coop_join_update.cpp": "d8bdf675a7c8dcb481c2fa26018266d1be1f55fb1b9e89507bae007a1041ef4a",
     "src/frontend/shell_cshellmoviesettings.cpp": "74f0dde849ea20168a6870b97aaef26a8330146cb8766e745a66360246fdc2cc",
     "src/frontend/shell_debugmessagequeued.cpp": "66c31a28249ee686b60e4df3ae9ffadb475598316b50da68a3f4549000b990ab",
     "src/frontend/shell_docoopcontrollerchecks.cpp": "a8a57e1a585a4a0223edaed05749842d0a28b3065763edcaa44e533683d9c7d9",
@@ -13672,8 +14186,10 @@
     "src/frontend/shell_push.cpp": "41af18cdf93a4eb2b21ae2620ec77a7ff9cc690f93699907faa8b433fac08c2e",
     "src/frontend/shell_reset.cpp": "3bca8761e976580f8f330ecf7fc3eeaaa9679cda21fea9c82dfd1c82081c9c6c",
     "src/frontend/shell_shutdown_process.cpp": "0de20affc701d424ba3b80aa144fe0a3972d95f601c59cd99bb3a5b79b248750",
+    "src/frontend/shell_start_mp.cpp": "37d2e7f98b7a5a6cf4a2b060f98ad892b0c9d6d24bd25214b847d9872dd5941c",
     "src/frontend/shell_updateunplugged.cpp": "5dec5ac7b519a96f0eb0c3873ec45129c96689b2b79a3ab8b1ef42decd2bf078",
     "src/frontend/shellfactory.cpp": "f4c69038da0135cd00e71ab28a1eaaecb63fba1e11d2a961dab071278e4d5b9d",
+    "src/frontend/slider_initialize.cpp": "a0e00dbb1b0ea77ea3dab9c76e4ba9bb3110de9f51db350ede5c3924bb7e88a4",
     "src/frontend/uppercase.cpp": "58d80513a4f76209e1895c6943d7e05837625be3bd2687efe32159afd23f70dd",
     "src/frontend/usermessages_access.cpp": "41716b6c646c0838ec302212e35f8ece4f43914f5a10cbdd6fec31ad50f4081a",
     "src/frontend/usermessages_lifetime.cpp": "250e5edf14476401ba9fd4c26cd2a8fb96303b302f127109a29647323be7b017",
@@ -66100,6 +66616,60 @@
       "discarded_functions": [],
       "object_sha256": "28639ef769fcd1781515c452b21b6f7bcde9d2ed5a3e7fc30f4b3c3c67b24e2a",
       "linked_sha256": "f745d45db62fb0853f83d99daaf3770fd0000500aae730deee65d8ae138f6859"
+    },
+    {
+      "id": "handler_mp_skin",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 200,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "b5b38670b8f3365ee5c708f371b4372690f3f05b4cd40902c5e136d2392199ab",
+      "linked_sha256": "d5d6df0eadbea508a462755e203be3630297272932307c4b8cde8260e0861505"
+    },
+    {
+      "id": "handler_special_features_events",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "8f75847fdb7739b318759f1dfee5d6803b4a054112f5980aadf85a8da4bc1849",
+      "linked_sha256": "4d5fdc1198b37b811b0a8c7244c32b29b6c25a52cf90b3afef536d299d49136d"
+    },
+    {
+      "id": "shell_accept_pad",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 32,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G0",
+        "-fno-exceptions",
+        "-fno-implicit-templates"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bbc03960d066410ca2d8d54e31ed430a5b44fe4847029a8e51cb402c6cf151f2",
+      "linked_sha256": "32bdf7c98f5b2c6c46f44e7587dc1c79e803127629472de29bfaccaf4071a4b5"
     }
   ],
   "code_map": {
@@ -78743,13 +79313,6 @@
             "kind": "function",
             "name": "SetStartMPDataFromShell__12ShellManager",
             "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80182944",
-            "size": 32,
-            "kind": "function",
-            "name": "GetIndexPadLastPressedAccept__12ShellManager",
-            "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
@@ -79211,13 +79774,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x8018d550",
-            "size": 200,
-            "kind": "function",
-            "name": "IsSkinUnlocked__13HandlerMPBotsii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8018d6a8",
             "size": 2944,
             "kind": "function",
@@ -79399,24 +79955,6 @@
         "marker_interval": [
           "0x801931f4",
           "0x801938a4"
-        ]
-      },
-      {
-        "name": "Unmatched files/handlerSpecialFeatures.cpp [inferred file group]",
-        "file_record": 290,
-        "file_name": "handlerSpecialFeatures.cpp",
-        "ranges": [
-          {
-            "address": "0x80193a68",
-            "size": 184,
-            "kind": "function",
-            "name": "HandleEvent__22HandlerSpecialFeaturesUiP8FEObjectUl",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x80193a68",
-          "0x80193b20"
         ]
       },
       {
