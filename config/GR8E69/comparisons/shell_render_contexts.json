@@ -1,0 +1,75 @@
+{
+  "id": "compare_shell_render_contexts",
+  "source": "src/frontend/shell_render_contexts.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801801d0",
+      "size": 1172
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802adf58",
+      "size": 312
+    }
+  ],
+  "functions": [
+    {
+      "name": "GenerateXformMatrix__12ShellManagerPQ24EAGL9TransformP9FEObjDataUs",
+      "address": "0x801801d0",
+      "size": 264,
+      "binding": 1
+    },
+    {
+      "name": "GenerateRenderContext__12ShellManagerUsP8FEObject",
+      "address": "0x801802d8",
+      "size": 376,
+      "binding": 1
+    },
+    {
+      "name": "GetContextTransform__12ShellManagerUsR9FEMatrix4",
+      "address": "0x80180450",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "RenderObjectList__12ShellManagerP17FEObjectListEntryUl",
+      "address": "0x801804c8",
+      "size": 96,
+      "binding": 1
+    },
+    {
+      "name": "RenderObject__12ShellManagerP8FEObject",
+      "address": "0x80180528",
+      "size": 316,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "memset": "0x80266778",
+    "BuildScale__Q24EAGL9Transformffff": "0x801e213c",
+    "PrependQuatTrans__Q24EAGL9TransformPC6COORD4T1": "0x801e258c",
+    "AppendTranslate__Q24EAGL9Transformfff": "0x801e23ac",
+    "PostMult__Q24EAGL9TransformRCQ24EAGL9Transform": "0x801e20fc",
+    "RenderImage__12ShellManagerP7FEImage": "0x80180664",
+    "RenderSimpleImage__12ShellManagerP13FESimpleImage": "0x80180e14",
+    "printf": "0x8026374c",
+    "RenderString__12ShellManagerP8FEString": "0x80180aa0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GenerateXformMatrix__12ShellManagerPQ24EAGL9TransformP9FEObjDataUs",
+    "GenerateRenderContext__12ShellManagerUsP8FEObject",
+    "GetContextTransform__12ShellManagerUsR9FEMatrix4",
+    "RenderObjectList__12ShellManagerP17FEObjectListEntryUl",
+    "RenderObject__12ShellManagerP8FEObject"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

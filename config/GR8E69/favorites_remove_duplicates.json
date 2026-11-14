@@ -1,0 +1,52 @@
+{
+  "id": "favorites_remove_duplicates",
+  "source": "src/frontend/favorites_remove_duplicates.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8019cf70",
+      "size": 252
+    }
+  ],
+  "functions": [
+    {
+      "name": "RemoveDuplicates__22HandlerOnlineFavorites",
+      "address": "0x8019cf70",
+      "size": 252,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "s_xsNull": "0x802c5d18",
+    "GetRowByIndex__7ListBoxl": "0x80186bb0",
+    "strcmp": "0x802669b4",
+    "RemoveRow__7ListBoxPQ27ListBox3Row": "0x801869f8",
+    "_._Q27ListBox3Row": "0x80186fb0",
+    "GetNumRows__7ListBox": "0x80186c6c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerOnlineFavorites.cpp",
+  "original_file_index": 2037,
+  "local_externals": [
+    "s_xsNull"
+  ],
+  "evidence": "docs/research/frontend-popup-list.md"
+}
