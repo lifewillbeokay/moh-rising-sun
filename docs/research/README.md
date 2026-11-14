@@ -106,3 +106,8 @@ copying, event dispatch, localization, render traversal and cleanup.
 The [FEng input, lifecycle and reader follow-up](feng-lifecycle.md) adds 16 functions
 covering controller/mouse processing, package commands, update loops, script tags,
 locale tables and type construction, with two exact functions and 14 partials.
+
+The [frontend screen and co-op batch](frontend-screens.md) applies the shared
+frontend interfaces to menu navigation, skin checks, keyboard entry, save loading,
+briefing text and controller bookkeeping, with measured partials and isolated
+PowerPC checks.

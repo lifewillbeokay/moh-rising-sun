@@ -1,0 +1,59 @@
+{
+  "id": "compare_handler_loadgame_accept",
+  "source": "src/frontend/handler_loadgame_accept.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80194cf8",
+      "size": 600
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3c6c",
+      "size": 60
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnAccept__15HandlerLoadGame",
+      "address": "0x80194cf8",
+      "size": 600,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "g_Shell": "0x802f4420",
+    "g_GameSettings": "0x802f80c8",
+    "GetSelection__C19HandlerSaveSlotBase": "0x8019a028",
+    "GetSaveData__C13CGameSettingsUiUi": "0x801710f0",
+    "IsValidLoadGameType__19HandlerSaveSlotBasei": "0x8019a644",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "g_GameFlow": "0x802f9ce0",
+    "LevelExistsOnCurrentDisc__Fii": "0x80059130",
+    "SwapDiscs__F15GcSwapDiscsMode": "0x80059184",
+    "_22HandlerCoopGameOptions.mSaveSlot": "0x802c5c78",
+    "RestoreSaveData__13CGameSettingsUiUi": "0x80170054",
+    "SetNextMissionAndLevel__13CGameSettingsUiUii": "0x8016d8d4",
+    "g_PauseScreen": "0x802f8040",
+    "UnpauseGame__10CPauseMenu": "0x8017e27c",
+    "GetIndexPadLastPressedAccept__12ShellManager": "0x80182944",
+    "g_inputMgr": "0x803077c4",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "RecordPackageMarker__7FEnginePCc": "0x8004fecc",
+    "QueuePackageSwitch__7FEnginePCcP9FEPackage": "0x8004eebc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerLoadGame.cpp",
+  "original_file_index": 1843,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "OnAccept__15HandlerLoadGame"
+  ],
+  "context_units": []
+}

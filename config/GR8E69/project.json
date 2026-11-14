@@ -2604,7 +2604,10 @@
     "fengine_unload_library.json",
     "fetype_find.json",
     "fengine_push_package.json",
-    "fetype_startup.json"
+    "fetype_startup.json",
+    "handler_mp_skin.json",
+    "handler_special_features_events.json",
+    "shell_accept_pad.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

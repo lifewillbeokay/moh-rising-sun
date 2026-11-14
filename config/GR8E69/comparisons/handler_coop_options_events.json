@@ -1,0 +1,59 @@
+{
+  "id": "compare_handler_coop_options_events",
+  "source": "src/frontend/handler_coop_options_events.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80193d50",
+      "size": 916
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3718",
+      "size": 212
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__22HandlerCoopGameOptionsUiP8FEObjectUl",
+      "address": "0x80193d50",
+      "size": 916,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_0.3319": "0x803e8674",
+    "sEnableInputs.3318": "0x803e8670",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "g_GameSettings": "0x802f80c8",
+    "LevelExistsOnCurrentDisc__Fii": "0x80059130",
+    "SwapDiscs__F15GcSwapDiscsMode": "0x80059184",
+    "_22HandlerCoopGameOptions.mSaveSlot": "0x802c5c78",
+    "g_Shell": "0x802f4420",
+    "RestoreSaveData__13CGameSettingsUiUi": "0x80170054",
+    "SetStartMPDataFromShell__12ShellManager": "0x80182898",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "splitSequence.3320": "0x802c5c7c",
+    "GetNextEntryInSequence__22HandlerCoopGameOptionsPiUiii": "0x801942d4",
+    "printf": "0x8026374c",
+    "PlayShellSound__12ShellManager15EShellSoundType": "0x80181a44",
+    "SetOptionsProperties__22HandlerCoopGameOptions": "0x801940e4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoopGameOptions.cpp",
+  "original_file_index": 1834,
+  "local_externals": [
+    "_.tmp_0.3319",
+    "sEnableInputs.3318",
+    "splitSequence.3320"
+  ],
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "HandleEvent__22HandlerCoopGameOptionsUiP8FEObjectUl"
+  ],
+  "context_units": []
+}

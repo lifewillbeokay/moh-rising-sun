@@ -1,0 +1,44 @@
+{
+  "id": "compare_shell_coop_join_records",
+  "source": "src/frontend/shell_coop_join_records.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801824ac",
+      "size": 340
+    }
+  ],
+  "functions": [
+    {
+      "name": "ResetCoopJoinInfoFromPortNum__12ShellManagerUc",
+      "address": "0x801824ac",
+      "size": 120,
+      "binding": 1
+    },
+    {
+      "name": "SetCoopJoinInfo__12ShellManagerP9FEPackageUl",
+      "address": "0x80182524",
+      "size": 220,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetDeviceIndexFromControlMask__12ShellManagerUl": "0x80182824",
+    "g_inputMgr": "0x803077c4",
+    "GetPortNum__C14CDeviceManagerUc": "0x800d6840",
+    "g_GameSettings": "0x802f80c8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ResetCoopJoinInfoFromPortNum__12ShellManagerUc",
+    "SetCoopJoinInfo__12ShellManagerP9FEPackageUl"
+  ],
+  "context_units": []
+}

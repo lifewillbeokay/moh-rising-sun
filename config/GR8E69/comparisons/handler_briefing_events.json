@@ -1,0 +1,49 @@
+{
+  "id": "compare_handler_briefing_events",
+  "source": "src/frontend/handler_briefing_events.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80199080",
+      "size": 424
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b4fb8",
+      "size": 128
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__27HandlerPauseBriefingOverlayUiP8FEObjectUl",
+      "address": "0x80199080",
+      "size": 424,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetCurrentLanguage__14PackageHandler": "0x80188c8c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "strcasecmp": "0x8026680c",
+    "g_GameSettings": "0x802f80c8",
+    "g_Shell": "0x802f4420",
+    "g_bCoopMultiplayer": "0x802c1b2c",
+    "sprintf": "0x80263a3c",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "__as__12FEWideStringPCs": "0x80056a60"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerPauseBriefingOverlay.cpp",
+  "original_file_index": 1920,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "HandleEvent__27HandlerPauseBriefingOverlayUiP8FEObjectUl"
+  ],
+  "context_units": []
+}

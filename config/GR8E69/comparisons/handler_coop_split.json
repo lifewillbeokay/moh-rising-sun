@@ -1,0 +1,54 @@
+{
+  "id": "compare_handler_coop_split",
+  "source": "src/frontend/handler_coop_split.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80193b20",
+      "size": 344
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3664",
+      "size": 40
+    }
+  ],
+  "functions": [
+    {
+      "name": "GotoNextScreen__20HandlerCoop4WaySplit",
+      "address": "0x80193b20",
+      "size": 48,
+      "binding": 1
+    },
+    {
+      "name": "Init__20HandlerCoop4WaySplitPCc",
+      "address": "0x80193b50",
+      "size": 296,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "QueuePackageSwitch__7FEnginePCcP9FEPackage": "0x8004eebc",
+    "g_Shell": "0x802f4420",
+    "g_GameSettings": "0x802f80c8",
+    "g_inputMgr": "0x803077c4",
+    "_16HandlerMPProfile.m_lastProfile": "0x802c5a20",
+    "QueuePackagePush__7FEnginePCcP9FEPackageUl": "0x8004ef58",
+    "ResetCoopJoinInfo__12ShellManagerSc": "0x80182440",
+    "g_hMemoryCard": "0x802f9884",
+    "OnEnterInteractiveMode__11CMemoryCard": "0x801a3420"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerCoop4WaySplit.cpp",
+  "original_file_index": 1832,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GotoNextScreen__20HandlerCoop4WaySplit",
+    "Init__20HandlerCoop4WaySplitPCc"
+  ],
+  "context_units": []
+}

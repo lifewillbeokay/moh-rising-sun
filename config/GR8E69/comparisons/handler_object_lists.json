@@ -1,0 +1,63 @@
+{
+  "id": "compare_handler_object_lists",
+  "source": "src/frontend/handler_object_lists.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8018798c",
+      "size": 968
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b0908",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetObjectListIndex__14PackageHandlerPcUi",
+      "address": "0x8018798c",
+      "size": 224,
+      "binding": 1
+    },
+    {
+      "name": "SetNextObjectListIndex__14PackageHandlerPc",
+      "address": "0x80187a6c",
+      "size": 272,
+      "binding": 1
+    },
+    {
+      "name": "SetPrevObjectListIndex__14PackageHandlerPc",
+      "address": "0x80187b7c",
+      "size": 328,
+      "binding": 1
+    },
+    {
+      "name": "GetObjectListIndex__14PackageHandlerPc",
+      "address": "0x80187cc4",
+      "size": 144,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "sprintf": "0x80263a3c",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "strcasecmp": "0x8026680c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetObjectListIndex__14PackageHandlerPcUi",
+    "SetNextObjectListIndex__14PackageHandlerPc",
+    "SetPrevObjectListIndex__14PackageHandlerPc",
+    "GetObjectListIndex__14PackageHandlerPc"
+  ],
+  "context_units": []
+}

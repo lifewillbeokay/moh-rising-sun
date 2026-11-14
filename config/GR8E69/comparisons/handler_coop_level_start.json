@@ -1,0 +1,42 @@
+{
+  "id": "compare_handler_coop_level_start",
+  "source": "src/frontend/handler_coop_level_start.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801884bc",
+      "size": 476
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b0ca0",
+      "size": 264
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleCoopLevelStartEvent__14PackageHandlerUiP8FEObject",
+      "address": "0x801884bc",
+      "size": 476,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "g_GameSettings": "0x802f80c8",
+    "SetNextMissionAndLevel__13CGameSettingsUiUii": "0x8016d8d4",
+    "g_GameFlow": "0x802f9ce0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "packageHandler.cpp",
+  "original_file_index": 1605,
+  "evidence": "docs/research/frontend-screens.md",
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "HandleCoopLevelStartEvent__14PackageHandlerUiP8FEObject"
+  ],
+  "context_units": []
+}

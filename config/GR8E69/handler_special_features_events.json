@@ -1,0 +1,58 @@
+{
+  "id": "handler_special_features_events",
+  "source": "src/frontend/handler_special_features_events.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80193a68",
+      "size": 184
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b35b4",
+      "size": 32
+    }
+  ],
+  "functions": [
+    {
+      "name": "HandleEvent__22HandlerSpecialFeaturesUiP8FEObjectUl",
+      "address": "0x80193a68",
+      "size": 184,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_0.3280": "0x803e8664",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "uSETUPMENU.3279": "0x803e8660",
+    "_.tmp_1.3282": "0x803e866c",
+    "uPLAYCREDITS.3281": "0x803e8668",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "HandleMovieEvent__14PackageHandlerUiP8FEObject": "0x80187e44"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerSpecialFeatures.cpp",
+  "original_file_index": 1826,
+  "local_externals": [
+    "_.tmp_0.3280",
+    "uSETUPMENU.3279",
+    "_.tmp_1.3282",
+    "uPLAYCREDITS.3281"
+  ],
+  "evidence": "docs/research/frontend-screens.md"
+}
