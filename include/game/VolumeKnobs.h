@@ -13,10 +13,10 @@ class CSlider {
   public:
     void Initialize(FEObject *);
     void SetValue(float);
-    unsigned char unknown00[4];
+    union { unsigned char unknown00[4]; FEObject *object; };
     CSliderVector vectorA; // +0x04
     CSliderVector vectorB; // +0x10
-    unsigned char unknown1c[4];
+    union { unsigned char unknown1c[4]; float value; };
 };
 class CVolumeKnobs {
   public:

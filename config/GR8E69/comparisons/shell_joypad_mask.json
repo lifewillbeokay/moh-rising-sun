@@ -1,0 +1,37 @@
+{
+  "id": "compare_shell_joypad_mask",
+  "source": "src/frontend/shell_joypad_mask.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801811b4",
+      "size": 292
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetJoyPadMask__12ShellManagerUc",
+      "address": "0x801811b4",
+      "size": 292,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_inputMgr": "0x803077c4",
+    "IsReady__C13CInputManagerSc": "0x800d6ff8",
+    "padFlags": "0x802c59a8",
+    "GetValue__C13CInputManagerUcUs": "0x800d6f08"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "shellManager.cpp",
+  "original_file_index": 1580,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "GetJoyPadMask__12ShellManagerUc"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

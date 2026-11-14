@@ -1,0 +1,34 @@
+{
+  "id": "compare_settings_restore_slot",
+  "source": "src/frontend/settings_restore_slot.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80170054",
+      "size": 388
+    }
+  ],
+  "functions": [
+    {
+      "name": "RestoreSaveData__13CGameSettingsUiUi",
+      "address": "0x80170054",
+      "size": 388,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetProfile__13CGameSettingsUi": "0x801719cc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "RestoreSaveData__13CGameSettingsUiUi"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "compare_slider_value",
+  "source": "src/frontend/slider_value.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017dc08",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetValue__7CSliderf",
+      "address": "0x8017dc08",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FindTrack__C8FEScript18FEKeyTrack_Indices": "0x80055968",
+    "SetKeyValueAt__10FEKeyTracklR9FEVector3": "0x800493f8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "slider.cpp",
+  "original_file_index": 1565,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetValue__7CSliderf"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

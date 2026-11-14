@@ -1,0 +1,65 @@
+{
+  "id": "compare_bonusoptions_menu",
+  "source": "src/frontend/bonusoptions_menu.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80194f50",
+      "size": 1060
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b3d1c",
+      "size": 140
+    }
+  ],
+  "functions": [
+    {
+      "name": "__19HandlerBonusOptions",
+      "address": "0x80194f50",
+      "size": 116,
+      "binding": 1
+    },
+    {
+      "name": "HandleEvent__19HandlerBonusOptionsUiP8FEObjectUl",
+      "address": "0x80194fc4",
+      "size": 944,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.19HandlerBonusOptions": "0x802eb808",
+    "sprintf": "0x80263a3c",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "g_GameSettings": "0x802f80c8",
+    "printf": "0x8026374c",
+    "g_Shell": "0x802f4420",
+    "g_GameFlow": "0x802f9ce0",
+    "WasLastGameSinglePlayer__13CGameSettings": "0x801719bc",
+    "SetProfileNameOnScreen__14PackageHandleri": "0x80188c94",
+    "GetNameFromSettings__13CGameSettingsi": "0x8016f5ac",
+    "SetObjectString__14PackageHandlerP9FEPackagePCcT2": "0x8018769c",
+    "HasCheat__C13CGameSettingsi": "0x80171640",
+    "SetScript__14PackageHandlerP9FEPackagePCcT2": "0x80187d54",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "GetCheatByIndex__19HandlerBonusOptionsi": "0x80195374",
+    "EnableButton__14PackageHandlerP9FEPackagePCc": "0x8018780c",
+    "DisableButton__14PackageHandlerP9FEPackagePCc": "0x8018786c",
+    "SetCurrentButton__9FEPackageP7FEngineP8FEObjectb": "0x80051c44",
+    "ToggleCheatByIndex__19HandlerBonusOptionsi": "0x801955f0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "handlerBonusOptions.cpp",
+  "original_file_index": 1845,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "HandleEvent__19HandlerBonusOptionsUiP8FEObjectUl"
+  ],
+  "context_units": [
+    "handler_bonusoptions_ctor"
+  ],
+  "evidence": "docs/research/frontend-popup-list.md"
+}
