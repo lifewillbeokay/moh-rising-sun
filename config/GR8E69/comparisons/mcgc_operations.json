@@ -1,0 +1,156 @@
+{
+  "id": "compare_mcgc_operations",
+  "source": "src/save/mcgc_operations.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5dbc",
+      "size": 4132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6e48",
+      "size": 132
+    }
+  ],
+  "functions": [
+    {
+      "name": "CheckStart__13CMemoryCardGC",
+      "address": "0x801a5dbc",
+      "size": 532,
+      "binding": 1
+    },
+    {
+      "name": "IssueSave__13CMemoryCardGCPCcUi",
+      "address": "0x801a5fd0",
+      "size": 276,
+      "binding": 1
+    },
+    {
+      "name": "CheckSave__13CMemoryCardGC",
+      "address": "0x801a60e4",
+      "size": 572,
+      "binding": 1
+    },
+    {
+      "name": "IssueLoad__13CMemoryCardGCPCcUi",
+      "address": "0x801a6320",
+      "size": 132,
+      "binding": 1
+    },
+    {
+      "name": "CheckLoad__13CMemoryCardGC",
+      "address": "0x801a63a4",
+      "size": 684,
+      "binding": 1
+    },
+    {
+      "name": "IssueScan__13CMemoryCardGCRQ211CMemoryCard8ScanTaskPCQ211CMemoryCard6Device",
+      "address": "0x801a6650",
+      "size": 72,
+      "binding": 1
+    },
+    {
+      "name": "CheckScan__13CMemoryCardGC",
+      "address": "0x801a6698",
+      "size": 512,
+      "binding": 1
+    },
+    {
+      "name": "ProcessReply__13CMemoryCardGCUi",
+      "address": "0x801a6898",
+      "size": 228,
+      "binding": 1
+    },
+    {
+      "name": "DisplayTRCMessage__13CMemoryCardGCPCQ26Realmc7Message",
+      "address": "0x801a697c",
+      "size": 172,
+      "binding": 1
+    },
+    {
+      "name": "IsOurs__C13CMemoryCardGCRCQ46Realmc7Message10DetailInfo8FileInfo",
+      "address": "0x801a6a28",
+      "size": 164,
+      "binding": 1
+    },
+    {
+      "name": "TellTheGamecubeToShutUp__13CMemoryCardGCb",
+      "address": "0x801a6acc",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "IssueCache__9CMCDevice",
+      "address": "0x801a6adc",
+      "size": 216,
+      "binding": 1
+    },
+    {
+      "name": "CheckCache__9CMCDevice",
+      "address": "0x801a6bb4",
+      "size": 556,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "TIMER_elapsedticks": "0x80217a00",
+    "TIMER_getfrequency": "0x80217a38",
+    "RequestReply__11CMemoryCard": "0x801a3a10",
+    "sprintf": "0x80263a3c",
+    "OSResetSystem": "0x80258920",
+    "WaitingForReply__C11CMemoryCard": "0x801a3aa8",
+    "Instance__9MohLoader": "0x80059414",
+    "MUSIC_Pause__Fb": "0x80158fdc",
+    "SOUND_PauseAll__Fb": "0x80156660",
+    "_.tmp_1.3257": "0x803f514c",
+    "fileInfo.3256": "0x803f511c",
+    "strlen": "0x80266b70",
+    "GetDevice__9CMCDeviceUi": "0x801a7234",
+    "GetScratchpad__C11CMemoryCard": "0x801a3b70",
+    "GetScratchpadSize__C11CMemoryCard": "0x801a3b7c",
+    "ScratchpadDataOkay__C11CMemoryCard": "0x801a3b88",
+    "_6Realmc.ROOT_DIRECTORY_NAME": "0x80451258",
+    "_6Realmc.FILENAME_ALL_FILES": "0x8045125c",
+    "Display__11CMemoryCardPCUwN41": "0x801a39bc",
+    "DebugMsg__FPCce": "0x80279094",
+    "memset": "0x80266778",
+    "COMPANY_CODE": "0x802c5d90",
+    "GAME_CODE": "0x803f5188",
+    "g_bVerbose": "0x802c7d9c",
+    "wcsncpy": "0x8026700c",
+    "wcslen": "0x80266fd4",
+    "g_pMCInstance": "0x802c7d94",
+    "Invalidate__9CMCDeviceb": "0x801a71b4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardGC.cpp",
+  "original_file_index": 2125,
+  "local_externals": [
+    "_.tmp_1.3257",
+    "fileInfo.3256",
+    "g_bVerbose",
+    "g_pMCInstance"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "CheckStart__13CMemoryCardGC",
+    "IssueSave__13CMemoryCardGCPCcUi",
+    "CheckSave__13CMemoryCardGC",
+    "IssueLoad__13CMemoryCardGCPCcUi",
+    "CheckLoad__13CMemoryCardGC",
+    "IssueScan__13CMemoryCardGCRQ211CMemoryCard8ScanTaskPCQ211CMemoryCard6Device",
+    "CheckScan__13CMemoryCardGC",
+    "ProcessReply__13CMemoryCardGCUi",
+    "DisplayTRCMessage__13CMemoryCardGCPCQ26Realmc7Message",
+    "IsOurs__C13CMemoryCardGCRCQ46Realmc7Message10DetailInfo8FileInfo",
+    "TellTheGamecubeToShutUp__13CMemoryCardGCb",
+    "IssueCache__9CMCDevice",
+    "CheckCache__9CMCDevice"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-flow.md"
+}

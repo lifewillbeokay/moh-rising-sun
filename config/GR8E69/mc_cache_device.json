@@ -1,0 +1,49 @@
+{
+  "id": "mc_cache_device",
+  "source": "src/save/mc_cache_device.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3d04",
+      "size": 172
+    }
+  ],
+  "functions": [
+    {
+      "name": "Cache__11CMemoryCardPQ211CMemoryCard6Device",
+      "address": "0x801a3d04",
+      "size": 172,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__16CMemoryCardPopup": "0x801a3e84",
+    "Push__14CSaveGamePopup": "0x801a2924",
+    "g_bIsBusy": "0x802c5d70",
+    "Wait__11CMemoryCard": "0x801a3ab4",
+    "Pop__14CSaveGamePopup": "0x801a29ac",
+    "CancelReplyRequest__11CMemoryCard": "0x801a3a98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_bIsBusy"
+  ],
+  "evidence": "docs/research/save-flow.md"
+}

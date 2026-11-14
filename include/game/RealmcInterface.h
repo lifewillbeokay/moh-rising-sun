@@ -36,6 +36,7 @@ class Locale {
 };
 class Message {
   public:
+    struct DetailInfo; // Nested name preserved by CMemoryCardGC::IsOurs.
     unsigned int id;
     int unknown_04;
     unsigned char unknown_08[108 - 8];

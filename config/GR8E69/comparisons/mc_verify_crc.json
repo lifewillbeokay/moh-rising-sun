@@ -1,0 +1,50 @@
+{
+  "id": "compare_mc_verify_crc",
+  "source": "src/save/mc_verify_crc.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3b88",
+      "size": 280
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6688",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "ScratchpadDataOkay__C11CMemoryCard",
+      "address": "0x801a3b88",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "DWI_alloc": "0x801a8670",
+    "Reset__4CCRC": "0x802868f8",
+    "g_uGameDataSize": "0x802c5d64",
+    "g_pScratchpad": "0x802c5d68",
+    "__apl__4CCRCUc": "0x80286904",
+    "u4Reflect__4CCRCUiUi": "0x802869b4",
+    "__builtin_delete": "0x801a8990",
+    "_14SPlayerProfile.VERSION": "0x803e7580"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_uGameDataSize",
+    "g_pScratchpad"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ScratchpadDataOkay__C11CMemoryCard"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-flow.md"
+}

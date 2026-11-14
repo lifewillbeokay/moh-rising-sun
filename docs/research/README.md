@@ -115,3 +115,7 @@ PowerPC checks.
 The [popup, settings and rendering follow-up](frontend-popup-list.md) adds 24
 functions using the same interfaces, including exact popup ownership and event
 forwarding, duplicate favorites, and maintained settings/render/menu partials.
+
+The [save-flow and GameCube card batch](save-flow.md) adds 25 functions for
+startup, profile save/load, CRC validation, card polling, scanning and replies,
+with eight exact functions and 17 measured partials.

@@ -23,7 +23,8 @@ class CMemoryCardPopup : public CSaveGamePopup {
     void OnPush();
     void HideSelections();
     void ShowSelections();
-    void Display(const wchar_t unsigned *, const wchar_t unsigned *, const wchar_t unsigned *, const wchar_t unsigned *, const wchar_t unsigned *);
+    // PCUw records a wide-character ABI whose original source spelling is unknown.
+    void Display(const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *) asm("Display__16CMemoryCardPopupPCUwN41");
     void RequestReply();
     int GetReply();
     static CMemoryCardPopup *s_pInstance;

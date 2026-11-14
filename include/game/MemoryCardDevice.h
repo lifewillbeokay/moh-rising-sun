@@ -11,6 +11,15 @@ struct CMemoryCard::Device {
     virtual const wchar_t *GetName() const = 0;
     virtual int GetIndex() const = 0;
     virtual int IsAvailable() const = 0;
+    virtual int WasJustInserted() const = 0;
+    virtual int WasJustRemoved() const = 0;
+    virtual void GetStats(unsigned int &, unsigned int &) const = 0;
+    virtual int GetStatus() const = 0;
+    virtual const char *GetStatusText() const = 0;
+    virtual void IssueCache() = 0;
+    virtual int CheckCache() = 0;
+    virtual int IsSelectable() const = 0;
+    virtual ~Device();
 };
 class CMCDevice {
   public:
@@ -25,6 +34,8 @@ class CMCDevice {
     int GetIndex() const;
     void Invalidate(bool);
     void Cache(bool);
+    void IssueCache();
+    int CheckCache();
     int IsAvailable() const;
     int WasJustInserted() const;
     int WasJustRemoved() const;

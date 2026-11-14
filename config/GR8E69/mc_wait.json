@@ -1,0 +1,50 @@
+{
+  "id": "mc_wait",
+  "source": "src/save/mc_wait.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3ab4",
+      "size": 164
+    }
+  ],
+  "functions": [
+    {
+      "name": "Wait__11CMemoryCard",
+      "address": "0x801a3ab4",
+      "size": 164,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bMinimalInteraction": "0x802c5d58",
+    "THREAD_yield": "0x80217ce8",
+    "g_bWaitingForReply": "0x802c5d6c",
+    "Instance__16CMemoryCardPopup": "0x801a3e84",
+    "GetReply__16CMemoryCardPopup": "0x801a4488",
+    "Wait__14CSaveGamePopup": "0x801a2a00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_bMinimalInteraction",
+    "g_bWaitingForReply"
+  ],
+  "evidence": "docs/research/save-flow.md"
+}
