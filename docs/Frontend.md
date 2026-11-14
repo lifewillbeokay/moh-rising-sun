@@ -198,7 +198,9 @@ Not yet exact: `CFengInterface::NotificationMessage` and `NotifySoundMessage`, w
 `CMemoryCardPopup`'s and the other popups' member names are inferred from their methods. `SoundAliasEvent`'s `SetAlias` helper in these units is
 local to them: the alias store goes through a reference, as its inline body shows. `CMemoryCardPopup::OnPush` shares its empty string with the
 constructor across `OnUIEvent`, which needs a guarded static, and `Display` and `SetString` take a pointer the source spelling for which
-is unknown (`PCUw`), so they stay out.
+is unknown (`PCUw`). The save-flow follow-up below now provides an explicitly
+labeled 16-bit pointer boundary for the exact `CMemoryCard::Display` forwarder;
+the popup text implementations themselves remain unfinished.
 
 `ShellManager::handlers` maps packages to their handlers. Only the units that touch it include `ShellHandlerMap.h` first, which gives the member
 its real type; the rest see sixteen bytes, so they build without the container headers. `updateOnce` is named from `Process`, which runs one engine
@@ -217,3 +219,8 @@ lifecycle, ticking, event forwarding and duplicate-favorite removal are exact;
 settings restoration/serialization, render contexts, notifications and menu paths
 are registered partials. The popup allocation establishes a CFengInterface extent
 of `0x18a0`; its previously unrepresented `0x1c`-byte tail remains unknown.
+
+The [save-flow and GameCube memory-card follow-up](research/save-flow.md) extends
+these popup interfaces into startup, save/load, CRC checks and card messages. It
+records virtual-slot evidence, the 16-bit display boundary and isolated original/
+native behavior tests for eight exact functions and 17 measured partials.

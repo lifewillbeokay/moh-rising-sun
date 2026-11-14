@@ -1,0 +1,58 @@
+{
+  "id": "compare_mc_save_load",
+  "source": "src/save/mc_save_load.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a3424",
+      "size": 808
+    }
+  ],
+  "functions": [
+    {
+      "name": "Save__11CMemoryCardR14SPlayerProfile",
+      "address": "0x801a3424",
+      "size": 464,
+      "binding": 1
+    },
+    {
+      "name": "Load__11CMemoryCardPCcUiR14SPlayerProfile",
+      "address": "0x801a35f4",
+      "size": 344,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__16CMemoryCardPopup": "0x801a3e84",
+    "Push__14CSaveGamePopup": "0x801a2924",
+    "g_bIsBusy": "0x802c5d70",
+    "GetDeviceCount__C11CMemoryCard": "0x801a3cc0",
+    "GetDevice__C11CMemoryCardUi": "0x801a3ce0",
+    "g_pScratchpad": "0x802c5d68",
+    "memcpy": "0x802665e8",
+    "GenerateScratchpadCRC__Fv": "0x801a3028",
+    "Wait__11CMemoryCard": "0x801a3ab4",
+    "Pop__14CSaveGamePopup": "0x801a29ac",
+    "CancelReplyRequest__11CMemoryCard": "0x801a3a98",
+    "g_GameSettings": "0x802f80c8",
+    "Set_Language__13CGameSettings10ELanguages": "0x8016d910"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_bIsBusy",
+    "g_pScratchpad",
+    "GenerateScratchpadCRC__Fv"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Save__11CMemoryCardR14SPlayerProfile",
+    "Load__11CMemoryCardPCcUiR14SPlayerProfile"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-flow.md"
+}

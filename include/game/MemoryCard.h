@@ -1,7 +1,8 @@
 #ifndef GAME_MEMORYCARD_H
 #define GAME_MEMORYCARD_H
 // A scoped view of the memory card class. Class, method and global names come from the symbol
-// table. The table's other slots hold pure virtual functions whose names are not recorded.
+// table. Pure-virtual slot names follow the corresponding CMemoryCardGC overrides.
+// DoIssueTRCScan and DoCheckTRCScan retain the older descriptive names for slots 11/12.
 namespace EALA {
 class Resource {
 public:
@@ -18,24 +19,31 @@ public:
     CMemoryCard();
     virtual ~CMemoryCard();
     virtual void TellTheGamecubeToShutUp(bool);
-    virtual void Slot3() = 0;
-    virtual void Slot4() = 0;
-    virtual void Slot5() = 0;
-    virtual void Slot6() = 0;
-    virtual int Slot7Result() = 0;
-    virtual void Slot8() = 0;
-    virtual void Slot9() = 0;
-    virtual void Slot10() = 0;
+    virtual void IssueStart() = 0;
+    virtual int CheckStart() = 0;
+    virtual void IssueSave(const char *, unsigned int) = 0;
+    virtual int CheckSave() = 0;
+    virtual int SaveSuccessful() const = 0;
+    virtual void IssueLoad(const char *, unsigned int) = 0;
+    virtual int CheckLoad() = 0;
+    virtual int LoadSuccessful() const = 0;
     virtual void *DoIssueTRCScan(ScanTask &, const Device *) = 0;
     virtual int DoCheckTRCScan() = 0;
     virtual void *IssueTRCScan(ScanTask &, const Device *);
     virtual int CheckTRCScan();
-    virtual void Slot15() = 0;
-    virtual void Slot16() = 0;
-    virtual void Slot17() = 0;
+    virtual void ProcessReply(unsigned int) = 0;
+    virtual int DefaultReply() const = 0;
+    virtual int DeclinedToSave() const = 0;
     virtual int WasDataWritten() const;
     int IsBusy() const;
     void OnEnterInteractiveMode();
+    int OnStartup();
+    int Save(struct SPlayerProfile &);
+    void Wait();
+    bool ScratchpadDataOkay() const;
+    void RequestReply();
+    // PCUw records a wide-character ABI whose original source spelling is unknown.
+    void Display(const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *) asm("Display__11CMemoryCardPCUwN41");
     int ScanVisibly(ScanTask &, int);
     int Load(const char *, unsigned int, struct SPlayerProfile &);
     void CancelReplyRequest();

@@ -1,0 +1,53 @@
+{
+  "id": "compare_mc_startup",
+  "source": "src/save/mc_startup.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a323c",
+      "size": 484
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnStartup__11CMemoryCard",
+      "address": "0x801a323c",
+      "size": 484,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__9MohLoader": "0x80059414",
+    "g_GameSettings": "0x802f80c8",
+    "Instance__23CSaveGameLanguageScreen": "0x801a5340",
+    "SelectLanguage__23CSaveGameLanguageScreen": "0x801a548c",
+    "g_pTextDatabase": "0x802c5d5c",
+    "LOCALE_setstate": "0x802172b8",
+    "g_pMiscTextDatabase": "0x802c5d60",
+    "wasAlreadyHere.4236": "0x802c5d74",
+    "g_bMinimalInteraction": "0x802c5d58",
+    "Instance__16CMemoryCardPopup": "0x801a3e84",
+    "Push__14CSaveGamePopup": "0x801a2924",
+    "Wait__11CMemoryCard": "0x801a3ab4",
+    "Pop__14CSaveGamePopup": "0x801a29ac",
+    "Update__Q211CMemoryCard6Deviceb": "0x801a6e7c",
+    "CancelReplyRequest__11CMemoryCard": "0x801a3a98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_pTextDatabase",
+    "wasAlreadyHere.4236",
+    "g_bMinimalInteraction"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "OnStartup__11CMemoryCard"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-flow.md"
+}

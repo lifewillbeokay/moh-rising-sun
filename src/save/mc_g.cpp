@@ -13,5 +13,5 @@ void CMemoryCard::TellTheGamecubeToShutUp(bool) {
 }
 
 int CMemoryCard::WasDataWritten() const {
-    return ((CMemoryCard *)this)->Slot7Result();
+    return ((CMemoryCard *)this)->SaveSuccessful();
 }

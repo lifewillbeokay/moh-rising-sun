@@ -2612,7 +2612,11 @@
     "savepopup_update.json",
     "savepopup_events.json",
     "favorites_remove_duplicates.json",
-    "savepopup_lifecycle.json"
+    "savepopup_lifecycle.json",
+    "mc_display_reply.json",
+    "mc_wait.json",
+    "mc_cache_device.json",
+    "mcgc_results.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",
