@@ -1,0 +1,65 @@
+{
+  "id": "compare_memorycard_selections",
+  "source": "src/frontend/memorycard_selections.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a44a0",
+      "size": 568
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b68e4",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "ShowSelections__16CMemoryCardPopup",
+      "address": "0x801a44a0",
+      "size": 452,
+      "binding": 1
+    },
+    {
+      "name": "HideSelections__16CMemoryCardPopup",
+      "address": "0x801a4664",
+      "size": 116,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_1.3429": "0x803f5050",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "events.3428": "0x803f5040",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "_.tmp_2.3431": "0x803f5058",
+    "event.3430": "0x803f5054",
+    "_.tmp_3.3433": "0x803f5060",
+    "event.3432": "0x803f505c",
+    "_.tmp_4.3438": "0x803f5068",
+    "event.3437": "0x803f5064"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardPopup.cpp",
+  "original_file_index": 2094,
+  "local_externals": [
+    "_.tmp_1.3429",
+    "events.3428",
+    "_.tmp_2.3431",
+    "event.3430",
+    "_.tmp_3.3433",
+    "event.3432",
+    "_.tmp_4.3438",
+    "event.3437"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "ShowSelections__16CMemoryCardPopup",
+    "HideSelections__16CMemoryCardPopup"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

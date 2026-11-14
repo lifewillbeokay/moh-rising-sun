@@ -1,0 +1,36 @@
+{
+  "id": "compare_settings_matrix_delta",
+  "source": "src/frontend/settings_matrix_delta.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80170dc8",
+      "size": 280
+    }
+  ],
+  "functions": [
+    {
+      "name": "SerializeDelta__13CGameSettingsRC7CMatrixR7CMatrix",
+      "address": "0x80170dc8",
+      "size": 280,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SerializingOut__C13CGameSettings": "0x80170ef4",
+    "SerializeValue__13CGameSettingsRb": "0x80170c7c",
+    "SerializeValue__13CGameSettingsRf": "0x80170d04"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SerializeDelta__13CGameSettingsRC7CMatrixR7CMatrix"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

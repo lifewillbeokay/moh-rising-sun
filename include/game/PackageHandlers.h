@@ -362,6 +362,8 @@ class HandlerOnlineFavorites : public PackageHandler {
     ~HandlerOnlineFavorites();
     int HandleEvent(unsigned int, FEObject *, unsigned long);
     void UpdateFavListBox();
+    void RemoveDuplicates();
+    void ToggleAddButton(bool, bool);
     void SetFavorite(const char *);
     void ToggleButton(unsigned long, bool);
     void SetButton(unsigned long);
@@ -383,6 +385,8 @@ class HandlerPausePreferences : public PackageHandler {
     int HandleEvent(unsigned int, FEObject *, unsigned long);
 };
 class FEString;
+class CFengInterface;
+class CSprite;
 class CSaveGamePopup : public CUIObject {
   public:
     static int IsBackgroundEnabled();
@@ -402,9 +406,10 @@ class CSaveGamePopup : public CUIObject {
     void Wait();
     void SetString(class FEString *, const wchar_t unsigned *, bool);
     FEngine *engine;     // +0x04
-    unsigned char unknown_8[4];
+    CFengInterface *interface; // +0x08
     FEPackage *package;  // +0x0c
-    unsigned char unknown_10[8];
+    CSprite *sprite;      // +0x10
+    int unknown_14;      // +0x14; cleared by construction and Push.
     int displayed;       // +0x18; Display sets it, OnPush clears it.
     unsigned char unknown_1c[4];
 };

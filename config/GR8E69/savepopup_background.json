@@ -1,0 +1,56 @@
+{
+  "id": "savepopup_background",
+  "source": "src/frontend/savepopup_background.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a2170",
+      "size": 44
+    }
+  ],
+  "functions": [
+    {
+      "name": "EnableBackground__14CSaveGamePopup",
+      "address": "0x801a2170",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "DisableBackground__14CSaveGamePopup",
+      "address": "0x801a2180",
+      "size": 16,
+      "binding": 1
+    },
+    {
+      "name": "IsBackgroundEnabled__14CSaveGamePopup",
+      "address": "0x801a2190",
+      "size": 12,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bBackgroundEnabled": "0x802c5d48"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "local_externals": [
+    "g_bBackgroundEnabled"
+  ],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

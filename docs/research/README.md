@@ -111,3 +111,7 @@ The [frontend screen and co-op batch](frontend-screens.md) applies the shared
 frontend interfaces to menu navigation, skin checks, keyboard entry, save loading,
 briefing text and controller bookkeeping, with measured partials and isolated
 PowerPC checks.
+
+The [popup, settings and rendering follow-up](frontend-popup-list.md) adds 24
+functions using the same interfaces, including exact popup ownership and event
+forwarding, duplicate favorites, and maintained settings/render/menu partials.

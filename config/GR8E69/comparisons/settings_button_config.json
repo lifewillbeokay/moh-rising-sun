@@ -1,0 +1,32 @@
+{
+  "id": "compare_settings_button_config",
+  "source": "src/frontend/settings_button_config.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8016fe80",
+      "size": 368
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetUpButtonConfig__13CGameSettingsiPs",
+      "address": "0x8016fe80",
+      "size": 368,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "GameSettings.cpp",
+  "original_file_index": 1479,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetUpButtonConfig__13CGameSettingsiPs"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

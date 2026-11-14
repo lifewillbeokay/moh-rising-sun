@@ -123,6 +123,15 @@
     "comparisons/shell_coop_join_records.json",
     "comparisons/shell_coop_join_update.json",
     "comparisons/shell_start_mp.json",
-    "comparisons/slider_initialize.json"
+    "comparisons/slider_initialize.json",
+    "comparisons/settings_button_config.json",
+    "comparisons/settings_restore_slot.json",
+    "comparisons/settings_matrix_delta.json",
+    "comparisons/fenginterface_notifications.json",
+    "comparisons/shell_render_contexts.json",
+    "comparisons/shell_joypad_mask.json",
+    "comparisons/bonusoptions_menu.json",
+    "comparisons/memorycard_selections.json",
+    "comparisons/slider_value.json"
   ]
 }

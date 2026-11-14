@@ -208,3 +208,12 @@ The [screen-event and co-op helper follow-up](research/frontend-screens.md)
 maintains 24 more functions, including partial screen handlers and three exact
 fragments. It documents private cache/guard symbols, complete string-pool
 ownership, controller masks, keyboard cursor access and isolated behavior tests.
+
+## Popup, settings and rendering follow-up
+
+The [popup and list evidence](research/frontend-popup-list.md) records 24 further
+functions, complete data ownership and isolated original/native tests. Popup
+lifecycle, ticking, event forwarding and duplicate-favorite removal are exact;
+settings restoration/serialization, render contexts, notifications and menu paths
+are registered partials. The popup allocation establishes a CFengInterface extent
+of `0x18a0`; its previously unrepresented `0x1c`-byte tail remains unknown.

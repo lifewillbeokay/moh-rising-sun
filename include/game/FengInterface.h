@@ -27,6 +27,8 @@ struct ShapeFile;
 class CSprite {
   public:
     void *operator new(unsigned int size, const char *label) { return DWI_alloc(label, size, 1024); }
+    enum ESpriteLoadType { SpriteLoadUnknown0 = 0 };
+    CSprite(const char *, ESpriteLoadType);
     CSprite(ShapeFile *);
     ~CSprite();
     unsigned char unknown_0[36];
@@ -43,6 +45,8 @@ class FESimpleImage;
 class FEString;
 class CFengInterface : public FEGameInterface {
   public:
+    CFengInterface(FEngine *);
+    virtual ~CFengInterface();
     void SetBigFilePtr(char *);
     int GetPackageData(const char *, unsigned char **, bool &);
     int LocalizePackage(FEPackage *);
@@ -78,5 +82,6 @@ class CFengInterface : public FEGameInterface {
     int lastStickY;                  // +0x186c
     int unknown_1870;                // +0x1870; cleared by UnloadResources.
     CUIObjectSet uiObjects; // +0x1874; objects told about each message.
+    unsigned char unknown_1884[0x18a0 - 0x1884]; // Allocation extent in CSaveGamePopup.
 };
 #endif

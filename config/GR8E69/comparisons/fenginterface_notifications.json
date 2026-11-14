@@ -1,0 +1,41 @@
+{
+  "id": "compare_fenginterface_notifications",
+  "source": "src/frontend/fenginterface_notifications.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8017cfa4",
+      "size": 320
+    }
+  ],
+  "functions": [
+    {
+      "name": "NotificationMessage__14CFengInterfaceUlP8FEObjectUlUl",
+      "address": "0x8017cfa4",
+      "size": 160,
+      "binding": 1
+    },
+    {
+      "name": "NotifySoundMessage__14CFengInterfaceUlP8FEObjectUlUl",
+      "address": "0x8017d044",
+      "size": 160,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_M_increment__Q24_STLt10_Rb_global1ZbPQ24_STL18_Rb_tree_node_base": "0x8027a1dc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "FengInterface.cpp",
+  "original_file_index": 1563,
+  "profile_from": "fenginterface_files.json",
+  "comparison_functions": [
+    "NotificationMessage__14CFengInterfaceUlP8FEObjectUlUl",
+    "NotifySoundMessage__14CFengInterfaceUlP8FEObjectUlUl"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/frontend-popup-list.md"
+}

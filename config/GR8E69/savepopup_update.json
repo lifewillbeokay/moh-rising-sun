@@ -1,0 +1,49 @@
+{
+  "id": "savepopup_update",
+  "source": "src/frontend/savepopup_update.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a23c8",
+      "size": 132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b63fc",
+      "size": 4
+    }
+  ],
+  "functions": [
+    {
+      "name": "Update__14CSaveGamePopupf",
+      "address": "0x801a23c8",
+      "size": 132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_GameFlow": "0x802f9ce0",
+    "g_inputMgr": "0x803077c4",
+    "CheckControllers__13CInputManagerb": "0x800d7190",
+    "Update__7FEnginel": "0x8004d4ec"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "evidence": "docs/research/frontend-popup-list.md"
+}

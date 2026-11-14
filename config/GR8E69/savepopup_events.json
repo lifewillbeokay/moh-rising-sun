@@ -1,0 +1,45 @@
+{
+  "id": "savepopup_events",
+  "source": "src/frontend/savepopup_events.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a28b4",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "ProcessUIEvent__14CSaveGamePopupUiUiP8FEObjectP9FEPackage",
+      "address": "0x801a28b4",
+      "size": 56,
+      "binding": 1
+    },
+    {
+      "name": "ProcessSoundEvent__14CSaveGamePopupUiUiP8FEObjectP9FEPackage",
+      "address": "0x801a28ec",
+      "size": 56,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "evidence": "docs/research/frontend-popup-list.md"
+}

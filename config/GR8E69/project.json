@@ -2607,7 +2607,12 @@
     "fetype_startup.json",
     "handler_mp_skin.json",
     "handler_special_features_events.json",
-    "shell_accept_pad.json"
+    "shell_accept_pad.json",
+    "savepopup_background.json",
+    "savepopup_update.json",
+    "savepopup_events.json",
+    "favorites_remove_duplicates.json",
+    "savepopup_lifecycle.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

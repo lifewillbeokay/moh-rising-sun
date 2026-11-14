@@ -1,0 +1,80 @@
+{
+  "id": "savepopup_lifecycle",
+  "source": "src/frontend/savepopup_lifecycle.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a219c",
+      "size": 556
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b636c",
+      "size": 144
+    }
+  ],
+  "functions": [
+    {
+      "name": "__14CSaveGamePopupPCc",
+      "address": "0x801a219c",
+      "size": 332,
+      "binding": 1
+    },
+    {
+      "name": "_._14CSaveGamePopup",
+      "address": "0x801a22e8",
+      "size": 224,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_uInstanceCount": "0x802c5d40",
+    "_vt.14CSaveGamePopup": "0x802ebdc0",
+    "filename.7674": "0x802c5d4c",
+    "TLT_LoadFileNormal__FPCcPii": "0x801a9abc",
+    "g_pAssets": "0x802c5d44",
+    "DWI_alloc": "0x801a8670",
+    "__7FEngine": "0x8004c8c0",
+    "__14CFengInterfaceP7FEngine": "0x8017c5e4",
+    "SetExecution__7FEngineb": "0x8004cdcc",
+    "SetNumJoyPads__7FEngineUc": "0x8004cc64",
+    "SetBigFilePtr__14CFengInterfacePc": "0x8017c7bc",
+    "RegisterUIObject__14CFengInterfaceP9CUIObject": "0x8017d0e4",
+    "PushPackage__7FEnginePCcUcUl": "0x8004d0dc",
+    "TLT_ForceLoadFileNormalLocked__Fb": "0x801a9ab0",
+    "__7CSpritePCcQ27CSprite15ESpriteLoadType": "0x8005d140",
+    "UnloadPackage__7FEngineP9FEPackage": "0x8004ce78",
+    "_._7FEngine": "0x8004ca1c",
+    "MEM_free": "0x8020d2a8",
+    "_._7CSprite": "0x8005d1f4",
+    "_vt.9CUIObject": "0x802eafd0",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "local_externals": [
+    "g_uInstanceCount",
+    "filename.7674",
+    "g_pAssets"
+  ],
+  "evidence": "docs/research/frontend-popup-list.md"
+}
