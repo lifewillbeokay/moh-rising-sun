@@ -107,8 +107,9 @@ use a documented 16-bit pointer view with explicit labels for their **existing
 symbols**. These declarations preserve the call boundary; they do not substitute
 assembly or invent symbols for anonymous data. The forwarding function matches
 exactly. `ProcessReply` emits its four-byte space-and-terminator data from a
-local `const unsigned short[]`, matching the original generated data. The popup's
-own `Display` implementation and `CSaveGamePopup::SetString` remain future work.
+local `const unsigned short[]`, matching the original generated data. The
+[save-popup follow-up](save-popups.md) now reconstructs the popup's own
+`Display` implementation and `CSaveGamePopup::SetString` as measured partials.
 
 ## Tests and verification
 
@@ -149,6 +150,7 @@ the README continues to link to the live report.
 
 `CMemoryCardGC::Init` / `IssueStart`, `CMemoryCard::ScanVisibly`, popup stack/draw
 handling and the remaining wide-text implementations can use these interfaces.
+These functions are now reconstructed in the [save-popup follow-up](save-popups.md).
 The new message tests also provide a base for combining real popup and card
 helpers in more integrated tests.
 

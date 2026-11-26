@@ -136,6 +136,14 @@
     "comparisons/mc_verify_crc.json",
     "comparisons/mc_save_load.json",
     "comparisons/mcgc_operations.json",
-    "comparisons/mc_startup.json"
+    "comparisons/mc_startup.json",
+    "comparisons/savepopup_setstring.json",
+    "comparisons/memcardpopup_display.json",
+    "comparisons/keyboardpopup_ui.json",
+    "comparisons/languagescreen_select.json",
+    "comparisons/languagescreen_ui.json",
+    "comparisons/savepopup_draw.json",
+    "comparisons/savepopup_wait.json",
+    "comparisons/mcgc_issue_start.json"
   ]
 }

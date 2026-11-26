@@ -1,0 +1,56 @@
+{
+  "id": "compare_keyboardpopup_ui",
+  "source": "src/frontend/keyboardpopup_ui.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a48c0",
+      "size": 2132
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6ab0",
+      "size": 420
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnUIEvent__22CSaveGameKeyboardPopupUiP8FEObject",
+      "address": "0x801a48c0",
+      "size": 2132,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "FEHashUpper__FPCc": "0x800499a4",
+    "AddToNameString__22CSaveGameKeyboardPopupPcc": "0x801a5208",
+    "BackspaceNameString__22CSaveGameKeyboardPopupPc": "0x801a526c",
+    "strlen": "0x80266b70",
+    "g_GameSettings": "0x802f80c8",
+    "CopyNameIntoSettings__13CGameSettingsPCci": "0x8016f560",
+    "g_eResponse": "0x802c5d80",
+    "sprintf": "0x80263a3c",
+    "g_Shell": "0x802f4420",
+    "GetString__C11FELocalizerPCcUl": "0x8004afd0",
+    "Convert__C12FEWideStringPc": "0x80056bd8",
+    "LocalizeString__22CSaveGameKeyboardPopupPCcT1": "0x801a52b0",
+    "printf": "0x8026374c",
+    "FindObjectByName__9FEPackagePCc": "0x80051238",
+    "__as__12FEWideStringPCc": "0x80056ab8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameKeyboardPopup.cpp",
+  "original_file_index": 2106,
+  "local_externals": [
+    "g_eResponse"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "OnUIEvent__22CSaveGameKeyboardPopupUiP8FEObject"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

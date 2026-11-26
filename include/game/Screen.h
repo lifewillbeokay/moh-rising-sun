@@ -33,6 +33,7 @@ public:
     static CScreen *m_spScreen;
     static unsigned int m_sWidth;
     static int m_sHeight;
+    static int m_sVideoMode;
     static float m_sWidthScale;
     static float m_sHeightScale;
     static float m_2dXScale;

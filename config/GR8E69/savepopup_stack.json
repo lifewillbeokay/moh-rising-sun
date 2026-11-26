@@ -1,0 +1,55 @@
+{
+  "id": "savepopup_stack",
+  "source": "src/frontend/savepopup_stack.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/stlport-runtime",
+    "include/stlport-containers",
+    "include/game-containers"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a2924",
+      "size": 220
+    }
+  ],
+  "functions": [
+    {
+      "name": "Push__14CSaveGamePopup",
+      "address": "0x801a2924",
+      "size": 136,
+      "binding": 1
+    },
+    {
+      "name": "Pop__14CSaveGamePopup",
+      "address": "0x801a29ac",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_listPopups": "0x803e8a34",
+    "__builtin_new": "0x801a8910",
+    "__builtin_delete": "0x801a8990"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "local_externals": [
+    "g_listPopups"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}

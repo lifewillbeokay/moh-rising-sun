@@ -60,7 +60,9 @@ public:
 };
 class CMemoryCardGC : public CMemoryCard {
 public:
+    ~CMemoryCardGC();
     void Init();
+    void IssueStart();
     int CheckStart();
     void IssueSave(const char *, unsigned int); int CheckSave();
     void IssueLoad(const char *, unsigned int); int CheckLoad();

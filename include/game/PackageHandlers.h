@@ -404,7 +404,8 @@ class CSaveGamePopup : public CUIObject {
     void Push();
     void Pop();
     void Wait();
-    void SetString(class FEString *, const wchar_t unsigned *, bool);
+    // PCUw is a 16-bit wide-character ABI; original source spelling is unknown.
+    void SetString(FEString *, const unsigned short *, bool) asm("SetString__14CSaveGamePopupP8FEStringPCUwb");
     FEngine *engine;     // +0x04
     CFengInterface *interface; // +0x08
     FEPackage *package;  // +0x0c

@@ -1,0 +1,60 @@
+{
+  "id": "keyboardpopup_create",
+  "source": "src/frontend/keyboardpopup_create.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a4800",
+      "size": 192
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6aa8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "CreateName__22CSaveGameKeyboardPopup",
+      "address": "0x801a4800",
+      "size": 192,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_0.3535": "0x803f5070",
+    "g_PauseScreen": "0x802f8040",
+    "BeginSaving__10CPauseMenu": "0x8017ef30",
+    "Push__14CSaveGamePopup": "0x801a2924",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "message.3534": "0x803f506c",
+    "g_eResponse": "0x802c5d80",
+    "QueueMessage__7FEngineUlP8FEObjectP9FEPackageT2Ul": "0x8004eda8",
+    "Wait__14CSaveGamePopup": "0x801a2a00",
+    "Pop__14CSaveGamePopup": "0x801a29ac"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameKeyboardPopup.cpp",
+  "original_file_index": 2106,
+  "local_externals": [
+    "_.tmp_0.3535",
+    "message.3534",
+    "g_eResponse"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}

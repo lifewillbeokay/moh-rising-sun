@@ -1,0 +1,56 @@
+{
+  "id": "mc_scan_visibly",
+  "source": "src/save/mc_scan_visibly.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a374c",
+      "size": 520
+    }
+  ],
+  "functions": [
+    {
+      "name": "ScanVisibly__11CMemoryCardRQ211CMemoryCard8ScanTaski",
+      "address": "0x801a374c",
+      "size": 520,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__16CMemoryCardPopup": "0x801a3e84",
+    "Push__14CSaveGamePopup": "0x801a2924",
+    "g_bIsBusy": "0x802c5d70",
+    "GetDeviceCount__C11CMemoryCard": "0x801a3cc0",
+    "GetDevice__C11CMemoryCardUi": "0x801a3ce0",
+    "g_pPopUpMessageHandler": "0x80326390",
+    "GetString__17CUserMessageTablei": "0x8017bc10",
+    "Display__16CMemoryCardPopupPCUwN41": "0x801a42e0",
+    "TIMER_gettick": "0x802179f8",
+    "Wait__11CMemoryCard": "0x801a3ab4",
+    "TIMER_getfrequency": "0x80217a38",
+    "Pop__14CSaveGamePopup": "0x801a29ac",
+    "CancelReplyRequest__11CMemoryCard": "0x801a3a98"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCard.cpp",
+  "original_file_index": 2083,
+  "local_externals": [
+    "g_bIsBusy"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}

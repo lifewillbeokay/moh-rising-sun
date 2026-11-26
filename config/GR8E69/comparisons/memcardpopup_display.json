@@ -1,0 +1,35 @@
+{
+  "id": "compare_memcardpopup_display",
+  "source": "src/frontend/memcardpopup_display.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a42e0",
+      "size": 340
+    }
+  ],
+  "functions": [
+    {
+      "name": "Display__16CMemoryCardPopupPCUwN41",
+      "address": "0x801a42e0",
+      "size": 340,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "SetString__14CSaveGamePopupP8FEStringPCUwb": "0x801a2ccc",
+    "HideSelections__16CMemoryCardPopup": "0x801a4664"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardPopup.cpp",
+  "original_file_index": 2094,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "Display__16CMemoryCardPopupPCUwN41"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

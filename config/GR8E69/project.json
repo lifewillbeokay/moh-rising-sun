@@ -2590,7 +2590,6 @@
     "keyboardpopup_name.json",
     "languagescreen_ctor.json",
     "languagescreen_tables.json",
-    "memcardpopup_events.json",
     "shell_shutdown_process.json",
     "shell_package_events.json",
     "shell_postdraw.json",
@@ -2616,7 +2615,14 @@
     "mc_display_reply.json",
     "mc_wait.json",
     "mc_cache_device.json",
-    "mcgc_results.json"
+    "mcgc_results.json",
+    "savepopup_callbacks.json",
+    "savepopup_stack.json",
+    "keyboardpopup_create.json",
+    "languagescreen_instance.json",
+    "mcgc_init.json",
+    "mcgc_destructor.json",
+    "mc_scan_visibly.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

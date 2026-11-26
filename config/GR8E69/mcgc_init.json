@@ -1,0 +1,58 @@
+{
+  "id": "mcgc_init",
+  "source": "src/save/mcgc_init.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5b94",
+      "size": 264
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__13CMemoryCardGC",
+      "address": "0x801a5b94",
+      "size": 264,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "comment1.3245": "0x803f50fc",
+    "GetMiscTextDatabase__C11CMemoryCard": "0x801a3b64",
+    "LOCALE_getstr": "0x80217378",
+    "wcstombs": "0x80266234",
+    "sprintf": "0x80263a3c",
+    "MEM_clear": "0x802184a4",
+    "GetScratchpadSize__C11CMemoryCard": "0x801a3b7c",
+    "_6Realmc.FILENAME_ALL_FILES": "0x8045125c",
+    "comment2.3246": "0x802c7d98",
+    "strlen": "0x80266b70",
+    "g_sIconDataInfo": "0x803f5150",
+    "g_sBannerDataInfo": "0x803f5180"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardGC.cpp",
+  "original_file_index": 2125,
+  "local_externals": [
+    "comment1.3245",
+    "comment2.3246",
+    "g_sIconDataInfo",
+    "g_sBannerDataInfo"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}
