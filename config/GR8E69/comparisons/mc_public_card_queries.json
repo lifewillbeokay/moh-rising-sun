@@ -1,0 +1,46 @@
+{
+  "id": "compare_mc_public_card_queries",
+  "source": "src/memorycard/mc_public_card_queries.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x8020eba0",
+      "size": 400
+    }
+  ],
+  "functions": [
+    {
+      "name": "TrcCardExists__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020eba0",
+      "size": 188,
+      "binding": 1
+    },
+    {
+      "name": "TrcGetCardInfo__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+      "address": "0x8020ec5c",
+      "size": 212,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_Q26Realmc11GCInterface.mMutex": "0x80451144",
+    "_Q26Realmc11GCInterface.mTaskTrcCardExists": "0x80409c20",
+    "MUTEX_lock": "0x80217f7c",
+    "MUTEX_unlock": "0x80217fa0",
+    "_Q26Realmc11GCInterface.mTaskTrcGetCardInfo": "0x80409c4c",
+    "memset": "0x80266778"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "public.cpp",
+  "original_file_index": 2923,
+  "profile_from": "mc_public_calls.json",
+  "comparison_functions": [
+    "TrcCardExists__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+    "TrcGetCardInfo__Q26Realmc11GCInterfaceRCQ26Realmc6CardID"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

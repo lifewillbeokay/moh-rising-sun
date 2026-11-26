@@ -1,0 +1,42 @@
+{
+  "id": "mc_block_result",
+  "source": "src/memorycard/mc_block_result.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802166cc",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "GetResult__Q26Realmc18BlockCalculatorImp",
+      "address": "0x802166cc",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "blockcalculator.cpp",
+  "original_file_index": 2938,
+  "evidence": "docs/research/card-tasks.md"
+}

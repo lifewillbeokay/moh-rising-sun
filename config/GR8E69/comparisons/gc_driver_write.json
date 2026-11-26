@@ -1,0 +1,41 @@
+{
+  "id": "compare_gc_driver_write",
+  "source": "src/memorycard/gc_driver_write.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80215454",
+      "size": 468
+    }
+  ],
+  "functions": [
+    {
+      "name": "WriteFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi",
+      "address": "0x80215454",
+      "size": 468,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "ConvertFileHandleToDescriptor__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor": "0x80214b10",
+    "NGCSportsBioWrite__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptorPviPi": "0x8021628c",
+    "CARDWrite": "0x80236520",
+    "THREAD_yield": "0x80217ce8",
+    "ConvertCardResult__Q26Realmc8GCDriveri": "0x802149e4",
+    "GetFileBlocks__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfoPUi": "0x80214ba4",
+    "CARDRead": "0x802361a4",
+    "MEM_clear": "0x802184a4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_driver.cpp",
+  "original_file_index": 2935,
+  "profile_from": "gc_interface_thread.json",
+  "comparison_functions": [
+    "WriteFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

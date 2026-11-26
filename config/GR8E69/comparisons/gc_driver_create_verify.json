@@ -1,0 +1,47 @@
+{
+  "id": "compare_gc_driver_create_verify",
+  "source": "src/memorycard/gc_driver_create_verify.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802163b0",
+      "size": 492
+    }
+  ],
+  "functions": [
+    {
+      "name": "NGCSportsBioCreate__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+      "address": "0x802163b0",
+      "size": 260,
+      "binding": 1
+    },
+    {
+      "name": "VerifyHeaderChecksum__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+      "address": "0x802164b4",
+      "size": 232,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "CARDCreate": "0x80235d30",
+    "THREAD_yield": "0x80217ce8",
+    "_Q26Realmc8GCDriver.MEMCARD_SECTOR_SIZE": "0x80451290",
+    "ReadFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi": "0x8021593c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_driver.cpp",
+  "original_file_index": 2935,
+  "sda_externals": [
+    "_Q26Realmc8GCDriver.MEMCARD_SECTOR_SIZE"
+  ],
+  "profile_from": "gc_interface_thread.json",
+  "comparison_functions": [
+    "NGCSportsBioCreate__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+    "VerifyHeaderChecksum__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

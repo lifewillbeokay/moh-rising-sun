@@ -122,6 +122,7 @@ class GcFileDescriptor {
 };
 struct OpenFileDescriptor;
 struct FindInfoStruct;
+enum FileOpenMode { FileOpenMode_None = 0 };
 // Only the type names are recovered; the code passes these values through.
 enum SeekFrom { SeekFrom_Start = 0, SeekFrom_Current = 1, SeekFrom_End = 2 };
 enum FileAttribute { FileAttribute_None = 0 };
@@ -177,6 +178,8 @@ class GCDriver : public DeviceDriver {
     int GetFreeCardSpace(const CardID &, int *, int *);
     int ReadFile(OpenFileDescriptor *, void *, int, int *);
     int NGCSportsBioCreate(GcFileDescriptor *);
+    int OpenFile(const CardID &, const FileInfo *, FileOpenMode, OpenFileDescriptor **);
+    int VerifyHeaderChecksum(GcFileDescriptor *);
 };
 } // namespace Realmc
 #endif

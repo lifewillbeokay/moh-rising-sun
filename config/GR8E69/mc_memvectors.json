@@ -1,0 +1,101 @@
+{
+  "id": "mc_memvectors",
+  "source": "src/memorycard/mc_memvectors.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802166d4",
+      "size": 264
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetMemVectors__6RealmcPFPCciiii_PvPFPv_v",
+      "address": "0x802166d4",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "SetSizeMemVectors__6RealmcPFPCciiii_PvPFPvi_v",
+      "address": "0x802166e0",
+      "size": 12,
+      "binding": 1
+    },
+    {
+      "name": "DefaultSizeAlloc__6RealmcPCciiii",
+      "address": "0x802166ec",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "DefaultSizeFree__6RealmcPvi",
+      "address": "0x80216714",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "AllocateMem__6RealmcPCciiii",
+      "address": "0x8021673c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "AllocateMemSize__6RealmcPCciiii",
+      "address": "0x80216764",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "FreeMem__6RealmcPv",
+      "address": "0x8021678c",
+      "size": 40,
+      "binding": 1
+    },
+    {
+      "name": "FreeMemSize__6RealmcPvi",
+      "address": "0x802167b4",
+      "size": 40,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_6Realmc.gpMemAlloc": "0x8045129c",
+    "_6Realmc.gpMemFree": "0x804512a0",
+    "_6Realmc.gpMemAllocSize": "0x804512a4",
+    "_6Realmc.gpMemFreeSize": "0x804512a8"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "memvectors.cpp",
+  "original_file_index": 2940,
+  "local_externals": [
+    "_6Realmc.gpMemAlloc",
+    "_6Realmc.gpMemFree",
+    "_6Realmc.gpMemAllocSize",
+    "_6Realmc.gpMemFreeSize"
+  ],
+  "sda_externals": [
+    "_6Realmc.gpMemAlloc",
+    "_6Realmc.gpMemAllocSize",
+    "_6Realmc.gpMemFree",
+    "_6Realmc.gpMemFreeSize"
+  ],
+  "evidence": "docs/research/card-tasks.md"
+}

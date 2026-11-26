@@ -125,3 +125,12 @@ descriptors' `Clear` and `Init`. Inferred: member names and the `ArgsTask` and `
 original concrete task classes. Not reconstructed: the two wide `GetCardName`s, `EndTask` (a result register only),
 `TrcSingletonAssert` (a compare with no branch; no source form found), `TrcCardExists` and `TrcGetCardInfo` (scheduling
 of one address), the `GCMessage`, `BlockCalculator`, `DeviceDriver` and `BaseInterface` destructors, and the tables.
+
+## Realmc allocation callbacks and card tasks
+
+The [card-task batch](research/card-tasks.md) reconstructs the eight Realmc
+allocation-vector setters/dispatch wrappers exactly, together with the block
+calculator and several task-completion handlers. Their private callback slots
+remain original data with scoped symbol evidence. Larger card operations are
+maintained as measured partial source; the topic document separates that source
+from linked coverage and records the isolated PowerPC checks.
