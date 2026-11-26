@@ -140,7 +140,9 @@ The README continues to link to live progress rather than embedding a percentage
 ## Follow-up
 
 The next connected targets are driver OpenFile/FindFirst/FindNext, interface Find,
-and the larger TRC delete/load/save/mount state machines. Interface Find and
+and the remaining localization helpers. The larger TRC delete/load/save/mount
+state machines are now maintained in the [TRC continuation](card-trc.md), which
+also consolidates this batch's three TRC query comparisons. Interface Find and
 FindNext own local static records; they need complete data/BSS ownership rather
 than borrowing partial storage or clipping generated output. The current tests
 provide driver-result, task-completion and message fixtures for that work.

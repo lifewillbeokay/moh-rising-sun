@@ -123,3 +123,8 @@ with eight exact functions and 17 measured partials.
 The [save-popup and card-start follow-up](save-popups.md) adds 21 functions,
 including exact popup lifecycle/UI storage and visible scans, with measured
 keyboard, language, text, rendering and card-start partials.
+
+The [card-task and buffered-I/O batch](card-tasks.md) reconstructs 35 functions
+underneath those screens. The [TRC state-machine continuation](card-trc.md)
+adds seven larger load, save, delete, mount and space-check handlers as measured
+partials, with original/native PowerPC state-transition tests.

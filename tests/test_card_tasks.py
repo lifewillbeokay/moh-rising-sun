@@ -18,6 +18,8 @@ DRIVER, MANAGER, VT, DATA, FILE, FOUND = [0x10100000 + n * 0x10000 for n in rang
 
 
 def directory(unit):
+    if unit in {'gc_task_trc_exists', 'gc_task_trc_info', 'gc_task_trc_list'}:
+        unit = 'gc_trc_updates'
     return ROOT / ('build/reconstruction/units' if unit in EXACT else 'build/comparisons') / (unit if unit in EXACT else 'compare_' + unit)
 
 
