@@ -1,0 +1,43 @@
+{
+  "id": "compare_gc_task_trc_list",
+  "source": "src/memorycard/gc_task_trc_list.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80211fbc",
+      "size": 876
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateTaskTrcListFiles__Q26Realmc11GCInterface",
+      "address": "0x80211fbc",
+      "size": 876,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_Q26Realmc11GCInterface.mMsgTimer": "0x80409a8c",
+    "_Q26Realmc11GCInterface.mTaskTrcListFiles": "0x80409dd0",
+    "_Q26Realmc11GCInterface.mTaskTrcMount": "0x8040a0a0",
+    "Find__Q26Realmc11GCInterfaceRCQ26Realmc6CardIDPCcb": "0x80214570",
+    "_Q26Realmc11GCInterface.mTaskMsg": "0x8040a1bc",
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c",
+    "Unmount__Q26Realmc8GCDriverRCQ26Realmc6CardID": "0x80214e8c"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916,
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mpDriver"
+  ],
+  "profile_from": "gc_interface_thread.json",
+  "comparison_functions": [
+    "UpdateTaskTrcListFiles__Q26Realmc11GCInterface"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

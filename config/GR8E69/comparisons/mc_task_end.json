@@ -1,0 +1,32 @@
+{
+  "id": "compare_mc_task_end",
+  "source": "src/memorycard/mc_task_end.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802952dc",
+      "size": 112
+    }
+  ],
+  "functions": [
+    {
+      "name": "EndTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
+      "address": "0x802952dc",
+      "size": 112,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "IsPublicTrcTask__Q26Realmc11TaskManagerPQ26Realmc4Task": "0x802953b0"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "profile_from": "mc_task_manager_start.json",
+  "comparison_functions": [
+    "EndTask__Q26Realmc11TaskManagerPQ26Realmc4Task"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

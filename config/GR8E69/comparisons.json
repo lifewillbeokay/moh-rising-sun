@@ -144,6 +144,24 @@
     "comparisons/languagescreen_ui.json",
     "comparisons/savepopup_draw.json",
     "comparisons/savepopup_wait.json",
-    "comparisons/mcgc_issue_start.json"
+    "comparisons/mcgc_issue_start.json",
+    "comparisons/gc_driver_create_verify.json",
+    "comparisons/gc_driver_write.json",
+    "comparisons/gc_task_delete.json",
+    "comparisons/gc_task_exists.json",
+    "comparisons/gc_task_find.json",
+    "comparisons/gc_task_flush.json",
+    "comparisons/gc_task_info.json",
+    "comparisons/gc_task_mount.json",
+    "comparisons/gc_task_open.json",
+    "comparisons/gc_task_read.json",
+    "comparisons/gc_task_trc_exists.json",
+    "comparisons/gc_task_trc_info.json",
+    "comparisons/gc_task_trc_list.json",
+    "comparisons/gc_task_unmount.json",
+    "comparisons/gc_task_write.json",
+    "comparisons/mc_public_card_queries.json",
+    "comparisons/mc_task_end.json",
+    "comparisons/mc_task_singleton.json"
   ]
 }

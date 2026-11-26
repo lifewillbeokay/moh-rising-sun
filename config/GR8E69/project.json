@@ -2622,7 +2622,13 @@
     "languagescreen_instance.json",
     "mcgc_init.json",
     "mcgc_destructor.json",
-    "mc_scan_visibly.json"
+    "mc_scan_visibly.json",
+    "gc_task_attribute.json",
+    "gc_task_close.json",
+    "gc_task_seek.json",
+    "mc_block_calculator.json",
+    "mc_block_result.json",
+    "mc_memvectors.json"
   ],
   "progress": {
     "metric": "matching reconstructed or restored code bytes / all allocated executable section bytes",

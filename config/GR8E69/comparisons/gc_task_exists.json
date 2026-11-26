@@ -1,0 +1,40 @@
+{
+  "id": "compare_gc_task_exists",
+  "source": "src/memorycard/gc_task_exists.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80213700",
+      "size": 180
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateTaskCardExists__Q26Realmc11GCInterface",
+      "address": "0x80213700",
+      "size": 180,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c",
+    "_Q26Realmc11GCInterface.mTaskCardExists": "0x80409e4c",
+    "CardExists__Q26Realmc8GCDriverRCQ26Realmc6CardID": "0x80214b18",
+    "_Q26Realmc11GCInterface.mTaskMsg": "0x8040a1bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916,
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mpDriver"
+  ],
+  "profile_from": "gc_interface_thread.json",
+  "comparison_functions": [
+    "UpdateTaskCardExists__Q26Realmc11GCInterface"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

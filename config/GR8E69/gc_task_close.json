@@ -1,0 +1,50 @@
+{
+  "id": "gc_task_close",
+  "source": "src/memorycard/gc_task_close.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x80213b8c",
+      "size": 176
+    }
+  ],
+  "functions": [
+    {
+      "name": "UpdateTaskClose__Q26Realmc11GCInterface",
+      "address": "0x80213b8c",
+      "size": 176,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_Q26Realmc11GCInterface.mTaskClose": "0x80409ef8",
+    "_Q26Realmc11GCInterface.mpDriver": "0x8045126c",
+    "CloseFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptor": "0x80215af4",
+    "_Q26Realmc11GCInterface.mTaskMsg": "0x8040a1bc"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "gc_interface.cpp",
+  "original_file_index": 2916,
+  "sda_externals": [
+    "_Q26Realmc11GCInterface.mpDriver"
+  ],
+  "evidence": "docs/research/card-tasks.md"
+}

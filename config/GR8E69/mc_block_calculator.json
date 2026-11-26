@@ -1,0 +1,64 @@
+{
+  "id": "mc_block_calculator",
+  "source": "src/memorycard/mc_block_calculator.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G8",
+    "-fno-exceptions",
+    "-fno-implicit-templates",
+    "-fno-strength-reduce"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/dolphin-sn",
+    "include/newlib-compiler",
+    "include/newlib",
+    "include/dolphin-sdk"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802165e0",
+      "size": 184
+    },
+    {
+      "name": ".gnu.linkonce.d._vt.Q26Realmc18BlockCalculatorImp",
+      "address": "0x802eda38",
+      "size": 48,
+      "target_name": ".data"
+    }
+  ],
+  "functions": [
+    {
+      "name": "Init__Q26Realmc18BlockCalculatorImpPQ26Realmc8GCDriverUi",
+      "address": "0x802165e0",
+      "size": 80,
+      "binding": 1
+    },
+    {
+      "name": "Clear__Q26Realmc18BlockCalculatorImp",
+      "address": "0x80216630",
+      "size": 20,
+      "binding": 1
+    },
+    {
+      "name": "SetFileInfo__Q26Realmc18BlockCalculatorImpRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
+      "address": "0x80216644",
+      "size": 84,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "GetFileBlocks__Q26Realmc8GCDriverRCQ26Realmc6CardIDPCQ26Realmc8FileInfoPUi": "0x80214ba4",
+    "GetResult__Q26Realmc18BlockCalculatorImp": "0x802166cc",
+    "_._Q26Realmc18BlockCalculatorImp": "0x80216698"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "blockcalculator.cpp",
+  "original_file_index": 2938,
+  "evidence": "docs/research/card-tasks.md"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "compare_mc_task_singleton",
+  "source": "src/memorycard/mc_task_singleton.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x802953d8",
+      "size": 8
+    }
+  ],
+  "functions": [
+    {
+      "name": "TrcSingletonAssert__Q26Realmc11TaskManagerPQ26Realmc4Task",
+      "address": "0x802953d8",
+      "size": 8,
+      "binding": 1
+    }
+  ],
+  "externals": {},
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "profile_from": "mc_task_manager_start.json",
+  "comparison_functions": [
+    "TrcSingletonAssert__Q26Realmc11TaskManagerPQ26Realmc4Task"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/card-tasks.md"
+}

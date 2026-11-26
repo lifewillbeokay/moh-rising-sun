@@ -1374,19 +1374,43 @@
       "src/memorycard/file_descriptor_clear.cpp": "47eb051dac3c31fea5dc8a3da15f77065112593e0afee76e5bc84faa30139e68",
       "src/memorycard/file_descriptor_init.cpp": "7910f956f1bbc7f3547c5101814bdd053277044d88a324516bcb3db44b96d768",
       "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
+      "src/memorycard/gc_driver_create_verify.cpp": "9895f2616cc197f4ff632035fc06f24986718d87ca12f4aa05497337e45331ec",
       "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
       "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
       "src/memorycard/gc_driver_mount.cpp": "958b9c1f21bdc9cf45fbef2a3de9def9c151ac15f1664523bced8f2d5b2f012a",
+      "src/memorycard/gc_driver_write.cpp": "b0ffbb1ca9320bf97ac5b71a62ca9eb64182743fe9f8acbb2750b399a96b88a7",
       "src/memorycard/gc_interface_access.cpp": "8d6a6684defa6c496531b98b44cbb7dd80362698ff8f014c469910d8ec082551",
       "src/memorycard/gc_interface_create.cpp": "63a2b6c74a211f0f9f2320d664630fd900202547c9ad53fadd36af45c48c8725",
       "src/memorycard/gc_interface_messages.cpp": "7a7b95837703b92186e2c482d6ec27af0ecb3e3dca5273f377bbf7f4639da9a3",
       "src/memorycard/gc_interface_thread.cpp": "1fc31b9f9fdd0ec8ff37f1b5b0f3ea3165959fa5ec64708707198ac7c1902985",
+      "src/memorycard/gc_task_attribute.cpp": "c64d4f14f0b3ba4aeaadc53d71e251b57b435e89e167c1283ffebc2ad4f9710a",
+      "src/memorycard/gc_task_close.cpp": "eedb97bb3f61f3df7e60f4f5e2e21943260a800a30fdfbcb3bd4ceb3c7ccb561",
+      "src/memorycard/gc_task_delete.cpp": "e674af8275159c94920b43be7bc3af714c9c1fbdbcc587acc6fea397a7d4b95f",
+      "src/memorycard/gc_task_exists.cpp": "c8a5b73ec0afe3239d6ba6c4df67c1b0b798f73083385ee4a36fdd0c561ca511",
+      "src/memorycard/gc_task_find.cpp": "b31f1fd5ee54d4fd5ef03817491111bdb3a9203d5b7b1c657b391649723e7233",
+      "src/memorycard/gc_task_flush.cpp": "3c8fbee58f2dbc7a35de7450f13f62402db342055245f976594be962832d7ae1",
+      "src/memorycard/gc_task_info.cpp": "d125cdad80d0416f7964ee595420df11669adf40b061670235471ad09ca299b1",
+      "src/memorycard/gc_task_mount.cpp": "3ca3d82dcb5effdd550c49ca3cc3bc0bc99f4bb3a6c0e4ec8edf008730fd0abb",
+      "src/memorycard/gc_task_open.cpp": "61782166adb1ce2ac671fb62b52c849772bf7f4af305cb6b0cd8c73c887284cc",
+      "src/memorycard/gc_task_read.cpp": "ea2a14749bacfb2f62b2e4c290c6620bd257f0f8c868feab1e7195fc5c6f6712",
+      "src/memorycard/gc_task_seek.cpp": "6e3a3a1024f5e56208204515e8304a76714d4f93a033b5bdc5a52c56237f2410",
+      "src/memorycard/gc_task_trc_exists.cpp": "0dfd822243f0cfe111496abf43484c9434bf1bc96d30ab071e0f9f0cc1e7473e",
+      "src/memorycard/gc_task_trc_info.cpp": "de647472a8b44fb7c84bac393caee9d79a09bea21a48dd84256fa42a8c6ca406",
+      "src/memorycard/gc_task_trc_list.cpp": "b468216d3bffb88a7db2f74606436f4423952a5f35696e43d10a45ea1ffceb6d",
+      "src/memorycard/gc_task_unmount.cpp": "e27e045f20724e38ac59db91feceaa78b9a8ad8b694bba9d8c036f139f86a853",
+      "src/memorycard/gc_task_write.cpp": "df22570c1d524ac2f25c91d64660f05ad4139c57ed7138d943da9184772d833f",
+      "src/memorycard/mc_block_calculator.cpp": "6a5112c599e867ff55b025baafc345c50fbc9406913a69117589294d3c60248c",
+      "src/memorycard/mc_block_result.cpp": "b3e0a946f6106349fb165468378c49cd208d5646404a3aaf800c9635177cc587",
+      "src/memorycard/mc_memvectors.cpp": "b8dffb2ce31b533c5b3b772dc5aceb83fd26e016cad0498d150c10d3f1281803",
+      "src/memorycard/mc_public_card_queries.cpp": "80e983a6e17e754c90ee48ea1b1d87556cdbc237aade9c83020b804e1e7c5691",
+      "src/memorycard/mc_task_end.cpp": "bdb7922ed963fdd8287dd9ddd7b7998f2521a90ec25b5f80dd0236dd1aeea32d",
+      "src/memorycard/mc_task_singleton.cpp": "cf1f78738a188a637eafb46ac9c1d034f436c697872436940ee0c2578822698e",
       "src/memorycard/message_clear.cpp": "41b782b44a1160f13de78ae478feb1113e58beae895627f74fd72ec7ad538259",
       "src/memorycard/public_calls.cpp": "7c1030dcf2ab2b66caabf8d934bd16dc7531076e3ace1f9934d996b371ae4832",
       "src/memorycard/public_start.cpp": "4a6df3192efef4f410c7bbf9e2c2ec3aea6f31a7fc268c447e87f6881ac62f34",
       "src/memorycard/public_trc_files.cpp": "09f810042a96e58009ba8d056ac31819a5fc8c6f18327d407fc8f0902dcc636f",
       "src/memorycard/task_clear.cpp": "c55be9d211c97a0b15f95adecef158762e64dea7a0018ea94d693eb027a820d1",
-      "src/memorycard/task_manager_start.cpp": "609326a001f153f4a521a15fa5938b31b21cd1c59bdbf11e961526f30a5ecadd",
+      "src/memorycard/task_manager_start.cpp": "79e7880182696a5921c4f7f9e213479450b6bd14ac04b3432dab24226bf110f6",
       "src/memorycard/task_trc_init.cpp": "176e1a47843fede7751894d206cf59fe087eb3f93f160bf93ea8de7dfa86f3cf",
       "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
       "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
@@ -3178,9 +3202,12 @@
       "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
       "include/game/Rcmp.h": "84df0021ab0c74719fd24cfb9bcde67ef05de94330531dbf718631f5baaec899",
       "include/game/RcmpMadCodec.h": "3972d6a4882777dd85530d267b959c8d5c62439426cd39a7aae9770c01003047",
-      "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
+      "include/game/RealmcBlockCalculator.h": "08872d0f339ebbf5a70590c31f17b1c62afdee80aaeed8098738699dd9dbc41c",
+      "include/game/RealmcDriver.h": "3fc6e772b881b6d19bdda76f5a6c7b85a91a10269695376c52115ab2c41af9f2",
       "include/game/RealmcInterface.h": "943e032701004e66f0adb23c7b235f2174af4bcb0f8900baf18f3133df0a5756",
       "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
+      "include/game/RealmcTaskManager.h": "0e4423dee13329875d25faf0d631806823e492615d54531bd16c4b4a49d09c20",
+      "include/game/RealmcTaskUpdate.h": "9e33e2868c51a7e0cd0447482e94b2b67ed034cbb976b05e504551c90cb8ba20",
       "include/game/SaveGamePopups.h": "7859e2a020c4bb1bc1c9d4f13c9f3fc4fe749530f4251d16ea9e3cdf14766900",
       "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
       "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
@@ -3907,6 +3934,21 @@
       "config/GR8E69/comparisons/fetype_create_base.json": "c278a7200c4a5085e583c858b33a0a9a0f849f1239f3673e4ea7c2fd54eb2f5f",
       "config/GR8E69/comparisons/fetype_create_image.json": "4f64e9c0de96ed79a7c78d743991ffbaf7ee970b6007e1b765686456d24ffc5e",
       "config/GR8E69/comparisons/fetypenode_fields.json": "dd410b7d49216725c8d1a6d8a5e7458df8a6924d206d4e437e69931eb1f3afb1",
+      "config/GR8E69/comparisons/gc_driver_create_verify.json": "c2f547ac1c7020c992624c95613a6fd2dcdcdf9e300365ce549951eece557053",
+      "config/GR8E69/comparisons/gc_driver_write.json": "198d2a24799a9ae0839f37ee8fd6e4a437dad8229bbb7c01af407d5e7a3f6f09",
+      "config/GR8E69/comparisons/gc_task_delete.json": "f5a671e68fd6c262e000dec555e1896797e84e92922f5c4a6f7f4a2cfa1f511d",
+      "config/GR8E69/comparisons/gc_task_exists.json": "413f591ea77ff356e57cb3d9c1ad8f54608e8ff617a2ac84812ca71128c82cad",
+      "config/GR8E69/comparisons/gc_task_find.json": "4db890975bae98e0564d93cb543e3b867c2ab4da65eda09ad6f2e676a7ab33b6",
+      "config/GR8E69/comparisons/gc_task_flush.json": "dc56d6aeb409c4aac43764ae312ec1031a49b9e5ae8706db34b59fb7d56c0225",
+      "config/GR8E69/comparisons/gc_task_info.json": "78b7577307819802346267bbc63dae22ede1f7a9f58047cc213f0fc0ef46ed8e",
+      "config/GR8E69/comparisons/gc_task_mount.json": "9ace5b830969a141f7929c8c522722c022cd80d0ecd7fbecf7581c336682cd25",
+      "config/GR8E69/comparisons/gc_task_open.json": "900e033444a03f00c09e1fba23dbe4ea536b9b9a46173684cf7bffdf483cb0a4",
+      "config/GR8E69/comparisons/gc_task_read.json": "d12d6fcb58dacf4d48d53de7ef439910996072cf41144fac8745a7c59143f2de",
+      "config/GR8E69/comparisons/gc_task_trc_exists.json": "37c89ce3a43bc77ad4e631cec0a0750eafedd6ca1029a782468da9f932e2b3e7",
+      "config/GR8E69/comparisons/gc_task_trc_info.json": "9d3455996f0184f6d693f801ba76a306e18b8073e21fbf0537e36b7b98a99efc",
+      "config/GR8E69/comparisons/gc_task_trc_list.json": "7b4b42a594a8abd1b11b9e54bdafe27fa56c148684dd3908feadd2dda33c9d94",
+      "config/GR8E69/comparisons/gc_task_unmount.json": "3730b0346c08c3cf899bfc7d5e0106f4dd5c2bbf6c7a6f8ebcca09ae81b3c94e",
+      "config/GR8E69/comparisons/gc_task_write.json": "518438ec7cd3078de277ef44f3ca299eaaf8fba403d3c75ca9bec87f7e1c10fe",
       "config/GR8E69/comparisons/handler_briefing_events.json": "e075943b1f975637f4bc35611a604aaa3ddf13890531df8fefafd7b46ee87643",
       "config/GR8E69/comparisons/handler_coop_level_start.json": "fe2ca438be07862876886558fec1cbaff1dcd4125a3a92d5813b56733ae9ae1e",
       "config/GR8E69/comparisons/handler_coop_options_events.json": "59db11b07a482d5f4a680cd569db99f8873564d2f803e17c3e12878ea0d0ad16",
@@ -3924,8 +3966,11 @@
       "config/GR8E69/comparisons/loading_DynamicLoaderGetAddr.json": "ccfd822dc2e450c54947352533fad3b894f3e65a13cb02e3dc06b2e0ab806795",
       "config/GR8E69/comparisons/loading_DynamicLoaderInitialize.json": "09ba22038ae1c060bea682e1f15ee9be4f9069ec9b554ce82b9625df2634d8cd",
       "config/GR8E69/comparisons/loading_SymbolPoolSearch.json": "5b45b1b5f1215abf4bdadb049e5ece9e12722a7f6a87e1574e00e4d06406216d",
+      "config/GR8E69/comparisons/mc_public_card_queries.json": "70080603c103c23342e41d66d01321911ab720f086421af1f28495e18c101d7d",
       "config/GR8E69/comparisons/mc_save_load.json": "727f3c508b66a1a253ced86eb91b5593204d479dbb6eb16e5f939176ebd42d86",
       "config/GR8E69/comparisons/mc_startup.json": "880318ea58a61f66deeae390edc062f414d87653ec607a8cba3088939c9e257c",
+      "config/GR8E69/comparisons/mc_task_end.json": "46a39fcf0c3b78e8531a745de950e6febb0bb4cce7b7477a00ea0e55d28fd96b",
+      "config/GR8E69/comparisons/mc_task_singleton.json": "e737979aa9d90712783cce6f2aef7e4d3e92b53551394c29258ebb8626712e9b",
       "config/GR8E69/comparisons/mc_verify_crc.json": "8e44f4f8cbc916a0782aeaa2aca176a291fdda2bb0d5e3f7a29595ae29e56137",
       "config/GR8E69/comparisons/mcgc_issue_start.json": "a54dc65c01ff1b8678a22f9e9207c2c963d17b5b72bebcf9ca2a43f04fa6314c",
       "config/GR8E69/comparisons/mcgc_operations.json": "2fea72088ad56e8790f4c6f1b68771af5ae02e495573e93653d45874b374e4e6",
@@ -3952,7 +3997,7 @@
       "config/GR8E69/comparisons/sphere_visibility.json": "2293c09db6d2ed5ef7b02055a6ae53de114dc74a2e9d1c26c35e5ae332c2367e",
       "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
       "config/GR8E69/comparisons/triangle_nearest.json": "1db65edb247e6e751b7dbe2d2e1d1945077ce757d9eaf20f4c8353f3b1eb8c51",
-      "config/GR8E69/comparisons.json": "350099cc35a182ef9eedb6b29d06b0b345064791476c4b7a698778d4ee41a6c1",
+      "config/GR8E69/comparisons.json": "0a3b1e07261c0d51e91fa1e2398ce34806011d68ba8e0ed0f4fdb8a88784147c",
       "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
       "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
       "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
@@ -4463,6 +4508,9 @@
       "config/GR8E69/gc_interface_create.json": "6cc1c24e04f42337fc0f1042ebba42caec359238706142a7a27fc9d0d4a4fba9",
       "config/GR8E69/gc_interface_messages.json": "67f7057392d763176574784c447f4d48a613a91426e0dc24fb7e9e3ce83dbf7a",
       "config/GR8E69/gc_interface_thread.json": "1f4dae87cbf32bdbd38269143d62e70e3cfff52e271cebd3f7c34cb8a09c3166",
+      "config/GR8E69/gc_task_attribute.json": "46f711ff6bcdb946f261e786a115d7ab0eed672514c68060aee3fb4102496f15",
+      "config/GR8E69/gc_task_close.json": "3375e6fe29882e4b46309e22e9153854baf95d6c3cefb5c13b3854209eabf32b",
+      "config/GR8E69/gc_task_seek.json": "62c3530757eede25447ee25b383ee950b75c36eba93b32ff698a95bfa06c7654",
       "config/GR8E69/gchw_vd_draw.json": "4c977aa5b69c6350982e9674593fe909a04184b0168c0544440c8b5ed00322f7",
       "config/GR8E69/gchw_vd_setters.json": "1a809e6657edda88805d31c637e4fd28f2bdae3a7905d38c51abc85a4f277991",
       "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -4619,6 +4667,8 @@
       "config/GR8E69/matrix_translation.json": "622a8647279665d8f4caeb887a2966a8719838335416b658bdcb872ddba78fd5",
       "config/GR8E69/mc_a.json": "aacbd0b11cd7109e5d9866ff72e515203667a753e3b6349470ba4ddb3fc275be",
       "config/GR8E69/mc_b.json": "fcbc039c2baa79650994398eececcc037e92bf6cbd06d2626c294dd27683acb6",
+      "config/GR8E69/mc_block_calculator.json": "c425c8a1545ef85ad73d6d3fefd90efeffd6169c5781a93ee610c6baf16c98b4",
+      "config/GR8E69/mc_block_result.json": "04327d666553e1a155fbdb6ac0ec5810fdb8b58e0ffa0ebd80be45cf8830dd57",
       "config/GR8E69/mc_c.json": "fe3977be1fa26fad7c86b3ea4c343bfae473f8a16f6525e34c1bca9942714ba4",
       "config/GR8E69/mc_cache_device.json": "8e9605690c4af59c9512ce8e778218eb41fa076eee05ffe6773cc517fde9cafa",
       "config/GR8E69/mc_d.json": "c77c9bcd6ffb6d2cc662d01b6510cd12192a60dc7f4948c52a9054d183f2de29",
@@ -4630,6 +4680,7 @@
       "config/GR8E69/mc_g.json": "816698e9a4c7b3b3c9a05187f01fb99c16c7ccb916c8b65e2cbd46442a173034",
       "config/GR8E69/mc_getname.json": "c27c96523883ff737d5b936158780c9ce6a1d27cbdfaa9c843dede6527bdb50c",
       "config/GR8E69/mc_h.json": "b06aa49f3024230543bae090edfc8250f5cc270effd2a85e7ddbb379285184db",
+      "config/GR8E69/mc_memvectors.json": "fd77d8bb912dc45885584af7f35cafb1e3d58bded883c06782d21adb444223b9",
       "config/GR8E69/mc_message_clear.json": "812cdf3692f94a575b852bcad36b2a626e2350da9db6ef37fb1159272fafd130",
       "config/GR8E69/mc_public_calls.json": "1b4c75fc872636f1d71e062e5889abaad0edc12ac837306e0223f8d752c2bae8",
       "config/GR8E69/mc_public_start.json": "2f391415137e12df10770f95de9776551f35e44650a6f6672d10b994facdf91b",
@@ -4933,7 +4984,7 @@
       "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
       "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
       "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-      "config/GR8E69/project.json": "5620f39d1c9e33f9aa361ba74b3abd6934b6d402713d7d804367f534fe86ce3e",
+      "config/GR8E69/project.json": "5fbf7597b9504e2cfe0c1c66954e2ae1d521c8f5a8619a05bbd952ad5a216b1c",
       "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
       "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
       "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -10692,6 +10743,466 @@
         "target_object_sha256": "294b90e6787ef7147a83ba12ee3d5c9b7b0d298026aed22639667c824454cc27",
         "diff_object_sha256": "57cc57ab6b6eac3958a1b5b16f692f21696a893c90bf6a510f8b535d8df24440",
         "diff_sha256": "fe4e7641409e2e180386a4df735361eaccd877b7941a84c687bb92a6cf6463ce"
+      },
+      {
+        "id": "compare_gc_driver_create_verify",
+        "functions": [
+          {
+            "name": "NGCSportsBioCreate__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+            "address": "0x802163b0",
+            "size": 260,
+            "binding": 1,
+            "compiled_address": "0x802163b0",
+            "compiled_size": 248,
+            "target_sha256": "c0efe5368f4fccbbb6d6b97400997c56da955e01efe1886ac79e4ff7cdbb93f6",
+            "compiled_sha256": "7f16c4d9ef2fa446489060d5b0c261bd9822999510a8256a2e73ecde171d848f",
+            "differing_bytes": 138,
+            "status": "partial",
+            "objdiff_percent": 89.04615,
+            "fuzzy_match_percent": 89.04615
+          },
+          {
+            "name": "VerifyHeaderChecksum__Q26Realmc8GCDriverPQ26Realmc16GcFileDescriptor",
+            "address": "0x802164b4",
+            "size": 232,
+            "binding": 1,
+            "compiled_address": "0x802164a8",
+            "compiled_size": 228,
+            "target_sha256": "84a4b9b4d47c60bb9d7034d41aeb9d41b909a1e79fdb1dc98331c66eeb70a7e6",
+            "compiled_sha256": "4765e90bdfd88772d1af0cd511a79d5b28e3f8d10c7d78ab0b90e35379f9410a",
+            "differing_bytes": 36,
+            "status": "partial",
+            "objdiff_percent": 98.17242,
+            "fuzzy_match_percent": 98.17242
+          }
+        ],
+        "object_sha256": "1ab5565eb4489899b6f0f161e90602aaf9f3bb898f3304be30aab94b633e4e80",
+        "linked_sha256": "1bc64fc15a447829a2b7699e39617b09c62c3b02b540421725c4ae3273539bf7",
+        "target_object_sha256": "bd7111f03f39d075a9a00f335b92f4e786bfff6c89f765109b95a45d77365930",
+        "diff_object_sha256": "8691a89353920c5b195824683162a804fd3ac6d9c06d86921a38c792857732f7",
+        "diff_sha256": "b4e380c513b4e05ae150a3fbc9b413c39dc3fafd695dd89cbe6f654088792b06"
+      },
+      {
+        "id": "compare_gc_driver_write",
+        "functions": [
+          {
+            "name": "WriteFile__Q26Realmc8GCDriverPQ26Realmc18OpenFileDescriptorPviPi",
+            "address": "0x80215454",
+            "size": 468,
+            "binding": 1,
+            "compiled_address": "0x80215454",
+            "compiled_size": 468,
+            "target_sha256": "1116466554b17f0afc43e18419d5b5ca266522d496d6590d3fb90963cefe4e26",
+            "compiled_sha256": "eab67b50ffb804fe37e941ab9b3ca9ec9335b1b143d2f3f04c8f21ac5771f809",
+            "differing_bytes": 18,
+            "status": "partial",
+            "objdiff_percent": 98.70085,
+            "fuzzy_match_percent": 98.70085
+          }
+        ],
+        "object_sha256": "7f7ce50f6b6587391e4d9ebb2a1ff2da7f8a2b6d3dff4c6949f2ebe083501aa6",
+        "linked_sha256": "4583112dab2412abbbdba8f6e8f31acbb3311b98a0fe32d9046596f9fbfe6865",
+        "target_object_sha256": "09586d195249610bd32013d318333e77aa0fc229af9363ddce970b75ff82a7a2",
+        "diff_object_sha256": "c3a015433d491bda0b77d08aa09ea9704374049e91bdea8697e28b21df140049",
+        "diff_sha256": "b51b94d4ad0fbcba570464a78423d5aac4df5580f5df1bdb867044d50d2647c8"
+      },
+      {
+        "id": "compare_gc_task_delete",
+        "functions": [
+          {
+            "name": "UpdateTaskDelete__Q26Realmc11GCInterface",
+            "address": "0x802140c8",
+            "size": 344,
+            "binding": 1,
+            "compiled_address": "0x802140c8",
+            "compiled_size": 308,
+            "target_sha256": "12242a21eebac2ac0111bfad2432409f8659dbcc50ccd45cfa1abbc200853578",
+            "compiled_sha256": "a35a7cdd1d7055c1667f46ad59f6ec2a4fd3815adf5bf8c8bd400eae02c81e3e",
+            "differing_bytes": 282,
+            "status": "partial",
+            "objdiff_percent": 80.10465,
+            "fuzzy_match_percent": 80.10465
+          }
+        ],
+        "object_sha256": "9615a113774796e9cc6ba9b6e7add73fd8fb283dd7e6535670fedd6ed93aa245",
+        "linked_sha256": "e297280fccddff7a9d663ca4d342978b9c9a6a82e993e013a8d4c26093f2a733",
+        "target_object_sha256": "71b09a04b7c3e1caa7e158511cafa842380dee67db1b4dc7e0b6336a8a131d07",
+        "diff_object_sha256": "0c73b3af3fb2aa48d7c02950e1ead2922a9e314ffc79c4bf37d7e2680b60e331",
+        "diff_sha256": "5eae7d9a60b4f84f5f08a1e1be98f8955a339458f7ee1cc2cfff5ab4d7b720dc"
+      },
+      {
+        "id": "compare_gc_task_exists",
+        "functions": [
+          {
+            "name": "UpdateTaskCardExists__Q26Realmc11GCInterface",
+            "address": "0x80213700",
+            "size": 180,
+            "binding": 1,
+            "compiled_address": "0x80213700",
+            "compiled_size": 184,
+            "target_sha256": "a442b8d90815b937e7f5c638d1d832433453386b23ace169b8a3c5aae9000a62",
+            "compiled_sha256": "662288e9803d9f11ba94dfae79fbe72a9f898bd3700633582552bcfbf740aaa5",
+            "differing_bytes": 78,
+            "status": "partial",
+            "objdiff_percent": 95.04444,
+            "fuzzy_match_percent": 95.04444
+          }
+        ],
+        "object_sha256": "2fa72550508360d536361b63689b79e5dd78ed1f97f95a11c1fd8beac3dda5f7",
+        "linked_sha256": "dd26f22db31e999e976ab3065a95b5812df33a4165fbaf12e75871f0804bc400",
+        "target_object_sha256": "3f380c7b591bf73e95df8d098d5b300be22fc58dacce5edd1aa4efdb29f1bacc",
+        "diff_object_sha256": "6ea53f90fa047459576edde2469fc9ce05bd1f7cee3c24f34af42095a7b2e749",
+        "diff_sha256": "ef2beeb63871737d0b43cefae34ef55be9ee50157fee61632b7ddb7c42d0d960"
+      },
+      {
+        "id": "compare_gc_task_find",
+        "functions": [
+          {
+            "name": "UpdateTaskFindFile__Q26Realmc11GCInterface",
+            "address": "0x80214318",
+            "size": 600,
+            "binding": 1,
+            "compiled_address": "0x80214318",
+            "compiled_size": 600,
+            "target_sha256": "09b7745e4d92c7bd9e260c7e8e03b390650dad7c5e19f794f81edcac7054e239",
+            "compiled_sha256": "169338dedb78e025557e5a26896ac66f4fd5caa0066d123ea7e5fc1a7004cc12",
+            "differing_bytes": 21,
+            "status": "partial",
+            "objdiff_percent": 99.386665,
+            "fuzzy_match_percent": 99.386665
+          }
+        ],
+        "object_sha256": "4d0e609e29493ab3361f90f418d1cb4c90ffbb1a8555244bc5358b7bf956b9bd",
+        "linked_sha256": "7cd21ba4c1b1bc673a5db74e71096bb73bb5f8ca7b00dfeef6cabb7421b4c37b",
+        "target_object_sha256": "61e8a5c6f99018cfea89463a41568f4d83c417afe957061ad31792f59a065f72",
+        "diff_object_sha256": "93c7af0ed328d70fecbb7097b7d806c2c54fcc495ae56bdc5130c1beac8b04cc",
+        "diff_sha256": "9d85170cc4c12e6f6d97299a8ff24a0ef2d1cc50b7d38e214472152fe44e3468"
+      },
+      {
+        "id": "compare_gc_task_flush",
+        "functions": [
+          {
+            "name": "UpdateTaskFlush__Q26Realmc11GCInterface",
+            "address": "0x8021401c",
+            "size": 172,
+            "binding": 1,
+            "compiled_address": "0x8021401c",
+            "compiled_size": 176,
+            "target_sha256": "4f5c0e47d779f789ee4797f7f4ca589477766a0675b81ee52192ce6b2c049918",
+            "compiled_sha256": "9e5715f315fe6114a10cf9330d36a5bcc80cd1eb91317c5a3984a199cda81b7f",
+            "differing_bytes": 109,
+            "status": "partial",
+            "objdiff_percent": 78.023254,
+            "fuzzy_match_percent": 78.023254
+          }
+        ],
+        "object_sha256": "33210c6922f4a2114a195b52e518642804f024bf89a9bae0904781b15fd7dab6",
+        "linked_sha256": "8a1104a1cf135a7c142885003f7a493ece70a37e376b332e90cecb2ab2e44849",
+        "target_object_sha256": "433fc165cabfa434fc697e24cce2b4d6e855e0bc1e2e3511fbcc11aa48047f8b",
+        "diff_object_sha256": "a2389e027540e0577ca3cdbd18fb31a0f8e17ba1978fa57e199f7a5bcfdfa653",
+        "diff_sha256": "5076d4c9caa0260b9446f1bc9ef1aeae149d97bfc69d2fc28043b0bd91406205"
+      },
+      {
+        "id": "compare_gc_task_info",
+        "functions": [
+          {
+            "name": "UpdateTaskGetCardInfo__Q26Realmc11GCInterface",
+            "address": "0x802137b4",
+            "size": 204,
+            "binding": 1,
+            "compiled_address": "0x802137b4",
+            "compiled_size": 208,
+            "target_sha256": "67f60d1699409bd929c4c470fde543f01242c21be52a0f589ca2bd27c24ff61e",
+            "compiled_sha256": "bc25715bf0a9ae724adfed8de05ee08174c98c38c2c85632ff24436920aa57b0",
+            "differing_bytes": 121,
+            "status": "partial",
+            "objdiff_percent": 71.882355,
+            "fuzzy_match_percent": 71.882355
+          }
+        ],
+        "object_sha256": "78493b3cca22b6fa1e9ebe0b298de2bb2bb07263dcd70ccf79ae8b40b7464408",
+        "linked_sha256": "9d0b4f117a62dfae72813c46482962728c901c11d459cecde0ad91130f7e2432",
+        "target_object_sha256": "fc74528e12a39d1e420556e726b49a7cf65b94d179626d806e66dcd5d0a7cd1c",
+        "diff_object_sha256": "fdda5536b2c1843640a444b8b0e32a69b7b2b32ee0d0f1ee093a2b50421d314c",
+        "diff_sha256": "b44c96edcc6618f7ae042755eb8c6572f97d11cb5a556549eddef6de7e7ef012"
+      },
+      {
+        "id": "compare_gc_task_mount",
+        "functions": [
+          {
+            "name": "UpdateTaskMount__Q26Realmc11GCInterface",
+            "address": "0x80213880",
+            "size": 312,
+            "binding": 1,
+            "compiled_address": "0x80213880",
+            "compiled_size": 312,
+            "target_sha256": "78e5866dc11a95dcea1321fb76c0b546422916c1642e7c996df45a02ffd70100",
+            "compiled_sha256": "347661b2e840a7e4e5c74215aa4a61dbf770b93eab1889ce7be1e3eb53a70ef5",
+            "differing_bytes": 42,
+            "status": "partial",
+            "objdiff_percent": 89.01282,
+            "fuzzy_match_percent": 89.01282
+          }
+        ],
+        "object_sha256": "849ae4cc7424a67f9e934b03c074082d25daed38cf08d012980c26d9f5135601",
+        "linked_sha256": "116a3948daa62185a585099fe6fc289f2977ec1acca793c685f0e2f6d4a489bc",
+        "target_object_sha256": "3b10337576546fb2bc74ae170fbdf57172a0624dd13bcc976a8516e3a4de9a27",
+        "diff_object_sha256": "3eb25f557c4a4084b31714ab07f001fed16f181e77947bf52897ce7227e84dba",
+        "diff_sha256": "3613fe2e05c8af698a93b1da74aa0b1af9a335c6b078bcfbac45410dc25977c9"
+      },
+      {
+        "id": "compare_gc_task_open",
+        "functions": [
+          {
+            "name": "UpdateTaskOpen__Q26Realmc11GCInterface",
+            "address": "0x80213a78",
+            "size": 276,
+            "binding": 1,
+            "compiled_address": "0x80213a78",
+            "compiled_size": 280,
+            "target_sha256": "0255386e4d23613f7d3d866bf9eef1fa55b466d55008cb59a381874adbc6a46b",
+            "compiled_sha256": "f6ed2f153970cf6e97384c8ac14a39f4d7f432a4c3171a0b9b7233648762cf5f",
+            "differing_bytes": 140,
+            "status": "partial",
+            "objdiff_percent": 88.391304,
+            "fuzzy_match_percent": 88.391304
+          }
+        ],
+        "object_sha256": "40465768653afc7cfd12252959e6c0e46cecf8af147cdb9f0dfb3983eb83a0fc",
+        "linked_sha256": "46d3f74aeeaa4f4e340b11be84839e260b6211e710f92a0ba9e920d73613016b",
+        "target_object_sha256": "7f09795c5a478c72b77ae170bc52ef7a108ac3107317c17371d726a661ecd171",
+        "diff_object_sha256": "a1362214fb591eba579fab85c97cfe674c89a4792190be6978b244146499f989",
+        "diff_sha256": "fd65e4cd96f5c6d7523d965d4f0a95810dcc6289b6d53d0de5f4d3b2e9a196f8"
+      },
+      {
+        "id": "compare_gc_task_read",
+        "functions": [
+          {
+            "name": "UpdateTaskRead__Q26Realmc11GCInterface",
+            "address": "0x80213c3c",
+            "size": 392,
+            "binding": 1,
+            "compiled_address": "0x80213c3c",
+            "compiled_size": 392,
+            "target_sha256": "46507e70cd5d89fe666a446d39ff36bb03154c79b67221fc0c64ce82599e4385",
+            "compiled_sha256": "0fcf06f7c773eb55d1488bc77f51220d98b4c7f6b959669e4ee04227ac14e04a",
+            "differing_bytes": 60,
+            "status": "partial",
+            "objdiff_percent": 91.46939,
+            "fuzzy_match_percent": 91.46939
+          }
+        ],
+        "object_sha256": "413d8d02d20e4b4501dbf2a82dc44e01152133582d7543b8041f81b461a91f50",
+        "linked_sha256": "ee7ddac0a0e6f6879580700db98846606ddda383e0d8e90bbf36971f2bb62c49",
+        "target_object_sha256": "1946b6d047b7bda67e1359ee504dea85233e71e8735590122b180f3e6dea9a6d",
+        "diff_object_sha256": "36702cf1e983da7f9b74b25ef8d8b959ff9719308b0e9636c6882c9c938b2e9c",
+        "diff_sha256": "3127decc1ec7bb3c224675e9b8b89bcabd5d38df45a3e4607bc943b0354b68fb"
+      },
+      {
+        "id": "compare_gc_task_trc_exists",
+        "functions": [
+          {
+            "name": "UpdateTaskTrcCardExists__Q26Realmc11GCInterface",
+            "address": "0x8020fda8",
+            "size": 460,
+            "binding": 1,
+            "compiled_address": "0x8020fda8",
+            "compiled_size": 432,
+            "target_sha256": "5a779f74cb6e2ffefc1c87cbc66a20363c6d546a9a509f95dccf0c1e364ab76a",
+            "compiled_sha256": "b55611d0a38621966a593a06f13937ccccd50be2948612c2eb370f9f1dad65d3",
+            "differing_bytes": 342,
+            "status": "partial",
+            "objdiff_percent": 84.05218,
+            "fuzzy_match_percent": 84.05218
+          }
+        ],
+        "object_sha256": "860ebbac92453bb382c5265bfa9ebe88d43c8fad5929fc7cd19a8d5fb685a7c1",
+        "linked_sha256": "510166ff0a8b87c89119552543f2fb433c8dff924a5dd8a6533d66bece0a59e2",
+        "target_object_sha256": "ee09c475bef08d22256e5de1205d9cf4bc9841f1d0492ec1a005182df33e4ea6",
+        "diff_object_sha256": "88788492779467cda2bd1609517dccd9d1ba04fc25b897fbeb582e0d4cfa19a0",
+        "diff_sha256": "f3ea722072444e6b09d1d36aeb2eef38a6825ba453da16496cee99bce3cfd25c"
+      },
+      {
+        "id": "compare_gc_task_trc_info",
+        "functions": [
+          {
+            "name": "UpdateTaskTrcGetCardInfo__Q26Realmc11GCInterface",
+            "address": "0x8020ff74",
+            "size": 568,
+            "binding": 1,
+            "compiled_address": "0x8020ff74",
+            "compiled_size": 532,
+            "target_sha256": "44f5d7b8c22f0a70a24a48ed153f8777dd9894cb3176c3389fe40862399a4519",
+            "compiled_sha256": "952f909a527159f5b2c309a6706a9bc1117f124447ef4bf9fcbc17f1c5cb0240",
+            "differing_bytes": 431,
+            "status": "partial",
+            "objdiff_percent": 81.14085,
+            "fuzzy_match_percent": 81.14085
+          }
+        ],
+        "object_sha256": "9c6d2d1dfc4c4cc57c418b3cd547be638ec4918fe2447f842ac549293a575cc5",
+        "linked_sha256": "7c5b03d0ccd78fdb73363d033f911bd941eb80b7344250fe3026866b41357633",
+        "target_object_sha256": "a0148335fae07e2ed99ac173e6a042ffbf214837dc521edc01911181980e4344",
+        "diff_object_sha256": "04287856b036ec20734df4698d70668c72f7e3e4647ef741132dc51aa0f3484f",
+        "diff_sha256": "480bd7f50808f9c9f1efdd75115d8c4064eb971f892ce4a5322a3aa9c0ac85d5"
+      },
+      {
+        "id": "compare_gc_task_trc_list",
+        "functions": [
+          {
+            "name": "UpdateTaskTrcListFiles__Q26Realmc11GCInterface",
+            "address": "0x80211fbc",
+            "size": 876,
+            "binding": 1,
+            "compiled_address": "0x80211fbc",
+            "compiled_size": 852,
+            "target_sha256": "495ca857470d11c863ceb38d584b1c326322bb65b68922dd5262560d2972d687",
+            "compiled_sha256": "533391b444d5fddae6c94c7789416436a1b03ab367c610e4622f5fa11f3eacc9",
+            "differing_bytes": 677,
+            "status": "partial",
+            "objdiff_percent": 85.35616,
+            "fuzzy_match_percent": 85.35616
+          }
+        ],
+        "object_sha256": "9547fb5d3946f85c6bb134dcdbbeddc8a6c989b708940ae42f5c385bad54a421",
+        "linked_sha256": "cb445c5c20081926a9c87c6c258c3cd267ee424e5971a6a229b806241a169221",
+        "target_object_sha256": "57e7626d883c136b6cec7c3e1d2a824b0b96fce13f381e68c2f4e61e228dc2fc",
+        "diff_object_sha256": "b722e55feec741677f00e14c3152c96cfa14cf86f17f6978d4515c829f1643a1",
+        "diff_sha256": "e15d68bcc25c48dc6cd0b59930662aee00afa58a53fff9583700eecf1c29b819"
+      },
+      {
+        "id": "compare_gc_task_unmount",
+        "functions": [
+          {
+            "name": "UpdateTaskUnmount__Q26Realmc11GCInterface",
+            "address": "0x802139b8",
+            "size": 192,
+            "binding": 1,
+            "compiled_address": "0x802139b8",
+            "compiled_size": 196,
+            "target_sha256": "17c77b93387a434521d85eaa24c8d354f41b0abaab994a6e5329615c4ab03ad6",
+            "compiled_sha256": "117fce9773ba8c0010326ee1d7139181e49f1a7a7d6b300214452fd75a9717d8",
+            "differing_bytes": 112,
+            "status": "partial",
+            "objdiff_percent": 89.166664,
+            "fuzzy_match_percent": 89.166664
+          }
+        ],
+        "object_sha256": "b55f91da7fc7b245511d76378a2773ab97540f9dec614ab7063e266b4cfd8609",
+        "linked_sha256": "3c84f8d114acbe3e1685fd45b79f6b613646016dabad079a0eba10ead57f3db2",
+        "target_object_sha256": "7ccc4a05c8dc06dba47bfc5aa8bd888f3fa521c9fa9f88c4ad08efdc78ff4fa4",
+        "diff_object_sha256": "21989d43e9e16988b7e0ee65cde33759b643c2b72dcc52adbfb873383b56598a",
+        "diff_sha256": "763c70d652f857ebf5bc8afe32e2065bd8913a6eb0bf7ab3b80ede1ace9a5ea3"
+      },
+      {
+        "id": "compare_gc_task_write",
+        "functions": [
+          {
+            "name": "UpdateTaskWrite__Q26Realmc11GCInterface",
+            "address": "0x80213dc4",
+            "size": 392,
+            "binding": 1,
+            "compiled_address": "0x80213dc4",
+            "compiled_size": 392,
+            "target_sha256": "2ed61b13cb6a2d73150a7d655b9e6a95af0e934ed92cd44114b036913c524af0",
+            "compiled_sha256": "6bcdbe4175a07c926c4d8f2ea620e02adcbd0aac814a1f7d4c8932f24d5a99af",
+            "differing_bytes": 60,
+            "status": "partial",
+            "objdiff_percent": 91.46939,
+            "fuzzy_match_percent": 91.46939
+          }
+        ],
+        "object_sha256": "1316812d41a57831a7785a1b070388db0ed1c44bb96e5c4349bba159458ea804",
+        "linked_sha256": "25040df5cb56bbf3301390fb48cfb75bb28b114099f68dccfc162796644ac402",
+        "target_object_sha256": "235c3f19a422149579c3dc690a4193df5009fef2a4df9b25d6318bb60899cb87",
+        "diff_object_sha256": "bcd7e04106133598fd284a1551373fb879dd0a714708d600af95c00fa86cf422",
+        "diff_sha256": "9bf72228d95cdda8c761fc63d484fdb98a2e8ebade92c4db8b95bb1813586382"
+      },
+      {
+        "id": "compare_mc_public_card_queries",
+        "functions": [
+          {
+            "name": "TrcCardExists__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+            "address": "0x8020eba0",
+            "size": 188,
+            "binding": 1,
+            "compiled_address": "0x8020eba0",
+            "compiled_size": 188,
+            "target_sha256": "b6cb8a58f03dffebfd7c3407568dc8b291bcebce2174e454d8f4f62c9f7e3a7e",
+            "compiled_sha256": "7f4b7d5ea9a43f154855d2ce66ae502e73bdcfb102b4ff8a5fd41a67d31635ce",
+            "differing_bytes": 8,
+            "status": "partial",
+            "objdiff_percent": 95.74468,
+            "fuzzy_match_percent": 95.74468
+          },
+          {
+            "name": "TrcGetCardInfo__Q26Realmc11GCInterfaceRCQ26Realmc6CardID",
+            "address": "0x8020ec5c",
+            "size": 212,
+            "binding": 1,
+            "compiled_address": "0x8020ec5c",
+            "compiled_size": 212,
+            "target_sha256": "ab1a87ed7933003c1362e83371b20ed54e3ba5357735bde210f2ddb024a6992c",
+            "compiled_sha256": "48d4de529ff407bd262e24ba586331bdce223853435acc6638e239504e7761ab",
+            "differing_bytes": 8,
+            "status": "partial",
+            "objdiff_percent": 96.22642,
+            "fuzzy_match_percent": 96.22642
+          }
+        ],
+        "object_sha256": "daf9dd9d428c3bde361063a239e556ac4b8674dfd5253ed63f7f23edba49905a",
+        "linked_sha256": "7ab93be47a0096babf4dcde5fcc06f8a99b52290a44becc39c48adf428320068",
+        "target_object_sha256": "80af8ddbec0bae17e1027cabbda8312088a9ef6a3e2ca4b307d40e9031788f4d",
+        "diff_object_sha256": "a3e93f2ba119059ea45c8deba5a4c69f069cd39e8b3dc378e8871eb55e3410c2",
+        "diff_sha256": "aa4679786df1a94ba60d661689aeccb1a8549a1010cc70e30ef89afe0aec795e"
+      },
+      {
+        "id": "compare_mc_task_end",
+        "functions": [
+          {
+            "name": "EndTask__Q26Realmc11TaskManagerPQ26Realmc4Task",
+            "address": "0x802952dc",
+            "size": 112,
+            "binding": 1,
+            "compiled_address": "0x802952dc",
+            "compiled_size": 112,
+            "target_sha256": "a3821d2b0e18ad873b91cd3d5547299c78d3423a9f684956928a9efbfd6c9790",
+            "compiled_sha256": "f4778adaeb6490f5e93028f5edb052fc89494a3165b4d74fa27f48f7b9f687b2",
+            "differing_bytes": 6,
+            "status": "partial",
+            "objdiff_percent": 99.46429,
+            "fuzzy_match_percent": 99.46429
+          }
+        ],
+        "object_sha256": "9c7d99f4863f42067a1a6772c892f4bce10c68c59d6a3d17deb96c4100954240",
+        "linked_sha256": "86d183673871eaf5e676569f71ca3bf3974cd46061058a20c079e512cdc8340a",
+        "target_object_sha256": "1a50958a2e8c33d2287a35ce8239413018985c9fdd5426c5e811cd1e8fb5cb2c",
+        "diff_object_sha256": "6b682b443cdf1e3a9e0186564dd60761113e8e2cecb43e7b0aa684a375a47af7",
+        "diff_sha256": "8a0c98164f409af9fc8561ec2bdfe8eedfdf8f5ef143114871caeabd98126635"
+      },
+      {
+        "id": "compare_mc_task_singleton",
+        "functions": [
+          {
+            "name": "TrcSingletonAssert__Q26Realmc11TaskManagerPQ26Realmc4Task",
+            "address": "0x802953d8",
+            "size": 8,
+            "binding": 1,
+            "compiled_address": "0x802953d8",
+            "compiled_size": 4,
+            "target_sha256": "712f2457b7be103f7950c7c722d97a3ec8ec29f781b4cf1083d400bc805b96e4",
+            "compiled_sha256": "f332ea5b5437103cbb6f1508679da89eec9288ad775c96c439a17fccabe3de8e",
+            "differing_bytes": 8,
+            "status": "partial",
+            "objdiff_percent": 50.0,
+            "fuzzy_match_percent": 50.0
+          }
+        ],
+        "object_sha256": "2cb38c1377f424184d811fc0e8fedf805913b605edee6c9ae7cb75c175cbcd25",
+        "linked_sha256": "0115ac2231f0e9bad4bd601956ef3b9b3854195c5e470b56acc0d4facddf6ea9",
+        "target_object_sha256": "3be483236d6e9326af4012565f8518b6bdd833d720fdcbc13f9c130afee664db",
+        "diff_object_sha256": "a643194f76e385085975aa3be1d783d13ad3475eb955af775a9c7815578f5afb",
+        "diff_sha256": "49defb9d5dd76d03e6579877343c230d20f106b7dfa5046a8e1d2a13d4beee41"
       }
     ]
   },
@@ -10701,14 +11212,14 @@
   "dol_sha1": "6abed07aefb9be8cb2cd3c4e0fa53a1fde8db04d",
   "runtime_tested": false,
   "progress": {
-    "matching_code_bytes": 1345092,
+    "matching_code_bytes": 1346180,
     "total_executable_code_bytes": 2492032,
-    "percent": 53.97571138733371,
+    "percent": 54.01937053777801,
     "categories": {
-      "reconstructed_game": 952876,
+      "reconstructed_game": 953964,
       "restored_library": 392216
     },
-    "matching_functions": 7082
+    "matching_functions": 7097
   },
   "input_sha256": {
     "config/GR8E69/AX.json": "24ff5b9f21cad950ae286f1789b084b0c66a95faa490b40bcf692a96c0f4328b",
@@ -11239,6 +11750,21 @@
     "config/GR8E69/comparisons/fetype_create_base.json": "c278a7200c4a5085e583c858b33a0a9a0f849f1239f3673e4ea7c2fd54eb2f5f",
     "config/GR8E69/comparisons/fetype_create_image.json": "4f64e9c0de96ed79a7c78d743991ffbaf7ee970b6007e1b765686456d24ffc5e",
     "config/GR8E69/comparisons/fetypenode_fields.json": "dd410b7d49216725c8d1a6d8a5e7458df8a6924d206d4e437e69931eb1f3afb1",
+    "config/GR8E69/comparisons/gc_driver_create_verify.json": "c2f547ac1c7020c992624c95613a6fd2dcdcdf9e300365ce549951eece557053",
+    "config/GR8E69/comparisons/gc_driver_write.json": "198d2a24799a9ae0839f37ee8fd6e4a437dad8229bbb7c01af407d5e7a3f6f09",
+    "config/GR8E69/comparisons/gc_task_delete.json": "f5a671e68fd6c262e000dec555e1896797e84e92922f5c4a6f7f4a2cfa1f511d",
+    "config/GR8E69/comparisons/gc_task_exists.json": "413f591ea77ff356e57cb3d9c1ad8f54608e8ff617a2ac84812ca71128c82cad",
+    "config/GR8E69/comparisons/gc_task_find.json": "4db890975bae98e0564d93cb543e3b867c2ab4da65eda09ad6f2e676a7ab33b6",
+    "config/GR8E69/comparisons/gc_task_flush.json": "dc56d6aeb409c4aac43764ae312ec1031a49b9e5ae8706db34b59fb7d56c0225",
+    "config/GR8E69/comparisons/gc_task_info.json": "78b7577307819802346267bbc63dae22ede1f7a9f58047cc213f0fc0ef46ed8e",
+    "config/GR8E69/comparisons/gc_task_mount.json": "9ace5b830969a141f7929c8c522722c022cd80d0ecd7fbecf7581c336682cd25",
+    "config/GR8E69/comparisons/gc_task_open.json": "900e033444a03f00c09e1fba23dbe4ea536b9b9a46173684cf7bffdf483cb0a4",
+    "config/GR8E69/comparisons/gc_task_read.json": "d12d6fcb58dacf4d48d53de7ef439910996072cf41144fac8745a7c59143f2de",
+    "config/GR8E69/comparisons/gc_task_trc_exists.json": "37c89ce3a43bc77ad4e631cec0a0750eafedd6ca1029a782468da9f932e2b3e7",
+    "config/GR8E69/comparisons/gc_task_trc_info.json": "9d3455996f0184f6d693f801ba76a306e18b8073e21fbf0537e36b7b98a99efc",
+    "config/GR8E69/comparisons/gc_task_trc_list.json": "7b4b42a594a8abd1b11b9e54bdafe27fa56c148684dd3908feadd2dda33c9d94",
+    "config/GR8E69/comparisons/gc_task_unmount.json": "3730b0346c08c3cf899bfc7d5e0106f4dd5c2bbf6c7a6f8ebcca09ae81b3c94e",
+    "config/GR8E69/comparisons/gc_task_write.json": "518438ec7cd3078de277ef44f3ca299eaaf8fba403d3c75ca9bec87f7e1c10fe",
     "config/GR8E69/comparisons/handler_briefing_events.json": "e075943b1f975637f4bc35611a604aaa3ddf13890531df8fefafd7b46ee87643",
     "config/GR8E69/comparisons/handler_coop_level_start.json": "fe2ca438be07862876886558fec1cbaff1dcd4125a3a92d5813b56733ae9ae1e",
     "config/GR8E69/comparisons/handler_coop_options_events.json": "59db11b07a482d5f4a680cd569db99f8873564d2f803e17c3e12878ea0d0ad16",
@@ -11256,8 +11782,11 @@
     "config/GR8E69/comparisons/loading_DynamicLoaderGetAddr.json": "ccfd822dc2e450c54947352533fad3b894f3e65a13cb02e3dc06b2e0ab806795",
     "config/GR8E69/comparisons/loading_DynamicLoaderInitialize.json": "09ba22038ae1c060bea682e1f15ee9be4f9069ec9b554ce82b9625df2634d8cd",
     "config/GR8E69/comparisons/loading_SymbolPoolSearch.json": "5b45b1b5f1215abf4bdadb049e5ece9e12722a7f6a87e1574e00e4d06406216d",
+    "config/GR8E69/comparisons/mc_public_card_queries.json": "70080603c103c23342e41d66d01321911ab720f086421af1f28495e18c101d7d",
     "config/GR8E69/comparisons/mc_save_load.json": "727f3c508b66a1a253ced86eb91b5593204d479dbb6eb16e5f939176ebd42d86",
     "config/GR8E69/comparisons/mc_startup.json": "880318ea58a61f66deeae390edc062f414d87653ec607a8cba3088939c9e257c",
+    "config/GR8E69/comparisons/mc_task_end.json": "46a39fcf0c3b78e8531a745de950e6febb0bb4cce7b7477a00ea0e55d28fd96b",
+    "config/GR8E69/comparisons/mc_task_singleton.json": "e737979aa9d90712783cce6f2aef7e4d3e92b53551394c29258ebb8626712e9b",
     "config/GR8E69/comparisons/mc_verify_crc.json": "8e44f4f8cbc916a0782aeaa2aca176a291fdda2bb0d5e3f7a29595ae29e56137",
     "config/GR8E69/comparisons/mcgc_issue_start.json": "a54dc65c01ff1b8678a22f9e9207c2c963d17b5b72bebcf9ca2a43f04fa6314c",
     "config/GR8E69/comparisons/mcgc_operations.json": "2fea72088ad56e8790f4c6f1b68771af5ae02e495573e93653d45874b374e4e6",
@@ -11284,7 +11813,7 @@
     "config/GR8E69/comparisons/sphere_visibility.json": "2293c09db6d2ed5ef7b02055a6ae53de114dc74a2e9d1c26c35e5ae332c2367e",
     "config/GR8E69/comparisons/thrown_bullet_commit.json": "5fbd1600a50b8e5e43e5b699dab2b0a975a23afe9beb36ce13c250c837f27e66",
     "config/GR8E69/comparisons/triangle_nearest.json": "1db65edb247e6e751b7dbe2d2e1d1945077ce757d9eaf20f4c8353f3b1eb8c51",
-    "config/GR8E69/comparisons.json": "350099cc35a182ef9eedb6b29d06b0b345064791476c4b7a698778d4ee41a6c1",
+    "config/GR8E69/comparisons.json": "0a3b1e07261c0d51e91fa1e2398ce34806011d68ba8e0ed0f4fdb8a88784147c",
     "config/GR8E69/compartment_draw_enabled.json": "730b38a0998449f373a9662e21aca81719a2c97d3343655dd4bdbf108cf66b4e",
     "config/GR8E69/compartment_init.json": "c81d407c5a80e7637234adc8c653bb20d536159d7c6b2a164ec1cc43f40f1a7c",
     "config/GR8E69/compartment_instance_loaders.json": "823865f150f0812ae043dcb98a095dea11de008524e96be32931e73f394fa31c",
@@ -11795,6 +12324,9 @@
     "config/GR8E69/gc_interface_create.json": "6cc1c24e04f42337fc0f1042ebba42caec359238706142a7a27fc9d0d4a4fba9",
     "config/GR8E69/gc_interface_messages.json": "67f7057392d763176574784c447f4d48a613a91426e0dc24fb7e9e3ce83dbf7a",
     "config/GR8E69/gc_interface_thread.json": "1f4dae87cbf32bdbd38269143d62e70e3cfff52e271cebd3f7c34cb8a09c3166",
+    "config/GR8E69/gc_task_attribute.json": "46f711ff6bcdb946f261e786a115d7ab0eed672514c68060aee3fb4102496f15",
+    "config/GR8E69/gc_task_close.json": "3375e6fe29882e4b46309e22e9153854baf95d6c3cefb5c13b3854209eabf32b",
+    "config/GR8E69/gc_task_seek.json": "62c3530757eede25447ee25b383ee950b75c36eba93b32ff698a95bfa06c7654",
     "config/GR8E69/gchw_vd_draw.json": "4c977aa5b69c6350982e9674593fe909a04184b0168c0544440c8b5ed00322f7",
     "config/GR8E69/gchw_vd_setters.json": "1a809e6657edda88805d31c637e4fd28f2bdae3a7905d38c51abc85a4f277991",
     "config/GR8E69/grenade_response_queries.json": "5932b489bfec46bf4c73dad2d1d3bc9faa7acf77d137fb97cac1fdea8d343ecc",
@@ -11951,6 +12483,8 @@
     "config/GR8E69/matrix_translation.json": "622a8647279665d8f4caeb887a2966a8719838335416b658bdcb872ddba78fd5",
     "config/GR8E69/mc_a.json": "aacbd0b11cd7109e5d9866ff72e515203667a753e3b6349470ba4ddb3fc275be",
     "config/GR8E69/mc_b.json": "fcbc039c2baa79650994398eececcc037e92bf6cbd06d2626c294dd27683acb6",
+    "config/GR8E69/mc_block_calculator.json": "c425c8a1545ef85ad73d6d3fefd90efeffd6169c5781a93ee610c6baf16c98b4",
+    "config/GR8E69/mc_block_result.json": "04327d666553e1a155fbdb6ac0ec5810fdb8b58e0ffa0ebd80be45cf8830dd57",
     "config/GR8E69/mc_c.json": "fe3977be1fa26fad7c86b3ea4c343bfae473f8a16f6525e34c1bca9942714ba4",
     "config/GR8E69/mc_cache_device.json": "8e9605690c4af59c9512ce8e778218eb41fa076eee05ffe6773cc517fde9cafa",
     "config/GR8E69/mc_d.json": "c77c9bcd6ffb6d2cc662d01b6510cd12192a60dc7f4948c52a9054d183f2de29",
@@ -11962,6 +12496,7 @@
     "config/GR8E69/mc_g.json": "816698e9a4c7b3b3c9a05187f01fb99c16c7ccb916c8b65e2cbd46442a173034",
     "config/GR8E69/mc_getname.json": "c27c96523883ff737d5b936158780c9ce6a1d27cbdfaa9c843dede6527bdb50c",
     "config/GR8E69/mc_h.json": "b06aa49f3024230543bae090edfc8250f5cc270effd2a85e7ddbb379285184db",
+    "config/GR8E69/mc_memvectors.json": "fd77d8bb912dc45885584af7f35cafb1e3d58bded883c06782d21adb444223b9",
     "config/GR8E69/mc_message_clear.json": "812cdf3692f94a575b852bcad36b2a626e2350da9db6ef37fb1159272fafd130",
     "config/GR8E69/mc_public_calls.json": "1b4c75fc872636f1d71e062e5889abaad0edc12ac837306e0223f8d752c2bae8",
     "config/GR8E69/mc_public_start.json": "2f391415137e12df10770f95de9776551f35e44650a6f6672d10b994facdf91b",
@@ -12265,7 +12800,7 @@
     "config/GR8E69/popup_message_dtor.json": "ad615c2d02ccd9d8fdee2dcbab40f5598d04222fc26509841431b89f6c5c011b",
     "config/GR8E69/position_sound_copy.json": "6c1e3e5c02bb4e22406d9370de055031bd04c575f9b63e9b6611560b64d8456c",
     "config/GR8E69/position_sound_defaults.json": "b9cb53458414b4b2f8e97c552ab96884f09a137d36883e77dad7795fb908a24c",
-    "config/GR8E69/project.json": "5620f39d1c9e33f9aa361ba74b3abd6934b6d402713d7d804367f534fe86ce3e",
+    "config/GR8E69/project.json": "5fbf7597b9504e2cfe0c1c66954e2ae1d521c8f5a8619a05bbd952ad5a216b1c",
     "config/GR8E69/projectile_accessors.json": "5851f821233d730dc3d1a13808fd77e106f14662c4097d457de5c19c5d860a6e",
     "config/GR8E69/projectile_bounds.json": "3e87ca73b6c04ec2f9e5049fec24394baf29808a70656c93a29abe0d15e35be2",
     "config/GR8E69/projectile_collision_id.json": "f5218fa896d09cc78c143f20c86bf74f21af1c0b47093737d74acd284b8c5bf5",
@@ -13824,9 +14359,12 @@
     "include/game/PropertyReaders.h": "b071c0e9a64579b83d6d5955914a9a8b2357f7914fa2f21f6c8548f11463b54a",
     "include/game/Rcmp.h": "84df0021ab0c74719fd24cfb9bcde67ef05de94330531dbf718631f5baaec899",
     "include/game/RcmpMadCodec.h": "3972d6a4882777dd85530d267b959c8d5c62439426cd39a7aae9770c01003047",
-    "include/game/RealmcDriver.h": "a863e7bcac7ee35751845bd892f6af2ff0bc93c904807531c49a486d6e158bf6",
+    "include/game/RealmcBlockCalculator.h": "08872d0f339ebbf5a70590c31f17b1c62afdee80aaeed8098738699dd9dbc41c",
+    "include/game/RealmcDriver.h": "3fc6e772b881b6d19bdda76f5a6c7b85a91a10269695376c52115ab2c41af9f2",
     "include/game/RealmcInterface.h": "943e032701004e66f0adb23c7b235f2174af4bcb0f8900baf18f3133df0a5756",
     "include/game/RealmcPublic.h": "90e9339fcc510af550e5213a18c87a56ed548f0b110fb5fe247de23145fbd7da",
+    "include/game/RealmcTaskManager.h": "0e4423dee13329875d25faf0d631806823e492615d54531bd16c4b4a49d09c20",
+    "include/game/RealmcTaskUpdate.h": "9e33e2868c51a7e0cd0447482e94b2b67ed034cbb976b05e504551c90cb8ba20",
     "include/game/SaveGamePopups.h": "7859e2a020c4bb1bc1c9d4f13c9f3fc4fe749530f4251d16ea9e3cdf14766900",
     "include/game/SceneCollisions.h": "2a1769143eeecf427cad1a013ebf02f6b0d2ee83e011b58e5c62cd141306cd64",
     "include/game/SceneNode.h": "e57802b8a891e60ae5642230d29fea224075a837267cac91413b2a7fae00a560",
@@ -15395,19 +15933,43 @@
     "src/memorycard/file_descriptor_clear.cpp": "47eb051dac3c31fea5dc8a3da15f77065112593e0afee76e5bc84faa30139e68",
     "src/memorycard/file_descriptor_init.cpp": "7910f956f1bbc7f3547c5101814bdd053277044d88a324516bcb3db44b96d768",
     "src/memorycard/gc_driver_bio.cpp": "74d811024f98397854ad1718e5877d0d48580092235dd9e2fd040f8d8dfee0e2",
+    "src/memorycard/gc_driver_create_verify.cpp": "9895f2616cc197f4ff632035fc06f24986718d87ca12f4aa05497337e45331ec",
     "src/memorycard/gc_driver_files.cpp": "f1831fe8c01ac1ba4d921852af4515a6056e14e4a0adb6722d601f36dd6864ff",
     "src/memorycard/gc_driver_header.cpp": "d37293ecdd3e997c6b2d7e5e1d1f59f5007f2259c3ed1b40854675cc43492f17",
     "src/memorycard/gc_driver_mount.cpp": "958b9c1f21bdc9cf45fbef2a3de9def9c151ac15f1664523bced8f2d5b2f012a",
+    "src/memorycard/gc_driver_write.cpp": "b0ffbb1ca9320bf97ac5b71a62ca9eb64182743fe9f8acbb2750b399a96b88a7",
     "src/memorycard/gc_interface_access.cpp": "8d6a6684defa6c496531b98b44cbb7dd80362698ff8f014c469910d8ec082551",
     "src/memorycard/gc_interface_create.cpp": "63a2b6c74a211f0f9f2320d664630fd900202547c9ad53fadd36af45c48c8725",
     "src/memorycard/gc_interface_messages.cpp": "7a7b95837703b92186e2c482d6ec27af0ecb3e3dca5273f377bbf7f4639da9a3",
     "src/memorycard/gc_interface_thread.cpp": "1fc31b9f9fdd0ec8ff37f1b5b0f3ea3165959fa5ec64708707198ac7c1902985",
+    "src/memorycard/gc_task_attribute.cpp": "c64d4f14f0b3ba4aeaadc53d71e251b57b435e89e167c1283ffebc2ad4f9710a",
+    "src/memorycard/gc_task_close.cpp": "eedb97bb3f61f3df7e60f4f5e2e21943260a800a30fdfbcb3bd4ceb3c7ccb561",
+    "src/memorycard/gc_task_delete.cpp": "e674af8275159c94920b43be7bc3af714c9c1fbdbcc587acc6fea397a7d4b95f",
+    "src/memorycard/gc_task_exists.cpp": "c8a5b73ec0afe3239d6ba6c4df67c1b0b798f73083385ee4a36fdd0c561ca511",
+    "src/memorycard/gc_task_find.cpp": "b31f1fd5ee54d4fd5ef03817491111bdb3a9203d5b7b1c657b391649723e7233",
+    "src/memorycard/gc_task_flush.cpp": "3c8fbee58f2dbc7a35de7450f13f62402db342055245f976594be962832d7ae1",
+    "src/memorycard/gc_task_info.cpp": "d125cdad80d0416f7964ee595420df11669adf40b061670235471ad09ca299b1",
+    "src/memorycard/gc_task_mount.cpp": "3ca3d82dcb5effdd550c49ca3cc3bc0bc99f4bb3a6c0e4ec8edf008730fd0abb",
+    "src/memorycard/gc_task_open.cpp": "61782166adb1ce2ac671fb62b52c849772bf7f4af305cb6b0cd8c73c887284cc",
+    "src/memorycard/gc_task_read.cpp": "ea2a14749bacfb2f62b2e4c290c6620bd257f0f8c868feab1e7195fc5c6f6712",
+    "src/memorycard/gc_task_seek.cpp": "6e3a3a1024f5e56208204515e8304a76714d4f93a033b5bdc5a52c56237f2410",
+    "src/memorycard/gc_task_trc_exists.cpp": "0dfd822243f0cfe111496abf43484c9434bf1bc96d30ab071e0f9f0cc1e7473e",
+    "src/memorycard/gc_task_trc_info.cpp": "de647472a8b44fb7c84bac393caee9d79a09bea21a48dd84256fa42a8c6ca406",
+    "src/memorycard/gc_task_trc_list.cpp": "b468216d3bffb88a7db2f74606436f4423952a5f35696e43d10a45ea1ffceb6d",
+    "src/memorycard/gc_task_unmount.cpp": "e27e045f20724e38ac59db91feceaa78b9a8ad8b694bba9d8c036f139f86a853",
+    "src/memorycard/gc_task_write.cpp": "df22570c1d524ac2f25c91d64660f05ad4139c57ed7138d943da9184772d833f",
+    "src/memorycard/mc_block_calculator.cpp": "6a5112c599e867ff55b025baafc345c50fbc9406913a69117589294d3c60248c",
+    "src/memorycard/mc_block_result.cpp": "b3e0a946f6106349fb165468378c49cd208d5646404a3aaf800c9635177cc587",
+    "src/memorycard/mc_memvectors.cpp": "b8dffb2ce31b533c5b3b772dc5aceb83fd26e016cad0498d150c10d3f1281803",
+    "src/memorycard/mc_public_card_queries.cpp": "80e983a6e17e754c90ee48ea1b1d87556cdbc237aade9c83020b804e1e7c5691",
+    "src/memorycard/mc_task_end.cpp": "bdb7922ed963fdd8287dd9ddd7b7998f2521a90ec25b5f80dd0236dd1aeea32d",
+    "src/memorycard/mc_task_singleton.cpp": "cf1f78738a188a637eafb46ac9c1d034f436c697872436940ee0c2578822698e",
     "src/memorycard/message_clear.cpp": "41b782b44a1160f13de78ae478feb1113e58beae895627f74fd72ec7ad538259",
     "src/memorycard/public_calls.cpp": "7c1030dcf2ab2b66caabf8d934bd16dc7531076e3ace1f9934d996b371ae4832",
     "src/memorycard/public_start.cpp": "4a6df3192efef4f410c7bbf9e2c2ec3aea6f31a7fc268c447e87f6881ac62f34",
     "src/memorycard/public_trc_files.cpp": "09f810042a96e58009ba8d056ac31819a5fc8c6f18327d407fc8f0902dcc636f",
     "src/memorycard/task_clear.cpp": "c55be9d211c97a0b15f95adecef158762e64dea7a0018ea94d693eb027a820d1",
-    "src/memorycard/task_manager_start.cpp": "609326a001f153f4a521a15fa5938b31b21cd1c59bdbf11e961526f30a5ecadd",
+    "src/memorycard/task_manager_start.cpp": "79e7880182696a5921c4f7f9e213479450b6bd14ac04b3432dab24226bf110f6",
     "src/memorycard/task_trc_init.cpp": "176e1a47843fede7751894d206cf59fe087eb3f93f160bf93ea8de7dfa86f3cf",
     "src/newlib/COPYING.NEWLIB": "926114809b158088f2672ad7d05c60e72b3217edadbfd55ad3c1ba319b84f852",
     "src/newlib/NOTICE": "03cf2a4fe95fd7219fc9bf1e9967b9f29dceb614612006c4f7797c6b6889504c",
@@ -67874,6 +68436,120 @@
       "discarded_functions": [],
       "object_sha256": "4106ec794783438f834f2706a9ccdc889309b3a3f0267ce25aff73b8d34afb0e",
       "linked_sha256": "0c8cf88e3f941352e6baf9cac167614f8de0322912a760121262c86d3675d03e"
+    },
+    {
+      "id": "gc_task_attribute",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 248,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "e1d6f35bb40f7d48a6a3f6d55a9e1b10ba16caddfc4e426fe8012e1f19469e46",
+      "linked_sha256": "41a297dc47874819d9634989bb61ad9c2d1345be1be7dfe8351cf304f8523ff0"
+    },
+    {
+      "id": "gc_task_close",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 176,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c943ac84858a88ddd594a667d2a2deeb42ae3ac84ea9e092d6c1dedbdb2d301b",
+      "linked_sha256": "64871842932f70fe854a627f5433fe5b1437e918dbdef2cd9e90043bc70f7108"
+    },
+    {
+      "id": "gc_task_seek",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 208,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "0c1850670fdf361ba2c20e12afa2345d02be2077cd7827c0e3130d2addbe8065",
+      "linked_sha256": "61f679ca5a7db580a94666660d6312166d845e98a9e83b1ba442df8849d2e47e"
+    },
+    {
+      "id": "mc_block_calculator",
+      "category": "reconstructed_game",
+      "functions": 3,
+      "code_bytes": 184,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "c887981999f05e9d92eb28a35ab199c06eee593214e2f9000912c88ee3b0eda8",
+      "linked_sha256": "031b61a027583a96125fef4e98ffe07f81def8987f2dfc6f8706b1ab8b3bdcc7"
+    },
+    {
+      "id": "mc_block_result",
+      "category": "reconstructed_game",
+      "functions": 1,
+      "code_bytes": 8,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "bb6180d3ac77935aa5d297036fa60a0008c4ad0a1a7438719eb780af4b1bcef5",
+      "linked_sha256": "72d163a46641e575ff2a9ebc3d38e2a7dd17d7ec26ee670f12289f13336b464c"
+    },
+    {
+      "id": "mc_memvectors",
+      "category": "reconstructed_game",
+      "functions": 8,
+      "code_bytes": 264,
+      "compiler_family": "ProDG",
+      "compiler_version": "3.8.1",
+      "compiler_flags": [
+        "-O2",
+        "-G8",
+        "-fno-exceptions",
+        "-fno-implicit-templates",
+        "-fno-strength-reduce"
+      ],
+      "strip_unused": false,
+      "discarded_functions": [],
+      "object_sha256": "4d431c2633cece3796cde02961e391d79a602350a0239148564d40e0734c0773",
+      "linked_sha256": "42b62ab584d6daa75aa7b54bd0118cbd43929ba1c3534d9f4c0b8787e10d2ac6"
     }
   ],
   "code_map": {
@@ -86356,13 +87032,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80213b8c",
-            "size": 176,
-            "kind": "function",
-            "name": "UpdateTaskClose__Q26Realmc11GCInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80213c3c",
             "size": 392,
             "kind": "function",
@@ -86377,13 +87046,6 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x80213f4c",
-            "size": 208,
-            "kind": "function",
-            "name": "UpdateTaskSeek__Q26Realmc11GCInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x8021401c",
             "size": 172,
             "kind": "function",
@@ -86395,13 +87057,6 @@
             "size": 344,
             "kind": "function",
             "name": "UpdateTaskDelete__Q26Realmc11GCInterface",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80214220",
-            "size": 248,
-            "kind": "function",
-            "name": "UpdateTaskSetAttribute__Q26Realmc11GCInterface",
             "evidence": "adjacent-compiler-markers"
           },
           {
@@ -86511,111 +87166,16 @@
             "evidence": "adjacent-compiler-markers"
           },
           {
-            "address": "0x802165e0",
-            "size": 80,
-            "kind": "function",
-            "name": "Init__Q26Realmc18BlockCalculatorImpPQ26Realmc8GCDriverUi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216630",
-            "size": 20,
-            "kind": "function",
-            "name": "Clear__Q26Realmc18BlockCalculatorImp",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216644",
-            "size": 84,
-            "kind": "function",
-            "name": "SetFileInfo__Q26Realmc18BlockCalculatorImpRCQ26Realmc6CardIDRCQ26Realmc8FileInfo",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
             "address": "0x80216698",
             "size": 52,
             "kind": "function",
             "name": "_._Q26Realmc18BlockCalculatorImp",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802166cc",
-            "size": 8,
-            "kind": "function",
-            "name": "GetResult__Q26Realmc18BlockCalculatorImp",
             "evidence": "adjacent-compiler-markers"
           }
         ],
         "marker_interval": [
           "0x8021659c",
           "0x802166d4"
-        ]
-      },
-      {
-        "name": "Unmatched files/memvectors.cpp [inferred file group]",
-        "file_record": 507,
-        "file_name": "memvectors.cpp",
-        "ranges": [
-          {
-            "address": "0x802166d4",
-            "size": 12,
-            "kind": "function",
-            "name": "SetMemVectors__6RealmcPFPCciiii_PvPFPv_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802166e0",
-            "size": 12,
-            "kind": "function",
-            "name": "SetSizeMemVectors__6RealmcPFPCciiii_PvPFPvi_v",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802166ec",
-            "size": 40,
-            "kind": "function",
-            "name": "DefaultSizeAlloc__6RealmcPCciiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216714",
-            "size": 40,
-            "kind": "function",
-            "name": "DefaultSizeFree__6RealmcPvi",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021673c",
-            "size": 40,
-            "kind": "function",
-            "name": "AllocateMem__6RealmcPCciiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x80216764",
-            "size": 40,
-            "kind": "function",
-            "name": "AllocateMemSize__6RealmcPCciiii",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x8021678c",
-            "size": 40,
-            "kind": "function",
-            "name": "FreeMem__6RealmcPv",
-            "evidence": "adjacent-compiler-markers"
-          },
-          {
-            "address": "0x802167b4",
-            "size": 40,
-            "kind": "function",
-            "name": "FreeMemSize__6RealmcPvi",
-            "evidence": "adjacent-compiler-markers"
-          }
-        ],
-        "marker_interval": [
-          "0x802166d4",
-          "0x802167dc"
         ]
       },
       {
