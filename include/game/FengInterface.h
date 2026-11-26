@@ -24,9 +24,12 @@ class CUIObjectSet {
 };
 extern "C" void *DWI_alloc(const char *, int, int);
 struct ShapeFile;
+struct _spritepolyvert;
 class CSprite {
   public:
     void *operator new(unsigned int size, const char *label) { return DWI_alloc(label, size, 1024); }
+    enum EPolyPrimType { PolyPrimUnknown0 = 0 };
+    void DrawPoly(_spritepolyvert *, int, EPolyPrimType);
     enum ESpriteLoadType { SpriteLoadUnknown0 = 0 };
     CSprite(const char *, ESpriteLoadType);
     CSprite(ShapeFile *);

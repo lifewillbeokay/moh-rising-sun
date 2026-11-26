@@ -1,0 +1,36 @@
+{
+  "id": "compare_savepopup_setstring",
+  "source": "src/frontend/savepopup_setstring.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a2ccc",
+      "size": 272
+    }
+  ],
+  "functions": [
+    {
+      "name": "SetString__14CSaveGamePopupP8FEStringPCUwb",
+      "address": "0x801a2ccc",
+      "size": 272,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "USTR_length": "0x802175c4",
+    "USTR_copy": "0x802175ec",
+    "__as__12FEWideStringPCs": "0x80056a60"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "SetString__14CSaveGamePopupP8FEStringPCUwb"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

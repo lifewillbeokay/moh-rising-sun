@@ -1,0 +1,46 @@
+{
+  "id": "mcgc_destructor",
+  "source": "src/save/mcgc_destructor.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5b28",
+      "size": 108
+    }
+  ],
+  "functions": [
+    {
+      "name": "_._13CMemoryCardGC",
+      "address": "0x801a5b28",
+      "size": 108,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_vt.13CMemoryCardGC": "0x802ebfa0",
+    "g_pMCInstance": "0x802c7d94",
+    "_._11CMemoryCard": "0x801a31c4"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardGC.cpp",
+  "original_file_index": 2125,
+  "local_externals": [
+    "g_pMCInstance"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}

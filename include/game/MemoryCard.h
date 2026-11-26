@@ -44,7 +44,7 @@ public:
     void RequestReply();
     // PCUw records a wide-character ABI whose original source spelling is unknown.
     void Display(const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *, const unsigned short *) asm("Display__11CMemoryCardPCUwN41");
-    int ScanVisibly(ScanTask &, int);
+    void ScanVisibly(ScanTask &, int);
     int Load(const char *, unsigned int, struct SPlayerProfile &);
     void CancelReplyRequest();
     int WaitingForReply() const;

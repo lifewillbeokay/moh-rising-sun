@@ -19,12 +19,18 @@
     {
       "name": ".text",
       "address": "0x801a3de8",
-      "size": 480
+      "size": 1272
     },
     {
       "name": ".rodata",
       "address": "0x802b6810",
-      "size": 80
+      "size": 212
+    },
+    {
+      "name": ".bss",
+      "address": "0x803f502c",
+      "size": 20,
+      "type": 8
     }
   ],
   "functions": [
@@ -57,21 +63,46 @@
       "address": "0x801a3f98",
       "size": 48,
       "binding": 1
+    },
+    {
+      "name": "OnUIEvent__16CMemoryCardPopupUiP8FEObject",
+      "address": "0x801a3fc8",
+      "size": 232,
+      "binding": 1
+    },
+    {
+      "name": "OnSoundEvent__16CMemoryCardPopupUiP8FEObject",
+      "address": "0x801a40b0",
+      "size": 300,
+      "binding": 1
+    },
+    {
+      "name": "OnPush__16CMemoryCardPopup",
+      "address": "0x801a41dc",
+      "size": 260,
+      "binding": 1
     }
   ],
   "externals": {
     "DWI_alloc": "0x801a8670",
-    "FindObject__C7FEnginePCcT1": "0x8004d430",
-    "HideSelections__16CMemoryCardPopup": "0x801a4664",
-    "_._14CSaveGamePopup": "0x801a22e8",
     "_16CMemoryCardPopup.s_pInstance": "0x802c5d78",
     "__14CSaveGamePopupPCc": "0x801a219c",
-    "__as__12FEWideStringPCc": "0x80056ab8",
     "_vt.16CMemoryCardPopup": "0x802ebeb0",
-    "sprintf": "0x80263a3c"
+    "FindObject__C7FEnginePCcT1": "0x8004d430",
+    "__as__12FEWideStringPCc": "0x80056ab8",
+    "sprintf": "0x80263a3c",
+    "HideSelections__16CMemoryCardPopup": "0x801a4664",
+    "_._14CSaveGamePopup": "0x801a22e8",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "_vt.10SoundEvent": "0x802e4ce8",
+    "_vt.15SoundAliasEvent": "0x802ead68",
+    "g_GameFlow": "0x802f9ce0",
+    "GetStringCRC__FPCc": "0x801acb98",
+    "SendEvent__15SoundAliasEvent": "0x801679b0"
   },
   "discarded_functions": [],
   "undefined_in_discarded_code": [],
   "original_file": "MemoryCardPopup.cpp",
-  "original_file_index": 2094
+  "original_file_index": 2094,
+  "evidence": "docs/research/save-popups.md"
 }

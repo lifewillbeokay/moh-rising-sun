@@ -1,0 +1,75 @@
+{
+  "id": "compare_savepopup_wait",
+  "source": "src/frontend/savepopup_wait.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a2a00",
+      "size": 716
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6430",
+      "size": 24
+    }
+  ],
+  "functions": [
+    {
+      "name": "Wait__14CSaveGamePopup",
+      "address": "0x801a2a00",
+      "size": 716,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "g_bBackgroundEnabled": "0x802c5d48",
+    "g_frameDel": "0x802c51e8",
+    "Gameloop_Draw__Ff": "0x8016b338",
+    "g_inputMgr": "0x803077c4",
+    "Update__13CInputManagerf": "0x800d68fc",
+    "g_listPopups": "0x803e8a34",
+    "_7CScreen.m_sWidth": "0x80452574",
+    "_7CScreen.m_sHeight": "0x80452578",
+    "g_viewport": "0x803e71c0",
+    "g_camera": "0x803e6f00",
+    "g_screen": "0x802f9920",
+    "SetRect__9CViewportffff": "0x8012f5bc",
+    "Set__8CFrustumRC7CCameraR7CScreenR9CViewport": "0x8012cd20",
+    "Transform__8CFrustumRC7CMatrix": "0x8012d100",
+    "GetOrthographicDrawContext__C11CScreenEAGL": "0x8005ca60",
+    "g_GameFlow": "0x802f9ce0",
+    "g_PauseScreen": "0x802f8040",
+    "UpdateUnplugged__10CPauseMenu": "0x8017e5bc",
+    "DrawUnplugged__10CPauseMenu": "0x8017e95c",
+    "g_Shell": "0x802f4420",
+    "UpdateUnplugged__12ShellManager": "0x8017f8e4",
+    "DrawUnplugged__12ShellManager": "0x8017f9cc",
+    "g_bDisableSound": "0x802c4de0",
+    "SNDSYS_entercritical": "0x8021f948",
+    "g_SoundMan": "0x80330c60",
+    "ServiceStreams__9cSoundMan": "0x8015d8fc",
+    "Update__13SoundSchedulef": "0x8015a6d4",
+    "SNDSYS_leavecritical": "0x8021f988",
+    "SNDPROFILE_iopcpu": "0x8021f4e0",
+    "SYNCTASK_run": "0x8021811c",
+    "SoundSync__Fv": "0x80156aac",
+    "Update__7GBALinkv": "0x80056f54",
+    "WaitScreen__Fv": "0x8016c650"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "local_externals": [
+    "g_bBackgroundEnabled",
+    "g_listPopups"
+  ],
+  "profile_from": "fenginterface_files.json",
+  "comparison_functions": [
+    "Wait__14CSaveGamePopup"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

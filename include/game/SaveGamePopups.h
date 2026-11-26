@@ -48,7 +48,8 @@ class CSaveGameKeyboardPopup : public CSaveGamePopup {
     void BackspaceNameString(char *);
     void LocalizeString(const char *, const char *);
     static CSaveGameKeyboardPopup *m_sInstance;
-    unsigned char unknown_20[0x2c - 0x20];
+    char name[9];        // +0x20; eight characters and a terminator.
+    unsigned char unknown_29[3];
     int nameStarted;      // +0x2c; the first letter replaces the default name.
 };
 class CSaveGameLanguageScreen : public CSaveGamePopup {

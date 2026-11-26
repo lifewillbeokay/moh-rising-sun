@@ -32,10 +32,12 @@ def manifest_functions(unit):
 def object_record(symbol):
     name = symbol["name"]
     # MW and SN append compilation-local sequence numbers to function statics.
-    # Compare their C identifier, binding, exact address and size instead.
+    # SN also numbers compiler-generated dynamic-initialization guards.
+    # Preserve each guard index; only its compilation-local final suffix varies.
+    # Compare the stable name, binding, exact address and size instead.
     if symbol["binding"] == 0 and re.fullmatch(r"[A-Za-z_]\w*\$\d+", name):
         name = name.rsplit("$", 1)[0]
-    if symbol["binding"] == 0 and re.fullmatch(r"[A-Za-z_]\w*\.\d+", name):
+    if symbol["binding"] == 0 and re.fullmatch(r"(?:[A-Za-z_]\w*|_\.tmp_\d+)\.\d+", name):
         name = name.rsplit(".", 1)[0]
     return name, symbol["address"], symbol["size"], symbol["binding"]
 

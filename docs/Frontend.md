@@ -200,7 +200,9 @@ local to them: the alias store goes through a reference, as its inline body show
 constructor across `OnUIEvent`, which needs a guarded static, and `Display` and `SetString` take a pointer the source spelling for which
 is unknown (`PCUw`). The save-flow follow-up below now provides an explicitly
 labeled 16-bit pointer boundary for the exact `CMemoryCard::Display` forwarder;
-the popup text implementations themselves remain unfinished.
+the [save-popup follow-up](research/save-popups.md) supplies the popup text
+implementations as measured partials and consolidates the constructor, guarded
+UI handler, sound handler and OnPush as one exact unit.
 
 `ShellManager::handlers` maps packages to their handlers. Only the units that touch it include `ShellHandlerMap.h` first, which gives the member
 its real type; the rest see sixteen bytes, so they build without the container headers. `updateOnce` is named from `Process`, which runs one engine
@@ -224,3 +226,8 @@ The [save-flow and GameCube memory-card follow-up](research/save-flow.md) extend
 these popup interfaces into startup, save/load, CRC checks and card messages. It
 records virtual-slot evidence, the 16-bit display boundary and isolated original/
 native behavior tests for eight exact functions and 17 measured partials.
+
+The [save-popup and card-start batch](research/save-popups.md) adds 21 functions
+for text entry, language selection, card startup, visible scans, popup stacking
+and frame rendering. It records 13 exact functions, eight partials, static-guard
+ownership checks and isolated original/native PowerPC tests.

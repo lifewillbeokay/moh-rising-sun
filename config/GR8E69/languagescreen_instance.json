@@ -1,0 +1,55 @@
+{
+  "id": "languagescreen_instance",
+  "source": "src/frontend/languagescreen_instance.cpp",
+  "category": "reconstructed_game",
+  "compiler_version": "3.8.1",
+  "compiler_flags": [
+    "-O2",
+    "-G0",
+    "-fno-exceptions",
+    "-fno-implicit-templates"
+  ],
+  "include_dirs": [
+    "include/game",
+    "include/newlib-compiler",
+    "include/newlib"
+  ],
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5314",
+      "size": 136
+    }
+  ],
+  "functions": [
+    {
+      "name": "__tcf_0",
+      "address": "0x801a5314",
+      "size": 44,
+      "binding": 0
+    },
+    {
+      "name": "Instance__23CSaveGameLanguageScreen",
+      "address": "0x801a5340",
+      "size": 92,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "p.3348": "0x803f5074",
+    "_._23CSaveGameLanguageScreen": "0x801a545c",
+    "_.tmp_0.3349": "0x803f50c4",
+    "__23CSaveGameLanguageScreen": "0x801a539c",
+    "atexit": "0x80264e58"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameLanguageScreen.cpp",
+  "original_file_index": 2111,
+  "local_externals": [
+    "p.3348",
+    "_.tmp_0.3349"
+  ],
+  "evidence": "docs/research/save-popups.md"
+}

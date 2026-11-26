@@ -1,0 +1,68 @@
+{
+  "id": "compare_languagescreen_ui",
+  "source": "src/frontend/languagescreen_ui.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5518",
+      "size": 632
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6d48",
+      "size": 76
+    }
+  ],
+  "functions": [
+    {
+      "name": "OnUIEvent__23CSaveGameLanguageScreenUiP8FEObject",
+      "address": "0x801a5518",
+      "size": 632,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "_.tmp_1.3366": "0x803f50cc",
+    "FEHashUpper__FPCc": "0x800499a4",
+    "uLANGUAGE_SELECTED.3365": "0x803f50c8",
+    "_.tmp_2.3368": "0x803f50d4",
+    "uSELECTLANGUAGETEXT.3367": "0x803f50d0",
+    "_.tmp_3.3370": "0x803f50dc",
+    "uUPDATESCREEN.3369": "0x803f50d8",
+    "_.tmp_4.3372": "0x803f50e4",
+    "uCONFIRM.3371": "0x803f50e0",
+    "g_GameSettings": "0x802f80c8",
+    "Set_Language__13CGameSettings10ELanguages": "0x8016d910",
+    "g_eResponse": "0x802c5d88",
+    "g_pMiscTextDatabase": "0x802c5d60",
+    "GetLocaleID__23CSaveGameLanguageScreeni": "0x801a5794",
+    "LOCALE_setstate": "0x802172b8",
+    "FindObjectByHash__9FEPackageUl": "0x80051274",
+    "LOCALE_getstr": "0x80217378",
+    "SetString__14CSaveGamePopupP8FEStringPCUwb": "0x801a2ccc",
+    "GetButtonName__23CSaveGameLanguageScreeni": "0x801a5814"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameLanguageScreen.cpp",
+  "original_file_index": 2111,
+  "local_externals": [
+    "_.tmp_1.3366",
+    "uLANGUAGE_SELECTED.3365",
+    "_.tmp_2.3368",
+    "uSELECTLANGUAGETEXT.3367",
+    "_.tmp_3.3370",
+    "uUPDATESCREEN.3369",
+    "_.tmp_4.3372",
+    "uCONFIRM.3371",
+    "g_eResponse"
+  ],
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "OnUIEvent__23CSaveGameLanguageScreenUiP8FEObject"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

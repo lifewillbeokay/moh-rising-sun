@@ -25,8 +25,10 @@ struct CPlane {
     int GetIntersection(const CLine3 &, float &, CVector3 *) const;
 };
 
+class CCamera; class CScreen; class CViewport;
 struct CFrustum {
     CPlane planes[10];
+    void Set(const CCamera &, CScreen &, CViewport &);
     void Transform(const CMatrix &);
 };
 

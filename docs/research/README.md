@@ -119,3 +119,7 @@ forwarding, duplicate favorites, and maintained settings/render/menu partials.
 The [save-flow and GameCube card batch](save-flow.md) adds 25 functions for
 startup, profile save/load, CRC validation, card polling, scanning and replies,
 with eight exact functions and 17 measured partials.
+
+The [save-popup and card-start follow-up](save-popups.md) adds 21 functions,
+including exact popup lifecycle/UI storage and visible scans, with measured
+keyboard, language, text, rendering and card-start partials.

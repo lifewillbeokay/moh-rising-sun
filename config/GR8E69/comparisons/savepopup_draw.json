@@ -1,0 +1,46 @@
+{
+  "id": "compare_savepopup_draw",
+  "source": "src/frontend/savepopup_draw.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a244c",
+      "size": 1128
+    },
+    {
+      "name": ".rodata",
+      "address": "0x802b6400",
+      "size": 48
+    }
+  ],
+  "functions": [
+    {
+      "name": "Draw__14CSaveGamePopup",
+      "address": "0x801a244c",
+      "size": 1128,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Render__7FEngine": "0x8004e990",
+    "_7CScreen.m_sWidthScale": "0x8045257c",
+    "cosf": "0x80270840",
+    "sinf": "0x80270a08",
+    "_7CScreen.m_sHeightScale": "0x80452580",
+    "_7CScreen.m_sVideoMode": "0x802c1b8c",
+    "memset": "0x80266778",
+    "DrawPoly__7CSpriteP15_spritepolyvertiQ27CSprite13EPolyPrimType": "0x8005de08"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "SaveGameCore.cpp",
+  "original_file_index": 2070,
+  "profile_from": "fenginterface_files.json",
+  "comparison_functions": [
+    "Draw__14CSaveGamePopup"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

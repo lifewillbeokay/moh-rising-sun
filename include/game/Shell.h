@@ -58,6 +58,7 @@ class CInputManager : public CDeviceManager {
     void Init();
     void Shutdown();
     int CheckControllers(bool);
+    void Update(float);
     void SetController(unsigned char, signed char);
     void SetKeymap(unsigned char, KEYMAP *);
     int GetValue(unsigned char, unsigned short) const;

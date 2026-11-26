@@ -1,0 +1,38 @@
+{
+  "id": "compare_mcgc_issue_start",
+  "source": "src/save/mcgc_issue_start.cpp",
+  "category": "reconstructed_game",
+  "strip_unused": false,
+  "sections": [
+    {
+      "name": ".text",
+      "address": "0x801a5c9c",
+      "size": 288
+    }
+  ],
+  "functions": [
+    {
+      "name": "IssueStart__13CMemoryCardGC",
+      "address": "0x801a5c9c",
+      "size": 288,
+      "binding": 1
+    }
+  ],
+  "externals": {
+    "Instance__9MohLoader": "0x80059414",
+    "Init__13CMemoryCardGC": "0x801a5b94",
+    "MEM_clear": "0x802184a4",
+    "MEM_copy": "0x802187b0",
+    "TIMER_elapsedticks": "0x80217a00"
+  },
+  "discarded_functions": [],
+  "undefined_in_discarded_code": [],
+  "original_file": "MemoryCardGC.cpp",
+  "original_file_index": 2125,
+  "profile_from": "fecode_setcellcolor.json",
+  "comparison_functions": [
+    "IssueStart__13CMemoryCardGC"
+  ],
+  "context_units": [],
+  "evidence": "docs/research/save-popups.md"
+}

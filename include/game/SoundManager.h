@@ -47,6 +47,7 @@ class SoundSchedule {
     void RemoveSound(unsigned int);
     SoundSchedule();
     void InitBuss();
+    void Update(float);
     void AddBuss(unsigned int, unsigned char *, ColumnMap *, int);
 };
 
@@ -228,6 +229,7 @@ class cSoundMan {
     int InitStreams(unsigned char *, int, int);
     void ShutdownStreams();
     void PurgeStreams();
+    void ServiceStreams();
     int GetFreeStream();
     void VerifyLevelBanks();
     void RemoveSoundBanks();

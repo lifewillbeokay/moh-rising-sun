@@ -11,7 +11,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'tools'))
 from audit import load_target
 from formats import Elf32, verify_load_image, cstring
-from project_build import progress, target_section, validate_object, validate_units, verify_unit, write_context
+from project_build import object_record, progress, target_section, validate_object, validate_units, verify_unit, write_context
 from tool_runner import run
 
 
@@ -33,10 +33,10 @@ class SourceVerification(unittest.TestCase):
         for unit in self.units:
             verify_unit(self.original, Elf32(self.linked(unit['id'])), unit)
         result = progress(self.original, self.units, self.project)
-        self.assertEqual(result['matching_code_bytes'], 1343148)
+        self.assertEqual(result['matching_code_bytes'], 1345092)
         self.assertEqual(result['total_executable_code_bytes'], 2492032)
         self.assertGreaterEqual(result['percent'], 25)
-        self.assertEqual(result['categories']['reconstructed_game'], 950932)
+        self.assertEqual(result['categories']['reconstructed_game'], 952876)
         self.assertEqual(result['categories']['restored_library'], 392216)
 
     def test_private_ppp_entry_point_requires_its_function_symbol(self):
@@ -68,6 +68,25 @@ class SourceVerification(unittest.TestCase):
                         data[strings['offset'] + name_offset] = ord('q')
                 with self.assertRaisesRegex(ValueError, 'BSS'):
                     verify_unit(self.original, Elf32(data), changed)
+
+    def test_dynamic_static_guard_storage_is_still_owned(self):
+        unit = self.by_name['memcardpopup_class']
+        for mutation in ('size', 'address', 'binding', 'guard_index'):
+            with self.subTest(mutation=mutation):
+                data = bytearray(self.linked(unit['id']))
+                elf = Elf32(data)
+                guard = next(s for s in elf.symbols() if s['name'].startswith('_.tmp_0.'))
+                offset = self.symbol_offset(data, guard['name'])
+                if mutation == 'size': struct.pack_into('>I', data, offset + 8, 8)
+                elif mutation == 'address': struct.pack_into('>I', data, offset + 4, guard['address'] - 4)
+                elif mutation == 'binding': data[offset + 12] |= 0x10
+                else:
+                    table = next(s for s in elf.sections if s['type'] == 2)
+                    strings = elf.sections[table['link']]
+                    name_offset = struct.unpack_from('>I', data, offset)[0]
+                    data[strings['offset'] + name_offset + len('_.tmp_')] = ord('1')
+                with self.assertRaisesRegex(ValueError, 'BSS object ownership differs'):
+                    verify_unit(self.original, Elf32(data), unit)
 
     def test_readonly_subsection_cannot_be_remapped_to_code(self):
         unit = copy.deepcopy(self.by_name['lcode'])
@@ -262,6 +281,21 @@ class SectionMappingPolicy(unittest.TestCase):
                         dict(name='.gnu.linkonce.t._vt.Q28EAGLAnim9FnDeltaF1')]:
             with self.subTest(changes=changes), self.assertRaisesRegex(ValueError, 'Unsupported source section mapping'):
                 target_section(dict(section, **changes))
+
+
+
+
+class CompilerStaticNames(unittest.TestCase):
+    def test_guard_suffix_normalization_preserves_ownership(self):
+        original = dict(name='_.tmp_0.3409', address=0x803f503c, size=4, binding=0)
+        native = dict(original, name='_.tmp_0.241')
+        self.assertEqual(object_record(original), object_record(native))
+        for changes in [dict(name='_.tmp_1.241'), dict(name='_.other_0.241'),
+                        dict(address=0x803f5038), dict(size=8), dict(binding=1)]:
+            with self.subTest(changes=changes):
+                self.assertNotEqual(object_record(original), object_record(dict(native, **changes)))
+        # The suffix exception applies only to private objects.
+        self.assertNotEqual(object_record(dict(original, binding=1)), object_record(dict(native, binding=1)))
 
 
 if __name__ == '__main__':
